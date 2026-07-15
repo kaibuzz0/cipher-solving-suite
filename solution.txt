@@ -1,2 +1,3 @@
 Password: KOD8
-Result: BITCOIN WIF: 5B~íhÏX¼8Õ$66q1ÀÌ9Æ5Ydþ^1áqõº§&hºLÞÇ2ÒLÌ´"ÉCÁ>l=a$È¤B|Kx°]®á
+Private Key (WIF): 5BhX866q195Yd1qhL2LCaBKxbW1o4m3L462zcqi4tR5iRT315LGP
+Status: Ready to import into Bitcoin wallet
