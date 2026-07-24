@@ -3,7 +3,7 @@ Tool Collection
 [![Bitcoin](https://img.shields.io/badge/Bitcoin-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white)]()
 [![Status](https://img.shields.io/badge/Status-EDUCATIONAL%20%2B%20TOOLS-informational)]()
 
-**Cryptographic puzzle solving tools and educational resources**
+**Cryptographic puzzle solving tools and dev resources**
 
 ---
 
@@ -15,29 +15,6 @@ Tool Collection
 - ✅ **Reference** - Techniques and case studies
 - ✅ **Research** - Historical puzzle analysis
 
-### What We're Doing Now:
-**🔷 ACTIVE: Ethereum Smart Contract Puzzle Hunting**
-
-**Why the shift:**
-- 310 BTC puzzle = SOLVED (historical only)
-- Satoshi Treasure = ENDED (website down)
-- **Ethereum puzzles = ACTIVE** (new ones daily)
-
----
-
-## 🏆 Active Puzzle: Ethereum Smart Contract Hunting
-
-**Method:** Manual search on Etherscan.io  
-**Prizes:** Real ETH, verifiable before solving  
-**Perfect for:** Library PC sessions  
-**Status:** 🟢 CONSTANTLY ACTIVE
-
-### How It Works:
-1. Find contracts with "puzzle" on Etherscan
-2. Check if contract has ETH balance (>0)
-3. Read source code for solve() function
-4. Solve the challenge
-5. Call solve() and win ETH!
 
 ---
 
