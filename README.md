@@ -1,4 +1,4 @@
-# 🔐 310 BTC Challenge - Tool Collection
+Tool Collection
 
 [![Bitcoin](https://img.shields.io/badge/Bitcoin-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white)]()
 [![Status](https://img.shields.io/badge/Status-EDUCATIONAL%20%2B%20TOOLS-informational)]()
