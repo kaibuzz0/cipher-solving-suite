@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "prompts": [
+    {"id":"repo-research","title":"Repository Research","purpose":"Evaluate a public GitHub repository before adding it to the suite.","prompt":"Inspect the repository architecture, license, maintenance status, dependencies, tests, security implications, and exact capability. Separate verified facts from assumptions. Recommend whether to adopt, wrap, fork, or ignore it. Record useful commands and leave a handoff note."},
+    {"id":"opportunity-triage","title":"Opportunity Triage","purpose":"Evaluate a potential paid challenge, hackathon, CTF, freelance lead, audit, or bug bounty.","prompt":"Verify the official source, current status, deadline, eligibility, payout terms, required skills, expected time, and authorization/scope. Score value versus effort and risk. Do not test any target until scope explicitly permits it. Save the source URL and timestamp."},
+    {"id":"cipher-case","title":"Cipher Case Intake","purpose":"Start a reproducible puzzle/cipher investigation.","prompt":"Create a case record with source, input hashes, known clues, constraints, transformations tried, commands, outputs, confidence, and next hypotheses. Preserve original evidence. Prefer deterministic scripts over manual-only steps."},
+    {"id":"handoff","title":"Agent Handoff","purpose":"Pass work to the next AI agent without losing context.","prompt":"Summarize what changed, what was verified, what failed, exact commands/results, evidence paths, unresolved questions, risks, and the single best next action. Append the result to docs/AGENT_HANDOFF.md; never erase earlier handoffs."},
+    {"id":"daily-maintenance","title":"Daily Maintenance","purpose":"Keep the repository sane as agents add work.","prompt":"Read AGENTS.md and the latest handoff. Inspect open work, tests, documentation drift, stale catalog entries, generated artifacts at repository root, broken links/paths, and duplicated tools. Make only small verifiable repairs and leave a handoff."}
+  ]
+}
