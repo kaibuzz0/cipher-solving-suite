@@ -16,6 +16,21 @@ from scripts.source_check_history import build_report as build_collection_report
 
 OUT = ROOT / "site-data"
 
+SAFE_PREVIEW_SUFFIXES = {
+    ".md", ".txt", ".json", ".py", ".yml", ".yaml", ".toml", ".ini", ".cfg",
+    ".js", ".css", ".html", ".sh", ".ps1", ".sql", ".csv",
+}
+BROWSER_ROOTS = (
+    "toolsets",
+    "tools",
+    "scripts",
+    "docs",
+    "research/active-puzzles",
+    "data",
+)
+MAX_PREVIEW_BYTES = 120_000
+MAX_PREVIEW_CHARS = 14_000
+
 
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -42,7 +57,84 @@ def load_cases() -> list[dict]:
     return cases
 
 
-def load_toolsets() -> dict:
+def safe_preview(path: Path) -> tuple[str, bool]:
+    """Return a bounded UTF-8 preview for safe public text files."""
+    try:
+        size = path.stat().st_size
+    except OSError:
+        return "", False
+    if path.suffix.lower() not in SAFE_PREVIEW_SUFFIXES or size > MAX_PREVIEW_BYTES:
+        return "", False
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return "", False
+    truncated = len(text) > MAX_PREVIEW_CHARS
+    if truncated:
+        text = text[:MAX_PREVIEW_CHARS] + "\n\n… preview truncated …\n"
+    return text, truncated
+
+
+def build_repository_browser() -> dict:
+    """Build a bounded static index used by the VS Code-style file browser.
+
+    The repository is public, but previews are still intentionally limited to
+    known text extensions and bounded sizes so Pages does not become a binary
+    mirror or accidentally inline oversized generated artifacts.
+    """
+    generated_at = datetime.now(timezone.utc).isoformat()
+    files: list[dict] = []
+    directories: set[str] = set()
+
+    for root_name in BROWSER_ROOTS:
+        base = ROOT / root_name
+        if not base.exists():
+            continue
+        directories.add(root_name)
+        for path in sorted(base.rglob("*")):
+            try:
+                rel = path.relative_to(ROOT).as_posix()
+            except ValueError:
+                continue
+            if path.is_dir():
+                directories.add(rel)
+                continue
+            if not path.is_file():
+                continue
+            try:
+                size = path.stat().st_size
+            except OSError:
+                size = 0
+            preview, truncated = safe_preview(path)
+            parent = path.parent.relative_to(ROOT).as_posix()
+            files.append(
+                {
+                    "path": rel,
+                    "name": path.name,
+                    "parent": parent,
+                    "suffix": path.suffix.lower(),
+                    "size": size,
+                    "previewable": bool(preview),
+                    "preview_truncated": truncated,
+                    "preview": preview,
+                }
+            )
+
+    files.sort(key=lambda item: item["path"].lower())
+    return {
+        "generated_at": generated_at,
+        "roots": list(BROWSER_ROOTS),
+        "summary": {
+            "files": len(files),
+            "directories": len(directories),
+            "previewable": sum(1 for item in files if item["previewable"]),
+        },
+        "directories": sorted(directories, key=str.lower),
+        "files": files,
+    }
+
+
+def load_toolsets(repository: dict | None = None) -> dict:
     """Discover toolsets from manifests and reconcile them with the catalog.
 
     The website intentionally scans manifests as well as the catalog. That means a
@@ -59,6 +151,8 @@ def load_toolsets() -> dict:
         except (OSError, json.JSONDecodeError):
             catalog = {"toolsets": []}
 
+    tools = load_json(ROOT / "data" / "tools.json").get("items", [])
+    repo_files = (repository or {}).get("files", [])
     catalog_by_id = {
         item.get("id"): item
         for item in catalog.get("toolsets", [])
@@ -74,7 +168,7 @@ def load_toolsets() -> dict:
                 continue
             toolset_id = manifest.get("id") or manifest_path.parent.name
             catalog_item = catalog_by_id.get(toolset_id, {})
-            repo_path = str(manifest_path.parent.relative_to(ROOT))
+            repo_path = str(manifest_path.parent.relative_to(ROOT)).replace("\\", "/")
             entrypoint = manifest.get("entrypoint") or catalog_item.get("entrypoint", "")
             entrypoint_name = entrypoint.split()[-1] if entrypoint else ""
             entrypoint_path = manifest_path.parent / entrypoint_name if entrypoint_name else None
@@ -93,16 +187,27 @@ def load_toolsets() -> dict:
                     health = "incomplete"
                 warnings.append("README.md is missing")
 
+            related_files = [
+                f["path"] for f in repo_files
+                if f.get("path", "").startswith(repo_path + "/")
+            ]
+            related_tools = [
+                tool for tool in tools
+                if str(tool.get("path", "")).replace("\\", "/").startswith(repo_path + "/")
+            ]
+
             items[toolset_id] = {
                 **catalog_item,
                 **manifest,
                 "id": toolset_id,
                 "path": repo_path,
-                "manifest_path": str(manifest_path.relative_to(ROOT)),
-                "readme_path": str(readme.relative_to(ROOT)) if readme.exists() else "",
+                "manifest_path": str(manifest_path.relative_to(ROOT)).replace("\\", "/"),
+                "readme_path": str(readme.relative_to(ROOT)).replace("\\", "/") if readme.exists() else "",
                 "registered": registered,
                 "health": health,
                 "warnings": warnings,
+                "files": related_files,
+                "tools": related_tools,
             }
 
     for toolset_id, catalog_item in catalog_by_id.items():
@@ -118,6 +223,8 @@ def load_toolsets() -> dict:
             "registered": True,
             "health": "missing-manifest",
             "warnings": ["catalog entry exists but toolset.json was not found"],
+            "files": [],
+            "tools": [],
         }
 
     ordered = sorted(items.values(), key=lambda x: (x.get("name") or x.get("id") or "").lower())
@@ -164,6 +271,7 @@ def build_status(
     collection: dict,
     artifacts: dict,
     toolsets: dict,
+    repository: dict,
 ) -> dict:
     tools = load_json(ROOT / "data" / "tools.json")
     opportunities = load_json(ROOT / "data" / "opportunities.json")
@@ -175,6 +283,8 @@ def build_status(
         "tools": len(tools.get("items", [])),
         "toolsets": toolsets.get("summary", {}).get("total", 0),
         "toolsets_needing_attention": toolsets.get("summary", {}).get("needs_attention", 0),
+        "repository_files": repository.get("summary", {}).get("files", 0),
+        "previewable_files": repository.get("summary", {}).get("previewable", 0),
         "opportunities": len(opportunities.get("items", [])),
         "prompts": len(prompts.get("prompts", [])),
         "intelligence": len(intelligence.get("items", [])),
@@ -191,17 +301,19 @@ def build_status(
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     cases = load_cases()
-    toolsets = load_toolsets()
+    repository = build_repository_browser()
+    toolsets = load_toolsets(repository)
     source_status = build_source_status()
     collection = build_collection_report()
     artifacts = build_inventory()
     (OUT / "cases.json").write_text(json.dumps({"items": cases}, indent=2) + "\n", encoding="utf-8")
     (OUT / "toolsets.json").write_text(json.dumps(toolsets, indent=2) + "\n", encoding="utf-8")
+    (OUT / "repository.json").write_text(json.dumps(repository, indent=2) + "\n", encoding="utf-8")
     (OUT / "sources.json").write_text(json.dumps(source_status, indent=2) + "\n", encoding="utf-8")
     (OUT / "collection-health.json").write_text(json.dumps(collection, indent=2) + "\n", encoding="utf-8")
     (OUT / "artifacts.json").write_text(json.dumps(artifacts, indent=2) + "\n", encoding="utf-8")
     (OUT / "status.json").write_text(
-        json.dumps(build_status(cases, source_status, collection, artifacts, toolsets), indent=2) + "\n",
+        json.dumps(build_status(cases, source_status, collection, artifacts, toolsets, repository), indent=2) + "\n",
         encoding="utf-8",
     )
     return 0
