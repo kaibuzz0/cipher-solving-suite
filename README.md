@@ -66,7 +66,7 @@ python suite.py --scan
 
 # Health / validation
 python suite.py --maintenance
-python -m unittest discover -s tests -v
+pytest tests/ -vv --tb=short
 ```
 
 ## What works now
@@ -155,7 +155,11 @@ Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty p
 
 ## Validation and maintenance
 
-Pull requests run Python 3.11, 3.12, and 3.13 unit tests plus compile and maintenance checks through `.github/workflows/ci.yml`.
+Pull requests run Python 3.11, 3.12, and 3.13 validation through [`.github/workflows/ci.yml`](.github/workflows/ci.yml). Matrix jobs are named `Python 3.11`, `Python 3.12`, and `Python 3.13`, and `fail-fast` is disabled so one interpreter failure does not hide results from the others.
+
+Tests run with `pytest -vv --tb=short --junitxml=test-results.xml`. The Actions log therefore shows each individual test and a concise traceback instead of only an opaque exit code. Each Python job uploads its JUnit XML with `if: always()`, so failure diagnostics remain available when a test breaks.
+
+Compile and maintenance validation also continue after a test failure. Their outcomes are written to the GitHub job summary, maintenance reports are uploaded with `if: always()`, and the matrix job fails only after all diagnostic stages have had a chance to run. The goal is: **CI should answer exactly what failed, where, and on which Python version.**
 
 The daily maintenance workflow checks missing required files, Python compile failures, version drift, generated files at repository root, and suspicious secret-like filenames. Findings become cleanup work; automation does not silently delete research evidence.
 
