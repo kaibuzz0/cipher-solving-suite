@@ -2,147 +2,160 @@
 
 A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, authorized bug-bounty/audit work, coding challenges, GitHub research, reusable prompts, notes, and earnings tracking.
 
-This repository is being converted from a loose collection of scripts and generated artifacts into a maintainable system where human and AI agents can share one work queue, one opportunity catalog, reproducible research, and explicit handoffs.
+**Start here.** This README is the repository front door for humans and AI agents. Use it to navigate the repo, find commands, locate active work, and understand the operating workflow before changing anything.
 
-## What works now
+## Quick navigation
 
-- `suite.py` — honest top-level status and command router.
-- `data/opportunities.json` — shared opportunity/link catalog used by both CLI and website.
-- `data/prompts.json` — reusable AI prompt library.
-- `tools/opportunity_finder.py` — list/search/filter/open catalog entries.
-- `tools/earnings_tracker.py` — record attempts and verified earnings.
-- `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots. It is deliberately labeled **not a live scrape**.
-- `AGENTS.md` — operating contract for AI and human agents.
-- `docs/AGENT_HANDOFF.md` — append-only agent handoff journal.
-- `docs/WORK_QUEUE.md` — shared claimable work queue.
-- `docs/REPO_MAINTENANCE.md` — maintenance rules and repository lanes.
-- `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
-- `tests/test_core.py` — deterministic tests for catalog and earnings behavior.
-- `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
+| I want to… | Go here |
+|---|---|
+| Open the human-facing dashboard | [`site/index.html`](site/index.html) |
+| See what an AI agent must read/do | [`AGENTS.md`](AGENTS.md) |
+| Find the next task | [`docs/WORK_QUEUE.md`](docs/WORK_QUEUE.md) |
+| Read the latest agent notes | [`docs/AGENT_HANDOFF.md`](docs/AGENT_HANDOFF.md) |
+| Understand repo maintenance rules | [`docs/REPO_MAINTENANCE.md`](docs/REPO_MAINTENANCE.md) |
+| Browse money/skill opportunity links | [`data/opportunities.json`](data/opportunities.json) |
+| Browse reusable AI prompts | [`data/prompts.json`](data/prompts.json) |
+| Search opportunities from terminal | [`tools/opportunity_finder.py`](tools/opportunity_finder.py) |
+| Track attempts/earnings | [`tools/earnings_tracker.py`](tools/earnings_tracker.py) |
+| Create a timestamped opportunity snapshot | [`tools/scanning/opportunity_scanner.py`](tools/scanning/opportunity_scanner.py) |
+| Run the main command router | [`suite.py`](suite.py) |
+| Run repo hygiene checks | [`scripts/maintenance_check.py`](scripts/maintenance_check.py) |
+| Run core tests | [`tests/test_core.py`](tests/test_core.py) |
+| Inspect active research | [`research/active-puzzles/`](research/active-puzzles/) |
+| Inspect solver modules | [`solvers/`](solvers/) |
+| Inspect generated/active work | [`workspace/`](workspace/) |
+| Inspect CI | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
+| Inspect daily maintenance automation | [`.github/workflows/daily-maintenance.yml`](.github/workflows/daily-maintenance.yml) |
+| Inspect Pages deployment | [`.github/workflows/pages.yml`](.github/workflows/pages.yml) |
 
-## Quick start
+## Agent start sequence
+
+Every AI or human agent should use this order:
+
+1. **README.md** — orient and navigate.
+2. **AGENTS.md** — read operating and authorization rules.
+3. **docs/AGENT_HANDOFF.md** — learn what the previous agent did.
+4. **docs/WORK_QUEUE.md** — choose/claim the smallest useful task.
+5. **Open PRs/issues** — avoid duplicated or conflicting work.
+6. **Relevant code/data/research files** — inspect before editing.
+7. **Tests / maintenance checks** — verify before handoff.
+8. **Append a handoff entry** — leave exact next steps for the next agent.
+
+## Command center
 
 ```bash
-git clone https://github.com/kaibuzz0/cipher-solving-suite.git
-cd cipher-solving-suite
-
+# Repository status / command router
 python suite.py --status
+
+# Opportunity discovery from the shared catalog
 python suite.py --opportunities
+python tools/opportunity_finder.py --list
 python tools/opportunity_finder.py --search crypto
 python tools/opportunity_finder.py --category hackathon
+
+# Earnings / attempt tracking
 python tools/earnings_tracker.py stats
+
+# Timestamped catalog snapshot (not a live scrape)
 python suite.py --scan
+
+# Health / validation
 python suite.py --maintenance
 python -m unittest discover -s tests -v
 ```
+
+## What works now
+
+- `suite.py` — top-level status and command router.
+- `data/opportunities.json` — canonical opportunity/link catalog used by CLI and website.
+- `data/prompts.json` — reusable AI prompt library.
+- `tools/opportunity_finder.py` — list/search/filter/open catalog entries.
+- `tools/earnings_tracker.py` — record attempts and verified earnings.
+- `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots; deliberately **not labeled as live scraping**.
+- `AGENTS.md` — operating contract for AI and human agents.
+- `docs/AGENT_HANDOFF.md` — append-only agent journal.
+- `docs/WORK_QUEUE.md` — shared claimable work queue.
+- `docs/REPO_MAINTENANCE.md` — maintenance rules and definition of done.
+- `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
+- `tests/test_core.py` — deterministic catalog and earnings tests.
+- `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
 
 ## Repository map
 
 ```text
 cipher-solving-suite/
-├── AGENTS.md                    # rules every agent reads first
-├── README.md
+├── README.md                    # FRONT DOOR + navigation
+├── AGENTS.md                    # agent rules / authorization boundary
 ├── suite.py                     # top-level command router
 ├── data/
 │   ├── opportunities.json       # canonical opportunity/link catalog
 │   └── prompts.json             # reusable AI prompts
 ├── docs/
 │   ├── AGENT_HANDOFF.md         # append-only notes between agents
-│   ├── REPO_MAINTENANCE.md      # maintenance/definition-of-done rules
+│   ├── REPO_MAINTENANCE.md      # maintenance / definition of done
 │   └── WORK_QUEUE.md            # shared work claims and priorities
-├── site/
-│   ├── index.html               # GitHub Pages Operations Hub
-│   ├── app.js
-│   └── styles.css
-├── tools/
-│   ├── opportunity_finder.py
-│   ├── earnings_tracker.py
-│   └── scanning/opportunity_scanner.py
-├── scripts/
-│   └── maintenance_check.py
-├── tests/
-│   └── test_core.py
+├── site/                        # GitHub Pages Operations Hub
+├── tools/                       # opportunity, earnings and scanning tools
+├── scripts/                     # repository automation / checks
+├── tests/                       # deterministic validation
 ├── research/                    # active cases, research and solutions
-├── intelligence/               # timestamped feeds/snapshots
+├── intelligence/               # timestamped feeds / snapshots
 ├── solvers/                     # solving modules
 ├── workspace/                   # active/generated work
 └── legacy/                      # older consolidated material
 ```
 
-## AI-agent workflow
+## Where new things belong
 
-Every agent should:
+Do not create another random root-level file when an existing lane fits.
 
-1. Read `AGENTS.md`.
-2. Read the latest `docs/AGENT_HANDOFF.md` entry.
-3. Check `docs/WORK_QUEUE.md` and open PRs/issues.
-4. Claim the smallest useful task.
-5. Preserve sources, timestamps, hashes, assumptions, commands, and evidence.
-6. Verify changes with tests or reproducible checks.
-7. Append a handoff entry before stopping.
-
-Agents should not silently overwrite prior research, fabricate live status, or create duplicated catalogs. New opportunity links belong in `data/opportunities.json`; new reusable prompts belong in `data/prompts.json`.
+- New opportunity/platform link → `data/opportunities.json`
+- Reusable AI prompt → `data/prompts.json`
+- Active challenge/case research → `research/active-puzzles/`
+- Successful/reproducible solution → `research/solutions/`
+- Timestamped discovery/feed output → `intelligence/feeds/`
+- Solver code → `solvers/` or the appropriate existing tool module
+- Temporary/generated work → `workspace/` or `artifacts/`
+- Agent-to-agent notes → `docs/AGENT_HANDOFF.md`
+- Future work → `docs/WORK_QUEUE.md`
+- Stable process/rules → `docs/`
 
 ## Opportunity pipeline
 
-The catalog is a launchpad, not a promise of payout. It currently includes categories such as:
-
-- bug bounty programs,
-- Web3 audit contests,
-- CTF competitions,
-- cryptography/security training,
-- hackathons,
-- government prize challenges,
-- GitHub research.
-
-Use:
-
-```bash
-python tools/opportunity_finder.py --list
-python tools/opportunity_finder.py --search solidity
-python tools/opportunity_finder.py --category ctf
-python tools/opportunity_finder.py --open ctftime
-```
+The catalog is a launchpad, not a promise of payout. It includes categories such as bug bounties, Web3 audit contests, CTFs, cryptography/security training, hackathons, government prize challenges, and GitHub research.
 
 Availability, prizes, eligibility, rules, and scopes change. Verify those facts on the official linked page before investing time or testing a target.
 
 ## Security authorization boundary
 
-Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty programs. Before testing a real target, save the official rules/scope and confirm the asset/action is allowed. Do not treat a public hostname, contract, repository, or IP address as authorization by itself.
+Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty programs. Before testing a real target, save the official rules/scope and confirm the asset/action is allowed. A public hostname, contract, repository, or IP address is **not** authorization by itself.
 
 ## Static Operations Hub
 
-`site/` is a dependency-free dashboard with tabs for:
+`site/` is the human-facing dashboard. It exposes opportunities, tools and commands, reusable AI prompts, agent workflow/handoffs, and research launch links.
 
-- opportunities,
-- tools and commands,
-- reusable AI prompts,
-- agent workflow/handoffs,
-- research launch links.
-
-`.github/workflows/pages.yml` assembles the site with the same JSON catalogs and publishes it through GitHub Pages on `main` changes. The Pages repository setting may need to be set to **GitHub Actions** once; after that deployments are automated.
+`.github/workflows/pages.yml` assembles the site with the same JSON catalogs and publishes it through GitHub Pages on `main` changes. The repository Pages setting may need to be set to **GitHub Actions** once.
 
 ## Validation and maintenance
 
 Pull requests run Python 3.11, 3.12, and 3.13 unit tests plus compile and maintenance checks through `.github/workflows/ci.yml`.
 
-A daily hygiene workflow checks for missing required files, Python compile failures, version drift, generated files sitting at repository root, and suspicious secret-like filenames. Warnings are evidence for cleanup work; they are not automatically deleted.
+The daily maintenance workflow checks missing required files, Python compile failures, version drift, generated files at repository root, and suspicious secret-like filenames. Findings become cleanup work; automation does not silently delete research evidence.
 
 ## Known cleanup debt
 
-The repository still contains older generated images/binaries and legacy research at the root. Those files are intentionally not mass-moved in the first maintenance pass because provenance could be lost. The next cleanup pass should inventory hashes and references, then relocate them safely into evidence/artifact directories.
+Older generated images/binaries and legacy research still exist at the root. They should be inventoried with hashes and references before relocation so research provenance is preserved. Older research documents may also contain stale payout/platform claims and should be treated as historical notes until revalidated.
 
-Older research documents can also contain stale payout/platform claims. Treat them as historical notes until their sources are revalidated and migrated into the shared catalog.
+## Mission
 
-## Goal
-
-The goal is not to promise money or pretend every tool is live. The goal is to make this repository a dependable command center that helps agents rapidly answer:
+The repository should help a human or AI agent quickly answer:
 
 - What legitimate opportunity should we investigate next?
 - What tools do we already have?
 - What has already been tried?
 - What evidence and authorization do we have?
 - What did the previous agent learn?
+- What is broken or missing?
 - What is the next highest-value piece of work?
 
 License: MIT
