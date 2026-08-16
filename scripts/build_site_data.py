@@ -6,6 +6,9 @@ import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from scripts.artifact_inventory import build_inventory
+from scripts.source_check_history import build_report as build_collection_report
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "site-data"
 
@@ -63,7 +66,7 @@ def build_source_status() -> dict:
     return {"generated_at": now.isoformat(), "counts": counts, "sources": items}
 
 
-def build_status(cases: list[dict], source_status: dict) -> dict:
+def build_status(cases: list[dict], source_status: dict, collection: dict, artifacts: dict) -> dict:
     tools = load_json(ROOT / "data" / "tools.json")
     opportunities = load_json(ROOT / "data" / "opportunities.json")
     prompts = load_json(ROOT / "data" / "prompts.json")
@@ -77,6 +80,10 @@ def build_status(cases: list[dict], source_status: dict) -> dict:
         "intelligence": len(intelligence.get("items", [])),
         "intelligence_sources": len(source_status.get("sources", [])),
         "sources_due": source_status.get("counts", {}).get("due", 0) + source_status.get("counts", {}).get("never-checked", 0),
+        "sources_changed": collection.get("summary", {}).get("changed_sources", 0),
+        "source_history_entries": collection.get("summary", {}).get("history_entries", 0),
+        "artifacts": artifacts.get("summary", {}).get("total", 0),
+        "artifacts_review_before_move": artifacts.get("summary", {}).get("review_before_move", 0),
     }
 
 
@@ -84,9 +91,13 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     cases = load_cases()
     source_status = build_source_status()
+    collection = build_collection_report()
+    artifacts = build_inventory()
     (OUT / "cases.json").write_text(json.dumps({"items": cases}, indent=2) + "\n", encoding="utf-8")
     (OUT / "sources.json").write_text(json.dumps(source_status, indent=2) + "\n", encoding="utf-8")
-    (OUT / "status.json").write_text(json.dumps(build_status(cases, source_status), indent=2) + "\n", encoding="utf-8")
+    (OUT / "collection-health.json").write_text(json.dumps(collection, indent=2) + "\n", encoding="utf-8")
+    (OUT / "artifacts.json").write_text(json.dumps(artifacts, indent=2) + "\n", encoding="utf-8")
+    (OUT / "status.json").write_text(json.dumps(build_status(cases, source_status, collection, artifacts), indent=2) + "\n", encoding="utf-8")
     return 0
 
 
