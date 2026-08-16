@@ -13,6 +13,8 @@ A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, 
 | Find the next task | [`docs/WORK_QUEUE.md`](docs/WORK_QUEUE.md) |
 | Read the latest agent notes | [`docs/AGENT_HANDOFF.md`](docs/AGENT_HANDOFF.md) |
 | Understand repo maintenance rules | [`docs/REPO_MAINTENANCE.md`](docs/REPO_MAINTENANCE.md) |
+| Start a new puzzle/challenge/research case | [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md) |
+| Generate a standardized case folder | [`scripts/new_case.py`](scripts/new_case.py) |
 | Browse money/skill opportunity links | [`data/opportunities.json`](data/opportunities.json) |
 | Browse reusable AI prompts | [`data/prompts.json`](data/prompts.json) |
 | Search opportunities from terminal | [`tools/opportunity_finder.py`](tools/opportunity_finder.py) |
@@ -47,6 +49,9 @@ Every AI or human agent should use this order:
 # Repository status / command router
 python suite.py --status
 
+# Create a standardized new case
+python scripts/new_case.py --name "Puzzle 310 follow-up" --type puzzle --source "source name" --url "https://example.com/challenge"
+
 # Opportunity discovery from the shared catalog
 python suite.py --opportunities
 python tools/opportunity_finder.py --list
@@ -72,12 +77,14 @@ python -m unittest discover -s tests -v
 - `tools/opportunity_finder.py` — list/search/filter/open catalog entries.
 - `tools/earnings_tracker.py` — record attempts and verified earnings.
 - `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots; deliberately **not labeled as live scraping**.
+- `scripts/new_case.py` — standardized challenge/opportunity case generator.
+- `docs/CASE_WORKFLOW.md` — case lifecycle, evidence, attempts, verification, and handoff rules.
 - `AGENTS.md` — operating contract for AI and human agents.
 - `docs/AGENT_HANDOFF.md` — append-only agent journal.
 - `docs/WORK_QUEUE.md` — shared claimable work queue.
 - `docs/REPO_MAINTENANCE.md` — maintenance rules and definition of done.
 - `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
-- `tests/test_core.py` — deterministic catalog and earnings tests.
+- `tests/test_core.py` — deterministic catalog, earnings, and case-generation tests.
 - `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
 
 ## Repository map
@@ -92,11 +99,14 @@ cipher-solving-suite/
 │   └── prompts.json             # reusable AI prompts
 ├── docs/
 │   ├── AGENT_HANDOFF.md         # append-only notes between agents
+│   ├── CASE_WORKFLOW.md         # standardized challenge/case lifecycle
 │   ├── REPO_MAINTENANCE.md      # maintenance / definition of done
 │   └── WORK_QUEUE.md            # shared work claims and priorities
 ├── site/                        # GitHub Pages Operations Hub
 ├── tools/                       # opportunity, earnings and scanning tools
-├── scripts/                     # repository automation / checks
+├── scripts/
+│   ├── maintenance_check.py     # repository hygiene checks
+│   └── new_case.py              # creates standardized case directories
 ├── tests/                       # deterministic validation
 ├── research/                    # active cases, research and solutions
 ├── intelligence/               # timestamped feeds / snapshots
@@ -111,7 +121,8 @@ Do not create another random root-level file when an existing lane fits.
 
 - New opportunity/platform link → `data/opportunities.json`
 - Reusable AI prompt → `data/prompts.json`
-- Active challenge/case research → `research/active-puzzles/`
+- New puzzle/challenge/bounty/research investigation → create a case with `scripts/new_case.py`
+- Active challenge/case research → `research/active-puzzles/<case-id>/`
 - Successful/reproducible solution → `research/solutions/`
 - Timestamped discovery/feed output → `intelligence/feeds/`
 - Solver code → `solvers/` or the appropriate existing tool module
@@ -119,6 +130,12 @@ Do not create another random root-level file when an existing lane fits.
 - Agent-to-agent notes → `docs/AGENT_HANDOFF.md`
 - Future work → `docs/WORK_QUEUE.md`
 - Stable process/rules → `docs/`
+
+## Standard case workflow
+
+When an opportunity becomes real work, convert it into a case rather than scattering notes across the repository. A generated case contains `case.json`, `README.md`, `notes.md`, `attempts.md`, and `evidence/`.
+
+That gives agents one place to preserve source URLs, authorization, evidence, hypotheses, commands, failed attempts, outcomes, ownership, and next actions. See [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md).
 
 ## Opportunity pipeline
 
