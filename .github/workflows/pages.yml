@@ -7,12 +7,9 @@ on:
       - "site/**"
       - "data/**"
       - "toolsets/**"
+      - "tools/**"
+      - "scripts/**"
       - "research/**"
-      - "scripts/build_site_data.py"
-      - "scripts/intelligence_feed.py"
-      - "scripts/source_registry.py"
-      - "scripts/source_check_history.py"
-      - "scripts/artifact_inventory.py"
       - "docs/**"
       - "README.md"
       - "AGENTS.md"
@@ -51,7 +48,7 @@ jobs:
           cp -R site/. _site/
           cp README.md _site/README.md
           cp data/opportunities.json data/prompts.json data/tools.json data/intelligence.json data/intelligence_sources.json _site/data/
-          cp site-data/cases.json site-data/toolsets.json site-data/status.json site-data/sources.json site-data/collection-health.json site-data/artifacts.json _site/data/
+          cp site-data/cases.json site-data/toolsets.json site-data/repository.json site-data/status.json site-data/sources.json site-data/collection-health.json site-data/artifacts.json _site/data/
           cp AGENTS.md _site/AGENTS.md
           cp docs/AGENT_HANDOFF.md docs/CASE_WORKFLOW.md docs/INTELLIGENCE_WORKFLOW.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md _site/docs/
       - uses: actions/configure-pages@v5
