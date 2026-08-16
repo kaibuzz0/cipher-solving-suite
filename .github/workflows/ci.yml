@@ -48,12 +48,25 @@ jobs:
         id: compile
         continue-on-error: true
         run: |
-          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py
+          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py
+
+      - name: Build dashboard data
+        id: dashboard
+        continue-on-error: true
+        run: python scripts/build_site_data.py
 
       - name: Maintenance check
         id: maintenance
         continue-on-error: true
         run: python scripts/maintenance_check.py
+
+      - name: Upload dashboard diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-data-python-${{ matrix.python-version }}
+          path: site-data/
+          if-no-files-found: warn
 
       - name: Upload maintenance diagnostics
         if: always()
@@ -71,6 +84,7 @@ jobs:
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
           echo "| Tests | ${{ steps.tests.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Compile | ${{ steps.compile.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dashboard data | ${{ steps.dashboard.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Maintenance | ${{ steps.maintenance.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Fail job if validation failed
@@ -78,6 +92,7 @@ jobs:
         run: |
           if [ "${{ steps.tests.outcome }}" != "success" ] || \
              [ "${{ steps.compile.outcome }}" != "success" ] || \
+             [ "${{ steps.dashboard.outcome }}" != "success" ] || \
              [ "${{ steps.maintenance.outcome }}" != "success" ]; then
             echo "One or more validation stages failed. Review the named step, short traceback, job summary, and uploaded diagnostics."
             exit 1
