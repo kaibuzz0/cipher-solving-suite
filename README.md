@@ -16,7 +16,9 @@ A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, 
 | Start a new puzzle/challenge/research case | [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md) |
 | Generate a standardized case folder | [`scripts/new_case.py`](scripts/new_case.py) |
 | Browse money/skill opportunity links | [`data/opportunities.json`](data/opportunities.json) |
+| Browse the internal tool registry | [`data/tools.json`](data/tools.json) |
 | Browse reusable AI prompts | [`data/prompts.json`](data/prompts.json) |
+| Build user-facing dashboard data | [`scripts/build_site_data.py`](scripts/build_site_data.py) |
 | Search opportunities from terminal | [`tools/opportunity_finder.py`](tools/opportunity_finder.py) |
 | Track attempts/earnings | [`tools/earnings_tracker.py`](tools/earnings_tracker.py) |
 | Create a timestamped opportunity snapshot | [`tools/scanning/opportunity_scanner.py`](tools/scanning/opportunity_scanner.py) |
@@ -30,6 +32,16 @@ A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, 
 | Inspect daily maintenance automation | [`.github/workflows/daily-maintenance.yml`](.github/workflows/daily-maintenance.yml) |
 | Inspect Pages deployment | [`.github/workflows/pages.yml`](.github/workflows/pages.yml) |
 
+## Two-layer architecture
+
+This repository deliberately serves two audiences at once.
+
+**Agent layer:** structured files, case metadata, catalogs, work queues, handoffs, tests, and scripts let many AI/human agents work without losing context or duplicating effort.
+
+**User layer:** the GitHub Pages Operations Hub turns that structured state into a readable dashboard. Users can see opportunities, active cases, internal tools, prompts, research links, repository status, and agent workflow without digging through source files.
+
+The website should be treated as a first-class output. When agents add a structured case or update the tool/opportunity/prompt catalogs, the Pages build regenerates the user-facing snapshot automatically.
+
 ## Agent start sequence
 
 Every AI or human agent should use this order:
@@ -41,7 +53,8 @@ Every AI or human agent should use this order:
 5. **Open PRs/issues** — avoid duplicated or conflicting work.
 6. **Relevant code/data/research files** — inspect before editing.
 7. **Tests / maintenance checks** — verify before handoff.
-8. **Append a handoff entry** — leave exact next steps for the next agent.
+8. **Publish structured state** — cases/tools/catalog changes should be visible to the user dashboard where appropriate.
+9. **Append a handoff entry** — leave exact next steps for the next agent.
 
 ## Command center
 
@@ -51,6 +64,9 @@ python suite.py --status
 
 # Create a standardized new case
 python scripts/new_case.py --name "Puzzle 310 follow-up" --type puzzle --source "source name" --url "https://example.com/challenge"
+
+# Build the same structured summary used by the website
+python scripts/build_site_data.py
 
 # Opportunity discovery from the shared catalog
 python suite.py --opportunities
@@ -73,18 +89,20 @@ pytest tests/ -vv --tb=short
 
 - `suite.py` — top-level status and command router.
 - `data/opportunities.json` — canonical opportunity/link catalog used by CLI and website.
+- `data/tools.json` — canonical internal tool registry used by the website and validation.
 - `data/prompts.json` — reusable AI prompt library.
 - `tools/opportunity_finder.py` — list/search/filter/open catalog entries.
 - `tools/earnings_tracker.py` — record attempts and verified earnings.
 - `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots; deliberately **not labeled as live scraping**.
 - `scripts/new_case.py` — standardized challenge/opportunity case generator.
+- `scripts/build_site_data.py` — scans structured cases and catalogs to create dashboard `cases.json` and `status.json`.
 - `docs/CASE_WORKFLOW.md` — case lifecycle, evidence, attempts, verification, and handoff rules.
 - `AGENTS.md` — operating contract for AI and human agents.
 - `docs/AGENT_HANDOFF.md` — append-only agent journal.
 - `docs/WORK_QUEUE.md` — shared claimable work queue.
 - `docs/REPO_MAINTENANCE.md` — maintenance rules and definition of done.
 - `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
-- `tests/test_core.py` — deterministic catalog, earnings, and case-generation tests.
+- `tests/test_core.py` — deterministic catalog, tool-registry, earnings, and case-generation tests.
 - `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
 
 ## Repository map
@@ -96,6 +114,7 @@ cipher-solving-suite/
 ├── suite.py                     # top-level command router
 ├── data/
 │   ├── opportunities.json       # canonical opportunity/link catalog
+│   ├── tools.json               # canonical internal tool registry
 │   └── prompts.json             # reusable AI prompts
 ├── docs/
 │   ├── AGENT_HANDOFF.md         # append-only notes between agents
@@ -103,8 +122,10 @@ cipher-solving-suite/
 │   ├── REPO_MAINTENANCE.md      # maintenance / definition of done
 │   └── WORK_QUEUE.md            # shared work claims and priorities
 ├── site/                        # GitHub Pages Operations Hub
+├── site-data/                   # generated dashboard case/status snapshots
 ├── tools/                       # opportunity, earnings and scanning tools
 ├── scripts/
+│   ├── build_site_data.py       # converts repo state into dashboard data
 │   ├── maintenance_check.py     # repository hygiene checks
 │   └── new_case.py              # creates standardized case directories
 ├── tests/                       # deterministic validation
@@ -120,6 +141,7 @@ cipher-solving-suite/
 Do not create another random root-level file when an existing lane fits.
 
 - New opportunity/platform link → `data/opportunities.json`
+- New internal tool meant for agents/users → code in its proper module + registry entry in `data/tools.json`
 - Reusable AI prompt → `data/prompts.json`
 - New puzzle/challenge/bounty/research investigation → create a case with `scripts/new_case.py`
 - Active challenge/case research → `research/active-puzzles/<case-id>/`
@@ -135,7 +157,7 @@ Do not create another random root-level file when an existing lane fits.
 
 When an opportunity becomes real work, convert it into a case rather than scattering notes across the repository. A generated case contains `case.json`, `README.md`, `notes.md`, `attempts.md`, and `evidence/`.
 
-That gives agents one place to preserve source URLs, authorization, evidence, hypotheses, commands, failed attempts, outcomes, ownership, and next actions. See [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md).
+That gives agents one place to preserve source URLs, authorization, evidence, hypotheses, commands, failed attempts, outcomes, ownership, and next actions. The Pages build scans these `case.json` files so active structured work can appear on the user dashboard. See [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md).
 
 ## Opportunity pipeline
 
@@ -149,9 +171,17 @@ Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty p
 
 ## Static Operations Hub
 
-`site/` is the human-facing dashboard. It exposes opportunities, tools and commands, reusable AI prompts, agent workflow/handoffs, and research launch links.
+`site/` is the human-facing dashboard. It exposes:
 
-`.github/workflows/pages.yml` assembles the site with the same JSON catalogs and publishes it through GitHub Pages on `main` changes. The repository Pages setting may need to be set to **GitHub Actions** once.
+- repository summary counts,
+- opportunities,
+- active structured cases and their next actions,
+- the internal tool registry with commands and maturity,
+- reusable AI prompts,
+- agent workflow/handoffs,
+- research launch links.
+
+`.github/workflows/pages.yml` runs `scripts/build_site_data.py`, packages the shared catalogs plus generated case/status data, and publishes the site through GitHub Pages on `main` changes. The repository Pages setting may need to be set to **GitHub Actions** once.
 
 ## Validation and maintenance
 
@@ -159,7 +189,7 @@ Pull requests run Python 3.11, 3.12, and 3.13 validation through [`.github/workf
 
 Tests run with `pytest -vv --tb=short --junitxml=test-results.xml`. The Actions log therefore shows each individual test and a concise traceback instead of only an opaque exit code. Each Python job uploads its JUnit XML with `if: always()`, so failure diagnostics remain available when a test breaks.
 
-Compile and maintenance validation also continue after a test failure. Their outcomes are written to the GitHub job summary, maintenance reports are uploaded with `if: always()`, and the matrix job fails only after all diagnostic stages have had a chance to run. The goal is: **CI should answer exactly what failed, where, and on which Python version.**
+Compile, dashboard-data generation, and maintenance validation also continue after a test failure. Their outcomes are written to the GitHub job summary; generated dashboard data and maintenance reports are uploaded with `if: always()`. The matrix job fails only after all diagnostic stages have run. The goal is: **CI should answer exactly what failed, where, and on which Python version.**
 
 The daily maintenance workflow checks missing required files, Python compile failures, version drift, generated files at repository root, and suspicious secret-like filenames. Findings become cleanup work; automation does not silently delete research evidence.
 
@@ -169,7 +199,15 @@ Older generated images/binaries and legacy research still exist at the root. The
 
 ## Mission
 
-The repository should help a human or AI agent quickly answer:
+The repository should help a **user** quickly answer:
+
+- What opportunities are available to investigate?
+- What cases are active right now?
+- What tools can I use and how do I run them?
+- What did the agents learn?
+- What research/resources should I open next?
+
+And it should help an **agent** quickly answer:
 
 - What legitimate opportunity should we investigate next?
 - What tools do we already have?
