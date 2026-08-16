@@ -3,72 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Compact Cipher Solving Suite workspace for opportunities, intelligence, cases, tools, evidence and AI-agent operations.">
-  <title>Cipher Suite — Workspace</title>
+  <meta name="description" content="Cipher Solving Suite workspace for opportunities, intelligence, cases, tools, evidence and AI-agent operations.">
+  <title>Cipher Suite Workspace</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar">
-  <button id="menu" class="menu" aria-label="Open menu">☰</button>
-  <div class="brand"><strong>Cipher Suite</strong><span>workspace</span></div>
-  <div id="hub-status" class="sync">loading…</div>
-</header>
-<div class="shell">
-  <aside id="sidebar" class="sidebar">
-    <div class="side-title">WORKSPACE</div>
-    <button data-tab="home" class="nav active">⌂ Home</button>
-    <button data-tab="opportunities" class="nav">▣ Opportunities</button>
-    <button data-tab="intelligence" class="nav">▤ News / Intel</button>
-    <button data-tab="cases" class="nav">▱ Cases</button>
-    <button data-tab="tools" class="nav">⚙ Tools</button>
-    <button data-tab="artifacts" class="nav">▧ Evidence</button>
-    <div class="side-title">NETWORK</div>
-    <button data-tab="health" class="nav">◉ Collection Health</button>
-    <button data-tab="sources" class="nav">⌁ Intel Sources</button>
-    <button data-tab="prompts" class="nav">⌘ AI Prompts</button>
-    <button data-tab="workflow" class="nav">⇄ Agent Workflow</button>
-    <div class="side-title">REPO</div>
-    <a class="nav link" href="README.md">▰ README / Quick Nav</a>
-    <a class="nav link" href="docs/WORK_QUEUE.md">☑ Work Queue</a>
-    <a class="nav link" href="docs/AGENT_HANDOFF.md">↳ Handoffs</a>
-    <a class="nav link" href="https://github.com/kaibuzz0/cipher-solving-suite">◈ GitHub Repo</a>
+<div class="app-shell">
+  <header class="titlebar">
+    <div class="titlebar-left"><button id="menu" class="icon-btn mobile-only" aria-label="Toggle explorer">☰</button><span class="app-mark">◈</span><strong>Cipher Suite</strong><span class="title-muted">Operations Workspace</span></div>
+    <div id="hub-status" class="title-status">loading repository snapshot…</div>
+  </header>
+
+  <aside class="activitybar" aria-label="Primary navigation">
+    <button class="activity active" data-tab="home" title="Explorer">▣</button>
+    <button class="activity" data-tab="opportunities" title="Opportunities">$</button>
+    <button class="activity" data-tab="intelligence" title="News / Intel">◫</button>
+    <button class="activity" data-tab="cases" title="Cases">◌</button>
+    <button class="activity" data-tab="tools" title="Tools">⚙</button>
+    <button class="activity" data-tab="artifacts" title="Evidence">◇</button>
+    <div class="activity-spacer"></div>
+    <a class="activity activity-link" href="https://github.com/kaibuzz0/cipher-solving-suite" title="GitHub repository">⌂</a>
   </aside>
-  <main class="main">
-    <div class="toolbar">
-      <div id="crumb" class="crumb">Workspace / Home</div>
-      <input id="search" type="search" placeholder="Search current folder…" aria-label="Search current section">
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-head">EXPLORER</div>
+    <div class="repo-name">⌄ CIPHER-SOLVING-SUITE</div>
+
+    <div class="tree-group open">
+      <button class="tree-folder" data-folder="workspace">⌄ <span class="folder-icon">📂</span> workspace</button>
+      <div class="tree-children">
+        <button data-tab="home" class="tree-item active">⌂ <span>home</span></button>
+        <button data-tab="opportunities" class="tree-item">📁 <span>opportunities</span></button>
+        <button data-tab="intelligence" class="tree-item">📁 <span>news-intel</span></button>
+        <button data-tab="cases" class="tree-item">📁 <span>cases</span></button>
+        <button data-tab="tools" class="tree-item">📁 <span>tools</span></button>
+        <button data-tab="artifacts" class="tree-item">📁 <span>evidence</span></button>
+      </div>
+    </div>
+
+    <div class="tree-group open">
+      <button class="tree-folder">⌄ <span class="folder-icon">📂</span> intelligence-network</button>
+      <div class="tree-children">
+        <button data-tab="health" class="tree-item">◉ <span>collection-health</span></button>
+        <button data-tab="sources" class="tree-item">⌁ <span>source-registry</span></button>
+      </div>
+    </div>
+
+    <div class="tree-group open">
+      <button class="tree-folder">⌄ <span class="folder-icon">📂</span> agent-ops</button>
+      <div class="tree-children">
+        <button data-tab="prompts" class="tree-item">⌘ <span>prompts</span></button>
+        <button data-tab="workflow" class="tree-item">⇄ <span>workflow</span></button>
+        <a class="tree-item" href="docs/WORK_QUEUE.md">☑ <span>WORK_QUEUE.md</span></a>
+        <a class="tree-item" href="docs/AGENT_HANDOFF.md">↳ <span>AGENT_HANDOFF.md</span></a>
+        <a class="tree-item" href="README.md">▰ <span>README.md</span></a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="editor">
+    <div class="tabbar"><div class="editor-tab active"><span id="tab-icon">⌂</span><span id="tab-title">home</span><span class="tab-close">×</span></div></div>
+    <div class="breadcrumbs" id="crumb">cipher-solving-suite › workspace › home</div>
+    <div class="editor-toolbar">
+      <input id="search" type="search" placeholder="Search current view…" aria-label="Search current section">
       <select id="category" aria-label="Filter current section"><option value="all">All</option></select>
     </div>
 
     <section id="home" class="panel active">
+      <div class="welcome">
+        <div><div class="kicker">CIPHER SOLVING SUITE</div><h1>Operations Workspace</h1><p>One place to discover work, follow intelligence, open cases, run tools, inspect evidence, and understand what the agent network is doing.</p></div>
+        <div class="welcome-links"><a href="README.md">README</a><a href="docs/WORK_QUEUE.md">Work Queue</a><a href="docs/AGENT_HANDOFF.md">Handoffs</a></div>
+      </div>
+      <div class="section-caption">WORKSPACE FOLDERS</div>
       <div class="folder-grid">
-        <button class="folder" data-open="opportunities"><span>📁</span><b>Opportunities</b><small>Ways to earn / compete</small></button>
-        <button class="folder" data-open="intelligence"><span>📁</span><b>News / Intel</b><small>Sourced updates</small></button>
-        <button class="folder" data-open="cases"><span>📁</span><b>Cases</b><small>Active investigations</small></button>
-        <button class="folder" data-open="tools"><span>📁</span><b>Tools</b><small>Commands & utilities</small></button>
-        <button class="folder" data-open="artifacts"><span>📁</span><b>Evidence</b><small>Hashed research files</small></button>
-        <button class="folder" data-open="health"><span>📁</span><b>Collection</b><small>Due / changed sources</small></button>
-        <button class="folder" data-open="prompts"><span>📁</span><b>AI Prompts</b><small>Reusable agent context</small></button>
-        <button class="folder" data-open="workflow"><span>📁</span><b>Agent Ops</b><small>Workflow & handoff</small></button>
+        <button class="folder-card" data-open="opportunities"><span class="big-folder">📂</span><span><b>Opportunities</b><small>Ways to earn, compete, build, audit or freelance</small></span></button>
+        <button class="folder-card" data-open="intelligence"><span class="big-folder">📂</span><span><b>News / Intel</b><small>Sourced updates and agent-reviewed discoveries</small></span></button>
+        <button class="folder-card" data-open="cases"><span class="big-folder">📂</span><span><b>Cases</b><small>Structured investigations, puzzles and active work</small></span></button>
+        <button class="folder-card" data-open="tools"><span class="big-folder">📂</span><span><b>Tools</b><small>Commands, scripts and reusable utilities</small></span></button>
+        <button class="folder-card" data-open="artifacts"><span class="big-folder">📂</span><span><b>Evidence</b><small>Hashed artifacts, provenance and duplicate groups</small></span></button>
+        <button class="folder-card" data-open="health"><span class="big-folder">📂</span><span><b>Collection Health</b><small>Due sources, changed sources and collection state</small></span></button>
       </div>
-      <div class="section-label">STATUS</div>
-      <div id="stats-grid" class="stats"></div>
-      <div class="section-label">QUICK ACCESS</div>
-      <div class="quick">
-        <a href="README.md">README</a><a href="docs/WORK_QUEUE.md">Work Queue</a><a href="docs/AGENT_HANDOFF.md">Agent Handoffs</a><a href="docs/INTELLIGENCE_WORKFLOW.md">Intel Workflow</a><a href="data/intelligence_sources.json">Source Registry</a>
-      </div>
+      <div class="section-caption">REPOSITORY STATUS</div>
+      <div id="stats-grid" class="status-grid"></div>
+      <div class="section-caption">QUICK ACCESS</div>
+      <div class="quick-grid"><a href="README.md">README / navigation</a><a href="docs/WORK_QUEUE.md">work queue</a><a href="docs/AGENT_HANDOFF.md">agent handoffs</a><a href="docs/INTELLIGENCE_WORKFLOW.md">intel workflow</a><a href="data/intelligence_sources.json">source registry</a><a href="https://github.com/kaibuzz0/cipher-solving-suite">open GitHub repo</a></div>
     </section>
 
-    <section id="opportunities" class="panel"><div class="title"><h1>Opportunities</h1><span>Verify rules, eligibility, payout and scope before acting.</span></div><div id="opportunity-grid" class="list"></div></section>
-    <section id="intelligence" class="panel"><div class="title"><h1>News / Intelligence</h1><span>Source-backed discoveries from the agent network.</span></div><div id="intel-grid" class="list"></div></section>
-    <section id="cases" class="panel"><div class="title"><h1>Cases</h1><span>Structured investigations and next actions.</span></div><div id="case-grid" class="list"></div></section>
-    <section id="tools" class="panel"><div class="title"><h1>Tools</h1><span>Repository commands and utilities.</span></div><div id="tool-grid" class="list"></div></section>
-    <section id="artifacts" class="panel"><div class="title"><h1>Evidence</h1><span>Hashed artifacts, provenance and migration state.</span></div><div id="artifact-grid" class="list"></div></section>
-    <section id="health" class="panel"><div class="title"><h1>Collection Health</h1><span>What needs checking and what changed.</span></div><div id="health-grid" class="list"></div></section>
-    <section id="sources" class="panel"><div class="title"><h1>Intel Sources</h1><span>Collection lanes, freshness and assigned agents.</span></div><div id="source-grid" class="list"></div></section>
-    <section id="prompts" class="panel"><div class="title"><h1>AI Prompts</h1><span>Tap an item to copy the reusable prompt.</span></div><div id="prompt-grid" class="list"></div></section>
-    <section id="workflow" class="panel"><div class="title"><h1>Agent Workflow</h1><span>One shared operating loop.</span></div><div class="workflow"><div><b>1. Orient</b><span>README → AGENTS → handoff → queue</span></div><div><b>2. Collect</b><span>Check assigned due sources and record state.</span></div><div><b>3. Research</b><span>Preserve URLs, timestamps, hashes, scope and uncertainty.</span></div><div><b>4. Publish</b><span>Promote verified useful discoveries to intelligence.</span></div><div><b>5. Investigate</b><span>Create/link cases, tools, attempts and evidence.</span></div><div><b>6. Verify</b><span>Run tests and deterministic checks.</span></div><div><b>7. Handoff</b><span>Record changes, failures and exact next action.</span></div></div><div class="notice"><b>Authorization:</b> discovering a target or bounty does not authorize testing it.</div></section>
-    <footer><span id="catalog-meta">Loading repository data…</span></footer>
+    <section id="opportunities" class="panel"><div class="panel-title"><div><div class="kicker">MONEY / SKILL PIPELINE</div><h2>Opportunities</h2></div><span>Verify eligibility, payout, rules and scope on the official source.</span></div><div id="opportunity-grid" class="data-list"></div></section>
+    <section id="intelligence" class="panel"><div class="panel-title"><div><div class="kicker">SOURCED UPDATES</div><h2>News / Intelligence</h2></div><span>Source-backed discoveries with confidence and relevance.</span></div><div id="intel-grid" class="data-list"></div></section>
+    <section id="cases" class="panel"><div class="panel-title"><div><div class="kicker">ACTIVE RESEARCH</div><h2>Cases</h2></div><span>Investigations, evidence, ownership and next actions.</span></div><div id="case-grid" class="data-list"></div></section>
+    <section id="tools" class="panel"><div class="panel-title"><div><div class="kicker">LOCAL TOOLING</div><h2>Tools</h2></div><span>Commands and utilities exposed by the shared registry.</span></div><div id="tool-grid" class="data-list"></div></section>
+    <section id="artifacts" class="panel"><div class="panel-title"><div><div class="kicker">RESEARCH MEMORY</div><h2>Evidence</h2></div><span>Hashed artifacts, provenance, case links and migration state.</span></div><div id="artifact-grid" class="data-list"></div></section>
+    <section id="health" class="panel"><div class="panel-title"><div><div class="kicker">COLLECTION NETWORK</div><h2>Collection Health</h2></div><span>What needs checking and what changed.</span></div><div id="health-grid" class="data-list"></div></section>
+    <section id="sources" class="panel"><div class="panel-title"><div><div class="kicker">SOURCE REGISTRY</div><h2>Intel Sources</h2></div><span>Collection lanes, freshness targets and assigned agents.</span></div><div id="source-grid" class="data-list"></div></section>
+    <section id="prompts" class="panel"><div class="panel-title"><div><div class="kicker">REUSABLE CONTEXT</div><h2>AI Prompts</h2></div><span>Click an entry to copy its reusable prompt.</span></div><div id="prompt-grid" class="data-list"></div></section>
+    <section id="workflow" class="panel"><div class="panel-title"><div><div class="kicker">AGENT OPERATIONS</div><h2>Workflow</h2></div><span>One shared operating loop for humans and agents.</span></div><div class="workflow"><div><b>01</b><span><strong>Orient</strong><small>README → AGENTS → handoff → queue</small></span></div><div><b>02</b><span><strong>Collect</strong><small>Check assigned due sources and record state</small></span></div><div><b>03</b><span><strong>Research</strong><small>Preserve sources, timestamps, hashes, scope and uncertainty</small></span></div><div><b>04</b><span><strong>Publish</strong><small>Promote verified useful findings into intelligence</small></span></div><div><b>05</b><span><strong>Investigate</strong><small>Create/link cases, evidence, attempts and tools</small></span></div><div><b>06</b><span><strong>Verify</strong><small>Run deterministic checks and tests</small></span></div><div><b>07</b><span><strong>Handoff</strong><small>Record changes, failures and the exact next action</small></span></div></div><div class="notice"><strong>Authorization boundary:</strong> finding a target, program or bounty is not authorization to test it.</div></section>
+
+    <div class="statusbar"><span>◉ main</span><span id="catalog-meta">loading repository data…</span><span>UTF-8</span><span>GitHub Pages</span></div>
   </main>
 </div>
 <script src="app.js"></script>
