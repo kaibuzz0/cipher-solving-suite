@@ -73,3 +73,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `data/tools.json`, `scripts/build_site_data.py`, `site/index.html`, `site/app.js`, `.github/workflows/pages.yml`, `.github/workflows/ci.yml`, `tests/test_core.py`, `README.md`.
 - **Known risks / blockers:** No new GitHub Actions run has yet been observed for this latest head. Active Cases will remain empty until structured `case.json` directories exist. Static Pages cannot itself execute AI agents; agents update repo state and Pages presents the resulting snapshot.
 - **Next action:** Build an artifact inventory/index and then add a News/Intel feed model so agents can publish timestamped researched links and users can browse them from the dashboard.
+
+---
+
+### 2026-08-16 12:32 UTC — ChatGPT / News and Intelligence layer
+
+- **Branch / PR:** `agent/maintenance-foundation` / PR #1
+- **Objective:** Turn external agent research into a sourced, timestamped, user-facing News / Intelligence stream.
+- **Changed:** Added canonical `data/intelligence.json`; added `scripts/intelligence_feed.py` for add/list/validate operations; documented publishing rules in `docs/INTELLIGENCE_WORKFLOW.md`; registered the intelligence tool; added a filterable News / Intel dashboard tab; added intelligence counts to repository status; updated Pages packaging/validation; added intelligence tests and CI validation/artifacts; and updated README/AGENTS so future agents publish sourced updates through the canonical feed.
+- **Verification:** CI now tests feed validation, duplicate IDs, HTTPS source requirements, persisted add-item behavior, compilation, intelligence validation, dashboard generation, and maintenance across Python 3.11/3.12/3.13. Core validation run 31947326784 is queued for head `5f22a4b...` at handoff time.
+- **Evidence / artifacts:** `data/intelligence.json`, `scripts/intelligence_feed.py`, `docs/INTELLIGENCE_WORKFLOW.md`, `site/index.html`, `site/app.js`, `.github/workflows/pages.yml`, `.github/workflows/ci.yml`, `tests/test_core.py`, `README.md`, `AGENTS.md`.
+- **Known risks / blockers:** The canonical feed starts empty by design; agents must publish verified source-backed items. The queued matrix must finish before this head is called fully green. Pages becomes public only after merge to `main` and repository Pages configuration if not already enabled.
+- **Next action:** Seed the feed with a small set of currently verified official-source intelligence entries, then build a source registry/deduplication/freshness layer so recurring agents can discover and update news without duplicating stale items.
