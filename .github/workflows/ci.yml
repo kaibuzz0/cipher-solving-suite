@@ -19,23 +19,15 @@ jobs:
         python-version: ["3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-
       - name: Install test runner
         run: python -m pip install --upgrade "pytest>=8,<10"
-
       - name: Run test suite
         id: tests
         continue-on-error: true
-        run: |
-          python -m pytest tests/ \
-            -vv \
-            --tb=short \
-            --junitxml=test-results.xml
-
+        run: python -m pytest tests/ -vv --tb=short --junitxml=test-results.xml
       - name: Upload test diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -43,43 +35,40 @@ jobs:
           name: test-results-python-${{ matrix.python-version }}
           path: test-results.xml
           if-no-files-found: warn
-
       - name: Compile core tools
         id: compile
         continue-on-error: true
-        run: |
-          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py scripts/source_check_history.py
-
+        run: python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py scripts/source_check_history.py scripts/artifact_inventory.py
       - name: Validate intelligence source registry
         id: sources
         continue-on-error: true
         run: python scripts/source_registry.py validate
-
       - name: Validate source check history
         id: history
         continue-on-error: true
         run: python scripts/source_check_history.py validate
-
       - name: Build source collection report
         id: source_report
         continue-on-error: true
         run: python scripts/source_check_history.py report
-
       - name: Validate intelligence feed
         id: intelligence
         continue-on-error: true
         run: python scripts/intelligence_feed.py validate
-
+      - name: Build artifact inventory
+        id: artifacts
+        continue-on-error: true
+        run: |
+          python scripts/artifact_inventory.py scan
+          python scripts/artifact_inventory.py validate
       - name: Build dashboard data
         id: dashboard
         continue-on-error: true
         run: python scripts/build_site_data.py
-
       - name: Maintenance check
         id: maintenance
         continue-on-error: true
         run: python scripts/maintenance_check.py
-
       - name: Upload dashboard diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -87,7 +76,6 @@ jobs:
           name: dashboard-data-python-${{ matrix.python-version }}
           path: site-data/
           if-no-files-found: warn
-
       - name: Upload intelligence diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -99,7 +87,13 @@ jobs:
             data/source_check_history.json
             artifacts/intelligence-source-report.json
           if-no-files-found: warn
-
+      - name: Upload artifact inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-inventory-python-${{ matrix.python-version }}
+          path: artifacts/artifact-inventory.json
+          if-no-files-found: warn
       - name: Upload maintenance diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -107,7 +101,6 @@ jobs:
           name: maintenance-report-python-${{ matrix.python-version }}
           path: artifacts/maintenance-report.json
           if-no-files-found: warn
-
       - name: Validation summary
         if: always()
         run: |
@@ -120,9 +113,9 @@ jobs:
           echo "| Source check history | ${{ steps.history.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Source report | ${{ steps.source_report.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Intelligence feed | ${{ steps.intelligence.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Artifact inventory | ${{ steps.artifacts.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dashboard data | ${{ steps.dashboard.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Maintenance | ${{ steps.maintenance.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
-
       - name: Fail job if validation failed
         if: always()
         run: |
@@ -132,6 +125,7 @@ jobs:
              [ "${{ steps.history.outcome }}" != "success" ] || \
              [ "${{ steps.source_report.outcome }}" != "success" ] || \
              [ "${{ steps.intelligence.outcome }}" != "success" ] || \
+             [ "${{ steps.artifacts.outcome }}" != "success" ] || \
              [ "${{ steps.dashboard.outcome }}" != "success" ] || \
              [ "${{ steps.maintenance.outcome }}" != "success" ]; then
             echo "One or more validation stages failed. Review the named step, short traceback, job summary, and uploaded diagnostics."
