@@ -37,15 +37,20 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 
 ## News / Intelligence rules
 
-When external research produces information that would help users or future agents:
+When an agent is assigned intelligence/research collection work:
 
 1. Read `docs/INTELLIGENCE_WORKFLOW.md`.
-2. Check `data/intelligence.json` for duplicates.
-3. Prefer official or primary sources and preserve the source publication/event timestamp.
-4. Publish concise facts separately from agent interpretation.
-5. Record confidence and relevance rather than presenting uncertain claims as verified.
-6. Link the item to a structured case when it becomes actionable work.
-7. Run `python scripts/intelligence_feed.py validate` before handoff.
+2. Check the canonical registry with `python scripts/source_registry.py list --due --agent <agent-name>` when the agent has an assigned source role.
+3. Work from `data/intelligence_sources.json`; do not invent a second source list.
+4. Prefer official/primary sources. Discovery/aggregator sources should lead to organizer/program sources before detailed eligibility, prize, scope, or payout claims are treated as verified.
+5. Check `data/intelligence.json` for existing coverage before publishing.
+6. Publish concise facts separately from agent interpretation.
+7. Use the canonical `source_id` when the source is registered.
+8. Preserve publication/event time, checked time, confidence, relevance, and useful source context.
+9. Let `scripts/intelligence_feed.py` create/validate deterministic fingerprints; duplicate fingerprints must not be published as new intelligence.
+10. Link the item to a structured case when it becomes actionable work.
+11. Mark a source checked only after actually reviewing it: `python scripts/source_registry.py mark-checked <source-id>`.
+12. Run both `python scripts/source_registry.py validate` and `python scripts/intelligence_feed.py validate` before handoff.
 
 Do not create a competing news database. Raw source snapshots may live under `intelligence/feeds/`, while user-facing sourced updates belong in `data/intelligence.json`.
 
