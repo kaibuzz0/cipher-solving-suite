@@ -1,30 +1,16 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T19:39:00Z",
+  "updated_at": "2026-08-16T22:37:00Z",
   "checks": [
-    {
-      "source_id": "challenge-gov",
-      "checked_at": "2026-08-16T19:39:00Z",
-      "content_fingerprint": "c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8",
-      "previous_fingerprint": null,
-      "change_state": "first-seen",
-      "note": "Verified Challenge.gov was sunset on March 30, 2026 and USA.gov is now the official active federal challenges discovery page."
-    },
-    {
-      "source_id": "ethglobal-events",
-      "checked_at": "2026-08-16T19:39:00Z",
-      "content_fingerprint": "45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc",
-      "previous_fingerprint": null,
-      "change_state": "first-seen",
-      "note": "Reviewed official upcoming ETHGlobal calendar; ETHOnline 2026 remains listed for Sep 4-16 with Tokyo and Mumbai events later in 2026."
-    },
-    {
-      "source_id": "sherlock-bounties",
-      "checked_at": "2026-08-16T19:39:00Z",
-      "content_fingerprint": "d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec",
-      "previous_fingerprint": null,
-      "change_state": "first-seen",
-      "note": "Verified several current Sherlock bug-bounty pages reporting LIVE status and six-figure maximum rewards; scope must be opened and preserved before any testing."
-    }
+    {"source_id":"algora-bounties","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Algora bounty discovery. ProjectDiscovery currently exposes open GitHub-linked bounties, but no individual bounty was promoted because issue state, acceptance criteria, competing claims/landed fixes and payout terms still need per-item verification."},
+    {"source_id":"topcoder-challenges","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"b20e3b6d097f23555653a9ef7af2cd50079409a161064832537e83da511a51a0","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Topcoder challenge discovery. The active challenge interface is available with registration/review filters; individual challenge reward, deadline, requirements and acceptance criteria still require per-item verification before promotion."},
+    {"source_id":"upwork-software-development","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"af90e52b45fe3c1f7ef8a1165acf5b3a0e3bdca6e6a0f00b182560b22cbc639d","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Upwork software-development discovery and observed current hourly/fixed-price listings. No posting was promoted because client legitimacy, exact payment terms, competition and delivery/acceptance requirements need per-job verification."},
+    {"source_id":"freelancer-software-development","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"3c530eafe68ab6d996eca93375b7a6b033bcbc3e158c49543c9b4ca6c61d905d","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Freelancer software-development discovery and observed current project listings with time-left and bid information. No posting was promoted because client legitimacy, payment terms, competition and acceptance criteria need per-job verification."},
+    {"source_id":"gitcoin-bounties","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"b368af7586cae66cc48a0ed7fde617a29e0c213a512191958bacbd6e64154e2a","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Gitcoin's official bounty-mechanism reference. It documents task-based funding with defined deliverables, rewards, claiming, review and payment release, but it is not itself a guaranteed live bounty catalog; no specific bounty was promoted."},
+    {"source_id":"intigriti-public-programs","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"fefc385faf1303ec6494b8bef24c765b723f7d25bdf1cbe8a46f6cdacadd6774","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Intigriti public programs and confirmed current public bug-bounty/VDP discovery. No security case was created; exact scope, exclusions, prohibited techniques, rate limits, safe-harbor terms, severity/reward rules and submission requirements remain mandatory before testing."},
+    {"source_id":"bugcrowd-engagements","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"34080c0dfce5ec0f70c27c369283910d26423b1fa9ab29e4ed4d15cdfe3a2872","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Bugcrowd researcher engagement discovery documentation confirming bug-bounty/VDP/pen-test search and filters for rewards, scope, target category and dates. No security case was created; the exact engagement brief remains required before any testing."},
+    {"source_id":"challenge-gov","checked_at":"2026-08-16T19:39:00Z","content_fingerprint":"c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8","previous_fingerprint":null,"change_state":"first-seen","note":"Verified Challenge.gov was sunset on March 30, 2026 and USA.gov is now the official active federal challenges discovery page."},
+    {"source_id":"ethglobal-events","checked_at":"2026-08-16T19:39:00Z","content_fingerprint":"45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed official upcoming ETHGlobal calendar; ETHOnline 2026 remains listed for Sep 4-16 with Tokyo and Mumbai events later in 2026."},
+    {"source_id":"sherlock-bounties","checked_at":"2026-08-16T19:39:00Z","content_fingerprint":"d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec","previous_fingerprint":null,"change_state":"first-seen","note":"Verified several current Sherlock bug-bounty pages reporting LIVE status and six-figure maximum rewards; scope must be opened and preserved before any testing."}
   ]
 }
