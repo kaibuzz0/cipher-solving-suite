@@ -9,24 +9,26 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 ## Non-negotiable rules
 
 1. Read `README.md`, `ops/CURRENT_STATE.md`, `docs/REPO_MAINTENANCE.md`, the latest `docs/AGENT_HANDOFF.md`, and the active issue/task before changing code.
-2. Check `docs/WORK_QUEUE.md`, recent commits, branches, open PRs, and issues before claiming work or overwriting another agent's active work.
-3. Work from an explicit task, issue, or clearly documented maintenance objective and prefer the smallest coherent change.
-4. Never test systems outside published authorization/scope. Public availability, intelligence, a hostname, contract, repository, or bounty listing is not authorization to test it.
-5. Do not automate credential attacks, destructive actions, persistence, evasion, or out-of-scope testing. Prefer local fixtures, CTF targets, challenge data, and documented bounty assets.
-6. Never commit secrets, tokens, private keys, wallet seeds, credentials, personal data, generated scan dumps, or unreviewed temporary artifacts.
-7. Generated outputs belong under `workspace/`, `artifacts/`, or an existing output directory rather than repository root unless they are protected primary evidence with documented provenance.
-8. Add or update deterministic tests when behavior changes. If verification cannot be run, state exactly why.
-9. External/network functionality must distinguish live data from fixtures, simulations, cached snapshots, and historical records.
-10. Preserve evidence: inputs, source URLs, timestamps, hashes, assumptions, parameters, and provenance when relevant. Do not silently rewrite research evidence or generated artifacts.
-11. Prefer extending canonical catalogs/workflows over creating duplicate lists or one-off files.
-12. Keep README navigation and status claims aligned with verified repository state.
-13. Any Python file documented or invoked as `python path/to/script.py` must be tested in that direct-script form; package imports must not depend accidentally on `python -m` semantics.
+2. Check `docs/WORK_QUEUE.md`, `data/integration_queue.json` when present, recent commits, branches, open PRs, and issues before claiming work or overwriting another agent's active work.
+3. Recurring maintenance/research/build agents must also follow `docs/AUTOMATED_AGENT_OPERATIONS.md` when present.
+4. Work from an explicit task, issue, integration-queue item, or clearly documented maintenance objective and prefer the smallest coherent change.
+5. Never test systems outside published authorization/scope. Public availability, intelligence, a hostname, contract, repository, or bounty listing is not authorization to test it.
+6. Do not automate credential attacks, destructive actions, persistence, evasion, or out-of-scope testing. Prefer local fixtures, CTF targets, challenge data, and documented bounty assets.
+7. Never commit secrets, tokens, private keys, wallet seeds, credentials, personal data, generated scan dumps, or unreviewed temporary artifacts.
+8. Generated outputs belong under `workspace/`, `artifacts/`, or an existing output directory rather than repository root unless they are protected primary evidence with documented provenance.
+9. Add or update deterministic tests when behavior changes. If verification cannot be run, state exactly why.
+10. External/network functionality must distinguish live data from fixtures, simulations, cached snapshots, and historical records.
+11. Preserve evidence: inputs, source URLs, timestamps, hashes, assumptions, parameters, and provenance when relevant. Do not silently rewrite research evidence or generated artifacts.
+12. Prefer extending canonical catalogs/workflows over creating duplicate lists or one-off files.
+13. Keep README navigation and status claims aligned with verified repository state.
+14. Any Python file documented or invoked as `python path/to/script.py` must be tested in that direct-script form; package imports must not depend accidentally on `python -m` semantics.
+15. A new user-visible or agent-facing tool is not fully integrated until its code lane, command, dependencies, maturity, verification, canonical `data/tools.json` registration, relevant case/research links, website visibility where applicable, and handoff are reconciled. Use `data/integration_queue.json` as the shared inbox when integration is incomplete.
 
 ## Standard agent pass
 
 ### 1. Orient
 - Read the required operating/state documents above.
-- Inspect recent commits, open PRs/issues, and the work queue.
+- Inspect recent commits, open PRs/issues, integration queue, and the work queue.
 - Identify the exact files and evidence belonging to the pass.
 
 ### 2. Verify baseline
@@ -35,7 +37,7 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 - Note missing dependencies, CI, reproducibility, or portability gaps.
 
 ### 3. Execute one bounded objective
-Examples include fixing one defect, adding one solver, verifying one source, improving one test surface, or cleaning one stale documentation area. Do not mix unrelated cleanup, research, and feature work without an explicit reason.
+Examples include fixing one defect, adding one solver, integrating one queued tool, verifying one source, improving one test surface, or cleaning one stale documentation area. Do not mix unrelated cleanup, research, and feature work without an explicit reason.
 
 ### 4. Validate
 Prefer, in order: automated tests; deterministic fixture replay; static/compile validation; manual reproducible steps. Record what actually ran and do not convert assumptions into green status labels.
