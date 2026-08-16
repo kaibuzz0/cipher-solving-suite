@@ -109,3 +109,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `docs/AUTOMATED_AGENT_OPERATIONS.md`, `data/integration_queue.json`, `ops/CURRENT_STATE.md`; GitHub Actions runs for `dcfde9ae...`; canonical `data/tools.json` inspected.
 - **Known risks / blockers:** Documented cleanup debt remains: root/legacy artifacts need hash-preserving inventory before relocation; live opportunity/news adapters and link-health/catalog freshness remain incomplete; legacy solver inventory remains pending. PR CI still needs to validate this bootstrap branch before merge.
 - **Next action:** Open the scoped PR, inspect its CI, then let the research/intelligence role consume `ops/CURRENT_STATE.md` and the empty integration queue without duplicating existing catalog work.
+
+---
+
+### 2026-08-16 19:39 UTC — Research Intelligence / source refresh and opportunity discovery
+
+- **Branch / PR:** `agent/research-intel-20260816` / PR pending
+- **Objective:** Perform the first recurring source-health/value discovery pass from canonical registries and publish only verified material changes.
+- **Changed:** Replaced the retired Challenge.gov discovery URL with the official USA.gov active-challenges successor while preserving stable source ID compatibility; registered a separate Sherlock bug-bounty source lane; recorded first-seen source-history fingerprints for USA.gov federal challenges, ETHGlobal events, and Sherlock bounties; refreshed the opportunity catalog; and published sourced intelligence for the Challenge.gov sunset/source migration, the $15M Connecting Talent to Opportunity challenge, and the current Midas Sherlock bounty listing.
+- **Verification:** Reviewed official/current USA.gov, ETHGlobal, and Sherlock pages; deduplicated against existing intelligence/opportunity records; generated deterministic feed fingerprints using the repository algorithm; source-history fingerprints use the repository SHA-256 normalization rule. Open PR/issue checks were empty before this branch was created. CI still needs to validate JSON/schema/site-data generation on the PR head.
+- **Evidence / artifacts:** `data/intelligence_sources.json`, `data/source_check_history.json`, `data/intelligence.json`, `data/opportunities.json`, `ops/CURRENT_STATE.md`; USA.gov active-challenge/CTO pages; ETHGlobal events; Sherlock Midas/Scroll/USX bounty pages.
+- **Known risks / blockers:** Midas is only a discovery lead until exact scope/exclusions/severity/reward/submission rules are preserved; the federal CTO challenge has specialized eligibility; several registry lanes remain never-checked. Source migration shows link-health/catalog freshness automation should be prioritized.
+- **Next action:** Build/integration should add deterministic link-health/source-migration tooling. Only create a Midas active case after exact program scope/rules are preserved and verified as appropriate for authorized testing.
