@@ -8,6 +8,8 @@ from tools.earnings_tracker import EarningsTracker
 from tools.opportunity_finder import load_catalog, matches
 from tools.scanning.opportunity_scanner import build_snapshot
 
+ROOT = Path(__file__).resolve().parents[1]
+
 
 class CatalogTests(unittest.TestCase):
     def test_catalog_has_unique_ids_and_urls(self):
@@ -28,6 +30,17 @@ class CatalogTests(unittest.TestCase):
         snapshot = build_snapshot()
         self.assertFalse(snapshot["live_scan"])
         self.assertEqual(snapshot["source"], "data/opportunities.json")
+
+    def test_tool_registry_has_unique_ids_and_required_fields(self):
+        registry = json.loads((ROOT / "data" / "tools.json").read_text(encoding="utf-8"))
+        items = registry["items"]
+        self.assertGreater(len(items), 0)
+        ids = [item["id"] for item in items]
+        self.assertEqual(len(ids), len(set(ids)))
+        for item in items:
+            for field in ("name", "category", "path", "command", "description", "maturity"):
+                self.assertTrue(item.get(field), f"{item.get('id')} missing {field}")
+            self.assertTrue((ROOT / item["path"]).exists(), f"registered path missing: {item['path']}")
 
 
 class EarningsTests(unittest.TestCase):
