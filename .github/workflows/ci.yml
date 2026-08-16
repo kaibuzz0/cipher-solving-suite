@@ -25,9 +25,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install test runner
-        run: python -m pip install --upgrade pytest
+        run: python -m pip install --upgrade "pytest>=8,<10"
 
       - name: Run test suite
+        id: tests
+        continue-on-error: true
         run: |
           pytest tests/ \
             -vv \
@@ -43,10 +45,14 @@ jobs:
           if-no-files-found: warn
 
       - name: Compile core tools
+        id: compile
+        continue-on-error: true
         run: |
           python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py
 
       - name: Maintenance check
+        id: maintenance
+        continue-on-error: true
         run: python scripts/maintenance_check.py
 
       - name: Upload maintenance diagnostics
@@ -56,3 +62,23 @@ jobs:
           name: maintenance-report-python-${{ matrix.python-version }}
           path: artifacts/maintenance-report.json
           if-no-files-found: warn
+
+      - name: Validation summary
+        if: always()
+        run: |
+          echo "### Python ${{ matrix.python-version }} validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Check | Outcome |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Tests | ${{ steps.tests.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Compile | ${{ steps.compile.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Maintenance | ${{ steps.maintenance.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail job if validation failed
+        if: always()
+        run: |
+          if [ "${{ steps.tests.outcome }}" != "success" ] || \
+             [ "${{ steps.compile.outcome }}" != "success" ] || \
+             [ "${{ steps.maintenance.outcome }}" != "success" ]; then
+            echo "One or more validation stages failed. Review the named step, short traceback, job summary, and uploaded diagnostics."
+            exit 1
+          fi
