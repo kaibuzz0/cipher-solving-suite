@@ -1,1 +1,0 @@
-VS Code-style dark workspace follow-up for the Pages UI.
