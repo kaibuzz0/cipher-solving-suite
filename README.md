@@ -1,281 +1,148 @@
-# 🔐 Cipher Solving Suite v3.0
+# Cipher Solving Suite v3.1.0
 
-[![Unified](https://img.shields.io/badge/status-UNIFIED-blue)]()
-[![Production](https://img.shields.io/badge/status-PRODUCTION-brightgreen)]()
-[![Version](https://img.shields.io/badge/version-3.0.0-blue)]()
-[![Codename](https://img.shields.io/badge/codename-HERMES--UNIFIED-red)]()
-[![Research](https://img.shields.io/badge/research-40+-brightgreen)]()
-[![Opportunities](https://img.shields.io/badge/opportunities-REAL%20MONEY-gold)]()
+A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, authorized bug-bounty/audit work, coding challenges, GitHub research, reusable prompts, notes, and earnings tracking.
 
-**THE ULTIMATE PUZZLE SOLVING HEADQUARTERS**  
-*Unified repository containing all tools, solvers, and research infrastructure*  
-*40+ Platforms with Real Money Opportunities*
+This repository is being converted from a loose collection of scripts and generated artifacts into a maintainable system where human and AI agents can share one work queue, one opportunity catalog, reproducible research, and explicit handoffs.
 
----
+## What works now
 
-## 💰 40+ PLATFORMS DISCOVERED WITH REAL MONEY
+- `suite.py` — honest top-level status and command router.
+- `data/opportunities.json` — shared opportunity/link catalog used by both CLI and website.
+- `data/prompts.json` — reusable AI prompt library.
+- `tools/opportunity_finder.py` — list/search/filter/open catalog entries.
+- `tools/earnings_tracker.py` — record attempts and verified earnings.
+- `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots. It is deliberately labeled **not a live scrape**.
+- `AGENTS.md` — operating contract for AI and human agents.
+- `docs/AGENT_HANDOFF.md` — append-only agent handoff journal.
+- `docs/WORK_QUEUE.md` — shared claimable work queue.
+- `docs/REPO_MAINTENANCE.md` — maintenance rules and repository lanes.
+- `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
+- `tests/test_core.py` — deterministic tests for catalog and earnings behavior.
+- `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
 
-Research completed: **40+ active platforms** where you can earn real money solving puzzles, finding bugs, and competing in challenges.
-
-| Category | Top Platforms | Max Prize |
-|----------|--------------|-----------|
-| **Bug Bounties** | HackerOne, Bugcrowd, Immunefi | **$10,000,000** |
-| **CTF Competitions** | CTFtime, DEF CON, Google CTF | **$50,000** |
-| **Hackathons** | ETHGlobal, Devpost, Solana | **$5,000,000** |
-| **Auditing** | Code4rena, Sherlock, Spearbit | **$50,000** |
-| **Government** | Challenge.gov, Innocentive | **$1,000,000** |
-| **Freelance** | Upwork, Toptal, Freelancer | **$500/hour** |
-
-### Quick Stats:
-- 🎯 **17+ Bug Bounty Platforms** - Up to $1M per bug
-- 🎮 **15+ CTF Platforms** - Cash prizes weekly  
-- 🏛️ **10+ Hackathons** - $100K-$5M prize pools
-- 🔐 **5+ Auditing Platforms** - USDC payouts
-- 🏆 **5+ Government Challenges** - Up to $1M prizes
-- 💼 **5+ Freelance Platforms** - $100-$500/hour
-
----
-
-## 🎯 What Is This?
-
-This is the **single, unified headquarters** for all puzzle solving operations. Previously spread across multiple repositories, now consolidated into one ELITE command center.
-
-**Consolidated Repositories:**
-- ✅ 310-btc-challenge → Educational tools & analysis
-- ✅ eth-puzzle-hunter → Ethereum blockchain puzzles
-- ✅ cipher-solving-suite-core → Solving infrastructure
-
-**Status:** 🟢 PRODUCTION READY  
-**Research Status:** ✅ 40+ PLATFORMS DOCUMENTED
-
----
-
-## 🚀 Quick Start
+## Quick start
 
 ```bash
-# Clone the ultimate suite
 git clone https://github.com/kaibuzz0/cipher-solving-suite.git
+cd cipher-solving-suite
 
-# Check status
 python suite.py --status
-
-# Find opportunities
-python tools/opportunity_finder.py
-
-# Track earnings
-python tools/earnings_tracker.py
-
-# Scan for puzzles
+python suite.py --opportunities
+python tools/opportunity_finder.py --search crypto
+python tools/opportunity_finder.py --category hackathon
+python tools/earnings_tracker.py stats
 python suite.py --scan
-
-# Start solving
-python suite.py --solve
+python suite.py --maintenance
+python -m unittest discover -s tests -v
 ```
 
----
+## Repository map
 
-## 📁 Unified Structure
-
-```
-cipher-solving-suite/                  # 🏆 ELITE HEADQUARTERS
-│
-├── 🎮 suite.py                       # MAIN ENTRY POINT
-│
-├── 🔥 ACTIVE OPERATIONS
-│   ├── research/active-puzzles/      # Current targets
-│   │   ├── OPPORTUNITIES_DATABASE.md    # 17 platforms
-│   │   ├── DEEP_DIVE_OPPORTUNITIES.md   # 25+ more platforms
-│   │   └── PRIORITY_TARGETS.md          # Start here
-│   ├── research/solutions/             # Successful solves
-│   └── intelligence/feeds/             # Real-time intel
-│
-├── 🛠️  SOLVING ARSENAL
-│   ├── solvers/cryptographic/          # Cipher tools
-│   ├── solvers/steganography/          # Image analysis
-│   ├── solvers/blockchain/             # ETH/BTC puzzles
-│   └── solvers/brute-force/            # Computational
-│
-├── 📡 SYNC INFRASTRUCTURE
-│   └── sync/pc-bridge/                 # Termux ↔ PC
-│
-├── 🔧 TOOLS
-│   ├── tools/scanning/                 # Opportunity detection
-│   ├── tools/opportunity_finder.py     # Interactive finder
-│   └── tools/earnings_tracker.py       # Progress tracking
-│
-├── 💼 WORKSPACE
-│   ├── workspace/active/               # Current work
-│   └── workspace/archive/                # Completed
-│
-└── 📦 LEGACY MODULES (Consolidated)
-    ├── legacy/310-btc-challenge/       # Original 310 BTC tools
-    └── legacy/eth-puzzle-hunter/       # Ethereum puzzle tools
+```text
+cipher-solving-suite/
+├── AGENTS.md                    # rules every agent reads first
+├── README.md
+├── suite.py                     # top-level command router
+├── data/
+│   ├── opportunities.json       # canonical opportunity/link catalog
+│   └── prompts.json             # reusable AI prompts
+├── docs/
+│   ├── AGENT_HANDOFF.md         # append-only notes between agents
+│   ├── REPO_MAINTENANCE.md      # maintenance/definition-of-done rules
+│   └── WORK_QUEUE.md            # shared work claims and priorities
+├── site/
+│   ├── index.html               # GitHub Pages Operations Hub
+│   ├── app.js
+│   └── styles.css
+├── tools/
+│   ├── opportunity_finder.py
+│   ├── earnings_tracker.py
+│   └── scanning/opportunity_scanner.py
+├── scripts/
+│   └── maintenance_check.py
+├── tests/
+│   └── test_core.py
+├── research/                    # active cases, research and solutions
+├── intelligence/               # timestamped feeds/snapshots
+├── solvers/                     # solving modules
+├── workspace/                   # active/generated work
+└── legacy/                      # older consolidated material
 ```
 
----
+## AI-agent workflow
 
-## 🏆 Platform Details
+Every agent should:
 
-### 🎯 Bug Bounties (Highest Earnings Potential)
-**Platforms:** HackerOne, Bugcrowd, Immunefi, Intigriti
-- **Entry:** FREE
-- **Max Prize:** $1M-$10M (Immunefi Web3)
-- **Realistic:** $100-$10,000 per bug
-- **Time to First:** 3-6 months
-- **Status:** 🟢 1000+ Active Programs
+1. Read `AGENTS.md`.
+2. Read the latest `docs/AGENT_HANDOFF.md` entry.
+3. Check `docs/WORK_QUEUE.md` and open PRs/issues.
+4. Claim the smallest useful task.
+5. Preserve sources, timestamps, hashes, assumptions, commands, and evidence.
+6. Verify changes with tests or reproducible checks.
+7. Append a handoff entry before stopping.
 
-### 🎮 CTF Competitions (Fastest to Win)
-**Platforms:** CTFtime, CryptoHack, PicoCTF, DEF CON
-- **Entry:** FREE
-- **Max Prize:** $50,000 per competition
-- **Realistic:** $50-$5,000 per win
-- **Time to First:** Immediate (if skilled)
-- **Status:** 🟢 Competitions every weekend
+Agents should not silently overwrite prior research, fabricate live status, or create duplicated catalogs. New opportunity links belong in `data/opportunities.json`; new reusable prompts belong in `data/prompts.json`.
 
-### 🏛️ Hackathons (Biggest Prize Pools)
-**Platforms:** ETHGlobal, Devpost, Solana, Chainlink
-- **Entry:** FREE
-- **Max Prize:** $5M (Solana Grizzlython)
-- **Realistic:** $1,000-$50,000 per project
-- **Time to First:** 48 hours
-- **Status:** 🟢 Multiple events monthly
+## Opportunity pipeline
 
-### 🔐 Auditing (Web3 Focus)
-**Platforms:** Code4rena, Sherlock, Immunefi
-- **Entry:** FREE
-- **Max Prize:** $50,000 per audit
-- **Realistic:** $1,000-$20,000 per finding
-- **Time to First:** 1-3 months
-- **Status:** 🟢 Active contests weekly
+The catalog is a launchpad, not a promise of payout. It currently includes categories such as:
 
-### 🏆 Government Challenges
-**Platforms:** Challenge.gov, Innocentive
-- **Entry:** FREE
-- **Max Prize:** $1,000,000
-- **Realistic:** $5,000-$100,000 per solution
-- **Time to First:** Months
-- **Status:** 🟢 Ongoing challenges
+- bug bounty programs,
+- Web3 audit contests,
+- CTF competitions,
+- cryptography/security training,
+- hackathons,
+- government prize challenges,
+- GitHub research.
 
-### 💼 Freelance
-**Platforms:** Upwork, Toptal, Freelancer
-- **Entry:** Portfolio review
-- **Rate:** $100-$500/hour
-- **Realistic:** $3,000-$20,000/month
-- **Time to First:** Immediate (once accepted)
-- **Status:** 🟢 Active job postings
+Use:
 
----
+```bash
+python tools/opportunity_finder.py --list
+python tools/opportunity_finder.py --search solidity
+python tools/opportunity_finder.py --category ctf
+python tools/opportunity_finder.py --open ctftime
+```
 
-## 💰 Realistic Earnings Path
+Availability, prizes, eligibility, rules, and scopes change. Verify those facts on the official linked page before investing time or testing a target.
 
-| Phase | Timeline | Expected Earnings | Action |
-|-------|----------|------------------|---------|
-| **Learning** | Month 1-2 | $0 | Learn on PicoCTF, CryptoHack |
-| **First Win** | Month 3-6 | $100-500 | CTF competition or first bug |
-| **Building** | Month 6-12 | $500-3000/month | Regular CTFs + bounties |
-| **Expert** | Year 2+ | $3000-20,000+/month | Private programs + consulting |
+## Security authorization boundary
 
-**Top Earners:** $100,000-$500,000+/year
+Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty programs. Before testing a real target, save the official rules/scope and confirm the asset/action is allowed. Do not treat a public hostname, contract, repository, or IP address as authorization by itself.
 
----
+## Static Operations Hub
 
-## 🎬 Quick Commands
+`site/` is a dependency-free dashboard with tabs for:
 
-| Command | Purpose |
-|---------|---------|
-| `python suite.py --status` | System status |
-| `python tools/opportunity_finder.py` | Find platforms |
-| `python tools/earnings_tracker.py` | Track progress |
-| `python suite.py --scan` | Scan opportunities |
-| `python suite.py --research` | Research mode |
-| `python suite.py --solve` | Solve mode |
+- opportunities,
+- tools and commands,
+- reusable AI prompts,
+- agent workflow/handoffs,
+- research launch links.
 
----
+`.github/workflows/pages.yml` assembles the site with the same JSON catalogs and publishes it through GitHub Pages on `main` changes. The Pages repository setting may need to be set to **GitHub Actions** once; after that deployments are automated.
 
-## 📊 Research Documents
+## Validation and maintenance
 
-### 🔍 Phase 1: Initial Discovery
-**File:** `research/active-puzzles/OPPORTUNITIES_DATABASE.md`  
-**Contains:** 17 platforms with detailed breakdowns
-- CTF competitions
-- Bug bounty programs
-- Hackathons
-- Learning platforms
+Pull requests run Python 3.11, 3.12, and 3.13 unit tests plus compile and maintenance checks through `.github/workflows/ci.yml`.
 
-### 🔍 Phase 2: Deep Dive
-**File:** `research/active-puzzles/DEEP_DIVE_OPPORTUNITIES.md`  
-**Contains:** 25+ additional platforms
-- Government challenges
-- Professional auditing
-- Freelance opportunities
-- Specialized competitions
+A daily hygiene workflow checks for missing required files, Python compile failures, version drift, generated files sitting at repository root, and suspicious secret-like filenames. Warnings are evidence for cleanup work; they are not automatically deleted.
 
-### 🎯 Priority Targets
-**File:** `research/active-puzzles/PRIORITY_TARGETS.md`  
-**Contains:** Immediate action plan
-- This week's opportunities
-- Fastest path to first dollar
-- Skill building roadmap
+## Known cleanup debt
 
----
+The repository still contains older generated images/binaries and legacy research at the root. Those files are intentionally not mass-moved in the first maintenance pass because provenance could be lost. The next cleanup pass should inventory hashes and references, then relocate them safely into evidence/artifact directories.
 
-## 🌐 Connected Repositories
+Older research documents can also contain stale payout/platform claims. Treat them as historical notes until their sources are revalidated and migrated into the shared catalog.
 
-| Repo | Purpose | URL |
-|------|---------|-----|
-| **cipher-solving-suite** | **THIS REPO** - Headquarters | github.com/kaibuzz0/cipher-solving-suite |
-| hive-develoment | Unified OS | github.com/kaibuzz0/hive-develoment |
-| termux-pc-hermes-sync | Sync infrastructure | github.com/kaibuzz0/termux-pc-hermes-sync-files- |
+## Goal
 
----
+The goal is not to promise money or pretend every tool is live. The goal is to make this repository a dependable command center that helps agents rapidly answer:
 
-## 🏆 START HERE
+- What legitimate opportunity should we investigate next?
+- What tools do we already have?
+- What has already been tried?
+- What evidence and authorization do we have?
+- What did the previous agent learn?
+- What is the next highest-value piece of work?
 
-**Immediate Actions:**
-1. Open `research/active-puzzles/PRIORITY_TARGETS.md`
-2. Run `python tools/opportunity_finder.py`
-3. Sign up for top 3 platforms
-4. Start with PicoCTF (learning)
-5. Join next CTF competition
-
-**Goal:** First payout in 3-6 months
-
----
-
-## ⚠️ Safety First
-
-**Verified Platforms Only:**
-- ✅ All platforms in research are legitimate
-- ✅ Never pay to participate
-- ✅ Real companies with verified payouts
-- ✅ Active communities
-
-**Avoid:**
-- ❌ "Send ETH to win" scams
-- ❌ Unverified crypto contracts
-- ❌ Pyramid schemes
-- ❌ "Guaranteed" returns
-
----
-
-## 🔴 PRODUCTION READY
-
-- Real money opportunities
-- 40+ verified platforms
-- Production-grade tools
-- Active research
-- Continuous updates
-
-**Not educational. Not theoretical. Real operations.** 🎯
-
----
-
-**Research by:** kaibuzz0  
-**Platforms Discovered:** 40+  
-**Version:** 3.0.0-UNIFIED  
-**Status:** 🟢 OPERATIONAL  
-**License:** MIT
-
-**Ready to hunt? $10,000,000+ in prizes waiting. 🏆💰**
-
-**Repository:** https://github.com/kaibuzz0/cipher-solving-suite
+License: MIT
