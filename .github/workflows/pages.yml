@@ -8,6 +8,7 @@ on:
       - "data/**"
       - "research/**"
       - "scripts/build_site_data.py"
+      - "scripts/intelligence_feed.py"
       - "docs/**"
       - "README.md"
       - "AGENTS.md"
@@ -31,6 +32,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+      - name: Validate intelligence feed
+        run: python scripts/intelligence_feed.py validate
       - name: Build repository dashboard data
         run: python scripts/build_site_data.py
       - name: Assemble static site
@@ -39,10 +42,10 @@ jobs:
           mkdir -p _site/data _site/docs
           cp -R site/. _site/
           cp README.md _site/README.md
-          cp data/opportunities.json data/prompts.json data/tools.json _site/data/
+          cp data/opportunities.json data/prompts.json data/tools.json data/intelligence.json _site/data/
           cp site-data/cases.json site-data/status.json _site/data/
           cp AGENTS.md _site/AGENTS.md
-          cp docs/AGENT_HANDOFF.md docs/CASE_WORKFLOW.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md _site/docs/
+          cp docs/AGENT_HANDOFF.md docs/CASE_WORKFLOW.md docs/INTELLIGENCE_WORKFLOW.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md _site/docs/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
