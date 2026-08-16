@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-16T04:06:00Z",
+  "notice": "Directory of places to research. Prize amounts, eligibility, scope and availability change; verify on the linked official site before acting.",
+  "items": [
+    {"id":"hackerone","name":"HackerOne","category":"bug-bounty","url":"https://hackerone.com/bug-bounty-programs","description":"Public vulnerability disclosure and bug-bounty programs.","authorized_only":true,"tags":["security","web","bounty"]},
+    {"id":"bugcrowd","name":"Bugcrowd","category":"bug-bounty","url":"https://bugcrowd.com/programs","description":"Crowdsourced security programs with program-specific scopes.","authorized_only":true,"tags":["security","bounty"]},
+    {"id":"immunefi","name":"Immunefi","category":"web3-audit","url":"https://immunefi.com/explore/","description":"Web3 bug-bounty programs; read each program scope before testing.","authorized_only":true,"tags":["web3","security","bounty"]},
+    {"id":"intigriti","name":"Intigriti","category":"bug-bounty","url":"https://www.intigriti.com/","description":"Bug-bounty and vulnerability disclosure programs.","authorized_only":true,"tags":["security","bounty"]},
+    {"id":"code4rena","name":"Code4rena","category":"web3-audit","url":"https://code4rena.com/","description":"Competitive smart-contract audit contests.","authorized_only":true,"tags":["web3","audit","solidity"]},
+    {"id":"sherlock","name":"Sherlock","category":"web3-audit","url":"https://audits.sherlock.xyz/contests","description":"Smart-contract security contests and audits.","authorized_only":true,"tags":["web3","audit","solidity"]},
+    {"id":"ctftime","name":"CTFtime","category":"ctf","url":"https://ctftime.org/event/list/upcoming","description":"Calendar and rankings for capture-the-flag competitions.","authorized_only":false,"tags":["ctf","crypto","security"]},
+    {"id":"cryptohack","name":"CryptoHack","category":"training","url":"https://cryptohack.org/","description":"Cryptography challenges and learning exercises.","authorized_only":false,"tags":["crypto","training","ctf"]},
+    {"id":"picoctf","name":"picoCTF","category":"training","url":"https://picoctf.org/","description":"CTF learning environment and competitions.","authorized_only":false,"tags":["ctf","training"]},
+    {"id":"portswigger","name":"PortSwigger Web Security Academy","category":"training","url":"https://portswigger.net/web-security","description":"Authorized web-security labs and learning material.","authorized_only":false,"tags":["web","security","training"]},
+    {"id":"ethglobal","name":"ETHGlobal","category":"hackathon","url":"https://ethglobal.com/events","description":"Ethereum ecosystem hackathons and events.","authorized_only":false,"tags":["hackathon","web3","coding"]},
+    {"id":"devpost","name":"Devpost","category":"hackathon","url":"https://devpost.com/hackathons","description":"Hackathons, challenges and developer competitions.","authorized_only":false,"tags":["hackathon","coding"]},
+    {"id":"dorahacks","name":"DoraHacks","category":"hackathon","url":"https://dorahacks.io/hackathon","description":"Hackathons and developer grant opportunities.","authorized_only":false,"tags":["hackathon","web3","coding"]},
+    {"id":"challenge-gov","name":"Challenge.gov","category":"challenge","url":"https://www.challenge.gov/","description":"Official U.S. government prize competitions and challenges.","authorized_only":false,"tags":["challenge","government"]},
+    {"id":"github","name":"GitHub","category":"research","url":"https://github.com/search","description":"Search public repositories for open-source tools, datasets and challenge resources; respect repository licenses and target authorization.","authorized_only":false,"tags":["research","code","tools"]}
+  ]
+}
