@@ -34,7 +34,7 @@ jobs:
           cp README.md _site/README.md
           cp data/opportunities.json data/prompts.json _site/data/
           cp AGENTS.md _site/AGENTS.md
-          cp docs/AGENT_HANDOFF.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md _site/docs/
+          cp docs/AGENT_HANDOFF.md docs/CASE_WORKFLOW.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md _site/docs/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
