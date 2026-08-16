@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T12:40:00Z",
+  "updated_at": "2026-08-16T19:39:00Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -10,7 +10,7 @@
       "categories": ["hackathon", "opportunity"],
       "tier": "primary",
       "freshness_hours": 24,
-      "last_checked_at": "2026-08-16T12:35:00Z",
+      "last_checked_at": "2026-08-16T19:39:00Z",
       "assigned_agent": "opportunity-scout",
       "enabled": true,
       "publish_default_confidence": "high",
@@ -46,17 +46,17 @@
     },
     {
       "id": "challenge-gov",
-      "name": "Challenge.gov",
+      "name": "USA.gov Active Federal Challenges",
       "source_type": "official",
-      "url": "https://www.challenge.gov/",
+      "url": "https://www.usa.gov/find-active-challenge",
       "categories": ["opportunity", "research"],
       "tier": "primary",
       "freshness_hours": 24,
-      "last_checked_at": null,
+      "last_checked_at": "2026-08-16T19:39:00Z",
       "assigned_agent": "opportunity-scout",
       "enabled": true,
       "publish_default_confidence": "high",
-      "notes": "Official U.S. government challenge portal. Verify each challenge's eligibility, deadline, judging criteria and award terms on its official listing."
+      "notes": "Official successor discovery page after Challenge.gov was sunset on March 30, 2026. Verify each challenge's eligibility, deadline, judging criteria and award terms on its official listing/hosting agency page. The stable source ID is retained for compatibility."
     },
     {
       "id": "hackerone-directory",
@@ -99,6 +99,20 @@
       "enabled": true,
       "publish_default_confidence": "high",
       "notes": "Track public smart-contract audit contests. Preserve exact contest scope/rules before testing."
+    },
+    {
+      "id": "sherlock-bounties",
+      "name": "Sherlock Bug Bounties",
+      "source_type": "platform",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "categories": ["bug-bounty", "opportunity", "crypto"],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-16T19:39:00Z",
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Track Sherlock-hosted bug-bounty programs. A LIVE listing is only a discovery lead; preserve and verify the exact scope, exclusions, severity rules and submission terms before any testing."
     },
     {
       "id": "arxiv-cryptography",
