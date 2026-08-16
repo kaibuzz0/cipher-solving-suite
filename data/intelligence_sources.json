@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T19:39:00Z",
+  "updated_at": "2026-08-16T22:29:00Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -127,6 +127,104 @@
       "enabled": true,
       "publish_default_confidence": "medium",
       "notes": "Research discovery source. Distinguish preprints from peer-reviewed work and summarize claims conservatively."
+    },
+    {
+      "id": "algora-bounties",
+      "name": "Algora Open-Source Bounties",
+      "source_type": "platform",
+      "url": "https://algora.io/",
+      "categories": ["coding-bounty", "github", "opportunity"],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": null,
+      "assigned_agent": "coding-opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Discover GitHub/open-source coding bounties. Before promoting a bounty, verify the underlying issue remains open, reward and acceptance criteria are current, claim competition and merged/landed fixes do not make it obsolete, required technologies are understood, and payout terms are clear."
+    },
+    {
+      "id": "topcoder-challenges",
+      "name": "Topcoder Challenges",
+      "source_type": "platform",
+      "url": "https://www.topcoder.com/challenges",
+      "categories": ["coding-challenge", "ai", "opportunity"],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": null,
+      "assigned_agent": "coding-opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Track active development, AI, data and related challenges. Verify registration/open status, reward, deadline, submission and acceptance criteria, technology requirements, competition state and any final-fix obligations before promoting a challenge."
+    },
+    {
+      "id": "upwork-software-development",
+      "name": "Upwork Software Development Jobs",
+      "source_type": "platform",
+      "url": "https://www.upwork.com/freelance-jobs/software-development/",
+      "categories": ["freelance", "coding", "opportunity"],
+      "tier": "discovery",
+      "freshness_hours": 12,
+      "last_checked_at": null,
+      "assigned_agent": "freelance-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Use as a discovery lane for software-development freelance work. Verify each posting remains open, budget and payment terms, client/project legitimacy, technical requirements, deadline, acceptance/delivery expectations and competition before recommending it."
+    },
+    {
+      "id": "freelancer-software-development",
+      "name": "Freelancer Software Development Jobs",
+      "source_type": "platform",
+      "url": "https://www.freelancer.com/jobs/software-development/",
+      "categories": ["freelance", "coding", "opportunity"],
+      "tier": "discovery",
+      "freshness_hours": 12,
+      "last_checked_at": null,
+      "assigned_agent": "freelance-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Use as a discovery lane for programming jobs and contests. Verify each project/contest remains open, budget or prize, payment terms, client legitimacy, technology requirements, deadline, acceptance criteria and existing bid/entry competition before recommending it."
+    },
+    {
+      "id": "gitcoin-bounties",
+      "name": "Gitcoin Bounty Mechanisms",
+      "source_type": "official",
+      "url": "https://gitcoin.co/mechanisms/bounties",
+      "categories": ["coding-bounty", "web3", "opportunity"],
+      "tier": "discovery",
+      "freshness_hours": 72,
+      "last_checked_at": null,
+      "assigned_agent": "coding-opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Official Gitcoin reference for task-based bounty mechanisms, not a guarantee of a current live bounty catalog. Follow any lead to the actual funder/project/platform and verify open status, deliverables, reward, acceptance criteria, competing claims and payment terms before promoting it."
+    },
+    {
+      "id": "intigriti-public-programs",
+      "name": "Intigriti Public Bug Bounty Programs",
+      "source_type": "platform",
+      "url": "https://www.intigriti.com/researchers/bug-bounty-programs",
+      "categories": ["bug-bounty", "opportunity"],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": null,
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Public-program discovery only; public visibility is not blanket authorization. Before testing, preserve the exact program brief and verify in-scope assets, exclusions, prohibited techniques, request/rate limits, safe-harbor terms, severity/reward rules and submission requirements."
+    },
+    {
+      "id": "bugcrowd-engagements",
+      "name": "Bugcrowd Public Engagements",
+      "source_type": "platform",
+      "url": "https://bugcrowd.com/engagements",
+      "categories": ["bug-bounty", "opportunity"],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": null,
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Discover public Bugcrowd engagements. A listing does not authorize activity outside its brief; verify engagement status, exact targets/scope, exclusions, prohibited techniques, rate limits, safe-harbor/disclosure terms, severity/reward rules and submission requirements before any security testing."
     }
   ]
 }
