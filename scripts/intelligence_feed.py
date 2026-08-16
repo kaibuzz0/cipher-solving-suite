@@ -3,13 +3,16 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 FEED = ROOT / "data" / "intelligence.json"
+SOURCES = ROOT / "data" / "intelligence_sources.json"
 ALLOWED_CATEGORIES = {"puzzle", "ctf", "bug-bounty", "hackathon", "crypto", "github", "research", "opportunity", "tool", "other"}
 ALLOWED_CONFIDENCE = {"low", "medium", "high"}
 ALLOWED_RELEVANCE = {"watch", "useful", "high", "urgent"}
@@ -24,6 +27,17 @@ def slugify(value: str) -> str:
     return value or "intel"
 
 
+def normalize_url(url: str) -> str:
+    parts = urlsplit(url.strip())
+    return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), parts.path.rstrip("/") or "/", "", ""))
+
+
+def fingerprint(title: str, source_url: str) -> str:
+    normalized_title = re.sub(r"\s+", " ", title.strip().lower())
+    raw = f"{normalized_title}\n{normalize_url(source_url)}".encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()[:24]
+
+
 def load_feed(path: Path = FEED) -> dict:
     if not path.exists():
         return {"schema_version": 1, "updated_at": now_iso(), "items": []}
@@ -33,9 +47,16 @@ def load_feed(path: Path = FEED) -> dict:
     return data
 
 
-def validate_item(item: dict) -> list[str]:
+def load_source_ids(path: Path = SOURCES) -> set[str]:
+    if not path.exists():
+        return set()
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {source.get("id") for source in data.get("sources", []) if source.get("id")}
+
+
+def validate_item(item: dict, source_ids: set[str] | None = None) -> list[str]:
     errors = []
-    required = ["id", "title", "summary", "category", "source_name", "source_url", "published_at", "checked_at", "confidence", "relevance"]
+    required = ["id", "fingerprint", "title", "summary", "category", "source_name", "source_url", "published_at", "checked_at", "confidence", "relevance"]
     for field in required:
         if not item.get(field):
             errors.append(f"missing {field}")
@@ -47,24 +68,42 @@ def validate_item(item: dict) -> list[str]:
         errors.append("invalid relevance")
     if item.get("source_url") and not str(item["source_url"]).startswith("https://"):
         errors.append("source_url must use https")
+    if item.get("fingerprint") and item.get("title") and item.get("source_url"):
+        expected = fingerprint(item["title"], item["source_url"])
+        if item["fingerprint"] != expected:
+            errors.append("fingerprint does not match title/source_url")
+    if source_ids is not None and item.get("source_id") and item["source_id"] not in source_ids:
+        errors.append("unknown source_id")
     return errors
 
 
 def validate_feed(data: dict) -> list[str]:
     errors = []
-    seen = set()
+    seen_ids = set()
+    seen_fingerprints = set()
+    source_ids = load_source_ids()
     for index, item in enumerate(data.get("items", [])):
-        for error in validate_item(item):
+        for error in validate_item(item, source_ids):
             errors.append(f"item[{index}] {error}")
-        if item.get("id") in seen:
+        if item.get("id") in seen_ids:
             errors.append(f"duplicate id: {item.get('id')}")
-        seen.add(item.get("id"))
+        seen_ids.add(item.get("id"))
+        if item.get("fingerprint") in seen_fingerprints:
+            errors.append(f"duplicate fingerprint: {item.get('fingerprint')}")
+        seen_fingerprints.add(item.get("fingerprint"))
     return errors
 
 
 def add_item(args: argparse.Namespace, path: Path = FEED) -> dict:
     data = load_feed(path)
     checked_at = now_iso()
+    source_ids = load_source_ids()
+    if args.source_id and args.source_id not in source_ids:
+        raise ValueError(f"unknown source id: {args.source_id}")
+    item_fingerprint = fingerprint(args.title, args.source_url)
+    for existing_item in data["items"]:
+        if existing_item.get("fingerprint") == item_fingerprint:
+            raise ValueError(f"duplicate intelligence fingerprint: {item_fingerprint} ({existing_item.get('id')})")
     base_id = f"{checked_at[:10]}-{slugify(args.title)}"
     existing = {item.get("id") for item in data["items"]}
     item_id = base_id
@@ -74,9 +113,11 @@ def add_item(args: argparse.Namespace, path: Path = FEED) -> dict:
         counter += 1
     item = {
         "id": item_id,
+        "fingerprint": item_fingerprint,
         "title": args.title,
         "summary": args.summary,
         "category": args.category,
+        "source_id": args.source_id or "",
         "source_name": args.source_name,
         "source_url": args.source_url,
         "published_at": args.published_at,
@@ -87,7 +128,7 @@ def add_item(args: argparse.Namespace, path: Path = FEED) -> dict:
         "related_case": args.related_case or "",
         "tags": args.tags or [],
     }
-    errors = validate_item(item)
+    errors = validate_item(item, source_ids)
     if errors:
         raise ValueError("; ".join(errors))
     data["items"].append(item)
@@ -109,6 +150,7 @@ def list_items(data: dict, category: str | None = None) -> None:
         print(f"[{item['published_at']}] {item['category']} / {item['relevance']} / {item['confidence']}")
         print(f"  {item['title']}")
         print(f"  {item['summary']}")
+        print(f"  source={item.get('source_id') or '-'} fingerprint={item.get('fingerprint') or '-'}")
         print(f"  {item['source_name']}: {item['source_url']}")
 
 
@@ -122,6 +164,7 @@ def parser() -> argparse.ArgumentParser:
     add.add_argument("--title", required=True)
     add.add_argument("--summary", required=True)
     add.add_argument("--category", required=True, choices=sorted(ALLOWED_CATEGORIES))
+    add.add_argument("--source-id", help="Canonical source id from data/intelligence_sources.json")
     add.add_argument("--source-name", required=True)
     add.add_argument("--source-url", required=True)
     add.add_argument("--published-at", required=True, help="Source publication/event timestamp, preferably ISO-8601")
@@ -137,7 +180,7 @@ def main() -> int:
     args = parser().parse_args()
     if args.command == "add":
         item = add_item(args)
-        print(f"Added intelligence item: {item['id']}")
+        print(f"Added intelligence item: {item['id']} fingerprint={item['fingerprint']}")
         return 0
     data = load_feed()
     if args.command == "validate":
