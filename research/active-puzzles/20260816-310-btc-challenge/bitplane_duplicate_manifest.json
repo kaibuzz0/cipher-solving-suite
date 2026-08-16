@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "case_id": "20260816-310-btc-challenge",
+  "source_collection": "bitplanes/",
+  "destination_collection": "research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/",
+  "total_files": 24,
+  "duplicate_groups": [
+    {"group":"bg-0","git_blob_sha":"f4eb3c603de0e2ba5105d1ddb9294e4ff944b1d3","size_bytes":706960,"old_paths":["bitplanes/bitplane_b_0.png","bitplanes/bitplane_g_0.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_0.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_0.png"]},
+    {"group":"bg-1","git_blob_sha":"77e0630762c4138b46e99ab197705c70e3989a3e","size_bytes":713350,"old_paths":["bitplanes/bitplane_b_1.png","bitplanes/bitplane_g_1.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_1.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_1.png"]},
+    {"group":"bg-2","git_blob_sha":"5924ea63cc5889f833243bd972d565e8e8be6401","size_bytes":740940,"old_paths":["bitplanes/bitplane_b_2.png","bitplanes/bitplane_g_2.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_2.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_2.png"]},
+    {"group":"bg-3","git_blob_sha":"4ba784e32d05d464e75290dfd177baeaca8551ee","size_bytes":719196,"old_paths":["bitplanes/bitplane_b_3.png","bitplanes/bitplane_g_3.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_3.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_3.png"]},
+    {"group":"bg-4","git_blob_sha":"e8bcd6f55714769240fdbe52b5e21350aba687a3","size_bytes":716170,"old_paths":["bitplanes/bitplane_b_4.png","bitplanes/bitplane_g_4.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_4.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_4.png"]},
+    {"group":"bg-5","git_blob_sha":"5f392227b8ef8ee8da3019650c40054e29754968","size_bytes":690326,"old_paths":["bitplanes/bitplane_b_5.png","bitplanes/bitplane_g_5.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_5.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_5.png"]},
+    {"group":"bg-6","git_blob_sha":"14da6a5f95f471e30fb494bb4ecb96182d8b2111","size_bytes":660563,"old_paths":["bitplanes/bitplane_b_6.png","bitplanes/bitplane_g_6.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_6.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_6.png"]},
+    {"group":"bg-7","git_blob_sha":"988070c7a246a948c838502e4b711db10d5e3054","size_bytes":641526,"old_paths":["bitplanes/bitplane_b_7.png","bitplanes/bitplane_g_7.png"],"new_paths":["research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_b_7.png","research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/bitplane_g_7.png"]}
+  ],
+  "unique_red_files": [
+    {"name":"bitplane_r_0.png","git_blob_sha":"987feb2979ae1a39a98f98d5db52d1c7754c9b04","size_bytes":707169},
+    {"name":"bitplane_r_1.png","git_blob_sha":"e52ccbaf82fbab5c57743d681e878ae593eb57c4","size_bytes":713439},
+    {"name":"bitplane_r_2.png","git_blob_sha":"59457460660e48aafc39f0c3a138806b1a2f479e","size_bytes":740979},
+    {"name":"bitplane_r_3.png","git_blob_sha":"da5532b17dac5e4e896d2bc29efc60b26e30a38d","size_bytes":719236},
+    {"name":"bitplane_r_4.png","git_blob_sha":"8d9ff412610b93fb28b683bcb9edf523970f7f5c","size_bytes":716174},
+    {"name":"bitplane_r_5.png","git_blob_sha":"efc7b685e04ea7de279a0e28e0b0a877f1f00078","size_bytes":690335},
+    {"name":"bitplane_r_6.png","git_blob_sha":"d9f5dcc802daf43cce4bbe8ee6153088af6dc3b4","size_bytes":660563},
+    {"name":"bitplane_r_7.png","git_blob_sha":"b0415177291b0c158657e8447453e3d9e2b759b9","size_bytes":641527}
+  ],
+  "policy": "All 24 files are preserved during relocation. Duplicate status is informational only; no file is deleted as a deduplication action in this migration."
+}

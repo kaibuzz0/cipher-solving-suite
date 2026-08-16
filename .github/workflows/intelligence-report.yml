@@ -1,0 +1,84 @@
+name: Intelligence Source Report
+
+on:
+  schedule:
+    - cron: "41 10 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "data/intelligence_sources.json"
+      - "data/source_check_history.json"
+      - "scripts/source_registry.py"
+      - "scripts/source_check_history.py"
+      - ".github/workflows/intelligence-report.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    name: Source freshness and change report
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate source registry
+        id: registry
+        continue-on-error: true
+        run: python scripts/source_registry.py validate
+
+      - name: Validate source check history
+        id: history
+        continue-on-error: true
+        run: python scripts/source_check_history.py validate
+
+      - name: Build collection report
+        id: report
+        continue-on-error: true
+        run: python scripts/source_check_history.py report
+
+      - name: Add report summary
+        if: always()
+        run: |
+          echo "### Intelligence collection report" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Check | Outcome |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Source registry | ${{ steps.registry.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Check history | ${{ steps.history.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Collection report | ${{ steps.report.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f artifacts/intelligence-source-report.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          data=json.loads(Path('artifacts/intelligence-source-report.json').read_text())
+          s=data['summary']
+          print(f"\n**Sources:** {s['total_sources']}  ")
+          print(f"**Due:** {s['due_sources']}  ")
+          print(f"**Changed:** {s['changed_sources']}  ")
+          print(f"**History entries:** {s['history_entries']}")
+          PY
+          fi
+
+      - name: Upload source report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: intelligence-source-report
+          path: artifacts/intelligence-source-report.json
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Fail if report validation failed
+        if: always()
+        run: |
+          if [ "${{ steps.registry.outcome }}" != "success" ] || \
+             [ "${{ steps.history.outcome }}" != "success" ] || \
+             [ "${{ steps.report.outcome }}" != "success" ]; then
+            echo "Intelligence source reporting failed. Review the named step and uploaded artifact."
+            exit 1
+          fi

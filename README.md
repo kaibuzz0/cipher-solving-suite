@@ -1,281 +1,293 @@
-# 🔐 Cipher Solving Suite v3.0
+# Cipher Solving Suite v3.1.0
 
-[![Unified](https://img.shields.io/badge/status-UNIFIED-blue)]()
-[![Production](https://img.shields.io/badge/status-PRODUCTION-brightgreen)]()
-[![Version](https://img.shields.io/badge/version-3.0.0-blue)]()
-[![Codename](https://img.shields.io/badge/codename-HERMES--UNIFIED-red)]()
-[![Research](https://img.shields.io/badge/research-40+-brightgreen)]()
-[![Opportunities](https://img.shields.io/badge/opportunities-REAL%20MONEY-gold)]()
+A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, authorized bug-bounty/audit work, coding challenges, GitHub research, sourced news/intelligence, reusable prompts, notes, and earnings tracking.
 
-**THE ULTIMATE PUZZLE SOLVING HEADQUARTERS**  
-*Unified repository containing all tools, solvers, and research infrastructure*  
-*40+ Platforms with Real Money Opportunities*
+**Start here.** This README is the repository front door for humans and AI agents. Use it to navigate the repo, find commands, locate active work, and understand the operating workflow before changing anything.
 
----
+## Quick navigation
 
-## 💰 40+ PLATFORMS DISCOVERED WITH REAL MONEY
+| I want to… | Go here |
+|---|---|
+| Open the human-facing dashboard | [`site/index.html`](site/index.html) |
+| Browse sourced News / Intelligence | [`data/intelligence.json`](data/intelligence.json) |
+| Browse the approved Intelligence Source Registry | [`data/intelligence_sources.json`](data/intelligence_sources.json) |
+| Check stale/due intelligence sources | [`scripts/source_registry.py`](scripts/source_registry.py) |
+| Understand how agents collect/publish intelligence | [`docs/INTELLIGENCE_WORKFLOW.md`](docs/INTELLIGENCE_WORKFLOW.md) |
+| Add/list/validate intelligence from terminal | [`scripts/intelligence_feed.py`](scripts/intelligence_feed.py) |
+| See what an AI agent must read/do | [`AGENTS.md`](AGENTS.md) |
+| Find the next task | [`docs/WORK_QUEUE.md`](docs/WORK_QUEUE.md) |
+| Read the latest agent notes | [`docs/AGENT_HANDOFF.md`](docs/AGENT_HANDOFF.md) |
+| Understand repo maintenance rules | [`docs/REPO_MAINTENANCE.md`](docs/REPO_MAINTENANCE.md) |
+| Start a new puzzle/challenge/research case | [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md) |
+| Generate a standardized case folder | [`scripts/new_case.py`](scripts/new_case.py) |
+| Browse money/skill opportunity links | [`data/opportunities.json`](data/opportunities.json) |
+| Browse the internal tool registry | [`data/tools.json`](data/tools.json) |
+| Browse reusable AI prompts | [`data/prompts.json`](data/prompts.json) |
+| Build user-facing dashboard data | [`scripts/build_site_data.py`](scripts/build_site_data.py) |
+| Search opportunities from terminal | [`tools/opportunity_finder.py`](tools/opportunity_finder.py) |
+| Track attempts/earnings | [`tools/earnings_tracker.py`](tools/earnings_tracker.py) |
+| Create a timestamped opportunity snapshot | [`tools/scanning/opportunity_scanner.py`](tools/scanning/opportunity_scanner.py) |
+| Run the main command router | [`suite.py`](suite.py) |
+| Run repo hygiene checks | [`scripts/maintenance_check.py`](scripts/maintenance_check.py) |
+| Run core tests | [`tests/test_core.py`](tests/test_core.py) |
+| Inspect active research | [`research/active-puzzles/`](research/active-puzzles/) |
+| Inspect solver modules | [`solvers/`](solvers/) |
+| Inspect generated/active work | [`workspace/`](workspace/) |
+| Inspect CI | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
+| Inspect daily maintenance automation | [`.github/workflows/daily-maintenance.yml`](.github/workflows/daily-maintenance.yml) |
+| Inspect Pages deployment | [`.github/workflows/pages.yml`](.github/workflows/pages.yml) |
 
-Research completed: **40+ active platforms** where you can earn real money solving puzzles, finding bugs, and competing in challenges.
+## Two-layer architecture
 
-| Category | Top Platforms | Max Prize |
-|----------|--------------|-----------|
-| **Bug Bounties** | HackerOne, Bugcrowd, Immunefi | **$10,000,000** |
-| **CTF Competitions** | CTFtime, DEF CON, Google CTF | **$50,000** |
-| **Hackathons** | ETHGlobal, Devpost, Solana | **$5,000,000** |
-| **Auditing** | Code4rena, Sherlock, Spearbit | **$50,000** |
-| **Government** | Challenge.gov, Innocentive | **$1,000,000** |
-| **Freelance** | Upwork, Toptal, Freelancer | **$500/hour** |
+This repository deliberately serves two audiences at once.
 
-### Quick Stats:
-- 🎯 **17+ Bug Bounty Platforms** - Up to $1M per bug
-- 🎮 **15+ CTF Platforms** - Cash prizes weekly  
-- 🏛️ **10+ Hackathons** - $100K-$5M prize pools
-- 🔐 **5+ Auditing Platforms** - USDC payouts
-- 🏆 **5+ Government Challenges** - Up to $1M prizes
-- 💼 **5+ Freelance Platforms** - $100-$500/hour
+**Agent layer:** structured files, intelligence sources, intelligence items, case metadata, catalogs, work queues, handoffs, tests, and scripts let many AI/human agents work without losing context or duplicating effort.
 
----
+**User layer:** the GitHub Pages Operations Hub turns that structured state into a readable dashboard. Users can see opportunities, sourced News / Intelligence, the intelligence collection network and freshness state, active cases, internal tools, prompts, research links, repository status, and agent workflow without digging through source files.
 
-## 🎯 What Is This?
+The website is a first-class output. When agents publish a sourced intelligence item, check/update an intelligence source, add a structured case, or update the tool/opportunity/prompt catalogs, the Pages build exposes the shared state to users.
 
-This is the **single, unified headquarters** for all puzzle solving operations. Previously spread across multiple repositories, now consolidated into one ELITE command center.
+## Agent start sequence
 
-**Consolidated Repositories:**
-- ✅ 310-btc-challenge → Educational tools & analysis
-- ✅ eth-puzzle-hunter → Ethereum blockchain puzzles
-- ✅ cipher-solving-suite-core → Solving infrastructure
+Every AI or human agent should use this order:
 
-**Status:** 🟢 PRODUCTION READY  
-**Research Status:** ✅ 40+ PLATFORMS DOCUMENTED
+1. **README.md** — orient and navigate.
+2. **AGENTS.md** — read operating and authorization rules.
+3. **docs/AGENT_HANDOFF.md** — learn what the previous agent did.
+4. **docs/WORK_QUEUE.md** — choose/claim the smallest useful task.
+5. **Open PRs/issues** — avoid duplicated or conflicting work.
+6. **Check assigned intelligence sources** — use `scripts/source_registry.py` to find due/never-checked collection lanes.
+7. **Relevant code/data/research files** — inspect before editing.
+8. **Publish sourced intelligence** — when external research produces a useful user-facing update, use the canonical feed/source workflow.
+9. **Tests / maintenance checks** — verify before handoff.
+10. **Publish structured state** — cases/tools/catalog changes should be visible to the user dashboard where appropriate.
+11. **Append a handoff entry** — leave exact next steps for the next agent.
 
----
-
-## 🚀 Quick Start
+## Command center
 
 ```bash
-# Clone the ultimate suite
-git clone https://github.com/kaibuzz0/cipher-solving-suite.git
-
-# Check status
+# Repository status / command router
 python suite.py --status
 
-# Find opportunities
-python tools/opportunity_finder.py
+# Intelligence collection network
+python scripts/source_registry.py list
+python scripts/source_registry.py list --due
+python scripts/source_registry.py list --due --agent ctf-scout
+python scripts/source_registry.py validate
 
-# Track earnings
-python tools/earnings_tracker.py
+# After actually reviewing a source
+python scripts/source_registry.py mark-checked ctftime-upcoming
 
-# Scan for puzzles
+# Browse/validate sourced News / Intelligence
+python scripts/intelligence_feed.py list
+python scripts/intelligence_feed.py list --category github
+python scripts/intelligence_feed.py validate
+
+# Publish a sourced intelligence item
+python scripts/intelligence_feed.py add \
+  --title "Example challenge announced" \
+  --summary "Short factual explanation of why it matters." \
+  --category hackathon \
+  --source-id ethglobal-events \
+  --source-name "Official organizer" \
+  --source-url "https://example.com/announcement" \
+  --published-at "2026-08-16T12:00:00Z" \
+  --confidence high \
+  --relevance high
+
+# Create a standardized new case
+python scripts/new_case.py --name "Puzzle 310 follow-up" --type puzzle --source "source name" --url "https://example.com/challenge"
+
+# Build the same structured summary used by the website
+python scripts/build_site_data.py
+
+# Opportunity discovery from the shared catalog
+python suite.py --opportunities
+python tools/opportunity_finder.py --list
+python tools/opportunity_finder.py --search crypto
+python tools/opportunity_finder.py --category hackathon
+
+# Earnings / attempt tracking
+python tools/earnings_tracker.py stats
+
+# Timestamped catalog snapshot (not a live scrape)
 python suite.py --scan
 
-# Start solving
-python suite.py --solve
+# Health / validation
+python suite.py --maintenance
+python -m pytest tests/ -vv --tb=short
 ```
 
----
+## What works now
 
-## 📁 Unified Structure
+- `suite.py` — top-level status and command router.
+- `data/intelligence_sources.json` — canonical Intelligence Source Registry with source type/tier, categories, freshness SLA, last check, assigned agent, enabled state, and confidence defaults.
+- `scripts/source_registry.py` — list due sources, filter by assigned agent, validate registry structure, mark a source checked, and emit freshness status.
+- `data/intelligence.json` — canonical source-backed user-facing News / Intelligence feed.
+- `scripts/intelligence_feed.py` — add/list/validate intelligence with timestamps, source IDs, deterministic fingerprints, confidence, relevance, tags, notes, and optional case links.
+- `docs/INTELLIGENCE_WORKFLOW.md` — source collection, freshness, deduplication, verification, and publishing rules.
+- `data/opportunities.json` — canonical opportunity/link catalog used by CLI and website.
+- `data/tools.json` — canonical internal tool registry used by the website and validation.
+- `data/prompts.json` — reusable AI prompt library.
+- `tools/opportunity_finder.py` — list/search/filter/open catalog entries.
+- `tools/earnings_tracker.py` — record attempts and verified earnings.
+- `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots; deliberately **not labeled as live scraping**.
+- `scripts/new_case.py` — standardized challenge/opportunity case generator.
+- `scripts/build_site_data.py` — scans structured cases/catalogs and builds dashboard cases, source freshness, and repository status snapshots.
+- `docs/CASE_WORKFLOW.md` — case lifecycle, evidence, attempts, verification, and handoff rules.
+- `AGENTS.md` — operating contract for AI and human agents.
+- `docs/AGENT_HANDOFF.md` — append-only agent journal.
+- `docs/WORK_QUEUE.md` — shared claimable work queue.
+- `docs/REPO_MAINTENANCE.md` — maintenance rules and definition of done.
+- `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
+- `tests/test_core.py` — deterministic catalog, source-registry, intelligence/fingerprint, tool-registry, earnings, and case-generation tests.
+- `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
 
+## Repository map
+
+```text
+cipher-solving-suite/
+├── README.md                    # FRONT DOOR + navigation
+├── AGENTS.md                    # agent rules / authorization boundary
+├── suite.py                     # top-level command router
+├── data/
+│   ├── intelligence.json        # canonical sourced News / Intelligence feed
+│   ├── intelligence_sources.json # recurring collection source registry
+│   ├── opportunities.json       # canonical opportunity/link catalog
+│   ├── tools.json               # canonical internal tool registry
+│   └── prompts.json             # reusable AI prompts
+├── docs/
+│   ├── AGENT_HANDOFF.md         # append-only notes between agents
+│   ├── CASE_WORKFLOW.md         # standardized challenge/case lifecycle
+│   ├── INTELLIGENCE_WORKFLOW.md # source collection + publishing rules
+│   ├── REPO_MAINTENANCE.md      # maintenance / definition of done
+│   └── WORK_QUEUE.md            # shared work claims and priorities
+├── site/                        # GitHub Pages Operations Hub
+├── site-data/                   # generated dashboard case/status/source snapshots
+├── tools/                       # opportunity, earnings and scanning tools
+├── scripts/
+│   ├── build_site_data.py       # converts repo state into dashboard data
+│   ├── intelligence_feed.py     # manages sourced News / Intelligence
+│   ├── source_registry.py       # manages intelligence collection network
+│   ├── maintenance_check.py     # repository hygiene checks
+│   └── new_case.py              # creates standardized case directories
+├── tests/                       # deterministic validation
+├── research/                    # active cases, research and solutions
+├── intelligence/               # raw/timestamped supporting feed snapshots
+├── solvers/                     # solving modules
+├── workspace/                   # active/generated work
+└── legacy/                      # older consolidated material
 ```
-cipher-solving-suite/                  # 🏆 ELITE HEADQUARTERS
-│
-├── 🎮 suite.py                       # MAIN ENTRY POINT
-│
-├── 🔥 ACTIVE OPERATIONS
-│   ├── research/active-puzzles/      # Current targets
-│   │   ├── OPPORTUNITIES_DATABASE.md    # 17 platforms
-│   │   ├── DEEP_DIVE_OPPORTUNITIES.md   # 25+ more platforms
-│   │   └── PRIORITY_TARGETS.md          # Start here
-│   ├── research/solutions/             # Successful solves
-│   └── intelligence/feeds/             # Real-time intel
-│
-├── 🛠️  SOLVING ARSENAL
-│   ├── solvers/cryptographic/          # Cipher tools
-│   ├── solvers/steganography/          # Image analysis
-│   ├── solvers/blockchain/             # ETH/BTC puzzles
-│   └── solvers/brute-force/            # Computational
-│
-├── 📡 SYNC INFRASTRUCTURE
-│   └── sync/pc-bridge/                 # Termux ↔ PC
-│
-├── 🔧 TOOLS
-│   ├── tools/scanning/                 # Opportunity detection
-│   ├── tools/opportunity_finder.py     # Interactive finder
-│   └── tools/earnings_tracker.py       # Progress tracking
-│
-├── 💼 WORKSPACE
-│   ├── workspace/active/               # Current work
-│   └── workspace/archive/                # Completed
-│
-└── 📦 LEGACY MODULES (Consolidated)
-    ├── legacy/310-btc-challenge/       # Original 310 BTC tools
-    └── legacy/eth-puzzle-hunter/       # Ethereum puzzle tools
-```
 
----
+## Where new things belong
 
-## 🏆 Platform Details
+Do not create another random root-level file when an existing lane fits.
 
-### 🎯 Bug Bounties (Highest Earnings Potential)
-**Platforms:** HackerOne, Bugcrowd, Immunefi, Intigriti
-- **Entry:** FREE
-- **Max Prize:** $1M-$10M (Immunefi Web3)
-- **Realistic:** $100-$10,000 per bug
-- **Time to First:** 3-6 months
-- **Status:** 🟢 1000+ Active Programs
+- Recurring external source agents should monitor → `data/intelligence_sources.json`
+- Sourced user-facing news/research update → `data/intelligence.json`
+- Raw timestamped external-feed snapshot → `intelligence/feeds/`
+- New opportunity/platform link → `data/opportunities.json`
+- New internal tool meant for agents/users → code in its proper module + registry entry in `data/tools.json`
+- Reusable AI prompt → `data/prompts.json`
+- New puzzle/challenge/bounty/research investigation → create a case with `scripts/new_case.py`
+- Active challenge/case research → `research/active-puzzles/<case-id>/`
+- Successful/reproducible solution → `research/solutions/`
+- Solver code → `solvers/` or the appropriate existing tool module
+- Temporary/generated work → `workspace/` or `artifacts/`
+- Agent-to-agent notes → `docs/AGENT_HANDOFF.md`
+- Future work → `docs/WORK_QUEUE.md`
+- Stable process/rules → `docs/`
 
-### 🎮 CTF Competitions (Fastest to Win)
-**Platforms:** CTFtime, CryptoHack, PicoCTF, DEF CON
-- **Entry:** FREE
-- **Max Prize:** $50,000 per competition
-- **Realistic:** $50-$5,000 per win
-- **Time to First:** Immediate (if skilled)
-- **Status:** 🟢 Competitions every weekend
+## Intelligence collection network
 
-### 🏛️ Hackathons (Biggest Prize Pools)
-**Platforms:** ETHGlobal, Devpost, Solana, Chainlink
-- **Entry:** FREE
-- **Max Prize:** $5M (Solana Grizzlython)
-- **Realistic:** $1,000-$50,000 per project
-- **Time to First:** 48 hours
-- **Status:** 🟢 Multiple events monthly
+The source registry turns ad-hoc research into an organized collection system. Every recurring source has a stable ID, source tier/type, covered categories, freshness target, last checked timestamp, assigned agent role, enabled state, and confidence guidance.
 
-### 🔐 Auditing (Web3 Focus)
-**Platforms:** Code4rena, Sherlock, Immunefi
-- **Entry:** FREE
-- **Max Prize:** $50,000 per audit
-- **Realistic:** $1,000-$20,000 per finding
-- **Time to First:** 1-3 months
-- **Status:** 🟢 Active contests weekly
+A dashboard source can be `fresh`, `due-soon`, `due`, `never-checked`, or `disabled`. This status only means whether the source was reviewed within its configured SLA; it does not certify every claim on the source.
 
-### 🏆 Government Challenges
-**Platforms:** Challenge.gov, Innocentive
-- **Entry:** FREE
-- **Max Prize:** $1,000,000
-- **Realistic:** $5,000-$100,000 per solution
-- **Time to First:** Months
-- **Status:** 🟢 Ongoing challenges
+The standard agent loop is:
 
-### 💼 Freelance
-**Platforms:** Upwork, Toptal, Freelancer
-- **Entry:** Portfolio review
-- **Rate:** $100-$500/hour
-- **Realistic:** $3,000-$20,000/month
-- **Time to First:** Immediate (once accepted)
-- **Status:** 🟢 Active job postings
+`due source → inspect → verify → deduplicate → publish useful intel → mark checked → create case if actionable → handoff`
 
----
+The initial registry includes lanes for hackathons, CTFs, GitHub/tool research, government challenges, bug-bounty programs, Web3 audit contests, and cryptography research. Agents can be assigned independently, which allows several AI workers to collect in parallel without all searching the same places.
 
-## 💰 Realistic Earnings Path
+## News / Intelligence pipeline
 
-| Phase | Timeline | Expected Earnings | Action |
-|-------|----------|------------------|---------|
-| **Learning** | Month 1-2 | $0 | Learn on PicoCTF, CryptoHack |
-| **First Win** | Month 3-6 | $100-500 | CTF competition or first bug |
-| **Building** | Month 6-12 | $500-3000/month | Regular CTFs + bounties |
-| **Expert** | Year 2+ | $3000-20,000+/month | Private programs + consulting |
+The News / Intelligence layer is how external research becomes durable, user-visible knowledge instead of disappearing inside one agent conversation.
 
-**Top Earners:** $100,000-$500,000+/year
+Every published item records what changed, source identity/URL, source publication time, when an agent checked it, category, confidence, relevance, deterministic deduplication fingerprint, tags, optional notes, and an optional related case. The dashboard exposes these entries under **News / Intel** and the collection network under **Intel Sources**.
 
----
+Agents should prefer official/primary sources. Uncertain claims must be labeled with appropriate confidence rather than presented as verified facts. Intelligence about a bounty or target is **not** testing authorization. See [`docs/INTELLIGENCE_WORKFLOW.md`](docs/INTELLIGENCE_WORKFLOW.md).
 
-## 🎬 Quick Commands
+## Standard case workflow
 
-| Command | Purpose |
-|---------|---------|
-| `python suite.py --status` | System status |
-| `python tools/opportunity_finder.py` | Find platforms |
-| `python tools/earnings_tracker.py` | Track progress |
-| `python suite.py --scan` | Scan opportunities |
-| `python suite.py --research` | Research mode |
-| `python suite.py --solve` | Solve mode |
+When an opportunity becomes real work, convert it into a case rather than scattering notes across the repository. A generated case contains `case.json`, `README.md`, `notes.md`, `attempts.md`, and `evidence/`.
 
----
+That gives agents one place to preserve source URLs, authorization, evidence, hypotheses, commands, failed attempts, outcomes, ownership, and next actions. The Pages build scans these `case.json` files so active structured work can appear on the user dashboard. See [`docs/CASE_WORKFLOW.md`](docs/CASE_WORKFLOW.md).
 
-## 📊 Research Documents
+## Opportunity pipeline
 
-### 🔍 Phase 1: Initial Discovery
-**File:** `research/active-puzzles/OPPORTUNITIES_DATABASE.md`  
-**Contains:** 17 platforms with detailed breakdowns
-- CTF competitions
-- Bug bounty programs
-- Hackathons
-- Learning platforms
+The catalog is a launchpad, not a promise of payout. It includes categories such as bug bounties, Web3 audit contests, CTFs, cryptography/security training, hackathons, government prize challenges, and GitHub research.
 
-### 🔍 Phase 2: Deep Dive
-**File:** `research/active-puzzles/DEEP_DIVE_OPPORTUNITIES.md`  
-**Contains:** 25+ additional platforms
-- Government challenges
-- Professional auditing
-- Freelance opportunities
-- Specialized competitions
+Availability, prizes, eligibility, rules, and scopes change. Verify those facts on the official linked page before investing time or testing a target.
 
-### 🎯 Priority Targets
-**File:** `research/active-puzzles/PRIORITY_TARGETS.md`  
-**Contains:** Immediate action plan
-- This week's opportunities
-- Fastest path to first dollar
-- Skill building roadmap
+## Security authorization boundary
 
----
+Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty programs. Before testing a real target, save the official rules/scope and confirm the asset/action is allowed. A public hostname, contract, repository, IP address, intelligence source, or intelligence-feed entry is **not** authorization by itself.
 
-## 🌐 Connected Repositories
+## Static Operations Hub
 
-| Repo | Purpose | URL |
-|------|---------|-----|
-| **cipher-solving-suite** | **THIS REPO** - Headquarters | github.com/kaibuzz0/cipher-solving-suite |
-| hive-develoment | Unified OS | github.com/kaibuzz0/hive-develoment |
-| termux-pc-hermes-sync | Sync infrastructure | github.com/kaibuzz0/termux-pc-hermes-sync-files- |
+`site/` is the human-facing dashboard. It exposes:
 
----
+- repository summary counts,
+- opportunities,
+- sourced News / Intelligence with dates, confidence, relevance, notes, source IDs and links,
+- the Intelligence Source network with freshness/ownership/tier information,
+- active structured cases and their next actions,
+- the internal tool registry with commands and maturity,
+- reusable AI prompts,
+- agent workflow/handoffs,
+- research launch links.
 
-## 🏆 START HERE
+`.github/workflows/pages.yml` validates both the source registry and intelligence feed, runs `scripts/build_site_data.py`, packages the shared catalogs plus generated case/source/status data, and publishes the site through GitHub Pages on `main` changes. The repository Pages setting may need to be set to **GitHub Actions** once.
 
-**Immediate Actions:**
-1. Open `research/active-puzzles/PRIORITY_TARGETS.md`
-2. Run `python tools/opportunity_finder.py`
-3. Sign up for top 3 platforms
-4. Start with PicoCTF (learning)
-5. Join next CTF competition
+## Validation and maintenance
 
-**Goal:** First payout in 3-6 months
+Pull requests run Python 3.11, 3.12, and 3.13 validation through [`.github/workflows/ci.yml`](.github/workflows/ci.yml). Matrix jobs are named `Python 3.11`, `Python 3.12`, and `Python 3.13`, and `fail-fast` is disabled so one interpreter failure does not hide results from the others.
 
----
+Tests run with `python -m pytest -vv --tb=short --junitxml=test-results.xml`. The Actions log therefore shows each individual test and a concise traceback instead of only an opaque exit code. Each Python job uploads its JUnit XML with `if: always()`, so failure diagnostics remain available when a test breaks.
 
-## ⚠️ Safety First
+Compile, source-registry validation, intelligence-feed validation, dashboard-data generation, and maintenance validation also continue after a test failure. Their outcomes are written to the GitHub job summary; intelligence/source data, generated dashboard data, and maintenance reports are uploaded with `if: always()`. The matrix job fails only after all diagnostic stages have run. The goal is: **CI should answer exactly what failed, where, and on which Python version.**
 
-**Verified Platforms Only:**
-- ✅ All platforms in research are legitimate
-- ✅ Never pay to participate
-- ✅ Real companies with verified payouts
-- ✅ Active communities
+The daily maintenance workflow checks missing required files, Python compile failures, version drift, generated files at repository root, and suspicious secret-like filenames. Findings become cleanup work; automation does not silently delete research evidence.
 
-**Avoid:**
-- ❌ "Send ETH to win" scams
-- ❌ Unverified crypto contracts
-- ❌ Pyramid schemes
-- ❌ "Guaranteed" returns
+## Known cleanup debt
 
----
+Older generated images/binaries and legacy research still exist at the root. They should be inventoried with hashes and references before relocation so research provenance is preserved. Older research documents may also contain stale payout/platform claims and should be treated as historical notes until revalidated.
 
-## 🔴 PRODUCTION READY
+## Mission
 
-- Real money opportunities
-- 40+ verified platforms
-- Production-grade tools
-- Active research
-- Continuous updates
+The repository should help a **user** quickly answer:
 
-**Not educational. Not theoretical. Real operations.** 🎯
+- What changed recently that could matter to me?
+- Where did that information come from and how confident is it?
+- Which intelligence sources are being watched and how fresh are they?
+- What opportunities are available to investigate?
+- What cases are active right now?
+- What tools can I use and how do I run them?
+- What did the agents learn?
+- What research/resources should I open next?
 
----
+And it should help an **agent** quickly answer:
 
-**Research by:** kaibuzz0  
-**Platforms Discovered:** 40+  
-**Version:** 3.0.0-UNIFIED  
-**Status:** 🟢 OPERATIONAL  
-**License:** MIT
+- Which assigned sources are due or have never been checked?
+- What new sourced information should be published for users?
+- Is this discovery already represented by a deduplication fingerprint?
+- What legitimate opportunity should we investigate next?
+- What tools do we already have?
+- What has already been tried?
+- What evidence and authorization do we have?
+- What did the previous agent learn?
+- What is broken or missing?
+- What is the next highest-value piece of work?
 
-**Ready to hunt? $10,000,000+ in prizes waiting. 🏆💰**
-
-**Repository:** https://github.com/kaibuzz0/cipher-solving-suite
+License: MIT

@@ -1,0 +1,37 @@
+{
+  "case_id": "20260816-310-btc-challenge",
+  "name": "310 BTC Challenge",
+  "type": "crypto-puzzle",
+  "status": "active",
+  "created_at": "2026-08-16T00:00:00Z",
+  "updated_at": "2026-08-16T15:30:00Z",
+  "source": "Legacy repository research",
+  "source_url": "",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": ["bitcoin", "steganography", "image-analysis", "legacy-migration"],
+  "evidence": [
+    {"path":"310_challenge.png","role":"primary-evidence","migration":"PRIMARY EVIDENCE — DO NOT MOVE YET"},
+    {"path":"research/active-puzzles/20260816-310-btc-challenge/evidence/generated/alpha_lsb.bin","role":"generated-output","generated_by":"research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py"},
+    {"path":"research/active-puzzles/20260816-310-btc-challenge/evidence/generated/alpha_pattern.bin","role":"generated-output","generated_by":"research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py"},
+    {"path":"research/active-puzzles/20260816-310-btc-challenge/evidence/generated/alpha_2bit.bin","role":"generated-output","generated_by":"research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py"},
+    {"path":"research/active-puzzles/20260816-310-btc-challenge/evidence/generated/alpha_row310.bin","role":"generated-output","generated_by":"research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py"},
+    {"path":"research/active-puzzles/20260816-310-btc-challenge/evidence/generated/bitplanes/","role":"generated-output-collection","duplicate_manifest":"research/active-puzzles/20260816-310-btc-challenge/bitplane_duplicate_manifest.json"}
+  ],
+  "analysis_scripts": [
+    "research/active-puzzles/20260816-310-btc-challenge/tools/analyze_310.py",
+    "research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py"
+  ],
+  "notes": [
+    "research/active-puzzles/20260816-310-btc-challenge/notes.md",
+    "research/active-puzzles/20260816-310-btc-challenge/MIGRATION_PLAN.md"
+  ],
+  "migration": {
+    "generated_evidence_relocated": true,
+    "primary_evidence_relocated": false,
+    "integrity_check": "scripts/verify_310_migration.py",
+    "duplicate_manifest": "research/active-puzzles/20260816-310-btc-challenge/bitplane_duplicate_manifest.json"
+  },
+  "next_action": "Verify the original challenge source/provenance, run the portable alpha extractor against the protected image, and compare regenerated SHA-256 outputs with the migrated legacy outputs."
+}

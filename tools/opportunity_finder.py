@@ -1,98 +1,79 @@
 #!/usr/bin/env python3
-"""
-Real-Time Opportunity Finder
-Checks multiple platforms for active opportunities
-"""
+"""Search and open the shared opportunity catalog."""
 
+from __future__ import annotations
+
+import argparse
+import json
 import webbrowser
-import sys
+from pathlib import Path
 
-class OpportunityFinder:
-    """Find real money opportunities right now"""
-    
-    OPPORTUNITIES = {
-        "Bug Bounties (High Pay)": [
-            ("HackerOne", "https://hackerone.com/bug-bounty-programs"),
-            ("Immunefi (Web3)", "https://immunefi.com/explore/"),
-            ("Bugcrowd", "https://bugcrowd.com/programs"),
-            ("Intigriti", "https://app.intigriti.com/programs"),
-        ],
-        "CTF Competitions (Cash Prizes)": [
-            ("CTFtime Calendar", "https://ctftime.org/event/list/upcoming"),
-            ("CTFtime Active", "https://ctftime.org/"),
-        ],
-        "Hackathons (Big Prizes)": [
-            ("Devpost", "https://devpost.com/hackathons"),
-            ("ETHGlobal", "https://ethglobal.com/events"),
-            ("Gitcoin", "https://gitcoin.co/hackathons"),
-            ("DoraHacks", "https://dorahacks.io/"),
-        ],
-        "Learning (Skill Building)": [
-            ("PicoCTF", "https://picoctf.org/"),
-            ("CryptoHack", "https://cryptohack.org/"),
-            ("Hacker101", "https://www.hacker101.com/"),
-            ("PortSwigger", "https://portswigger.net/web-security"),
-        ],
-        "Smart Contract Auditing": [
-            ("Code4rena", "https://code4rena.com/"),
-            ("Sherlock", "https://www.sherlock.xyz/"),
-            ("Code4rena Contests", "https://code4rena.com/contests"),
-        ],
-        "Government/Enterprise": [
-            ("Challenge.gov", "https://www.challenge.gov/"),
-            ("Innocentive", "https://www.wazoku.com/challenges"),
-        ]
-    }
-    
-    def show_menu(self):
-        """Display menu"""
-        print("="*70)
-        print("🎯 REAL MONEY OPPORTUNITY FINDER")
-        print("="*70)
-        print()
-        
-        idx = 1
-        for category, links in self.OPPORTUNITIES.items():
-            print(f"\n{category}:")
-            for name, url in links:
-                print(f"  [{idx}] {name}")
-                idx += 1
-        
-        print("\n" + "="*70)
-        print("Enter number to open platform, or 'all' to open everything")
-        print("="*70)
-    
-    def open_platform(self, choice):
-        """Open selected platform"""
-        idx = 1
-        for category, links in self.OPPORTUNITIES.items():
-            for name, url in links:
-                if str(idx) == choice:
-                    print(f"\n🚀 Opening: {name}")
-                    webbrowser.open(url)
-                    return True
-                idx += 1
+ROOT = Path(__file__).resolve().parents[1]
+CATALOG = ROOT / "data" / "opportunities.json"
+
+
+def load_catalog() -> dict:
+    with CATALOG.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def matches(item: dict, query: str | None, category: str | None) -> bool:
+    if category and item.get("category") != category:
         return False
-    
-    def open_all(self):
-        """Open all platforms"""
-        print("\n🚀 Opening all platforms...")
-        for category, links in self.OPPORTUNITIES.items():
-            for name, url in links:
-                print(f"  • {name}")
-                webbrowser.open(url)
+    if not query:
+        return True
+    needle = query.lower()
+    haystack = " ".join(
+        [
+            str(item.get("name", "")),
+            str(item.get("category", "")),
+            str(item.get("description", "")),
+            " ".join(item.get("tags", [])),
+        ]
+    ).lower()
+    return needle in haystack
 
-def main():
-    finder = OpportunityFinder()
-    finder.show_menu()
-    
-    choice = input("\nEnter choice: ").strip()
-    
-    if choice.lower() == 'all':
-        finder.open_all()
-    else:
-        if not finder.open_platform(choice):
-            print("❌ Invalid choice")
+
+def format_item(item: dict) -> str:
+    scope = " [VERIFY SCOPE]" if item.get("authorized_only") else ""
+    tags = ", ".join(item.get("tags", []))
+    return f"{item['id']:<18} {item['name']} ({item['category']}){scope}\n  {item['url']}\n  {item.get('description','')}\n  tags: {tags}"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Search the Cipher Solving Suite opportunity catalog")
+    parser.add_argument("--list", action="store_true", help="List matching opportunities")
+    parser.add_argument("--search", metavar="TEXT", help="Search names, descriptions, categories and tags")
+    parser.add_argument("--category", help="Filter by exact category")
+    parser.add_argument("--open", dest="open_id", metavar="ID", help="Open one catalog item by id")
+    parser.add_argument("--json", action="store_true", help="Print matching records as JSON")
+    args = parser.parse_args()
+
+    catalog = load_catalog()
+    items = [item for item in catalog.get("items", []) if matches(item, args.search, args.category)]
+
+    if args.open_id:
+        selected = next((item for item in catalog.get("items", []) if item.get("id") == args.open_id), None)
+        if not selected:
+            parser.error(f"unknown opportunity id: {args.open_id}")
+        print(f"Opening {selected['name']}: {selected['url']}")
+        if selected.get("authorized_only"):
+            print("Reminder: verify current program authorization and scope before testing.")
+        webbrowser.open(selected["url"])
+        return 0
+
+    if args.json:
+        print(json.dumps({"updated_at": catalog.get("updated_at"), "items": items}, indent=2))
+        return 0
+
+    print(f"Catalog updated: {catalog.get('updated_at', 'unknown')} | matches: {len(items)}")
+    print(catalog.get("notice", ""))
+    for item in items:
+        print("\n" + format_item(item))
+    if not items:
+        return 1
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
