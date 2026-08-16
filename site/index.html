@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Cipher Solving Suite operations dashboard for tools, opportunities, prompts, research and AI-agent handoffs.">
+  <title>Cipher Solving Suite — Operations Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">CIPHER SOLVING SUITE</p>
+      <h1>Operations Hub</h1>
+      <p class="lede">One place for authorized challenges, research tools, opportunity links, reusable AI prompts, and multi-agent handoffs.</p>
+    </div>
+    <div class="status"><span class="dot"></span><span>Catalog-backed dashboard</span></div>
+  </header>
+
+  <nav class="tabs" aria-label="Dashboard sections">
+    <button data-tab="opportunities" class="active">Opportunities</button>
+    <button data-tab="tools">Tools & Commands</button>
+    <button data-tab="prompts">AI Prompts</button>
+    <button data-tab="workflow">Agent Workflow</button>
+    <button data-tab="research">Research Links</button>
+  </nav>
+
+  <main>
+    <section class="controls">
+      <input id="search" type="search" placeholder="Search tools, tags, platforms, prompts…" aria-label="Search dashboard">
+      <select id="category" aria-label="Filter opportunity category"><option value="all">All categories</option></select>
+    </section>
+
+    <section id="opportunities" class="panel active">
+      <div class="section-head"><div><p class="eyebrow">MONEY / SKILL PIPELINE</p><h2>Opportunity Directory</h2></div><p class="muted">Verify current rules, payout, eligibility and scope on the official site before acting.</p></div>
+      <div id="opportunity-grid" class="grid"></div>
+    </section>
+
+    <section id="tools" class="panel">
+      <div class="section-head"><div><p class="eyebrow">LOCAL ARSENAL</p><h2>Tools & Commands</h2></div></div>
+      <div class="grid static-grid">
+        <article class="card"><span class="badge">CORE</span><h3>Suite status</h3><code>python suite.py --status</code><p>Show the suite version, catalog state and available operating modes.</p></article>
+        <article class="card"><span class="badge">DISCOVERY</span><h3>Find opportunities</h3><code>python tools/opportunity_finder.py --list</code><p>Search the same opportunity catalog used by this dashboard.</p></article>
+        <article class="card"><span class="badge">FILTER</span><h3>Search catalog</h3><code>python tools/opportunity_finder.py --search crypto</code><p>Filter by platform name, description, category or tag.</p></article>
+        <article class="card"><span class="badge">MONEY</span><h3>Track earnings</h3><code>python tools/earnings_tracker.py stats</code><p>Track attempts and verified payouts locally in JSON.</p></article>
+        <article class="card"><span class="badge">HYGIENE</span><h3>Maintenance check</h3><code>python scripts/maintenance_check.py</code><p>Compile core Python, detect version drift and flag generated root artifacts.</p></article>
+        <article class="card"><span class="badge">AGENTS</span><h3>Work queue</h3><a href="../docs/WORK_QUEUE.md">docs/WORK_QUEUE.md</a><p>Claim work, leave evidence, and keep parallel agents from duplicating effort.</p></article>
+      </div>
+    </section>
+
+    <section id="prompts" class="panel">
+      <div class="section-head"><div><p class="eyebrow">REUSABLE CONTEXT</p><h2>AI Prompt Library</h2></div><p class="muted">Click a prompt to copy it.</p></div>
+      <div id="prompt-grid" class="grid"></div>
+    </section>
+
+    <section id="workflow" class="panel">
+      <div class="section-head"><div><p class="eyebrow">HANDOFF PROTOCOL</p><h2>Agent Workflow</h2></div></div>
+      <ol class="workflow">
+        <li><strong>Orient.</strong> Read <a href="../AGENTS.md">AGENTS.md</a>, the latest <a href="../docs/AGENT_HANDOFF.md">handoff</a>, and <a href="../docs/WORK_QUEUE.md">work queue</a>.</li>
+        <li><strong>Claim.</strong> Choose the smallest unclaimed, verifiable task.</li>
+        <li><strong>Research.</strong> Save sources, timestamps, hashes, assumptions and authorization scope.</li>
+        <li><strong>Build.</strong> Keep source, generated artifacts and evidence separated.</li>
+        <li><strong>Verify.</strong> Tests first; deterministic replay or compile checks second.</li>
+        <li><strong>Handoff.</strong> Record exact changes, failures, evidence and one next action.</li>
+      </ol>
+      <div class="warning"><strong>Authorization boundary:</strong> only test security targets covered by explicit CTF, audit, lab, or bug-bounty authorization and scope.</div>
+    </section>
+
+    <section id="research" class="panel">
+      <div class="section-head"><div><p class="eyebrow">INTELLIGENCE</p><h2>Research Launchpad</h2></div></div>
+      <div class="grid static-grid">
+        <article class="card"><h3>GitHub code research</h3><a href="https://github.com/search" target="_blank" rel="noopener">Search GitHub</a><p>Find libraries and techniques; inspect license and maintenance before adoption.</p></article>
+        <article class="card"><h3>CTF calendar</h3><a href="https://ctftime.org/event/list/upcoming" target="_blank" rel="noopener">CTFtime upcoming</a><p>Current competition discovery.</p></article>
+        <article class="card"><h3>Challenge.gov</h3><a href="https://www.challenge.gov/" target="_blank" rel="noopener">Official challenges</a><p>Government prize competitions and challenge programs.</p></article>
+        <article class="card"><h3>Repository research</h3><a href="../research/active-puzzles/">Active research folder</a><p>Use timestamped case files rather than loose root-level notes.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span id="catalog-meta">Loading catalog…</span><a href="https://github.com/kaibuzz0/cipher-solving-suite">Repository</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
