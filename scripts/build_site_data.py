@@ -3,13 +3,17 @@
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from scripts.artifact_inventory import build_inventory
 from scripts.source_check_history import build_report as build_collection_report
 
-ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "site-data"
 
 
@@ -71,20 +75,7 @@ def build_status(cases: list[dict], source_status: dict, collection: dict, artif
     opportunities = load_json(ROOT / "data" / "opportunities.json")
     prompts = load_json(ROOT / "data" / "prompts.json")
     intelligence = load_json(ROOT / "data" / "intelligence.json")
-    return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "active_cases": len(cases),
-        "tools": len(tools.get("items", [])),
-        "opportunities": len(opportunities.get("items", [])),
-        "prompts": len(prompts.get("prompts", [])),
-        "intelligence": len(intelligence.get("items", [])),
-        "intelligence_sources": len(source_status.get("sources", [])),
-        "sources_due": source_status.get("counts", {}).get("due", 0) + source_status.get("counts", {}).get("never-checked", 0),
-        "sources_changed": collection.get("summary", {}).get("changed_sources", 0),
-        "source_history_entries": collection.get("summary", {}).get("history_entries", 0),
-        "artifacts": artifacts.get("summary", {}).get("total", 0),
-        "artifacts_review_before_move": artifacts.get("summary", {}).get("review_before_move", 0),
-    }
+    return {"generated_at": datetime.now(timezone.utc).isoformat(), "active_cases": len(cases), "tools": len(tools.get("items", [])), "opportunities": len(opportunities.get("items", [])), "prompts": len(prompts.get("prompts", [])), "intelligence": len(intelligence.get("items", [])), "intelligence_sources": len(source_status.get("sources", [])), "sources_due": source_status.get("counts", {}).get("due", 0) + source_status.get("counts", {}).get("never-checked", 0), "sources_changed": collection.get("summary", {}).get("changed_sources", 0), "source_history_entries": collection.get("summary", {}).get("history_entries", 0), "artifacts": artifacts.get("summary", {}).get("total", 0), "artifacts_review_before_move": artifacts.get("summary", {}).get("review_before_move", 0)}
 
 
 def main() -> int:
