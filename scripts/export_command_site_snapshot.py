@@ -45,7 +45,13 @@ def git(*args: str) -> str:
 
 
 def ensure_generated_data() -> None:
-    required = [SITE_DATA / "status.json", SITE_DATA / "toolsets.json", SITE_DATA / "cases.json", SITE_DATA / "sources.json"]
+    required = [
+        SITE_DATA / "status.json",
+        SITE_DATA / "toolsets.json",
+        SITE_DATA / "cases.json",
+        SITE_DATA / "sources.json",
+        SITE_DATA / "artifacts.json",
+    ]
     if not all(path.exists() for path in required):
         subprocess.check_call([sys.executable, "scripts/build_site_data.py"], cwd=ROOT)
     if not (SITE_DATA / "agent-ops.json").exists():
@@ -78,10 +84,6 @@ def build_snapshot() -> dict:
     ensure_generated_data()
     commit = git("rev-parse", "HEAD") or "unknown-commit"
     status = load_json(SITE_DATA / "status.json")
-    toolsets = list_from(SITE_DATA / "toolsets.json", "items")
-    cases = list_from(SITE_DATA / "cases.json", "items")
-    sources = list_from(SITE_DATA / "sources.json", "sources")
-    agent_ops = load_json(SITE_DATA / "agent-ops.json")
     return {
         "schema_version": 1,
         "generated_at": now_iso(),
@@ -97,12 +99,14 @@ def build_snapshot() -> dict:
         },
         "stats": status,
         "tools": list_from(ROOT / "data" / "tools.json", "items"),
-        "toolsets": toolsets,
-        "cases": cases,
+        "toolsets": list_from(SITE_DATA / "toolsets.json", "items"),
+        "cases": list_from(SITE_DATA / "cases.json", "items"),
         "opportunities": list_from(ROOT / "data" / "opportunities.json", "items"),
         "intelligence": list_from(ROOT / "data" / "intelligence.json", "items"),
-        "sources": sources,
-        "agent_ops": agent_ops,
+        "sources": list_from(SITE_DATA / "sources.json", "sources"),
+        "prompts": list_from(ROOT / "data" / "prompts.json", "prompts"),
+        "evidence": list_from(SITE_DATA / "artifacts.json", "items"),
+        "agent_ops": load_json(SITE_DATA / "agent-ops.json"),
         "activity": recent_activity(),
         "links": [
             {"id": "github", "name": "GitHub repository", "url": "https://github.com/kaibuzz0/cipher-solving-suite"},
@@ -120,7 +124,13 @@ def main() -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
     snapshot = build_snapshot()
     output.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"output": str(output), "repo": snapshot["repo"]["id"], "source_commit": snapshot["source_commit"], "counts": {k: len(snapshot[k]) for k in ("tools", "toolsets", "cases", "opportunities", "intelligence", "sources", "activity")}}, indent=2))
+    collections = ("tools", "toolsets", "cases", "opportunities", "intelligence", "sources", "prompts", "evidence", "activity")
+    print(json.dumps({
+        "output": str(output),
+        "repo": snapshot["repo"]["id"],
+        "source_commit": snapshot["source_commit"],
+        "counts": {key: len(snapshot[key]) for key in collections},
+    }, indent=2))
     return 0
 
 
