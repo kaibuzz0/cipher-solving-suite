@@ -48,7 +48,12 @@ jobs:
         id: compile
         continue-on-error: true
         run: |
-          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py
+          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py
+
+      - name: Validate intelligence source registry
+        id: sources
+        continue-on-error: true
+        run: python scripts/source_registry.py validate
 
       - name: Validate intelligence feed
         id: intelligence
@@ -77,8 +82,10 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: intelligence-feed-python-${{ matrix.python-version }}
-          path: data/intelligence.json
+          name: intelligence-data-python-${{ matrix.python-version }}
+          path: |
+            data/intelligence.json
+            data/intelligence_sources.json
           if-no-files-found: warn
 
       - name: Upload maintenance diagnostics
@@ -97,6 +104,7 @@ jobs:
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
           echo "| Tests | ${{ steps.tests.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Compile | ${{ steps.compile.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Source registry | ${{ steps.sources.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Intelligence feed | ${{ steps.intelligence.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dashboard data | ${{ steps.dashboard.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Maintenance | ${{ steps.maintenance.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
@@ -106,6 +114,7 @@ jobs:
         run: |
           if [ "${{ steps.tests.outcome }}" != "success" ] || \
              [ "${{ steps.compile.outcome }}" != "success" ] || \
+             [ "${{ steps.sources.outcome }}" != "success" ] || \
              [ "${{ steps.intelligence.outcome }}" != "success" ] || \
              [ "${{ steps.dashboard.outcome }}" != "success" ] || \
              [ "${{ steps.maintenance.outcome }}" != "success" ]; then
