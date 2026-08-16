@@ -4,7 +4,7 @@ This repository may be worked on by multiple AI agents. Every agent must leave t
 
 ## Mission
 
-Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bounty research platform. Do not claim live capability, verified payouts, production readiness, or solved results unless evidence exists in the repository.
+Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bounty research platform with a user-facing knowledge layer. Do not claim live capability, verified payouts, production readiness, solved results, or external news as fact unless evidence exists in the repository.
 
 ## Safety and authorization boundary
 
@@ -13,6 +13,7 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 - Do not automate credential attacks, destructive actions, persistence, evasion, or testing outside stated scope.
 - Prefer local fixtures, CTF targets, challenge data, and documented bug-bounty assets.
 - Stop and flag ambiguous scope rather than guessing.
+- Intelligence about a target, bounty, repository, or contract is not authorization to test it.
 
 ## Before making changes
 
@@ -33,6 +34,20 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 - Never hard-code secrets, tokens, private keys, wallet seeds, or credentials.
 - Preserve evidence: inputs, source URLs, timestamps, hashes, assumptions, and solver parameters when relevant.
 - Prefer extending canonical catalogs/workflows over creating duplicate lists or one-off files.
+
+## News / Intelligence rules
+
+When external research produces information that would help users or future agents:
+
+1. Read `docs/INTELLIGENCE_WORKFLOW.md`.
+2. Check `data/intelligence.json` for duplicates.
+3. Prefer official or primary sources and preserve the source publication/event timestamp.
+4. Publish concise facts separately from agent interpretation.
+5. Record confidence and relevance rather than presenting uncertain claims as verified.
+6. Link the item to a structured case when it becomes actionable work.
+7. Run `python scripts/intelligence_feed.py validate` before handoff.
+
+Do not create a competing news database. Raw source snapshots may live under `intelligence/feeds/`, while user-facing sourced updates belong in `data/intelligence.json`.
 
 ## Verification standard
 
