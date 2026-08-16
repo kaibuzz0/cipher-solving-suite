@@ -1,12 +1,14 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T12:35:00Z",
+  "updated_at": "2026-08-16T12:42:00Z",
   "items": [
     {
       "id": "2026-08-16-ethonline-2026-upcoming",
+      "fingerprint": "00b1cd64374d0f51610c3bc6",
       "title": "ETHOnline 2026 is scheduled for September 4–16",
       "summary": "ETHGlobal lists ETHOnline 2026 as an upcoming asynchronous hackathon running September 4 through September 16, making it a near-term build/competition opportunity worth tracking.",
       "category": "hackathon",
+      "source_id": "ethglobal-events",
       "source_name": "ETHGlobal",
       "source_url": "https://ethglobal.com/events",
       "published_at": "2026-09-04T00:00:00Z",
@@ -19,9 +21,11 @@
     },
     {
       "id": "2026-08-16-active-online-ctfs",
+      "fingerprint": "fb9119cd97ca9152ffe445f8",
       "title": "Multiple online CTFs are active through August 17",
       "summary": "CTFtime lists gaslightCTF 2026 and HackHowl 2026 as online events continuing into August 17, providing immediate CTF practice/competition leads for the research queue.",
       "category": "ctf",
+      "source_id": "ctftime-upcoming",
       "source_name": "CTFtime",
       "source_url": "https://ctftime.org/event/list/upcoming",
       "published_at": "2026-08-16T00:00:00Z",
@@ -34,9 +38,11 @@
     },
     {
       "id": "2026-08-16-late-august-ctf-window",
+      "fingerprint": "cac8a9d6cef1fcaa4896ebbb",
       "title": "Strong late-August CTF window appears on CTFtime",
       "summary": "CTFtime currently lists BrunnerCTF 2026 for August 21–23 and several August 29–30 events including COMPFEST CTF 2026 and ASIS CTF Quals 2026, creating a useful upcoming competition window for planning.",
       "category": "ctf",
+      "source_id": "ctftime-upcoming",
       "source_name": "CTFtime",
       "source_url": "https://ctftime.org/event/list/upcoming",
       "published_at": "2026-08-21T12:00:00Z",
