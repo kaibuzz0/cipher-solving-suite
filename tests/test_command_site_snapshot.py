@@ -21,7 +21,18 @@ def test_command_site_snapshot_export(tmp_path):
     assert data["repo"]["full_name"] == "kaibuzz0/cipher-solving-suite"
     assert data["repo"]["url"].startswith("https://")
     assert data["source_commit"]
-    for key in ("tools", "toolsets", "cases", "opportunities", "intelligence", "sources", "activity", "links"):
+    for key in (
+        "tools",
+        "toolsets",
+        "cases",
+        "opportunities",
+        "intelligence",
+        "sources",
+        "prompts",
+        "evidence",
+        "activity",
+        "links",
+    ):
         assert isinstance(data[key], list)
     assert isinstance(data["agent_ops"], dict)
     assert isinstance(data["stats"], dict)
