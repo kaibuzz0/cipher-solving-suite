@@ -2,10 +2,12 @@ import argparse
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 import scripts.intelligence_feed as intelligence_feed
 import scripts.new_case as new_case
+import scripts.source_registry as source_registry
 from tools.earnings_tracker import EarningsTracker
 from tools.opportunity_finder import load_catalog, matches
 from tools.scanning.opportunity_scanner import build_snapshot
@@ -45,41 +47,84 @@ class CatalogTests(unittest.TestCase):
             self.assertTrue((ROOT / item["path"]).exists(), f"registered path missing: {item['path']}")
 
 
-class IntelligenceTests(unittest.TestCase):
-    def test_repository_feed_is_valid(self):
-        data = intelligence_feed.load_feed()
-        self.assertEqual(intelligence_feed.validate_feed(data), [])
+class SourceRegistryTests(unittest.TestCase):
+    def test_repository_source_registry_is_valid(self):
+        data = source_registry.load_registry()
+        self.assertEqual(source_registry.validate_registry(data), [])
+        self.assertGreaterEqual(len(data["sources"]), 5)
 
-    def test_duplicate_ids_are_rejected(self):
-        item = {
+    def test_duplicate_source_ids_are_rejected(self):
+        source = {
             "id": "same",
-            "title": "One",
+            "name": "Example",
+            "source_type": "official",
+            "url": "https://example.com",
+            "categories": ["research"],
+            "tier": "primary",
+            "freshness_hours": 24,
+            "last_checked_at": None,
+            "assigned_agent": "research-scout",
+            "enabled": True,
+            "publish_default_confidence": "high",
+        }
+        errors = source_registry.validate_registry({"sources": [source, dict(source)]})
+        self.assertTrue(any("duplicate source id" in error for error in errors))
+
+    def test_never_checked_source_is_due(self):
+        source = {"enabled": True, "last_checked_at": None, "freshness_hours": 24}
+        self.assertEqual(source_registry.source_due_state(source), "never-checked")
+
+    def test_recent_source_is_fresh(self):
+        source = {"enabled": True, "last_checked_at": "2026-08-16T12:00:00Z", "freshness_hours": 24}
+        now = datetime(2026, 8, 16, 13, 0, tzinfo=timezone.utc)
+        self.assertEqual(source_registry.source_due_state(source, now), "fresh")
+
+
+class IntelligenceTests(unittest.TestCase):
+    def make_item(self, item_id="one", title="One", source_url="https://example.com/a"):
+        return {
+            "id": item_id,
+            "fingerprint": intelligence_feed.fingerprint(title, source_url),
+            "title": title,
             "summary": "Summary",
             "category": "research",
+            "source_id": "",
             "source_name": "Source",
-            "source_url": "https://example.com/a",
+            "source_url": source_url,
             "published_at": "2026-08-16T12:00:00Z",
             "checked_at": "2026-08-16T12:01:00Z",
             "confidence": "high",
             "relevance": "useful",
         }
-        errors = intelligence_feed.validate_feed({"items": [item, dict(item)]})
+
+    def test_repository_feed_is_valid(self):
+        data = intelligence_feed.load_feed()
+        self.assertEqual(intelligence_feed.validate_feed(data), [])
+
+    def test_duplicate_ids_are_rejected(self):
+        item = self.make_item("same")
+        duplicate = dict(item)
+        duplicate["fingerprint"] = intelligence_feed.fingerprint("Different", "https://example.com/b")
+        duplicate["title"] = "Different"
+        duplicate["source_url"] = "https://example.com/b"
+        errors = intelligence_feed.validate_feed({"items": [item, duplicate]})
         self.assertTrue(any("duplicate id" in error for error in errors))
 
+    def test_duplicate_fingerprints_are_rejected(self):
+        item = self.make_item("one")
+        duplicate = dict(item)
+        duplicate["id"] = "two"
+        errors = intelligence_feed.validate_feed({"items": [item, duplicate]})
+        self.assertTrue(any("duplicate fingerprint" in error for error in errors))
+
     def test_source_url_must_be_https(self):
-        item = {
-            "id": "bad-source",
-            "title": "Bad",
-            "summary": "Summary",
-            "category": "research",
-            "source_name": "Source",
-            "source_url": "http://example.com/a",
-            "published_at": "2026-08-16T12:00:00Z",
-            "checked_at": "2026-08-16T12:01:00Z",
-            "confidence": "medium",
-            "relevance": "watch",
-        }
+        item = self.make_item("bad-source", "Bad", "http://example.com/a")
         self.assertIn("source_url must use https", intelligence_feed.validate_item(item))
+
+    def test_fingerprint_is_deterministic_and_ignores_query(self):
+        a = intelligence_feed.fingerprint(" Example  Event ", "https://EXAMPLE.com/path/?utm_source=x")
+        b = intelligence_feed.fingerprint("example event", "https://example.com/path")
+        self.assertEqual(a, b)
 
     def test_add_item_persists_sourced_entry(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -88,6 +133,7 @@ class IntelligenceTests(unittest.TestCase):
                 title="Example event",
                 summary="A sourced update.",
                 category="hackathon",
+                source_id=None,
                 source_name="Official organizer",
                 source_url="https://example.com/event",
                 published_at="2026-08-16T12:00:00Z",
@@ -101,6 +147,7 @@ class IntelligenceTests(unittest.TestCase):
             saved = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(saved["items"][0]["id"], item["id"])
             self.assertEqual(saved["items"][0]["source_name"], "Official organizer")
+            self.assertEqual(saved["items"][0]["fingerprint"], item["fingerprint"])
             self.assertEqual(intelligence_feed.validate_feed(saved), [])
 
 
