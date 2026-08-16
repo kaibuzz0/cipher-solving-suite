@@ -14,9 +14,12 @@ REPORT = ROOT / "artifacts" / "maintenance-report.json"
 
 REQUIRED = [
     ROOT / "AGENTS.md",
-    ROOT / "docs" / "AGENT_HANDOFF.md",
-    ROOT / "docs" / "REPO_MAINTENANCE.md",
     ROOT / "README.md",
+    ROOT / "docs" / "AGENT_HANDOFF.md",
+    ROOT / "docs" / "CASE_WORKFLOW.md",
+    ROOT / "docs" / "REPO_MAINTENANCE.md",
+    ROOT / "docs" / "WORK_QUEUE.md",
+    ROOT / "scripts" / "new_case.py",
     ROOT / "suite.py",
 ]
 
@@ -54,6 +57,7 @@ def main() -> int:
         ROOT / "tools" / "opportunity_finder.py",
         ROOT / "tools" / "earnings_tracker.py",
         ROOT / "tools" / "scanning" / "opportunity_scanner.py",
+        ROOT / "scripts" / "new_case.py",
     ]:
         if candidate.exists():
             compile_targets.append(candidate)
