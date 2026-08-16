@@ -37,3 +37,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `data/`, `site/`, `docs/WORK_QUEUE.md`, `.github/workflows/pages.yml`, `.github/workflows/ci.yml`, `tests/test_core.py`, and the repaired Python entry points.
 - **Known risks / blockers:** Legacy generated binaries/images still live at repository root and should be inventoried before moving. Existing historical research may contain stale opportunity/payout claims. GitHub Pages will become visible after this branch is merged to `main` and Pages is configured to use GitHub Actions if the repository has not already enabled that setting.
 - **Next action:** Inventory root artifacts with hashes/references, then move them into structured evidence/artifact directories without breaking legacy research paths.
+
+---
+
+### 2026-08-16 04:15 UTC — ChatGPT / README navigation hub
+
+- **Branch / PR:** `agent/maintenance-foundation` / PR #1
+- **Objective:** Make README the easy-access front door for humans and AI agents.
+- **Changed:** Added a README quick-navigation table, command center, agent start sequence, repository map, and explicit placement rules for new files. Updated `AGENTS.md` so agents must keep README links synchronized when major paths change. Added README links to the static dashboard and packaged README into the GitHub Pages artifact.
+- **Verification:** Cross-checked the README, agent contract, dashboard links, and Pages assembly paths. CI should re-run on the updated branch.
+- **Evidence / artifacts:** `README.md`, `AGENTS.md`, `site/index.html`, `.github/workflows/pages.yml`.
+- **Known risks / blockers:** Markdown served directly by the static site is primarily a navigation/reference artifact; GitHub remains the best rendered view of the repository README. Legacy artifact cleanup remains outstanding.
+- **Next action:** Build a structured challenge/case format and inventory legacy root artifacts so puzzles/research can move into consistent case directories.
