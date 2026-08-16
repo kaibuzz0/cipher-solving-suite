@@ -17,6 +17,14 @@ SKIP_PARTS = {".git", ".pytest_cache", "__pycache__", "site-data", "artifacts"}
 PRIMARY_HINTS = {"challenge", "original", "source", "evidence", "capture"}
 GENERATED_DIRS = {"bitplanes", "workspace"}
 GENERATED_PREFIXES = ("alpha_", "bitplane_", "extract_", "decoded_", "output_", "render_")
+CASE_310 = "20260816-310-btc-challenge"
+LEGACY_CASE_PATHS = {
+    "310_challenge.png": CASE_310,
+    "alpha_lsb.bin": CASE_310,
+    "alpha_pattern.bin": CASE_310,
+    "alpha_2bit.bin": CASE_310,
+    "alpha_row310.bin": CASE_310,
+}
 MIGRATION_STATES = {
     "SAFE TO ORGANIZE",
     "NEEDS CASE LINK",
@@ -51,7 +59,12 @@ def classify(path: Path) -> str:
 
 def case_hint(rel: Path) -> str:
     parts = rel.parts
-    if len(parts) >= 3 and parts[0] == "research" and parts[1] == "active-puzzles": return parts[2]
+    if len(parts) >= 3 and parts[0] == "research" and parts[1] == "active-puzzles":
+        return parts[2]
+    if rel.as_posix() in LEGACY_CASE_PATHS:
+        return LEGACY_CASE_PATHS[rel.as_posix()]
+    if parts and parts[0] == "bitplanes":
+        return CASE_310
     return ""
 
 
@@ -72,6 +85,14 @@ def base_state(rel: Path, related_case: str) -> str:
     return "UNKNOWN PROVENANCE"
 
 
+def provenance_for(rel: Path, related_case: str) -> str:
+    if rel.as_posix() == "310_challenge.png":
+        return f"legacy primary challenge image linked to case {CASE_310}; external source provenance still requires verification"
+    if related_case == CASE_310:
+        return f"linked to structured case {CASE_310}; generated/derived status documented in case metadata"
+    return "tracked repository file; origin/details require case or research-note review"
+
+
 def build_inventory(root: Path = ROOT) -> dict:
     items = []
     for path in sorted(root.rglob("*")):
@@ -87,7 +108,7 @@ def build_inventory(root: Path = ROOT) -> dict:
             "size_bytes": stat.st_size, "sha256": sha256_file(path), "related_case": related_case,
             "migration_state": base_state(rel, related_case),
             "orphaned": not bool(related_case), "duplicate_group": "", "duplicate_count": 1,
-            "provenance": "tracked repository file; origin/details require case or research-note review",
+            "provenance": provenance_for(rel, related_case),
         })
     by_hash = defaultdict(list)
     for item in items: by_hash[item["sha256"]].append(item)
@@ -99,7 +120,7 @@ def build_inventory(root: Path = ROOT) -> dict:
             item["duplicate_count"] = len(group)
             if item["migration_state"] != "PRIMARY EVIDENCE — DO NOT MOVE YET": item["migration_state"] = "DUPLICATE"
     counts = {state: sum(i["migration_state"] == state for i in items) for state in MIGRATION_STATES}
-    return {"schema_version": 2, "generated_at": now_iso(), "summary": {
+    return {"schema_version": 3, "generated_at": now_iso(), "summary": {
         "total": len(items), "bytes": sum(i["size_bytes"] for i in items),
         "duplicate_groups": sum(1 for g in by_hash.values() if len(g) > 1),
         "orphaned": sum(i["orphaned"] for i in items), "migration_states": counts,
