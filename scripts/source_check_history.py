@@ -5,12 +5,16 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from scripts.source_registry import build_status, load_registry, mark_checked, write_registry
 
-ROOT = Path(__file__).resolve().parents[1]
 HISTORY = ROOT / "data" / "source_check_history.json"
 REPORT = ROOT / "artifacts" / "intelligence-source-report.json"
 
@@ -42,14 +46,7 @@ def latest_check(history: dict, source_id: str) -> dict | None:
     return max(matches, key=lambda c: c.get("checked_at", ""))
 
 
-def record_check(
-    source_id: str,
-    observed_value: str,
-    note: str = "",
-    checked_at: str | None = None,
-    history_path: Path = HISTORY,
-    update_registry: bool = True,
-) -> dict:
+def record_check(source_id: str, observed_value: str, note: str = "", checked_at: str | None = None, history_path: Path = HISTORY, update_registry: bool = True) -> dict:
     registry = load_registry()
     source_ids = {s.get("id") for s in registry.get("sources", [])}
     if source_id not in source_ids:
@@ -60,14 +57,7 @@ def record_check(
     previous = latest_check(history, source_id)
     previous_fingerprint = previous.get("content_fingerprint") if previous else None
     state = "first-seen" if previous_fingerprint is None else ("unchanged" if previous_fingerprint == fingerprint else "changed")
-    entry = {
-        "source_id": source_id,
-        "checked_at": stamp,
-        "content_fingerprint": fingerprint,
-        "previous_fingerprint": previous_fingerprint,
-        "change_state": state,
-        "note": note,
-    }
+    entry = {"source_id": source_id, "checked_at": stamp, "content_fingerprint": fingerprint, "previous_fingerprint": previous_fingerprint, "change_state": state, "note": note}
     history["checks"].append(entry)
     history["checks"].sort(key=lambda x: x.get("checked_at", ""), reverse=True)
     history["updated_at"] = stamp
@@ -107,17 +97,7 @@ def build_report() -> dict:
         if last and last.get("change_state") == "changed":
             changed.append({"source_id": source["id"], "name": source["name"], **last})
     due_sources = [s for s in status["sources"] if s["freshness_state"] in {"due", "due-soon", "never-checked"}]
-    return {
-        "generated_at": now_iso(),
-        "summary": {
-            "total_sources": len(status["sources"]),
-            "due_sources": len(due_sources),
-            "changed_sources": len(changed),
-            "history_entries": len(history.get("checks", [])),
-        },
-        "due_sources": due_sources,
-        "changed_sources": changed,
-    }
+    return {"generated_at": now_iso(), "summary": {"total_sources": len(status["sources"]), "due_sources": len(due_sources), "changed_sources": len(changed), "history_entries": len(history.get("checks", []))}, "due_sources": due_sources, "changed_sources": changed}
 
 
 def parser() -> argparse.ArgumentParser:
@@ -136,8 +116,7 @@ def parser() -> argparse.ArgumentParser:
 def main() -> int:
     args = parser().parse_args()
     if args.command == "record":
-        entry = record_check(args.source_id, args.observed, args.note, args.at)
-        print(json.dumps(entry, indent=2))
+        print(json.dumps(record_check(args.source_id, args.observed, args.note, args.at), indent=2))
         return 0
     if args.command == "validate":
         errors = validate_history(load_history())
