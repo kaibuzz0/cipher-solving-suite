@@ -109,3 +109,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `docs/AUTOMATED_AGENT_OPERATIONS.md`, `data/integration_queue.json`, `ops/CURRENT_STATE.md`; GitHub Actions runs for `dcfde9ae...`; canonical `data/tools.json` inspected.
 - **Known risks / blockers:** Documented cleanup debt remains: root/legacy artifacts need hash-preserving inventory before relocation; live opportunity/news adapters and link-health/catalog freshness remain incomplete; legacy solver inventory remains pending. PR CI still needs to validate this bootstrap branch before merge.
 - **Next action:** Open the scoped PR, inspect its CI, then let the research/intelligence role consume `ops/CURRENT_STATE.md` and the empty integration queue without duplicating existing catalog work.
+
+---
+
+### 2026-08-16 20:05 UTC — Build Integration / Repo Factory toolset
+
+- **Branch / PR:** `agent/build-repo-factory-toolset` / PR #9
+- **Objective:** Correct the temporary root-level Repo Kit into the first self-contained member of a larger reusable toolsets library.
+- **Changed:** Replaced `repo-kit/` with `toolsets/repo-factory/`; added `toolset.json`, `toolsets/catalog.json`, export tooling, AGENTS/current-state/blueprint/research/work-queue/handoff/build-checklist/integration-queue templates, reusable diagnostic CI, deterministic exporter tests, canonical `data/tools.json` registration, and current-state reconciliation. The accepted GitHub Pages layout was not modified.
+- **Verification:** PR #9 Core validation tests passed on Python 3.11 and 3.13 when inspected; Python 3.12 had already completed the test-suite step successfully and was finishing the remaining validation stages. Daily Repository Maintenance passed. Dashboard-data generation and the canonical tool-registry checks passed in completed matrix jobs, confirming the new exporter entry is compatible with the existing website data pipeline.
+- **Evidence / artifacts:** `toolsets/repo-factory/`, `toolsets/catalog.json`, `tests/test_repo_factory_toolset.py`, `data/tools.json`, `ops/CURRENT_STATE.md`, PR #9 and Actions run `31969457323`.
+- **Known risks / blockers:** PR #9 should not merge until the final Python 3.12 job and overall Core validation conclusion are green. PR #8 independently modifies intelligence/opportunity state and should remain isolated from this toolset change.
+- **Next action:** Integrity pass should confirm all three Python jobs are green, review `toolset.json`/catalog consistency and exporter overwrite protection, then merge PR #9 if no conflict has appeared.
