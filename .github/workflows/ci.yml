@@ -48,12 +48,22 @@ jobs:
         id: compile
         continue-on-error: true
         run: |
-          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py
+          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py scripts/source_check_history.py
 
       - name: Validate intelligence source registry
         id: sources
         continue-on-error: true
         run: python scripts/source_registry.py validate
+
+      - name: Validate source check history
+        id: history
+        continue-on-error: true
+        run: python scripts/source_check_history.py validate
+
+      - name: Build source collection report
+        id: source_report
+        continue-on-error: true
+        run: python scripts/source_check_history.py report
 
       - name: Validate intelligence feed
         id: intelligence
@@ -86,6 +96,8 @@ jobs:
           path: |
             data/intelligence.json
             data/intelligence_sources.json
+            data/source_check_history.json
+            artifacts/intelligence-source-report.json
           if-no-files-found: warn
 
       - name: Upload maintenance diagnostics
@@ -105,6 +117,8 @@ jobs:
           echo "| Tests | ${{ steps.tests.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Compile | ${{ steps.compile.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Source registry | ${{ steps.sources.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Source check history | ${{ steps.history.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Source report | ${{ steps.source_report.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Intelligence feed | ${{ steps.intelligence.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dashboard data | ${{ steps.dashboard.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Maintenance | ${{ steps.maintenance.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
@@ -115,6 +129,8 @@ jobs:
           if [ "${{ steps.tests.outcome }}" != "success" ] || \
              [ "${{ steps.compile.outcome }}" != "success" ] || \
              [ "${{ steps.sources.outcome }}" != "success" ] || \
+             [ "${{ steps.history.outcome }}" != "success" ] || \
+             [ "${{ steps.source_report.outcome }}" != "success" ] || \
              [ "${{ steps.intelligence.outcome }}" != "success" ] || \
              [ "${{ steps.dashboard.outcome }}" != "success" ] || \
              [ "${{ steps.maintenance.outcome }}" != "success" ]; then
