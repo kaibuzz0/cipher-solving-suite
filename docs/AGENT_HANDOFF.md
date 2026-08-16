@@ -112,12 +112,12 @@ This is an append-only operational journal for AI and human contributors. Keep e
 
 ---
 
-### 2026-08-16 20:05 UTC — Build Integration / Repo Factory toolset
+### 2026-08-16 19:39 UTC — Research Intelligence / source refresh and opportunity discovery
 
-- **Branch / PR:** `agent/build-repo-factory-toolset` / PR #9
-- **Objective:** Correct the temporary root-level Repo Kit into the first self-contained member of a larger reusable toolsets library.
-- **Changed:** Replaced `repo-kit/` with `toolsets/repo-factory/`; added `toolset.json`, `toolsets/catalog.json`, export tooling, AGENTS/current-state/blueprint/research/work-queue/handoff/build-checklist/integration-queue templates, reusable diagnostic CI, deterministic exporter tests, canonical `data/tools.json` registration, and current-state reconciliation. The accepted GitHub Pages layout was not modified.
-- **Verification:** PR #9 Core validation tests passed on Python 3.11 and 3.13 when inspected; Python 3.12 had already completed the test-suite step successfully and was finishing the remaining validation stages. Daily Repository Maintenance passed. Dashboard-data generation and the canonical tool-registry checks passed in completed matrix jobs, confirming the new exporter entry is compatible with the existing website data pipeline.
-- **Evidence / artifacts:** `toolsets/repo-factory/`, `toolsets/catalog.json`, `tests/test_repo_factory_toolset.py`, `data/tools.json`, `ops/CURRENT_STATE.md`, PR #9 and Actions run `31969457323`.
-- **Known risks / blockers:** PR #9 should not merge until the final Python 3.12 job and overall Core validation conclusion are green. PR #8 independently modifies intelligence/opportunity state and should remain isolated from this toolset change.
-- **Next action:** Integrity pass should confirm all three Python jobs are green, review `toolset.json`/catalog consistency and exporter overwrite protection, then merge PR #9 if no conflict has appeared.
+- **Branch / PR:** `agent/research-intel-20260816` / PR pending
+- **Objective:** Perform the first recurring source-health/value discovery pass from canonical registries and publish only verified material changes.
+- **Changed:** Replaced the retired Challenge.gov discovery URL with the official USA.gov active-challenges successor while preserving stable source ID compatibility; registered a separate Sherlock bug-bounty source lane; recorded first-seen source-history fingerprints for USA.gov federal challenges, ETHGlobal events, and Sherlock bounties; refreshed the opportunity catalog; and published sourced intelligence for the Challenge.gov sunset/source migration, the $15M Connecting Talent to Opportunity challenge, and the current Midas Sherlock bounty listing.
+- **Verification:** Reviewed official/current USA.gov, ETHGlobal, and Sherlock pages; deduplicated against existing intelligence/opportunity records; generated deterministic feed fingerprints using the repository algorithm; source-history fingerprints use the repository SHA-256 normalization rule. Open PR/issue checks were empty before this branch was created. CI still needs to validate JSON/schema/site-data generation on the PR head.
+- **Evidence / artifacts:** `data/intelligence_sources.json`, `data/source_check_history.json`, `data/intelligence.json`, `data/opportunities.json`, `ops/CURRENT_STATE.md`; USA.gov active-challenge/CTO pages; ETHGlobal events; Sherlock Midas/Scroll/USX bounty pages.
+- **Known risks / blockers:** Midas is only a discovery lead until exact scope/exclusions/severity/reward/submission rules are preserved; the federal CTO challenge has specialized eligibility; several registry lanes remain never-checked. Source migration shows link-health/catalog freshness automation should be prioritized.
+- **Next action:** Build/integration should add deterministic link-health/source-migration tooling. Only create a Midas active case after exact program scope/rules are preserved and verified as appropriate for authorized testing.

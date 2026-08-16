@@ -1,5 +1,30 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T15:10:00Z",
-  "checks": []
+  "updated_at": "2026-08-16T19:39:00Z",
+  "checks": [
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-16T19:39:00Z",
+      "content_fingerprint": "c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Verified Challenge.gov was sunset on March 30, 2026 and USA.gov is now the official active federal challenges discovery page."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-16T19:39:00Z",
+      "content_fingerprint": "45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed official upcoming ETHGlobal calendar; ETHOnline 2026 remains listed for Sep 4-16 with Tokyo and Mumbai events later in 2026."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-16T19:39:00Z",
+      "content_fingerprint": "d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Verified several current Sherlock bug-bounty pages reporting LIVE status and six-figure maximum rewards; scope must be opened and preserved before any testing."
+    }
+  ]
 }

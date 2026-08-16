@@ -1,39 +1,41 @@
 # Current Repository State
 
-Last reconciled: 2026-08-16 20:00 UTC
+Last reconciled: 2026-08-16 19:39 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Latest `main` commit inspected: `03416162ff0a47f73b575df70b78465beda5be79` (Repo Factory/toolsets merge).
-- The recurring-agent contract and integration queue are now present on `main`.
-- Canonical tool registry exists at `data/tools.json`; this build pass adds the Repo Factory exporter entry on a scoped branch.
-- GitHub Pages dark workspace remains intentionally unchanged by this pass.
-- Research/intelligence work is active independently in PR #8; this build pass does not modify or duplicate those source/intelligence changes.
+- Latest `main` commit inspected: `03416162ff0a47f73b575df70b78465beda5be79` (`Merge pull request #7 ... Tooling/repo starter kit`).
+- Recurring-agent operating contract and `data/integration_queue.json` are present on `main` following PR #6.
+- No open pull requests or open GitHub issues were present before the research branch was opened.
+- Canonical tool registry exists at `data/tools.json`; canonical intelligence source/feed/history files are active.
+- Repository operating contract, maintenance policy, work queue, intelligence workflow, case workflow, automated-agent operations contract, and agent handoff are present.
 
-## Active build/integration work
+## Current research/intelligence state
 
-- Branch `agent/build-repo-factory-toolset` converts the temporary root-level `repo-kit/` experiment into the first real member of the reusable `toolsets/` library: `toolsets/repo-factory/`.
-- The toolset now has machine-readable `toolset.json`, an export script, project/agent/research/checklist templates, a reusable diagnostic-CI workflow, a `toolsets/catalog.json` registry, and deterministic exporter tests.
-- `data/tools.json` registers the Repo Factory exporter so the existing website data pipeline can expose it without changing the working VS Code-style site layout.
+- The old Challenge.gov discovery endpoint is no longer current: Challenge.gov was sunset on March 30, 2026. The research pass updated the stable `challenge-gov` registry entry to the official USA.gov active federal challenges page while preserving the ID for compatibility.
+- USA.gov currently lists active federal challenges. The Connecting Talent to Opportunity Challenge is listed through April 1, 2028 with $15,000,000 in total cash prizes, but eligibility is specialized and must be checked on the hosting competition page before treating it as directly actionable.
+- ETHGlobal's official calendar still lists ETHOnline 2026 for September 4-16, followed by Tokyo and Mumbai events later in 2026.
+- Sherlock bug-bounty pages reviewed during this pass report current LIVE programs; Midas is listed with a 500,000 USDC maximum reward. A listing is not authorization beyond the exact program scope/rules.
+- Source check history now contains real first-seen checks for the federal challenge source, ETHGlobal events, and the newly registered Sherlock bug-bounty lane.
 
 ## Known state / debt
 
 - Generated/legacy root artifacts remain a documented P1 cleanup item; preserve hashes/provenance before relocation.
-- Verified live opportunity/news adapters and source freshness work are being handled in the research lane/PR #8.
-- Link-health/catalog freshness automation remains P2 work.
+- Link-health/catalog freshness automation remains P2 work and is increasingly important because the Challenge.gov migration demonstrated real source drift.
+- GitHub Search, HackerOne directory, Code4rena contests, Sherlock contests, and arXiv cryptography remain never-checked in the canonical registry and need real source checks in later research passes.
 - Legacy solver inventory/input-output/dependency documentation remains P2 work.
-- Additional reusable toolsets remain planned: CI diagnostics, research ops, agent coordination, evidence integrity, website workspace, security/quality, and release ops.
+- The GitHub Pages UI dark workspace should remain visually unchanged unless a specific defect is verified; data/feed updates may continue to flow through the normal Pages build.
 
 ## Current operating priorities
 
-1. Validate and merge the Repo Factory toolset without touching the accepted website layout.
-2. Keep `main`, CI, Pages, registries, handoffs, and documentation aligned.
-3. Preserve and inventory research artifacts before relocation.
-4. Integrate future reusable capabilities as independent `toolsets/<id>/` packages with `toolset.json`, tests, and explicit dependencies.
-5. Independently verify high-impact solve/live/payout/security claims before promoting them.
+1. Review and preserve the exact Midas Sherlock bounty scope/rules before deciding whether to open an active case; do not test until scope is verified.
+2. Continue real source checks for never-checked primary/discovery lanes, prioritizing HackerOne, Code4rena, Sherlock contests, GitHub Search, and arXiv cryptography.
+3. Add deterministic link-health/source-migration checks so retired endpoints like Challenge.gov are detected earlier.
+4. Keep `main`, CI, Pages, registries, handoffs, and documentation aligned.
+5. Preserve and inventory research artifacts before relocation.
 
 ## Next handoff
 
-The integrity pass should independently verify the Repo Factory exporter tests, toolset catalog/metadata, canonical tool registration, and removal of the duplicate `repo-kit/` path. The research pass can continue PR #8 independently because this branch does not change intelligence/opportunity data.
+The build/integration role should treat the source-migration discovery as justification for link-health/catalog freshness tooling. For the Midas bounty, only create an active case after the exact published scope, exclusions, severity/reward rules and submission terms are preserved and shown to be appropriate for authorized work.
