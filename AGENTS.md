@@ -23,6 +23,7 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 13. Keep README navigation and status claims aligned with verified repository state.
 14. Any Python file documented or invoked as `python path/to/script.py` must be tested in that direct-script form; package imports must not depend accidentally on `python -m` semantics.
 15. A new user-visible or agent-facing tool is not fully integrated until its code lane, command, dependencies, maturity, verification, canonical `data/tools.json` registration, relevant case/research links, website visibility where applicable, and handoff are reconciled. Use `data/integration_queue.json` as the shared inbox when integration is incomplete.
+16. Any newly introduced AI agent, custom GPT, coding agent, or external model must follow `docs/AI_AGENT_INTEGRATION.md` before making broad changes. Conversation context is not repository authority; current repository state and canonical operating documents win.
 
 ## Standard agent pass
 
@@ -65,6 +66,14 @@ Raw source snapshots may live under `intelligence/feeds/`; user-facing sourced u
 ## Opportunity research rules
 
 Each opportunity record must include its official source, verification date, category, entry cost, payout/prize evidence, deadline/cadence, eligibility constraints, authorization/scope where applicable, confidence, and next action. Do not label historical prize maximums as currently available money and do not treat simulated scanner output as live research.
+
+## Multi-agent integration and website discovery
+
+The repository is designed for concurrent AI work. Before modifying shared files, agents must check recent commits and active PRs and reconcile stale branches with current `main` without discarding newer work from another agent.
+
+Normal user-facing repository additions should flow through canonical data and manifests rather than hardcoded website markup. The GitHub Pages workspace is a static viewer over repository state. Toolsets, tools, cases, intelligence, opportunities, evidence, source health, repository files, and Agent Operations are generated or rendered from canonical repository data. A normal tool/toolset/data addition should not require hand-editing `site/index.html` merely to make the item appear.
+
+Reusable capability packs belong under `toolsets/<toolset-id>/`, with manifest/catalog registration as described in `docs/AI_AGENT_INTEGRATION.md`. Incomplete contributions belong in `data/integration_queue.json` with enough evidence and an exact next action for a different agent to finish them.
 
 ## Definition of done
 
