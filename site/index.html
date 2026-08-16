@@ -3,33 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Cipher Solving Suite operations dashboard for opportunities, intelligence, collection health, artifacts, cases, tools, prompts, and AI-agent handoffs.">
-  <title>Cipher Solving Suite — Operations Hub</title>
+  <meta name="description" content="Compact Cipher Solving Suite workspace for opportunities, intelligence, cases, tools, evidence and AI-agent operations.">
+  <title>Cipher Suite — Workspace</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div><p class="eyebrow">CIPHER SOLVING SUITE</p><h1>Operations Hub</h1><p class="lede">A user-facing command center backed by shared AI-agent research, collection health, evidence, tools, cases, opportunity links, prompts, and handoffs.</p><p><a href="README.md"><strong>Repository README / Quick Navigation →</strong></a></p></div>
-    <div class="status"><span class="dot"></span><span id="hub-status">Loading repository status…</span></div>
-  </header>
-  <section class="grid static-grid" id="stats-grid" aria-label="Repository summary"></section>
-  <nav class="tabs" aria-label="Dashboard sections">
-    <button data-tab="opportunities" class="active">Opportunities</button><button data-tab="intelligence">News / Intel</button><button data-tab="health">Collection Health</button><button data-tab="sources">Intel Sources</button><button data-tab="artifacts">Artifacts / Evidence</button><button data-tab="cases">Active Cases</button><button data-tab="tools">Tools</button><button data-tab="prompts">AI Prompts</button><button data-tab="workflow">Agent Workflow</button><button data-tab="research">Research Links</button>
-  </nav>
-  <main>
-    <section class="controls"><input id="search" type="search" placeholder="Search opportunities, intelligence, sources, artifacts, cases, tools, tags, prompts…" aria-label="Search dashboard"><select id="category" aria-label="Filter current section"><option value="all">All categories</option></select></section>
-    <section id="opportunities" class="panel active"><div class="section-head"><div><p class="eyebrow">MONEY / SKILL PIPELINE</p><h2>Opportunity Directory</h2></div><p class="muted">Verify current rules, payout, eligibility and scope on the official site before acting.</p></div><div id="opportunity-grid" class="grid"></div></section>
-    <section id="intelligence" class="panel"><div class="section-head"><div><p class="eyebrow">SOURCED UPDATES</p><h2>News / Intelligence</h2></div><p class="muted">Timestamped discoveries published by agents with source, confidence, relevance, and optional case links.</p></div><div id="intel-grid" class="grid"></div></section>
-    <section id="health" class="panel"><div class="section-head"><div><p class="eyebrow">COLLECTION HEALTH</p><h2>Changes Detected</h2></div><p class="muted">What intelligence lanes are due, and which recorded source states changed since the previous check.</p></div><div id="health-grid" class="grid"></div></section>
-    <section id="sources" class="panel"><div class="section-head"><div><p class="eyebrow">COLLECTION NETWORK</p><h2>Intelligence Sources</h2></div><p class="muted">Approved discovery/primary sources with freshness targets, assigned agents, and current check state.</p></div><div id="source-grid" class="grid"></div></section>
-    <section id="artifacts" class="panel"><div class="section-head"><div><p class="eyebrow">RESEARCH MEMORY</p><h2>Artifacts / Evidence</h2></div><p class="muted">Hashed inventory of research files. Items marked review-before-move are not relocated until provenance and references are understood.</p></div><div id="artifact-grid" class="grid"></div></section>
-    <section id="cases" class="panel"><div class="section-head"><div><p class="eyebrow">ACTIVE RESEARCH</p><h2>Cases</h2></div><p class="muted">Structured investigations created by humans or AI agents.</p></div><div id="case-grid" class="grid"></div></section>
-    <section id="tools" class="panel"><div class="section-head"><div><p class="eyebrow">LOCAL ARSENAL</p><h2>Tool Registry</h2></div><p class="muted">Commands, purpose, location, and maturity from one shared registry.</p></div><div id="tool-grid" class="grid"></div></section>
-    <section id="prompts" class="panel"><div class="section-head"><div><p class="eyebrow">REUSABLE CONTEXT</p><h2>AI Prompt Library</h2></div><p class="muted">Click a prompt to copy it.</p></div><div id="prompt-grid" class="grid"></div></section>
-    <section id="workflow" class="panel"><div class="section-head"><div><p class="eyebrow">HANDOFF PROTOCOL</p><h2>Agent Workflow</h2></div></div><ol class="workflow"><li><strong>Orient.</strong> Start with <a href="README.md">README.md</a>, <a href="AGENTS.md">AGENTS.md</a>, handoff, and work queue.</li><li><strong>Check assigned sources.</strong> Use <code>python scripts/source_registry.py list --due --agent &lt;agent&gt;</code>.</li><li><strong>Record source state.</strong> Use <code>python scripts/source_check_history.py record ...</code> after a real review.</li><li><strong>Research.</strong> Preserve URLs, timestamps, scope, uncertainty, hashes, and evidence.</li><li><strong>Publish intelligence.</strong> Promote only reviewed useful discoveries to the canonical feed.</li><li><strong>Inventory evidence.</strong> Hash/classify artifacts before moving legacy files.</li><li><strong>Verify.</strong> Tests and deterministic checks before handoff.</li><li><strong>Handoff.</strong> Record exact changes, failures, evidence, and next action.</li></ol><div class="warning"><strong>Authorization boundary:</strong> intelligence about a target or bounty is not authorization to test it.</div></section>
-    <section id="research" class="panel"><div class="section-head"><div><p class="eyebrow">RESEARCH</p><h2>Research Launchpad</h2></div></div><div class="grid static-grid"><article class="card"><h3>Intelligence workflow</h3><a href="docs/INTELLIGENCE_WORKFLOW.md">Publishing rules</a></article><article class="card"><h3>Source registry</h3><a href="data/intelligence_sources.json">Approved sources</a></article><article class="card"><h3>Work queue</h3><a href="docs/WORK_QUEUE.md">Open queue</a></article><article class="card"><h3>Agent handoffs</h3><a href="docs/AGENT_HANDOFF.md">Read handoffs</a></article></div></section>
+<header class="topbar">
+  <button id="menu" class="menu" aria-label="Open menu">☰</button>
+  <div class="brand"><strong>Cipher Suite</strong><span>workspace</span></div>
+  <div id="hub-status" class="sync">loading…</div>
+</header>
+<div class="shell">
+  <aside id="sidebar" class="sidebar">
+    <div class="side-title">WORKSPACE</div>
+    <button data-tab="home" class="nav active">⌂ Home</button>
+    <button data-tab="opportunities" class="nav">▣ Opportunities</button>
+    <button data-tab="intelligence" class="nav">▤ News / Intel</button>
+    <button data-tab="cases" class="nav">▱ Cases</button>
+    <button data-tab="tools" class="nav">⚙ Tools</button>
+    <button data-tab="artifacts" class="nav">▧ Evidence</button>
+    <div class="side-title">NETWORK</div>
+    <button data-tab="health" class="nav">◉ Collection Health</button>
+    <button data-tab="sources" class="nav">⌁ Intel Sources</button>
+    <button data-tab="prompts" class="nav">⌘ AI Prompts</button>
+    <button data-tab="workflow" class="nav">⇄ Agent Workflow</button>
+    <div class="side-title">REPO</div>
+    <a class="nav link" href="README.md">▰ README / Quick Nav</a>
+    <a class="nav link" href="docs/WORK_QUEUE.md">☑ Work Queue</a>
+    <a class="nav link" href="docs/AGENT_HANDOFF.md">↳ Handoffs</a>
+    <a class="nav link" href="https://github.com/kaibuzz0/cipher-solving-suite">◈ GitHub Repo</a>
+  </aside>
+  <main class="main">
+    <div class="toolbar">
+      <div id="crumb" class="crumb">Workspace / Home</div>
+      <input id="search" type="search" placeholder="Search current folder…" aria-label="Search current section">
+      <select id="category" aria-label="Filter current section"><option value="all">All</option></select>
+    </div>
+
+    <section id="home" class="panel active">
+      <div class="folder-grid">
+        <button class="folder" data-open="opportunities"><span>📁</span><b>Opportunities</b><small>Ways to earn / compete</small></button>
+        <button class="folder" data-open="intelligence"><span>📁</span><b>News / Intel</b><small>Sourced updates</small></button>
+        <button class="folder" data-open="cases"><span>📁</span><b>Cases</b><small>Active investigations</small></button>
+        <button class="folder" data-open="tools"><span>📁</span><b>Tools</b><small>Commands & utilities</small></button>
+        <button class="folder" data-open="artifacts"><span>📁</span><b>Evidence</b><small>Hashed research files</small></button>
+        <button class="folder" data-open="health"><span>📁</span><b>Collection</b><small>Due / changed sources</small></button>
+        <button class="folder" data-open="prompts"><span>📁</span><b>AI Prompts</b><small>Reusable agent context</small></button>
+        <button class="folder" data-open="workflow"><span>📁</span><b>Agent Ops</b><small>Workflow & handoff</small></button>
+      </div>
+      <div class="section-label">STATUS</div>
+      <div id="stats-grid" class="stats"></div>
+      <div class="section-label">QUICK ACCESS</div>
+      <div class="quick">
+        <a href="README.md">README</a><a href="docs/WORK_QUEUE.md">Work Queue</a><a href="docs/AGENT_HANDOFF.md">Agent Handoffs</a><a href="docs/INTELLIGENCE_WORKFLOW.md">Intel Workflow</a><a href="data/intelligence_sources.json">Source Registry</a>
+      </div>
+    </section>
+
+    <section id="opportunities" class="panel"><div class="title"><h1>Opportunities</h1><span>Verify rules, eligibility, payout and scope before acting.</span></div><div id="opportunity-grid" class="list"></div></section>
+    <section id="intelligence" class="panel"><div class="title"><h1>News / Intelligence</h1><span>Source-backed discoveries from the agent network.</span></div><div id="intel-grid" class="list"></div></section>
+    <section id="cases" class="panel"><div class="title"><h1>Cases</h1><span>Structured investigations and next actions.</span></div><div id="case-grid" class="list"></div></section>
+    <section id="tools" class="panel"><div class="title"><h1>Tools</h1><span>Repository commands and utilities.</span></div><div id="tool-grid" class="list"></div></section>
+    <section id="artifacts" class="panel"><div class="title"><h1>Evidence</h1><span>Hashed artifacts, provenance and migration state.</span></div><div id="artifact-grid" class="list"></div></section>
+    <section id="health" class="panel"><div class="title"><h1>Collection Health</h1><span>What needs checking and what changed.</span></div><div id="health-grid" class="list"></div></section>
+    <section id="sources" class="panel"><div class="title"><h1>Intel Sources</h1><span>Collection lanes, freshness and assigned agents.</span></div><div id="source-grid" class="list"></div></section>
+    <section id="prompts" class="panel"><div class="title"><h1>AI Prompts</h1><span>Tap an item to copy the reusable prompt.</span></div><div id="prompt-grid" class="list"></div></section>
+    <section id="workflow" class="panel"><div class="title"><h1>Agent Workflow</h1><span>One shared operating loop.</span></div><div class="workflow"><div><b>1. Orient</b><span>README → AGENTS → handoff → queue</span></div><div><b>2. Collect</b><span>Check assigned due sources and record state.</span></div><div><b>3. Research</b><span>Preserve URLs, timestamps, hashes, scope and uncertainty.</span></div><div><b>4. Publish</b><span>Promote verified useful discoveries to intelligence.</span></div><div><b>5. Investigate</b><span>Create/link cases, tools, attempts and evidence.</span></div><div><b>6. Verify</b><span>Run tests and deterministic checks.</span></div><div><b>7. Handoff</b><span>Record changes, failures and exact next action.</span></div></div><div class="notice"><b>Authorization:</b> discovering a target or bounty does not authorize testing it.</div></section>
+    <footer><span id="catalog-meta">Loading repository data…</span></footer>
   </main>
-  <footer><span id="catalog-meta">Loading catalogs…</span><a href="README.md">README / Navigate</a><a href="https://github.com/kaibuzz0/cipher-solving-suite">Repository</a></footer>
-  <script src="app.js"></script>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
