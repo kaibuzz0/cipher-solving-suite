@@ -20,6 +20,7 @@ Improve the cipher-solving suite as a reproducible, authorized puzzle/CTF/bug-bo
 10. Preserve evidence: inputs, source URLs, timestamps, hashes, assumptions, parameters, and provenance when relevant. Do not silently rewrite research evidence or generated artifacts.
 11. Prefer extending canonical catalogs/workflows over creating duplicate lists or one-off files.
 12. Keep README navigation and status claims aligned with verified repository state.
+13. Any Python file documented or invoked as `python path/to/script.py` must be tested in that direct-script form; package imports must not depend accidentally on `python -m` semantics.
 
 ## Standard agent pass
 
