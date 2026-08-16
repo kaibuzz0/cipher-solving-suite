@@ -1,8 +1,10 @@
+import argparse
 import json
 import tempfile
 import unittest
 from pathlib import Path
 
+import scripts.intelligence_feed as intelligence_feed
 import scripts.new_case as new_case
 from tools.earnings_tracker import EarningsTracker
 from tools.opportunity_finder import load_catalog, matches
@@ -41,6 +43,65 @@ class CatalogTests(unittest.TestCase):
             for field in ("name", "category", "path", "command", "description", "maturity"):
                 self.assertTrue(item.get(field), f"{item.get('id')} missing {field}")
             self.assertTrue((ROOT / item["path"]).exists(), f"registered path missing: {item['path']}")
+
+
+class IntelligenceTests(unittest.TestCase):
+    def test_repository_feed_is_valid(self):
+        data = intelligence_feed.load_feed()
+        self.assertEqual(intelligence_feed.validate_feed(data), [])
+
+    def test_duplicate_ids_are_rejected(self):
+        item = {
+            "id": "same",
+            "title": "One",
+            "summary": "Summary",
+            "category": "research",
+            "source_name": "Source",
+            "source_url": "https://example.com/a",
+            "published_at": "2026-08-16T12:00:00Z",
+            "checked_at": "2026-08-16T12:01:00Z",
+            "confidence": "high",
+            "relevance": "useful",
+        }
+        errors = intelligence_feed.validate_feed({"items": [item, dict(item)]})
+        self.assertTrue(any("duplicate id" in error for error in errors))
+
+    def test_source_url_must_be_https(self):
+        item = {
+            "id": "bad-source",
+            "title": "Bad",
+            "summary": "Summary",
+            "category": "research",
+            "source_name": "Source",
+            "source_url": "http://example.com/a",
+            "published_at": "2026-08-16T12:00:00Z",
+            "checked_at": "2026-08-16T12:01:00Z",
+            "confidence": "medium",
+            "relevance": "watch",
+        }
+        self.assertIn("source_url must use https", intelligence_feed.validate_item(item))
+
+    def test_add_item_persists_sourced_entry(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "intelligence.json"
+            args = argparse.Namespace(
+                title="Example event",
+                summary="A sourced update.",
+                category="hackathon",
+                source_name="Official organizer",
+                source_url="https://example.com/event",
+                published_at="2026-08-16T12:00:00Z",
+                confidence="high",
+                relevance="high",
+                notes="Useful for agents",
+                related_case=None,
+                tags=["coding", "prize"],
+            )
+            item = intelligence_feed.add_item(args, path)
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(saved["items"][0]["id"], item["id"])
+            self.assertEqual(saved["items"][0]["source_name"], "Official organizer")
+            self.assertEqual(intelligence_feed.validate_feed(saved), [])
 
 
 class EarningsTests(unittest.TestCase):
