@@ -97,3 +97,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `data/intelligence_sources.json`, `scripts/source_registry.py`, `scripts/intelligence_feed.py`, `data/intelligence.json`, `scripts/build_site_data.py`, `site/index.html`, `site/app.js`, `.github/workflows/ci.yml`, `.github/workflows/pages.yml`, `tests/test_core.py`, `docs/INTELLIGENCE_WORKFLOW.md`, `README.md`, `AGENTS.md`.
 - **Known risks / blockers:** Source freshness currently tracks whether an agent checked a source, not automated fetch success or content-change hashes. Source URLs still need periodic human/agent revalidation because platforms can move endpoints. Latest CI must finish before this exact revision is called green.
 - **Next action:** Add source check-history/change fingerprints and a scheduled discovery pass that writes timestamped source-check reports without automatically publishing unverified claims.
+
+---
+
+### 2026-08-16 19:17 UTC — Repo Integrity / operating-contract bootstrap
+
+- **Branch / PR:** `agent/integrity-contract-bootstrap` / PR pending
+- **Objective:** Reconcile current `main` health and establish the missing recurring-agent integration contract/state surfaces.
+- **Changed:** Added `docs/AUTOMATED_AGENT_OPERATIONS.md`, `data/integration_queue.json`, and `ops/CURRENT_STATE.md` on a scoped branch. The new contract defines the three recurring agent roles, collision rules, tool integration requirements, and the machine-readable integration inbox.
+- **Verification:** Confirmed default branch is `main`; inspected recent commits, README, AGENTS, maintenance policy, work queue, handoff, tool registry, and Actions. Latest `main` commit `dcfde9ae526997e0f730fdd2cceeffc7ce196a63` has successful `Core validation` and successful `Deploy operations dashboard` runs. No open PRs or open issues were present before this branch was created. Code search found no `shell=True`, `os.system`, `eval`, or `exec` match in the repository query used for this pass.
+- **Evidence / artifacts:** `docs/AUTOMATED_AGENT_OPERATIONS.md`, `data/integration_queue.json`, `ops/CURRENT_STATE.md`; GitHub Actions runs for `dcfde9ae...`; canonical `data/tools.json` inspected.
+- **Known risks / blockers:** Documented cleanup debt remains: root/legacy artifacts need hash-preserving inventory before relocation; live opportunity/news adapters and link-health/catalog freshness remain incomplete; legacy solver inventory remains pending. PR CI still needs to validate this bootstrap branch before merge.
+- **Next action:** Open the scoped PR, inspect its CI, then let the research/intelligence role consume `ops/CURRENT_STATE.md` and the empty integration queue without duplicating existing catalog work.
