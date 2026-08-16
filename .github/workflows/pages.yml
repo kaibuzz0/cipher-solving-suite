@@ -44,6 +44,8 @@ jobs:
         run: python scripts/build_site_data.py
       - name: Build agent operations data
         run: python scripts/build_agent_ops.py
+      - name: Build central command-site snapshot
+        run: python scripts/export_command_site_snapshot.py
       - name: Assemble static site
         run: |
           rm -rf _site
@@ -51,9 +53,9 @@ jobs:
           cp -R site/. _site/
           cp README.md _site/README.md
           cp data/opportunities.json data/prompts.json data/tools.json data/intelligence.json data/intelligence_sources.json data/integration_queue.json _site/data/
-          cp site-data/cases.json site-data/toolsets.json site-data/repository.json site-data/status.json site-data/sources.json site-data/collection-health.json site-data/artifacts.json site-data/agent-ops.json _site/data/
+          cp site-data/cases.json site-data/toolsets.json site-data/repository.json site-data/status.json site-data/sources.json site-data/collection-health.json site-data/artifacts.json site-data/agent-ops.json site-data/repo-snapshot.json _site/data/
           cp AGENTS.md _site/AGENTS.md
-          cp docs/AGENT_HANDOFF.md docs/CASE_WORKFLOW.md docs/INTELLIGENCE_WORKFLOW.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md _site/docs/
+          cp docs/AGENT_HANDOFF.md docs/CASE_WORKFLOW.md docs/INTELLIGENCE_WORKFLOW.md docs/REPO_MAINTENANCE.md docs/WORK_QUEUE.md docs/GITHUB_COMMAND_SITE.md _site/docs/
           cp ops/CURRENT_STATE.md _site/ops/CURRENT_STATE.md
           python - <<'PY'
           from pathlib import Path
