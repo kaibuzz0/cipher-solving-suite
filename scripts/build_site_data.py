@@ -42,6 +42,94 @@ def load_cases() -> list[dict]:
     return cases
 
 
+def load_toolsets() -> dict:
+    """Discover toolsets from manifests and reconcile them with the catalog.
+
+    The website intentionally scans manifests as well as the catalog. That means a
+    newly added toolset becomes visible even if an agent forgot to register it;
+    the UI can then flag it as unregistered instead of silently hiding it.
+    """
+    now = datetime.now(timezone.utc)
+    base = ROOT / "toolsets"
+    catalog_path = base / "catalog.json"
+    catalog = {"toolsets": []}
+    if catalog_path.exists():
+        try:
+            catalog = load_json(catalog_path)
+        except (OSError, json.JSONDecodeError):
+            catalog = {"toolsets": []}
+
+    catalog_by_id = {
+        item.get("id"): item
+        for item in catalog.get("toolsets", [])
+        if isinstance(item, dict) and item.get("id")
+    }
+    items: dict[str, dict] = {}
+
+    if base.exists():
+        for manifest_path in sorted(base.glob("*/toolset.json")):
+            try:
+                manifest = load_json(manifest_path)
+            except (OSError, json.JSONDecodeError):
+                continue
+            toolset_id = manifest.get("id") or manifest_path.parent.name
+            catalog_item = catalog_by_id.get(toolset_id, {})
+            repo_path = str(manifest_path.parent.relative_to(ROOT))
+            entrypoint = manifest.get("entrypoint") or catalog_item.get("entrypoint", "")
+            entrypoint_name = entrypoint.split()[-1] if entrypoint else ""
+            entrypoint_path = manifest_path.parent / entrypoint_name if entrypoint_name else None
+            readme = manifest_path.parent / "README.md"
+            registered = toolset_id in catalog_by_id
+            health = "ok"
+            warnings = []
+            if not registered:
+                health = "needs-registration"
+                warnings.append("manifest exists but toolset is missing from toolsets/catalog.json")
+            if entrypoint_path and not entrypoint_path.exists():
+                health = "incomplete"
+                warnings.append(f"entrypoint not found: {entrypoint_name}")
+            if not readme.exists():
+                if health == "ok":
+                    health = "incomplete"
+                warnings.append("README.md is missing")
+
+            items[toolset_id] = {
+                **catalog_item,
+                **manifest,
+                "id": toolset_id,
+                "path": repo_path,
+                "manifest_path": str(manifest_path.relative_to(ROOT)),
+                "readme_path": str(readme.relative_to(ROOT)) if readme.exists() else "",
+                "registered": registered,
+                "health": health,
+                "warnings": warnings,
+            }
+
+    for toolset_id, catalog_item in catalog_by_id.items():
+        if toolset_id in items:
+            continue
+        repo_path = catalog_item.get("path", f"toolsets/{toolset_id}")
+        items[toolset_id] = {
+            **catalog_item,
+            "id": toolset_id,
+            "path": repo_path,
+            "manifest_path": "",
+            "readme_path": "",
+            "registered": True,
+            "health": "missing-manifest",
+            "warnings": ["catalog entry exists but toolset.json was not found"],
+        }
+
+    ordered = sorted(items.values(), key=lambda x: (x.get("name") or x.get("id") or "").lower())
+    summary = {
+        "total": len(ordered),
+        "registered": sum(1 for x in ordered if x.get("registered")),
+        "healthy": sum(1 for x in ordered if x.get("health") == "ok"),
+        "needs_attention": sum(1 for x in ordered if x.get("health") != "ok"),
+    }
+    return {"generated_at": now.isoformat(), "summary": summary, "items": ordered}
+
+
 def source_state(source: dict, now: datetime) -> str:
     if not source.get("enabled", True):
         return "disabled"
@@ -70,25 +158,52 @@ def build_source_status() -> dict:
     return {"generated_at": now.isoformat(), "counts": counts, "sources": items}
 
 
-def build_status(cases: list[dict], source_status: dict, collection: dict, artifacts: dict) -> dict:
+def build_status(
+    cases: list[dict],
+    source_status: dict,
+    collection: dict,
+    artifacts: dict,
+    toolsets: dict,
+) -> dict:
     tools = load_json(ROOT / "data" / "tools.json")
     opportunities = load_json(ROOT / "data" / "opportunities.json")
     prompts = load_json(ROOT / "data" / "prompts.json")
     intelligence = load_json(ROOT / "data" / "intelligence.json")
-    return {"generated_at": datetime.now(timezone.utc).isoformat(), "active_cases": len(cases), "tools": len(tools.get("items", [])), "opportunities": len(opportunities.get("items", [])), "prompts": len(prompts.get("prompts", [])), "intelligence": len(intelligence.get("items", [])), "intelligence_sources": len(source_status.get("sources", [])), "sources_due": source_status.get("counts", {}).get("due", 0) + source_status.get("counts", {}).get("never-checked", 0), "sources_changed": collection.get("summary", {}).get("changed_sources", 0), "source_history_entries": collection.get("summary", {}).get("history_entries", 0), "artifacts": artifacts.get("summary", {}).get("total", 0), "artifacts_review_before_move": artifacts.get("summary", {}).get("review_before_move", 0)}
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "active_cases": len(cases),
+        "tools": len(tools.get("items", [])),
+        "toolsets": toolsets.get("summary", {}).get("total", 0),
+        "toolsets_needing_attention": toolsets.get("summary", {}).get("needs_attention", 0),
+        "opportunities": len(opportunities.get("items", [])),
+        "prompts": len(prompts.get("prompts", [])),
+        "intelligence": len(intelligence.get("items", [])),
+        "intelligence_sources": len(source_status.get("sources", [])),
+        "sources_due": source_status.get("counts", {}).get("due", 0)
+        + source_status.get("counts", {}).get("never-checked", 0),
+        "sources_changed": collection.get("summary", {}).get("changed_sources", 0),
+        "source_history_entries": collection.get("summary", {}).get("history_entries", 0),
+        "artifacts": artifacts.get("summary", {}).get("total", 0),
+        "artifacts_review_before_move": artifacts.get("summary", {}).get("review_before_move", 0),
+    }
 
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     cases = load_cases()
+    toolsets = load_toolsets()
     source_status = build_source_status()
     collection = build_collection_report()
     artifacts = build_inventory()
     (OUT / "cases.json").write_text(json.dumps({"items": cases}, indent=2) + "\n", encoding="utf-8")
+    (OUT / "toolsets.json").write_text(json.dumps(toolsets, indent=2) + "\n", encoding="utf-8")
     (OUT / "sources.json").write_text(json.dumps(source_status, indent=2) + "\n", encoding="utf-8")
     (OUT / "collection-health.json").write_text(json.dumps(collection, indent=2) + "\n", encoding="utf-8")
     (OUT / "artifacts.json").write_text(json.dumps(artifacts, indent=2) + "\n", encoding="utf-8")
-    (OUT / "status.json").write_text(json.dumps(build_status(cases, source_status, collection, artifacts), indent=2) + "\n", encoding="utf-8")
+    (OUT / "status.json").write_text(
+        json.dumps(build_status(cases, source_status, collection, artifacts, toolsets), indent=2) + "\n",
+        encoding="utf-8",
+    )
     return 0
 
 
