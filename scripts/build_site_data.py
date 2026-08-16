@@ -10,6 +10,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "site-data"
 
 
+def load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def load_cases() -> list[dict]:
     cases = []
     base = ROOT / "research" / "active-puzzles"
@@ -17,7 +21,7 @@ def load_cases() -> list[dict]:
         return cases
     for case_file in sorted(base.glob("*/case.json")):
         try:
-            data = json.loads(case_file.read_text(encoding="utf-8"))
+            data = load_json(case_file)
         except (OSError, json.JSONDecodeError):
             continue
         data["repo_path"] = str(case_file.parent.relative_to(ROOT))
@@ -26,15 +30,17 @@ def load_cases() -> list[dict]:
 
 
 def build_status(cases: list[dict]) -> dict:
-    tools = json.loads((ROOT / "data" / "tools.json").read_text(encoding="utf-8"))
-    opportunities = json.loads((ROOT / "data" / "opportunities.json").read_text(encoding="utf-8"))
-    prompts = json.loads((ROOT / "data" / "prompts.json").read_text(encoding="utf-8"))
+    tools = load_json(ROOT / "data" / "tools.json")
+    opportunities = load_json(ROOT / "data" / "opportunities.json")
+    prompts = load_json(ROOT / "data" / "prompts.json")
+    intelligence = load_json(ROOT / "data" / "intelligence.json")
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "active_cases": len(cases),
         "tools": len(tools.get("items", [])),
         "opportunities": len(opportunities.get("items", [])),
         "prompts": len(prompts.get("prompts", [])),
+        "intelligence": len(intelligence.get("items", [])),
     }
 
 
