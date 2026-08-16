@@ -49,3 +49,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `README.md`, `AGENTS.md`, `site/index.html`, `.github/workflows/pages.yml`.
 - **Known risks / blockers:** Markdown served directly by the static site is primarily a navigation/reference artifact; GitHub remains the best rendered view of the repository README. Legacy artifact cleanup remains outstanding.
 - **Next action:** Build a structured challenge/case format and inventory legacy root artifacts so puzzles/research can move into consistent case directories.
+
+---
+
+### 2026-08-16 12:00 UTC — ChatGPT / actionable CI diagnostics
+
+- **Branch / PR:** `agent/maintenance-foundation` / PR #1
+- **Objective:** Make CI report exactly which test/check failed instead of only returning a red job.
+- **Changed:** Replaced opaque unittest execution with `pytest -vv --tb=short --junitxml`; named matrix jobs by Python version; disabled matrix fail-fast; preserved JUnit and maintenance artifacts with `if: always()`; allowed tests, compile checks, and maintenance checks to all run before the job fails; and added a per-version GitHub job summary showing each validation outcome.
+- **Verification:** Workflow syntax and step dependencies were reviewed after the change; a new PR synchronization run should validate the updated workflow on GitHub Actions.
+- **Evidence / artifacts:** `.github/workflows/ci.yml`, `README.md` validation section.
+- **Known risks / blockers:** The latest head still needs its new GitHub Actions run to finish before this specific CI revision can be called verified.
+- **Next action:** Inspect the new matrix run; if any job fails, use the named failing test, short traceback, JUnit XML, and maintenance report rather than reproducing blindly.
