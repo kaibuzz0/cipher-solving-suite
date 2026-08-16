@@ -1,36 +1,39 @@
 # Current Repository State
 
-Last reconciled: 2026-08-16 19:17 UTC
+Last reconciled: 2026-08-16 20:00 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Latest `main` commit inspected: `dcfde9ae526997e0f730fdd2cceeffc7ce196a63` (`Merge pull request #5 ... VS Code dark theme`).
-- Latest `Core validation` run for that commit completed successfully.
-- Latest `Deploy operations dashboard` run for that commit completed successfully.
-- No open pull requests were present at reconciliation time.
-- No open GitHub issues were present at reconciliation time.
-- Canonical tool registry exists at `data/tools.json` with shared user-visible tooling.
-- Repository operating contract, maintenance policy, work queue, intelligence workflow, case workflow, and agent handoff are present.
+- Latest `main` commit inspected: `03416162ff0a47f73b575df70b78465beda5be79` (Repo Factory/toolsets merge).
+- The recurring-agent contract and integration queue are now present on `main`.
+- Canonical tool registry exists at `data/tools.json`; this build pass adds the Repo Factory exporter entry on a scoped branch.
+- GitHub Pages dark workspace remains intentionally unchanged by this pass.
+- Research/intelligence work is active independently in PR #8; this build pass does not modify or duplicate those source/intelligence changes.
+
+## Active build/integration work
+
+- Branch `agent/build-repo-factory-toolset` converts the temporary root-level `repo-kit/` experiment into the first real member of the reusable `toolsets/` library: `toolsets/repo-factory/`.
+- The toolset now has machine-readable `toolset.json`, an export script, project/agent/research/checklist templates, a reusable diagnostic-CI workflow, a `toolsets/catalog.json` registry, and deterministic exporter tests.
+- `data/tools.json` registers the Repo Factory exporter so the existing website data pipeline can expose it without changing the working VS Code-style site layout.
 
 ## Known state / debt
 
 - Generated/legacy root artifacts remain a documented P1 cleanup item; preserve hashes/provenance before relocation.
-- Verified live opportunity/news adapters remain P1 work.
+- Verified live opportunity/news adapters and source freshness work are being handled in the research lane/PR #8.
 - Link-health/catalog freshness automation remains P2 work.
 - Legacy solver inventory/input-output/dependency documentation remains P2 work.
-- `data/integration_queue.json` and `docs/AUTOMATED_AGENT_OPERATIONS.md` are being established by the integrity bootstrap PR so outside AI contributions have a canonical integration path.
-- The GitHub Pages UI was recently redesigned and the dark theme fix merged; future UI changes should preserve the working layout unless a specific defect is verified.
+- Additional reusable toolsets remain planned: CI diagnostics, research ops, agent coordination, evidence integrity, website workspace, security/quality, and release ops.
 
 ## Current operating priorities
 
-1. Keep `main`, CI, Pages, registries, handoffs, and documentation aligned.
-2. Preserve and inventory research artifacts before relocation.
-3. Convert useful external changes into sourced intelligence/opportunities and structured cases.
-4. Integrate new tools/solvers through `data/tools.json` and the integration queue rather than leaving orphan scripts.
+1. Validate and merge the Repo Factory toolset without touching the accepted website layout.
+2. Keep `main`, CI, Pages, registries, handoffs, and documentation aligned.
+3. Preserve and inventory research artifacts before relocation.
+4. Integrate future reusable capabilities as independent `toolsets/<id>/` packages with `toolset.json`, tests, and explicit dependencies.
 5. Independently verify high-impact solve/live/payout/security claims before promoting them.
 
 ## Next handoff
 
-The research/intelligence role should read this file and the latest handoff, then perform source-freshness/value discovery without duplicating existing catalog entries. The build/integration role should consume any actionable case or `needs-integration` queue item and keep tests, registries, and Pages synchronized.
+The integrity pass should independently verify the Repo Factory exporter tests, toolset catalog/metadata, canonical tool registration, and removal of the duplicate `repo-kit/` path. The research pass can continue PR #8 independently because this branch does not change intelligence/opportunity data.
