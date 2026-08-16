@@ -61,3 +61,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `.github/workflows/ci.yml`, `README.md` validation section.
 - **Known risks / blockers:** The latest head still needs its new GitHub Actions run to finish before this specific CI revision can be called verified.
 - **Next action:** Inspect the new matrix run; if any job fails, use the named failing test, short traceback, JUnit XML, and maintenance report rather than reproducing blindly.
+
+---
+
+### 2026-08-16 12:21 UTC — ChatGPT / user-facing operations layer
+
+- **Branch / PR:** `agent/maintenance-foundation` / PR #1
+- **Objective:** Make AI-agent work visible and useful to users through one shared website/data architecture.
+- **Changed:** Added `data/tools.json` as the canonical internal tool registry; added `scripts/build_site_data.py` to generate active-case and repository-status snapshots; expanded the static dashboard with summary counts, Active Cases, Tool Registry, prompts, opportunities, research, and agent workflow; updated Pages deployment to rebuild user-facing data from repository state; added CI validation/artifacts for dashboard-data generation; and added tool-registry tests.
+- **Verification:** Cross-file paths and Pages packaging were wired so `data/tools.json`, generated `cases.json`, and `status.json` are available to `site/app.js`; CI now compiles and executes the dashboard builder on all Python matrix versions and preserves generated data as diagnostics.
+- **Evidence / artifacts:** `data/tools.json`, `scripts/build_site_data.py`, `site/index.html`, `site/app.js`, `.github/workflows/pages.yml`, `.github/workflows/ci.yml`, `tests/test_core.py`, `README.md`.
+- **Known risks / blockers:** No new GitHub Actions run has yet been observed for this latest head. Active Cases will remain empty until structured `case.json` directories exist. Static Pages cannot itself execute AI agents; agents update repo state and Pages presents the resulting snapshot.
+- **Next action:** Build an artifact inventory/index and then add a News/Intel feed model so agents can publish timestamped researched links and users can browse them from the dashboard.
