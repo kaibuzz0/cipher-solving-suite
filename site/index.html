@@ -13,6 +13,7 @@
       <p class="eyebrow">CIPHER SOLVING SUITE</p>
       <h1>Operations Hub</h1>
       <p class="lede">One place for authorized challenges, research tools, opportunity links, reusable AI prompts, and multi-agent handoffs.</p>
+      <p><a href="README.md"><strong>Repository README / Quick Navigation →</strong></a></p>
     </div>
     <div class="status"><span class="dot"></span><span>Catalog-backed dashboard</span></div>
   </header>
@@ -39,6 +40,7 @@
     <section id="tools" class="panel">
       <div class="section-head"><div><p class="eyebrow">LOCAL ARSENAL</p><h2>Tools & Commands</h2></div></div>
       <div class="grid static-grid">
+        <article class="card"><span class="badge">NAV</span><h3>README quick navigation</h3><a href="README.md">README.md</a><p>Front door for repo paths, commands, workflow, and where new files belong.</p></article>
         <article class="card"><span class="badge">CORE</span><h3>Suite status</h3><code>python suite.py --status</code><p>Show the suite version, catalog state and available operating modes.</p></article>
         <article class="card"><span class="badge">DISCOVERY</span><h3>Find opportunities</h3><code>python tools/opportunity_finder.py --list</code><p>Search the same opportunity catalog used by this dashboard.</p></article>
         <article class="card"><span class="badge">FILTER</span><h3>Search catalog</h3><code>python tools/opportunity_finder.py --search crypto</code><p>Filter by platform name, description, category or tag.</p></article>
@@ -56,11 +58,12 @@
     <section id="workflow" class="panel">
       <div class="section-head"><div><p class="eyebrow">HANDOFF PROTOCOL</p><h2>Agent Workflow</h2></div></div>
       <ol class="workflow">
-        <li><strong>Orient.</strong> Read <a href="AGENTS.md">AGENTS.md</a>, the latest <a href="docs/AGENT_HANDOFF.md">handoff</a>, and <a href="docs/WORK_QUEUE.md">work queue</a>.</li>
+        <li><strong>Orient.</strong> Start with <a href="README.md">README.md</a>, then read <a href="AGENTS.md">AGENTS.md</a>, the latest <a href="docs/AGENT_HANDOFF.md">handoff</a>, and <a href="docs/WORK_QUEUE.md">work queue</a>.</li>
         <li><strong>Claim.</strong> Choose the smallest unclaimed, verifiable task.</li>
         <li><strong>Research.</strong> Save sources, timestamps, hashes, assumptions and authorization scope.</li>
         <li><strong>Build.</strong> Keep source, generated artifacts and evidence separated.</li>
         <li><strong>Verify.</strong> Tests first; deterministic replay or compile checks second.</li>
+        <li><strong>Navigate.</strong> Update README quick links if major paths/tools/workflows changed.</li>
         <li><strong>Handoff.</strong> Record exact changes, failures, evidence and one next action.</li>
       </ol>
       <div class="warning"><strong>Authorization boundary:</strong> only test security targets covered by explicit CTF, audit, lab, or bug-bounty authorization and scope.</div>
@@ -77,7 +80,7 @@
     </section>
   </main>
 
-  <footer><span id="catalog-meta">Loading catalog…</span><a href="https://github.com/kaibuzz0/cipher-solving-suite">Repository</a></footer>
+  <footer><span id="catalog-meta">Loading catalog…</span><a href="README.md">README / Navigate</a><a href="https://github.com/kaibuzz0/cipher-solving-suite">Repository</a></footer>
   <script src="app.js"></script>
 </body>
 </html>
