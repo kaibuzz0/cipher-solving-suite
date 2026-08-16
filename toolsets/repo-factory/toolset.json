@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "repo-factory",
+  "name": "Repo Factory",
+  "version": "0.1.0",
+  "maturity": "experimental",
+  "description": "Exportable AI-friendly repository bootstrap with diagnostic CI, blueprints, research logs, work queues, handoffs, checklists, current state, and integration inbox.",
+  "entrypoint": "export_toolset.py",
+  "dependencies": [],
+  "outputs": ["AGENTS.md", "ops/CURRENT_STATE.md", "docs/PROJECT_BLUEPRINT.md", "docs/RESEARCH_LOG.md", "docs/WORK_QUEUE.md", "docs/AGENT_HANDOFF.md", "docs/BUILD_CHECKLIST.md", "data/integration_queue.json", ".github/workflows/diagnostic-ci.yml"]
+}
