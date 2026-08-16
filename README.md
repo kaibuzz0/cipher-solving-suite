@@ -10,7 +10,9 @@ A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, 
 |---|---|
 | Open the human-facing dashboard | [`site/index.html`](site/index.html) |
 | Browse sourced News / Intelligence | [`data/intelligence.json`](data/intelligence.json) |
-| Understand how agents publish intelligence | [`docs/INTELLIGENCE_WORKFLOW.md`](docs/INTELLIGENCE_WORKFLOW.md) |
+| Browse the approved Intelligence Source Registry | [`data/intelligence_sources.json`](data/intelligence_sources.json) |
+| Check stale/due intelligence sources | [`scripts/source_registry.py`](scripts/source_registry.py) |
+| Understand how agents collect/publish intelligence | [`docs/INTELLIGENCE_WORKFLOW.md`](docs/INTELLIGENCE_WORKFLOW.md) |
 | Add/list/validate intelligence from terminal | [`scripts/intelligence_feed.py`](scripts/intelligence_feed.py) |
 | See what an AI agent must read/do | [`AGENTS.md`](AGENTS.md) |
 | Find the next task | [`docs/WORK_QUEUE.md`](docs/WORK_QUEUE.md) |
@@ -39,11 +41,11 @@ A multi-agent research and operations hub for cipher puzzles, CTFs, hackathons, 
 
 This repository deliberately serves two audiences at once.
 
-**Agent layer:** structured files, intelligence, case metadata, catalogs, work queues, handoffs, tests, and scripts let many AI/human agents work without losing context or duplicating effort.
+**Agent layer:** structured files, intelligence sources, intelligence items, case metadata, catalogs, work queues, handoffs, tests, and scripts let many AI/human agents work without losing context or duplicating effort.
 
-**User layer:** the GitHub Pages Operations Hub turns that structured state into a readable dashboard. Users can see opportunities, sourced News / Intelligence, active cases, internal tools, prompts, research links, repository status, and agent workflow without digging through source files.
+**User layer:** the GitHub Pages Operations Hub turns that structured state into a readable dashboard. Users can see opportunities, sourced News / Intelligence, the intelligence collection network and freshness state, active cases, internal tools, prompts, research links, repository status, and agent workflow without digging through source files.
 
-The website is a first-class output. When agents publish a sourced intelligence item, add a structured case, or update the tool/opportunity/prompt catalogs, the Pages build exposes the shared state to users.
+The website is a first-class output. When agents publish a sourced intelligence item, check/update an intelligence source, add a structured case, or update the tool/opportunity/prompt catalogs, the Pages build exposes the shared state to users.
 
 ## Agent start sequence
 
@@ -54,17 +56,27 @@ Every AI or human agent should use this order:
 3. **docs/AGENT_HANDOFF.md** — learn what the previous agent did.
 4. **docs/WORK_QUEUE.md** — choose/claim the smallest useful task.
 5. **Open PRs/issues** — avoid duplicated or conflicting work.
-6. **Relevant code/data/research files** — inspect before editing.
-7. **Publish sourced intelligence** — when external research produces a useful user-facing update, use `data/intelligence.json` and `docs/INTELLIGENCE_WORKFLOW.md`.
-8. **Tests / maintenance checks** — verify before handoff.
-9. **Publish structured state** — cases/tools/catalog changes should be visible to the user dashboard where appropriate.
-10. **Append a handoff entry** — leave exact next steps for the next agent.
+6. **Check assigned intelligence sources** — use `scripts/source_registry.py` to find due/never-checked collection lanes.
+7. **Relevant code/data/research files** — inspect before editing.
+8. **Publish sourced intelligence** — when external research produces a useful user-facing update, use the canonical feed/source workflow.
+9. **Tests / maintenance checks** — verify before handoff.
+10. **Publish structured state** — cases/tools/catalog changes should be visible to the user dashboard where appropriate.
+11. **Append a handoff entry** — leave exact next steps for the next agent.
 
 ## Command center
 
 ```bash
 # Repository status / command router
 python suite.py --status
+
+# Intelligence collection network
+python scripts/source_registry.py list
+python scripts/source_registry.py list --due
+python scripts/source_registry.py list --due --agent ctf-scout
+python scripts/source_registry.py validate
+
+# After actually reviewing a source
+python scripts/source_registry.py mark-checked ctftime-upcoming
 
 # Browse/validate sourced News / Intelligence
 python scripts/intelligence_feed.py list
@@ -76,6 +88,7 @@ python scripts/intelligence_feed.py add \
   --title "Example challenge announced" \
   --summary "Short factual explanation of why it matters." \
   --category hackathon \
+  --source-id ethglobal-events \
   --source-name "Official organizer" \
   --source-url "https://example.com/announcement" \
   --published-at "2026-08-16T12:00:00Z" \
@@ -108,9 +121,11 @@ python -m pytest tests/ -vv --tb=short
 ## What works now
 
 - `suite.py` — top-level status and command router.
+- `data/intelligence_sources.json` — canonical Intelligence Source Registry with source type/tier, categories, freshness SLA, last check, assigned agent, enabled state, and confidence defaults.
+- `scripts/source_registry.py` — list due sources, filter by assigned agent, validate registry structure, mark a source checked, and emit freshness status.
 - `data/intelligence.json` — canonical source-backed user-facing News / Intelligence feed.
-- `scripts/intelligence_feed.py` — add/list/validate intelligence with timestamps, source, confidence, relevance, tags, notes, and optional case links.
-- `docs/INTELLIGENCE_WORKFLOW.md` — publishing rules for agents researching external developments.
+- `scripts/intelligence_feed.py` — add/list/validate intelligence with timestamps, source IDs, deterministic fingerprints, confidence, relevance, tags, notes, and optional case links.
+- `docs/INTELLIGENCE_WORKFLOW.md` — source collection, freshness, deduplication, verification, and publishing rules.
 - `data/opportunities.json` — canonical opportunity/link catalog used by CLI and website.
 - `data/tools.json` — canonical internal tool registry used by the website and validation.
 - `data/prompts.json` — reusable AI prompt library.
@@ -118,14 +133,14 @@ python -m pytest tests/ -vv --tb=short
 - `tools/earnings_tracker.py` — record attempts and verified earnings.
 - `tools/scanning/opportunity_scanner.py` — timestamped catalog snapshots; deliberately **not labeled as live scraping**.
 - `scripts/new_case.py` — standardized challenge/opportunity case generator.
-- `scripts/build_site_data.py` — scans structured cases and catalogs to create dashboard `cases.json` and `status.json`.
+- `scripts/build_site_data.py` — scans structured cases/catalogs and builds dashboard cases, source freshness, and repository status snapshots.
 - `docs/CASE_WORKFLOW.md` — case lifecycle, evidence, attempts, verification, and handoff rules.
 - `AGENTS.md` — operating contract for AI and human agents.
 - `docs/AGENT_HANDOFF.md` — append-only agent journal.
 - `docs/WORK_QUEUE.md` — shared claimable work queue.
 - `docs/REPO_MAINTENANCE.md` — maintenance rules and definition of done.
 - `scripts/maintenance_check.py` — deterministic hygiene/compile checks.
-- `tests/test_core.py` — deterministic catalog, intelligence, tool-registry, earnings, and case-generation tests.
+- `tests/test_core.py` — deterministic catalog, source-registry, intelligence/fingerprint, tool-registry, earnings, and case-generation tests.
 - `site/` — static Operations Hub dashboard deployed through GitHub Pages after merge/configuration.
 
 ## Repository map
@@ -137,21 +152,23 @@ cipher-solving-suite/
 ├── suite.py                     # top-level command router
 ├── data/
 │   ├── intelligence.json        # canonical sourced News / Intelligence feed
+│   ├── intelligence_sources.json # recurring collection source registry
 │   ├── opportunities.json       # canonical opportunity/link catalog
 │   ├── tools.json               # canonical internal tool registry
 │   └── prompts.json             # reusable AI prompts
 ├── docs/
 │   ├── AGENT_HANDOFF.md         # append-only notes between agents
 │   ├── CASE_WORKFLOW.md         # standardized challenge/case lifecycle
-│   ├── INTELLIGENCE_WORKFLOW.md # sourced news/intelligence publishing rules
+│   ├── INTELLIGENCE_WORKFLOW.md # source collection + publishing rules
 │   ├── REPO_MAINTENANCE.md      # maintenance / definition of done
 │   └── WORK_QUEUE.md            # shared work claims and priorities
 ├── site/                        # GitHub Pages Operations Hub
-├── site-data/                   # generated dashboard case/status snapshots
+├── site-data/                   # generated dashboard case/status/source snapshots
 ├── tools/                       # opportunity, earnings and scanning tools
 ├── scripts/
 │   ├── build_site_data.py       # converts repo state into dashboard data
 │   ├── intelligence_feed.py     # manages sourced News / Intelligence
+│   ├── source_registry.py       # manages intelligence collection network
 │   ├── maintenance_check.py     # repository hygiene checks
 │   └── new_case.py              # creates standardized case directories
 ├── tests/                       # deterministic validation
@@ -166,6 +183,7 @@ cipher-solving-suite/
 
 Do not create another random root-level file when an existing lane fits.
 
+- Recurring external source agents should monitor → `data/intelligence_sources.json`
 - Sourced user-facing news/research update → `data/intelligence.json`
 - Raw timestamped external-feed snapshot → `intelligence/feeds/`
 - New opportunity/platform link → `data/opportunities.json`
@@ -180,11 +198,23 @@ Do not create another random root-level file when an existing lane fits.
 - Future work → `docs/WORK_QUEUE.md`
 - Stable process/rules → `docs/`
 
+## Intelligence collection network
+
+The source registry turns ad-hoc research into an organized collection system. Every recurring source has a stable ID, source tier/type, covered categories, freshness target, last checked timestamp, assigned agent role, enabled state, and confidence guidance.
+
+A dashboard source can be `fresh`, `due-soon`, `due`, `never-checked`, or `disabled`. This status only means whether the source was reviewed within its configured SLA; it does not certify every claim on the source.
+
+The standard agent loop is:
+
+`due source → inspect → verify → deduplicate → publish useful intel → mark checked → create case if actionable → handoff`
+
+The initial registry includes lanes for hackathons, CTFs, GitHub/tool research, government challenges, bug-bounty programs, Web3 audit contests, and cryptography research. Agents can be assigned independently, which allows several AI workers to collect in parallel without all searching the same places.
+
 ## News / Intelligence pipeline
 
 The News / Intelligence layer is how external research becomes durable, user-visible knowledge instead of disappearing inside one agent conversation.
 
-Every published item records what changed, source name/URL, source publication time, when an agent checked it, category, confidence, relevance, tags, optional notes, and an optional related case. The dashboard exposes these entries under **News / Intel** and lets users filter them by category.
+Every published item records what changed, source identity/URL, source publication time, when an agent checked it, category, confidence, relevance, deterministic deduplication fingerprint, tags, optional notes, and an optional related case. The dashboard exposes these entries under **News / Intel** and the collection network under **Intel Sources**.
 
 Agents should prefer official/primary sources. Uncertain claims must be labeled with appropriate confidence rather than presented as verified facts. Intelligence about a bounty or target is **not** testing authorization. See [`docs/INTELLIGENCE_WORKFLOW.md`](docs/INTELLIGENCE_WORKFLOW.md).
 
@@ -202,7 +232,7 @@ Availability, prizes, eligibility, rules, and scopes change. Verify those facts 
 
 ## Security authorization boundary
 
-Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty programs. Before testing a real target, save the official rules/scope and confirm the asset/action is allowed. A public hostname, contract, repository, IP address, or intelligence-feed entry is **not** authorization by itself.
+Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty programs. Before testing a real target, save the official rules/scope and confirm the asset/action is allowed. A public hostname, contract, repository, IP address, intelligence source, or intelligence-feed entry is **not** authorization by itself.
 
 ## Static Operations Hub
 
@@ -210,14 +240,15 @@ Security tooling is for authorized CTFs, labs, audits, puzzles, and bug-bounty p
 
 - repository summary counts,
 - opportunities,
-- sourced News / Intelligence with dates, confidence, relevance, notes, and source links,
+- sourced News / Intelligence with dates, confidence, relevance, notes, source IDs and links,
+- the Intelligence Source network with freshness/ownership/tier information,
 - active structured cases and their next actions,
 - the internal tool registry with commands and maturity,
 - reusable AI prompts,
 - agent workflow/handoffs,
 - research launch links.
 
-`.github/workflows/pages.yml` validates the intelligence feed, runs `scripts/build_site_data.py`, packages the shared catalogs plus generated case/status data, and publishes the site through GitHub Pages on `main` changes. The repository Pages setting may need to be set to **GitHub Actions** once.
+`.github/workflows/pages.yml` validates both the source registry and intelligence feed, runs `scripts/build_site_data.py`, packages the shared catalogs plus generated case/source/status data, and publishes the site through GitHub Pages on `main` changes. The repository Pages setting may need to be set to **GitHub Actions** once.
 
 ## Validation and maintenance
 
@@ -225,7 +256,7 @@ Pull requests run Python 3.11, 3.12, and 3.13 validation through [`.github/workf
 
 Tests run with `python -m pytest -vv --tb=short --junitxml=test-results.xml`. The Actions log therefore shows each individual test and a concise traceback instead of only an opaque exit code. Each Python job uploads its JUnit XML with `if: always()`, so failure diagnostics remain available when a test breaks.
 
-Compile, intelligence-feed validation, dashboard-data generation, and maintenance validation also continue after a test failure. Their outcomes are written to the GitHub job summary; the intelligence feed, generated dashboard data, and maintenance reports are uploaded with `if: always()`. The matrix job fails only after all diagnostic stages have run. The goal is: **CI should answer exactly what failed, where, and on which Python version.**
+Compile, source-registry validation, intelligence-feed validation, dashboard-data generation, and maintenance validation also continue after a test failure. Their outcomes are written to the GitHub job summary; intelligence/source data, generated dashboard data, and maintenance reports are uploaded with `if: always()`. The matrix job fails only after all diagnostic stages have run. The goal is: **CI should answer exactly what failed, where, and on which Python version.**
 
 The daily maintenance workflow checks missing required files, Python compile failures, version drift, generated files at repository root, and suspicious secret-like filenames. Findings become cleanup work; automation does not silently delete research evidence.
 
@@ -239,6 +270,7 @@ The repository should help a **user** quickly answer:
 
 - What changed recently that could matter to me?
 - Where did that information come from and how confident is it?
+- Which intelligence sources are being watched and how fresh are they?
 - What opportunities are available to investigate?
 - What cases are active right now?
 - What tools can I use and how do I run them?
@@ -247,7 +279,9 @@ The repository should help a **user** quickly answer:
 
 And it should help an **agent** quickly answer:
 
+- Which assigned sources are due or have never been checked?
 - What new sourced information should be published for users?
+- Is this discovery already represented by a deduplication fingerprint?
 - What legitimate opportunity should we investigate next?
 - What tools do we already have?
 - What has already been tried?
