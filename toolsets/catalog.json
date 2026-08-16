@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-16",
+  "toolsets": [
+    {
+      "id": "repo-factory",
+      "name": "Repo Factory",
+      "path": "toolsets/repo-factory",
+      "version": "0.1.0",
+      "maturity": "experimental",
+      "entrypoint": "python toolsets/repo-factory/export_toolset.py",
+      "description": "AI-friendly repository bootstrap with diagnostic CI, blueprints, research logs, work queues, handoffs, checklists, current state, and integration inbox."
+    }
+  ]
+}
