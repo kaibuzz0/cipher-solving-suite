@@ -85,3 +85,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** `data/intelligence.json`, `scripts/intelligence_feed.py`, `docs/INTELLIGENCE_WORKFLOW.md`, `site/index.html`, `site/app.js`, `.github/workflows/pages.yml`, `.github/workflows/ci.yml`, `tests/test_core.py`, `README.md`, `AGENTS.md`.
 - **Known risks / blockers:** The canonical feed starts empty by design; agents must publish verified source-backed items. The queued matrix must finish before this head is called fully green. Pages becomes public only after merge to `main` and repository Pages configuration if not already enabled.
 - **Next action:** Seed the feed with a small set of currently verified official-source intelligence entries, then build a source registry/deduplication/freshness layer so recurring agents can discover and update news without duplicating stale items.
+
+---
+
+### 2026-08-16 12:41 UTC — ChatGPT / Intelligence Source Registry
+
+- **Branch / PR:** `agent/maintenance-foundation` / PR #1
+- **Objective:** Turn the News / Intelligence feed into an organized recurring collection network for multiple AI agents.
+- **Changed:** Added canonical `data/intelligence_sources.json` with source type/tier, categories, freshness SLA, last check, assigned agent role, enabled state, confidence defaults and verification notes; added `scripts/source_registry.py` with list/due/agent-filter/validate/mark-checked/status operations; added deterministic SHA-256-derived fingerprints and canonical source IDs to intelligence items; seeded source lanes for ETHGlobal, CTFtime, GitHub, Challenge.gov, HackerOne, Code4rena, Sherlock and arXiv cryptography; added dashboard `Intel Sources` tab and source freshness counts; extended Pages/CI validation and artifacts; registered the source manager as a tool; and updated README/AGENTS/intelligence workflow.
+- **Verification:** Tests now cover source-registry integrity, duplicate source IDs, never-checked/fresh states, feed fingerprint consistency, duplicate fingerprints, URL normalization and persisted additions. CI compiles `source_registry.py`, validates source registry + feed independently, builds source/status dashboard data, and reports each stage by Python version. Core validation run for latest head is queued at handoff time.
+- **Evidence / artifacts:** `data/intelligence_sources.json`, `scripts/source_registry.py`, `scripts/intelligence_feed.py`, `data/intelligence.json`, `scripts/build_site_data.py`, `site/index.html`, `site/app.js`, `.github/workflows/ci.yml`, `.github/workflows/pages.yml`, `tests/test_core.py`, `docs/INTELLIGENCE_WORKFLOW.md`, `README.md`, `AGENTS.md`.
+- **Known risks / blockers:** Source freshness currently tracks whether an agent checked a source, not automated fetch success or content-change hashes. Source URLs still need periodic human/agent revalidation because platforms can move endpoints. Latest CI must finish before this exact revision is called green.
+- **Next action:** Add source check-history/change fingerprints and a scheduled discovery pass that writes timestamped source-check reports without automatically publishing unverified claims.
