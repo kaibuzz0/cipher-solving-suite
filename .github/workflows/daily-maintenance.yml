@@ -1,0 +1,42 @@
+name: Daily Repository Maintenance
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "**.py"
+      - "README.md"
+      - "AGENTS.md"
+      - "docs/**"
+      - "scripts/maintenance_check.py"
+      - ".github/workflows/daily-maintenance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run maintenance checks
+        run: python scripts/maintenance_check.py
+
+      - name: Upload maintenance report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: maintenance-report
+          path: artifacts/maintenance-report.json
+          if-no-files-found: warn
+          retention-days: 14
