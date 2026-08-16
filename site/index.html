@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Cipher Solving Suite operations dashboard for opportunities, active cases, tools, prompts, research, and AI-agent handoffs.">
+  <meta name="description" content="Cipher Solving Suite operations dashboard for opportunities, intelligence, active cases, tools, prompts, research, and AI-agent handoffs.">
   <title>Cipher Solving Suite — Operations Hub</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,7 +12,7 @@
     <div>
       <p class="eyebrow">CIPHER SOLVING SUITE</p>
       <h1>Operations Hub</h1>
-      <p class="lede">A user-facing command center backed by shared AI-agent research, tools, cases, opportunity links, prompts, and handoffs.</p>
+      <p class="lede">A user-facing command center backed by shared AI-agent research, intelligence, tools, cases, opportunity links, prompts, and handoffs.</p>
       <p><a href="README.md"><strong>Repository README / Quick Navigation →</strong></a></p>
     </div>
     <div class="status"><span class="dot"></span><span id="hub-status">Loading repository status…</span></div>
@@ -22,6 +22,7 @@
 
   <nav class="tabs" aria-label="Dashboard sections">
     <button data-tab="opportunities" class="active">Opportunities</button>
+    <button data-tab="intelligence">News / Intel</button>
     <button data-tab="cases">Active Cases</button>
     <button data-tab="tools">Tools</button>
     <button data-tab="prompts">AI Prompts</button>
@@ -31,13 +32,18 @@
 
   <main>
     <section class="controls">
-      <input id="search" type="search" placeholder="Search opportunities, cases, tools, tags, prompts…" aria-label="Search dashboard">
-      <select id="category" aria-label="Filter opportunity category"><option value="all">All categories</option></select>
+      <input id="search" type="search" placeholder="Search opportunities, intelligence, cases, tools, tags, prompts…" aria-label="Search dashboard">
+      <select id="category" aria-label="Filter current section"><option value="all">All categories</option></select>
     </section>
 
     <section id="opportunities" class="panel active">
       <div class="section-head"><div><p class="eyebrow">MONEY / SKILL PIPELINE</p><h2>Opportunity Directory</h2></div><p class="muted">Verify current rules, payout, eligibility and scope on the official site before acting.</p></div>
       <div id="opportunity-grid" class="grid"></div>
+    </section>
+
+    <section id="intelligence" class="panel">
+      <div class="section-head"><div><p class="eyebrow">SOURCED UPDATES</p><h2>News / Intelligence</h2></div><p class="muted">Timestamped discoveries published by agents with source, confidence, relevance, and optional case links.</p></div>
+      <div id="intel-grid" class="grid"></div>
     </section>
 
     <section id="cases" class="panel">
@@ -61,18 +67,20 @@
         <li><strong>Orient.</strong> Start with <a href="README.md">README.md</a>, then read <a href="AGENTS.md">AGENTS.md</a>, the latest <a href="docs/AGENT_HANDOFF.md">handoff</a>, and <a href="docs/WORK_QUEUE.md">work queue</a>.</li>
         <li><strong>Claim.</strong> Choose the smallest unclaimed, verifiable task.</li>
         <li><strong>Research.</strong> Save sources, timestamps, hashes, assumptions and authorization scope.</li>
+        <li><strong>Publish intelligence.</strong> Put sourced user-facing updates in <a href="data/intelligence.json">data/intelligence.json</a> using the <a href="docs/INTELLIGENCE_WORKFLOW.md">intelligence workflow</a>.</li>
         <li><strong>Build.</strong> Keep source, generated artifacts and evidence separated.</li>
         <li><strong>Verify.</strong> Tests first; deterministic replay or compile checks second.</li>
         <li><strong>Publish state.</strong> Update structured case/tool/catalog data so users can see the result.</li>
         <li><strong>Navigate.</strong> Update README quick links if major paths/tools/workflows changed.</li>
         <li><strong>Handoff.</strong> Record exact changes, failures, evidence and one next action.</li>
       </ol>
-      <div class="warning"><strong>Authorization boundary:</strong> only test security targets covered by explicit CTF, audit, lab, or bug-bounty authorization and scope.</div>
+      <div class="warning"><strong>Authorization boundary:</strong> intelligence about a target or bounty is not authorization to test it. Only test security targets covered by explicit CTF, audit, lab, or bug-bounty authorization and scope.</div>
     </section>
 
     <section id="research" class="panel">
       <div class="section-head"><div><p class="eyebrow">INTELLIGENCE</p><h2>Research Launchpad</h2></div></div>
       <div class="grid static-grid">
+        <article class="card"><h3>Intelligence workflow</h3><a href="docs/INTELLIGENCE_WORKFLOW.md">Publishing rules</a><p>How agents verify, classify, and publish sourced updates.</p></article>
         <article class="card"><h3>GitHub code research</h3><a href="https://github.com/search" target="_blank" rel="noopener">Search GitHub</a><p>Find libraries and techniques; inspect license and maintenance before adoption.</p></article>
         <article class="card"><h3>CTF calendar</h3><a href="https://ctftime.org/event/list/upcoming" target="_blank" rel="noopener">CTFtime upcoming</a><p>Current competition discovery.</p></article>
         <article class="card"><h3>Challenge.gov</h3><a href="https://www.challenge.gov/" target="_blank" rel="noopener">Official challenges</a><p>Government prize competitions and challenge programs.</p></article>
