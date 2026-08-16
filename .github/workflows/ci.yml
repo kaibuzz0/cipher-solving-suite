@@ -24,6 +24,6 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Compile core tools
         run: |
-          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py
+          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py
       - name: Maintenance check
         run: python scripts/maintenance_check.py
