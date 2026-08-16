@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Cipher Solving Suite operations dashboard for tools, opportunities, prompts, research and AI-agent handoffs.">
+  <meta name="description" content="Cipher Solving Suite operations dashboard for opportunities, active cases, tools, prompts, research, and AI-agent handoffs.">
   <title>Cipher Solving Suite — Operations Hub</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,15 +12,18 @@
     <div>
       <p class="eyebrow">CIPHER SOLVING SUITE</p>
       <h1>Operations Hub</h1>
-      <p class="lede">One place for authorized challenges, research tools, opportunity links, reusable AI prompts, and multi-agent handoffs.</p>
+      <p class="lede">A user-facing command center backed by shared AI-agent research, tools, cases, opportunity links, prompts, and handoffs.</p>
       <p><a href="README.md"><strong>Repository README / Quick Navigation →</strong></a></p>
     </div>
-    <div class="status"><span class="dot"></span><span>Catalog-backed dashboard</span></div>
+    <div class="status"><span class="dot"></span><span id="hub-status">Loading repository status…</span></div>
   </header>
+
+  <section class="grid static-grid" id="stats-grid" aria-label="Repository summary"></section>
 
   <nav class="tabs" aria-label="Dashboard sections">
     <button data-tab="opportunities" class="active">Opportunities</button>
-    <button data-tab="tools">Tools & Commands</button>
+    <button data-tab="cases">Active Cases</button>
+    <button data-tab="tools">Tools</button>
     <button data-tab="prompts">AI Prompts</button>
     <button data-tab="workflow">Agent Workflow</button>
     <button data-tab="research">Research Links</button>
@@ -28,7 +31,7 @@
 
   <main>
     <section class="controls">
-      <input id="search" type="search" placeholder="Search tools, tags, platforms, prompts…" aria-label="Search dashboard">
+      <input id="search" type="search" placeholder="Search opportunities, cases, tools, tags, prompts…" aria-label="Search dashboard">
       <select id="category" aria-label="Filter opportunity category"><option value="all">All categories</option></select>
     </section>
 
@@ -37,17 +40,14 @@
       <div id="opportunity-grid" class="grid"></div>
     </section>
 
+    <section id="cases" class="panel">
+      <div class="section-head"><div><p class="eyebrow">ACTIVE RESEARCH</p><h2>Cases</h2></div><p class="muted">Structured investigations created by humans or AI agents.</p></div>
+      <div id="case-grid" class="grid"></div>
+    </section>
+
     <section id="tools" class="panel">
-      <div class="section-head"><div><p class="eyebrow">LOCAL ARSENAL</p><h2>Tools & Commands</h2></div></div>
-      <div class="grid static-grid">
-        <article class="card"><span class="badge">NAV</span><h3>README quick navigation</h3><a href="README.md">README.md</a><p>Front door for repo paths, commands, workflow, and where new files belong.</p></article>
-        <article class="card"><span class="badge">CORE</span><h3>Suite status</h3><code>python suite.py --status</code><p>Show the suite version, catalog state and available operating modes.</p></article>
-        <article class="card"><span class="badge">DISCOVERY</span><h3>Find opportunities</h3><code>python tools/opportunity_finder.py --list</code><p>Search the same opportunity catalog used by this dashboard.</p></article>
-        <article class="card"><span class="badge">FILTER</span><h3>Search catalog</h3><code>python tools/opportunity_finder.py --search crypto</code><p>Filter by platform name, description, category or tag.</p></article>
-        <article class="card"><span class="badge">MONEY</span><h3>Track earnings</h3><code>python tools/earnings_tracker.py stats</code><p>Track attempts and verified payouts locally in JSON.</p></article>
-        <article class="card"><span class="badge">HYGIENE</span><h3>Maintenance check</h3><code>python scripts/maintenance_check.py</code><p>Compile core Python, detect version drift and flag generated root artifacts.</p></article>
-        <article class="card"><span class="badge">AGENTS</span><h3>Work queue</h3><a href="docs/WORK_QUEUE.md">docs/WORK_QUEUE.md</a><p>Claim work, leave evidence, and keep parallel agents from duplicating effort.</p></article>
-      </div>
+      <div class="section-head"><div><p class="eyebrow">LOCAL ARSENAL</p><h2>Tool Registry</h2></div><p class="muted">Commands, purpose, location, and maturity from one shared registry.</p></div>
+      <div id="tool-grid" class="grid"></div>
     </section>
 
     <section id="prompts" class="panel">
@@ -63,6 +63,7 @@
         <li><strong>Research.</strong> Save sources, timestamps, hashes, assumptions and authorization scope.</li>
         <li><strong>Build.</strong> Keep source, generated artifacts and evidence separated.</li>
         <li><strong>Verify.</strong> Tests first; deterministic replay or compile checks second.</li>
+        <li><strong>Publish state.</strong> Update structured case/tool/catalog data so users can see the result.</li>
         <li><strong>Navigate.</strong> Update README quick links if major paths/tools/workflows changed.</li>
         <li><strong>Handoff.</strong> Record exact changes, failures, evidence and one next action.</li>
       </ol>
@@ -76,11 +77,13 @@
         <article class="card"><h3>CTF calendar</h3><a href="https://ctftime.org/event/list/upcoming" target="_blank" rel="noopener">CTFtime upcoming</a><p>Current competition discovery.</p></article>
         <article class="card"><h3>Challenge.gov</h3><a href="https://www.challenge.gov/" target="_blank" rel="noopener">Official challenges</a><p>Government prize competitions and challenge programs.</p></article>
         <article class="card"><h3>Repository research</h3><a href="https://github.com/kaibuzz0/cipher-solving-suite/tree/main/research/active-puzzles" target="_blank" rel="noopener">Active research folder</a><p>Use timestamped case files rather than loose root-level notes.</p></article>
+        <article class="card"><h3>Work queue</h3><a href="docs/WORK_QUEUE.md">Open queue</a><p>See what agents are building, what is blocked, and what is next.</p></article>
+        <article class="card"><h3>Agent handoffs</h3><a href="docs/AGENT_HANDOFF.md">Read handoffs</a><p>See what previous agents changed, verified, learned, and recommend next.</p></article>
       </div>
     </section>
   </main>
 
-  <footer><span id="catalog-meta">Loading catalog…</span><a href="README.md">README / Navigate</a><a href="https://github.com/kaibuzz0/cipher-solving-suite">Repository</a></footer>
+  <footer><span id="catalog-meta">Loading catalogs…</span><a href="README.md">README / Navigate</a><a href="https://github.com/kaibuzz0/cipher-solving-suite">Repository</a></footer>
   <script src="app.js"></script>
 </body>
 </html>
