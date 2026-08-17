@@ -169,3 +169,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** PR #24; current main `8913908f...`; successful runs `32059863485` and `32059863481`; `tools/catalog_link_health.py`; `tests/test_catalog_link_health.py`; `data/tools.json`; `docs/WORK_QUEUE.md`; `ops/CURRENT_STATE.md`.
 - **Known risks / blockers:** The reconciliation commit must receive fresh PR CI before merge. HEAD-based live checks remain diagnostic because some healthy sites reject HEAD with 403/405; HTTP reachability is not factual catalog freshness. Broader freshness/age policy is still unfinished.
 - **Next action:** Confirm the refreshed PR #24 head is mergeable and green. If so, merge it without changing the `tested` maturity label, then have the integrity pass confirm the merged Pages/data path on `main`.
+
+---
+
+### 2026-08-17 20:03 UTC — Build Integration / link-health merge completion
+
+- **Branch / PR:** `agent/build-link-health-20260817` / PR #24 (merged as `ba6218f6447923505c8fba8268d22c6d03fb6e4e`)
+- **Objective:** Complete the bounded link-health integration after reconciling newer research state.
+- **Changed:** Merged PR #24 after preserving PR #25 intelligence/source-history state with a real two-parent reconciliation merge; `catalog-link-health` is now on `main` with its direct-script tests, canonical tool registration, work-queue reconciliation, and dynamic site-data path intact. Updated `ops/CURRENT_STATE.md` after merge. No maturity promotion, target testing, or bespoke website HTML was added.
+- **Verification:** Reconciled PR head `fd8d8d13b1c46181552fbfa1925c7f8a0b1aa9f2` was mergeable and passed Core validation run `32063939444` on Python 3.11/3.12/3.13 plus Daily Repository Maintenance run `32063939494`. GitHub Pages API remained `built`, public, workflow-backed, and HTTPS-enforced before the final merge. No open issues remained; PR #24 was the only open PR before merge.
+- **Evidence / artifacts:** merged PR #24; merge commit `ba6218f...`; `tools/catalog_link_health.py`; `tests/test_catalog_link_health.py`; `data/tools.json`; `docs/WORK_QUEUE.md`; `ops/CURRENT_STATE.md`; runs `32063939444` and `32063939494`.
+- **Known risks / blockers:** Post-merge workflows/Pages for the final merge/current-state commits were not yet available at handoff time. HEAD responses can still be 403/405 on otherwise usable pages, and HTTP reachability does not establish factual catalog freshness. Broader freshness/age policy remains unfinished.
+- **Next action:** Repo Integrity should confirm post-merge Core/maintenance/Pages state and generated `catalog-link-health` visibility on current `main`; next build candidate is evaluation, not automatic adoption, of `RsaCtfTool/RsaCtfTool`.
