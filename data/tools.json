@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16",
+  "updated_at": "2026-08-17",
   "items": [
     {"id":"suite","name":"Suite Command Router","category":"core","path":"suite.py","command":"python suite.py --status","description":"Top-level entry point for status, opportunity discovery, snapshots, earnings and maintenance.","maturity":"verified","user_visible":true},
     {"id":"opportunity-finder","name":"Opportunity Finder","category":"discovery","path":"tools/opportunity_finder.py","command":"python tools/opportunity_finder.py --list","description":"Search and filter the canonical opportunity catalog used by the website.","maturity":"verified","user_visible":true},
@@ -12,6 +12,7 @@
     {"id":"opportunity-snapshot","name":"Opportunity Snapshot","category":"intelligence","path":"tools/scanning/opportunity_scanner.py","command":"python suite.py --scan","description":"Create timestamped snapshots of the canonical opportunity catalog. This is not a live scrape.","maturity":"verified","user_visible":true},
     {"id":"new-case","name":"New Case Generator","category":"research","path":"scripts/new_case.py","command":"python scripts/new_case.py --name \"Example\" --type puzzle --source \"source\" --url \"https://example.com\"","description":"Create a standardized research case with metadata, notes, attempts and evidence directories.","maturity":"verified","user_visible":true},
     {"id":"maintenance-check","name":"Repository Maintenance Check","category":"maintenance","path":"scripts/maintenance_check.py","command":"python scripts/maintenance_check.py","description":"Compile core tools and report repository hygiene, version drift and suspicious files.","maturity":"verified","user_visible":true},
+    {"id":"command-site-snapshot","name":"GitHub Command Site Snapshot Exporter","category":"integration","path":"scripts/export_command_site_snapshot.py","command":"python scripts/export_command_site_snapshot.py","description":"Export a bounded public metadata snapshot for the connected GitHub Command Site, including canonical tools, toolsets, cases, intelligence, Agent Operations state, and repository-tree metadata.","maturity":"verified","user_visible":true},
     {"id":"repo-factory-exporter","name":"Repo Factory Exporter","category":"toolset","path":"toolsets/repo-factory/export_toolset.py","command":"python toolsets/repo-factory/export_toolset.py /path/to/new-repo --project-name \"My Project\" --dry-run","description":"Export the reusable Repo Factory toolset into a new repository without overwriting existing files unless explicitly forced.","maturity":"experimental","user_visible":true}
   ]
 }
