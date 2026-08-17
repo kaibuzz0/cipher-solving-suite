@@ -1,50 +1,47 @@
 # Current Repository State
 
-Last reconciled: 2026-08-17 07:23 UTC
+Last reconciled: 2026-08-17 07:55 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Latest `main` commit inspected: `cb98f15caa294e4f54be1e8db5bffc62cb6072eb` (`Merge pull request #21 ... Command site: export repository tree metadata`).
-- Core validation run `31981879956` passed on Python 3.11, 3.12, and 3.13. Each matrix job passed the test suite, core compile checks, intelligence source/history validation, collection report generation, intelligence validation, artifact inventory, 310 migration verification, dashboard-data generation, and maintenance check.
-- Pages workflow run `31981879953` passed for the same `main` commit. GitHub Pages reports `built`, public, HTTPS-enforced, and workflow-backed at `https://kaibuzz0.github.io/cipher-solving-suite/`.
-- No open pull requests or open GitHub issues were present at this reconciliation point.
-- Canonical tool registry exists at `data/tools.json`; canonical intelligence source/feed/history files and `data/integration_queue.json` are active.
-- `toolsets/catalog.json` currently registers the reusable `repo-factory` toolset as experimental.
-- The repository is connected to `kaibuzz0/Git-hub-command-site` through `scripts/export_command_site_snapshot.py`; PR #21 added bounded repository-tree metadata while preserving the existing canonical tools, toolsets, cases, intelligence, evidence, prompts, and Agent Operations snapshot surfaces.
-- Direct-script execution of `scripts/export_command_site_snapshot.py` is covered by `tests/test_command_site_snapshot.py`.
-- Repository code-search checks used in this pass found no `subprocess`, `shell=True`, `os.system`, `eval`, or `exec` matches in the queried indexed code surface. Treat this as a bounded search result, not a formal security proof.
-
-## Integration reconciliation in progress
-
-- This integrity pass found that the documented Command Site snapshot exporter was not registered in the canonical `data/tools.json` registry even though it is an agent/operator-facing direct-script command and is independently tested.
-- Branch `agent/integrity-reconcile-command-site` registers the exporter as a verified integration tool so normal website/tool discovery remains data-driven rather than special-cased.
-- `data/integration_queue.json` is currently empty; no contributed item is waiting for integration review.
+- PR #22 (`Integrity: reconcile Command Site registry and current state`) merged as `7ebbb08944ee5121b37b60202ec124d5f5d0bf14`, preserving the Command Site tool-registry reconciliation before this research branch proceeds.
+- Baseline Core validation run `31981879956` passed on Python 3.11, 3.12, and 3.13, and Pages run `31981879953` passed on the same pre-PR22 main baseline.
+- GitHub Pages reports `built`, public, HTTPS-enforced, and workflow-backed at `https://kaibuzz0.github.io/cipher-solving-suite/`.
+- The documented and directly tested `scripts/export_command_site_snapshot.py` command is now registered in canonical `data/tools.json` through merged PR #22.
+- Canonical intelligence source/feed/history files and `data/integration_queue.json` are active; the integration queue is empty.
+- The repository is connected to `kaibuzz0/Git-hub-command-site`; PRs #20/#21 added bounded repository snapshot/tree export without replacing canonical repository data.
+- Research PR #23 has passed its Intelligence Source Report, Daily Repository Maintenance, and full Core validation matrix on Python 3.11, 3.12, and 3.13.
 
 ## Current research/intelligence state
 
-- Challenge.gov was sunset on March 30, 2026. The stable `challenge-gov` source ID now points to the official USA.gov active federal challenges page for compatibility.
-- USA.gov lists the Connecting Talent to Opportunity Challenge through April 1, 2028 with $15,000,000 in total cash prizes; eligibility is specialized and must be checked on the hosting competition page before treating it as directly actionable.
-- ETHGlobal's official calendar lists ETHOnline 2026 for September 4-16, followed by Tokyo and Mumbai events later in 2026.
-- Sherlock bounty discovery records include current LIVE programs such as Midas; listings are discovery leads only and do not authorize testing beyond the exact published program scope/rules.
+- The source-health pass reviewed CTFtime, HackerOne Directory, Code4rena contests, Sherlock contests, and Sherlock bug bounties and recorded real fingerprints in `data/source_check_history.json`.
+- CTFtime's upcoming calendar has rolled forward: the next listed event is CTFZone on August 19 and the next online cluster begins August 21 with BrunnerCTF, PwnSec, z0d1ak, Haruulzangi, E0F and TallDwarf. Existing late-August intelligence already covers the useful planning window, so no duplicate feed item was added.
+- Code4rena currently shows submissions closed; K2 ($135,000 USDC) and Rujira ($40,000 USDC) are report-in-progress. No open contest was promoted.
+- Sherlock's current contests page reports zero contests in the fetched view. No contest was promoted.
+- HackerOne's Directory remains an active discovery surface; individual program scope/rules remain mandatory before any security work.
+- Sherlock's current bug-bounty listing now highlights Aave V4 at a $2,500,000 maximum reward. The Aave V4 program page was independently re-opened and reports LIVE status, so a sourced high-value intelligence item was published. The fetched page did not expose the full Scope-tab contents, so no active testing case was created.
+- Midas remains LIVE at 500,000 USDC on its current program page. Its exact scope/rules still need preservation before case activation.
+- arXiv Cryptography remains `never-checked` because the official recent-list fetch timed out during this pass; it was not falsely marked fresh. GitHub Search also remains never-checked.
 
 ## Known state / debt
 
-- Generated/legacy root artifacts remain a documented P1 cleanup item. The repository still contains large root research images/binaries; preserve hashes/provenance and migration verification before relocation.
-- Link-health/catalog freshness automation remains P2 work and is important because the Challenge.gov migration demonstrated real source drift.
+- Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes/provenance before relocation.
+- Deterministic link-health/source-migration tooling remains high-value work because Challenge.gov already demonstrated real endpoint drift.
 - Legacy solver inventory/input-output/dependency documentation remains P2 work.
-- Several merged topic branches remain on the remote, including `feature/command-site-repository-tree` and multiple older `agent/*` branches. No open PR currently depends on them. Treat them as cleanup candidates only after confirming no preserved evidence or active external workflow references them; do not delete them automatically.
-- The GitHub Pages UI should continue to derive normal tools/toolsets/cases/intelligence/evidence and Agent Operations data from canonical files/manifests rather than one-off HTML.
+- `github-search` and `arxiv-cryptography` remain never-checked source lanes.
+- Several merged topic branches remain on the remote. Treat them as cleanup candidates only after confirming no preserved evidence or active external workflow depends on them; do not delete them automatically.
+- Security opportunity listings are discovery only; a public page, contract, repository, or bounty listing is not authorization beyond exact published scope/rules.
 
 ## Current operating priorities
 
-1. Finish and review the scoped Command Site tool-registry reconciliation PR; confirm CI and Pages/site-data generation still pass with the new registry entry.
-2. Continue deterministic link-health/source-migration tooling and real source checks for due/never-checked lanes.
-3. Preserve and inventory remaining root/legacy artifacts before any relocation or deletion.
-4. Inventory legacy solver modules and reconcile shared tools/toolsets with canonical registries where appropriate.
-5. Keep `main`, CI, Pages, registries, handoffs, Command Site snapshot output, Agent Operations data, and documentation aligned.
+1. Preserve and verify the exact Aave V4 Sherlock scope, exclusions, prohibited techniques, severity/reward rules and submission terms before deciding whether it merits an active case; do not test first.
+2. Preserve the same exact-scope material for Midas before case activation.
+3. Complete real checks for `github-search` and `arxiv-cryptography` without fabricating freshness on fetch failures.
+4. Add deterministic link-health/source-migration checks.
+5. Preserve root/legacy evidence and inventory legacy solver modules before cleanup/refactoring.
 
 ## Next handoff
 
-The next integrity/build role should inspect the reconciliation PR CI. If green, merge it and verify that the newly registered `command-site-snapshot` tool appears through the normal generated tool/Command Site data path. Do not manually hardcode it into website HTML. After that, link-health/source-migration tooling remains the highest-value bounded integration debt.
+The build/integration agent should prioritize deterministic link-health/source-migration tooling. The case-advancement agent should only activate Aave V4 or Midas after exact Sherlock scope/rules are preserved and confirmed appropriate for authorized work. The research agent should retry arXiv and perform a bounded GitHub Search source check on a later pass.

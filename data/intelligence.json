@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T19:39:00Z",
+  "updated_at": "2026-08-17T07:43:55Z",
   "items": [
+    {
+      "id": "2026-08-17-aave-v4-bug-bounty-is-live-on-sherlock-with-a-2-5m-maximum-reward",
+      "fingerprint": "2ee82f69315c42843f6c75fc",
+      "title": "Aave V4 bug bounty is LIVE on Sherlock with a $2.5M maximum reward",
+      "summary": "Sherlock's current Aave V4 bug-bounty page reports LIVE status and a maximum reward of $2,500,000. This is a high-value discovery lead, not authorization by itself: the exact in-scope contracts/assets, exclusions, severity rules, prohibited techniques and submission terms must be preserved and reviewed before any testing.",
+      "category": "bug-bounty",
+      "source_id": "sherlock-bounties",
+      "source_name": "Sherlock",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties/300",
+      "published_at": "2026-07-29T16:42:00Z",
+      "checked_at": "2026-08-17T07:43:55Z",
+      "confidence": "high",
+      "relevance": "high",
+      "agent_notes": "Verified directly on the current Sherlock program page. The fetched page exposes LIVE status and max reward but not the full Scope tab contents, so no active security case was created during this pass.",
+      "related_case": "",
+      "tags": ["sherlock", "aave", "web3", "bug-bounty", "security"]
+    },
     {
       "id": "2026-08-16-midas-sherlock-bounty-live",
       "fingerprint": "17db29ea87ee26fa640b3aca",
