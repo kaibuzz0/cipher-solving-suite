@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, asdict
@@ -32,13 +31,21 @@ class LinkRef:
     url: str
 
 
+def source_label(source_file: Path) -> str:
+    """Use repo-relative paths for canonical files and stable absolute paths for external fixtures."""
+    try:
+        return str(source_file.relative_to(ROOT))
+    except ValueError:
+        return str(source_file)
+
+
 def _walk(value, source_file: Path, path: str = "$") -> list[LinkRef]:
     refs: list[LinkRef] = []
     if isinstance(value, dict):
         for key, child in value.items():
             child_path = f"{path}.{key}"
             if isinstance(child, str) and key.lower().endswith(("url", "uri", "link")):
-                refs.append(LinkRef(str(source_file.relative_to(ROOT)), child_path, child))
+                refs.append(LinkRef(source_label(source_file), child_path, child))
             refs.extend(_walk(child, source_file, child_path))
     elif isinstance(value, list):
         for index, child in enumerate(value):
