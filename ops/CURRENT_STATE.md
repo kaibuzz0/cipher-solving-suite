@@ -1,27 +1,29 @@
 # Current Repository State
 
-Last reconciled: 2026-08-17 08:12 UTC
+Last reconciled: 2026-08-17 19:17 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
 - Main currently includes merged research PR #23 at `d234397d20607a7b4f98cd8df184fcbe382e7d86`.
-- Main Core validation run `32008197711` passed on Python 3.11, 3.12, and 3.13; Pages run `32008197700` passed for the same main commit.
+- Main Core validation run `32008197711` passed on Python 3.11, 3.12, and 3.13; Pages run `32008197700` passed for the same main commit. Later scheduled Intelligence Source Report run `32022878957` and Daily Repository Maintenance run `32017729563` also passed on that main commit.
+- GitHub Pages currently reports `built`, public, HTTPS-enforced, and workflow-backed at `https://kaibuzz0.github.io/cipher-solving-suite/`.
 - PR #22 registered the directly tested Command Site snapshot exporter in canonical `data/tools.json`.
 - Canonical intelligence source/feed/history files and `data/integration_queue.json` are active; the integration queue is empty.
 - The repository is connected to `kaibuzz0/Git-hub-command-site`; repository/tool/toolset state flows through generated snapshot/site-data paths rather than bespoke website edits.
+- Case dashboard integration is already implemented: `scripts/build_site_data.py` scans `research/active-puzzles/*/case.json`, Pages packages `site-data/cases.json`, and `site/app.js` renders the Active Cases view. The stale TODO was reconciled on PR #24's branch.
 
 ## Build / integration state
 
 - Open PR #24 on branch `agent/build-link-health-20260817` adds `tools/catalog_link_health.py` as a bounded catalog/source URL inventory and verification tool.
-- The tool defaults to deterministic network-free inventory, supports deterministic `replay` fixtures for CI, and offers opt-in bounded `check` mode for live HTTP/redirect diagnostics without mutating canonical source data.
-- It detects invalid URL shape, healthy responses, HTTP failures, network failures, and likely source migrations when a successful response resolves to a different final URL.
-- `data/tools.json` registers the shared tool as `catalog-link-health`; the existing dashboard/Command Site registry pipeline is the intended visibility path and no bespoke site HTML was changed.
-- `tests/test_catalog_link_health.py` covers direct-script inventory, redirect/migration replay, HTTP-error replay, invalid non-HTTPS URL rejection, and external fixture-path portability.
-- The first PR CI run exposed a fixture portability defect because external `--input` paths were assumed to be under repository root. The implementation was corrected with stable external source labels rather than weakening the tests.
-- Corrected Core validation run `32008844074` passed all Python 3.11, 3.12, and 3.13 jobs, including pytest, source/history/feed validation, artifact inventory, 310 migration verification, dashboard data generation, and maintenance. Daily Repository Maintenance run `32008844018` also passed.
-- The tool remains labeled `tested`, not `verified`: independent integrity review should confirm live-mode semantics and generated website/Command Site visibility before maturity is promoted.
+- Independent integrity review found the implementation consistent with repository policy: default inventory is network-free, replay is deterministic, live checks are bounded diagnostics, canonical catalogs are not mutated, and HTTP reachability is not represented as factual freshness.
+- The tool detects invalid URL shape, healthy responses, HTTP failures, network failures, and likely source migrations when a successful response resolves to a different final URL. HEAD-specific 403/405 behavior remains an explicit diagnostic limitation rather than an automated truth signal.
+- `data/tools.json` registers the shared tool as `catalog-link-health`; the Pages workflow copies canonical `data/tools.json`, and `site/app.js` renders user-visible registry entries dynamically. No bespoke site HTML is required.
+- `tests/test_catalog_link_health.py` covers documented direct-script inventory, redirect/migration replay, HTTP-error replay, invalid non-HTTPS URL rejection, and external fixture-path portability.
+- The first PR CI run exposed a fixture portability defect because external `--input` paths were assumed to be under repository root; the implementation was corrected without weakening tests.
+- Latest PR #24 Core validation run `32009085665` passed Python 3.11, 3.12, and 3.13, including tests, compile checks, source/history/feed validation, artifact inventory, 310 migration verification, dashboard data generation, and maintenance. Daily Repository Maintenance run `32009085718` also passed.
+- The `tested` maturity label is supported. No promotion to `verified` was made because bounded live semantics have not been independently exercised against a controlled redirect/error endpoint in this run.
 
 ## Current research/intelligence state
 
@@ -32,7 +34,7 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- The broader catalog freshness/age policy remains outstanding even though deterministic link-health/source-migration capability now exists in PR #24.
+- The broader catalog freshness/age policy remains outstanding even though deterministic link-health/source-migration capability exists in PR #24.
 - Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes/provenance before relocation.
 - Legacy solver inventory/input-output/dependency documentation remains P2 work.
 - Several merged topic branches remain on the remote; do not prune automatically without evidence/dependency review.
@@ -40,7 +42,7 @@ Repository version: `v3.1.0` (README)
 
 ## Current operating priorities
 
-1. Independently verify PR #24 `catalog-link-health`, especially bounded live-mode redirect/error behavior and tool visibility through generated dashboard/Command Site data; merge only after that review if repository policy requires independent confirmation.
+1. Let PR #24's new documentation-only integrity reconciliation rerun CI; merge only if the refreshed head remains green and mergeable.
 2. Define the remaining catalog freshness/age policy without conflating HTTP reachability with factual currency.
 3. Preserve and verify exact Aave V4 and Midas Sherlock scope/rules before deciding whether either merits an active case; do not test first.
 4. Complete real checks for `github-search` and `arxiv-cryptography` without fabricating freshness on fetch failures.
@@ -48,4 +50,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-The integrity pass should independently verify PR #24, confirm `catalog-link-health` appears through generated dashboard/Command Site data, review live-mode redirect/error semantics and the `tested` maturity label, and merge if satisfied. Research/case agents should keep Aave V4 and Midas in discovery-only state until exact scope/rules are preserved.
+The next integrity/release pass should inspect the refreshed PR #24 CI after this documentation-only reconciliation and merge it if all checks remain green. Research/case agents should keep Aave V4 and Midas in discovery-only state until exact scope/rules are preserved.
