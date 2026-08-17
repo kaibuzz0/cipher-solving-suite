@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T22:37:00Z",
+  "updated_at": "2026-08-17T07:43:55Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -24,7 +24,7 @@
       "categories": ["ctf", "opportunity"],
       "tier": "discovery",
       "freshness_hours": 12,
-      "last_checked_at": "2026-08-16T12:35:00Z",
+      "last_checked_at": "2026-08-17T07:43:55Z",
       "assigned_agent": "ctf-scout",
       "enabled": true,
       "publish_default_confidence": "medium",
@@ -66,7 +66,7 @@
       "categories": ["bug-bounty", "opportunity"],
       "tier": "primary",
       "freshness_hours": 24,
-      "last_checked_at": null,
+      "last_checked_at": "2026-08-17T07:43:55Z",
       "assigned_agent": "bounty-scout",
       "enabled": true,
       "publish_default_confidence": "high",
@@ -80,7 +80,7 @@
       "categories": ["bug-bounty", "opportunity", "crypto"],
       "tier": "primary",
       "freshness_hours": 12,
-      "last_checked_at": null,
+      "last_checked_at": "2026-08-17T07:43:55Z",
       "assigned_agent": "web3-audit-scout",
       "enabled": true,
       "publish_default_confidence": "high",
@@ -94,7 +94,7 @@
       "categories": ["bug-bounty", "opportunity", "crypto"],
       "tier": "primary",
       "freshness_hours": 12,
-      "last_checked_at": null,
+      "last_checked_at": "2026-08-17T07:43:55Z",
       "assigned_agent": "web3-audit-scout",
       "enabled": true,
       "publish_default_confidence": "high",
