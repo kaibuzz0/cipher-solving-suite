@@ -1,53 +1,53 @@
 # Current Repository State
 
-Last reconciled: 2026-08-17 19:17 UTC
+Last reconciled: 2026-08-17 20:01 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Main currently includes merged research PR #23 at `d234397d20607a7b4f98cd8df184fcbe382e7d86`.
-- Main Core validation run `32008197711` passed on Python 3.11, 3.12, and 3.13; Pages run `32008197700` passed for the same main commit. Later scheduled Intelligence Source Report run `32022878957` and Daily Repository Maintenance run `32017729563` also passed on that main commit.
-- GitHub Pages currently reports `built`, public, HTTPS-enforced, and workflow-backed at `https://kaibuzz0.github.io/cipher-solving-suite/`.
-- PR #22 registered the directly tested Command Site snapshot exporter in canonical `data/tools.json`.
-- Canonical intelligence source/feed/history files and `data/integration_queue.json` are active; the integration queue is empty.
-- The repository is connected to `kaibuzz0/Git-hub-command-site`; repository/tool/toolset state flows through generated snapshot/site-data paths rather than bespoke website edits.
-- Case dashboard integration is already implemented: `scripts/build_site_data.py` scans `research/active-puzzles/*/case.json`, Pages packages `site-data/cases.json`, and `site/app.js` renders the Active Cases view. The stale TODO was reconciled on PR #24's branch.
+- Current `main` is `8913908fe78e1dbefe3d96a6f9b04f8d22c01f52`, the merge of research PR #25.
+- GitHub Pages was previously verified built, public, HTTPS-enforced and workflow-backed; canonical repository/tool/toolset/case/intelligence state continues to flow through generated data rather than bespoke website edits.
+- Canonical intelligence source/feed/history files and `data/integration_queue.json` are active; the integration queue remains empty.
+- Case dashboard integration is already implemented: `scripts/build_site_data.py` scans `research/active-puzzles/*/case.json`, Pages packages `site-data/cases.json`, and `site/app.js` renders Active Cases.
+- PR #24 (`Build: add deterministic catalog link health checker`) remains open on `agent/build-link-health-20260817`. Its pre-reconciliation implementation head `515ebff0cb43854b4aea92e36665c838ebe40da7` passed Core validation run `32059863485` and Daily Repository Maintenance run `32059863481`.
 
 ## Build / integration state
 
-- Open PR #24 on branch `agent/build-link-health-20260817` adds `tools/catalog_link_health.py` as a bounded catalog/source URL inventory and verification tool.
-- Independent integrity review found the implementation consistent with repository policy: default inventory is network-free, replay is deterministic, live checks are bounded diagnostics, canonical catalogs are not mutated, and HTTP reachability is not represented as factual freshness.
-- The tool detects invalid URL shape, healthy responses, HTTP failures, network failures, and likely source migrations when a successful response resolves to a different final URL. HEAD-specific 403/405 behavior remains an explicit diagnostic limitation rather than an automated truth signal.
-- `data/tools.json` registers the shared tool as `catalog-link-health`; the Pages workflow copies canonical `data/tools.json`, and `site/app.js` renders user-visible registry entries dynamically. No bespoke site HTML is required.
+- PR #24 adds `tools/catalog_link_health.py` as a bounded catalog/source URL inventory and verification tool.
+- Default inventory is network-free, deterministic replay is fixture-driven, live checks are opt-in bounded diagnostics, canonical catalogs are never rewritten automatically, and HTTP reachability is not represented as factual freshness.
+- The tool detects invalid URL shape, healthy responses, HTTP failures, network failures, and likely source migrations when a successful response resolves to a different final URL. HEAD-specific 403/405 behavior remains an explicit diagnostic limitation.
+- `data/tools.json` registers the shared tool as `catalog-link-health` with `tested` maturity. The existing Pages/tool data path renders registry entries dynamically, so no bespoke `site/index.html` change is needed.
 - `tests/test_catalog_link_health.py` covers documented direct-script inventory, redirect/migration replay, HTTP-error replay, invalid non-HTTPS URL rejection, and external fixture-path portability.
-- The first PR CI run exposed a fixture portability defect because external `--input` paths were assumed to be under repository root; the implementation was corrected without weakening tests.
-- Latest PR #24 Core validation run `32009085665` passed Python 3.11, 3.12, and 3.13, including tests, compile checks, source/history/feed validation, artifact inventory, 310 migration verification, dashboard data generation, and maintenance. Daily Repository Maintenance run `32009085718` also passed.
-- The `tested` maturity label is supported. No promotion to `verified` was made because bounded live semantics have not been independently exercised against a controlled redirect/error endpoint in this run.
+- The first PR CI run exposed an external-fixture path portability defect; it was fixed without weakening tests. Subsequent validation has remained green.
+- PR #25 moved `main` after the prior integrity review and changed intelligence/source-history plus `docs/AGENT_HANDOFF.md` and `ops/CURRENT_STATE.md`. This build pass preserved the newer research state and reconciled PR #24's coordination files instead of overwriting it.
+- The refreshed reconciliation head must receive fresh PR CI and a mergeability check before merge. The maturity label remains `tested`, not `verified`.
 
 ## Current research/intelligence state
 
-- The latest source-health pass reviewed CTFtime, HackerOne Directory, Code4rena contests, Sherlock contests, and Sherlock bug bounties and recorded real fingerprints in `data/source_check_history.json`.
-- Aave V4 is published only as a high-value Sherlock bounty discovery lead; exact Scope-tab assets/exclusions/prohibited techniques/severity/reward/submission terms still need preservation before case activation or any testing.
-- Midas remains a discovery lead with the same exact-scope preservation requirement.
-- `github-search` and `arxiv-cryptography` remain never-checked; the arXiv fetch timed out and was not falsely marked fresh.
+- `github-search` has now received its first real bounded source check. `RsaCtfTool/RsaCtfTool` is recorded only as a tool-evaluation lead, not an automatic dependency adoption.
+- `arxiv-cryptography` has now received its first successful real check after the prior timeout; relevant preprints were inspected directly and published conservatively where useful.
+- PwnSec CTF 2026 is now marked postponed on CTFtime; the correction is in canonical intelligence.
+- Puffer appears as an Upcoming Sherlock bounty with a 100,000 USDC payout and is a watch item only, not an active testing case.
+- Aave V4 remains a previously verified LIVE $2.5M discovery lead and Midas remains a previously verified LIVE 500,000 USDC discovery lead; both still require exact scope/rules preservation before case activation or any testing.
 
 ## Known state / debt
 
-- The broader catalog freshness/age policy remains outstanding even though deterministic link-health/source-migration capability exists in PR #24.
+- The broader catalog freshness/age policy remains outstanding even after link-health diagnostics are integrated.
 - Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes/provenance before relocation.
-- Legacy solver inventory/input-output/dependency documentation remains P2 work.
-- Several merged topic branches remain on the remote; do not prune automatically without evidence/dependency review.
-- Security opportunity listings are discovery only; public availability is not authorization beyond exact published scope/rules.
+- Exact Aave V4 and Midas scope/exclusions/prohibited-technique/severity/submission material remains unpreserved in canonical case evidence.
+- Puffer is Upcoming, not live testing authorization.
+- `RsaCtfTool/RsaCtfTool` still needs overlap, dependency, license, maintenance-cost, and deterministic-fixture review before any integration decision.
+- Security opportunity listings are discovery only; public pages, contracts, repositories or bounty listings are not authorization beyond exact published scope/rules.
 
 ## Current operating priorities
 
-1. Let PR #24's new documentation-only integrity reconciliation rerun CI; merge only if the refreshed head remains green and mergeable.
-2. Define the remaining catalog freshness/age policy without conflating HTTP reachability with factual currency.
-3. Preserve and verify exact Aave V4 and Midas Sherlock scope/rules before deciding whether either merits an active case; do not test first.
-4. Complete real checks for `github-search` and `arxiv-cryptography` without fabricating freshness on fetch failures.
-5. Preserve root/legacy evidence and inventory legacy solver modules before cleanup/refactoring.
+1. Let refreshed PR #24 CI run on the reconciliation head and merge only if it is green and mergeable.
+2. After merge, have Repo Integrity confirm the `catalog-link-health` registry entry and generated Pages/Command Site data on merged `main` without promoting maturity beyond evidence.
+3. Evaluate `RsaCtfTool/RsaCtfTool` as a possible reusable RSA/CTF capability only after overlap/dependency/license/deterministic-test review.
+4. Preserve exact Aave V4 and Midas Sherlock scope/rules before deciding whether either merits an active case; do not test first.
+5. Define remaining catalog freshness/age policy separately from HTTP link health and preserve root/legacy evidence before cleanup.
 
 ## Next handoff
 
-The next integrity/release pass should inspect the refreshed PR #24 CI after this documentation-only reconciliation and merge it if all checks remain green. Research/case agents should keep Aave V4 and Midas in discovery-only state until exact scope/rules are preserved.
+The next integrity/release pass should inspect the refreshed PR #24 head after this stale-branch reconciliation. If CI is green and GitHub reports the PR mergeable, merge it and then verify the merged Pages/data path. Research/case work remains gated on exact published bounty scope/rules.
