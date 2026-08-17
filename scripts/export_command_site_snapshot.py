@@ -12,10 +12,12 @@ import json
 import subprocess
 import sys
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_DATA = ROOT / "site-data"
+MAX_REPOSITORY_FILES = 5000
+MAX_REPOSITORY_DIRECTORIES = 2500
 
 
 def now_iso() -> str:
@@ -42,6 +44,43 @@ def git(*args: str) -> str:
         return subprocess.check_output(["git", *args], cwd=ROOT, text=True, stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
         return ""
+
+
+def repository_tree() -> dict:
+    raw = git("ls-files", "-z")
+    files = sorted(x for x in raw.split("\0") if x)
+    directory_counts: dict[str, int] = {}
+    for file_path in files:
+        parts = PurePosixPath(file_path).parts
+        for index in range(1, len(parts)):
+            directory = "/".join(parts[:index])
+            directory_counts[directory] = directory_counts.get(directory, 0) + 1
+    directories = [
+        {
+            "path": path,
+            "name": PurePosixPath(path).name,
+            "depth": len(PurePosixPath(path).parts),
+            "file_count": count,
+        }
+        for path, count in sorted(directory_counts.items())[:MAX_REPOSITORY_DIRECTORIES]
+    ]
+    exported_files = [
+        {
+            "path": path,
+            "name": PurePosixPath(path).name,
+            "extension": PurePosixPath(path).suffix.lower(),
+        }
+        for path in files[:MAX_REPOSITORY_FILES]
+    ]
+    return {
+        "total_files": len(files),
+        "total_directories": len(directory_counts),
+        "files_truncated": len(files) > len(exported_files),
+        "directories_truncated": len(directory_counts) > len(directories),
+        "top_level": sorted({PurePosixPath(path).parts[0] for path in files if PurePosixPath(path).parts}),
+        "directories": directories,
+        "files": exported_files,
+    }
 
 
 def ensure_generated_data() -> None:
@@ -98,6 +137,7 @@ def build_snapshot() -> dict:
             "pages_url": "https://kaibuzz0.github.io/cipher-solving-suite/",
         },
         "stats": status,
+        "repository_tree": repository_tree(),
         "tools": list_from(ROOT / "data" / "tools.json", "items"),
         "toolsets": list_from(SITE_DATA / "toolsets.json", "items"),
         "cases": list_from(SITE_DATA / "cases.json", "items"),
@@ -130,6 +170,10 @@ def main() -> int:
         "repo": snapshot["repo"]["id"],
         "source_commit": snapshot["source_commit"],
         "counts": {key: len(snapshot[key]) for key in collections},
+        "repository_tree": {
+            "files": snapshot["repository_tree"]["total_files"],
+            "directories": snapshot["repository_tree"]["total_directories"],
+        },
     }, indent=2))
     return 0
 
