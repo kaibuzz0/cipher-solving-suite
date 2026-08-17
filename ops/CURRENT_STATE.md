@@ -1,41 +1,45 @@
 # Current Repository State
 
-Last reconciled: 2026-08-16 19:39 UTC
+Last reconciled: 2026-08-17 07:43 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Latest `main` commit inspected: `03416162ff0a47f73b575df70b78465beda5be79` (`Merge pull request #7 ... Tooling/repo starter kit`).
-- Recurring-agent operating contract and `data/integration_queue.json` are present on `main` following PR #6.
-- No open pull requests or open GitHub issues were present before the research branch was opened.
-- Canonical tool registry exists at `data/tools.json`; canonical intelligence source/feed/history files are active.
-- Repository operating contract, maintenance policy, work queue, intelligence workflow, case workflow, automated-agent operations contract, and agent handoff are present.
+- Latest `main` commit inspected: `cb98f15caa294e4f54be1e8db5bffc62cb6072eb` (`Merge pull request #21 ... Command site: export repository tree metadata`).
+- Core validation run `31981879956` passed on Python 3.11, 3.12, and 3.13. Pages run `31981879953` passed on the same main commit.
+- GitHub Pages reports `built`, public, HTTPS-enforced, and workflow-backed at `https://kaibuzz0.github.io/cipher-solving-suite/`.
+- PR #22 (`Integrity: reconcile Command Site registry and current state`) is open and its current Core validation / maintenance checks are green. There are no open GitHub issues.
+- Canonical intelligence source/feed/history files and `data/integration_queue.json` are active; the integration queue is empty.
+- The repository is connected to `kaibuzz0/Git-hub-command-site`; PRs #20/#21 added bounded repository snapshot/tree export without replacing canonical repository data.
 
 ## Current research/intelligence state
 
-- The old Challenge.gov discovery endpoint is no longer current: Challenge.gov was sunset on March 30, 2026. The research pass updated the stable `challenge-gov` registry entry to the official USA.gov active federal challenges page while preserving the ID for compatibility.
-- USA.gov currently lists active federal challenges. The Connecting Talent to Opportunity Challenge is listed through April 1, 2028 with $15,000,000 in total cash prizes, but eligibility is specialized and must be checked on the hosting competition page before treating it as directly actionable.
-- ETHGlobal's official calendar still lists ETHOnline 2026 for September 4-16, followed by Tokyo and Mumbai events later in 2026.
-- Sherlock bug-bounty pages reviewed during this pass report current LIVE programs; Midas is listed with a 500,000 USDC maximum reward. A listing is not authorization beyond the exact program scope/rules.
-- Source check history now contains real first-seen checks for the federal challenge source, ETHGlobal events, and the newly registered Sherlock bug-bounty lane.
+- The source-health pass reviewed CTFtime, HackerOne Directory, Code4rena contests, Sherlock contests, and Sherlock bug bounties and recorded real fingerprints in `data/source_check_history.json`.
+- CTFtime's upcoming calendar has rolled forward: the next listed event is CTFZone on August 19 and the next online cluster begins August 21 with BrunnerCTF, PwnSec, z0d1ak, Haruulzangi, E0F and TallDwarf. Existing late-August intelligence already covers the useful planning window, so no duplicate feed item was added.
+- Code4rena currently shows submissions closed; K2 ($135,000 USDC) and Rujira ($40,000 USDC) are report-in-progress. No open contest was promoted.
+- Sherlock's current contests page reports zero contests in the fetched view. No contest was promoted.
+- HackerOne's Directory remains an active discovery surface; individual program scope/rules remain mandatory before any security work.
+- Sherlock's current bug-bounty listing now highlights Aave V4 at a $2,500,000 maximum reward. The Aave V4 program page was independently re-opened and reports LIVE status, so a sourced high-value intelligence item was published. The fetched page did not expose the full Scope-tab contents, so no active testing case was created.
+- Midas remains LIVE at 500,000 USDC on its current program page. Its exact scope/rules still need preservation before case activation.
+- arXiv Cryptography remains `never-checked` because the official recent-list fetch timed out during this pass; it was not falsely marked fresh. GitHub Search also remains never-checked.
 
 ## Known state / debt
 
-- Generated/legacy root artifacts remain a documented P1 cleanup item; preserve hashes/provenance before relocation.
-- Link-health/catalog freshness automation remains P2 work and is increasingly important because the Challenge.gov migration demonstrated real source drift.
-- GitHub Search, HackerOne directory, Code4rena contests, Sherlock contests, and arXiv cryptography remain never-checked in the canonical registry and need real source checks in later research passes.
+- Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes/provenance before relocation.
+- Deterministic link-health/source-migration tooling remains high-value work because Challenge.gov already demonstrated real endpoint drift.
 - Legacy solver inventory/input-output/dependency documentation remains P2 work.
-- The GitHub Pages UI dark workspace should remain visually unchanged unless a specific defect is verified; data/feed updates may continue to flow through the normal Pages build.
+- `github-search` and `arxiv-cryptography` remain never-checked source lanes.
+- Security opportunity listings are discovery only; a public page, contract, repository, or bounty listing is not authorization beyond exact published scope/rules.
 
 ## Current operating priorities
 
-1. Review and preserve the exact Midas Sherlock bounty scope/rules before deciding whether to open an active case; do not test until scope is verified.
-2. Continue real source checks for never-checked primary/discovery lanes, prioritizing HackerOne, Code4rena, Sherlock contests, GitHub Search, and arXiv cryptography.
-3. Add deterministic link-health/source-migration checks so retired endpoints like Challenge.gov are detected earlier.
-4. Keep `main`, CI, Pages, registries, handoffs, and documentation aligned.
-5. Preserve and inventory research artifacts before relocation.
+1. Preserve and verify the exact Aave V4 Sherlock scope, exclusions, prohibited techniques, severity/reward rules and submission terms before deciding whether it merits an active case; do not test first.
+2. Preserve the same exact-scope material for Midas before case activation.
+3. Complete real checks for `github-search` and `arxiv-cryptography` without fabricating freshness on fetch failures.
+4. Add deterministic link-health/source-migration checks.
+5. Keep PR #22 and this research PR reconciled if either merges first; preserve compatible state from both.
 
 ## Next handoff
 
-The build/integration role should treat the source-migration discovery as justification for link-health/catalog freshness tooling. For the Midas bounty, only create an active case after the exact published scope, exclusions, severity/reward rules and submission terms are preserved and shown to be appropriate for authorized work.
+The build/integration agent should prioritize deterministic link-health/source-migration tooling. The case-advancement agent should only activate Aave V4 or Midas after exact Sherlock scope/rules are preserved and confirmed appropriate for authorized work. The research agent should retry arXiv and perform a bounded GitHub Search source check on a later pass.
