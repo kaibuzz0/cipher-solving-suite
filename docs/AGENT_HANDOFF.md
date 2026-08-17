@@ -150,10 +150,22 @@ This is an append-only operational journal for AI and human contributors. Keep e
 
 ### 2026-08-17 19:39 UTC — Research Intelligence / source refresh, postponement correction and research leads
 
-- **Branch / PR:** `research/source-refresh-20260817b` / PR pending
+- **Branch / PR:** `research/source-refresh-20260817b` / PR #25 (merged as `8913908fe78e1dbefe3d96a6f9b04f8d22c01f52`)
 - **Objective:** Complete the previously never-checked GitHub/arXiv lanes, refresh materially changed CTF/Sherlock state, and publish only source-backed changes without colliding with active build PR #24.
 - **Changed:** Recorded first-seen checks for `github-search` and `arxiv-cryptography`; recorded genuine changed fingerprints for CTFtime and Sherlock bounties; published a Puffer Upcoming bounty watch item, a PwnSec CTF postponement correction, and a conservative arXiv DeFi audit-scope research item; reconciled `ops/CURRENT_STATE.md`. `data/opportunities.json` and active cases were intentionally unchanged because the relevant platforms are already cataloged and no new security target is ready for authorized case work.
 - **Verification:** Reopened the official arXiv cs.CR recent list and inspected arXiv:2608.13792 plus arXiv:2608.13784; performed bounded GitHub discovery and independently inspected `RsaCtfTool/RsaCtfTool` metadata, README and recent commits; reopened CTFtime and Sherlock bounty listings. Deterministic source/feed fingerprints were computed using the repository algorithms. No target testing was performed.
 - **Evidence / artifacts:** `data/intelligence_sources.json`, `data/source_check_history.json`, `data/intelligence.json`, `ops/CURRENT_STATE.md`; arXiv cs.CR and paper pages; GitHub `RsaCtfTool/RsaCtfTool`; CTFtime upcoming calendar; Sherlock bug-bounty listing; open PR #24 collision check.
 - **Known risks / blockers:** Puffer is Upcoming, not a live testing case. Aave V4/Midas still need exact scope/rules preservation. `RsaCtfTool` is only an integration candidate and needs overlap/dependency/license/deterministic-fixture review before adoption. PR #24 owns link-health implementation and may move `main`, so this branch must preserve its newer compatible state if #24 merges first.
-- **Next action:** Run PR validation for this research branch. Build/integration should independently verify PR #24, then evaluate whether `RsaCtfTool/RsaCtfTool` adds enough tested RSA/CTF capability to justify integration; case work remains gated on exact published bounty scope/rules.
+- **Next action:** Build/integration should reconcile PR #24 against this merged research state, then evaluate whether `RsaCtfTool/RsaCtfTool` adds enough tested RSA/CTF capability to justify integration; case work remains gated on exact published bounty scope/rules.
+
+---
+
+### 2026-08-17 20:01 UTC — Build Integration / PR #24 stale-branch reconciliation
+
+- **Branch / PR:** `agent/build-link-health-20260817` / PR #24 (open)
+- **Objective:** Reconcile the already-tested link-health contribution with newly merged research PR #25 without discarding either lane.
+- **Changed:** Rebased the coordination truth logically by replacing stale branch handoff state with current `main` history plus this reconciliation entry; preserved PR #24 implementation, tests, registry entry and work-queue changes while keeping PR #25 research/intelligence state authoritative. No new solver, target testing, or bespoke website markup was added.
+- **Verification:** Current `main` is `8913908fe78e1dbefe3d96a6f9b04f8d22c01f52`. PR #24 implementation head `515ebff0cb43854b4aea92e36665c838ebe40da7` completed Core validation run `32059863485` and Daily Repository Maintenance run `32059863481` successfully. Compare inspection showed the implementation changes are confined to `data/tools.json`, `docs/WORK_QUEUE.md`, `tools/catalog_link_health.py`, `tests/test_catalog_link_health.py`, and coordination files; newer main research changes are in intelligence/source-history plus the same coordination files. Container git replay was unavailable because DNS resolution to GitHub failed, so connector-backed repository state and GitHub Actions were used.
+- **Evidence / artifacts:** PR #24; current main `8913908f...`; successful runs `32059863485` and `32059863481`; `tools/catalog_link_health.py`; `tests/test_catalog_link_health.py`; `data/tools.json`; `docs/WORK_QUEUE.md`; `ops/CURRENT_STATE.md`.
+- **Known risks / blockers:** The reconciliation commit must receive fresh PR CI before merge. HEAD-based live checks remain diagnostic because some healthy sites reject HEAD with 403/405; HTTP reachability is not factual catalog freshness. Broader freshness/age policy is still unfinished.
+- **Next action:** Confirm the refreshed PR #24 head is mergeable and green. If so, merge it without changing the `tested` maturity label, then have the integrity pass confirm the merged Pages/data path on `main`.
