@@ -181,3 +181,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** merged PR #24; merge commit `ba6218f...`; `tools/catalog_link_health.py`; `tests/test_catalog_link_health.py`; `data/tools.json`; `docs/WORK_QUEUE.md`; `ops/CURRENT_STATE.md`; runs `32063939444` and `32063939494`.
 - **Known risks / blockers:** Post-merge workflows/Pages for the final merge/current-state commits were not yet available at handoff time. HEAD responses can still be 403/405 on otherwise usable pages, and HTTP reachability does not establish factual catalog freshness. Broader freshness/age policy remains unfinished.
 - **Next action:** Repo Integrity should confirm post-merge Core/maintenance/Pages state and generated `catalog-link-health` visibility on current `main`; next build candidate is evaluation, not automatic adoption, of `RsaCtfTool/RsaCtfTool`.
+
+---
+
+### 2026-08-18 19:37 UTC — Research Intelligence / Sherlock Cap source change
+
+- **Branch / PR:** `research/source-refresh-20260818b` / PR #28
+- **Objective:** Refresh the highest-value due source lane, record a real source-content change, and publish only the material verified finding without colliding with build PR #27.
+- **Changed:** Recorded a changed `sherlock-bounties` fingerprint, refreshed only that source's canonical check timestamp, published Cap as a LIVE 1,000,000 USDC discovery lead, and reconciled `ops/CURRENT_STATE.md`. `data/opportunities.json` and active cases remain unchanged because Sherlock is already cataloged and complete Cap scope/rules are not preserved.
+- **Verification:** Independently opened the current Sherlock bounty listing and Cap program page. The program reports LIVE status, a 1,000,000 USDC maximum reward, and an August 18, 2026 update. The fetched view does not expose enough Scope-tab content to preserve exact in-scope assets, exclusions, prohibited techniques, severity rules, or submission terms. Deterministic feed/source-history fingerprints follow the repository algorithms. No target testing was performed. PR CI was still running at this handoff update.
+- **Evidence / artifacts:** `data/intelligence_sources.json`, `data/source_check_history.json`, `data/intelligence.json`, `ops/CURRENT_STATE.md`; Sherlock bounty listing and Cap program page; PR #28.
+- **Known risks / blockers:** Cap is a discovery lead only until the complete published program rules are preserved. Several other 12-hour lanes remain due; do not fabricate freshness when available evidence is stale or incomplete. Open PR #27 owns opportunity-actionability implementation and must be reconciled rather than duplicated.
+- **Next action:** Build/integration should independently replay/review PR #27's deterministic actionability semantics and generated visibility, reconcile current main/newer research state, then preserve Cap's complete Sherlock scope/rules if choosing it for active case evaluation. Aave V4 and Midas remain similarly gated.
