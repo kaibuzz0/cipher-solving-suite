@@ -17,7 +17,7 @@ This is the human-readable queue for AI agents. GitHub issues may mirror larger 
 |---|---|---|---|---|
 | P1 | todo | Inventory and relocate generated root artifacts without losing evidence | unclaimed | Preserve hashes, provenance, and research references before moving anything |
 | P1 | todo | Add verified live opportunity/news adapters | unclaimed | Use official feeds/APIs/RSS where possible; cache timestamped results and label failures |
-| P2 | in-progress | Add link health and catalog freshness checks | build-agent | PR #24 merged deterministic URL/source-migration diagnostics; `agent/build-actionable-freshness-20260818` adds deterministic submission-phase/deadline evaluation. Independent CI/integrity verification is still required before this broader item can close. |
+| P2 | in-progress | Add link health and catalog freshness checks | build-agent | PR #24 merged deterministic URL/source-migration diagnostics and PR #27 merged deterministic submission-phase/deadline evaluation. Independent integrity replay/site visibility plus a provenance-preserving acquisition/refresh policy for structured phase/deadline evidence remain before this broader item can close. |
 | P2 | todo | Add optional news/RSS adapters with cached timestamped output | unclaimed | Keep network failures non-destructive |
 | P2 | todo | Inventory legacy solver modules and document inputs/outputs/dependencies | unclaimed | Build tool registry before refactoring or deleting anything |
 
