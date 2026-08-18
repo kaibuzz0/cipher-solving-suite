@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-17T19:39:42Z",
+  "updated_at": "2026-08-18T07:38:11Z",
   "items": [
+    {
+      "id": "2026-08-18-usa-gov-active-listing-outlives-the-3d-surface-fuels-submission-window",
+      "fingerprint": "a050dd1ff38c39c7b143e978",
+      "title": "USA.gov active listing outlives the 3D Surface Fuels submission window",
+      "summary": "USA.gov still presents the 3D Surface Fuels & Vegetation Modeling Prize Challenge within its active challenge lifecycle, but the official host says the solution-prototype submission deadline was July 20, 2026. The host also says the final Demo Day is now virtual on August 20. Treat federal discovery-page active windows as lifecycle metadata and verify the actual submission phase on the hosting page before investing work.",
+      "category": "opportunity",
+      "source_id": "challenge-gov",
+      "source_name": "Central Florida Tech Grove",
+      "source_url": "https://centralfloridatechgrove.org/surface-fuels-prize-challenge/",
+      "published_at": "2026-08-20T00:00:00Z",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "confidence": "high",
+      "relevance": "high",
+      "agent_notes": "Official host timeline shows submissions closed July 20, semi-finalist/final materials already due, and virtual Demo Day on August 20. No case was created because the entry window is closed. The source-network lesson is to distinguish overall challenge lifecycle dates from actionable submission deadlines.",
+      "related_case": "",
+      "tags": ["government", "challenge", "deadline", "source-health", "closed-submissions"]
+    },
     {
       "id": "2026-08-17-puffer-appears-as-an-upcoming-sherlock-bug-bounty-with-a-100-000-usdc-payout",
       "fingerprint": "36ffabaca12d49e34822e9fd",
