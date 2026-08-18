@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "surface-fuels-prize",
+      "lifecycle_status": "active",
+      "submission_status": "closed",
+      "submission_deadline": "2026-07-20T23:59:59Z",
+      "source_url": "https://centralfloridatechgrove.org/surface-fuels-prize-challenge/"
+    },
+    {
+      "id": "verified-open-example",
+      "lifecycle_status": "active",
+      "submission_status": "open",
+      "submission_deadline": "2026-09-01T00:00:00Z"
+    },
+    {
+      "id": "active-lifecycle-only",
+      "lifecycle_status": "active",
+      "submission_status": "",
+      "submission_deadline": ""
+    },
+    {
+      "id": "upcoming-example",
+      "lifecycle_status": "active",
+      "submission_status": "upcoming",
+      "submission_deadline": "2026-09-10T00:00:00Z"
+    }
+  ]
+}
