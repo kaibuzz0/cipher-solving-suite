@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-18T07:38:11Z",
+  "updated_at": "2026-08-18T19:37:37Z",
   "items": [
+    {
+      "id": "2026-08-18-cap-bug-bounty-is-live-on-sherlock-with-a-1-000-000-usdc-maximum-reward",
+      "fingerprint": "1e6b21192bdb58e384a3cbe4",
+      "title": "Cap bug bounty is LIVE on Sherlock with a 1,000,000 USDC maximum reward",
+      "summary": "Sherlock's current Cap bug-bounty page reports LIVE status and a 1,000,000 USDC maximum reward, with the program updated on August 18, 2026. This is a high-value discovery lead, not authorization by itself: preserve and review the exact in-scope assets, exclusions, severity rules, prohibited techniques and submission terms before any testing.",
+      "category": "bug-bounty",
+      "source_id": "sherlock-bounties",
+      "source_name": "Sherlock",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties/114",
+      "published_at": "2026-08-18T00:00:00Z",
+      "checked_at": "2026-08-18T19:37:37Z",
+      "confidence": "high",
+      "relevance": "high",
+      "agent_notes": "Verified directly on the current Sherlock listing and Cap program page. The fetched view exposes LIVE status and max reward but not complete Scope-tab contents, so no active security case was created and no target testing was performed.",
+      "related_case": "",
+      "tags": ["sherlock", "cap", "web3", "bug-bounty", "security"]
+    },
     {
       "id": "2026-08-18-usa-gov-active-listing-outlives-the-3d-surface-fuels-submission-window",
       "fingerprint": "a050dd1ff38c39c7b143e978",
