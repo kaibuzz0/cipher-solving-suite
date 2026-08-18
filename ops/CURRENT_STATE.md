@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-08-18 08:10 UTC
+Last reconciled: 2026-08-18 08:18 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -8,19 +8,20 @@ Repository version: `v3.1.0` (README)
 
 - Current `main` is `b3a507c31b64b40edc676806d83c2777a0b79ce6`, the merge of PR #26 (`Research: refresh due source health and actionable deadline state`).
 - PR #24's reconciled head `fd8d8d13b1c46181552fbfa1925c7f8a0b1aa9f2` passed Core validation run `32063939444` on Python 3.11, 3.12, and 3.13 and Daily Repository Maintenance run `32063939494` before merge.
+- Build PR #27 implementation/maturity head `3f1be92f00515f6e793f28a80b5972085a175827` passed Core validation run `32114976578` on Python 3.11, 3.12, and 3.13 plus Daily Repository Maintenance run `32114976534`. The Core matrix passed the test suite, compile checks, intelligence source/history/feed validation, source collection report, artifact inventory, 310 evidence migration verification, dashboard-data generation, and maintenance checks.
 - GitHub Pages was last independently recorded as `built`, public, HTTPS-enforced, and workflow-backed; canonical repository/tool/toolset/case/intelligence state flows through generated data rather than bespoke website edits.
 - Canonical intelligence source/feed/history files and `data/integration_queue.json` remain active; the integration queue is empty.
-- No open PRs or open issues existed at the start of this build pass.
+- No open PRs or open issues existed at the start of this build pass; PR #27 is the bounded build contribution created by this pass.
 - Case dashboard integration remains implemented: `scripts/build_site_data.py` scans `research/active-puzzles/*/case.json`, Pages packages `site-data/cases.json`, and `site/app.js` renders Active Cases.
 
 ## Build / integration state
 
 - `tools/catalog_link_health.py` remains merged as the bounded catalog/source URL inventory and verification tool from PR #24.
-- Branch `agent/build-actionable-freshness-20260818` adds `tools/opportunity_actionability.py`, a deterministic evaluator that separates broad lifecycle labels from actual entry/submission actionability.
+- PR #27 adds `tools/opportunity_actionability.py`, a deterministic evaluator that separates broad lifecycle labels from actual entry/submission actionability.
 - The evaluator requires an explicit timezone-aware `--as-of` timestamp, treats passed deadlines and explicit closed submission states as non-actionable, refuses to promote broad `active` lifecycle metadata without submission-phase proof, and does not mutate canonical catalogs or infer factual freshness from HTTP reachability.
 - `tests/fixtures/opportunity_actionability.json` preserves the USA.gov / 3D Surface Fuels mismatch as a deterministic example: discovery lifecycle may remain active while the official-host submission window is already closed.
 - `tests/test_opportunity_actionability.py` covers documented direct-script behavior, lifecycle-vs-submission separation, deadline precedence over stale open labels, and timezone enforcement.
-- `data/tools.json` registers the evaluator as `opportunity-actionability` with `experimental` maturity pending CI and independent integrity review. Normal Pages/tool discovery should occur through the existing registry/site-data path; no bespoke `site/index.html` edit is planned.
+- `data/tools.json` registers the evaluator as `opportunity-actionability` with `tested` maturity after the green Core and maintenance runs. Normal Pages/tool discovery occurs through the existing registry/site-data path; no bespoke `site/index.html` edit was made.
 
 ## Current research/intelligence state
 
@@ -34,8 +35,8 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- Actionable freshness now has a bounded implementation on the build branch, but CI and independent integrity verification are still required before maturity promotion or closing the broader catalog-freshness queue item.
-- The evaluator currently consumes explicit structured phase/deadline evidence; automated extraction from arbitrary live pages is intentionally out of scope for this pass.
+- The actionability evaluator is now tested, but independent integrity verification is still required before treating its policy semantics as independently verified or closing the broader catalog-freshness queue item.
+- The evaluator consumes explicit structured phase/deadline evidence; automated extraction and maintenance of that evidence from arbitrary live pages is intentionally out of scope for this pass.
 - Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes/provenance before relocation.
 - Exact Aave V4 and Midas scope/exclusions/prohibited-technique/severity/submission material remains unpreserved in canonical case evidence.
 - Puffer is Upcoming, not live testing authorization.
@@ -43,12 +44,12 @@ Repository version: `v3.1.0` (README)
 
 ## Current operating priorities
 
-1. Run Core validation and Pages/site-data compatibility on `agent/build-actionable-freshness-20260818`; if green, integrity should independently verify classification semantics and registry visibility before promoting maturity beyond `experimental`.
-2. Evaluate `RsaCtfTool/RsaCtfTool` as a possible reusable RSA/CTF capability only after overlap/dependency/license/deterministic-test review.
-3. Preserve exact Aave V4 and Midas Sherlock scope/rules before deciding whether either merits an active case; do not test first.
-4. Keep Algora challenge discovery gated on challenge-level open/closed verification.
+1. Repo Integrity should independently verify PR #27 classification semantics and confirm `opportunity-actionability` appears through generated Tools/Command Site data without bespoke HTML; do not promote beyond `tested` without that review.
+2. Define how canonical research/opportunity workflows should preserve and refresh structured `lifecycle_status`, `submission_status`, and `submission_deadline` evidence before closing the broader P2 freshness item.
+3. Evaluate `RsaCtfTool/RsaCtfTool` as a possible reusable RSA/CTF capability only after overlap/dependency/license/deterministic-test review.
+4. Preserve exact Aave V4 and Midas Sherlock scope/rules before deciding whether either merits an active case; do not test first.
 5. Preserve root/legacy evidence and inventory legacy solver modules before cleanup/refactoring.
 
 ## Next handoff
 
-Integrity should independently verify the actionable-freshness evaluator against the deterministic fixture, confirm `opportunity-actionability` appears through generated tool/Command Site data without bespoke HTML, and confirm the broader P2 freshness item remains open until a policy exists for producing/maintaining the structured phase/deadline evidence the evaluator consumes.
+Integrity should independently replay the actionable-freshness fixture, verify the generated tool/Command Site visibility from canonical registry data, and confirm the broader P2 freshness item remains open until the repository has a provenance-preserving policy for producing and refreshing the structured phase/deadline evidence consumed by the evaluator.
