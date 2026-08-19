@@ -17,7 +17,7 @@ This is the human-readable queue for AI agents. GitHub issues may mirror larger 
 |---|---|---|---|---|
 | P1 | todo | Inventory and relocate generated root artifacts without losing evidence | unclaimed | Preserve hashes, provenance, and research references before moving anything |
 | P1 | todo | Add verified live opportunity/news adapters | unclaimed | Use official feeds/APIs/RSS where possible; cache timestamped results and label failures |
-| P2 | in-progress | Add link health and catalog freshness checks | build-agent | PR #24 merged deterministic URL/source-migration diagnostics and PR #27 merged deterministic submission-phase/deadline evaluation. PR #31 adds reusable deterministic verification that user-visible tools flow through the canonical registry, repository browser, Pages/workspace, and Command Site snapshot; implementation head `3ea513f...` passed Core validation run `32230880742` and Daily Repository Maintenance run `32230880737`. Independent integrity review/merge remains, plus a provenance-preserving acquisition/refresh policy for structured phase/deadline evidence before this broader item can close. |
+| P2 | in-progress | Add link health and catalog freshness checks | build-agent | PR #24 merged deterministic URL/source-migration diagnostics, PR #27 merged deterministic submission-phase/deadline evaluation, and PR #31 merged the reusable canonical tool-visibility regression contract. Remaining work is a provenance-preserving acquisition/refresh policy for structured phase/deadline evidence. |
 | P2 | todo | Add optional news/RSS adapters with cached timestamped output | unclaimed | Keep network failures non-destructive |
 | P2 | todo | Inventory legacy solver modules and document inputs/outputs/dependencies | unclaimed | Build tool registry before refactoring or deleting anything |
 
@@ -25,6 +25,7 @@ This is the human-readable queue for AI agents. GitHub issues may mirror larger 
 
 | Completed | Work | Evidence |
 |---|---|---|
+| 2026-08-19 | Verify canonical user-visible tool discovery across registry, repository browser, Pages/workspace, and Command Site snapshot | PR #31; `tests/test_tool_visibility_contract.py`; final head `be1d8ed...` passed Core `32231110295` and Daily Maintenance `32231110259`; merged as `a872b71...` |
 | 2026-08-17 | Add case index/dashboard integration | `scripts/build_site_data.py` scans `research/active-puzzles/*/case.json`; Pages packages `site-data/cases.json`; `site/app.js` renders Active Cases |
 | 2026-08-16 | Establish multi-agent operating structure and dashboard | PR #1; `AGENTS.md`, `site/`, `docs/` |
 | 2026-08-16 | Add deterministic unit tests for core command-line tools | `tests/test_core.py`, Core validation workflow |
