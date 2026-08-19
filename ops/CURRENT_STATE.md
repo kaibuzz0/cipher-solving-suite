@@ -1,55 +1,50 @@
 # Current Repository State
 
-Last reconciled: 2026-08-18 08:18 UTC
+Last reconciled: 2026-08-18 20:05 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `b3a507c31b64b40edc676806d83c2777a0b79ce6`, the merge of PR #26 (`Research: refresh due source health and actionable deadline state`).
-- PR #24's reconciled head `fd8d8d13b1c46181552fbfa1925c7f8a0b1aa9f2` passed Core validation run `32063939444` on Python 3.11, 3.12, and 3.13 and Daily Repository Maintenance run `32063939494` before merge.
-- Build PR #27 implementation/maturity head `3f1be92f00515f6e793f28a80b5972085a175827` passed Core validation run `32114976578` on Python 3.11, 3.12, and 3.13 plus Daily Repository Maintenance run `32114976534`. The Core matrix passed the test suite, compile checks, intelligence source/history/feed validation, source collection report, artifact inventory, 310 evidence migration verification, dashboard-data generation, and maintenance checks.
-- GitHub Pages was last independently recorded as `built`, public, HTTPS-enforced, and workflow-backed; canonical repository/tool/toolset/case/intelligence state flows through generated data rather than bespoke website edits.
-- Canonical intelligence source/feed/history files and `data/integration_queue.json` remain active; the integration queue is empty.
-- No open PRs or open issues existed at the start of this build pass; PR #27 is the bounded build contribution created by this pass.
-- Case dashboard integration remains implemented: `scripts/build_site_data.py` scans `research/active-puzzles/*/case.json`, Pages packages `site-data/cases.json`, and `site/app.js` renders Active Cases.
+- Current `main` is `dab0897bb452181b5d4329ead6a3ec7e6efa6f57`, the merge of PR #27 (`Build: add deterministic opportunity actionability evaluation`).
+- PR #27 final head `60e224604c59ae16da3b9ab6eb57e313ec6834b9` passed Core validation run `32115134613` and Daily Repository Maintenance run `32115134660`. Core passed on Python 3.11, 3.12, and 3.13, including pytest, compile checks, intelligence source/history/feed validation, source collection reporting, artifact inventory, 310 evidence migration verification, dashboard-data generation, and maintenance checks.
+- GitHub Pages remains publicly reachable at the Operations Workspace and exposes the expected workspace/navigation surfaces; the fetched live page still renders Tools, Cases, Evidence, Collection Health, source registry, and Agent Operations sections.
+- `data/integration_queue.json` remains empty.
+- Open research PR #28 is now stale/conflicting on shared coordination files because PR #27 merged first; its research data changes must be reconciled with current `main` rather than merged by choosing one side blindly.
 
 ## Build / integration state
 
-- `tools/catalog_link_health.py` remains merged as the bounded catalog/source URL inventory and verification tool from PR #24.
-- PR #27 adds `tools/opportunity_actionability.py`, a deterministic evaluator that separates broad lifecycle labels from actual entry/submission actionability.
-- The evaluator requires an explicit timezone-aware `--as-of` timestamp, treats passed deadlines and explicit closed submission states as non-actionable, refuses to promote broad `active` lifecycle metadata without submission-phase proof, and does not mutate canonical catalogs or infer factual freshness from HTTP reachability.
-- `tests/fixtures/opportunity_actionability.json` preserves the USA.gov / 3D Surface Fuels mismatch as a deterministic example: discovery lifecycle may remain active while the official-host submission window is already closed.
-- `tests/test_opportunity_actionability.py` covers documented direct-script behavior, lifecycle-vs-submission separation, deadline precedence over stale open labels, and timezone enforcement.
-- `data/tools.json` registers the evaluator as `opportunity-actionability` with `tested` maturity after the green Core and maintenance runs. Normal Pages/tool discovery occurs through the existing registry/site-data path; no bespoke `site/index.html` edit was made.
+- `tools/catalog_link_health.py` remains merged as the bounded catalog/source URL inventory and source-migration diagnostic tool.
+- `tools/opportunity_actionability.py` is now merged and registered in `data/tools.json` as `opportunity-actionability` with `tested` maturity.
+- The actionability evaluator requires an explicit timezone-aware `--as-of`, treats explicit closed submission state or passed deadlines as non-actionable, refuses to call broad `active` lifecycle metadata actionable without submission-phase proof, and never infers factual freshness from HTTP reachability or mutates canonical opportunity data.
+- `tests/fixtures/opportunity_actionability.json` preserves the USA.gov / 3D Surface Fuels lifecycle-versus-submission mismatch plus open/upcoming/verify controls.
+- `tests/test_opportunity_actionability.py` verifies documented direct-script execution, deadline precedence, lifecycle/submission separation, and timezone enforcement.
+- Core validation produced dashboard-data artifacts for all three supported Python versions on the final PR head, supporting the normal registry-to-site-data path; no bespoke `site/index.html` changes were introduced.
+- `toolsets/catalog.json` still contains only the reusable `repo-factory` toolset. The actionability evaluator is intentionally a standalone shared tool, not a toolset.
 
-## Current research/intelligence state
+## Current research / case state
 
-- The latest due-source refresh verified that USA.gov's broad active-challenge lifecycle can outlive an actionable submission window. The official host for the 3D Surface Fuels & Vegetation Modeling Prize Challenge says solution submissions closed July 20, 2026 and the final Demo Day moved to virtual on August 20; the canonical intelligence feed records this correction.
-- Algora's current homepage still exposes a Bounties navigation lane, but several linked challenge pages are completed/historical; challenge-level open-state verification is required before promotion.
-- Intigriti's public-program surface includes current VDP/bounty programs such as NVIDIA; no active case or testing was started.
-- Code4rena still shows submissions closed with K2 and Rujira in report-in-progress state; Sherlock contests still show zero current contests. ETHGlobal's previously published ETHOnline September 4-16 window remains intact.
-- `RsaCtfTool/RsaCtfTool` remains only a tool-evaluation lead pending overlap, dependency, license, maintenance-cost, and deterministic-fixture review.
-- PwnSec CTF 2026 remains postponed on CTFtime; Puffer remains an Upcoming Sherlock bounty watch item.
-- Aave V4 and Midas remain previously verified discovery leads but still require exact scope/rules preservation before case activation or any testing.
+- The only structured active-puzzle directory remains `research/active-puzzles/20260816-310-btc-challenge`; no puzzle solve claim was made in this pass.
+- Open PR #28 contains a newer Sherlock/Cap research contribution and passed its own Core, Daily Maintenance, and Intelligence Source Report workflows on head `566c89e1cb43650d2cd95eb0147355d75f0a0db9`, but its external claims remain a research contribution until merged/reconciled.
+- Aave V4, Midas, Puffer, and Cap remain discovery/watch leads only until exact published scope/rules are preserved before any security testing.
+- `RsaCtfTool/RsaCtfTool` remains an evaluation lead pending overlap, dependency, license, maintenance-cost, and deterministic-fixture review.
 
 ## Known state / debt
 
-- The actionability evaluator is now tested, but independent integrity verification is still required before treating its policy semantics as independently verified or closing the broader catalog-freshness queue item.
-- The evaluator consumes explicit structured phase/deadline evidence; automated extraction and maintenance of that evidence from arbitrary live pages is intentionally out of scope for this pass.
-- Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes/provenance before relocation.
-- Exact Aave V4 and Midas scope/exclusions/prohibited-technique/severity/submission material remains unpreserved in canonical case evidence.
-- Puffer is Upcoming, not live testing authorization.
-- Security opportunity listings are discovery only; public pages, contracts, repositories or bounty listings are not authorization beyond exact published scope/rules.
+- The broader P2 catalog-freshness item remains open: the repository can now evaluate preserved structured lifecycle/submission/deadline evidence, but it does not yet define a provenance-preserving acquisition/refresh policy for those fields across arbitrary live sources.
+- Post-merge workflow runs for merge commit `dab0897...` had not surfaced at this reconciliation check; do not claim the merge commit itself is independently green yet. The pre-merge final head is fully green.
+- Research PR #28 requires conflict reconciliation against current `main`, preserving both its source/intelligence changes and the merged actionability state.
+- Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes and provenance before relocation.
+- Exact bounty scope/exclusion/prohibited-technique/severity/submission material for high-value security leads remains unpreserved in canonical case evidence.
 
 ## Current operating priorities
 
-1. Repo Integrity should independently verify PR #27 classification semantics and confirm `opportunity-actionability` appears through generated Tools/Command Site data without bespoke HTML; do not promote beyond `tested` without that review.
-2. Define how canonical research/opportunity workflows should preserve and refresh structured `lifecycle_status`, `submission_status`, and `submission_deadline` evidence before closing the broader P2 freshness item.
-3. Evaluate `RsaCtfTool/RsaCtfTool` as a possible reusable RSA/CTF capability only after overlap/dependency/license/deterministic-test review.
-4. Preserve exact Aave V4 and Midas Sherlock scope/rules before deciding whether either merits an active case; do not test first.
-5. Preserve root/legacy evidence and inventory legacy solver modules before cleanup/refactoring.
+1. Repo Integrity should independently replay the merged actionability fixture and confirm generated Tools/Command Site visibility from current `main`; keep maturity at `tested` unless that independent review supports promotion.
+2. Reconcile research PR #28 with current `main`, preserving both the Sherlock/Cap research state and merged PR #27 coordination/tool state; rerun CI on the reconciled head before merge.
+3. Define a provenance-preserving workflow/schema for acquiring and refreshing `lifecycle_status`, `submission_status`, and `submission_deadline` evidence before closing the broader P2 freshness item.
+4. Evaluate `RsaCtfTool/RsaCtfTool` only after overlap/dependency/license/deterministic-test review.
+5. Preserve exact published bounty scope/rules before activating any security case; no target testing first.
 
 ## Next handoff
 
-Integrity should independently replay the actionable-freshness fixture, verify the generated tool/Command Site visibility from canonical registry data, and confirm the broader P2 freshness item remains open until the repository has a provenance-preserving policy for producing and refreshing the structured phase/deadline evidence consumed by the evaluator.
+Repo Integrity should independently verify `opportunity-actionability` on current `main`, including direct-script fixture replay and generated website discovery. The next build/reconciliation pass should resolve PR #28 against current main without discarding either lane, then rerun Core/maintenance/source validation before considering that research contribution mergeable.
