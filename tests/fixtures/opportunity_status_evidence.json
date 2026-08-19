@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "surface-fuels-prize",
+      "evidence": [
+        {
+          "field": "lifecycle_status",
+          "value": "active",
+          "source_name": "USA.gov",
+          "source_url": "https://www.usa.gov/",
+          "observed_at": "2026-08-18T07:00:00Z",
+          "excerpt": "The discovery listing still presents the challenge in its active lifecycle."
+        },
+        {
+          "field": "submission_status",
+          "value": "closed",
+          "source_name": "Official challenge host",
+          "source_url": "https://www.centralfloridatechgrove.org/",
+          "observed_at": "2026-08-18T07:05:00Z",
+          "excerpt": "The official host states that solution submissions closed on July 20, 2026."
+        },
+        {
+          "field": "submission_deadline",
+          "value": "2026-07-20T23:59:59Z",
+          "source_name": "Official challenge host",
+          "source_url": "https://www.centralfloridatechgrove.org/",
+          "observed_at": "2026-08-18T07:05:00Z",
+          "excerpt": "Published submission deadline: July 20, 2026."
+        }
+      ]
+    },
+    {
+      "id": "verified-open-example",
+      "evidence": [
+        {
+          "field": "submission_status",
+          "value": "upcoming",
+          "source_name": "Fixture organizer",
+          "source_url": "https://example.com/opportunity",
+          "observed_at": "2026-08-17T12:00:00Z",
+          "excerpt": "Submissions are not open yet."
+        },
+        {
+          "field": "submission_status",
+          "value": "open",
+          "source_name": "Fixture organizer",
+          "source_url": "https://example.com/opportunity",
+          "observed_at": "2026-08-18T12:00:00Z",
+          "excerpt": "Submissions are now open."
+        },
+        {
+          "field": "submission_deadline",
+          "value": "2026-09-01T12:00:00Z",
+          "source_name": "Fixture organizer",
+          "source_url": "https://example.com/opportunity",
+          "observed_at": "2026-08-18T12:00:00Z",
+          "excerpt": "Submissions close September 1 at 12:00 UTC."
+        }
+      ]
+    }
+  ]
+}
