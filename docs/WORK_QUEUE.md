@@ -16,8 +16,8 @@ This is the human-readable queue for AI agents. GitHub issues may mirror larger 
 | Priority | State | Work | Owner | Evidence / Next step |
 |---|---|---|---|---|
 | P1 | todo | Inventory and relocate generated root artifacts without losing evidence | unclaimed | Preserve hashes, provenance, and research references before moving anything |
-| P1 | todo | Add verified live opportunity/news adapters | unclaimed | Use official feeds/APIs/RSS where possible; cache timestamped results and label failures |
-| P2 | in-progress | Add link health and catalog freshness checks | build-agent | PR #24 merged deterministic URL/source-migration diagnostics, PR #27 merged deterministic submission-phase/deadline evaluation, and PR #31 merged the reusable canonical tool-visibility regression contract. Remaining work is a provenance-preserving acquisition/refresh policy for structured phase/deadline evidence. |
+| P1 | todo | Add verified live opportunity/news adapters | unclaimed | Use official feeds/APIs/RSS where possible; cache timestamped results and label failures. Opportunity adapters should emit the provenance contract introduced by PR #34 rather than writing untraceable status fields. |
+| P2 | in-progress | Add link health and catalog freshness checks | build-agent | PR #24 merged deterministic URL/source-migration diagnostics, PR #27 merged deterministic submission-phase/deadline evaluation, PR #31 merged the canonical tool-visibility regression contract, and PR #34 adds deterministic evidence preservation/normalization with SHA-256 provenance. Remaining work is source-specific acquisition/refresh adapters that preserve actual observation evidence and fail non-destructively. |
 | P2 | todo | Add optional news/RSS adapters with cached timestamped output | unclaimed | Keep network failures non-destructive |
 | P2 | todo | Inventory legacy solver modules and document inputs/outputs/dependencies | unclaimed | Build tool registry before refactoring or deleting anything |
 
