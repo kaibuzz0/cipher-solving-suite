@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-08-19 08:06 UTC
+Last reconciled: 2026-08-19 08:08 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -11,7 +11,7 @@ Repository version: `v3.1.0` (README)
 - PR #27 remains merged as `dab0897bb452181b5d4329ead6a3ec7e6efa6f57`; its final head passed Core validation on Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance.
 - GitHub Pages remains workflow-backed; the Pages workflow packages canonical `data/tools.json`, and `site/app.js` loads that registry dynamically into the Tools view.
 - `data/integration_queue.json` remains empty.
-- No open PR existed at the start of this build pass. PR #31 is now the only active build PR and is intentionally draft until its CI verifies the new visibility-contract tests.
+- No open PR existed at the start of this build pass. PR #31 is now the only active build PR.
 
 ## Build / integration state
 
@@ -19,6 +19,7 @@ Repository version: `v3.1.0` (README)
 - `tools/opportunity_actionability.py` remains merged and registered as `opportunity-actionability` with `tested` maturity.
 - Existing deterministic direct-script tests replay lifecycle/submission/deadline behavior, including the USA.gov / 3D Surface Fuels mismatch, passed-deadline precedence and timezone enforcement.
 - PR #31 adds a reusable integration regression contract: every user-visible canonical tool must be exported to the Command Site snapshot; shared-lane tool sources must appear in generated repository-browser data; Pages must package `data/tools.json`; and the workspace must load/render that canonical registry. `opportunity-actionability` is explicitly asserted through these paths without bespoke HTML.
+- PR #31 implementation head `3ea513f66984cca15521d920d05c087a842fa477` passed Core validation run `32230880742` and Daily Repository Maintenance run `32230880737`. Later queue/state/handoff-only commits must still receive their own PR CI before merge.
 - The broader P2 freshness item remains open because provenance-preserving acquisition/refresh of structured lifecycle, submission-status and deadline evidence is still unresolved.
 
 ## Current research / case state
@@ -31,14 +32,14 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- PR #31 head must pass Core validation before the new canonical tool-visibility contract is treated as verified or merged.
-- The public workspace shell is reachable, but this pass does not claim the newly added PR #31 test itself is deployed until the branch is merged and Pages rebuilds.
+- The public workspace shell is reachable, but this pass does not claim PR #31 itself is deployed until it is merged and Pages rebuilds.
+- PR #31's final coordination head still needs its own CI after the required work-queue/current-state/handoff updates.
 - Exact bounty scope/exclusion/prohibited-technique/severity/submission material for high-value security leads remains unpreserved in canonical case evidence.
 - Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes and provenance before relocation.
 
 ## Current operating priorities
 
-1. Let CI validate PR #31. If green, mark it ready and merge it, then confirm the post-merge Pages build keeps canonical tool discovery intact.
+1. Let final PR #31 CI validate the coordination-complete head; if green, Repo Integrity can independently inspect and merge it, then confirm the post-merge Pages build keeps canonical tool discovery intact.
 2. Define a provenance-preserving workflow/schema for acquiring and refreshing `lifecycle_status`, `submission_status` and `submission_deadline` evidence.
 3. Preserve complete Cap Sherlock scope/rules before considering any active security case; do not test first.
 4. Evaluate `RsaCtfTool/RsaCtfTool` only after overlap/dependency/license/deterministic-test review.
@@ -46,4 +47,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Repo Integrity should independently inspect PR #31's visibility-contract tests and CI result. If green, merge without promoting `opportunity-actionability` beyond `tested`, then confirm generated Pages/Command Site data still contains the canonical tool registry and actionability tool on current main.
+Repo Integrity should independently inspect PR #31's visibility-contract tests and final CI result. If green, merge without promoting `opportunity-actionability` beyond `tested`, then confirm generated Pages/Command Site data still contains the canonical tool registry and actionability tool on current main.
