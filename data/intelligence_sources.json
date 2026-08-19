@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-18T07:38:11Z",
+  "updated_at": "2026-08-18T19:37:37Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -108,7 +108,7 @@
       "categories": ["bug-bounty", "opportunity", "crypto"],
       "tier": "primary",
       "freshness_hours": 12,
-      "last_checked_at": "2026-08-17T19:39:42Z",
+      "last_checked_at": "2026-08-18T19:37:37Z",
       "assigned_agent": "bounty-scout",
       "enabled": true,
       "publish_default_confidence": "high",
