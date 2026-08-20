@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-08-20 20:12 UTC
+Last reconciled: 2026-08-20 20:16 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -21,8 +21,9 @@ Repository version: `v3.1.0` (README)
 - It maps explicit NIH status phrases to lifecycle/submission evidence and emits `submission_deadline` only when the source includes an explicit clock time and timezone. Date-only source wording such as the NCI Office of Data Sharing Impact Prize `Open 08/03/2026 to 10/05/2026` is preserved without inventing an end-of-day timestamp.
 - A parser regression fixture covers NIH description text containing `Open Data` before the real `Phase 2 open ...` status, preventing descriptive prose from shadowing the status field.
 - Network/source-shape/timestamp errors return non-zero and leave a requested output file unwritten. The adapter does not mutate `data/opportunities.json`, mark sources fresh, claim eligibility/prize entitlement, or activate security testing.
-- The existing dynamic website contract should expose `nih-challenge-evidence` from `data/tools.json`; no `site/index.html` edit was made.
-- An isolated local checkout attempt for the final branch could not run because the container could not resolve `github.com`. Earlier local direct-script replay before the parser hardening passed 4/4 adapter tests. Final branch verification therefore depends on GitHub Actions; no final-green claim is made until those runs appear.
+- The existing dynamic website contract exposes user-visible tools from `data/tools.json`; no `site/index.html` edit was made.
+- Final branch head `d9327808784084b46e29ee74fa1ce41b791d55e5` passed Core validation run `32412489605` across Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance run `32412489617`. The matrix passed the test suite, compilation, source registry/history/feed checks, source collection report, artifact inventory, 310 migration verification, dashboard-data generation and maintenance. This includes the new NIH direct-script tests and the existing dynamic tool-visibility contract.
+- An isolated local checkout attempt could not run because the container could not resolve `github.com`; this did not affect GitHub-hosted CI, which is the final branch verification basis.
 
 ## Current research / case state
 
@@ -51,4 +52,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-PR #35 was merged first to clear the shared coordination lane, then PR #37 was opened as a draft from current `main` for the first bounded official-source opportunity evidence adapter. The final branch must pass GitHub Actions before it is marked ready; Repo Integrity should independently verify status parsing, provenance output, normalizer compatibility and dynamic website discovery. Research PR #36 should be preserved as a separate source-health lane and reconciled only if its eventual merge moves `main` before PR #37 is reviewed.
+PR #35 was merged first to clear the shared coordination lane, then PR #37 was opened from current `main` for the first bounded official-source opportunity evidence adapter. PR #37's final head is green across Core and Daily Maintenance and can be moved to review, but Repo Integrity should independently verify status parsing, provenance output, normalizer compatibility and dynamic website discovery before merge. Research PR #36 should be preserved as a separate source-health lane and reconciled only if its eventual merge moves `main` before PR #37 is reviewed.
