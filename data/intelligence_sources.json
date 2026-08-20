@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-19T19:39:26Z",
+  "updated_at": "2026-08-20T19:42:41Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -52,7 +52,7 @@
       "categories": ["opportunity", "research"],
       "tier": "primary",
       "freshness_hours": 24,
-      "last_checked_at": "2026-08-18T07:38:11Z",
+      "last_checked_at": "2026-08-20T19:42:41Z",
       "assigned_agent": "opportunity-scout",
       "enabled": true,
       "publish_default_confidence": "high",
