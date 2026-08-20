@@ -54,6 +54,19 @@ def test_exact_et_deadline_is_timezone_aware_and_feeds_normalizer(tmp_path):
     assert item["selected_evidence"]["submission_deadline"]
 
 
+def test_open_data_description_does_not_shadow_phase_status(tmp_path):
+    _, data = run_adapter(
+        tmp_path,
+        "TOPx HHS Tech Sprint for AI and Invisible Illness",
+        "topx-hhs-tech-sprint",
+    )
+    rows = {row["field"]: row for row in data["items"][0]["evidence"]}
+    assert rows["submission_status"]["value"] == "open"
+    assert rows["submission_status"]["excerpt"].startswith("Phase 2 open 07/29/26")
+    assert "Open Data" not in rows["submission_status"]["excerpt"]
+    assert rows["submission_deadline"]["value"] == "2026-10-15T23:59:00-04:00"
+
+
 def test_missing_title_fails_without_writing_output(tmp_path):
     output = tmp_path / "evidence.json"
     run = subprocess.run(
