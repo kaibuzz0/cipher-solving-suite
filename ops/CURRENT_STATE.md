@@ -1,31 +1,32 @@
 # Current Repository State
 
-Last reconciled: 2026-08-20 08:00 UTC
+Last reconciled: 2026-08-20 19:17 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `1ed31129c9e92a481d9f7f08c0dc09066a77f2fd`, the merge of PR #33 (`Research: refresh current CTF and cryptography source health`).
-- PR #33 changed only `data/intelligence_sources.json` and `data/source_check_history.json`; its source-health contribution is preserved on current `main`.
-- `data/integration_queue.json` remains empty and no open repository issue was found during this build pass.
-- The public GitHub Pages Operations Workspace is reachable and exposes the expected Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry, prompts, and Agent Operations surfaces.
-- Connected commit-run lookup did not surface post-merge workflow runs for `1ed31129...`; this is recorded as an observation, not interpreted as failure.
+- Current `main` is `c024c76cc99cc37c6ef8c0468f37117fa09028c6`, the merge of PR #34 (`Build: preserve opportunity status evidence provenance`).
+- Repo Integrity independently reviewed PR #34 after its reconciliation with merged research PR #33 and found no blocking defect.
+- Final reconciled PR head `edfc1ac917a99c097fa3de8ac1b50c5efee98ab3` passed Core validation run `32346858848` on Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance run `32346858730`.
+- Python 3.11 CI reported 44/44 tests passing, including direct-script opportunity evidence normalization, conflict rejection, evidence -> actionability integration, Agent Operations data parsing, dynamic site-data generation, repository-browser discovery, and canonical tool visibility.
+- Source registry validation reported 16 valid sources; source history reported 32 valid checks; intelligence feed validation reported 12 valid items; 310 migration verification passed with no errors.
+- GitHub Pages Operations Workspace is publicly reachable and exposes Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry, prompts, workflow, and Agent Operations surfaces.
+- `data/integration_queue.json` remains empty and no open repository issue was found during this integrity pass.
 
 ## Build / integration state
 
 - `tools/catalog_link_health.py` remains merged as the bounded catalog/source URL inventory and migration diagnostic tool.
 - `tools/opportunity_actionability.py` remains merged and registered as `opportunity-actionability` with `tested` maturity.
-- PR #34 adds `tools/opportunity_evidence.py`, a local/network-free normalizer for source-backed lifecycle, submission-status and deadline evidence. It preserves every evidence statement, requires HTTPS sources and timezone-aware observation/deadline timestamps, assigns deterministic SHA-256 provenance, fails on conflicting newest evidence, and emits evaluator-ready records.
-- PR #34 also adds `docs/OPPORTUNITY_EVIDENCE_WORKFLOW.md`, deterministic fixture/test coverage, and canonical `opportunity-evidence` tool registration with `tested` maturity.
-- Research PR #33 merged after PR #34 was originally built. The build branch was reconciled with current `main` using two-parent merge commit `2b707d4d9614363eaaef2380cfd5e18a6b3437d3`, preserving PR #33 source/history changes and PR #34's eight-file implementation/coordination set without force-push or history rewriting.
-- Reconciled head `2b707d4d...` passed Core validation run `32346752699` on Python 3.11, 3.12 and 3.13 and Daily Repository Maintenance run `32346752712`. Core passed the test suite, compile checks, intelligence source/history/feed validation, source collection reporting, artifact inventory, 310 migration verification, dashboard-data generation, and maintenance on all three Python versions.
-- PR #34 remains open and mergeable for independent Repo Integrity review; neither opportunity tool was promoted beyond `tested`.
-- The broader P2 freshness item remains in progress: deterministic preservation/normalization and evaluation exist, but source-specific acquisition adapters are still separate work and must preserve the same provenance contract.
+- PR #34 merged `tools/opportunity_evidence.py`, `docs/OPPORTUNITY_EVIDENCE_WORKFLOW.md`, deterministic fixture/tests, and canonical `opportunity-evidence` registration at `tested` maturity.
+- The evidence normalizer is network-free, requires absolute HTTPS source URLs, timezone-aware observation/deadline timestamps and supporting excerpts, preserves every evidence statement with deterministic SHA-256 digests, selects the newest non-conflicting evidence per supported field, and fails closed on equally-new conflicting evidence.
+- PR #34 preserved PR #33's source/history refresh while reconciling the stale branch with current main; no force-push or history rewrite was used.
+- Canonical website discovery remains covered by `tests/test_tool_visibility_contract.py`: user-visible tools flow from `data/tools.json` into the Command Site snapshot and generated repository-browser data, and Pages/workspace consume the canonical registry rather than bespoke tool HTML.
+- Neither opportunity tool has been promoted beyond `tested`; no live source-acquisition capability is claimed.
 
 ## Current research / case state
 
-- PR #33 refreshed the CTFtime and arXiv source-health lanes on current `main`; no duplicate intelligence, opportunity, or active case was created by that research pass.
+- PR #33's CTFtime and arXiv source-health refresh remains preserved on main.
 - Cap remains a discovery lead only. Exact in-scope assets, exclusions, prohibited techniques, severity/reward rules and submission requirements are not preserved in canonical case evidence, so no active security case or testing has started.
 - Aave V4, Midas and Puffer remain discovery/watch leads under the same exact-scope gate.
 - `RsaCtfTool/RsaCtfTool` remains an evaluation lead pending overlap, dependency, license, maintenance-cost and deterministic-fixture review.
@@ -33,19 +34,21 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- The evidence normalizer does not itself fetch source pages or mark sources fresh; agents/adapters must still acquire evidence from approved sources and preserve actual observation time and supporting source material.
-- Exact bounty scope/exclusion/prohibited-technique/severity/submission material for high-value security leads remains unpreserved in canonical case evidence.
-- Generated/legacy root artifacts remain a P1 cleanup item; preserve hashes and provenance before relocation.
-- `docs/AGENT_HANDOFF.md` already contains the PR #34 build handoff, but its final sentence predates PR #33's merge; this reconciliation is recorded in PR #34 discussion and should be appended by the integrity/merge pass when it records the final merge disposition.
+- The evidence normalizer does not fetch source pages or mark sources fresh. Source-specific acquisition adapters remain separate work and must preserve actual observation time, supporting evidence and non-destructive failure behavior.
+- Core CI reported 15 of 16 source lanes currently due under configured freshness SLAs; this is collection debt, not schema failure.
+- Artifact inventory remains intentionally non-destructive: 40 items, 10 duplicate groups and 11 orphaned items were inventoried. Maintenance continues to warn about generated root images; relocation remains gated on hash/provenance preservation.
+- Existing remote merged/topic branches remain cleanup candidates but were not deleted because they may retain useful provenance or external references.
+- CI logs show GitHub-hosted actions currently emit Node.js 20 deprecation warnings while being forced onto Node 24; the workflows still pass, but action-version refresh should be treated as future supply-chain/maintenance work rather than an emergency defect.
+- Post-merge workflow runs for merge commit `c024c76...` were not independently observed in this pass; the final green PR merge ref is the verification basis for the merged implementation.
 
 ## Current operating priorities
 
-1. Repo Integrity should independently replay `tests/test_opportunity_evidence.py`, verify conflict rejection and the evidence-normalizer -> actionability pipeline, confirm `opportunity-evidence` reaches generated Command Site/repository-browser data, and merge PR #34 only if satisfied.
-2. Build source-specific live adapters only where official APIs/feeds/pages can be consumed safely while emitting the provenance-preserving evidence contract; keep network failures non-destructive.
+1. Build one bounded official-source adapter that emits the provenance-preserving opportunity evidence contract and keeps network failures non-destructive, or perform the `RsaCtfTool` overlap/dependency/license/deterministic-fixture evaluation.
+2. Refresh due source lanes through the canonical source-history workflow without promoting discovery listings into testing authorization.
 3. Preserve complete Cap Sherlock scope/rules before considering any active security case; do not test first.
-4. Evaluate `RsaCtfTool/RsaCtfTool` only after overlap/dependency/license/deterministic-test review.
-5. Continue root-artifact migration only with hash/provenance preservation.
+4. Continue root-artifact migration only with hash/provenance preservation and case-link reconciliation.
+5. Review GitHub Actions versions/deprecation warnings as bounded maintenance; do not weaken validation to silence warnings.
 
 ## Next handoff
 
-PR #34 is reconciled onto current `main` at head `2b707d4d9614363eaaef2380cfd5e18a6b3437d3` and is green across Core validation and Daily Maintenance. Repo Integrity should independently verify semantics and generated-site discovery before merge. After that, the next bounded build candidate is one official-source adapter that emits the evidence provenance format or the `RsaCtfTool` integration evaluation.
+PR #34 is merged and independently verified at `c024c76cc99cc37c6ef8c0468f37117fa09028c6`. The next build/research role should either add one official-source acquisition adapter that emits `opportunity-evidence` input with preserved provenance or complete the bounded `RsaCtfTool` integration evaluation. Repo Integrity should keep both opportunity tools at `tested` until a live adapter is separately exercised and evidenced.
