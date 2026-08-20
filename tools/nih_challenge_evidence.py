@@ -25,9 +25,10 @@ DEFAULT_URL = "https://www.nih.gov/challenges"
 SOURCE_NAME = "NIH Challenges and Prize Competitions"
 
 STATUS_RE = re.compile(
-    r"(?P<prefix>phase\s+\d+\s+|milestone\s+\d+\s+|recruitment\s+phase\s+)?"
-    r"(?P<state>open|closed|coming\s+soon)"
-    r"(?P<tail>[^.!?]{0,120})",
+    r"(?:(?P<prefix>phase\s+\d+|milestone\s+\d+|recruitment\s+phase)\s+)?"
+    r"(?P<state>open|closed)\s+"
+    r"(?P<tail>(?:until\s+|on\s+)?\d{1,2}/\d{1,2}/\d{2,4}[^.!?]{0,100})"
+    r"|(?P<coming>coming\s+soon)",
     re.IGNORECASE,
 )
 EXACT_DEADLINE_RE = re.compile(
@@ -139,7 +140,7 @@ def extract_evidence(
     if not match:
         raise ValueError(f"no supported status phrase found for {card['title']!r}")
 
-    state = match.group("state").lower().replace(" ", "_")
+    state = "coming_soon" if match.group("coming") else match.group("state").lower()
     status_excerpt = _clean(match.group(0))
     evidence: list[dict[str, str]] = []
 
