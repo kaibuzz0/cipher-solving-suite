@@ -42,7 +42,7 @@ def test_limit_preserves_order() -> None:
         "candidates": [
             "L3CEO275KOD899D4FA1F64",
             "l3ceo275kod899d4fa1f64",
-            "L3CEO275KOD899D4FA1F64511B2033232841053022B0FE52ED0F7A165B52C7E75112F656FC4B",
+            "511B2033232841053022B0FE52ED0F7A165B52C7E75112F656FC4B",
         ],
     }
 
