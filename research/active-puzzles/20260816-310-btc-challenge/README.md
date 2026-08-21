@@ -16,19 +16,27 @@
 | `alpha_2bit.bin` | Alpha 2-bit extraction | Generated output; link then organize |
 | `alpha_row310.bin` | Row-310 alpha extraction | Generated output; link then organize |
 | `bitplanes/` | RGB bitplane analysis | Generated outputs; duplicate review required |
-| `alpha_extract.py` | Reproduction script | Case tool/source code |
+| `alpha_extract.py` | Reproduction script | Portable case tool; takes the image path and writes under case evidence by default |
 | `analyze_310.py` | Analysis script | Case tool/source code |
 | `password_candidate_solver.py` | Candidate/decryption hypothesis tool | Case-local portable replacement for the broken root `brute_force.py`; decrypt mode remains experimental |
 
 ## Known reproduction relationships
 
-`alpha_extract.py` explicitly writes the four `alpha_*.bin` outputs. Its current `main()` contains a legacy absolute input path (`/root/310_btc_challenge/310_challenge.png`), so that path should be repaired before claiming clean reproducibility.
+`alpha_extract.py` explicitly writes the four `alpha_*.bin` outputs. It is already parameterized: the input image is a required command-line path and generated outputs default to this case's `evidence/generated/` directory. Reproduction should use the protected root image in place and compare generated SHA-256 values against the migrated evidence rather than moving the primary image first.
 
 `analyze_310.py` performs image/color/LSB analysis and writes channel/difference outputs when its quick-analysis path is used.
 
 The root-level `brute_force.py` is legacy/unintegrated code and must not be treated as a working command. It hard-codes `/root/310_btc_challenge/alpha_row310.bin`, mixes `Crypto` and `Cryptodome` namespaces, contains an undefined `ciphertext` reference in its PBKDF1 fallback, and writes a root-level result file. The case-local `tools/password_candidate_solver.py` preserves its hint-derived candidate hypothesis while removing those portability assumptions.
 
-## Password-candidate workflow
+## Reproduction and password-candidate workflow
+
+Regenerate the alpha outputs without moving the primary evidence:
+
+```bash
+python research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py \
+  310_challenge.png
+python scripts/verify_310_migration.py
+```
 
 Listing the deterministic candidate set requires no third-party dependency:
 
@@ -54,8 +62,7 @@ The repository tree proves multiple `bitplanes/bitplane_g_*.png` and `bitplanes/
 ## Next action
 
 1. Preserve and hash the primary image in place.
-2. Repair/parameterize the legacy absolute path in `alpha_extract.py` before relying on reproduction.
-3. Regenerate `alpha_row310.bin` and compare its SHA-256 with preserved migrated output.
-4. Run the deterministic password-candidate solver only after that evidence match.
-5. Treat any plausible decrypt as a hypothesis requiring independent verification, not a solve claim.
-6. Continue artifact/duplicate migration only with provenance and reference preservation.
+2. Regenerate `alpha_row310.bin` with the already-portable extractor and compare its SHA-256 with preserved migrated output.
+3. Run the deterministic password-candidate solver only after that evidence match.
+4. Treat any plausible decrypt as a hypothesis requiring independent verification, not a solve claim.
+5. Continue artifact/duplicate migration only with provenance and reference preservation.
