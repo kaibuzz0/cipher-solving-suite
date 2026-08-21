@@ -44,6 +44,28 @@ python tools/opportunity_actionability.py \
 
 Generated reports belong in `workspace/` or another managed artifact location, not repository root.
 
+## Official-source acquisition adapters
+
+Source-specific adapters may emit this evidence-bundle format, but they must preserve the source wording, actual observation time, and non-destructive failure behavior rather than writing canonical opportunity state directly.
+
+The NIH challenge adapter is the first bounded implementation:
+
+```bash
+python tools/nih_challenge_evidence.py \
+  --title "NCI Office of Data Sharing Impact Prize" \
+  --id nci-ods-impact-prize \
+  --observed-at 2026-08-20T20:00:00Z \
+  --output workspace/nih-challenge-evidence.json
+
+python tools/opportunity_evidence.py \
+  --input workspace/nih-challenge-evidence.json \
+  --output workspace/nih-challenge-normalized.json
+```
+
+`nih_challenge_evidence.py` reads the official `https://www.nih.gov/challenges` index by default. Tests use `--input-html` with a deterministic local fixture so CI does not depend on network reachability or a mutable external page. The adapter emits lifecycle and submission-state evidence from the exact status phrase it finds. It emits `submission_deadline` only when the NIH source provides an explicit clock time and timezone; a date-only phrase such as `Open 08/03/2026 to 10/05/2026` is preserved as supporting evidence but is not converted into an invented end-of-day timestamp.
+
+A fetch failure, changed page shape, missing exact title, or invalid observation timestamp returns a non-zero exit and does not write the requested output file. The adapter does not mark the NIH source fresh, modify `data/opportunities.json`, or prove eligibility, prize entitlement, or security-testing authorization.
+
 ## Refresh procedure
 
 1. Review the current official or otherwise approved source.
