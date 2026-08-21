@@ -1,55 +1,56 @@
 # Current Repository State
 
-Last reconciled: 2026-08-20 20:16 UTC
+Last reconciled: 2026-08-21 07:20 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `7e0d5b0fe9cf5f09aa0727e894a75306e6f150e7`, the merge of PR #35 (`Ops: reconcile state after PR #34 merge`).
-- PR #35 was documentation-only, mergeable, and its head `7c761204924a93d905685dbd7891ab619c459090` passed Core validation run `32408181444` before this build pass merged it with an expected-head guard.
-- PR #34 remains merged and independently verified. Its final reconciled head passed 44/44 tests on Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance; both `opportunity-actionability` and `opportunity-evidence` remain at `tested` maturity.
-- `data/integration_queue.json` remains empty and no open repository issue was found at the start of this build pass.
-- Open research PR #36 is intentionally isolated to federal challenge source-registry/history changes and does not overlap the PR #37 implementation paths.
-- The public GitHub Pages Operations Workspace was previously verified reachable; canonical tool discovery remains enforced by `tests/test_tool_visibility_contract.py` rather than bespoke tool HTML.
+- Current `main` is `a2b015ea951b49e65d437c495948a4f586ef2c60`, the merge of PR #37 (`Build: add NIH challenge evidence adapter`).
+- Repo Integrity independently inspected PR #37's adapter, deterministic fixture/tests, canonical tool registration, coordination patch, and current concurrent PR state before merge.
+- Final PR head `75a0e078157bceb1d5eb644044d19b90057fcfb2` was mergeable and passed Core validation run `32412721156` plus Daily Repository Maintenance run `32412721152`.
+- The public GitHub Pages Operations Workspace is reachable and exposes the expected Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source-registry, prompts, workflow and Agent Operations surfaces.
+- `data/integration_queue.json` remains empty and no open repository issues were found during this integrity pass.
+- Open research PR #36 remains isolated to `data/intelligence_sources.json` and `data/source_check_history.json`; it did not overlap PR #37's implementation/coordination paths at merge time.
 
 ## Build / integration state
 
-- PR #37 (`Build: add NIH challenge evidence adapter`) is the current bounded build contribution on branch `agent/nih-challenge-evidence-adapter-20260820`.
-- PR #37 adds `tools/nih_challenge_evidence.py`, deterministic NIH HTML fixtures and direct-script tests, canonical `nih-challenge-evidence` tool registration, and acquisition guidance in `docs/OPPORTUNITY_EVIDENCE_WORKFLOW.md`.
-- The adapter reads the official `https://www.nih.gov/challenges` index by default or a deterministic local HTML fixture with `--input-html`, selects exactly one named challenge card, preserves the source status excerpt and actual timezone-aware observation time, and emits the evidence-bundle format consumed by `tools/opportunity_evidence.py`.
-- It maps explicit NIH status phrases to lifecycle/submission evidence and emits `submission_deadline` only when the source includes an explicit clock time and timezone. Date-only source wording such as the NCI Office of Data Sharing Impact Prize `Open 08/03/2026 to 10/05/2026` is preserved without inventing an end-of-day timestamp.
-- A parser regression fixture covers NIH description text containing `Open Data` before the real `Phase 2 open ...` status, preventing descriptive prose from shadowing the status field.
-- Network/source-shape/timestamp errors return non-zero and leave a requested output file unwritten. The adapter does not mutate `data/opportunities.json`, mark sources fresh, claim eligibility/prize entitlement, or activate security testing.
-- The existing dynamic website contract exposes user-visible tools from `data/tools.json`; no `site/index.html` edit was made.
-- Final branch head `d9327808784084b46e29ee74fa1ce41b791d55e5` passed Core validation run `32412489605` across Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance run `32412489617`. The matrix passed the test suite, compilation, source registry/history/feed checks, source collection report, artifact inventory, 310 migration verification, dashboard-data generation and maintenance. This includes the new NIH direct-script tests and the existing dynamic tool-visibility contract.
-- An isolated local checkout attempt could not run because the container could not resolve `github.com`; this did not affect GitHub-hosted CI, which is the final branch verification basis.
+- PR #37 merged `tools/nih_challenge_evidence.py`, deterministic NIH fixture/tests, canonical `nih-challenge-evidence` registration at `tested` maturity, evidence-workflow documentation, queue/state coordination updates and an append-only build handoff.
+- The NIH adapter reads the official NIH challenge index by default or a deterministic local HTML fixture, requires exact title matching, preserves source wording and timezone-aware observation time, and emits evidence consumed by `tools/opportunity_evidence.py`.
+- It emits lifecycle/submission status only from supported status-shaped text and emits a deadline only when the matched source text contains an explicit clock time and timezone. Date-only status is preserved without inventing an end-of-day timestamp.
+- The regression suite covers the NCI date-only status, LymeX explicit ET deadline normalization, TOPx `Open Data` prose preceding the real phase status, missing-title failure, timezone enforcement and adapter -> evidence-normalizer compatibility.
+- Network/source-shape/timestamp failures return non-zero before writing requested output. The adapter does not mutate canonical opportunities, mark a source fresh, prove eligibility/prize entitlement or activate security testing.
+- Dynamic tool discovery remains canonical through `data/tools.json` and the existing tool-visibility/site-data contract; no bespoke `site/index.html` entry was added.
+- Independent current-source review found the NCI ODS registration PDF states an October 5, 2026 11:59 PM Eastern submission deadline. That does not contradict the index adapter: the adapter intentionally preserves only index evidence and does not claim complete detail-page evidence.
 
 ## Current research / case state
 
-- Research PR #36 reports a fresh official NIH/USA.gov federal-challenge review, including the NCI Office of Data Sharing Impact Prize as a candidate whose exact eligibility and entry terms still need stronger preservation before canonical promotion. PR #37 consumes none of PR #36's source-history changes and does not promote the opportunity itself.
-- Cap remains a discovery lead only. Exact in-scope assets, exclusions, prohibited techniques, severity/reward rules and submission requirements are not preserved in canonical case evidence, so no active security case or testing has started.
+- Research PR #36 remains open and mergeable, with a bounded federal-challenge source-health refresh. If it merges after this reconciliation, its two-file source/history changes should be preserved without overwriting the NIH adapter state.
+- NCI ODS Impact Prize remains a strong evidence-enrichment candidate: preserve exact eligibility, prize, entry/submission criteria and supporting primary-source evidence before canonical promotion.
+- Cap remains a discovery lead only. Exact scope, exclusions, prohibited techniques, severity/reward rules and submission requirements are not preserved in canonical case evidence, so no active security testing should start.
 - Aave V4, Midas and Puffer remain discovery/watch leads under the same exact-scope gate.
 - `RsaCtfTool/RsaCtfTool` remains an evaluation lead pending overlap, dependency, license, maintenance-cost and deterministic-fixture review.
 - The only structured active puzzle remains `research/active-puzzles/20260816-310-btc-challenge`; no solve claim is made.
 
 ## Known state / debt
 
-- PR #37 is source-specific and intentionally narrow: it extracts NIH challenge status/deadline evidence, not full eligibility, prize, submission-rule or downstream-detail-page evidence.
-- NIH page markup or wording may change. Exact-title matching and fail-closed source-shape handling reduce silent misclassification, but live adapter behavior still needs independent integrity replay before merge/promotion.
-- Core CI previously reported many source lanes due under configured freshness SLAs; that is collection debt, not schema failure.
+- The NIH adapter is intentionally narrow and remains `tested`, not `live`. It does not yet preserve detail-page eligibility, prize or full submission-rule evidence.
+- NIH markup/wording can change; exact-title matching and fail-closed source-shape handling reduce silent misclassification but do not eliminate source-shape maintenance risk.
+- Source freshness debt remains; a source being due is collection debt rather than schema failure.
 - Artifact inventory remains intentionally non-destructive; generated root artifacts still require hash/provenance-preserving relocation.
-- Existing remote merged/topic branches remain cleanup candidates but were not deleted because they may retain useful provenance or external references.
-- GitHub Actions logs have shown Node.js action-runtime deprecation warnings; workflows continue to pass, but action-version refresh remains bounded maintenance debt.
+- Existing merged/topic branches remain cleanup candidates but were not deleted because they may retain useful provenance or external references.
+- GitHub Actions has emitted Node.js action-runtime deprecation warnings while workflows remain green; action-version refresh remains bounded supply-chain maintenance debt.
+- A fresh post-merge workflow run for merge commit `a2b015ea...` was not independently observed in this pass; the green final PR head is the implementation verification basis.
+- `docs/AGENT_HANDOFF.md` should receive a post-merge integrity entry. The available connector write primitive replaces the whole file and the full append-only journal could not be safely reconstructed from the truncated read surface, so this pass did not risk truncating prior history. The exact handoff is preserved in the reconciliation PR description for safe append by the next write-capable role.
 
 ## Current operating priorities
 
-1. Repo Integrity should independently replay PR #37's deterministic NIH fixtures, especially the `Open Data` parser regression, verify adapter -> `opportunity_evidence.py` normalization, and confirm `nih-challenge-evidence` appears through generated tool/Command Site/repository-browser data before merge.
-2. Research/integration should preserve exact NCI ODS Impact Prize eligibility, prize, submission criteria and supporting primary evidence before deciding whether it belongs in canonical opportunity/intelligence state; do not infer those fields from the NIH index alone.
-3. Continue other source-specific official adapters only where source shape and provenance can be bounded and failures remain non-destructive.
-4. Preserve complete Cap Sherlock scope/rules before considering any active security case; do not test first.
+1. Safely append the post-PR37 integrity handoff recorded in the reconciliation PR, then merge the documentation-only reconciliation after its fresh checks are green.
+2. Review/reconcile PR #36 against current `main`; preserve its source/history changes and rerun its validations if its base is stale.
+3. Enrich NCI ODS evidence from official detail materials with eligibility, prize and submission criteria before canonical opportunity promotion.
+4. Continue other official-source adapters only where source shape, provenance and non-destructive failure behavior are bounded.
 5. Continue root-artifact migration only with hash/provenance preservation and case-link reconciliation.
 
 ## Next handoff
 
-PR #35 was merged first to clear the shared coordination lane, then PR #37 was opened from current `main` for the first bounded official-source opportunity evidence adapter. PR #37's final head is green across Core and Daily Maintenance and can be moved to review, but Repo Integrity should independently verify status parsing, provenance output, normalizer compatibility and dynamic website discovery before merge. Research PR #36 should be preserved as a separate source-health lane and reconciled only if its eventual merge moves `main` before PR #37 is reviewed.
+PR #37 is merged and independently integrity-reviewed at `a2b015ea951b49e65d437c495948a4f586ef2c60`. Keep `nih-challenge-evidence` at `tested`. The next integrity/build role should first append the preserved post-merge handoff safely, then merge this state-reconciliation PR if fresh CI remains green. After that, reconcile PR #36 or enrich the NCI ODS evidence set from primary detail materials without treating index status alone as complete actionability evidence.
