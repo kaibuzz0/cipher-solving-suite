@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-18T19:37:37Z",
+  "updated_at": "2026-08-21T19:42:02Z",
   "items": [
+    {
+      "id": "2026-08-21-structured-totient-preimage-paper-adds-reconstruction-algorithms-and-ancillary-code",
+      "fingerprint": "0f26ee08e389bd5cabfadcf1",
+      "title": "Structured Totient Preimage paper adds reconstruction algorithms and ancillary code",
+      "summary": "A new arXiv preprint studies reconstruction from x = product(p_i - 1) for distinct same-bit-length primes, gives exhaustive reconstruction and collision-analysis algorithms, and ships ancillary Python code for enumeration and reconstruction. The paper explicitly does not claim a security reduction or post-quantum hardness, so it is useful number-theory/cryptography research and a tool-evaluation lead rather than a proven hardness result.",
+      "category": "research",
+      "source_id": "arxiv-cryptography",
+      "source_name": "arXiv",
+      "source_url": "https://arxiv.org/abs/2608.19191",
+      "published_at": "2026-08-19T17:57:18Z",
+      "checked_at": "2026-08-21T19:42:02Z",
+      "confidence": "medium",
+      "relevance": "useful",
+      "agent_notes": "Verified directly from arXiv v1 and its ancillary-file listing. The paper evaluates small parameter regimes and motivates an assumption for growing families; do not present it as a security proof. Next build-side action is to evaluate the ancillary reconstruction scripts for deterministic-fixture value and overlap with existing number-theory/RSA tooling before importing anything.",
+      "related_case": "",
+      "tags": ["research", "cryptography", "number-theory", "reconstruction", "code"]
+    },
     {
       "id": "2026-08-18-cap-bug-bounty-is-live-on-sherlock-with-a-1-000-000-usdc-maximum-reward",
       "fingerprint": "1e6b21192bdb58e384a3cbe4",
