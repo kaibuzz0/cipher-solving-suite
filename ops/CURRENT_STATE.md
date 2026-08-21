@@ -1,56 +1,58 @@
 # Current Repository State
 
-Last reconciled: 2026-08-21 07:20 UTC
+Last reconciled: 2026-08-21 08:09 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `a2b015ea951b49e65d437c495948a4f586ef2c60`, the merge of PR #37 (`Build: add NIH challenge evidence adapter`).
-- Repo Integrity independently inspected PR #37's adapter, deterministic fixture/tests, canonical tool registration, coordination patch, and current concurrent PR state before merge.
-- Final PR head `75a0e078157bceb1d5eb644044d19b90057fcfb2` was mergeable and passed Core validation run `32412721156` plus Daily Repository Maintenance run `32412721152`.
-- The public GitHub Pages Operations Workspace is reachable and exposes the expected Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source-registry, prompts, workflow and Agent Operations surfaces.
-- `data/integration_queue.json` remains empty and no open repository issues were found during this integrity pass.
-- Open research PR #36 remains isolated to `data/intelligence_sources.json` and `data/source_check_history.json`; it did not overlap PR #37's implementation/coordination paths at merge time.
+- Current `main` is `f61910fa8acf5064f757178688e279232265528d`, the merge of documentation-only PR #38 (`Ops: reconcile state after PR #37 merge`). PR #38 head `f925513f17a417e9f436846131568252ac764537` passed Core validation run `32458426799` before merge.
+- PR #37 remains merged and independently integrity-reviewed. `nih-challenge-evidence` stays at `tested`, not `live`.
+- Public GitHub Pages is reachable at the Operations Workspace and exposes Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry, prompts, workflow and Agent Operations surfaces.
+- `data/integration_queue.json` remains empty and no open repository issues were found in this build pass.
+- Open research PR #36 remains isolated to `data/intelligence_sources.json` and `data/source_check_history.json`; it does not overlap the active 310 solver implementation paths.
 
 ## Build / integration state
 
-- PR #37 merged `tools/nih_challenge_evidence.py`, deterministic NIH fixture/tests, canonical `nih-challenge-evidence` registration at `tested` maturity, evidence-workflow documentation, queue/state coordination updates and an append-only build handoff.
-- The NIH adapter reads the official NIH challenge index by default or a deterministic local HTML fixture, requires exact title matching, preserves source wording and timezone-aware observation time, and emits evidence consumed by `tools/opportunity_evidence.py`.
-- It emits lifecycle/submission status only from supported status-shaped text and emits a deadline only when the matched source text contains an explicit clock time and timezone. Date-only status is preserved without inventing an end-of-day timestamp.
-- The regression suite covers the NCI date-only status, LymeX explicit ET deadline normalization, TOPx `Open Data` prose preceding the real phase status, missing-title failure, timezone enforcement and adapter -> evidence-normalizer compatibility.
-- Network/source-shape/timestamp failures return non-zero before writing requested output. The adapter does not mutate canonical opportunities, mark a source fresh, prove eligibility/prize entitlement or activate security testing.
-- Dynamic tool discovery remains canonical through `data/tools.json` and the existing tool-visibility/site-data contract; no bespoke `site/index.html` entry was added.
-- Independent current-source review found the NCI ODS registration PDF states an October 5, 2026 11:59 PM Eastern submission deadline. That does not contradict the index adapter: the adapter intentionally preserves only index evidence and does not claim complete detail-page evidence.
+- PR #39 (`Build: integrate portable 310 password candidate solver`) is the current bounded build contribution on branch `agent/310-password-candidate-solver-20260821`.
+- The pass identified root `brute_force.py` as broken/unintegrated legacy 310 code: it hard-codes `/root/310_btc_challenge/alpha_row310.bin`, mixes `Crypto` and `Cryptodome` namespaces, contains an undefined `ciphertext` reference in its PBKDF1 fallback, and writes a root-level result file.
+- Rather than deleting legacy code without provenance/reference review, PR #39 adds the case-local `research/active-puzzles/20260816-310-btc-challenge/tools/password_candidate_solver.py` and preserves the legacy hint-derived candidate hypothesis in deterministic order.
+- Candidate listing and payload validation use only the Python standard library. Optional decrypt mode lazy-loads `pycryptodomex` and tests only the legacy PBKDF2-HMAC-SHA256 / AES-256-CBC hypothesis against validated OpenSSL `Salted__` payloads.
+- Malformed base64, non-OpenSSL payloads, invalid arguments and missing optional crypto dependencies fail non-destructively. A result file is written only on a plausible candidate match and only to an explicitly requested path.
+- `btc310-password-candidates` is registered in `data/tools.json` at `experimental` maturity and linked to case `20260816-310-btc-challenge`. The maturity is intentionally not promoted because CI verifies deterministic candidate/payload behavior but does not establish the optional decrypt hypothesis as correct.
+- The active case metadata now lists the solver as an analysis script and its next action requires provenance verification plus SHA-256 comparison of regenerated row-310 evidence before candidate testing. No puzzle solve is claimed.
+- Case documentation was reconciled with current code: `alpha_extract.py` is already portable/parameterized and defaults generated outputs to the managed case evidence directory. The stale README claim that it still hard-coded `/root/...` was removed.
+- No bespoke `site/index.html` changes were made. Tool visibility continues through the canonical `data/tools.json` -> generated site-data / Command Site contract.
+- PR #39 implementation head `406ef51ded0eabe58157b4e9c37f7e97d4cc267a` passed Core validation run `32461566520` on Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance run `32461566492`. All matrix jobs passed tests, compilation, source registry/history/feed validation, collection reporting, artifact inventory, 310 migration verification, dashboard-data generation and maintenance.
+- A local clone was unavailable because the container could not resolve `github.com`; GitHub-hosted CI is the verification basis for this pass.
 
 ## Current research / case state
 
-- Research PR #36 remains open and mergeable, with a bounded federal-challenge source-health refresh. If it merges after this reconciliation, its two-file source/history changes should be preserved without overwriting the NIH adapter state.
-- NCI ODS Impact Prize remains a strong evidence-enrichment candidate: preserve exact eligibility, prize, entry/submission criteria and supporting primary-source evidence before canonical promotion.
-- Cap remains a discovery lead only. Exact scope, exclusions, prohibited techniques, severity/reward rules and submission requirements are not preserved in canonical case evidence, so no active security testing should start.
-- Aave V4, Midas and Puffer remain discovery/watch leads under the same exact-scope gate.
+- The only structured active puzzle remains `research/active-puzzles/20260816-310-btc-challenge`. Its solver lane is now better integrated, but original challenge source/provenance and regenerated row-310 evidence equality remain required before interpreting decrypt attempts.
+- Root `brute_force.py` is preserved as legacy code pending reference/provenance review; it is not a registered working command.
+- Research PR #36 remains open with federal challenge source/history updates and should be preserved as a separate research lane.
+- NCI ODS Impact Prize remains an evidence-enrichment candidate; exact eligibility, prize, entry/submission criteria and supporting primary-source evidence should be preserved before canonical promotion.
+- Cap, Aave V4, Midas and Puffer remain discovery/watch leads only; no security target testing started.
 - `RsaCtfTool/RsaCtfTool` remains an evaluation lead pending overlap, dependency, license, maintenance-cost and deterministic-fixture review.
-- The only structured active puzzle remains `research/active-puzzles/20260816-310-btc-challenge`; no solve claim is made.
 
 ## Known state / debt
 
-- The NIH adapter is intentionally narrow and remains `tested`, not `live`. It does not yet preserve detail-page eligibility, prize or full submission-rule evidence.
-- NIH markup/wording can change; exact-title matching and fail-closed source-shape handling reduce silent misclassification but do not eliminate source-shape maintenance risk.
-- Source freshness debt remains; a source being due is collection debt rather than schema failure.
-- Artifact inventory remains intentionally non-destructive; generated root artifacts still require hash/provenance-preserving relocation.
-- Existing merged/topic branches remain cleanup candidates but were not deleted because they may retain useful provenance or external references.
-- GitHub Actions has emitted Node.js action-runtime deprecation warnings while workflows remain green; action-version refresh remains bounded supply-chain maintenance debt.
-- A fresh post-merge workflow run for merge commit `a2b015ea...` was not independently observed in this pass; the green final PR head is the implementation verification basis.
-- `docs/AGENT_HANDOFF.md` should receive a post-merge integrity entry. The available connector write primitive replaces the whole file and the full append-only journal could not be safely reconstructed from the truncated read surface, so this pass did not risk truncating prior history. The exact handoff is preserved in the reconciliation PR description for safe append by the next write-capable role.
+- `password_candidate_solver.py` is `experimental`: deterministic candidate generation and fail-closed payload handling are tested, but the optional PBKDF2/AES hypothesis has not been independently established against verified challenge evidence.
+- Root `brute_force.py` and `char_locator.py` remain legacy/unregistered. Continue the solver inventory module-by-module; do not delete them until references/provenance are checked.
+- Generated root artifacts still require hash/provenance-preserving relocation. Primary 310 evidence remains protected in place.
+- Source freshness debt remains and is separate from this solver pass.
+- Existing merged/topic branches remain cleanup candidates but may retain useful provenance or external references.
+- GitHub Actions continues to pass while action-runtime deprecation warnings remain bounded maintenance debt.
+- After the final coordination commits on PR #39, fresh PR CI must be checked again before the branch is considered ready for independent integrity review.
 
 ## Current operating priorities
 
-1. Safely append the post-PR37 integrity handoff recorded in the reconciliation PR, then merge the documentation-only reconciliation after its fresh checks are green.
-2. Review/reconcile PR #36 against current `main`; preserve its source/history changes and rerun its validations if its base is stale.
-3. Enrich NCI ODS evidence from official detail materials with eligibility, prize and submission criteria before canonical opportunity promotion.
-4. Continue other official-source adapters only where source shape, provenance and non-destructive failure behavior are bounded.
+1. Repo Integrity should independently review PR #39's deterministic candidate ordering, malformed-payload fail-closed behavior, case/tool registration, generated website discovery, and `experimental` maturity boundary before merge.
+2. For the 310 case, regenerate `alpha_row310.bin` with the already-portable extractor, compare SHA-256 against preserved migrated evidence, and only then exercise the optional password hypothesis. Treat any plausible plaintext as a hypothesis, not a solve claim.
+3. Continue the legacy solver inventory with `char_locator.py` and other unregistered modules, preserving references/provenance before relocation or deletion.
+4. Review/reconcile research PR #36 against current `main` without overwriting the solver/build lane.
 5. Continue root-artifact migration only with hash/provenance preservation and case-link reconciliation.
 
 ## Next handoff
 
-PR #37 is merged and independently integrity-reviewed at `a2b015ea951b49e65d437c495948a4f586ef2c60`. Keep `nih-challenge-evidence` at `tested`. The next integrity/build role should first append the preserved post-merge handoff safely, then merge this state-reconciliation PR if fresh CI remains green. After that, reconcile PR #36 or enrich the NCI ODS evidence set from primary detail materials without treating index status alone as complete actionability evidence.
+PR #38 was merged first to clear the shared coordination lane. PR #39 now contains the bounded 310 solver integration and its implementation head is green across Core and Daily Maintenance. After this coordination update and the append-only handoff are committed, re-check final-head CI, move PR #39 out of draft if green/mergeable, and leave merge to the independent Repo Integrity pass. No solve, live crypto capability, security finding, or destructive evidence migration should be inferred from this build.
