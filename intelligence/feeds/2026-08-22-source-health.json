@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-08-22T07:42:16Z",
+  "purpose": "Raw timestamped research observations pending canonical source-history replay through scripts/source_check_history.py.",
+  "sources": [
+    {
+      "source_id": "code4rena-contests",
+      "url": "https://code4rena.com/",
+      "observed": "code4rena winding down | active competitions and bounties seen through completion | bounties 0 | submissions closed 475 | rujira report in progress 40000 usdc | k2 completed 135000 usdc",
+      "content_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "previous_fingerprint": "1ad4a847998aae2c914414769818d8056a00d259c2d8fa4c177bcc0af3244228",
+      "change_state": "changed",
+      "note": "Official Code4rena homepage now states the platform is winding down and active competitions/bounties are being seen through to completion. Current surface shows 0 bounties, Rujira report in progress and K2 completed."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | midas 500000 usdc live last updated aug 21 2026 9:23 pm | cap 1000000 usdc last updated aug 18 2026 | aave v4 2500000 usd | puffer 100000 usdc",
+      "content_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "previous_fingerprint": "43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321",
+      "change_state": "changed",
+      "note": "Midas is now the most recently updated Sherlock bounty; its page reports LIVE, 500,000 USDC maximum reward, and Aug 21 2026 9:23 PM last update. Exact Scope-tab contents were not preserved, so no case/testing was started."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | tall dwarf hosting takeover aug 22 0800 utc to aug 23 2000 utc online | pecan+ aug 23 school teams only | compfest aug 29 | blackhat mea qualification aug 29 | asis quals aug 29",
+      "content_fingerprint": "b4fd6097726339050cdf68858ae73b4af6e9894f885804e1be44d8ae9b07cea2",
+      "previous_fingerprint": "5e8abffab04098daaae5f4ae845a69d4c72898877e7d75c9e987f7bceef260e9",
+      "change_state": "changed",
+      "note": "Upcoming list advanced as Aug 22 events began; TallDwarf remains immediately upcoming, followed by PECAN+ and the Aug 29 cluster. Existing canonical intelligence already covers the late-August window, so no duplicate feed item is recommended."
+    }
+  ]
+}
