@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 import sys
@@ -19,6 +20,16 @@ def run_analyzer(*args: str) -> subprocess.CompletedProcess[str]:
     )
 
 
+def file_fingerprint(path: Path) -> tuple[int, str] | None:
+    if not path.exists():
+        return None
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(65536), b""):
+            digest.update(chunk)
+    return path.stat().st_size, digest.hexdigest()
+
+
 def write_ppm(path: Path) -> None:
     path.write_text(
         "P3\n"
@@ -33,6 +44,13 @@ def write_ppm(path: Path) -> None:
 def test_direct_script_json_is_deterministic_and_write_free_by_default(tmp_path: Path) -> None:
     fixture = tmp_path / "fixture.ppm"
     write_ppm(fixture)
+    legacy_root_outputs = [
+        ROOT / "channel_r.png",
+        ROOT / "channel_g.png",
+        ROOT / "channel_b.png",
+        ROOT / "difference.png",
+    ]
+    before = {path.name: file_fingerprint(path) for path in legacy_root_outputs}
 
     first = run_analyzer(str(fixture), "--json")
     second = run_analyzer(str(fixture), "--json")
@@ -45,8 +63,8 @@ def test_direct_script_json_is_deterministic_and_write_free_by_default(tmp_path:
     assert payload["width"] == 2
     assert payload["height"] == 2
     assert payload["derived_outputs"] == []
-    assert not (ROOT / "channel_r.png").exists()
-    assert not (ROOT / "difference.png").exists()
+    after = {path.name: file_fingerprint(path) for path in legacy_root_outputs}
+    assert after == before
 
 
 def test_explicit_output_dir_contains_only_managed_derived_images(tmp_path: Path) -> None:
