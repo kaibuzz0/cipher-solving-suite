@@ -22,8 +22,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install test runner
-        run: python -m pip install --upgrade "pytest>=8,<10"
+      - name: Install test runner and 310 reproduction dependencies
+        run: python -m pip install --upgrade "pytest>=8,<10" "numpy>=1.26,<3" "Pillow>=10,<13"
       - name: Run test suite
         id: tests
         continue-on-error: true
@@ -39,7 +39,7 @@ jobs:
         id: compile
         continue-on-error: true
         run: |
-          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py scripts/source_check_history.py scripts/artifact_inventory.py scripts/verify_310_migration.py
+          python -m py_compile suite.py tools/opportunity_finder.py tools/earnings_tracker.py tools/scanning/opportunity_scanner.py scripts/maintenance_check.py scripts/new_case.py scripts/build_site_data.py scripts/intelligence_feed.py scripts/source_registry.py scripts/source_check_history.py scripts/artifact_inventory.py scripts/verify_310_migration.py scripts/verify_310_reproduction.py
           python -m py_compile research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py research/active-puzzles/20260816-310-btc-challenge/tools/analyze_310.py
       - name: Validate intelligence source registry
         id: sources
@@ -67,6 +67,10 @@ jobs:
         id: migration310
         continue-on-error: true
         run: python scripts/verify_310_migration.py
+      - name: Verify 310 alpha reproduction
+        id: reproduction310
+        continue-on-error: true
+        run: python scripts/verify_310_reproduction.py
       - name: Build dashboard data
         id: dashboard
         continue-on-error: true
@@ -107,6 +111,13 @@ jobs:
           name: migration-310-python-${{ matrix.python-version }}
           path: artifacts/310-migration-verification.json
           if-no-files-found: warn
+      - name: Upload 310 reproduction verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reproduction-310-python-${{ matrix.python-version }}
+          path: artifacts/310-reproduction-verification.json
+          if-no-files-found: warn
       - name: Upload maintenance diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -128,6 +139,7 @@ jobs:
           echo "| Intelligence feed | ${{ steps.intelligence.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Artifact inventory | ${{ steps.artifacts.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| 310 migration integrity | ${{ steps.migration310.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| 310 alpha reproduction | ${{ steps.reproduction310.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dashboard data | ${{ steps.dashboard.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Maintenance | ${{ steps.maintenance.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
       - name: Fail job if validation failed
@@ -141,6 +153,7 @@ jobs:
              [ "${{ steps.intelligence.outcome }}" != "success" ] || \
              [ "${{ steps.artifacts.outcome }}" != "success" ] || \
              [ "${{ steps.migration310.outcome }}" != "success" ] || \
+             [ "${{ steps.reproduction310.outcome }}" != "success" ] || \
              [ "${{ steps.dashboard.outcome }}" != "success" ] || \
              [ "${{ steps.maintenance.outcome }}" != "success" ]; then
             echo "One or more validation stages failed. Review the named step, short traceback, job summary, and uploaded diagnostics."
