@@ -19,10 +19,13 @@
 | `alpha_extract.py` | Reproduction script | Portable case tool; takes the image path and writes under case evidence by default |
 | `analyze_310.py` | Analysis script | Case tool/source code |
 | `password_candidate_solver.py` | Candidate/decryption hypothesis tool | Case-local portable replacement for the broken root `brute_force.py`; decrypt mode remains experimental |
+| `scripts/verify_310_reproduction.py` | Reproduction verifier | Regenerates alpha outputs in a temporary directory, compares hashes/bytes with migrated evidence, and never overwrites canonical evidence |
 
 ## Known reproduction relationships
 
-`alpha_extract.py` explicitly writes the four `alpha_*.bin` outputs. It is already parameterized: the input image is a required command-line path and generated outputs default to this case's `evidence/generated/` directory. Reproduction should use the protected root image in place and compare generated SHA-256 values against the migrated evidence rather than moving the primary image first.
+`alpha_extract.py` explicitly writes the four `alpha_*.bin` outputs. It is already parameterized: the input image is a required command-line path and generated outputs default to this case's `evidence/generated/` directory.
+
+`verify_310_reproduction.py` is the safe default for proving that relationship. It runs the extractor against the protected root image in a temporary directory, computes SHA-256 for the primary image and every regenerated alpha output, compares the regenerated files with the migrated evidence, and writes only `artifacts/310-reproduction-verification.json`. A passing report validates reproducibility of the extraction relationship; it is not evidence that any hidden-data or password hypothesis is correct.
 
 `analyze_310.py` performs image/color/LSB analysis and writes channel/difference outputs when its quick-analysis path is used.
 
@@ -30,13 +33,14 @@ The root-level `brute_force.py` is legacy/unintegrated code and must not be trea
 
 ## Reproduction and password-candidate workflow
 
-Regenerate the alpha outputs without moving the primary evidence:
+Verify migrated evidence and reproduce the alpha outputs without moving or overwriting the primary evidence:
 
 ```bash
-python research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py \
-  310_challenge.png
 python scripts/verify_310_migration.py
+python scripts/verify_310_reproduction.py
 ```
+
+The reproduction verifier requires the same image dependencies as `alpha_extract.py`: NumPy and Pillow. Core CI installs bounded versions and runs this command on Python 3.11, 3.12, and 3.13.
 
 Listing the deterministic candidate set requires no third-party dependency:
 
@@ -44,7 +48,7 @@ Listing the deterministic candidate set requires no third-party dependency:
 python research/active-puzzles/20260816-310-btc-challenge/tools/password_candidate_solver.py --list-candidates --json
 ```
 
-After the row-310 payload has been regenerated and its SHA-256 compared with preserved migrated evidence, the optional decryption hypothesis can be tested with `pycryptodomex` installed:
+Only after reproduction is independently confirmed should the optional decryption hypothesis be interpreted. With `pycryptodomex` installed:
 
 ```bash
 python research/active-puzzles/20260816-310-btc-challenge/tools/password_candidate_solver.py \
@@ -61,8 +65,8 @@ The repository tree proves multiple `bitplanes/bitplane_g_*.png` and `bitplanes/
 
 ## Next action
 
-1. Preserve and hash the primary image in place.
-2. Regenerate `alpha_row310.bin` with the already-portable extractor and compare its SHA-256 with preserved migrated output.
-3. Run the deterministic password-candidate solver only after that evidence match.
-4. Treat any plausible decrypt as a hypothesis requiring independent verification, not a solve claim.
+1. Run `python scripts/verify_310_reproduction.py` through the supported CI matrix and independently inspect the generated reproduction report.
+2. Verify external source/provenance for `310_challenge.png`; reproducibility does not establish provenance.
+3. Only after those evidence gates are understood should the password/decryption hypothesis be interpreted.
+4. Treat any plausible decrypt or character region as a hypothesis requiring independent verification, not a solve claim.
 5. Continue artifact/duplicate migration only with provenance and reference preservation.
