@@ -4,7 +4,7 @@
   "type": "crypto-puzzle",
   "status": "active",
   "created_at": "2026-08-16T00:00:00Z",
-  "updated_at": "2026-08-21T08:00:00Z",
+  "updated_at": "2026-08-21T20:00:00Z",
   "source": "Legacy repository research",
   "source_url": "",
   "authorization_url": "",
@@ -22,7 +22,8 @@
   "analysis_scripts": [
     "research/active-puzzles/20260816-310-btc-challenge/tools/analyze_310.py",
     "research/active-puzzles/20260816-310-btc-challenge/tools/alpha_extract.py",
-    "research/active-puzzles/20260816-310-btc-challenge/tools/password_candidate_solver.py"
+    "research/active-puzzles/20260816-310-btc-challenge/tools/password_candidate_solver.py",
+    "research/active-puzzles/20260816-310-btc-challenge/tools/character_locator.py"
   ],
   "notes": [
     "research/active-puzzles/20260816-310-btc-challenge/notes.md",
@@ -34,5 +35,5 @@
     "integrity_check": "scripts/verify_310_migration.py",
     "duplicate_manifest": "research/active-puzzles/20260816-310-btc-challenge/bitplane_duplicate_manifest.json"
   },
-  "next_action": "Verify the original challenge source/provenance, regenerate the row-310 payload with the portable alpha extractor, compare SHA-256 with preserved migrated output, then use the deterministic password-candidate solver against that verified payload. A plausible decryption is not a solve claim until independently verified."
+  "next_action": "Verify the original challenge source/provenance, regenerate the row-310 payload with the portable alpha extractor, compare SHA-256 with preserved migrated output, then use the deterministic password-candidate solver against that verified payload. The portable character locator may be used independently to inspect the legacy character-position hypothesis. A plausible region or decryption is not a solve claim until independently verified."
 }
