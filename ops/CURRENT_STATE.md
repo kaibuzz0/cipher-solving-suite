@@ -1,58 +1,61 @@
 # Current Repository State
 
-Last reconciled: 2026-08-22 08:12 UTC
+Last reconciled: 2026-08-23 07:18 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `d0ecc6671a24b00fa30f44bed71f004a412fa42f`, the merge of coordination PR #43 after independent PR #42 verification.
-- PR #43 final head `6d8188a9b6ca2d27ec3ea0039539649be48c919d` was mergeable and passed Core validation run `32559384728`; it changed only `ops/CURRENT_STATE.md` and was merged before the current build branch was created.
-- PR #42 remains merged as `b90d87d4f18e24c56c2d30a7ee7065251d4d4376`; `btc310-character-locator` remains `experimental` and no solve is claimed.
-- Public GitHub Pages was previously independently reachable with Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry and Agent Operations surfaces. The existing generic tool-visibility contract remains the required discovery path for new tools.
-- `data/integration_queue.json` remains empty and `toolsets/catalog.json` still contains only `repo-factory` at `experimental`.
-- Open research PR #44 owns `data/opportunities.json` and `intelligence/feeds/2026-08-22-source-health.json`; the current build branch deliberately does not touch those lanes.
+- Current `main` is `89584da98ada2101ced7bab8d480255c8d75b20f`, the merge of PR #45 after PR #44 had already merged.
+- PR #44 (`Research: record Code4rena wind-down and source-health changes`) merged as `bf6de08f1daee1c1ceb82cf20a4d85af53dcc9de` and its two-file research lane is present on current `main`.
+- PR #45 (`Build: verify 310 evidence reproduction non-destructively`) merged as `89584da98ada2101ced7bab8d480255c8d75b20f`. Its final head `f7415d849dbe90034b5da37ced4a7c1ec2540720` passed Core validation `32561434523` on Python 3.11/3.12/3.13 plus Daily Repository Maintenance `32561434467` before merge.
+- Open coordination PR #46 is based directly on current `main` and owns `ops/CURRENT_STATE.md` plus `data/integration_queue.json`. Its prior head `d6977f05f7eccde6bb57a6ee0879811003fc13c1` passed Core validation `32593468443` on Python 3.11/3.12/3.13, including tests, compilation, source/history/feed validation, artifact inventory, 310 migration/reproduction verification, dashboard generation, and maintenance.
+- Open research PR #47 is mergeable, adds only `intelligence/feeds/2026-08-22-afternoon-source-health.json`, and deliberately leaves canonical source history/registry untouched until PR #44's earlier observations are replayed. Its head `de3d559ab7eefc63895a564fd364a61d22ef1ea3` passed Core validation `32594783145`.
+- Open build PR #48 is mergeable and does not touch PR #46's coordination files or PR #47's research snapshot. Its head `9f956d43c4859ba1fb8436e344281563a51d5547` passed Core validation `32595547270` across Python 3.11/3.12/3.13 plus Daily Repository Maintenance `32595547273`.
+- There are no open repository issues.
+- The public GitHub Pages Operations Workspace has been independently reachable with Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry, prompts/workflow and Agent Operations surfaces; deployed-state recheck remains part of this integrity pass.
+- `toolsets/catalog.json` still contains only `repo-factory` at `experimental`.
 
-## Build / integration state
+## 310 case / tool state
 
-- Active build PR: #45, branch `agent/310-reproduction-verifier-20260822`.
-- PR #45 adds `scripts/verify_310_reproduction.py`, a non-destructive verifier that runs the existing portable alpha extractor against protected `310_challenge.png` in a temporary directory, hashes all four regenerated alpha outputs, compares them with migrated evidence, and writes only `artifacts/310-reproduction-verification.json`.
-- `tests/test_310_reproduction_verifier.py` covers deterministic match, mismatch failure, missing-input fail-closed behavior, and preservation of expected evidence using a synthetic extractor fixture.
-- Core CI installs bounded NumPy/Pillow versions, compiles the verifier, runs the real repository reproduction check on Python 3.11/3.12/3.13, uploads per-version reproduction reports, shows the result in the validation summary, and fails the job if reproduction fails.
-- Implementation/coordination head `97be73ec0b07c59168c8425deb1071fd1171ac60` passed Core validation run `32561375768` across Python 3.11, 3.12 and 3.13 plus Daily Repository Maintenance run `32561375823`. All Core matrix jobs passed tests, compilation, source registry/history/feed validation, source reporting, artifact inventory, 310 migration verification, the new 310 reproduction check, dashboard-data generation and maintenance.
-- `btc310-reproduction-verifier` is registered in `data/tools.json` at `experimental` pending independent integrity review, linked to case `20260816-310-btc-challenge`, and flows through the existing canonical registry/site-data contract without bespoke `site/index.html` changes.
-- The active case metadata/README point to the non-destructive verifier as the safe reproduction path.
+- `btc310-reproduction-verifier` is integrated through canonical `data/tools.json` at `experimental`, linked to case `20260816-310-btc-challenge`, and uses the existing registry/site-data discovery contract rather than bespoke website HTML.
+- PR #45's verified artifact recorded exact regenerated/migrated matches for all four alpha outputs. `alpha_row310.bin` remains 368 bytes with SHA-256 `cffcecf0fc90fb313b58e90ee452427f94204c86970afd297606a0ca46d3f2f8`.
+- This establishes repository-internal extraction reproducibility only. External provenance/authenticity for `310_challenge.png` remains unresolved, so password/decrypt/character hypotheses and any solve claim remain unverified/experimental.
+- PR #48 contributes a repaired deterministic `btc310-image-analyzer` at `experimental` maturity through canonical `data/tools.json`, with direct-script regression coverage and explicit-output-only behavior. It must still receive independent integrity review before merge.
+- Root `brute_force.py`, `char_locator.py`, and preserved generated image artifacts remain legacy/provenance debt; do not delete or relocate them without hash/reference reconciliation.
 
-## Current research / case state
+## Research / source-health state
 
-- The only structured active puzzle remains `research/active-puzzles/20260816-310-btc-challenge`.
-- The Python 3.12 reproduction artifact from Core run `32561375768` reports status `pass`, extractor return code 0, and exact matches for all four regenerated alpha artifacts.
-- Protected `310_challenge.png`: 3,488,848 bytes, SHA-256 `2f9235c0d7d983da80ac9757f728c0f1ce24ab4763909dda314281510d984e16`.
-- Regenerated/migrated `alpha_lsb.bin`: 703,616 bytes, SHA-256 `4a9b97264e0b78704fb79d2049a3c5804e05da31cf175b59e5489edcd0fcb57b`.
-- Regenerated/migrated `alpha_pattern.bin`: 1,274 bytes, SHA-256 `20c6ab3d608d65c25239cde155ce88401d07795b98161079037df8af280dcc11`.
-- Regenerated/migrated `alpha_2bit.bin`: 1,407,232 bytes, SHA-256 `8a23ff07bdf49964f4805468d0827858c64850b46165d01c34d1e7a908bf1020`.
-- Regenerated/migrated `alpha_row310.bin`: 368 bytes, SHA-256 `cffcecf0fc90fb313b58e90ee452427f94204c86970afd297606a0ca46d3f2f8`.
-- This closes the repository-internal extraction reproducibility gate: the current portable extractor reproduces the migrated alpha evidence from the protected repository image in the tested environments. It does **not** verify the external provenance of the image or the correctness of any hidden-data/password hypothesis.
-- Password/decrypt and character-position hypotheses remain `experimental`; plausible output is not a solve claim.
-- PR #44's Code4rena/Sherlock/CTFtime source-health work remains separate research state and has not been absorbed into this build branch.
+- PR #44 updated canonical `data/opportunities.json` to reflect Code4rena's wind-down and added `intelligence/feeds/2026-08-22-source-health.json` with timestamped observations for `code4rena-contests`, `sherlock-bounties`, and `ctftime-upcoming`.
+- The three stored fingerprints were independently recomputed with the repository normalization rule and match the raw snapshot exactly.
+- Those observations have **not** yet been replayed into canonical `data/source_check_history.json` / `data/intelligence_sources.json`; the raw snapshot itself says replay is pending. PR #46 tracks this explicitly in `data/integration_queue.json` rather than allowing it to drift silently.
+- PR #47 preserves later observations at `2026-08-22T19:42:58Z` plus a NASA Gateways candidate, but intentionally does not advance canonical source history ahead of the earlier PR #44 replay. Preserve that sequence when integrating.
+- Do not manufacture freshness by copying timestamps alone. Replay the exact PR #44 observed strings through `scripts/source_check_history.py record ... --at 2026-08-22T07:42:16Z`, preserve notes, validate history/registry/report/site data, then replay the later PR #47 observations in timestamp order.
 
-## Known state / debt
+## Coordination / governance state
 
-- External source/provenance for `310_challenge.png` remains unresolved and is now the primary evidence gate before treating puzzle hypotheses as source-authentic.
-- Root `brute_force.py` and `char_locator.py` remain preserved legacy code pending reference/provenance review and eventual hash-preserving migration decisions.
-- Generated root artifacts still require hash/provenance-preserving relocation; primary 310 evidence remains protected in place.
-- Source freshness debt remains separate from the solver lane.
-- `docs/AGENT_HANDOFF.md` remains append-only and still lacks several preserved entries. The available connected write primitive replaces whole files, so this pass preserves its exact build handoff in PR #45 rather than risk truncating the journal.
-- This coordination-only state update moves the PR head after the green implementation run; final-head Core/Maintenance should be rechecked before marking PR #45 ready.
+- `AGENTS.md`, `docs/AI_AGENT_INTEGRATION.md`, and `docs/AUTOMATED_AGENT_OPERATIONS.md` remain mutually consistent on current-main authority, canonical registries/site-data discovery, evidence preservation, independent verification, collision avoidance, and bounded PR-based changes.
+- PR #46 owns current-state/integration-queue reconciliation; PR #47 owns a one-file later research snapshot; PR #48 owns the 310 analyzer/tool-registration lane. Their current changed-file scopes do not collide.
+- Numerous historical `agent/*` branches remain on the remote. Many correspond to merged work; retain them unless provenance/reference review makes branch cleanup explicitly safe.
+- `docs/AGENT_HANDOFF.md` is append-only. The connected write primitive available in this pass replaces whole files; because the journal is long and prior history must not be truncated, exact missing handoffs are preserved in PR descriptions until a safe append-capable pass reconstructs/appends them.
+- A bounded indexed repository search for `subprocess` returned no matches in this pass. This is not represented as a complete security audit.
+
+## Known debt
+
+- External provenance for `310_challenge.png` remains the primary 310 evidence gate.
+- PR #44 source-health observations still need canonical replay and registry freshness reconciliation; PR #47 later observations must follow that sequence if merged.
+- Generated root artifacts still require hash/provenance-preserving relocation.
+- Broader official-source opportunity/news adapters, catalog freshness, and legacy solver inventory remain incomplete.
+- Several historical handoff entries remain preserved in PR descriptions/current-state history rather than the append-only journal because of connector-safe-append limitations.
 
 ## Current operating priorities
 
-1. Recheck PR #45 final-head Core and Daily Maintenance after this coordination update, then move it to ready-for-review only if green and mergeable.
-2. Repo Integrity should independently inspect a reproduction artifact, confirm canonical evidence was not mutated, mismatch/missing-input paths fail closed, the `experimental` capability boundary is appropriate, and `btc310-reproduction-verifier` appears through generated website/Command Site data.
-3. Separately verify external source/provenance for `310_challenge.png`; reproducibility alone is insufficient provenance.
-4. Reconcile PR #44 independently without overwriting this case/tool lane.
-5. Continue legacy solver/root-artifact inventory only with evidence preservation.
+1. Re-run PR #46 validation after this concurrency reconciliation and merge it only if the refreshed head remains green and mergeable.
+2. Replay the three PR #44 source-health observations through the canonical source-history command, validate source/history/report/site-data output, then process any later PR #47 observations in timestamp order before marking the integration item complete.
+3. Independently review PR #48's analyzer direct-script behavior, non-mutation guarantees, canonical tool visibility, and `experimental` claim boundary before merge.
+4. Independently verify external provenance for `310_challenge.png` before interpreting solver/decryption output as source-authentic.
+5. Continue legacy solver/root-artifact inventory only with evidence and hash preservation.
 
 ## Next handoff
 
-The build pass began from synchronized current `main` after merging green, one-file coordination PR #43. It avoided open research PR #44's paths and chose the documented 310 reproduction gate as the highest-value bounded objective. PR #45 introduces a temporary-workspace reproduction verifier, synthetic deterministic tests, real-image Core CI coverage, canonical tool registration and case linkage without moving primary evidence or hardcoding website HTML. Core `32561375768` and Daily Maintenance `32561375823` are green on head `97be73ec...`; the Python 3.12 uploaded report independently records exact matches for all four regenerated alpha outputs, including row 310 SHA-256 `cffcecf0...f2f8`. External image provenance remains unresolved, so no solve or source-authenticity claim is made. Final-head CI after this state-only update remains the last build-side gate.
+Repo Integrity reconciled current `main` after PRs #44 and #45 merged in sequence and then re-reconciled active concurrency after PRs #47 and #48 opened. PR #46 remains the sole owner of shared current-state/integration-queue coordination; PR #47 and PR #48 intentionally avoid those files, so no shared-file conflict is present. The material integration defect remains PR #44's merged raw source-health observations not yet replayed into canonical source history/registry. PR #47 adds a later replay-ready observation set that must follow PR #44 chronologically if merged. PR #48 is a separate experimental 310 analyzer contribution with green final-head Core/Daily CI but still requires independent integrity review. This state update intentionally does not rewrite source history, manufacture freshness, delete evidence, promote maturity, or claim a puzzle solve.

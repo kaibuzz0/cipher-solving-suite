@@ -1,5 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-16T19:17:00Z",
-  "items": []
+  "updated_at": "2026-08-22T19:00:00Z",
+  "items": [
+    {
+      "id": "20260822-pr44-source-health-replay",
+      "type": "data",
+      "status": "needs-integration",
+      "contributor": "research-agent / PR #44",
+      "branch_or_pr": "PR #44 / bf6de08f1daee1c1ceb82cf20a4d85af53dcc9de",
+      "path": "intelligence/feeds/2026-08-22-source-health.json",
+      "purpose": "Replay the merged raw source-health observations into canonical source-check history and registry freshness without manufacturing timestamps or losing provenance.",
+      "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. The raw snapshot explicitly says canonical replay is pending; current source_check_history/intelligence_sources still predate those observations.",
+      "verification": "Integrity pass independently recomputed SHA-256 fingerprints from all three observed strings using scripts/source_check_history.py normalization semantics; all match the fingerprints stored in the raw snapshot.",
+      "risks": [
+        "Do not mark sources fresh by copying timestamps without replaying the exact observations.",
+        "Preserve existing append-sensitive source history and prior fingerprints.",
+        "A bounty/platform listing is discovery evidence, not authorization to test any target."
+      ],
+      "next_action": "Run scripts/source_check_history.py record for each of the three source IDs using the exact observed string, note, and --at 2026-08-22T07:42:16Z; then validate source history/registry, build the source report and site data, review the diff, and mark this item integrated only after green validation."
+    }
+  ]
 }
