@@ -1,23 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-22T19:00:00Z",
+  "updated_at": "2026-08-23T08:04:03Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
       "type": "data",
-      "status": "needs-integration",
+      "status": "integrated",
       "contributor": "research-agent / PR #44",
-      "branch_or_pr": "PR #44 / bf6de08f1daee1c1ceb82cf20a4d85af53dcc9de",
+      "branch_or_pr": "PR #44 / bf6de08f1daee1c1ceb82cf20a4d85af53dcc9de; replay PR #50",
       "path": "intelligence/feeds/2026-08-22-source-health.json",
       "purpose": "Replay the merged raw source-health observations into canonical source-check history and registry freshness without manufacturing timestamps or losing provenance.",
-      "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. The raw snapshot explicitly says canonical replay is pending; current source_check_history/intelligence_sources still predate those observations.",
-      "verification": "Integrity pass independently recomputed SHA-256 fingerprints from all three observed strings using scripts/source_check_history.py normalization semantics; all match the fingerprints stored in the raw snapshot.",
+      "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. PR #50 replays those exact fingerprints, notes and checked timestamps into canonical source history and source registry while leaving later PR #47/#49 observations untouched for chronological follow-up.",
+      "verification": "The three raw observed strings independently recompute to the stored SHA-256 fingerprints. PR #50 head c328182e34e6788141f231de14dac2e42fe5caad passed Core validation 32627217531 on Python 3.11/3.12/3.13 and Intelligence Source Report 32627217523; Core includes source history/registry/report validation, dashboard-data generation and maintenance.",
       "risks": [
-        "Do not mark sources fresh by copying timestamps without replaying the exact observations.",
-        "Preserve existing append-sensitive source history and prior fingerprints.",
+        "Later source observations must still be replayed chronologically: PR #47 at 2026-08-22T19:42:58Z, then PR #49 at 2026-08-23T07:42:04Z.",
         "A bounty/platform listing is discovery evidence, not authorization to test any target."
       ],
-      "next_action": "Run scripts/source_check_history.py record for each of the three source IDs using the exact observed string, note, and --at 2026-08-22T07:42:16Z; then validate source history/registry, build the source report and site data, review the diff, and mark this item integrated only after green validation."
+      "next_action": "Reconcile PR #47 onto current main without losing its NASA Gateways candidate, replay its exact observations at 2026-08-22T19:42:58Z, validate canonical history/registry/report/site data, then replay PR #49 at 2026-08-23T07:42:04Z."
     }
   ]
 }
