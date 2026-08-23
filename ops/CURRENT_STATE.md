@@ -1,61 +1,59 @@
 # Current Repository State
 
-Last reconciled: 2026-08-23 07:18 UTC
+Last reconciled: 2026-08-23 08:05 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `89584da98ada2101ced7bab8d480255c8d75b20f`, the merge of PR #45 after PR #44 had already merged.
-- PR #44 (`Research: record Code4rena wind-down and source-health changes`) merged as `bf6de08f1daee1c1ceb82cf20a4d85af53dcc9de` and its two-file research lane is present on current `main`.
-- PR #45 (`Build: verify 310 evidence reproduction non-destructively`) merged as `89584da98ada2101ced7bab8d480255c8d75b20f`. Its final head `f7415d849dbe90034b5da37ced4a7c1ec2540720` passed Core validation `32561434523` on Python 3.11/3.12/3.13 plus Daily Repository Maintenance `32561434467` before merge.
-- Open coordination PR #46 is based directly on current `main` and owns `ops/CURRENT_STATE.md` plus `data/integration_queue.json`. Its prior head `d6977f05f7eccde6bb57a6ee0879811003fc13c1` passed Core validation `32593468443` on Python 3.11/3.12/3.13, including tests, compilation, source/history/feed validation, artifact inventory, 310 migration/reproduction verification, dashboard generation, and maintenance.
-- Open research PR #47 is mergeable, adds only `intelligence/feeds/2026-08-22-afternoon-source-health.json`, and deliberately leaves canonical source history/registry untouched until PR #44's earlier observations are replayed. Its head `de3d559ab7eefc63895a564fd364a61d22ef1ea3` passed Core validation `32594783145`.
-- Open build PR #48 is mergeable and does not touch PR #46's coordination files or PR #47's research snapshot. Its head `9f956d43c4859ba1fb8436e344281563a51d5547` passed Core validation `32595547270` across Python 3.11/3.12/3.13 plus Daily Repository Maintenance `32595547273`.
+- Current `main` is `aa7aeb48ff1d9791f9291b83b3c4bb2176894a1b`, the merge of PR #46 after PRs #44 and #45.
+- PR #46 (`Ops: reconcile merged PRs 44 and 45`) is merged and the pending PR #44 source-health replay is now being executed in PR #50 from this exact `main` base.
+- PR #50 (`Build: replay PR44 source-health observations`) preserves the exact three PR #44 observations at `2026-08-22T07:42:16Z`, advances only the corresponding registry timestamps, and leaves later PR #47/#49 observations untouched for chronological replay. Its implementation head `c328182e34e6788141f231de14dac2e42fe5caad` passed Core validation `32627217531` on Python 3.11/3.12/3.13 plus Intelligence Source Report `32627217523`; Core included tests, compilation, source history/registry/report validation, intelligence validation, artifact inventory, 310 migration/reproduction, dashboard-data generation, and maintenance.
+- Open PR #47 is a one-file raw research snapshot for `2026-08-22T19:42:58Z` and remains mergeable. It includes the NASA 2027 Gateways to Blue Skies candidate and later CTFtime/Sherlock observations; canonical history must not replay it before PR #44.
+- Open PR #49 is a one-file raw research snapshot for `2026-08-23T07:42:04Z`, based on current `main`, and remains mergeable. It must replay after PR #47.
+- Open PR #48 contains the experimental 310 image-analyzer integration but is currently non-mergeable against current `main`; preserve its tested implementation and reconcile it rather than discarding either side.
 - There are no open repository issues.
-- The public GitHub Pages Operations Workspace has been independently reachable with Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry, prompts/workflow and Agent Operations surfaces; deployed-state recheck remains part of this integrity pass.
-- `toolsets/catalog.json` still contains only `repo-factory` at `experimental`.
+- The public GitHub Pages Operations Workspace is reachable and exposes Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source registry, prompts/workflow and Agent Operations surfaces.
+- `toolsets/catalog.json` still contains only `repo-factory` at `experimental`; no toolset changes are part of PR #50.
+
+## Source-history / integration state
+
+- Merged PR #44 preserved exact raw observations for `code4rena-contests`, `sherlock-bounties`, and `ctftime-upcoming` at `2026-08-22T07:42:16Z` in `intelligence/feeds/2026-08-22-source-health.json`.
+- PR #50 independently recomputed all three normalized SHA-256 fingerprints and they match the stored raw snapshot exactly.
+- PR #50 appends those observations to canonical `data/source_check_history.json` with the preserved previous fingerprints and notes, and advances only those three source `last_checked_at` fields in `data/intelligence_sources.json`.
+- On the PR #50 branch, integration item `20260822-pr44-source-health-replay` is marked `integrated` only after the implementation head passed the full Core matrix and Intelligence Source Report. This status is not canonical on `main` until PR #50 merges.
+- Required chronological follow-up remains: PR #47 observations at `2026-08-22T19:42:58Z`, then PR #49 observations at `2026-08-23T07:42:04Z`.
+- Do not infer authorization, payout availability, submission actionability, or source factual freshness beyond the preserved observations.
 
 ## 310 case / tool state
 
-- `btc310-reproduction-verifier` is integrated through canonical `data/tools.json` at `experimental`, linked to case `20260816-310-btc-challenge`, and uses the existing registry/site-data discovery contract rather than bespoke website HTML.
-- PR #45's verified artifact recorded exact regenerated/migrated matches for all four alpha outputs. `alpha_row310.bin` remains 368 bytes with SHA-256 `cffcecf0fc90fb313b58e90ee452427f94204c86970afd297606a0ca46d3f2f8`.
-- This establishes repository-internal extraction reproducibility only. External provenance/authenticity for `310_challenge.png` remains unresolved, so password/decrypt/character hypotheses and any solve claim remain unverified/experimental.
-- PR #48 contributes a repaired deterministic `btc310-image-analyzer` at `experimental` maturity through canonical `data/tools.json`, with direct-script regression coverage and explicit-output-only behavior. It must still receive independent integrity review before merge.
-- Root `brute_force.py`, `char_locator.py`, and preserved generated image artifacts remain legacy/provenance debt; do not delete or relocate them without hash/reference reconciliation.
-
-## Research / source-health state
-
-- PR #44 updated canonical `data/opportunities.json` to reflect Code4rena's wind-down and added `intelligence/feeds/2026-08-22-source-health.json` with timestamped observations for `code4rena-contests`, `sherlock-bounties`, and `ctftime-upcoming`.
-- The three stored fingerprints were independently recomputed with the repository normalization rule and match the raw snapshot exactly.
-- Those observations have **not** yet been replayed into canonical `data/source_check_history.json` / `data/intelligence_sources.json`; the raw snapshot itself says replay is pending. PR #46 tracks this explicitly in `data/integration_queue.json` rather than allowing it to drift silently.
-- PR #47 preserves later observations at `2026-08-22T19:42:58Z` plus a NASA Gateways candidate, but intentionally does not advance canonical source history ahead of the earlier PR #44 replay. Preserve that sequence when integrating.
-- Do not manufacture freshness by copying timestamps alone. Replay the exact PR #44 observed strings through `scripts/source_check_history.py record ... --at 2026-08-22T07:42:16Z`, preserve notes, validate history/registry/report/site data, then replay the later PR #47 observations in timestamp order.
+- `btc310-password-candidates`, `btc310-character-locator`, and `btc310-reproduction-verifier` remain canonically registered at `experimental` on `main` and linked to case `20260816-310-btc-challenge`.
+- PR #45 established repository-internal alpha-extraction reproducibility from protected `310_challenge.png`; this does not establish external provenance/authenticity or a puzzle solve.
+- PR #48 contributes `btc310-image-analyzer` at `experimental`, with deterministic direct-script tests and explicit-output-only behavior, but its branch is currently non-mergeable and needs reconciliation against current `main` before any integration decision.
+- Root `brute_force.py`, `char_locator.py`, and preserved generated images remain legacy/provenance debt and must not be deleted or relocated without hash/reference reconciliation.
 
 ## Coordination / governance state
 
-- `AGENTS.md`, `docs/AI_AGENT_INTEGRATION.md`, and `docs/AUTOMATED_AGENT_OPERATIONS.md` remain mutually consistent on current-main authority, canonical registries/site-data discovery, evidence preservation, independent verification, collision avoidance, and bounded PR-based changes.
-- PR #46 owns current-state/integration-queue reconciliation; PR #47 owns a one-file later research snapshot; PR #48 owns the 310 analyzer/tool-registration lane. Their current changed-file scopes do not collide.
-- Numerous historical `agent/*` branches remain on the remote. Many correspond to merged work; retain them unless provenance/reference review makes branch cleanup explicitly safe.
-- `docs/AGENT_HANDOFF.md` is append-only. The connected write primitive available in this pass replaces whole files; because the journal is long and prior history must not be truncated, exact missing handoffs are preserved in PR descriptions until a safe append-capable pass reconstructs/appends them.
-- A bounded indexed repository search for `subprocess` returned no matches in this pass. This is not represented as a complete security audit.
+- `AGENTS.md`, `docs/AI_AGENT_INTEGRATION.md`, and `docs/AUTOMATED_AGENT_OPERATIONS.md` remain aligned on current-main authority, canonical registries, evidence preservation, dynamic website discovery, collision avoidance, and bounded PR-based changes.
+- PR #50 owns `data/source_check_history.json`, `data/intelligence_sources.json`, `data/integration_queue.json`, `docs/WORK_QUEUE.md`, and this current-state reconciliation. PRs #47 and #49 add only raw feed snapshots and therefore do not collide with these shared paths. PR #48 overlaps `docs/WORK_QUEUE.md` and must be reconciled after current shared-state movement.
+- `docs/AGENT_HANDOFF.md` is append-only. The connected file mutation primitive replaces whole files and no atomic append operation is exposed, so this pass will preserve the exact build handoff in PR #50 rather than risk truncating historical entries.
 
 ## Known debt
 
+- Replay PR #47 and PR #49 observations in chronological order after PR #50 integration.
+- Reconcile the stale/non-mergeable PR #48 analyzer branch against current `main`, preserving its green tested implementation and newer source-history/coordination state.
 - External provenance for `310_challenge.png` remains the primary 310 evidence gate.
-- PR #44 source-health observations still need canonical replay and registry freshness reconciliation; PR #47 later observations must follow that sequence if merged.
 - Generated root artifacts still require hash/provenance-preserving relocation.
-- Broader official-source opportunity/news adapters, catalog freshness, and legacy solver inventory remain incomplete.
-- Several historical handoff entries remain preserved in PR descriptions/current-state history rather than the append-only journal because of connector-safe-append limitations.
+- Broader official-source adapters, catalog freshness, and legacy solver inventory remain incomplete.
 
 ## Current operating priorities
 
-1. Re-run PR #46 validation after this concurrency reconciliation and merge it only if the refreshed head remains green and mergeable.
-2. Replay the three PR #44 source-health observations through the canonical source-history command, validate source/history/report/site-data output, then process any later PR #47 observations in timestamp order before marking the integration item complete.
-3. Independently review PR #48's analyzer direct-script behavior, non-mutation guarantees, canonical tool visibility, and `experimental` claim boundary before merge.
-4. Independently verify external provenance for `310_challenge.png` before interpreting solver/decryption output as source-authentic.
-5. Continue legacy solver/root-artifact inventory only with evidence and hash preservation.
+1. Let final PR #50 coordination head complete Core/source-report validation; if green, mark ready for independent integrity review and merge.
+2. Reconcile/merge PR #47 raw snapshot, replay its exact observations at `2026-08-22T19:42:58Z`, validate canonical history/registry/report/site data, and preserve the NASA Gateways candidate.
+3. Replay PR #49 at `2026-08-23T07:42:04Z` only after PR #47 is canonical.
+4. Reconcile PR #48 against current `main`; rerun direct-script, tool-visibility, Core and maintenance validation before merge.
+5. Independently verify external provenance for `310_challenge.png` before interpreting solver/decryption output as source-authentic.
 
 ## Next handoff
 
-Repo Integrity reconciled current `main` after PRs #44 and #45 merged in sequence and then re-reconciled active concurrency after PRs #47 and #48 opened. PR #46 remains the sole owner of shared current-state/integration-queue coordination; PR #47 and PR #48 intentionally avoid those files, so no shared-file conflict is present. The material integration defect remains PR #44's merged raw source-health observations not yet replayed into canonical source history/registry. PR #47 adds a later replay-ready observation set that must follow PR #44 chronologically if merged. PR #48 is a separate experimental 310 analyzer contribution with green final-head Core/Daily CI but still requires independent integrity review. This state update intentionally does not rewrite source history, manufacture freshness, delete evidence, promote maturity, or claim a puzzle solve.
+Build Integration selected the existing PR #44 replay queue item rather than duplicating active research or 310 analyzer work. The exact three raw source observations were copied into canonical history with matching normalized fingerprints, the corresponding registry timestamps were advanced, and the first implementation head passed the full Core matrix plus Intelligence Source Report. Later PR #47/#49 observations were deliberately left untouched so timestamp order remains auditable. The final coordination head still requires fresh CI before PR #50 should be promoted from draft or merged.
