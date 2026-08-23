@@ -4,7 +4,7 @@
   "type": "crypto-puzzle",
   "status": "active",
   "created_at": "2026-08-16T00:00:00Z",
-  "updated_at": "2026-08-22T08:00:00Z",
+  "updated_at": "2026-08-22T20:00:00Z",
   "source": "Legacy repository research",
   "source_url": "",
   "authorization_url": "",
@@ -37,5 +37,5 @@
     "reproduction_check": "scripts/verify_310_reproduction.py",
     "duplicate_manifest": "research/active-puzzles/20260816-310-btc-challenge/bitplane_duplicate_manifest.json"
   },
-  "next_action": "Run the non-destructive reproduction verifier and independently confirm regenerated alpha outputs match migrated evidence across CI. Separately verify the original challenge source/provenance. Only after both evidence gates are understood should the deterministic password-candidate solver be interpreted; a plausible region or decryption is not a solve claim until independently verified."
+  "next_action": "Independently verify the registered btc310-image-analyzer direct-script behavior, deterministic JSON, and explicit-output boundary. Separately verify the original challenge source/provenance. Only after both evidence gates are understood should password/decryption or other hidden-data hypotheses be interpreted; a plausible text pattern, LSB anomaly, character region, or decryption is not a solve claim until independently verified."
 }
