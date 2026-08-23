@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-08-23T19:39:45Z",
+  "purpose": "Raw timestamped research evidence from a bounded current-source pass. This file preserves a newly verified official NASA prize lead without advancing canonical source-history timestamps ahead of the pending PR #47/#49 chronological replay chain.",
+  "finding": {
+    "title": "NASA TechLeap Orbital Clarity Challenge opened with up to $500,000 across three phases",
+    "category": "opportunity",
+    "source_name": "NASA",
+    "source_url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-techleap-prize-orbital-clarity-challenge/",
+    "published_at": "2026-08-19T00:00:00Z",
+    "observed": "nasa techleap orbital clarity challenge | official nasa page published aug 19 2026 | challenge open aug 19 2026 | phase 1 registration closes oct 28 2026 | phase 1 submission closes nov 11 2026 | up to four winners may receive up to 500000 usd across three phases | winning teams intended no-cost test flight",
+    "content_fingerprint": "2cddf2dcf66db6a0c956477d17ff7d9eb30b41a2eae7907a962808970db96821",
+    "confidence": "high",
+    "relevance": "high",
+    "verified_facts": [
+      "NASA states the challenge opened August 19, 2026.",
+      "NASA states Phase 1 registration closes October 28, 2026.",
+      "NASA states Phase 1 submissions close November 11, 2026.",
+      "NASA states up to four winners may receive up to $500,000 in prizes across three phases.",
+      "NASA intends to offer each winning team a test flight at no cost at the conclusion of the challenge."
+    ],
+    "missing_verification_before_actionability": [
+      "Exact participant/entity eligibility from the official competition rules.",
+      "Any geographic, citizenship, organization-type, team-size, or registration restrictions.",
+      "Phase-specific award allocation rather than the aggregate maximum across all three phases.",
+      "Full submission requirements and judging/acceptance criteria.",
+      "Any entry fees, required agreements, intellectual-property terms, export-control restrictions, or other participation conditions."
+    ],
+    "publication_recommendation": "Promising high-value official-source lead. Promote to canonical intelligence only after the official competition rules are opened and exact eligibility/submission terms are preserved. Do not create an active case from the aggregate prize/open-date announcement alone."
+  },
+  "source_health": {
+    "source_id": "ctftime-upcoming",
+    "url": "https://ctftime.org/event/list/upcoming",
+    "observed": "ctftime upcoming | compfest aug 29 0000 utc | blackhat mea qualification aug 29 0700 utc | asis quals aug 29 1400 utc | und cyberhawks qualifier aug 29 1400 utc casual | iran tech olympics aug 29 1400 utc | nns sep 4 | tfc sep 5",
+    "content_fingerprint": "1139453bda1f1fc4bba4417301f0823f15351fbe11b85d2f916b945f73a3cd59",
+    "note": "The next broad online CTF cluster remains August 29. Existing canonical late-August intelligence already covers this planning window, so no duplicate feed item is recommended. This observation must not be replayed into canonical history until the earlier PR #47 and PR #49 observations have been integrated in timestamp order."
+  },
+  "safety": "No target testing was performed. No public target, repository, bounty, challenge listing, or hostname was treated as authorization for security testing."
+}
