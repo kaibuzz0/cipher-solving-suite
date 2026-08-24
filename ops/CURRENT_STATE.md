@@ -1,63 +1,57 @@
 # Current Repository State
 
-Last reconciled: 2026-08-23 20:08 UTC
+Last reconciled: 2026-08-24 08:17 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `ceb2a99876227ac827f821b5df386e080c65ed73`, the merge of documentation-only integrity reconciliation PR #51 after PR #50.
-- PR #51 head `038ec53a82f36e137a236caaa95000594fc2c487` passed Core validation `32660869978` before merge.
-- PR #50 is canonical; its final head `a9693c067b40fee35779e9b2e2c6a860104c0528` passed Core `32627332013` on Python 3.11/3.12/3.13, Daily Repository Maintenance `32627332057`, and Intelligence Source Report `32627332041`.
-- There are no known open repository issues from the latest integrity pass.
-- `toolsets/catalog.json` still contains only `repo-factory` at `experimental`; this build pass does not alter toolset state.
-
-## Active build reconciliation
-
-- Draft PR #53 (`Build: reconcile portable 310 image analyzer onto current main`) rebuilds the previously green PR #48 `btc310-image-analyzer` contribution from current `main` instead of merging its stale shared-state snapshot wholesale.
-- PR #53 implementation head `7a3279c7bd40ddafd93605a0d113a6172ab132b8` passed Core validation `32663290339` across Python 3.11/3.12/3.13 and Daily Repository Maintenance `32663290409`.
-- All three Core matrix jobs passed the test suite, compilation, source registry/history/report validation, intelligence validation, artifact inventory, 310 migration verification, 310 alpha reproduction, dashboard-data generation, maintenance, and final failure gate. This includes the analyzer direct-script regression tests and the canonical user-visible tool-discovery contract.
-- The reconciled branch preserves the portable/non-destructive analyzer, deterministic direct-script tests, `experimental` tool registration, active-case linkage, and safe explicit-output workflow while retaining all newer PR #50/#51 source-history and coordination state.
-- `analyze_310.py` is read-only by default; derived `channel_*.png` and `difference.png` files are written only when `--output-dir` is explicitly supplied. Existing root artifacts are fingerprinted before/after default direct-script tests and must remain unchanged.
-- A final state-only reconciliation commit follows the successful implementation validation; the final PR head must also remain green before draft status is removed.
-
-## Source-history / research coordination
-
-- PR #44 observations at `2026-08-22T07:42:16Z` are canonical through PR #50 and integration item `20260822-pr44-source-health-replay` is `integrated`.
-- Open research PR #47 preserves the next raw snapshot at `2026-08-22T19:42:58Z`, including the NASA Gateways candidate; PR #49 preserves the following `2026-08-23T07:42:04Z` snapshot; PR #52 preserves a newer NASA Orbital Clarity lead. These raw research lanes are not modified by the analyzer reconciliation.
-- Canonical source replay must remain chronological: PR #47, then PR #49; later research must not manufacture earlier registry freshness.
-- Public bounty/program listings remain discovery evidence only and are not testing authorization.
+- Current `main` is `73fa9fa5314d476829c8b3bdbc0915203ba6df2e`, the merge of PR #53 (`Build: reconcile portable 310 image analyzer onto current main`).
+- PR #53 final head `3f8ac5466a25506e40bcd736baf9789355257525` passed Core validation run `32663349865` and Daily Repository Maintenance run `32663349853` before merge.
+- The earlier implementation head `7a3279c7bd40ddafd93605a0d113a6172ab132b8` also passed Core validation `32663290339` on Python 3.11/3.12/3.13 and Daily Repository Maintenance `32663290409`.
+- No open repository issues were found in this integrity pass.
+- The public GitHub Pages Operations Workspace is reachable and exposes the canonical Opportunities, News / Intel, Cases, Tools, Evidence, Collection Health, source-registry and Agent Operations surfaces.
+- `toolsets/catalog.json` still contains only `repo-factory` at `experimental` maturity.
 
 ## 310 case / tool state
 
-- Canonical `main` currently registers `btc310-password-candidates`, `btc310-character-locator`, and `btc310-reproduction-verifier` at `experimental` for case `20260816-310-btc-challenge`.
-- PR #45 established repository-internal alpha extraction reproducibility from protected `310_challenge.png`; external source/provenance for that image remains unresolved and reproducibility is not a puzzle solve.
-- PR #53 contributes `btc310-image-analyzer` at `experimental`; until merge it is branch-only, not canonical on `main`.
-- The analyzer keeps RGB statistics, printable-byte runs, LSB summaries, and legacy hint checks explicitly exploratory. No hidden-data, private-key, or solve claim is made.
-- Root `brute_force.py`, `char_locator.py`, and preserved generated images remain legacy/provenance debt and must not be deleted or relocated without hash/reference reconciliation.
+- `btc310-image-analyzer` is now canonical on `main` at `experimental` maturity, alongside `btc310-password-candidates`, `btc310-character-locator`, and `btc310-reproduction-verifier` for case `20260816-310-btc-challenge`.
+- The analyzer remains read-only by default. Derived `channel_*.png` and `difference.png` files are written only when `--output-dir` is explicitly supplied.
+- Its RGB statistics, printable-byte runs, LSB summaries and legacy-hint checks remain exploratory. Merge/CI success does not establish hidden data, a private key, source authenticity, or a puzzle solve.
+- PR #45 established repository-internal alpha extraction reproducibility from protected `310_challenge.png`; external provenance for that image remains unresolved.
+- Root `brute_force.py`, `char_locator.py`, preserved generated images, and other legacy/root artifacts remain provenance debt and must not be silently deleted or relocated.
+
+## Source-history / research coordination
+
+- PR #44 observations at `2026-08-22T07:42:16Z` are canonical through PR #50; integration item `20260822-pr44-source-health-replay` remains `integrated`.
+- Open PR #47 preserves the next raw snapshot at `2026-08-22T19:42:58Z`, including the NASA Gateways candidate.
+- Open PR #49 preserves the following raw snapshot at `2026-08-23T07:42:04Z`.
+- Open PR #52 preserves a newer NASA Orbital Clarity research lead and intentionally does not advance overlapping canonical source timestamps.
+- Canonical source replay must remain chronological: PR #47 first, then PR #49. PR #52 should be evaluated only after those earlier observations are canonical where they overlap.
+- These pending research contributions are now represented explicitly in `data/integration_queue.json`; raw research evidence is not treated as canonical freshness until replay/validation completes.
+- Public bounty/program listings remain discovery evidence only and are not authorization to test targets.
 
 ## Coordination / governance state
 
 - `AGENTS.md`, `docs/AI_AGENT_INTEGRATION.md`, and `docs/AUTOMATED_AGENT_OPERATIONS.md` remain the controlling integration contract.
-- The analyzer branch intentionally avoids `data/source_check_history.json`, `data/intelligence_sources.json`, raw research snapshots, toolset manifests/catalog, and website HTML.
-- User-visible discovery flows through canonical `data/tools.json` plus the existing generated site-data / Command Site contract; no bespoke `site/index.html` edit is part of this work.
-- `docs/AGENT_HANDOFF.md` is append-only and too large to safely reconstruct from the connected truncated read. The exact build handoff is preserved in PR #53 for a safe append-capable integrity pass rather than risking journal truncation.
+- User-visible discovery continues through canonical registries/manifests plus generated site-data / Command Site paths; PR #53 required no bespoke website HTML.
+- `docs/AGENT_HANDOFF.md` remains append-only. The current file on `main` still ends with older entries and does not contain the later PR #53 integrity reconciliation. The available connected writer replaces the whole file, so this pass does not risk truncating history; the exact handoff is preserved in the integrity PR description for a safe append-capable follow-up.
 
 ## Known debt
 
-- Replay PR #47 then PR #49 chronologically through canonical source history/registry validation.
-- Independently verify and merge PR #53 only if its final state-reconciled head remains green and the `experimental` boundary is appropriate.
-- Verify external provenance for `310_challenge.png` before interpreting any solver/decryption result as source-authentic.
+- Reconcile and replay PR #47, then PR #49, through canonical source history/registry/report/site-data validation.
+- Evaluate PR #52 only after the earlier chronological replay state is canonical; preserve exact eligibility/rules evidence before promoting any opportunity claim.
+- Verify external provenance for `310_challenge.png` before interpreting solver/decryption/analyzer output as source-authentic.
 - Continue hash/provenance-preserving root artifact migration and remaining legacy solver inventory.
-- Add further provenance-preserving official-source adapters where current sources support exact evidence.
+- Continue source-specific evidence adapters and dependency/supply-chain review without promoting unsupported capability claims.
 
 ## Current operating priorities
 
-1. Confirm final-head CI for PR #53, then hand it to Repo Integrity for independent direct-script/site-discovery review.
-2. Preserve chronological source replay: PR #47, then PR #49; evaluate PR #52 only after earlier source state is canonical.
-3. Verify external provenance for `310_challenge.png` before escalating 310 semantic/decryption hypotheses.
-4. Continue legacy solver/root-artifact inventory without deleting primary evidence.
+1. Reconcile PR #47 onto current `main` without losing its NASA Gateways/raw source evidence, replay its exact observations at `2026-08-22T19:42:58Z`, and rerun Core/source/report/site-data validation.
+2. Replay/reconcile PR #49 next at `2026-08-23T07:42:04Z`.
+3. Evaluate PR #52 only after overlapping earlier source state is canonical.
+4. Verify external provenance for `310_challenge.png` and continue legacy/root-artifact inventory without deleting primary evidence.
 
 ## Next handoff
 
-Build Integration merged green documentation-only PR #51, then rebuilt PR #48's tested analyzer contribution on top of that newer `main` instead of accepting stale shared state. PR #53 implementation head `7a3279c7...` passed Core `32663290339` on Python 3.11/3.12/3.13 and Daily Maintenance `32663290409`, including direct-script analyzer tests, 310 evidence checks, dashboard generation and tool visibility. This state-only reconciliation records those exact results; final-head CI remains the last builder gate before independent integrity review.
+Repo Integrity verified that PR #53 final head `3f8ac546...` passed Core `32663349865` and Daily Repository Maintenance `32663349853`, and that the merged analyzer remains correctly bounded at `experimental`. The post-merge defect was coordination drift: `ops/CURRENT_STATE.md` still described PR #53 as draft/branch-only, while pending research PRs #47/#49/#52 were not explicitly represented as integration-queue work. This integrity branch reconciles those surfaces without changing research data, source history, solver behavior, tool maturity, or website HTML. Exact next action is PR #47 chronological replay, then PR #49, then PR #52 evaluation.
