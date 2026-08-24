@@ -2,30 +2,50 @@
   "checked_at": "2026-08-23T19:39:45Z",
   "purpose": "Raw timestamped research evidence from a bounded current-source pass. This file preserves a newly verified official NASA prize lead without advancing canonical source-history timestamps ahead of the pending PR #47/#49 chronological replay chain.",
   "finding": {
-    "title": "NASA TechLeap Orbital Clarity Challenge opened with up to $500,000 across three phases",
+    "title": "NASA TechLeap Orbital Clarity Challenge opened with a $2 million award pool and up to $500,000 per winner across three phases",
     "category": "opportunity",
-    "source_name": "NASA",
+    "source_name": "NASA / Orbital Clarity Challenge official host",
     "source_url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-techleap-prize-orbital-clarity-challenge/",
+    "rules_url": "https://occ.nasatechleap.org/frequently-asked-questions/",
+    "timeline_url": "https://occ.nasatechleap.org/challenge-phases-and-timeline/",
+    "technical_guidelines_url": "https://occ.nasatechleap.org/technical-guidelines/",
+    "evaluation_url": "https://occ.nasatechleap.org/evaluation-criteria/",
+    "insurance_url": "https://occ.nasatechleap.org/insurance-guidelines/",
     "published_at": "2026-08-19T00:00:00Z",
-    "observed": "nasa techleap orbital clarity challenge | official nasa page published aug 19 2026 | challenge open aug 19 2026 | phase 1 registration closes oct 28 2026 | phase 1 submission closes nov 11 2026 | up to four winners may receive up to 500000 usd across three phases | winning teams intended no-cost test flight",
+    "observed": "nasa techleap orbital clarity challenge | official nasa page published aug 19 2026 | challenge open aug 19 2026 | phase 1 registration closes oct 28 2026 | phase 1 submission closes nov 11 2026 | up to four winners may receive up to 500000 usd each across three phases | total award pool 2000000 usd | winning teams intended no-cost test flight",
     "content_fingerprint": "2cddf2dcf66db6a0c956477d17ff7d9eb30b41a2eae7907a962808970db96821",
     "confidence": "high",
     "relevance": "high",
     "verified_facts": [
       "NASA states the challenge opened August 19, 2026.",
-      "NASA states Phase 1 registration closes October 28, 2026.",
-      "NASA states Phase 1 submissions close November 11, 2026.",
-      "NASA states up to four winners may receive up to $500,000 in prizes across three phases.",
-      "NASA intends to offer each winning team a test flight at no cost at the conclusion of the challenge."
+      "Phase 1 registration closes October 28, 2026 at 5:00 p.m. ET.",
+      "Phase 1 submissions close November 11, 2026 at 5:00 p.m. ET.",
+      "The official host states an award pool of $2 million: up to four winners may receive up to $500,000 each across three phases.",
+      "Phase 1 winners receive $200,000 each; Phase 2 teams may receive an additional $200,000 each; Phase 3 teams may receive an additional $100,000 each.",
+      "NASA intends to offer each Phase 3 winner an orbital flight test at no cost.",
+      "Individuals must be U.S. citizens or U.S. permanent residents and at least 18 years old.",
+      "Organizations must be incorporated in and maintain a primary place of business in the United States.",
+      "Teams must consist of otherwise eligible individuals or organizations and be led by a U.S. citizen or permanent resident who is at least 18 years old.",
+      "Each eligible lead applicant may submit once, though a lead applicant may partner on another distinct submission.",
+      "Applicants may not receive U.S. government funding twice for the same scope of work; prior or current government-funded development can affect eligibility.",
+      "The challenge requires at least $250,000 in liability-insurance coverage or equivalent financial responsibility, with coverage conditions specified by the official host.",
+      "Standalone free-flying satellites are not eligible; proposed solutions must be compatible with hosted-payload integration on a commercial spacecraft.",
+      "Phase 1 submissions are scored by expert judges on a 1-5 rubric, normalized, and the top submissions proceed to a selection committee that chooses up to four winners using scores plus programmatic considerations."
     ],
-    "missing_verification_before_actionability": [
-      "Exact participant/entity eligibility from the official competition rules.",
-      "Any geographic, citizenship, organization-type, team-size, or registration restrictions.",
-      "Phase-specific award allocation rather than the aggregate maximum across all three phases.",
-      "Full submission requirements and judging/acceptance criteria.",
-      "Any entry fees, required agreements, intellectual-property terms, export-control restrictions, or other participation conditions."
+    "rules_observation": {
+      "checked_at": "2026-08-24T07:42:46Z",
+      "observed": "orbital clarity official rules faq | individuals us citizens or permanent residents age 18 plus | organizations incorporated and primary place of business in united states | teams composed of eligible individuals or organizations and led by us citizen or permanent resident age 18 plus | phase 1 registration due oct 28 2026 5 pm et | submission due nov 11 2026 5 pm et | phase 1 winners 200000 usd each up to four | phase 2 additional 200000 usd each | phase 3 additional 100000 usd each | minimum 250000 usd liability insurance or equivalent financial responsibility required",
+      "content_fingerprint": "c20b116f0c674a91071d1bc11739e193ce41a30256c8bc1b74473232e6dfcf5f",
+      "note": "Independently re-opened official Orbital Clarity host pages. This is challenge-level actionability evidence, not a canonical source-registry freshness update and not security-testing authorization."
+    },
+    "remaining_verification_before_structured_case": [
+      "Preserve the complete official Rules, Terms, and Conditions page/PDF rather than relying only on the FAQ summaries for legal terms.",
+      "Confirm whether any registration fee or other direct entry fee exists; none was stated on the reviewed official pages.",
+      "Preserve complete intellectual-property, export-control, tax, indemnification, and winner-agreement terms from the official rules.",
+      "Preserve the complete Phase 1 submission form and all mandatory deliverables/format limits before creating active work.",
+      "Confirm the user/team can satisfy the U.S. eligibility and $250,000 financial-responsibility requirement before treating the challenge as personally actionable."
     ],
-    "publication_recommendation": "Promising high-value official-source lead. Promote to canonical intelligence only after the official competition rules are opened and exact eligibility/submission terms are preserved. Do not create an active case from the aggregate prize/open-date announcement alone."
+    "publication_recommendation": "This lead now has enough official evidence for a high-confidence canonical intelligence item after the earlier PR #47 and PR #49 source observations are replayed in chronological order. Do not create a structured active case until the complete Rules, Terms, and Conditions and submission form are preserved and the intended participant confirms eligibility and financial-responsibility requirements."
   },
   "source_health": {
     "source_id": "ctftime-upcoming",
