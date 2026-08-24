@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-24T08:18:00Z",
+  "updated_at": "2026-08-24T19:21:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -10,13 +10,63 @@
       "branch_or_pr": "PR #44 / bf6de08f1daee1c1ceb82cf20a4d85af53dcc9de; replay PR #50",
       "path": "intelligence/feeds/2026-08-22-source-health.json",
       "purpose": "Replay the merged raw source-health observations into canonical source-check history and registry freshness without manufacturing timestamps or losing provenance.",
-      "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. PR #50 replays those exact fingerprints, notes and checked timestamps into canonical source history and source registry while leaving later PR #47/#49 observations untouched for chronological follow-up.",
-      "verification": "The three raw observed strings independently recompute to the stored SHA-256 fingerprints. PR #50 final head a9693c067b40fee35779e9b2e2c6a860104c0528 passed Core validation 32627332013 on Python 3.11/3.12/3.13, Daily Repository Maintenance 32627332057, and Intelligence Source Report 32627332041.",
+      "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. PR #50 replayed those exact fingerprints, notes and checked timestamps into canonical source history and source registry.",
+      "verification": "The three raw observed strings independently recomputed to the stored SHA-256 fingerprints. PR #50 final head a9693c067b40fee35779e9b2e2c6a860104c0528 passed Core validation 32627332013 on Python 3.11/3.12/3.13, Daily Repository Maintenance 32627332057, and Intelligence Source Report 32627332041.",
       "risks": [
-        "Later source observations must still be replayed chronologically: PR #47 at 2026-08-22T19:42:58Z, then PR #49 at 2026-08-23T07:42:04Z.",
+        "Later source observations must still be replayed chronologically.",
         "A bounty/platform listing is discovery evidence, not authorization to test any target."
       ],
-      "next_action": "Reconcile PR #47 onto current main without losing its NASA Gateways candidate, replay its exact observations at 2026-08-22T19:42:58Z, validate canonical history/registry/report/site data, then replay PR #49 at 2026-08-23T07:42:04Z."
+      "next_action": "Process pending PR #47, then PR #49, in timestamp order."
+    },
+    {
+      "id": "20260822-pr47-source-health-replay",
+      "type": "data",
+      "status": "needs-integration",
+      "contributor": "research-agent / PR #47",
+      "branch_or_pr": "PR #47 / agent/research-nasa-gbs-20260822",
+      "path": "intelligence/feeds/2026-08-22-afternoon-source-health.json",
+      "purpose": "Preserve and canonically replay the next chronological source-health snapshot, including the NASA Gateways candidate, after the already-integrated PR #44 observations.",
+      "summary": "PR #47 preserves replay-ready observations at 2026-08-22T19:42:58Z for challenge-gov, ctftime-upcoming and sherlock-bounties plus a source-backed NASA Gateways intelligence candidate. It must be reconciled onto current main rather than merged from stale shared state wholesale.",
+      "verification": "Research evidence is preserved in PR #47; canonical source-history/registry replay has not yet been completed on current main.",
+      "risks": [
+        "Do not advance canonical timestamps out of chronological order.",
+        "NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.",
+        "Public bounty listings are discovery evidence only and are not testing authorization."
+      ],
+      "next_action": "Reconcile PR #47 onto current main, replay its exact 2026-08-22T19:42:58Z observations through source_check_history.py, validate registry/history/report/site-data, and promote only the fingerprint-matching NASA candidate if still supported."
+    },
+    {
+      "id": "20260823-pr49-source-health-replay",
+      "type": "data",
+      "status": "blocked",
+      "contributor": "research-agent / PR #49",
+      "branch_or_pr": "PR #49",
+      "path": "intelligence/feeds/2026-08-23-source-health.json",
+      "purpose": "Preserve and replay the Aug. 23 source-health snapshot after PR #47 is canonical.",
+      "summary": "PR #49 preserves observations at 2026-08-23T07:42:04Z for USA.gov/ACL Caregiver AI Prize, CTFtime, Sherlock and ETHGlobal. It intentionally did not rewrite canonical source history out of order.",
+      "verification": "Raw research is preserved in PR #49; canonical replay is intentionally pending the earlier PR #47 snapshot.",
+      "risks": [
+        "Blocked on PR #47 chronological replay.",
+        "An active federal challenge lifecycle does not prove that submissions are presently open.",
+        "Bounty listings do not establish testing authorization."
+      ],
+      "next_action": "After PR #47 replay is canonical and validated, reconcile PR #49 onto that state, replay its exact 2026-08-23T07:42:04Z observations, and rerun source/Core/site-data validation."
+    },
+    {
+      "id": "20260823-pr52-orbital-clarity-research",
+      "type": "research",
+      "status": "blocked",
+      "contributor": "research-agent / PR #52",
+      "branch_or_pr": "PR #52",
+      "path": "intelligence/feeds/2026-08-23-orbital-clarity-research.json",
+      "purpose": "Preserve the NASA TechLeap Orbital Clarity lead until earlier overlapping source-history state is reconciled and full actionability evidence is independently verified.",
+      "summary": "PR #52 preserves official-source dates and prize/test-flight claims for NASA TechLeap Orbital Clarity but explicitly lacks complete eligibility, IP/export-control, phase-award, judging and submission-rule evidence needed for structured active work.",
+      "verification": "Research evidence is preserved in PR #52; no canonical source-history advancement or active-case promotion has occurred.",
+      "risks": [
+        "Blocked on earlier overlapping source replay where applicable.",
+        "Do not present headline prize values or open lifecycle as proof of current eligibility/actionability without full official rules."
+      ],
+      "next_action": "After PR #47 and PR #49 are reconciled, independently verify the official Orbital Clarity competition rules and preserve exact eligibility, participation, phase-award, judging, IP/export-control, submission and entry-cost terms before deciding whether canonical promotion is warranted."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",
