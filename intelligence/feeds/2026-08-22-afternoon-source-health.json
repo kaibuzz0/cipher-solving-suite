@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-08-22T19:42:58Z",
+  "purpose": "Raw timestamped research observations from a bounded current-source pass. These observations are replay-ready for canonical source history after the already-pending PR #44 replay is reconciled; the NASA finding also includes a canonical intelligence promotion candidate.",
+  "sources": [
+    {
+      "source_id": "challenge-gov",
+      "url": "https://www.usa.gov/find-active-challenge",
+      "primary_followup_url": "https://blueskies.nianet.org/competition/",
+      "observed": "usa.gov active challenges | nasa 2027 gateways to blue skies open aug 18 2026 | notice of intent oct 12 2026 11:59 pm et | proposal and video feb 22 2027 11:59 pm et | teams 2-6 students at accredited us postsecondary institutions | faculty advisor required | at least 2 us citizen or permanent resident student members | up to 8 phase 1 finalists receive 9000 usd each | eligible first-place team members offered nasa internships",
+      "content_fingerprint": "63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9",
+      "previous_fingerprint": "968c06befa09b1589dd416b28bf850725b3dbf2e3dce6b210653758f25e13e3d",
+      "change_state": "changed",
+      "note": "USA.gov lists NASA's 2027 Gateways to Blue Skies competition as active. The official competition host independently confirms the competition opened August 18, 2026, Phase-1 Notice of Intent is due October 12, 2026 at 11:59 PM ET, the proposal/video deadline is February 22, 2027 at 11:59 PM ET, up to eight finalist teams receive $9,000 each, and eligibility is limited to student-led teams of 2-6 from accredited U.S.-based postsecondary institutions with one faculty advisor and at least two U.S.-citizen/permanent-resident student members. This is a real current opportunity but specialized, so no generic active case was created.",
+      "publish_candidate": {
+        "id": "2026-08-22-nasa-gateways-to-blue-skies-2027-open-phase-1",
+        "fingerprint": "83d322a69ff47dde04cb9453",
+        "title": "NASA Gateways to Blue Skies 2027 is open with eight $9,000 Phase-1 finalist awards",
+        "summary": "NASA's 2027 Gateways to Blue Skies competition is accepting Phase-1 participation. Student-led teams of 2-6 from accredited U.S.-based postsecondary institutions submit a Notice of Intent by October 12, 2026 and a proposal/video by February 22, 2027. Up to eight eligible finalist teams receive $9,000 each and advance; the rules require a faculty advisor and at least two U.S.-citizen or permanent-resident student members.",
+        "category": "opportunity",
+        "source_id": "challenge-gov",
+        "source_name": "NASA Gateways to Blue Skies",
+        "source_url": "https://blueskies.nianet.org/competition/",
+        "published_at": "2026-08-18T15:00:00Z",
+        "checked_at": "2026-08-22T19:42:58Z",
+        "confidence": "high",
+        "relevance": "useful",
+        "agent_notes": "Verified against both USA.gov's federal-challenge discovery entry and the official Gateways to Blue Skies competition pages. Specialized student eligibility means this should remain a discovery opportunity unless a prospective team independently satisfies the full competition agreement; no active case is created by this observation.",
+        "related_case": "",
+        "tags": ["government", "nasa", "student", "competition", "aviation"]
+      }
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | pecan+ aug 23 0100-0500 utc school teams only | compfest aug 29 | blackhat mea qualification aug 29 | asis quals aug 29 | und cyberhawks national ctf qualifiers aug 29 casual | iran tech olympics ctf aug 29",
+      "content_fingerprint": "c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef",
+      "previous_fingerprint": "b4fd6097726339050cdf68858ae73b4af6e9894f885804e1be44d8ae9b07cea2",
+      "change_state": "changed",
+      "note": "The upcoming list advanced again after the earlier August 22 snapshot: PECAN+ is now first and is marked school-teams-only, followed by the August 29 COMPFEST, BlackHat MEA Qualification, ASIS Quals, UND CyberHawks qualifier, and Iran Tech Olympics cluster. Existing canonical late-August CTF intelligence already covers the useful planning window, so another feed item would be duplicate noise."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | midas 500000 usdc live last updated aug 21 2026 9:23 pm | cap 1000000 usdc last updated aug 18 2026 | aave v4 2500000 usd | puffer 100000 usdc",
+      "content_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "previous_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "change_state": "unchanged",
+      "note": "Rechecked the current Sherlock bounty listing after the PR #44 observation. Midas remains the most recently updated entry at 500,000 USDC; Cap, Aave V4 and Puffer remain represented. No stronger new bounty change was found, and no listing was treated as testing authorization."
+    }
+  ]
+}
