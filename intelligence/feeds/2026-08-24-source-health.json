@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T19:42:29Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "73fa9fa5314d476829c8b3bdbc0915203ba6df2e",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "USA.gov active federal challenges on 2026-08-24 include ACL Caregiver AI Prize Challenge, ACL Cultivating Connected Communities Challenge, Building Disaster-Ready Human Services Systems, Connecting Talent to Opportunity Challenge, Halt the Hitchhiker: Invasive Species Challenge, NASA Gateways to Blue Skies, NIH Complement-ARIE NAMs Reduction to Practice Challenge, One CDC Data Platform Innovation Challenge, xTech Kinetic Reach, and xTech Search 10.",
+      "sha256": "756f0ba6b3d9b0e5f37d97dd44f1764cfd5e2d370f560411017086628795c85d",
+      "note": "Discovery surface remains lifecycle-oriented; challenge-level actionability must be verified on the official host before promotion."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime upcoming list on 2026-08-24 begins with COMPFEST CTF 2026 Aug 29 00:00 UTC, BlackHat MEA CTF Qualification 2026 Aug 29 07:00 UTC, ASIS CTF Quals 2026 Aug 29 14:00 UTC, UND CyberHawks National CTF Competition 2026 Qualifiers Aug 29 14:00 UTC, Iran Tech Olympics CTF 2026 Aug 29 14:00 UTC, and DiceCTF 2026 Finals Aug 29 16:00 UTC; NNS CTF starts Sep 4 and TFC CTF starts Sep 5.",
+      "sha256": "a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22",
+      "note": "Existing late-August CTF intelligence already covers the useful planning window; avoid duplicate feed noise unless an organizer-level rule/prize change is verified."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "Sherlock Bug Bounties on 2026-08-24 shows Usual Labs as largest at 16,000,000 USDC and Midas as most recent at 500,000 USDC; Midas last updated Aug 21, 2026, Cap Aug 18 at 1,000,000 USDC, Aave V4 Jul 29 at 2,500,000 USD, and Puffer Aug 17 at 100,000 USDC.",
+      "sha256": "13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6",
+      "note": "Listings are discovery evidence only. No testing authorization is inferred; exact program scope/rules remain mandatory before any security work."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ETHGlobal upcoming events on 2026-08-24 show ETHGlobal Happy Hour at ETHBelgrade Aug 26-27, ETHOnline 2026 Sep 4-16, ETHGlobal Happy Hour Tokyo Sep 5, ETHGlobal Tokyo Sep 25-27, Pragma Tokyo Sep 26, Pragma Mumbai Nov 5, ETHGlobal Mumbai Nov 6-8, and ETHConf 2027 Jun 14-16.",
+      "sha256": "a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9",
+      "note": "ETHOnline dates remain consistent with canonical intelligence; no duplicate feed item recommended."
+    }
+  ],
+  "new_lead": {
+    "title": "HHS Digital Stockpile & Manufacturing Response Network Challenge",
+    "category": "opportunity",
+    "status": "open-phase-1",
+    "source_id": "challenge-gov",
+    "official_sources": [
+      "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/department-of-health-and-human-services-digital-stockpile-manufacturing-response-network-challenge/",
+      "https://www.expeditionhacks.com/challenges/digital-stockpile-challenge",
+      "https://www.expeditionhacks.com/digital-stockpile-challenge-eligibility-agreement"
+    ],
+    "verified_facts": [
+      "Phase 1 submissions are due August 28, 2026 at 8 PM on the challenge host.",
+      "Total prize pool is up to $2.04 million across three phases.",
+      "Phase 1 requires an 8-page paper, a 3-minute pitch video, and a blueprint.",
+      "Up to eight Phase 1 finalists receive $5,000 each; up to three pitch-event winners receive $150,000 each.",
+      "Phase 2 provides up to $150,000 in milestone prizes per advancing team; Phase 3 has a total prize purse up to $1.1 million.",
+      "Individual prize eligibility requires age 18+ and U.S. citizenship or permanent residency; organizations must be U.S.-incorporated with a primary U.S. place of business; a team lead must be 18+ and a U.S. citizen/permanent resident.",
+      "Federal employees acting within scope are ineligible, and overlapping government funding for similar work can restrict eligibility.",
+      "The participant terms grant the U.S. Government broad/unlimited rights in qualifying solution data/work as described by the challenge agreement."
+    ],
+    "confidence": "high",
+    "relevance": "high",
+    "entry_cost": "No entry fee was identified in the reviewed official/host materials; participation costs and pitch-event travel obligations should still be checked before case activation.",
+    "missing_verification": [
+      "Confirm the exact timezone for the host's displayed 8 PM Phase 1 deadline in the complete rules.",
+      "Preserve the full judging-criteria text and scoring weights.",
+      "Confirm whether finalist pitch-event travel is reimbursed or self-funded.",
+      "Preserve the complete IP/data-rights language and any indemnification/tax requirements before active-case conversion."
+    ],
+    "recommended_action": "Promote to canonical intelligence after chronological PR #47 then PR #49 source-history replay is reconciled; create a structured opportunity case only if participant eligibility and the remaining cost/IP/judging gates are acceptable."
+  },
+  "safety": "No target testing was performed. Public security-program listings were treated only as discovery evidence and not as authorization."
+}
