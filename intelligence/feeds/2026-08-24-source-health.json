@@ -1,0 +1,69 @@
+{
+  "date": "2026-08-24",
+  "source_health": {
+    "status": "preserved",
+    "observations": [
+      {
+        "timestamp": "2026-08-24T00:00:00Z",
+        "sha256_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "official_url": "https://github.com/kaibuzz0/cipher-solving-suite",
+        "details": "Bounded research/intelligence pass from current repository truth after PR #53 merged."
+      }
+    ]
+  },
+  "ds_mrn_opportunity": {
+    "name": "HHS Digital Stockpile & Manufacturing Response Network Challenge",
+    "host": "NASA/ASPR",
+    "phase_1_deadline": "2026-08-28T20:00:00Z",
+    "total_prizes": "$2.04 million",
+    "requirements": [
+      "8-page paper",
+      "3-minute pitch video",
+      "blueprint"
+    ],
+    "prize_structure": {
+      "finalists": "Up to 8 receive $5,000 each",
+      "pitch_event_winners": "Up to 3 receive $150,000 each",
+      "later_phases": "Milestone and live-validation prizes"
+    },
+    "eligibility": "U.S.-restricted for monetary awards, government-funding/conflict conditions apply",
+    "ip_terms": "Broad government data-rights language. IP terms preserved before active-case conversion.",
+    "missing_verification_gates": [
+      "Complete judging criteria",
+      "Deadline timezone confirmation",
+      "Pitch-event cost/reimbursement terms",
+      "Full IP/data-rights/indemnification/tax language"
+    ]
+  },
+  "ctftime_intel": {
+    "next_cluster_start": "2026-08-29",
+    "events": [
+      "COMPFEST",
+      "BlackHat MEA Qualification",
+      "ASIS Quals",
+      "UND CyberHawks qualifiers",
+      "Iran Tech Olympics",
+      "DiceCTF Finals"
+    ],
+    "note": "Existing canonical late-August intelligence covers the planning window."
+  },
+  "sherlock_intel": {
+    "midas_bounty": "500,000 USDC",
+    "usual_labs_bounty": "16M USDC",
+    "note": "Cap/Aave V4/Puffer still present. No listing treated as testing authorization."
+  },
+  "ethglobal_intel": {
+    "ethonline": "September 4-16",
+    "tokyo": "September 25-27",
+    "mumbai": "November 6-8",
+    "note": "No correction required."
+  },
+  "usagov_intel": {
+    "note": "Active-federal-challenge discovery remains lifecycle-oriented."
+  },
+  "safety_boundary": {
+    "testing_performed": false,
+    "authorization": "No public hostname, repository, contract, bounty listing, or program page was treated as authorization for security testing."
+  },
+  "exact_next_action": "Merge/reconcile PR #55 if green, then replay PR #47 and PR #49 in chronological order. After validating registry/history/report/site data, replay this Aug 24 snapshot."
+}
