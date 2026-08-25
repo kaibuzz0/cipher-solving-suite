@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-08-23T07:42:04Z",
+  "purpose": "Raw timestamped research observations from a bounded current-source pass. Canonical replay must occur only after the already-pending PR #44 and PR #47 observations are integrated in timestamp order.",
+  "sources": [
+    {
+      "source_id": "challenge-gov",
+      "url": "https://www.usa.gov/find-active-challenge",
+      "primary_followup_url": "https://acl.gov/caregiver-ai-competition",
+      "observed": "usa.gov active challenges | acl caregiver ai prize challenge listed active | usa.gov lifecycle feb 6 2026 to feb 6 2029 | total cash prizes 2500000 usd | official acl page phase 1 applications due jul 31 2026 | phase 1 winners september 2026 | phase 2 and phase 3 dates to be announced | no current open submission phase established",
+      "content_fingerprint": "6d846e460e5e05a9a6614e4d8193c81c747def36bc94aa45e0e95fa19dae21f9",
+      "previous_fingerprint": "63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9",
+      "change_state": "changed",
+      "note": "USA.gov currently lists the ACL Caregiver AI Prize Challenge as active and reports a Feb 6, 2026-Feb 6, 2029 lifecycle with $2.5M total cash prizes. The official ACL host says Phase 1 applications were due July 31, 2026, Phase 1 winners are expected in September, and Phase 2/3 dates will be announced later. Treat the challenge as lifecycle-active but not presently verified open for new submissions; do not promote it as an actionable $2.5M opportunity until a new submission phase and eligibility terms are published."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | compfest aug 29 0000 utc | blackhat mea qualification aug 29 0700 utc | asis quals aug 29 1400 utc | und cyberhawks qualifier aug 29 1400 utc casual | iran tech olympics aug 29 1400 utc | next september events include nns sep 4 and tfc sep 5",
+      "content_fingerprint": "c91ed13127fd0fb0dcd81ac74e17faf710472725ba7cfe8caf2b2e1449e8ad74",
+      "previous_fingerprint": "c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef",
+      "change_state": "changed",
+      "note": "The upcoming list has advanced beyond the Aug 23 PECAN+ window. The next cluster begins Aug 29 with COMPFEST, BlackHat MEA Qualification, ASIS Quals, UND CyberHawks qualifier and Iran Tech Olympics; September then starts with NNS and TFC. Existing canonical late-August CTF intelligence already covers the useful planning window, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | largest usual labs 16000000 usdc | most recent midas 500000 usdc last updated aug 21 2026 | cap 1000000 usdc aug 18 | aave v4 2500000 usd jul 29 | puffer 100000 usdc aug 17",
+      "content_fingerprint": "f6fea98b831dfe6877b722208cb9fb73fd2e4ae5c650655dc80356c40fbafc6c",
+      "previous_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "change_state": "changed",
+      "note": "Sherlock still identifies Midas as the most recent bounty and exposes the broader current listing, including Usual Labs at 16M USDC, Aave V4 at $2.5M, Cap at 1M USDC and Puffer at 100k USDC. The source fingerprint changes because this observation captures the current largest-bounty context as well as the most-recent listing. No bounty listing was treated as testing authorization and no case was activated."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "url": "https://ethglobal.com/events",
+      "observed": "ethglobal upcoming | ethglobal happy hour bali aug 22 | ethglobal happy hour belgrade aug 26-27 | ethonline 2026 sep 4-16 async hackathon | ethglobal tokyo sep 25-27 | ethglobal mumbai nov 6-8",
+      "content_fingerprint": "f3bd2bb7e8d298a0cc3fff6ac3f53af86702c69aa603a1a8e57483ceb14d72d9",
+      "previous_fingerprint": "276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36",
+      "change_state": "changed",
+      "note": "ETHGlobal's official calendar still has ETHOnline Sep 4-16, Tokyo Sep 25-27 and Mumbai Nov 6-8. The fingerprint changes because the current normalized observation also includes the intervening Bali/Belgrade community events. Existing ETHOnline intelligence remains accurate; no duplicate feed item is needed."
+    }
+  ]
+}
