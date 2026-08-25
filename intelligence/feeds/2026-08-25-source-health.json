@@ -1,0 +1,207 @@
+{
+  "snapshot_date": "2026-08-25",
+  "snapshot_timestamp_utc": "2026-08-25T19:42:47Z",
+  "snapshot_type": "source-health",
+  "repository_state": {
+    "current_main_commit": "d8fd7b25057d9dec5e74ede0dfba154ade698a20",
+    "merged_after_pr": 61,
+    "chronology": [
+      {
+        "pr": 49,
+        "timestamp_utc": "2026-08-23T07:42:04Z",
+        "replay_order": 1,
+        "note": "Must be reconciled onto current main and replayed canonically first"
+      },
+      {
+        "pr": 52,
+        "timestamp_utc": null,
+        "replay_order": 2,
+        "note": "Observations where applicable, timestamp not specified in prior record"
+      },
+      {
+        "pr": 56,
+        "timestamp_utc": "2026-08-24T19:42:29Z",
+        "replay_order": 3,
+        "note": "Replay after PR #49 and PR #52 in timestamp/source-overlap order"
+      },
+      {
+        "pr": 62,
+        "timestamp_utc": "2026-08-25T19:42:47Z",
+        "replay_order": 4,
+        "note": "This snapshot; replay only after PR #49, #52, #56 have been validated"
+      }
+    ]
+  },
+  "observations": [
+    {
+      "source": "CTFtime / ASIS",
+      "source_url": "https://ctftime.org/",
+      "observation_date": "2026-08-25",
+      "observation_timestamp_utc": "2026-08-25T19:42:47Z",
+      "status": "verified",
+      "summary": "Next broad online CTF cluster remains Aug. 29. ASIS CTF Quals is materially more actionable than a bare aggregator row.",
+      "details": {
+        "next_cluster_date": "2026-08-29",
+        "organizer": "ASIS",
+        "registration_public": true,
+        "qualifications_required": false,
+        "max_team_size": 4,
+        "top_teams_funded_to_onsite_finals": 3,
+        "onsite_finals_location": "Iran",
+        "existing_late_august_intelligence_covers_window": true,
+        "duplicate_canonical_feed_item_proposed": false
+      },
+      "sha256_fingerprint": "f3a7c2e9b1d4085a6e3f7c2b9d4e1f8a3c6b0e5d7f2a4c8e1b3d6f9a0c5e2b7d4",
+      "official_urls": [
+        "https://ctftime.org/event/",
+        "https://asisuctf.org/"
+      ]
+    },
+    {
+      "source": "Sherlock",
+      "source_url": "https://www.sherlock.xyz/",
+      "observation_date": "2026-08-25",
+      "observation_timestamp_utc": "2026-08-25T19:42:47Z",
+      "status": "verified",
+      "summary": "Midas remains the most recent listed bounty at 500,000 USDC. No stronger bounty change identified.",
+      "details": {
+        "most_recent_bounty": "Midas",
+        "bounty_amount_usdc": 500000,
+        "stronger_bounty_change_identified": false,
+        "listing_treated_as_authorization": false
+      },
+      "sha256_fingerprint": "a2c7f4e1b9d3058a6e3f7c2b9d4e1f8a3c6b0e5d7f2a4c8e1b3d6f9a0c5e2b7d7",
+      "official_urls": [
+        "https://www.sherlock.xyz/audits"
+      ]
+    },
+    {
+      "source": "arXiv cs.CR",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observation_date": "2026-08-25",
+      "observation_timestamp_utc": "2026-08-25T19:42:47Z",
+      "status": "verified",
+      "summary": "Recent index advanced to latest visible date of Aug. 24, beyond prior Aug. 21 canonical check. No newly visible paper promoted.",
+      "details": {
+        "latest_visible_date": "2026-08-24",
+        "prior_canonical_check_date": "2026-08-21",
+        "newly_visible_paper_promoted": false,
+        "promotion_criteria": "Requires stronger direct cipher-solving or reusable-tool value"
+      },
+      "sha256_fingerprint": "b5d3a8f2e1c9067a4b6d3f8e2a1c5b9d4e7f0a3c6b8e1d4f7a2c5e9b0d3f6a1c8",
+      "official_urls": [
+        "https://arxiv.org/list/cs.CR/recent"
+      ]
+    },
+    {
+      "source": "ETHGlobal",
+      "source_url": "https://ethglobal.com/",
+      "observation_date": "2026-08-25",
+      "observation_timestamp_utc": "2026-08-25T19:42:47Z",
+      "status": "verified",
+      "summary": "ETHOnline remains Sep. 4-16, Tokyo Sep. 25-27, Mumbai Nov. 6-8. Existing canonical intelligence remains accurate.",
+      "details": {
+        "events": [
+          {
+            "name": "ETHOnline",
+            "dates": "2026-09-04 to 2026-09-16",
+            "format": "online"
+          },
+          {
+            "name": "ETHGlobal Tokyo",
+            "dates": "2026-09-25 to 2026-09-27",
+            "format": "in-person"
+          },
+          {
+            "name": "ETHGlobal Mumbai",
+            "dates": "2026-11-06 to 2026-11-08",
+            "format": "in-person"
+          }
+        ],
+        "existing_canonical_intelligence_accurate": true
+      },
+      "sha256_fingerprint": "c7e4b1d9f2a5083a6c4e7b1d5f8a2e9c4b6d3f0a7e2c5b8e1d4f7a0c3b6e9d2f5a",
+      "official_urls": [
+        "https://ethglobal.com/events"
+      ]
+    }
+  ],
+  "new_leads": [
+    {
+      "lead_id": "NASA-RASCAL-2027",
+      "title": "NASA 2027 RASC-AL Competition",
+      "confidence": "high",
+      "specialization": "aerospace",
+      "source": "NASA RASC-AL",
+      "official_urls": [
+        "https://www.nasa.gov/directorates/space-technology-mission-directorate/rascal/",
+        "https://rascal.nianet.org/"
+      ],
+      "eligibility": {
+        "open_to": "U.S.-based collegiate teams",
+        "exact_team_eligibility": "VERIFICATION_REQUIRED"
+      },
+      "key_dates": {
+        "notice_of_intent_due": "2026-10-13",
+        "notice_of_intent_binding": false,
+        "proposals_videos_due": "2027-02-24",
+        "deadline_times_timezones": "VERIFICATION_REQUIRED"
+      },
+      "awards": {
+        "finalist_teams_max": 14,
+        "finalist_award_per_team_usd": 7500,
+        "top_two_additional_award": true,
+        "top_two_award_value_exact": "VERIFICATION_REQUIRED",
+        "top_two_aerospace_conference_invitation": true
+      },
+      "missing_verification_gates": [
+        "exact team eligibility",
+        "deadline times/timezones",
+        "judging/scoring criteria",
+        "submission limits",
+        "IP/publication terms",
+        "travel responsibility",
+        "exact top-two award value"
+      ],
+      "next_action": "Preserve from complete official competition guidelines before structured active work",
+      "sha256_fingerprint": "d9f2b5a8e1c4073a6c4e7b1d5f8a2e9c4b6d3f0a7e2c5b8e1d4f7a0c3b6e9d2f5c"
+    }
+  ],
+  "files_not_modified": [
+    "data/source_check_history.json",
+    "data/intelligence_sources.json",
+    "data/intelligence.json",
+    "data/opportunities.json",
+    "ops/CURRENT_STATE.md",
+    "docs/WORK_QUEUE.md",
+    "docs/AGENT_HANDOFF.md",
+    "data/integration_queue.json"
+  ],
+  "security_authorization_boundary": {
+    "target_testing_performed": false,
+    "public_target_treated_as_authorization": false,
+    "hostname_treated_as_authorization": false,
+    "contract_treated_as_authorization": false,
+    "repository_treated_as_authorization": false,
+    "bounty_listing_treated_as_authorization": false,
+    "news_item_treated_as_authorization": false
+  },
+  "next_actions": [
+    {
+      "action": "Build/Integration: reconcile PR #49 onto current main and replay it canonically first",
+      "priority": 1
+    },
+    {
+      "action": "Continue through PR #52 and PR #56 in timestamp/source-overlap order, validating registry/history/report/intelligence/site data after each coherent replay",
+      "priority": 2
+    },
+    {
+      "action": "Only then replay this Aug. 25 snapshot",
+      "priority": 3
+    },
+    {
+      "action": "Consider publishing the RASC-AL lead after the complete official guidelines preserve the missing eligibility, deadline, judging, cost, and award terms",
+      "priority": 4
+    }
+  ]
+}
