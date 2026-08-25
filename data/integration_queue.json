@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-24T19:21:00Z",
+  "updated_at": "2026-08-24T20:06:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -16,24 +16,24 @@
         "Later source observations must still be replayed chronologically.",
         "A bounty/platform listing is discovery evidence, not authorization to test any target."
       ],
-      "next_action": "Process pending PR #47, then PR #49, in timestamp order."
+      "next_action": "Process reconciled PR #58, then PR #49, in timestamp order."
     },
     {
       "id": "20260822-pr47-source-health-replay",
       "type": "data",
       "status": "needs-integration",
-      "contributor": "research-agent / PR #47",
-      "branch_or_pr": "PR #47 / agent/research-nasa-gbs-20260822",
+      "contributor": "research-agent / PR #47; reconciled by build-agent / PR #58",
+      "branch_or_pr": "PR #47 closed as superseded; current reconciliation PR #58 / agent/reconcile-pr47-source-snapshot-20260824",
       "path": "intelligence/feeds/2026-08-22-afternoon-source-health.json",
       "purpose": "Preserve and canonically replay the next chronological source-health snapshot, including the NASA Gateways candidate, after the already-integrated PR #44 observations.",
-      "summary": "PR #47 preserves replay-ready observations at 2026-08-22T19:42:58Z for challenge-gov, ctftime-upcoming and sherlock-bounties plus a source-backed NASA Gateways intelligence candidate. It must be reconciled onto current main rather than merged from stale shared state wholesale.",
-      "verification": "Research evidence is preserved in PR #47; canonical source-history/registry replay has not yet been completed on current main.",
+      "summary": "PR #58 rebuilds the stale PR #47 contribution from post-PR55 current main and preserves its only changed raw snapshot byte-for-byte. Canonical source-history/registry replay is intentionally still pending until the reconciled head passes fresh CI and is merged.",
+      "verification": "Reconciled snapshot blob SHA `1b3911172f85a42689e317c540eb11084fe1d1d5` exactly matches the original PR #47 blob SHA. Original PR #47 Core validation 32594783145 passed. Fresh validation is required on the final PR #58 head before merge/replay.",
       "risks": [
         "Do not advance canonical timestamps out of chronological order.",
         "NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.",
         "Public bounty listings are discovery evidence only and are not testing authorization."
       ],
-      "next_action": "Reconcile PR #47 onto current main, replay its exact 2026-08-22T19:42:58Z observations through source_check_history.py, validate registry/history/report/site-data, and promote only the fingerprint-matching NASA candidate if still supported."
+      "next_action": "Verify fresh CI for PR #58, merge the byte-identical snapshot reconciliation if green, replay its exact 2026-08-22T19:42:58Z observations through source_check_history.py, validate registry/history/report/site-data, and promote only the fingerprint-matching NASA candidate if still supported."
     },
     {
       "id": "20260823-pr49-source-health-replay",
@@ -42,15 +42,15 @@
       "contributor": "research-agent / PR #49",
       "branch_or_pr": "PR #49",
       "path": "intelligence/feeds/2026-08-23-source-health.json",
-      "purpose": "Preserve and replay the Aug. 23 source-health snapshot after PR #47 is canonical.",
+      "purpose": "Preserve and replay the Aug. 23 source-health snapshot after PR #58 / former PR #47 state is canonical.",
       "summary": "PR #49 preserves observations at 2026-08-23T07:42:04Z for USA.gov/ACL Caregiver AI Prize, CTFtime, Sherlock and ETHGlobal. It intentionally did not rewrite canonical source history out of order.",
-      "verification": "Raw research is preserved in PR #49; canonical replay is intentionally pending the earlier PR #47 snapshot.",
+      "verification": "Raw research is preserved in PR #49; canonical replay is intentionally pending the earlier PR #58 snapshot.",
       "risks": [
-        "Blocked on PR #47 chronological replay.",
+        "Blocked on PR #58 chronological replay.",
         "An active federal challenge lifecycle does not prove that submissions are presently open.",
         "Bounty listings do not establish testing authorization."
       ],
-      "next_action": "After PR #47 replay is canonical and validated, reconcile PR #49 onto that state, replay its exact 2026-08-23T07:42:04Z observations, and rerun source/Core/site-data validation."
+      "next_action": "After PR #58 replay is canonical and validated, reconcile PR #49 onto that state, replay its exact 2026-08-23T07:42:04Z observations, and rerun source/Core/site-data validation."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
@@ -66,7 +66,7 @@
         "Blocked on earlier overlapping source replay where applicable.",
         "Do not present headline prize values or open lifecycle as proof of current eligibility/actionability without full official rules."
       ],
-      "next_action": "After PR #47 and PR #49 are reconciled, independently verify the official Orbital Clarity competition rules and preserve exact eligibility, participation, phase-award, judging, IP/export-control, submission and entry-cost terms before deciding whether canonical promotion is warranted."
+      "next_action": "After PR #58 and PR #49 are reconciled, independently verify the official Orbital Clarity competition rules and preserve exact eligibility, participation, phase-award, judging, IP/export-control, submission and entry-cost terms before deciding whether canonical promotion is warranted."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",
@@ -83,7 +83,7 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved.",
         "Post-merge workflow/Pages execution for merge commit 73fa9fa5314d476829c8b3bdbc0915203ba6df2e was not independently observed in this run."
       ],
-      "next_action": "Repo Integrity should independently confirm btc310-image-analyzer in generated Tools/Command Site/repository-browser data on merged main and preserve the experimental boundary; then continue the 310 provenance gate or the next hash-preserving legacy-solver/root-artifact item without disturbing PR #47/#49 chronological source replay."
+      "next_action": "Repo Integrity should independently confirm btc310-image-analyzer in generated Tools/Command Site/repository-browser data on merged main and preserve the experimental boundary; then continue the 310 provenance gate or the next hash-preserving legacy-solver/root-artifact item without disturbing PR #58/#49 chronological source replay."
     }
   ]
 }
