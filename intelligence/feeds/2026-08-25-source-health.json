@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-25T19:42:47Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "d8fd7b25057d9dec5e74ede0dfba154ade698a20",
+  "purpose": "Preserve a bounded current-source research pass without advancing canonical source-history timestamps ahead of the pending PR #49, PR #52, and PR #56 chronological integration chain.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | compfest ctf 2026 aug 29 0000 utc | blackhat mea ctf qualification 2026 aug 29 0700 utc | asis ctf quals 2026 aug 29 1400 utc | und cyberhawks qualifiers aug 29 1400 utc | iran tech olympics ctf 2026 aug 29 1400 utc | dicectf finals aug 29 1600 utc | nns sep 4 | tfc sep 5 | asis organizer states public registration no qualifications team size max four and top three global teams receive fully funded invitation to onsite finals in iran",
+      "sha256": "26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964",
+      "primary_followup_urls": [
+        "https://asisctf.com/",
+        "https://asisctf.com/faq"
+      ],
+      "note": "The late-August CTF calendar remains useful. ASIS is more actionable than a bare aggregator listing because the organizer states registration is public, no qualifications are required, teams are limited to four, and the top three global teams receive a fully funded invitation to the onsite finals. This is competition participation evidence, not authorization to test unrelated systems."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent midas | payout 500000 usdc | current listing still includes puffer program page with severity and rewards | public listing remains discovery evidence only",
+      "sha256": "b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a",
+      "note": "No stronger bounty change was identified than the already preserved Midas/Cap/Aave/Puffer leads. Exact scope, exclusions, prohibited techniques, severity rules, and submission terms remain mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | latest visible date mon 24 aug 2026 | recent cryptography and security submissions now extend beyond the previously recorded fri 21 aug state | no individual paper promoted in this pass without stronger direct cipher solving or reusable tooling relevance",
+      "sha256": "68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f",
+      "note": "The index changed materially, but no paper from the newly visible batch cleared the repository's publication threshold for direct cipher-solving or reusable-tool value during this bounded pass."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 sep 4 to sep 16 | ethglobal tokyo sep 25 to sep 27 | ethglobal mumbai nov 6 to nov 8 | no material change to existing canonical ethonline intelligence",
+      "sha256": "b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648",
+      "note": "Existing ETHOnline intelligence remains accurate; no duplicate feed item is recommended."
+    }
+  ],
+  "new_lead": {
+    "title": "NASA 2027 RASC-AL Competition",
+    "category": "opportunity",
+    "status": "open-specialized",
+    "source_name": "NASA",
+    "official_sources": [
+      "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies/",
+      "https://www.nasa.gov/prizes-challenges-and-crowdsourcing/"
+    ],
+    "verified_facts": [
+      "NASA is accepting concepts from U.S.-based collegiate teams for the 2027 RASC-AL competition.",
+      "A non-binding notice of intent is due October 13, 2026.",
+      "Proposals and accompanying video submissions are due February 24, 2027.",
+      "Up to 14 finalist teams may advance to the final phase.",
+      "Each finalist team receives a $7,500 award to facilitate participation.",
+      "Finalists present at the RASC-AL Forum in Cocoa Beach, Florida, June 7-10, 2027.",
+      "The top two overall teams receive an additional monetary award and an invitation to present at an aerospace conference later in 2027."
+    ],
+    "confidence": "high",
+    "relevance": "useful",
+    "entry_cost": "No entry fee was identified in the reviewed NASA announcement; travel and participation costs beyond the finalist award require verification from the full competition guidelines.",
+    "eligibility": "Specialized: U.S.-based collegiate teams. Exact team composition, student-status, faculty-advisor, institution, citizenship/residency, and other eligibility rules must be preserved from the official competition guidelines before structured active work.",
+    "missing_verification": [
+      "Preserve the complete 2027 RASC-AL competition guidelines and exact team eligibility requirements.",
+      "Confirm whether the October 13 notice-of-intent deadline and February 24 proposal deadline specify a required timezone/time of day.",
+      "Preserve judging criteria, scoring weights, submission format limits, IP/publication terms, travel-cost responsibility, and the exact value/conditions of the additional top-two monetary award."
+    ],
+    "recommended_action": "Keep as a high-confidence specialized discovery lead. After the earlier source-history chain is reconciled, promote to canonical intelligence only if the full official guidelines preserve the missing eligibility, deadline, judging, cost, and award terms. Do not create an active case unless an intended participant can satisfy the collegiate eligibility requirements."
+  },
+  "chronology": "Canonical source-history replay must preserve the older pending sequence before overlapping timestamps from this snapshot: PR #49 at 2026-08-23T07:42:04Z, then PR #52 source-health/rules observations where applicable, then PR #56 at 2026-08-24T19:42:29Z, then this 2026-08-25T19:42:47Z snapshot.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
