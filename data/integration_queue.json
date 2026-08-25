@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-25T19:22:00Z",
+  "updated_at": "2026-08-25T20:06:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -16,7 +16,7 @@
         "Later source observations must still be replayed chronologically.",
         "A bounty/platform listing is discovery evidence, not authorization to test any target."
       ],
-      "next_action": "The former PR #47 / merged PR #58 replay is now canonical through PR #60; process PR #49 next at 2026-08-23T07:42:04Z."
+      "next_action": "The former PR #47 / merged PR #58 replay is now canonical through PR #60; process the reconciled PR #63 Aug. 23 snapshot next."
     },
     {
       "id": "20260822-pr47-source-health-replay",
@@ -32,24 +32,25 @@
         "NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.",
         "Public bounty listings are discovery evidence only and are not testing authorization."
       ],
-      "next_action": "Reconcile PR #49 onto current main and replay its exact 2026-08-23T07:42:04Z observations before later research."
+      "next_action": "Process the reconciled Aug. 23 snapshot in PR #63 before later research."
     },
     {
       "id": "20260823-pr49-source-health-replay",
       "type": "data",
       "status": "needs-integration",
-      "contributor": "research-agent / PR #49",
-      "branch_or_pr": "PR #49",
+      "contributor": "research-agent / PR #49; reconciled by build-agent / PR #63",
+      "branch_or_pr": "PR #49 closed as superseded; current-main reconciliation PR #63",
       "path": "intelligence/feeds/2026-08-23-source-health.json",
       "purpose": "Preserve and replay the Aug. 23 source-health snapshot after the former PR #47 / merged PR #58 snapshot is canonical in source history.",
-      "summary": "PR #49 preserves observations at 2026-08-23T07:42:04Z for USA.gov/ACL Caregiver AI Prize, CTFtime, Sherlock and ETHGlobal. It intentionally did not rewrite canonical source history out of order.",
-      "verification": "Raw research is preserved in PR #49. The earlier chronological snapshot is now canonical through merged replay PR #60, so PR #49 is ready for current-main reconciliation and independent replay validation.",
+      "summary": "PR #63 preserves the original PR #49 snapshot at 2026-08-23T07:42:04Z on current post-PR61 main. The raw file is byte-identical to PR #49 and contains challenge-gov, ctftime-upcoming, sherlock-bounties, and ethglobal-events observations. Canonical replay is still pending.",
+      "verification": "Original PR #49 and reconciled PR #63 both use Git blob SHA 2c5eeaa8c4235212ab243cc5eb626411fb204bb5 for the raw snapshot, proving byte-for-byte identity. PR #63 is based on d8fd7b25057d9dec5e74ede0dfba154ade698a20. Full source-history/registry/Core/Maintenance replay validation has not yet run.",
       "risks": [
-        "Reconcile the stale PR against current main before changing canonical source history.",
+        "Do not advance canonical source freshness until predecessor fingerprints are independently verified.",
         "An active federal challenge lifecycle does not prove that submissions are presently open.",
-        "Bounty listings do not establish testing authorization."
+        "Bounty listings do not establish testing authorization.",
+        "Later PR #52, #56, and #62 research must not overtake this chronological replay."
       ],
-      "next_action": "Reconcile PR #49 onto current main, replay its exact 2026-08-23T07:42:04Z observations, and rerun source-history/registry/report/intelligence/site-data/Core/Maintenance validation."
+      "next_action": "Independently verify PR #63 blob identity and replay the four exact 2026-08-23T07:42:04Z observations through canonical source history; then validate registry/report/intelligence/site-data/Core/Maintenance before merge."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
@@ -65,7 +66,7 @@
         "Blocked on earlier overlapping source replay where applicable.",
         "Do not present headline prize values or open lifecycle as proof of current eligibility/actionability without full official rules."
       ],
-      "next_action": "After PR #49 source state is canonical, independently verify the official Orbital Clarity competition rules and preserve exact eligibility, participation, phase-award, judging, IP/export-control, submission and entry-cost terms before deciding whether canonical promotion is warranted."
+      "next_action": "After the PR #63 Aug. 23 source state is canonical, independently verify the official Orbital Clarity competition rules and preserve exact eligibility, participation, phase-award, judging, IP/export-control, submission and entry-cost terms before deciding whether canonical promotion is warranted."
     },
     {
       "id": "20260824-pr56-hhs-digital-stockpile-research",
@@ -78,12 +79,12 @@
       "summary": "PR #56 contains source-specific Aug. 24 observations and a high-confidence HHS DS-MRN lead while explicitly preserving unresolved deadline-timezone, judging, travel-cost and IP/data-rights gates. PR #57 targeted the same path but used an empty-content SHA-256 placeholder and encoded the displayed 8 PM deadline as UTC despite leaving timezone confirmation unresolved; it was closed unmerged as superseded rather than allowed to become competing canonical truth.",
       "verification": "Repo Integrity compared both PR patches directly. PR #56 preserves richer source URLs, normalized observations and fingerprints and does not manufacture deadline timezone precision. No canonical replay or opportunity promotion has occurred.",
       "risks": [
-        "Blocked on PR #49 chronological replay for overlapping sources.",
+        "Blocked on the PR #63 Aug. 23 chronological replay for overlapping sources.",
         "The exact timezone of the displayed Phase 1 8 PM deadline remains unverified in the preserved PR #56 evidence.",
         "Full judging criteria, pitch-event cost/reimbursement terms and complete IP/data-rights/indemnification/tax language remain gates before active-case conversion.",
         "Security-program listings in the same source snapshot are discovery evidence only, not testing authorization."
       ],
-      "next_action": "After PR #49 is canonical, reconcile PR #56 onto current main, replay its exact source observations in chronological order, independently verify the HHS complete rules, and promote only evidence-backed facts."
+      "next_action": "After PR #63 is canonical, reconcile PR #56 onto current main in chronology/source-overlap order, independently verify the HHS complete rules, and promote only evidence-backed facts."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",
