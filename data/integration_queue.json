@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-25T08:00:25Z",
+  "updated_at": "2026-08-25T19:22:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -16,24 +16,23 @@
         "Later source observations must still be replayed chronologically.",
         "A bounty/platform listing is discovery evidence, not authorization to test any target."
       ],
-      "next_action": "PR #58 replay is now implemented on the current build branch; process PR #49 next after this replay branch passes CI and merges."
+      "next_action": "The former PR #47 / merged PR #58 replay is now canonical through PR #60; process PR #49 next at 2026-08-23T07:42:04Z."
     },
     {
       "id": "20260822-pr47-source-health-replay",
       "type": "data",
       "status": "integrated",
-      "contributor": "research-agent / PR #47; reconciled by build-agent / PR #58; independently verified by Repo Integrity; canonically replayed by build-agent",
-      "branch_or_pr": "PR #47 closed as superseded; reconciled PR #58 merged as e08d64b8ab08d785b39f3b0d0553f839e23fd630; replay branch build/replay-pr58-source-health-20260825",
+      "contributor": "research-agent / PR #47; reconciled by build-agent / PR #58; independently verified by Repo Integrity; canonically replayed by build-agent / PR #60",
+      "branch_or_pr": "PR #47 closed as superseded; reconciled PR #58 merged as e08d64b8ab08d785b39f3b0d0553f839e23fd630; replay PR #60 merged as 7d354e22415e0babb2736a0d6a4b4f67d3e071da",
       "path": "intelligence/feeds/2026-08-22-afternoon-source-health.json",
       "purpose": "Canonically replay the next chronological source-health snapshot, including the NASA Gateways candidate, after preserving the stale PR #47 evidence on current main.",
-      "summary": "The exact challenge-gov, ctftime-upcoming and sherlock-bounties observations at 2026-08-22T19:42:58Z are now replayed into canonical source history and registry freshness without changing the preserved raw snapshot. NASA Gateways remains a specialized publish candidate and was not converted into a generic active case in this build pass.",
-      "verification": "Replay entries preserve raw snapshot fingerprints 63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9, c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef and 88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c with predecessor fingerprints matching the prior canonical checks. Fresh CI is required on the replay PR before merge.",
+      "summary": "The exact challenge-gov, ctftime-upcoming and sherlock-bounties observations at 2026-08-22T19:42:58Z are canonical in source history and registry freshness without changing the preserved raw snapshot. NASA Gateways remains a specialized publish candidate and was not converted into a generic active case.",
+      "verification": "Repo Integrity independently recomputed raw snapshot fingerprints 63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9, c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef and 88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c and verified their predecessor chain. PR #60 final head 5433788c2203fc1237f658d941b66300f23ccd67 passed Core 32825016825 on Python 3.11/3.12/3.13, Intelligence Source Report 32825016797 and Daily Maintenance 32825016794; post-merge Core 32888885708 and Pages 32888885847 succeeded.",
       "risks": [
-        "Do not advance PR #49 or later source timestamps until this replay PR is green and merged.",
         "NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.",
         "Public bounty listings are discovery evidence only and are not testing authorization."
       ],
-      "next_action": "Run source-history/registry/report/intelligence/site-data/Core validation on the replay head; merge only if green, then reconcile PR #49 at 2026-08-23T07:42:04Z."
+      "next_action": "Reconcile PR #49 onto current main and replay its exact 2026-08-23T07:42:04Z observations before later research."
     },
     {
       "id": "20260823-pr49-source-health-replay",
@@ -42,15 +41,15 @@
       "contributor": "research-agent / PR #49",
       "branch_or_pr": "PR #49",
       "path": "intelligence/feeds/2026-08-23-source-health.json",
-      "purpose": "Preserve and replay the Aug. 23 source-health snapshot after the merged PR #58 / former PR #47 snapshot is canonical in source history.",
+      "purpose": "Preserve and replay the Aug. 23 source-health snapshot after the former PR #47 / merged PR #58 snapshot is canonical in source history.",
       "summary": "PR #49 preserves observations at 2026-08-23T07:42:04Z for USA.gov/ACL Caregiver AI Prize, CTFtime, Sherlock and ETHGlobal. It intentionally did not rewrite canonical source history out of order.",
-      "verification": "Raw research is preserved in PR #49. The earlier PR #58 replay is now implemented on build/replay-pr58-source-health-20260825 and must pass CI/merge before PR #49 is reconciled.",
+      "verification": "Raw research is preserved in PR #49. The earlier chronological snapshot is now canonical through merged replay PR #60, so PR #49 is ready for current-main reconciliation and independent replay validation.",
       "risks": [
-        "Wait for the PR #58 replay branch to merge before advancing these timestamps.",
+        "Reconcile the stale PR against current main before changing canonical source history.",
         "An active federal challenge lifecycle does not prove that submissions are presently open.",
         "Bounty listings do not establish testing authorization."
       ],
-      "next_action": "After the PR #58 replay branch is green and merged, reconcile PR #49 onto current main, replay its exact 2026-08-23T07:42:04Z observations, and rerun source/Core/site-data validation."
+      "next_action": "Reconcile PR #49 onto current main, replay its exact 2026-08-23T07:42:04Z observations, and rerun source-history/registry/report/intelligence/site-data/Core/Maintenance validation."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
