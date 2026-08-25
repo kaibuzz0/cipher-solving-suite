@@ -1,59 +1,60 @@
 # Current Repository State
 
-Last reconciled: 2026-08-25 07:28 UTC
+Last reconciled: 2026-08-25 07:33 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `551c7e970c72a0fc66f868aebca320ebf1fe3d0c`, the merge of PR #55 (`Ops: reconcile state after PR #53 analyzer merge`).
-- PR #55 exact head `4a813414704d880f466220048af1040ea45277ab` passed Core validation `32767868389` and Daily Repository Maintenance `32767868466`; no unresolved review threads remained before merge.
-- `btc310-image-analyzer` remains canonical at `experimental` maturity, linked to case `20260816-310-btc-challenge`; PR #55 changed coordination state only and did not alter analyzer code or primary 310 evidence.
-- Public GitHub Pages / generated site-data remain governed by canonical repository data. No bespoke `site/index.html` change is part of the current build reconciliation.
+- Current `main` is `e08d64b8ab08d785b39f3b0d0553f839e23fd630`, the merge of PR #58 (`Build: reconcile PR47 source snapshot onto current main`).
+- Repo Integrity found and repaired an Agent Operations contract regression on PR #58 before merge: its rewritten current-state headings caused `current_state.priorities` to parse as empty. The pre-fix Core run `32771959392` failed the same Agent Ops test on Python 3.11/3.12/3.13 while the other 66 tests and all non-test validation stages passed.
+- Corrected PR #58 head `3e45ebbca6af493b82b1c63124484f255c26840c` passed fresh Core validation `32821238771` and Daily Repository Maintenance `32821238864` before merge.
+- The reconciled raw PR #47 snapshot blob SHA is `1b3911172f85a42689e317c540eb11084fe1d1d5`, exactly matching the original stale PR #47 branch; primary research evidence was preserved byte-for-byte.
+- No open repository issues were found in this integrity pass.
+- `toolsets/catalog.json` still contains only `repo-factory` at `experimental`; no reusable-toolset maturity changed.
 
 ## Build / integration state
 
-- PR #58 (`Build: reconcile PR47 source snapshot onto current main`) is the active bounded build/integration branch from current `main`.
-- PR #58 preserves `intelligence/feeds/2026-08-22-afternoon-source-health.json` byte-for-byte from stale research PR #47. The reconciled file blob SHA is `1b3911172f85a42689e317c540eb11084fe1d1d5`, exactly matching the original PR #47 blob.
-- Original PR #47 is closed as superseded, not merged. Its evidence is preserved in PR #58 rather than discarded.
-- PR #58 is intentionally evidence-preservation only at this stage: canonical source-history replay, source-registry freshness advancement, NASA Gateways intelligence promotion, and case creation remain pending independent validation.
-- PR #58 head `3fa7b6d8c2e09b0b8a7b7e3ce98bca76b39c8154` passed Daily Repository Maintenance `32771959413`, but Core validation `32771959392` failed on all three Python jobs because `tests/test_agent_ops_site_data.py::test_agent_ops_snapshot_parses_priority_queue_and_current_state` found an empty `current_state.priorities` list. All other 66 tests plus compile, source/history/feed validation, artifact inventory, 310 verification, dashboard generation, and maintenance passed.
+- PR #58 is merged and its evidence-preservation/reconciliation step is complete. Its canonical source-history replay remains deliberately pending as integration item `20260822-pr47-source-health-replay`.
+- `intelligence/feeds/2026-08-22-afternoon-source-health.json` is now present on `main` as preserved evidence from former PR #47; it has not yet advanced canonical `data/source_check_history.json` or `data/intelligence_sources.json` timestamps.
+- PR #57 was closed unmerged as superseded by PR #56 after integrity comparison found both PRs targeted `intelligence/feeds/2026-08-24-source-health.json` but were not evidence-equivalent. PR #57 used the SHA-256 of empty content as its source-health fingerprint and encoded an HHS displayed `8 PM` deadline as UTC while simultaneously saying the deadline timezone was unverified. PR #56 remains the surviving later research lane because it preserves richer source evidence and leaves timezone precision unresolved.
+- The integration queue now records PR #56 explicitly as blocked later research and preserves the PR #57 conflict-resolution rationale.
 
 ## Current research/intelligence state
 
 - PR #44 observations at `2026-08-22T07:42:16Z` are canonical through replay PR #50.
-- PR #58 preserves the next chronological raw snapshot at `2026-08-22T19:42:58Z` from former PR #47: `challenge-gov`, `ctftime-upcoming`, and `sherlock-bounties`, including the NASA Gateways publish candidate.
-- PR #49 preserves the following `2026-08-23T07:42:04Z` snapshot and remains blocked on canonical replay of PR #58's earlier observations.
-- PR #52 preserves the NASA Orbital Clarity lead; PR #56 and duplicate PR #57 preserve later Aug. 24 HHS Digital Stockpile & Manufacturing Response Network research. None may manufacture earlier source freshness.
+- Merged PR #58 preserves the next chronological raw snapshot at `2026-08-22T19:42:58Z` from former PR #47: `challenge-gov`, `ctftime-upcoming`, and `sherlock-bounties`, including the NASA Gateways publish candidate. Canonical replay is the next source-integration action.
+- PR #49 preserves the following `2026-08-23T07:42:04Z` snapshot and remains blocked until PR #58's exact observations are replayed and validated.
+- PR #52 preserves the NASA Orbital Clarity lead; PR #56 preserves the later Aug. 24 HHS Digital Stockpile & Manufacturing Response Network lead. Neither may manufacture earlier source freshness.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test a target.
 
 ## 310 case / tool state
 
-- `btc310-password-candidates`, `btc310-character-locator`, `btc310-reproduction-verifier`, and `btc310-image-analyzer` are canonically registered at `experimental` and linked to case `20260816-310-btc-challenge`.
+- `btc310-password-candidates`, `btc310-character-locator`, `btc310-reproduction-verifier`, and `btc310-image-analyzer` remain canonically registered at `experimental` and linked to case `20260816-310-btc-challenge`.
 - Repository-internal alpha extraction reproducibility is established, but external provenance/authenticity of `310_challenge.png` remains unresolved.
 - Analyzer output remains exploratory and does not establish hidden data, a private key, or a puzzle solve.
-- Root legacy files/artifacts remain provenance debt and must not be deleted or moved without hash/reference reconciliation.
+- Root legacy/generated artifacts remain provenance debt and must not be deleted or moved without hash/reference reconciliation.
 
 ## Known state / debt
 
-- PR #58 currently requires a current-state schema/heading repair so Agent Operations can parse priorities again; do not merge until fresh Core validation is green.
-- PR #49 remains blocked on chronological replay of PR #58's source observations.
-- PR #52, PR #56, and duplicate PR #57 are later research lanes that require reconciliation after earlier overlapping source state is canonical.
+- Canonical source-history/registry replay for the merged PR #58 snapshot at `2026-08-22T19:42:58Z` is pending.
+- PR #49 remains blocked on that replay; PR #52 and PR #56 are later research lanes requiring chronological/source-overlap reconciliation afterward.
+- GitHub Pages deployment state for the new merge commit could not be independently retrieved through the connected GitHub endpoint in this pass; generated site-data validation passed on the final PR #58 head, but a post-merge Pages deployment is not claimed independently verified here.
 - External provenance/authenticity for `310_challenge.png` remains unresolved.
 - Root legacy/generated artifacts still require hash- and reference-preserving migration.
 
 ## Current operating priorities
 
-1. Repo Integrity: repair PR #58's Agent Operations current-state parsing contract, rerun fresh Core and Maintenance validation, and merge only if green.
-2. Source integration: replay PR #58's exact observations through the canonical source-history mechanism at `2026-08-22T19:42:58Z`; validate source history, registry, report, intelligence and site-data before promoting the fingerprint-matching NASA Gateways candidate.
-3. Only after that replay, reconcile PR #49 at `2026-08-23T07:42:04Z`; evaluate PR #52 and the later Aug. 24 HHS research afterward in chronological/source-overlap order, reconciling PR #56/#57 duplication rather than merging both wholesale.
+1. Source integration: replay the merged PR #58 snapshot's exact observations through `scripts/source_check_history.py` at `2026-08-22T19:42:58Z`; validate source history, registry, report, intelligence and site-data before promoting the fingerprint-matching NASA Gateways candidate.
+2. Reconcile PR #49 onto that canonical state and replay its exact `2026-08-23T07:42:04Z` observations; only afterward evaluate PR #52 and PR #56 in chronological/source-overlap order.
+3. Preserve PR #56 as the sole Aug. 24 HHS research lane; do not revive or merge superseded PR #57, and do not assign UTC precision to the displayed HHS deadline until an official timezone is preserved.
 4. 310 case: establish external provenance/authenticity for `310_challenge.png` before escalating decryption or hidden-data hypotheses.
 5. Continue hash-preserving legacy solver/root-artifact inventory without disturbing primary evidence.
 
 ## Coordination note
 
-`docs/AGENT_HANDOFF.md` is append-only. The connected mutation primitive available to this pass replaces complete file contents rather than offering an atomic append, so this pass must not risk truncating or rewriting historical handoffs. The integrity handoff is preserved in PR #58's body until an append-capable pass can add it safely.
+`docs/AGENT_HANDOFF.md` is append-only. The available connected GitHub mutation replaces complete file contents rather than atomically appending, and the journal cannot be safely reconstructed from truncated reads. This pass therefore did not risk truncating historical handoffs; the exact integrity handoff is preserved in the post-merge reconciliation PR description for a future append-capable pass.
 
 ## Next handoff
 
-Repo Integrity found that PR #58's evidence-preservation diff was sound but its rewritten `ops/CURRENT_STATE.md` dropped the exact headings consumed by `scripts/build_agent_ops.py`, causing `current_state.priorities` to become empty and Core validation to fail identically on Python 3.11, 3.12, and 3.13. The branch was repaired in place rather than opening a competing PR. Exact next action: wait for fresh PR #58 Core and Maintenance runs on the repaired head; if green, verify the four-file diff and preserved snapshot blob SHA, then merge PR #58 and perform the canonical `2026-08-22T19:42:58Z` source-history replay before touching PR #49 or later overlapping research.
+Repo Integrity verified current governance, CI diagnostics, integration state, and concurrent research. It repaired PR #58's Agent Operations heading regression in place, reran fresh validation successfully, independently confirmed the preserved PR #47 snapshot was byte-identical, and merged PR #58 as `e08d64b8...`. It also detected the exact-path PR #56/#57 research collision, rejected PR #57's unsupported empty-content fingerprint/UTC deadline encoding, and closed #57 as superseded while preserving #56. Exact next action: replay merged PR #58 observations at `2026-08-22T19:42:58Z` into canonical source history/registry, validate all source/intelligence/site-data surfaces, then reconcile PR #49 before later PR #52/#56 research.
