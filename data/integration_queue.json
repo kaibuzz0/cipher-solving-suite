@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-25T20:06:00Z",
+  "updated_at": "2026-08-26T07:24:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -16,7 +16,7 @@
         "Later source observations must still be replayed chronologically.",
         "A bounty/platform listing is discovery evidence, not authorization to test any target."
       ],
-      "next_action": "The former PR #47 / merged PR #58 replay is now canonical through PR #60; process the reconciled PR #63 Aug. 23 snapshot next."
+      "next_action": "The former PR #47 / merged PR #58 replay is now canonical through PR #60; process the merged PR #63 Aug. 23 snapshot next."
     },
     {
       "id": "20260822-pr47-source-health-replay",
@@ -32,25 +32,25 @@
         "NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.",
         "Public bounty listings are discovery evidence only and are not testing authorization."
       ],
-      "next_action": "Process the reconciled Aug. 23 snapshot in PR #63 before later research."
+      "next_action": "Process the merged Aug. 23 snapshot from PR #63 before later research."
     },
     {
       "id": "20260823-pr49-source-health-replay",
       "type": "data",
       "status": "needs-integration",
       "contributor": "research-agent / PR #49; reconciled by build-agent / PR #63",
-      "branch_or_pr": "PR #49 closed as superseded; current-main reconciliation PR #63",
+      "branch_or_pr": "PR #49 closed as superseded; reconciliation PR #63 merged as 0ef952cbab3e169e40288aefd34292bde57aeaec",
       "path": "intelligence/feeds/2026-08-23-source-health.json",
       "purpose": "Preserve and replay the Aug. 23 source-health snapshot after the former PR #47 / merged PR #58 snapshot is canonical in source history.",
-      "summary": "PR #63 preserves the original PR #49 snapshot at 2026-08-23T07:42:04Z on current post-PR61 main. The raw file is byte-identical to PR #49 and contains challenge-gov, ctftime-upcoming, sherlock-bounties, and ethglobal-events observations. Canonical replay is still pending.",
-      "verification": "Original PR #49 and reconciled PR #63 both use Git blob SHA 2c5eeaa8c4235212ab243cc5eb626411fb204bb5 for the raw snapshot, proving byte-for-byte identity. PR #63 is based on d8fd7b25057d9dec5e74ede0dfba154ade698a20. Full source-history/registry/Core/Maintenance replay validation has not yet run.",
+      "summary": "Merged PR #63 preserves the original PR #49 snapshot at 2026-08-23T07:42:04Z on current main. The raw file is byte-identical to PR #49 and contains challenge-gov, ctftime-upcoming, sherlock-bounties, and ethglobal-events observations. Canonical replay is still pending.",
+      "verification": "Original PR #49 and merged PR #63 both use Git blob SHA 2c5eeaa8c4235212ab243cc5eb626411fb204bb5 for the raw snapshot, proving byte-for-byte identity. PR #63 final head e5c74f0c7deadc05a8a62b18367156f306d0bbbb passed Core 32893463550 on Python 3.11/3.12/3.13 and Daily Maintenance 32893463621. Post-merge Core 32942362583 and Deploy operations dashboard 32942362528 succeeded. Full canonical source-history replay remains pending.",
       "risks": [
-        "Do not advance canonical source freshness until predecessor fingerprints are independently verified.",
+        "Do not advance canonical source freshness until predecessor fingerprints are independently verified during replay.",
         "An active federal challenge lifecycle does not prove that submissions are presently open.",
         "Bounty listings do not establish testing authorization.",
         "Later PR #52, #56, and #62 research must not overtake this chronological replay."
       ],
-      "next_action": "Independently verify PR #63 blob identity and replay the four exact 2026-08-23T07:42:04Z observations through canonical source history; then validate registry/report/intelligence/site-data/Core/Maintenance before merge."
+      "next_action": "Replay the four exact 2026-08-23T07:42:04Z observations through canonical source history; then validate registry/report/intelligence/site-data/Core/Maintenance before marking this item integrated."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
