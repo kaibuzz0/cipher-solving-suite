@@ -123,11 +123,11 @@
       "type": "tool",
       "status": "integrated",
       "contributor": "build-agent / PR #48 reconciled by PR #53",
-      "branch_or_pr": "PR #48 / 9f956d43c4859ba1fb8436e344281563a51d5547; reconciled PR #53 / 3f8ac5466a25506e40cbd736baf9789355257525; merged 73fa9fa5314d476829c8b3bdbc0915203ba6df2e",
+      "branch_or_pr": "PR #48 / 9f956d43c4859ba1fb8436e344281563a51d5547; reconciled PR #53 / 3f8ac5466a25506e40bcd736baf9789355257525; merged 73fa9fa5314d476829c8b3bdbc0915203ba6df2e",
       "path": "research/active-puzzles/20260816-310-btc-challenge/tools/analyze_310.py",
       "purpose": "Integrate the portable non-destructive 310 image analyzer onto current main without accepting stale shared coordination state from the original branch.",
       "summary": "PR #53 rebuilt the prior PR #48 contribution from current main, preserved deterministic JSON analysis, direct-script coverage, explicit-output-only derived images, canonical btc310-image-analyzer registration at experimental maturity, active-case linkage, and the generated site-data discovery contract. PR #53 merged as 73fa9fa5314d476829c8b3bdbc0915203ba6df2e.",
-      "verification": "PR #53 final head 3f8ac5466a25506e40cbd736baf9789355257525 passed Core validation 32663349865 on Python 3.11/3.12/3.13 and Daily Repository Maintenance 32663349853. Core included tests, direct-script analyzer regression coverage, compilation, source registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction, dashboard-data generation, maintenance, and the canonical tool-visibility contract.",
+      "verification": "PR #53 final head 3f8ac5466a25506e40bcd736baf9789355257525 passed Core validation 32663349865 on Python 3.11/3.12/3.13 and Daily Repository Maintenance 32663349853. Core included tests, direct-script analyzer regression coverage, compilation, source registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction, dashboard-data generation, maintenance, and the canonical tool-visibility contract.",
       "risks": [
         "Analyzer findings remain exploratory and do not prove hidden data, a private key, or a puzzle solve.",
         "External provenance/authenticity of 310_challenge.png remains unresolved.",
