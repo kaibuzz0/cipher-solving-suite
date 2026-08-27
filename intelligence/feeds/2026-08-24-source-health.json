@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-24T19:42:29Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "73fa9fa5314d476829c8b3bdbc0915203ba6df2e",
+  "reconciled_on_main": "96e2b410827ad5374c4960312d9b7d71df31a4ae",
+  "rules_verified_at": "2026-08-27T07:41:43Z",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "USA.gov active federal challenges on 2026-08-24 include ACL Caregiver AI Prize Challenge, ACL Cultivating Connected Communities Challenge, Building Disaster-Ready Human Services Systems, Connecting Talent to Opportunity Challenge, Halt the Hitchhiker: Invasive Species Challenge, NASA Gateways to Blue Skies, NIH Complement-ARIE NAMs Reduction to Practice Challenge, One CDC Data Platform Innovation Challenge, xTech Kinetic Reach, and xTech Search 10.",
+      "sha256": "756f0ba6b3d9b0e5f37d97dd44f1764cfd5e2d370f560411017086628795c85d",
+      "note": "Discovery surface remains lifecycle-oriented; challenge-level actionability must be verified on the official host before promotion."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime upcoming list on 2026-08-24 begins with COMPFEST CTF 2026 Aug 29 00:00 UTC, BlackHat MEA CTF Qualification 2026 Aug 29 07:00 UTC, ASIS CTF Quals 2026 Aug 29 14:00 UTC, UND CyberHawks National CTF Competition 2026 Qualifiers Aug 29 14:00 UTC, Iran Tech Olympics CTF 2026 Aug 29 14:00 UTC, and DiceCTF 2026 Finals Aug 29 16:00 UTC; NNS CTF starts Sep 4 and TFC CTF starts Sep 5.",
+      "sha256": "a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22",
+      "note": "Existing late-August CTF intelligence already covers the useful planning window; avoid duplicate feed noise unless an organizer-level rule/prize change is verified."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "Sherlock Bug Bounties on 2026-08-24 shows Usual Labs as largest at 16,000,000 USDC and Midas as most recent at 500,000 USDC; Midas last updated Aug 21, 2026, Cap Aug 18 at 1,000,000 USDC, Aave V4 Jul 29 at 2,500,000 USD, and Puffer Aug 17 at 100,000 USDC.",
+      "sha256": "13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6",
+      "note": "Listings are discovery evidence only. No testing authorization is inferred; exact program scope/rules remain mandatory before any security work."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ETHGlobal upcoming events on 2026-08-24 show ETHGlobal Happy Hour at ETHBelgrade Aug 26-27, ETHOnline 2026 Sep 4-16, ETHGlobal Happy Hour Tokyo Sep 5, ETHGlobal Tokyo Sep 25-27, Pragma Tokyo Sep 26, Pragma Mumbai Nov 5, ETHGlobal Mumbai Nov 6-8, and ETHConf 2027 Jun 14-16.",
+      "sha256": "a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9",
+      "note": "ETHOnline dates remain consistent with canonical intelligence; no duplicate feed item recommended."
+    }
+  ],
+  "new_lead": {
+    "title": "HHS Digital Stockpile & Manufacturing Response Network Challenge",
+    "category": "opportunity",
+    "status": "open-phase-1-human-led-only",
+    "source_id": "challenge-gov",
+    "official_sources": [
+      "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/department-of-health-and-human-services-digital-stockpile-manufacturing-response-network-challenge/",
+      "https://www.expeditionhacks.com/challenges/digital-stockpile-challenge",
+      "https://www.expeditionhacks.com/digital-stockpile-challenge-eligibility-agreement",
+      "https://www.expeditionhacks.com/digital-stockpile-challenge-participant-agreement"
+    ],
+    "verified_facts": [
+      "The official challenge host still lists Phase 1 submissions due August 28, 2026 at 8 PM; the fetched timeline does not state a timezone, so no timezone is inferred.",
+      "Total prize pool is up to $2.04 million across three phases.",
+      "Phase 1 requires an 8-page PDF submission paper, a pitch video no longer than 3 minutes, and a conceptual blueprint no longer than 2 pages; all three components are required.",
+      "The host explicitly states that AI-generated content is not allowed for narrative development and is not allowed for video development; a member of the submitting team must be visible throughout the submission video.",
+      "Up to eight Phase 1 finalists receive $5,000 each and are invited to a hybrid in-person/virtual pitch event at ASPR headquarters in Washington, DC; up to three pitch-event winners receive $150,000 each.",
+      "Phase 2 provides two $75,000 developmental milestone prizes per advancing team, up to $150,000 total milestone payments per team; Phase 3 has a total prize purse up to $1.1 million.",
+      "Individual prize eligibility requires age 18+ and U.S. citizenship or permanent residency; organizations must be U.S.-incorporated with a primary U.S. place of business; a team lead must be 18+ and a U.S. citizen/permanent resident.",
+      "Federal entities or federal employees acting within scope are ineligible, and similar government funding can restrict eligibility.",
+      "Judging uses a 1-to-5 Strongly Disagree-to-Strongly Agree scale across published Systems Innovation, Adoptability, Traceability and Scalability, Key Feature Impact, and Presentation criteria.",
+      "Solutions are provided to the U.S. Government under unlimited rights as described in FAR 52.227-14 and NFS 1852.227-14; prize-funded work is subject to the same stated unlimited-rights framework.",
+      "Prize taxes, expenses, costs, and fees are the winners' responsibility, and the participant agreement contains broad release, indemnification, and hold-harmless terms.",
+      "The Phase 1 finalist pitch event is described as hybrid, so in-person travel is not established as mandatory by the reviewed host text; no travel-reimbursement commitment was identified in the reviewed rules."
+    ],
+    "rules_observation": {
+      "checked_at": "2026-08-27T07:41:43Z",
+      "observed": "HHS DS-MRN rules rechecked 2026-08-27: Phase 1 remains listed with submissions due August 28, 2026 at 8 PM, with no timezone stated on the fetched host timeline. Phase 1 requires an 8-page PDF paper, a <=3-minute pitch video, and a conceptual blueprint; AI-generated content is not allowed for narrative development or video development, and a team member must be visible throughout the submission video. Judging uses 1-5 agreement scoring across Systems Innovation, Adoptability, Traceability and Scalability, Key Feature Impact, and Presentation. Up to eight finalists receive $5,000 and are invited to a hybrid in-person/virtual pitch event; up to three pitch-event winners receive $150,000. Prize eligibility requires individual participants to be 18+ U.S. citizens/permanent residents, U.S. organizations to be incorporated with a primary U.S. place of business, and team leads to be 18+ U.S. citizens/permanent residents. Solutions are provided to the U.S. Government under unlimited rights; prize taxes/fees are the winners' responsibility, and the participant agreement contains broad release and indemnification terms.",
+      "sha256": "ff50c467bc938e82c33e1b3040a0e2b8479b95bfcbaccb12329ce5a002c1bc6c"
+    },
+    "confidence": "high",
+    "relevance": "high",
+    "entry_cost": "No entry fee was identified in the reviewed official/host materials. Participant time and production costs remain real; the finalist pitch is offered in hybrid in-person/virtual form.",
+    "missing_verification": [
+      "Confirm the authoritative timezone for the host's displayed August 28, 2026 at 8 PM Phase 1 deadline before relying on a last-minute submission cutoff.",
+      "Confirm participant-specific eligibility and acceptance of the Government unlimited-rights, tax, release, and indemnification terms before any human-led submission."
+    ],
+    "ai_use_constraint": "Do not create or draft an AI-generated challenge submission. The published rules explicitly prohibit AI-generated narrative content and AI-generated video content.",
+    "recommended_action": "Preserve as high-value human-led opportunity intelligence, not an AI-generated active submission case. Build/Integration should reconcile the exact Aug. 24 source observations chronologically, then publish a canonical intelligence item that includes the AI-content prohibition and unresolved deadline timezone if the host still shows Phase 1 open."
+  },
+  "safety": "No target testing was performed. Public security-program listings were treated only as discovery evidence and not as authorization."
+}
