@@ -12,7 +12,10 @@
       "purpose": "Replay the merged raw source-health observations into canonical source-check history and registry freshness without manufacturing timestamps or losing provenance.",
       "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. PR #50 replayed those exact fingerprints, notes and checked timestamps into canonical source history and source registry.",
       "verification": "The three raw observed strings independently recomputed to the stored SHA-256 fingerprints. PR #50 final head a9693c067b40fee35779e9b2e2c6a860104c0528 passed Core validation 32627332013 on Python 3.11/3.12/3.13, Daily Repository Maintenance 32627332057, and Intelligence Source Report 32627332041.",
-      "risks": ["Later source observations must still be replayed chronologically.", "A bounty/platform listing is discovery evidence, not authorization to test any target."],
+      "risks": [
+        "Later source observations must still be replayed chronologically.",
+        "A bounty/platform listing is discovery evidence, not authorization to test any target."
+      ],
       "next_action": "The former PR #47 / merged PR #58 replay is now canonical through PR #60; process the merged PR #63 Aug. 23 snapshot next."
     },
     {
@@ -24,8 +27,11 @@
       "path": "intelligence/feeds/2026-08-22-afternoon-source-health.json",
       "purpose": "Canonically replay the next chronological source-health snapshot, including the NASA Gateways candidate, after preserving the stale PR #47 evidence on current main.",
       "summary": "The exact challenge-gov, ctftime-upcoming and sherlock-bounties observations at 2026-08-22T19:42:58Z are canonical in source history and registry freshness without changing the preserved raw snapshot. NASA Gateways remains a specialized publish candidate and was not converted into a generic active case.",
-      "verification": "Repo Integrity independently recomputed raw snapshot fingerprints and verified their predecessor chain. PR #60 final head 5433788c2203fc1237f658d941b66300f23ccd67 passed Core 32825016825 on Python 3.11/3.12/3.13, Intelligence Source Report 32825016797 and Daily Maintenance 32825016794; post-merge Core 32888885708 and Pages 32888885847 succeeded.",
-      "risks": ["NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.", "Public bounty listings are discovery evidence only and are not testing authorization."],
+      "verification": "Repo Integrity independently recomputed raw snapshot fingerprints 63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9, c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef and 88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c and verified their predecessor chain. PR #60 final head 5433788c2203fc1237f658d941b66300f23ccd67 passed Core 32825016825 on Python 3.11/3.12/3.13, Intelligence Source Report 32825016797 and Daily Maintenance 32825016794; post-merge Core 32888885708 and Pages 32888885847 succeeded.",
+      "risks": [
+        "NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.",
+        "Public bounty listings are discovery evidence only and are not testing authorization."
+      ],
       "next_action": "Process the merged Aug. 23 snapshot from PR #63 before later research."
     },
     {
@@ -36,23 +42,31 @@
       "branch_or_pr": "PR #49 closed as superseded; reconciliation PR #63 merged as 0ef952cbab3e169e40288aefd34292bde57aeaec; replay PR #67 merged as f7bbeabdf8263442286edc9d2140c79c11572f69",
       "path": "intelligence/feeds/2026-08-23-source-health.json",
       "purpose": "Preserve and replay the Aug. 23 source-health snapshot after the former PR #47 / merged PR #58 snapshot is canonical in source history.",
-      "summary": "PR #67 replayed the exact four 2026-08-23T07:42:04Z observations from the byte-identical PR #63/former PR #49 raw snapshot into canonical source history and advanced only matching registry timestamps.",
-      "verification": "Raw snapshot Git blob SHA remains 2c5eeaa8c4235212ab243cc5eb626411fb204bb5. PR #67 final head ab0dc86d408af8b0fb033b75f9eb5efbee5d7bf5 passed Core 32946337938, Intelligence Source Report 32946337917, and Daily Maintenance 32946337928; post-merge Core 33004864258 and Pages 33004864246 succeeded.",
-      "risks": ["An active federal challenge lifecycle does not prove that submissions are presently open.", "Bounty listings do not establish testing authorization.", "Later research must still be reconciled chronologically and by source overlap."],
-      "next_action": "Orbital Clarity research is now integrated through PR #70; process PR #56 next, then PR #62 and PR #66."
+      "summary": "PR #67 replayed the exact four 2026-08-23T07:42:04Z observations from the byte-identical PR #63/former PR #49 raw snapshot into canonical source history and advanced only matching registry timestamps. Repo Integrity independently verified and merged the replay as f7bbeabdf8263442286edc9d2140c79c11572f69.",
+      "verification": "Raw snapshot Git blob SHA remains 2c5eeaa8c4235212ab243cc5eb626411fb204bb5. Repo Integrity independently recomputed all four observed strings to their preserved SHA-256 fingerprints, verified every previous_fingerprint against the latest canonical predecessor, confirmed the five-file replay diff and no unresolved review threads. PR #67 final head ab0dc86d408af8b0fb033b75f9eb5efbee5d7bf5 passed Core 32946337938, Intelligence Source Report 32946337917, and Daily Maintenance 32946337928; post-merge Core 33004864258 and Pages 33004864246 succeeded.",
+      "risks": [
+        "An active federal challenge lifecycle does not prove that submissions are presently open.",
+        "Bounty listings do not establish testing authorization.",
+        "Later PR #52, #56, #62, and #66 research must still be reconciled chronologically and by source overlap."
+      ],
+      "next_action": "Orbital Clarity research is now integrated through PR #70; process PR #56 next, then PR #62 and PR #66 in chronology/source-overlap order."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
       "type": "research",
       "status": "integrated",
       "contributor": "research-agent / PR #52; reconciled by PR #69 and current-main build PR #70; independently verified by Repo Integrity",
-      "branch_or_pr": "PR #52 stale contribution; PR #69 closed superseded; PR #70 merged as 96e2b410827ad5374c4960312d9b7d71df31a4ae",
+      "branch_or_pr": "PR #52; PR #69 closed as superseded; PR #70 merged as 96e2b410827ad5374c4960312d9b7d71df31a4ae",
       "path": "intelligence/feeds/2026-08-23-orbital-clarity-research.json",
-      "purpose": "Preserve and independently verify NASA TechLeap Orbital Clarity official-rule research after the earlier Aug. 23 source replay became canonical.",
-      "summary": "PR #70 preserves the reconciled Orbital Clarity research on current main with exact Phase 1 deadlines, award structure, U.S. eligibility restrictions, foreign-participant/export constraints, IP/license posture, hosted-payload requirement, judging model, and the $250,000 insurance/financial-responsibility requirement. It does not advance canonical source freshness or create an active case.",
-      "verification": "PR #70 final head 9537d1770e0724c6afddf3d8f478ad9de68170ba passed Core 33008367703 across Python 3.11/3.12/3.13. Repo Integrity verified its one-file blob SHA d85ba4e450705e85d9cdd987d2541a48e24bdc41 matches superseded PR #69 and independently reopened NASA/official-host sources supporting the preserved deadlines, prize structure, eligibility, IP and insurance terms.",
-      "risks": ["A structured active case still requires the complete Phase 1 submission form/field limits and participant-specific eligibility/financial-responsibility confirmation.", "Challenge participation is not security-testing authorization.", "No canonical intelligence/opportunity promotion was made in PR #70."],
-      "next_action": "Process PR #56 next. Preserve complete HHS DS-MRN rules and replay only exact evidence-backed source observations before any actionability promotion."
+      "purpose": "Preserve the NASA TechLeap Orbital Clarity lead after earlier overlapping source-history state became canonical and complete official-rule evidence was independently verified.",
+      "summary": "PR #70 preserves the reconciled official-source Orbital Clarity research on current main, including exact Phase 1 deadlines, award structure, eligibility, IP/export constraints, hosted-payload requirement, judging model, and the $250,000 insurance/financial-responsibility requirement. It intentionally does not advance canonical source-history timestamps or create a structured active case.",
+      "verification": "PR #70 final head 9537d1770e0724c6afddf3d8f478ad9de68170ba passed Core validation 33008367703 on Python 3.11/3.12/3.13. The preserved research file Git blob SHA d85ba4e450705e85d9cdd987d2541a48e24bdc41 exactly matches superseded PR #69. Repo Integrity independently reopened current NASA/official-host rules, timeline, FAQ and insurance surfaces and verified the preserved deadlines, award structure, eligibility, IP posture and $250,000 insurance/financial-responsibility requirement. Post-merge Core 33049534979 succeeded on merge commit 96e2b410827ad5374c4960312d9b7d71df31a4ae.",
+      "risks": [
+        "Do not create a structured active case until the complete Phase 1 submission form and mandatory field/format limits are preserved.",
+        "Participant-specific eligibility and ability to meet the $250,000 financial-responsibility requirement remain gates before assigning build work.",
+        "Challenge participation is not security-testing authorization."
+      ],
+      "next_action": "Process PR #56 next, preserving complete HHS DS-MRN official rules and replaying only evidence-backed source observations before any actionability promotion."
     },
     {
       "id": "20260824-pr56-hhs-digital-stockpile-research",
@@ -63,9 +77,14 @@
       "path": "intelligence/feeds/2026-08-24-source-health.json",
       "purpose": "Preserve the Aug. 24 source-health snapshot and HHS Digital Stockpile & Manufacturing Response Network Challenge lead until earlier chronological source replay is canonical.",
       "summary": "PR #56 contains source-specific Aug. 24 observations and a high-confidence HHS DS-MRN lead while explicitly preserving unresolved deadline-timezone, judging, travel-cost and IP/data-rights gates. PR #57 targeted the same path but used an empty-content SHA-256 placeholder and encoded the displayed 8 PM deadline as UTC despite leaving timezone confirmation unresolved; it was closed unmerged as superseded rather than allowed to become competing canonical truth.",
-      "verification": "Repo Integrity compared both PR patches directly in the earlier collision pass. PR #56 preserves richer source URLs, normalized observations and fingerprints and does not manufacture deadline timezone precision. No canonical replay or opportunity promotion has occurred.",
-      "risks": ["The exact timezone of the displayed Phase 1 8 PM deadline remains unverified in preserved PR #56 evidence.", "Full judging criteria, pitch-event cost/reimbursement terms and complete IP/data-rights/indemnification/tax language remain gates before active-case conversion.", "Security-program listings in the same source snapshot are discovery evidence only, not testing authorization."],
-      "next_action": "Reconcile PR #56 onto current main, independently verify the HHS complete rules, preserve source chronology, and promote only evidence-backed facts."
+      "verification": "Repo Integrity compared both PR patches directly. PR #56 preserves richer source URLs, normalized observations and fingerprints and does not manufacture deadline timezone precision. No canonical replay or opportunity promotion has occurred.",
+      "risks": [
+        "Preserve any overlapping source history in chronological order.",
+        "The exact timezone of the displayed Phase 1 8 PM deadline remains unverified in the preserved PR #56 evidence.",
+        "Full judging criteria, pitch-event cost/reimbursement terms and complete IP/data-rights/indemnification/tax language remain gates before active-case conversion.",
+        "Security-program listings in the same source snapshot are discovery evidence only, not testing authorization."
+      ],
+      "next_action": "Reconcile PR #56 onto current main in chronology/source-overlap order, independently verify the HHS complete rules, and promote only evidence-backed facts."
     },
     {
       "id": "20260825-pr62-rascal-source-health-research",
@@ -77,7 +96,10 @@
       "purpose": "Preserve the Aug. 25 source-health snapshot and NASA RASC-AL lead without overtaking earlier research/source state.",
       "summary": "PR #62 preserves CTFtime, Sherlock, arXiv and ETHGlobal observations plus a NASA 2027 RASC-AL lead. It explicitly leaves exact eligibility, deadline timezone, judging/scoring, submission limits, IP/publication, travel responsibility and top-two award details for later verification.",
       "verification": "PR #62 remains contributed research only; no canonical source-history advancement or active opportunity promotion has occurred.",
-      "risks": ["Process only after PR #56 where source overlap applies.", "Do not convert the RASC-AL headline into a generic actionable opportunity without full official guidelines."],
+      "risks": [
+        "Process only after PR #56 where source overlap applies.",
+        "Do not convert the RASC-AL headline into a generic actionable opportunity without full official guidelines."
+      ],
       "next_action": "Reconcile PR #62 after PR #56, preserve exact official competition rules, and replay only evidence-backed source observations."
     },
     {
@@ -90,7 +112,10 @@
       "purpose": "Preserve Aug. 26 source health and the xTech|Search 10 deadline conflict without allowing later research to overtake earlier canonical chronology.",
       "summary": "PR #66 records conflicting official xTech|Search 10 deadline surfaces, a newer Sherlock listing, and current arXiv/CTFtime/ETHGlobal observations. It intentionally does not promote xTech as actionable while authoritative date evidence conflicts and the full RFI is unavailable.",
       "verification": "PR #66 remains contributed research only; no canonical source-history advancement, active case, or target authorization change has occurred.",
-      "risks": ["Process after PR #56 and PR #62 in chronology/source-overlap order.", "Resolve the official xTech date conflict and obtain the complete RFI before actionability claims."],
+      "risks": [
+        "Process after PR #56 and PR #62 in chronology/source-overlap order.",
+        "Resolve the official xTech date conflict and obtain the complete RFI before actionability claims."
+      ],
       "next_action": "After earlier research lanes are reconciled, verify the actual xTech RFI/application portal and replay only exact evidence-backed observations."
     },
     {
@@ -98,13 +123,17 @@
       "type": "tool",
       "status": "integrated",
       "contributor": "build-agent / PR #48 reconciled by PR #53",
-      "branch_or_pr": "PR #48 / 9f956d43c4859ba1fb8436e344281563a51d5547; reconciled PR #53 / 3f8ac5466a25506e40bcd736baf9789355257525; merged 73fa9fa5314d476829c8b3bdbc0915203ba6df2e",
+      "branch_or_pr": "PR #48 / 9f956d43c4859ba1fb8436e344281563a51d5547; reconciled PR #53 / 3f8ac5466a25506e40cbd736baf9789355257525; merged 73fa9fa5314d476829c8b3bdbc0915203ba6df2e",
       "path": "research/active-puzzles/20260816-310-btc-challenge/tools/analyze_310.py",
       "purpose": "Integrate the portable non-destructive 310 image analyzer onto current main without accepting stale shared coordination state from the original branch.",
-      "summary": "PR #53 rebuilt the prior PR #48 contribution from current main, preserved deterministic JSON analysis, direct-script coverage, explicit-output-only derived images, canonical btc310-image-analyzer registration at experimental maturity, active-case linkage, and the generated site-data discovery contract.",
-      "verification": "PR #53 final head 3f8ac5466a25506e40bcd736baf9789355257525 passed Core validation 32663349865 on Python 3.11/3.12/3.13 and Daily Repository Maintenance 32663349853.",
-      "risks": ["Analyzer findings remain exploratory and do not prove hidden data, a private key, or a puzzle solve.", "External provenance/authenticity of 310_challenge.png remains unresolved."],
-      "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item without disturbing chronological source replay."
+      "summary": "PR #53 rebuilt the prior PR #48 contribution from current main, preserved deterministic JSON analysis, direct-script coverage, explicit-output-only derived images, canonical btc310-image-analyzer registration at experimental maturity, active-case linkage, and the generated site-data discovery contract. PR #53 merged as 73fa9fa5314d476829c8b3bdbc0915203ba6df2e.",
+      "verification": "PR #53 final head 3f8ac5466a25506e40cbd736baf9789355257525 passed Core validation 32663349865 on Python 3.11/3.12/3.13 and Daily Repository Maintenance 32663349853. Core included tests, direct-script analyzer regression coverage, compilation, source registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction, dashboard-data generation, maintenance, and the canonical tool-visibility contract.",
+      "risks": [
+        "Analyzer findings remain exploratory and do not prove hidden data, a private key, or a puzzle solve.",
+        "External provenance/authenticity of 310_challenge.png remains unresolved.",
+        "Post-merge workflow/Pages execution for merge commit 73fa9fa5314d476829c8b3bdbc0915203ba6df2e was not independently observed in this run."
+      ],
+      "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy-solver/root-artifact item without disturbing chronological source replay."
     }
   ]
 }
