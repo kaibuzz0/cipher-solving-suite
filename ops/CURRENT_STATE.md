@@ -1,33 +1,31 @@
 # Current Repository State
 
-Last reconciled: 2026-08-27 07:25 UTC
+Last reconciled: 2026-08-27 08:05 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `96e2b410827ad5374c4960312d9b7d71df31a4ae`, the merge of PR #70 (`Build: preserve Orbital Clarity research on current main`).
-- PR #70 final head `9537d1770e0724c6afddf3d8f478ad9de68170ba` was mergeable and passed Core validation `33008367703` across Python 3.11/3.12/3.13. The matrix passed pytest, direct-script/catalog tests, Python compilation, source-registry/history/feed validation, collection reporting, artifact inventory, 310 migration/reproduction verification, dashboard-data generation, maintenance, and the final validation gate.
-- PR #70 is a one-file evidence-preservation change. `intelligence/feeds/2026-08-23-orbital-clarity-research.json` has Git blob SHA `d85ba4e450705e85d9cdd987d2541a48e24bdc41`, exactly matching superseded PR #69.
-- Repo Integrity independently re-opened current NASA/official Orbital Clarity sources and verified the preserved challenge-open state, Oct. 28 registration deadline, Nov. 11 submission deadline, award structure, U.S. eligibility rules, participant IP ownership/NASA-license posture, and $250,000 insurance/financial-responsibility requirement.
-- Post-merge Core validation `33049534979` succeeded on the actual merge commit `96e2b410...`. A Pages run was not triggered by this raw-research-only merge; no canonical website source, generated site-data input, registry, or site markup changed.
-- The previous main `94164e76350dd59dc6058fa4e4392b9bd28d382c` had successful push Core `33008151122` and Pages `33008151160` runs.
-- No open repository issues were found.
+- Current `main` is `c7817a106b4694dbf452ed33a7317840c0a1a9df`, the merge of PR #72 (`Research: reconcile HHS DS-MRN rules on current main`).
+- Immediately before that, coordination-only PR #71 merged as `ce71987677de46c44922509e123ff108a267e009`. Its exact head `d1a3b9450112760200cc3deee5fa8d89b7e38af8` passed Core validation `33050076533` and Daily Repository Maintenance `33050076498`.
+- PR #72 exact head `0e79c7b8e6eca7302e7e46dd3961f6adacaddad7` passed Core validation `33051244978` before merge. The PR changed only `intelligence/feeds/2026-08-24-source-health.json` and intentionally did not advance canonical source history, source-registry freshness, opportunities, active cases, tool/toolset registries, or site HTML.
+- The previous Pages-backed main state remains the successful deployment from commit `94164e76350dd59dc6058fa4e4392b9bd28d382c` (`33008151160`). PR #70/#71/#72 did not alter site markup or canonical generated-data inputs that require a bespoke Pages implementation change.
 
 ## Build / integration state
 
-- PR #70 is canonical raw research evidence only. It does not advance canonical source-history timestamps, add a canonical intelligence/opportunity record, create an active case, register a tool/toolset, alter target authorization, or hand-edit website HTML.
-- Former PR #52 / superseded PR #69 Orbital Clarity research is now preserved on current `main` through PR #70 with complete official-rule evidence sufficient for high-confidence research/intelligence consideration.
-- A structured active Orbital Clarity case remains gated on preserving the complete Phase 1 submission form/mandatory field and format limits plus participant-specific eligibility and ability to meet the $250,000 financial-responsibility requirement.
-- Later contributed research remains open and non-canonical: PR #56 (Aug. 24 HHS DS-MRN), PR #62 (Aug. 25 NASA RASC-AL/source health), and PR #66 (Aug. 26 source health / xTech|Search 10 conflict).
+- The HHS Digital Stockpile & Manufacturing Response Network Challenge research contribution is now preserved on current `main` through PR #72.
+- The preserved Aug. 24 snapshot contains exact observations for `challenge-gov`, `ctftime-upcoming`, `sherlock-bounties`, and `ethglobal-events` at `2026-08-24T19:42:29Z`. Those observations are not yet canonical in `data/source_check_history.json` / matching source-registry timestamps.
+- PR #72 independently verifies that the DS-MRN Phase 1 host still lists an August 28, 2026 at 8 PM deadline but does not state a timezone in the reviewed timeline; no timezone is inferred.
+- Material actionability boundary: published Phase 1 rules prohibit AI-generated content for narrative development and video development. This repository must not generate a DS-MRN challenge submission. The lead is human-led opportunity intelligence only.
+- PR #62 (Aug. 25 NASA RASC-AL/source health) and PR #66 (Aug. 26 source health/xTech Search 10 conflict) remain later contributed research and must not overtake the Aug. 24 replay.
 
-## Current research/intelligence state
+## Current research / intelligence state
 
 - PR #44 observations at `2026-08-22T07:42:16Z` are canonical through PR #50.
 - Former PR #47 / merged PR #58 observations at `2026-08-22T19:42:58Z` are canonical through PR #60.
 - Former PR #49 / merged PR #63 observations at `2026-08-23T07:42:04Z` are canonical through PR #67.
-- Orbital Clarity raw research is now preserved through PR #70. No source freshness was manufactured and no structured case was created.
-- Next chronological/source-overlap lane is PR #56, followed by PR #62 and PR #66. Each remains contributed work until reconciled against current main and independently verified.
+- Orbital Clarity raw research is canonical evidence through merged PR #70, but no structured active case was created.
+- DS-MRN raw research is now canonical evidence through merged PR #72; the exact Aug. 24 source observations still require chronological replay before later source snapshots advance freshness.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test a target.
 
 ## 310 case / tool state
@@ -39,23 +37,24 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- PR #56 still preserves unresolved HHS deadline-timezone, judging, travel/reimbursement and IP/data-rights gates.
-- PR #62 still requires complete NASA RASC-AL eligibility, deadline-timezone, judging/scoring, submission-limit, IP/publication, travel and top-award verification before structured work.
+- Canonical replay of the four exact Aug. 24 source observations is now the highest-priority source-integration item.
+- The DS-MRN deadline timezone remains unresolved and must not be guessed; participant-specific eligibility and acceptance of Government unlimited-rights, tax, release, and indemnification terms remain human participation gates.
+- PR #62 still requires complete NASA RASC-AL eligibility, deadline-timezone, judging/scoring, submission-limit, IP/publication, travel, and top-award verification before structured work.
 - PR #66 still contains conflicting xTech|Search 10 official deadline surfaces and requires the actual full RFI/application evidence before actionability claims.
 - Root legacy/generated artifacts still require hash- and reference-preserving migration.
 - External provenance/authenticity for `310_challenge.png` remains unresolved.
 
 ## Current operating priorities
 
-1. Reconcile PR #56 onto current main, preserve its Aug. 24 source snapshot, independently verify the complete HHS DS-MRN rules, and replay only evidence-backed source observations in chronological/source-overlap order.
-2. Then process PR #62 and PR #66 with the same provenance-preserving discipline.
-3. Keep Orbital Clarity at research/intelligence level until the Phase 1 submission form and participant-specific eligibility/financial-responsibility gates are preserved; do not create a structured active case prematurely.
-4. Continue the 310 external-provenance gate and hash-preserving legacy/root-artifact inventory without inflating experimental capability claims.
+1. Replay the exact PR #72 Aug. 24 observations into canonical source history and matching source-registry timestamps, preserving predecessor fingerprints and `2026-08-24T19:42:29Z` exactly; validate source history/registry/report/intelligence/site-data/Core/Maintenance.
+2. Keep DS-MRN at human-led intelligence only. Do not draft or generate its submission content because the published rules prohibit AI-generated narrative and video content.
+3. Then reconcile PR #62 and PR #66 in chronology/source-overlap order.
+4. Continue the 310 external-provenance gate and hash-preserving root-artifact inventory without inflating experimental capability claims.
 
 ## Coordination note
 
-This integrity pass independently verified and merged PR #70 after confirming its one-file diff, exact blob equality with superseded PR #69, green Core matrix, and primary-source claim boundary. No raw evidence was deleted, no canonical freshness was advanced, no security target was activated, no tool maturity changed, and no bespoke website HTML was introduced.
+This build/integration pass merged green coordination PR #71, then merged one-file DS-MRN evidence PR #72 after its exact head passed Core validation. No source freshness was manufactured, no security target was activated, no opportunity was converted to an AI submission case, no tool maturity changed, no primary evidence was moved, and no bespoke website HTML was introduced.
 
 ## Next handoff
 
-Reconcile PR #56 against current `main`, independently verify the complete HHS DS-MRN official rules before any canonical actionability promotion, preserve chronology/source overlap, and rerun source/intelligence/site-data/Core/Maintenance validation on the reconciled head. Then continue PR #62 and PR #66 in order.
+Repo Integrity / Build should independently verify the four Aug. 24 predecessor fingerprints against the current canonical source history, replay only those exact observations and corresponding registry timestamps, run source/intelligence/site-data/Core/Maintenance validation, and merge only if the chronological chain remains intact. PR #62 and PR #66 remain blocked behind that replay.
