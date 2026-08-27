@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-27T19:39:25Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "aa3d42ebcdd49db1a837169da565a111644ad65b",
+  "chronology_gate": "Do not replay this snapshot into canonical source history until the exact Aug. 24 PR #72 observations, then the preserved Aug. 25 PR #62 and Aug. 26 PR #66 observations, are reconciled in chronological/source-overlap order.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "USA.gov active federal challenges on 2026-08-27 include ACL Caregiver AI Prize Challenge, ACL Cultivating Connected Communities Challenge, Building Disaster-Ready Human Services Systems, Careers in Your Community Challenge, Connecting Talent to Opportunity Challenge, Halt the Hitchhiker: Invasive Species Challenge, NASA Gateways to Blue Skies, NIH Complement-ARIE NAMs Reduction to Practice Challenge, One CDC Data Platform Innovation Challenge, xTech Kinetic Reach, and xTech Search 10.",
+      "sha256": "d2c287ebc5ba6e4f439201efc1d1f3b6c3769300d20157bfef4c8c1a0a8b8609",
+      "note": "Careers in Your Community is newly present relative to the preserved Aug. 24 challenge-gov observation. Challenge-level eligibility and terms were independently checked on the official host before preserving the lead below."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime upcoming list on 2026-08-27 begins with COMPFEST CTF 2026 Aug 29 00:00 UTC, BlackHat MEA CTF Qualification 2026 Aug 29 07:00 UTC, ASIS CTF Quals 2026 Aug 29 14:00 UTC, UND CyberHawks National CTF Competition 2026 Qualifiers Aug 29 14:00 UTC, and Iran Tech Olympics CTF 2026 Aug 29 14:00 UTC; September includes NNS CTF, TFC CTF, VolgaCTF Final, NullOrigin Qualifiers, DefCamp CTF Quals, and CSAW CTF Qualification Round.",
+      "sha256": "fce07b15b6831c7c6a33f01fbb38d5ec4426d2cdd1d78e6cafd87fea49f03b3e",
+      "note": "The late-August cluster remains materially the same planning window already covered by canonical intelligence; no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "Sherlock Bug Bounties on 2026-08-27 shows Alphix - Dec 2025 as the most recent bounty at 30,000 USDC, last updated Aug 25, 2026; the broader listing still includes Usual Labs at 16,000,000 USDC, Aave V4 at 2,500,000 USD, Cap at 1,000,000 USDC, Midas at 500,000 USDC, and Puffer at 100,000 USDC.",
+      "sha256": "09762fbabc3e28722247843901be7ca04a403b5c33c4380a8aadfbd7c55c19fa",
+      "note": "This is discovery evidence only. No public listing is treated as authorization; exact scope, exclusions, severity rules and submission terms remain mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arXiv cs.CR recent on 2026-08-27 includes a Thu Aug 27 batch and reports 208 recent entries overall; the visible current list includes newly submitted security and cryptography papers, but this bounded pass did not identify a stronger direct cipher-solving/tool-integration lead than existing canonical research.",
+      "sha256": "2eae08782a5fc7f1ba9aa2a59bfd98a379d504fbef7c163c7f0ed31a72a9c629",
+      "note": "Index freshness changed, but no paper was promoted solely for recency. Preprints remain research leads, not peer-reviewed facts by default."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ETHGlobal events on 2026-08-27 still lists ETHOnline 2026 Sep 4-16, ETHGlobal Tokyo Sep 25-27, ETHGlobal Mumbai Nov 6-8, and ETHConf 2027 Jun 14-16; the Aug 26-27 ETHBelgrade happy hour is also listed as an upcoming meetup.",
+      "sha256": "b29a7c1243b4c41422fbc7dbc9cf773aefbbfde18caeef085e56f82eaecc7ec0",
+      "note": "ETHOnline remains consistent with existing canonical intelligence; no duplicate item is recommended."
+    }
+  ],
+  "new_lead": {
+    "title": "Careers in Your Community Challenge",
+    "category": "opportunity",
+    "status": "open-specialized-school-eligibility",
+    "source_id": "challenge-gov",
+    "official_sources": [
+      "https://www.usa.gov/challenges/careers-in-your-community-challenge",
+      "https://careersinyourcommunity.ctemomentum.com/",
+      "https://careersinyourcommunity.ctemomentum.com/rules-terms-and-conditions/"
+    ],
+    "verified_facts": [
+      "The U.S. Department of Education challenge opened August 4, 2026 at 9:00 AM ET and submissions close November 19, 2026 at 6:00 PM ET.",
+      "The total cash prize pool is $50,000; the Department anticipates selecting up to ten winners and dividing the pool equally among them.",
+      "Entrants submit on behalf of a school and must meet the Perkins V Eligible Recipient requirements referenced by the official rules.",
+      "The entrant must provide documentation that the school principal or district-level administrator permits entry.",
+      "The designated team lead must be employed as a CTE teacher, coordinator, or director at the school and must be at least 18 years old.",
+      "Judging scores five published criteria up to five points each: career pathway knowledge, impact, feasibility, community connection, and student engagement.",
+      "If there are more than 30 submissions, the Department may use a two-tier review; otherwise it may conduct only Tier 2.",
+      "Entrants retain ownership of their submission subject to the challenge licenses; winning submissions grant the Department a nonexclusive, nontransferable, irrevocable, paid-up worldwide license for Federal purposes in perpetuity.",
+      "Winners are responsible for applicable taxes, and entrants accept release/indemnification terms described in the official rules."
+    ],
+    "confidence": "high",
+    "relevance": "useful",
+    "entry_cost": "No entry fee was identified in the reviewed official rules; participation is restricted to qualifying school entrants and requires teacher/school administrative involvement.",
+    "eligibility_gate": "This is not a generic individual earning opportunity. It is intended for qualifying high-school/CTE school entrants under Perkins V, with an adult CTE teacher/coordinator/director as team lead and school authorization.",
+    "recommended_action": "Preserve as specialized opportunity intelligence. Do not create generic active work unless an eligible school/team is identified. After older source snapshots are replayed chronologically, publish a concise canonical intelligence item if the challenge remains open and the official rules are unchanged."
+  },
+  "safety": "No target testing was performed. Public security-program listings were treated only as discovery evidence and not as authorization."
+}
