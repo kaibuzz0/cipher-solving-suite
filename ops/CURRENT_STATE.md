@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-08-27 07:24 UTC
+Last reconciled: 2026-08-27 07:25 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -10,7 +10,8 @@ Repository version: `v3.1.0` (README)
 - PR #70 final head `9537d1770e0724c6afddf3d8f478ad9de68170ba` was mergeable and passed Core validation `33008367703` across Python 3.11/3.12/3.13. The matrix passed pytest, direct-script/catalog tests, Python compilation, source-registry/history/feed validation, collection reporting, artifact inventory, 310 migration/reproduction verification, dashboard-data generation, maintenance, and the final validation gate.
 - PR #70 is a one-file evidence-preservation change. `intelligence/feeds/2026-08-23-orbital-clarity-research.json` has Git blob SHA `d85ba4e450705e85d9cdd987d2541a48e24bdc41`, exactly matching superseded PR #69.
 - Repo Integrity independently re-opened current NASA/official Orbital Clarity sources and verified the preserved challenge-open state, Oct. 28 registration deadline, Nov. 11 submission deadline, award structure, U.S. eligibility rules, participant IP ownership/NASA-license posture, and $250,000 insurance/financial-responsibility requirement.
-- The previous main `94164e76350dd59dc6058fa4e4392b9bd28d382c` had successful push Core `33008151122` and Pages `33008151160` runs. Post-merge workflow runs for `96e2b410...` had not surfaced at reconciliation time, so the merge commit itself is not yet claimed independently green/deployed.
+- Post-merge Core validation `33049534979` succeeded on the actual merge commit `96e2b410...`. A Pages run was not triggered by this raw-research-only merge; no canonical website source, generated site-data input, registry, or site markup changed.
+- The previous main `94164e76350dd59dc6058fa4e4392b9bd28d382c` had successful push Core `33008151122` and Pages `33008151160` runs.
 - No open repository issues were found.
 
 ## Build / integration state
