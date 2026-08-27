@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-08-23T19:39:45Z",
+  "reconciled_at": "2026-08-26T19:38:58Z",
+  "purpose": "Reconciled raw research evidence for NASA TechLeap Orbital Clarity. The earlier Aug. 23 contribution is preserved on current main-era repository truth after the Aug. 23 canonical source replay, with independent verification of the complete official rules, timeline, evaluation, insurance, FAQ, and technical-guideline surfaces. This file does not itself advance canonical source-history timestamps or create an active case.",
+  "finding": {
+    "title": "NASA TechLeap Orbital Clarity Challenge is open with a $2 million award pool and up to $500,000 per winner across three phases",
+    "category": "opportunity",
+    "source_name": "NASA / Orbital Clarity Challenge official host",
+    "source_url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-techleap-prize-orbital-clarity-challenge/",
+    "host_url": "https://occ.nasatechleap.org/",
+    "rules_url": "https://occ.nasatechleap.org/rules-terms-and-conditions/",
+    "faq_url": "https://occ.nasatechleap.org/frequently-asked-questions/",
+    "timeline_url": "https://occ.nasatechleap.org/challenge-phases-and-timeline/",
+    "technical_guidelines_url": "https://occ.nasatechleap.org/technical-guidelines/",
+    "evaluation_url": "https://occ.nasatechleap.org/evaluation-criteria/",
+    "insurance_url": "https://occ.nasatechleap.org/insurance-guidelines/",
+    "published_at": "2026-08-19T00:00:00Z",
+    "original_observed": "nasa techleap orbital clarity challenge | official nasa page published aug 19 2026 | challenge open aug 19 2026 | phase 1 registration closes oct 28 2026 | phase 1 submission closes nov 11 2026 | up to four winners may receive up to 500000 usd each across three phases | total award pool 2000000 usd | winning teams intended no-cost test flight",
+    "original_content_fingerprint": "2cddf2dcf66db6a0c956477d17ff7d9eb30b41a2eae7907a962808970db96821",
+    "rules_observed": "orbital clarity official rules full verification | individuals us citizens or permanent residents age 18 plus | organizations incorporated and primary place of business in united states | teams otherwise eligible and led by us citizen or permanent resident age 18 plus | foreign nationals allowed only in specified roles with acknowledgement and export-law compliance | phase 1 registration due oct 28 2026 5 pm et | phase 1 submission due nov 11 2026 5 pm et | up to four phase 1 winners receive 200000 usd each | phase 2 additional 200000 usd each | phase 3 additional 100000 usd each | total award pool 2000000 usd | phase 3 winners intended no-cost orbital flight test | minimum 250000 usd liability insurance or equivalent financial responsibility | ip ownership remains with participant and nasa may negotiate license | standalone free-flying satellites ineligible hosted payload required | phase 1 five normalized judge reviews plus selection committee",
+    "rules_content_fingerprint": "97b57de555846564699e5e3d7adb8a7a1020d4c3d7f281d86c8d7b61e9871512",
+    "confidence": "high",
+    "relevance": "high",
+    "verified_facts": [
+      "NASA states the challenge opened August 19, 2026 and the official host currently labels submissions open.",
+      "Phase 1 registration closes October 28, 2026 at 5:00 p.m. ET and Phase 1 submissions close November 11, 2026 at 5:00 p.m. ET.",
+      "The official host states a $2 million total award pool. Up to four Phase 1 winners receive $200,000 each; qualifying teams may receive an additional $200,000 in Phase 2 and $100,000 in Phase 3, for up to $500,000 per winner across three phases.",
+      "NASA intends to offer each team that successfully completes Phase 3 an orbital flight test at no cost.",
+      "Individuals must be U.S. citizens or U.S. permanent residents and at least 18 years old.",
+      "Organizations must be incorporated in and maintain a primary place of business in the United States.",
+      "Teams must be composed of otherwise eligible participants and led by a U.S. citizen or permanent resident who is at least 18 years old.",
+      "Foreign nationals may participate only under specified eligible relationships, acknowledgement requirements, and applicable trade/export-law compliance; they are not themselves eligible to receive a NASA prize.",
+      "Each eligible lead applicant may submit one application, while serving as a partner on another distinct application is permitted under the stated rules.",
+      "Applicants cannot receive duplicate U.S. government funding for the same scope of work; government-funded development can affect eligibility and IP rights.",
+      "Participants must have at least $250,000 in liability insurance or otherwise demonstrate financial responsibility for that amount. Proof is required when identified as a potential winner and the coverage must meet the official challenge conditions.",
+      "The participant retains ownership of inventions, software, and authored work arising from the challenge; NASA may negotiate for a license to use resulting solutions.",
+      "Standalone free-flying satellites are not eligible. Every delivered solution must be compatible with operation as a hosted payload on a commercial spacecraft.",
+      "Phase 1 valid submissions receive five expert reviews scored on a 1-5 rubric with normalization; top-scoring submissions proceed to a selection committee that selects up to four winners using judging results plus programmatic considerations.",
+      "The challenge is a prize competition rather than a grant; prize funds are distributed directly to winners and may be used at the winner's discretion subject to continuing eligibility.",
+      "Official FAQ says parts of a submission such as technology title and description may be published, while applicants may choose to exclude confidential or sensitive information from their submission."
+    ],
+    "direct_entry_cost": {
+      "registration_fee_verified": false,
+      "registration_fee_evidence": "No registration or submission fee is stated on the reviewed official challenge, FAQ, rules, timeline, evaluation, insurance, or technical-guideline pages.",
+      "material_participation_costs": [
+        "At least $250,000 liability-insurance coverage or equivalent demonstrated financial responsibility is required.",
+        "Teams are responsible for developing the hardware and completing the required build/test work; NASA covers the intended Phase 3 orbital flight-test opportunity but not ordinary solution-development costs."
+      ]
+    },
+    "authorization_scope_note": "This is a legitimate prize challenge, not a security-testing authorization. Nothing in these materials authorizes testing of NASA, commercial spacecraft, or third-party systems outside the competition's published submission activities.",
+    "remaining_verification_before_structured_case": [
+      "Preserve the complete Phase 1 submission form and mandatory field/format limits before assigning build work.",
+      "Confirm the intended participant or team actually satisfies U.S. eligibility and can meet the $250,000 financial-responsibility requirement.",
+      "If foreign-national teammates are contemplated, preserve the Foreign Participant Acknowledgement Form and confirm applicable export/trade restrictions for the specific team composition and technology.",
+      "Before committing substantial work, review any Award Force platform terms that materially affect submission or data handling."
+    ],
+    "publication_recommendation": "The earlier chronological source-replay gate is now satisfied by merged PR #67. This reconciled evidence is sufficient for a high-confidence canonical intelligence promotion describing the challenge as currently open, while clearly surfacing the specialized eligibility, insurance/financial-responsibility requirement, hosted-payload technical constraint, and exact Phase 1 deadlines. A structured active case should still wait until the Phase 1 submission form is preserved and participant eligibility/financial responsibility are confirmed."
+  },
+  "source_health": {
+    "source_id": "ctftime-upcoming",
+    "url": "https://ctftime.org/event/list/upcoming",
+    "original_observed": "ctftime upcoming | compfest aug 29 0000 utc | blackhat mea qualification aug 29 0700 utc | asis quals aug 29 1400 utc | und cyberhawks qualifier aug 29 1400 utc casual | iran tech olympics aug 29 1400 utc | nns sep 4 | tfc sep 5",
+    "original_content_fingerprint": "1139453bda1f1fc4bba4417301f0823f15351fbe11b85d2f916b945f73a3cd59",
+    "current_recheck": "CTFtime still shows the broad Aug. 29 cluster led by COMPFEST, BlackHat MEA Qualification, ASIS Quals and related events. Existing canonical late-August intelligence already covers the planning window, so no duplicate feed item is recommended.",
+    "note": "This source observation remains research evidence for chronological replay after the coordination lane is reconciled; it should not be copied into canonical history out of order."
+  },
+  "coordination": {
+    "base_main": "f7bbeabdf8263442286edc9d2140c79c11572f69",
+    "supersedes": "PR #52 research branch evidence after reconciliation onto current main",
+    "current_coordination_pr": "PR #68 owns ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, data/integration_queue.json, and docs/AGENT_HANDOFF.md reconciliation after PR #67. This research branch deliberately does not modify those files.",
+    "next_chronological_research": "After this Orbital Clarity lane is integrated, evaluate PR #56, then PR #62, then PR #66 in source-overlap/timestamp order."
+  },
+  "safety": "No target testing was performed. No public target, repository, bounty, challenge listing, contract, or hostname was treated as authorization for security testing."
+}
