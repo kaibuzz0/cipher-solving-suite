@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-26T19:30:00Z",
+  "updated_at": "2026-08-27T07:24:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -49,28 +49,29 @@
         "Bounty listings do not establish testing authorization.",
         "Later PR #52, #56, #62, and #66 research must still be reconciled chronologically and by source overlap."
       ],
-      "next_action": "Process PR #52 next, then PR #56, PR #62, and PR #66 in chronology/source-overlap order."
+      "next_action": "Orbital Clarity research is now integrated through PR #70; process PR #56 next, then PR #62 and PR #66 in chronology/source-overlap order."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
       "type": "research",
-      "status": "needs-review",
-      "contributor": "research-agent / PR #52",
-      "branch_or_pr": "PR #52",
+      "status": "integrated",
+      "contributor": "research-agent / PR #52; reconciled by PR #69 and current-main build PR #70; independently verified by Repo Integrity",
+      "branch_or_pr": "PR #52; PR #69 closed as superseded; PR #70 merged as 96e2b410827ad5374c4960312d9b7d71df31a4ae",
       "path": "intelligence/feeds/2026-08-23-orbital-clarity-research.json",
-      "purpose": "Preserve the NASA TechLeap Orbital Clarity lead until earlier overlapping source-history state is reconciled and full actionability evidence is independently verified.",
-      "summary": "PR #52 preserves official-source dates and prize/test-flight claims for NASA TechLeap Orbital Clarity but explicitly lacks complete eligibility, IP/export-control, phase-award, judging and submission-rule evidence needed for structured active work.",
-      "verification": "Research evidence is preserved in PR #52; no canonical source-history advancement or active-case promotion has occurred.",
+      "purpose": "Preserve the NASA TechLeap Orbital Clarity lead after earlier overlapping source-history state became canonical and complete official-rule evidence was independently verified.",
+      "summary": "PR #70 preserves the reconciled official-source Orbital Clarity research on current main, including exact Phase 1 deadlines, award structure, eligibility, IP/export constraints, hosted-payload requirement, judging model, and the $250,000 insurance/financial-responsibility requirement. It intentionally does not advance canonical source-history timestamps or create a structured active case.",
+      "verification": "PR #70 final head 9537d1770e0724c6afddf3d8f478ad9de68170ba passed Core validation 33008367703 on Python 3.11/3.12/3.13. The preserved research file Git blob SHA d85ba4e450705e85d9cdd987d2541a48e24bdc41 exactly matches superseded PR #69. Repo Integrity independently reopened current NASA/official-host rules, timeline, FAQ and insurance surfaces and verified the preserved deadlines, award structure, eligibility, IP posture and $250,000 insurance/financial-responsibility requirement. Post-merge Core 33049534979 succeeded on merge commit 96e2b410827ad5374c4960312d9b7d71df31a4ae.",
       "risks": [
-        "The earlier Aug. 23 replay is now canonical, but PR #52 still requires current-main reconciliation and complete official-rule verification.",
-        "Do not present headline prize values or open lifecycle as proof of current eligibility/actionability without full official rules."
+        "Do not create a structured active case until the complete Phase 1 submission form and mandatory field/format limits are preserved.",
+        "Participant-specific eligibility and ability to meet the $250,000 financial-responsibility requirement remain gates before assigning build work.",
+        "Challenge participation is not security-testing authorization."
       ],
-      "next_action": "Reconcile PR #52 against current main, independently verify the official Orbital Clarity competition rules, and preserve exact eligibility, participation, phase-award, judging, IP/export-control, submission and entry-cost terms before deciding whether canonical promotion is warranted."
+      "next_action": "Process PR #56 next, preserving complete HHS DS-MRN official rules and replaying only evidence-backed source observations before any actionability promotion."
     },
     {
       "id": "20260824-pr56-hhs-digital-stockpile-research",
       "type": "research",
-      "status": "blocked",
+      "status": "needs-review",
       "contributor": "research-agent / PR #56",
       "branch_or_pr": "PR #56; duplicate/conflicting PR #57 closed as superseded by Repo Integrity on 2026-08-25",
       "path": "intelligence/feeds/2026-08-24-source-health.json",
@@ -78,12 +79,12 @@
       "summary": "PR #56 contains source-specific Aug. 24 observations and a high-confidence HHS DS-MRN lead while explicitly preserving unresolved deadline-timezone, judging, travel-cost and IP/data-rights gates. PR #57 targeted the same path but used an empty-content SHA-256 placeholder and encoded the displayed 8 PM deadline as UTC despite leaving timezone confirmation unresolved; it was closed unmerged as superseded rather than allowed to become competing canonical truth.",
       "verification": "Repo Integrity compared both PR patches directly. PR #56 preserves richer source URLs, normalized observations and fingerprints and does not manufacture deadline timezone precision. No canonical replay or opportunity promotion has occurred.",
       "risks": [
-        "Process after PR #52 and preserve any overlapping source history in chronological order.",
+        "Preserve any overlapping source history in chronological order.",
         "The exact timezone of the displayed Phase 1 8 PM deadline remains unverified in the preserved PR #56 evidence.",
         "Full judging criteria, pitch-event cost/reimbursement terms and complete IP/data-rights/indemnification/tax language remain gates before active-case conversion.",
         "Security-program listings in the same source snapshot are discovery evidence only, not testing authorization."
       ],
-      "next_action": "After PR #52 is resolved, reconcile PR #56 onto current main in chronology/source-overlap order, independently verify the HHS complete rules, and promote only evidence-backed facts."
+      "next_action": "Reconcile PR #56 onto current main in chronology/source-overlap order, independently verify the HHS complete rules, and promote only evidence-backed facts."
     },
     {
       "id": "20260825-pr62-rascal-source-health-research",
@@ -96,10 +97,10 @@
       "summary": "PR #62 preserves CTFtime, Sherlock, arXiv and ETHGlobal observations plus a NASA 2027 RASC-AL lead. It explicitly leaves exact eligibility, deadline timezone, judging/scoring, submission limits, IP/publication, travel responsibility and top-two award details for later verification.",
       "verification": "PR #62 remains contributed research only; no canonical source-history advancement or active opportunity promotion has occurred.",
       "risks": [
-        "Process only after PR #52 and PR #56 where source overlap applies.",
+        "Process only after PR #56 where source overlap applies.",
         "Do not convert the RASC-AL headline into a generic actionable opportunity without full official guidelines."
       ],
-      "next_action": "Reconcile PR #62 after earlier research lanes, preserve exact official competition rules, and replay only evidence-backed source observations."
+      "next_action": "Reconcile PR #62 after PR #56, preserve exact official competition rules, and replay only evidence-backed source observations."
     },
     {
       "id": "20260826-pr66-xtech-source-health-research",
@@ -112,7 +113,7 @@
       "summary": "PR #66 records conflicting official xTech|Search 10 deadline surfaces, a newer Sherlock listing, and current arXiv/CTFtime/ETHGlobal observations. It intentionally does not promote xTech as actionable while authoritative date evidence conflicts and the full RFI is unavailable.",
       "verification": "PR #66 remains contributed research only; no canonical source-history advancement, active case, or target authorization change has occurred.",
       "risks": [
-        "Process after PR #52, PR #56 and PR #62 in chronology/source-overlap order.",
+        "Process after PR #56 and PR #62 in chronology/source-overlap order.",
         "Resolve the official xTech date conflict and obtain the complete RFI before actionability claims."
       ],
       "next_action": "After earlier research lanes are reconciled, verify the actual xTech RFI/application portal and replay only exact evidence-backed observations."
