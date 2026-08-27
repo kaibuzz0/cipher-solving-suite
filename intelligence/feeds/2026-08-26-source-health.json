@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-26T07:39:05Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "0ef952cbab3e169e40288aefd34292bde57aeaec",
+  "purpose": "Preserve a bounded Aug. 26 current-source research pass without advancing canonical source-history timestamps ahead of the pending Aug. 23 replay and later PR #52, #56, and #62 research chain.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | xtech search 10 listed | usa gov says start sep 10 2026 5 pm et end oct 19 2026 5 pm et cash prize 1000000 | army xtech page labels open and coming soon but shows submission window aug 5 to sep 30 2026 and up to 1000000 cash plus 4800000 sbir or sttr proposals | sbir gov topic status open with open date aug 26 2026 and close date sep 23 2026 | official date conflict requires full rfi verification before actionability",
+      "sha256": "eb797b905124aa7ca06577aa2eac6f98734601a851ecad7ad53c4e0628b9fc87",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://www.sbir.gov/topics/12926",
+        "https://xtech.army.mil/wp-content/uploads/2022/09/RFI_PLACEHOLDER.pdf"
+      ],
+      "note": "xTech|Search 10 is a high-value lead but current official surfaces disagree on the application window. USA.gov says Sep. 10-Oct. 19; the Army xTech page says Aug. 5-Sep. 30 while also saying 'Coming Soon'; SBIR.gov lists the related topic open Aug. 26-Sep. 23. The Army's 'Download Full RFI' link currently resolves to a one-page placeholder saying the RFI is unavailable. Do not promote a definitive deadline or active-case claim until the full RFI/application portal resolves the conflict."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent alphix dec 2025 | max reward 30000 usdc | live | last updated aug 25 2026 1132 pm | listing still includes usual labs 16000000 usdc aave v4 2500000 usd cap 1000000 usdc midas 500000 usdc and puffer 100000 usdc | public listing remains discovery evidence only",
+      "sha256": "c8a1e59f595a1d8d788ca5cfc22f3d4cb6ee782b741a443911347ea0cf935665",
+      "primary_followup_urls": [
+        "https://audits.sherlock.xyz/bug-bounties/213"
+      ],
+      "note": "Sherlock's 'most recent' slot changed from Midas to Alphix - Dec 2025. Alphix is LIVE with a 30,000 USDC maximum reward and an Aug. 25, 2026 11:32 PM update. This is source-health/discovery evidence only; exact scope and rules remain mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | latest visible date wed 26 aug 2026 | total 199 recent entries | index advanced beyond aug 24 state | no individual paper promoted in this bounded pass without stronger direct cipher solving or reusable tooling relevance",
+      "sha256": "f58d8d0792b943fde0bab2a867d452c40ff006d243e8d812e984829009890ab9",
+      "note": "The recent index advanced to Aug. 26 with 199 entries. No newly visible paper cleared the publication threshold for direct cipher-solving or reusable-tool value in this bounded pass."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | compfest ctf 2026 aug 29 0000 utc | blackhat mea ctf qualification 2026 aug 29 0700 utc | asis ctf quals 2026 aug 29 1400 utc | und cyberhawks qualifiers aug 29 1400 utc | iran tech olympics ctf 2026 aug 29 1400 utc | nns sep 4 | tfc sep 5 | no materially better general opportunity than already preserved late august planning window",
+      "sha256": "111f238ab58ed2167d6e1e9ab0072516d8e0777b1c35ba1adc327c51f497afc2",
+      "note": "The Aug. 29 online cluster remains the next broad competition window; existing canonical late-August intelligence already covers the useful planning period, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | happy hour at ethbelgrade aug 26 to aug 27 | ethonline 2026 sep 4 to sep 16 | ethglobal tokyo sep 25 to sep 27 | ethglobal mumbai nov 6 to nov 8 | no material change to existing canonical ethonline intelligence",
+      "sha256": "b9291f5dc88d437f71898fb71674a69535f7083429172423a2422c3e495645d0",
+      "note": "ETHGlobal added an Aug. 26-27 Belgrade meetup, but the next substantive build opportunity remains ETHOnline Sep. 4-16. Existing canonical ETHOnline intelligence remains accurate."
+    }
+  ],
+  "new_lead": {
+    "title": "Army xTech|Search 10",
+    "category": "opportunity",
+    "status": "official-source-conflict-needs-rfi",
+    "source_name": "U.S. Army xTech / USA.gov / SBIR.gov",
+    "official_sources": [
+      "https://www.usa.gov/challenges/xtech-search-10",
+      "https://xtech.army.mil/competition/xtechsearch10/",
+      "https://www.sbir.gov/topics/12926"
+    ],
+    "verified_facts": [
+      "USA.gov lists xTech|Search 10 as a U.S. Army technology challenge with a $1,000,000 cash-prize headline.",
+      "The Army xTech competition page advertises up to $1 million in cash prizes plus up to $4.8 million in Army SBIR or STTR proposals.",
+      "The Army page describes the competition as open-topic and oriented toward commercially developed technologies with Army mission potential.",
+      "SBIR.gov lists the related xTech|Search 10 topic as Open on August 26, 2026 and says only finalists selected through the xTech competition can submit the follow-on SBIR/STTR proposal."
+    ],
+    "confidence": "high for existence/prize headline; low for exact current submission deadline because official sources conflict",
+    "relevance": "high",
+    "entry_cost": "No entry fee was established in the reviewed official surfaces; compliance, proposal preparation, business-registration, CAGE/NCAGE, or other participation costs require full-RFI verification.",
+    "eligibility": "Specialized business opportunity. USA.gov describes eligible small businesses around the U.S.; the current Army page says small and large U.S.-based and allied foreign-country businesses; SBIR/STTR follow-on eligibility is narrower. Full RFI is required before relying on eligibility.",
+    "missing_verification": [
+      "Obtain the actual xTech|Search 10 RFI; the official Army download currently returns a placeholder stating the RFI is unavailable.",
+      "Resolve the conflicting official application windows: USA.gov Sep. 10-Oct. 19, Army xTech Aug. 5-Sep. 30, and SBIR.gov Aug. 26-Sep. 23 for the linked topic.",
+      "Preserve exact Phase 1 submission requirements, judging/scoring, finalist cash-prize allocation, follow-on SBIR/STTR eligibility, intellectual-property/data-rights terms, export-control/CAGE/NCAGE requirements, and any application costs."
+    ],
+    "recommended_action": "Keep as a high-value watch/reconciliation lead, not structured active work. Recheck the Army page/RFI after the placeholder is replaced; then run the official evidence through the opportunity-evidence/actionability pipeline before canonical promotion."
+  },
+  "chronology": "Canonical source-history replay must preserve older pending state before overlapping timestamps from this snapshot: PR #63 evidence at 2026-08-23T07:42:04Z must be replayed first, then PR #52 where applicable, PR #56 at 2026-08-24T19:42:29Z, PR #62 at 2026-08-25T19:42:47Z, then this 2026-08-26T07:39:05Z snapshot.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
