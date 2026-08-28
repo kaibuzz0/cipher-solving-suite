@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-28T19:37:39Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "13dff25b7b1fdfb3817975a7bf60f7eff3eb4afc",
+  "chronology_gate": "Do not replay this afternoon snapshot into canonical source history until the Aug. 25 PR #62 snapshot, Aug. 26 PR #66 snapshot, Aug. 27 PR #75 snapshot, and the preserved Aug. 28 07:40:27Z snapshot are integrated in chronological/source-overlap order.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime and the official COMPFEST CTF host were rechecked on 2026-08-28. CTFtime's COMPFEST event page says the event was extended from 24 to 48 hours because of collisions with ASIS CTF and BlackHat MEA qualifiers; the official COMPFEST CTF host currently gives August 29, 2026 00:00 UTC through August 31, 2026 00:00 UTC. The broader Aug. 29 competition cluster remains current.",
+      "sha256": "78ef14e4f60d3e23981176686b6ca9d6b26cd23a222fdd1bf0773e4037613ae8",
+      "evidence_urls": [
+        "https://ctftime.org/event/2891/",
+        "https://mirror-ctf.compfest.id/"
+      ],
+      "note": "Material organizer-level schedule correction: prefer the official COMPFEST host's 48-hour end time over stale/shorter aggregator summary text. Existing broad late-August planning intelligence need not be duplicated, but event-specific timing should be corrected when this snapshot reaches canonical chronology."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "GitHub tool research on 2026-08-28 identified skyf0l/RsaCracker as a public, non-archived Rust RSA/CTF tool candidate. GitHub reports its latest push on 2026-08-24, its current main CI completed successfully, and its latest release is v0.9.1 from 2026-03-22; the README documents RSA key/cipher analysis, targeted and multi-key attacks, partial-prime wildcard recovery, and dual Apache-2.0/MIT licensing.",
+      "sha256": "7ea7f35a0c4f8f8d194af4c8004836769e3a8752193c2a3099180124fbd01c0e",
+      "evidence_urls": [
+        "https://github.com/skyf0l/RsaCracker",
+        "https://github.com/skyf0l/RsaCracker/releases/tag/v0.9.1",
+        "https://github.com/skyf0l/RsaCracker/actions"
+      ],
+      "note": "Tool-evaluation lead only. Do not vendor/import automatically. Evaluate overlap with existing RSA/number-theory tooling, deterministic fixture value, Rust/GMP dependency footprint, input/output boundaries, and license implications first."
+    }
+  ],
+  "new_tool_lead": {
+    "repository": "skyf0l/RsaCracker",
+    "category": "github-tool-research",
+    "status": "evaluation-lead",
+    "confidence": "high",
+    "relevance": "high",
+    "verified_facts": [
+      "The repository is public and not archived.",
+      "GitHub reports a 2026-08-24 latest push and successful CI on the current main head.",
+      "The latest GitHub release is v0.9.1, published 2026-03-22.",
+      "The README documents RSA public/private-key parsing, ciphertext recovery, targeted attacks, multi-key attacks, partial-prime wildcard recovery, Cargo/Docker use, and dual Apache-2.0/MIT licensing.",
+      "The README notes a rug/GMP dependency and an MSYS2 requirement when building on Windows."
+    ],
+    "recommended_action": "Before importing any code, compare its attack coverage with the suite's existing RSA/number-theory capabilities, inspect dependency and supply-chain footprint, choose small deterministic CTF fixtures, verify reproducible direct CLI behavior, and decide whether wrapping an external binary is preferable to vendoring source."
+  },
+  "safety": "Research covered public CTF and open-source tool information only. No public security target or bounty listing was treated as authorization and no target testing was performed."
+}
