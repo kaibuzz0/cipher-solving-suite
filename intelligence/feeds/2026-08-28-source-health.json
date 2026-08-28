@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-28T07:40:27Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "1f15400393b4be156fc17e9468da6110215b926b",
+  "chronology_gate": "Do not replay this snapshot into canonical source history until the preserved Aug. 25 PR #62, Aug. 26 PR #66, and Aug. 27 PR #75 observations are reconciled in chronological/source-overlap order after the now-canonical Aug. 24 replay.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "USA.gov active federal challenges on 2026-08-28 include ACL Caregiver AI Prize Challenge, ACL Cultivating Connected Communities Challenge, Building Disaster-Ready Human Services Systems, Careers in Your Community Challenge, Connecting Talent to Opportunity Challenge, Halt the Hitchhiker: Invasive Species Challenge, NASA Gateways to Blue Skies, NIH Complement-ARIE NAMs Reduction to Practice Challenge, One CDC Data Platform Innovation Challenge, xTech Kinetic Reach, and xTech Search 10.",
+      "sha256": "d3b363da64284c57f7979e54b4744e9b33a6ed2594c0c7d82e62d495e7ec9457",
+      "note": "The active challenge set is materially unchanged from the preserved Aug. 27 observation. Careers in Your Community remains a specialized school-eligibility lead and should not be treated as generic individual work."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime upcoming list on 2026-08-28 begins with COMPFEST CTF 2026 Aug 29 00:00 UTC, BlackHat MEA CTF Qualification 2026 Aug 29 07:00 UTC, DiceCTF 2026 Finals Aug 29 16:00 UTC, NNS CTF 2026 Sep 4 16:00 UTC, and TFC CTF 2026 Sep 5 10:00 UTC; later September includes VolgaCTF Final, NullOrigin Qualifiers, DefCamp CTF Quals, CSAW CTF Qualification Round, WATCHLIST, 07CTF, BCS CTF, H7CTF Quals, FAUST CTF, and SunshineCTF.",
+      "sha256": "603fd2ec4fb8f44f8509b1736d763250216f449ac02b640445c4a573bce17cd7",
+      "note": "The Aug. 29 cluster remains the next useful online competition window. Existing canonical intelligence already covers the late-August planning window, so no duplicate feed item is recommended. Organizer rules should still be verified before creating any event-specific case."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "Sherlock Bug Bounties on 2026-08-28 still shows Alphix - Dec 2025 as the most recent bounty at 30,000 USDC, last updated Aug 25, 2026; the broader listing includes Usual Labs at 16,000,000 USDC, Aave V4 at 2,500,000 USD, Cap at 1,000,000 USDC, Midas at 500,000 USDC, and Puffer at 100,000 USDC.",
+      "sha256": "d8decc8eda696d2fb172d69e0bb05f903073838aeaa7729901da7cb0ef303690",
+      "note": "No stronger bounty change was identified. This remains discovery evidence only; public listings do not authorize testing and exact scope/rules remain mandatory before any security case or testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arXiv cs.CR recent on 2026-08-28 shows a Fri Aug 28 batch with 43 entries and 224 recent entries overall. A directly relevant new preprint is arXiv:2608.26237, How Do LLM Agents Actually Get the Flag? Trace-Level Provenance for Agentic Offensive Security Evaluation, which introduces CTF-ABACUS to reconstruct agent runs as evidence-grounded solve profiles and distinguish demonstrated exploitation from flag exposure, lookup, guessing, or unsupported claims.",
+      "sha256": "67865b863b0f73b671cf8fd86b3991462bc4e64385de92b54dc1cdf5da40d86d",
+      "note": "This source changed materially. The paper is directly relevant to this repository's evidence/provenance discipline, but it is a preprint and should be evaluated conservatively before any tooling adoption."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ETHGlobal events on 2026-08-28 still lists ETHOnline 2026 Sep 4-16, ETHGlobal Tokyo Sep 25-27, ETHGlobal Mumbai Nov 6-8, and ETHConf 2027 Jun 14-16; no material schedule change was identified for the existing ETHOnline intelligence lead.",
+      "sha256": "c908d7693ae229b80276b92560a5973840336fb47d96c0d3ca1f62ce2191defe",
+      "note": "Existing ETHOnline canonical intelligence remains accurate; no duplicate publication is recommended."
+    }
+  ],
+  "new_research_lead": {
+    "title": "How Do LLM Agents Actually Get the Flag? Trace-Level Provenance for Agentic Offensive Security Evaluation",
+    "category": "research",
+    "source_id": "arxiv-cryptography",
+    "official_source": "https://arxiv.org/abs/2608.26237",
+    "arxiv_id": "2608.26237",
+    "status": "preprint-research-lead",
+    "verified_facts": [
+      "The paper appears in arXiv cs.CR's Friday, August 28, 2026 recent-submissions batch.",
+      "The abstract says current CTF-agent evaluations can conflate demonstrated exploitation with direct flag exposure, memorized recall, external lookup, guessing, or unsupported claims.",
+      "The authors introduce CTF-ABACUS, a trace-based auditing framework intended to reconstruct runs as evidence-grounded solve profiles.",
+      "The framework is described as tracking where exploitation occurs, where a flag first appears, and whether the recovered flag is supported by demonstrated behavior."
+    ],
+    "confidence": "medium",
+    "relevance": "high",
+    "recommended_action": "Evaluate the paper and any released implementation for license, reproducibility, dataset/benchmark assumptions, and whether its trace/provenance model can strengthen this repository's case evidence, solver-attempt, and autonomous-agent verification contracts. Do not import code or adopt benchmark claims until independently reviewed."
+  },
+  "safety": "No target testing was performed. Public security-program listings were treated only as discovery evidence and not as authorization."
+}
