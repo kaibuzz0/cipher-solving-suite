@@ -1,23 +1,27 @@
 # Current Repository State
 
-Last reconciled: 2026-08-28 08:14 UTC
+Last reconciled: 2026-08-28 19:24 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `846eed50b3d586e26f18147b0be15665e80e0521`, the merge of coordination PR #77. PR #77 exact head passed Core `33151353058`; post-merge `main` passed Core `33153817545` and Deploy operations dashboard `33153817529`.
-- PR #76 remains the canonical Aug. 24 source-health replay; its exact head `1ff3a191496508c6b99bd1c54c8a3d40548933e3` passed Core `33111737648`, Intelligence Source Report `33111737656`, and Daily Repository Maintenance `33111737691` before merge.
-- Open research PR #75 changes only `intelligence/feeds/2026-08-27-source-health.json`; PR #78 changes only its Aug. 28 raw research/source-health file. Neither owns the Aug. 25 canonical replay paths.
+- Current `main` is `13dff25b7b1fdfb3817975a7bf60f7eff3eb4afc`, the merge of PR #79.
+- PR #79 exact final head `087d43f2825897959c969aa65f6814eda7bb851a` passed Core validation `33154463607` across Python 3.11/3.12/3.13, Intelligence Source Report `33154463592`, and Daily Repository Maintenance `33154463591` before merge.
+- Core passed the test suite, direct-script replay coverage, compile checks, source registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction checks, dashboard-data generation, maintenance, and the final failure gate.
+- Repo Integrity independently inspected the replay implementation and tests, verified the canonical tool/site discovery path, and found no blocking defect before merge.
+- Post-merge workflow runs for `13dff25b...` had not surfaced through the connected commit-run query at reconciliation time, so merge-commit CI/Pages are not claimed here.
+- Open research PR #75 changes only `intelligence/feeds/2026-08-27-source-health.json`; PR #78 changes only its Aug. 28 raw research/source-health file. Neither overlaps the merged replay implementation paths.
 
 ## Build / integration state
 
-- PR #79 / branch `build/source-history-snapshot-replay-20260828` adds a bounded `source-history replay-snapshot` capability rather than replacing the large provenance-bearing source-history file manually.
-- The replay command recomputes every preserved observation SHA-256, checks canonical source IDs, blocks duplicate sources, refuses out-of-order chronology or registry rewind, treats exact repeat records as idempotent, and validates the entire snapshot before writing either canonical file.
-- Deterministic tests cover changed/unchanged predecessors, hash mismatch fail-closed behavior, chronology blocking, idempotence, direct-script dry-run behavior, and the actual preserved Aug. 25 PR #62 snapshot against current Aug. 24 canonical history.
+- PR #79 canonically added `python scripts/source_check_history.py replay-snapshot <snapshot>` as a bounded provenance-preserving replay path for preserved source-health snapshots.
+- The replay command recomputes every preserved observation SHA-256, requires canonical source IDs, rejects duplicate snapshot sources, blocks newer canonical history and registry timestamp rewind, treats exact same-time/same-fingerprint records as idempotent, and validates the complete snapshot before writing canonical files.
+- Deterministic tests cover changed/unchanged predecessor derivation, hash-mismatch fail-closed behavior, chronology blocking, idempotence, direct-script `--dry-run` non-mutation, and the actual preserved Aug. 25 PR #62 snapshot against current Aug. 24 canonical history.
 - The preserved Aug. 25 hashes independently recompute exactly: `ctftime-upcoming` `26679909...`, `sherlock-bounties` `b50b89ec...`, `arxiv-cryptography` `68147c9a...`, and `ethglobal-events` `b20807c6...`.
-- Expected Aug. 25 predecessors are `a96cc699...`, `13c29e51...`, `8fb2b945...`, and `a1954da1...` respectively. No Aug. 25 canonical freshness has been advanced by this branch yet.
-- PR #79 implementation head `fa2a16bb731db04d79b4c8a403f030dfa03dcdd3` passed Core validation `33154381695` across Python 3.11/3.12/3.13, Intelligence Source Report `33154381708`, and Daily Repository Maintenance `33154381741`. Core passed tests, compilation, source registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction, dashboard-data generation, maintenance, and the final failure gate.
+- Expected Aug. 25 predecessors are `a96cc699...`, `13c29e51...`, `8fb2b945...`, and `a1954da1...` respectively.
+- No Aug. 25 canonical source freshness or opportunity state was advanced by PR #79. Its purpose was to make the next replay safer and reviewable.
+- The existing canonical `source-history` tool ID/path remains unchanged and `verified`; only its documented capability description was extended. Command Site snapshot generation consumes canonical `data/tools.json`, so no bespoke website HTML is required.
 
 ## Current research / intelligence state
 
@@ -25,8 +29,9 @@ Repository version: `v3.1.0` (README)
 - Former PR #47 / merged PR #58 observations at `2026-08-22T19:42:58Z` are canonical through PR #60.
 - Former PR #49 / merged PR #63 observations at `2026-08-23T07:42:04Z` are canonical through PR #67.
 - PR #72 / PR #76 observations at `2026-08-24T19:42:29Z` are canonical.
-- RASC-AL Aug. 25 and xTech/source-health Aug. 26 raw snapshots are preserved on main and remain the next chronological source lanes.
-- PR #75 preserves later Aug. 27 source health and the Education Careers in Your Community challenge; PR #78 preserves later Aug. 28 source health and a CTF provenance preprint lead. Both must remain behind Aug. 25 and Aug. 26 replay.
+- The Aug. 25 PR #62 RASC-AL/source-health snapshot is now the next `needs-integration` source lane and should be replayed with the merged safe replay command in a separate bounded PR.
+- The Aug. 26 PR #66 xTech/source-health snapshot remains blocked behind Aug. 25. PR #75 Aug. 27 and PR #78 Aug. 28 raw research remain later chronological lanes.
+- Complete official RASC-AL rules remain a separate verification gate before structured opportunity promotion.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test a target.
 
 ## 310 case / tool state
@@ -38,24 +43,25 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- The snapshot-replay implementation head is green; the coordination-complete PR head created by this state update requires final fresh CI and independent integrity review before merge.
-- After the replay capability is canonical, replay the preserved Aug. 25 PR #62 snapshot using the new command; complete official RASC-AL rules remain a separate gate before structured opportunity promotion.
-- Process the preserved Aug. 26 PR #66 snapshot afterward; resolve the xTech|Search 10 official deadline conflict and obtain the complete RFI/application evidence before actionability claims.
+- Replay the preserved Aug. 25 PR #62 snapshot next using the newly merged deterministic replay command; do not combine the capability merge and source-freshness advancement into the same review boundary.
+- Independently verify complete official RASC-AL eligibility, judging, submission, IP, travel/cost, and top-award rules before any structured actionability promotion.
+- Process the preserved Aug. 26 PR #66 snapshot afterward; resolve the xTech|Search 10 official deadline conflict and obtain complete RFI/application evidence before actionability claims.
 - Keep Aug. 27 PR #75 and Aug. 28 PR #78 behind those earlier source lanes.
 - Root legacy/generated artifacts still require hash- and reference-preserving migration.
 - External provenance/authenticity for `310_challenge.png` remains unresolved.
+- Direct local replay could not be run in this integrity pass because the runtime could not resolve `github.com`; GitHub-hosted deterministic CI plus independent source/test inspection are the verification basis.
 
 ## Current operating priorities
 
-1. Require final-head CI and independent review for PR #79, then merge the safe snapshot-replay capability without changing source freshness.
-2. Use it to replay Aug. 25 PR #62 exactly after independent review of its four hash/predecessor pairs.
-3. Then replay Aug. 26 PR #66, followed by Aug. 27 PR #75 and Aug. 28 PR #78, without skipping chronology or manufacturing freshness.
+1. Replay the exact Aug. 25 PR #62 snapshot in a separate bounded branch/PR using `source_check_history.py replay-snapshot`, preserving its four verified fingerprint/predecessor pairs.
+2. Validate source history, source registry, collection report, intelligence, site-data, Agent Operations, Core, Maintenance, and Pages compatibility after that replay.
+3. Then process Aug. 26 PR #66, followed by Aug. 27 PR #75 and Aug. 28 PR #78, without skipping chronology or manufacturing freshness.
 4. Continue the 310 external-provenance gate and hash-preserving root-artifact inventory without inflating experimental capability claims.
 
 ## Coordination note
 
-PR #77 cleared the post-PR76 state collision. PR #79 starts from that merge and intentionally does not modify raw Aug. 26-28 research files, canonical source history, registry timestamps, opportunities, cases, toolsets, or website HTML. The existing canonical `source-history` tool ID/path/maturity are preserved; only its capability description is extended so generated Tools/Command Site data remains data-driven.
+PR #79 was independently reviewed and merged from current post-PR77 `main`. It preserved the raw Aug. 26-28 research lanes, did not alter canonical source-history observations or registry timestamps, did not change opportunities/cases/toolsets, and did not add bespoke website HTML. The safe replay mechanism is now canonical; the next source-state mutation must remain a separate reviewable change.
 
 ## Next handoff
 
-Repo Integrity should independently run PR #79's snapshot-replay tests and direct-script dry run, confirm the actual Aug. 25 snapshot produces exactly four proposed records with the expected predecessors while writing nothing, verify the updated `source-history` registry entry reaches generated Tools/Command Site/repository-browser data, and merge only if the final coordination head remains green. Then replay Aug. 25 in a separate bounded PR.
+Create a bounded Aug. 25 replay PR from current `main`, first run `python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-25-source-health.json --dry-run`, confirm exactly four proposed records with the expected predecessors and no writes, then replay without `--dry-run`. Rerun source/history/report/intelligence/site-data/Core/Maintenance validation and independently review before merge. Only after Aug. 25 is canonical should Aug. 26, Aug. 27, and Aug. 28 be processed in order.
