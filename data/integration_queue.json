@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-28T08:04:00Z",
+  "updated_at": "2026-08-28T19:24:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -72,13 +72,13 @@
       "type": "research",
       "status": "needs-integration",
       "contributor": "research-agent / PR #62",
-      "branch_or_pr": "PR #62 merged as e19a4b8aa760f4b297028b5f43fa24ea4c4a0f30; raw evidence preserved on main; safe replay capability under build branch build/source-history-snapshot-replay-20260828",
+      "branch_or_pr": "PR #62 merged as e19a4b8aa760f4b297028b5f43fa24ea4c4a0f30; raw evidence preserved on main; safe replay capability merged through PR #79 as 13dff25b7b1fdfb3817975a7bf60f7eff3eb4afc",
       "path": "intelligence/feeds/2026-08-25-source-health.json",
       "purpose": "Preserve and canonically replay the Aug. 25 source-health snapshot and NASA RASC-AL lead after Aug. 24 is canonical.",
-      "summary": "The raw PR #62 snapshot is now unblocked chronologically. Its four observed strings independently match their stored SHA-256 values. A build branch is adding a fail-closed replay command and deterministic test that dry-runs this exact snapshot against current Aug. 24 history without mutating canonical files. No Aug. 25 freshness has been advanced yet.",
-      "verification": "Preserved observation fingerprints: ctftime-upcoming 26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964; sherlock-bounties b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a; arxiv-cryptography 68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f; ethglobal-events b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648. Expected predecessors are a96cc699..., 13c29e51..., 8fb2b945..., and a1954da1... respectively.",
+      "summary": "The raw PR #62 snapshot is unblocked chronologically. Its four observed strings independently match their stored SHA-256 values. PR #79 merged a fail-closed replay command and deterministic test that dry-runs this exact snapshot against current Aug. 24 history without mutating canonical files. No Aug. 25 freshness has been advanced yet.",
+      "verification": "Preserved observation fingerprints: ctftime-upcoming 26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964; sherlock-bounties b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a; arxiv-cryptography 68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f; ethglobal-events b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648. Expected predecessors are a96cc699..., 13c29e51..., 8fb2b945..., and a1954da1... respectively. PR #79 final head 087d43f2825897959c969aa65f6814eda7bb851a passed Core 33154463607, Source Report 33154463592 and Daily Maintenance 33154463591 before merge.",
       "risks": ["Do not convert the RASC-AL headline into a generic actionable opportunity without complete official competition guidelines.", "Aug. 26, Aug. 27 and Aug. 28 observations must not overtake this snapshot.", "Public security-program listings are discovery evidence only and do not authorize testing."],
-      "next_action": "Independently verify and merge the safe snapshot-replay capability if green, then replay this exact Aug. 25 snapshot in a separate bounded PR and validate source history, registry, report, intelligence/site-data and Pages compatibility."
+      "next_action": "Replay this exact Aug. 25 snapshot in a separate bounded PR using the canonical replay command; validate source history, registry, report, intelligence/site-data, Agent Operations, Core, Maintenance and Pages compatibility before merge."
     },
     {
       "id": "20260826-pr66-xtech-source-health-research",
