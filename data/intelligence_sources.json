@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-25T08:00:25Z",
+  "updated_at": "2026-08-27T20:02:00Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -10,7 +10,7 @@
       "categories": ["hackathon", "opportunity"],
       "tier": "primary",
       "freshness_hours": 24,
-      "last_checked_at": "2026-08-23T07:42:04Z",
+      "last_checked_at": "2026-08-24T19:42:29Z",
       "assigned_agent": "opportunity-scout",
       "enabled": true,
       "publish_default_confidence": "high",
@@ -24,7 +24,7 @@
       "categories": ["ctf", "opportunity"],
       "tier": "discovery",
       "freshness_hours": 12,
-      "last_checked_at": "2026-08-23T07:42:04Z",
+      "last_checked_at": "2026-08-24T19:42:29Z",
       "assigned_agent": "ctf-scout",
       "enabled": true,
       "publish_default_confidence": "medium",
@@ -52,7 +52,7 @@
       "categories": ["opportunity", "research"],
       "tier": "primary",
       "freshness_hours": 24,
-      "last_checked_at": "2026-08-23T07:42:04Z",
+      "last_checked_at": "2026-08-24T19:42:29Z",
       "assigned_agent": "opportunity-scout",
       "enabled": true,
       "publish_default_confidence": "high",
@@ -108,7 +108,7 @@
       "categories": ["bug-bounty", "opportunity", "crypto"],
       "tier": "primary",
       "freshness_hours": 12,
-      "last_checked_at": "2026-08-23T07:42:04Z",
+      "last_checked_at": "2026-08-24T19:42:29Z",
       "assigned_agent": "bounty-scout",
       "enabled": true,
       "publish_default_confidence": "high",

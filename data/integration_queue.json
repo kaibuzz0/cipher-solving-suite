@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-27T19:19:00Z",
+  "updated_at": "2026-08-27T20:04:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -57,15 +57,15 @@
     {
       "id": "20260824-pr56-hhs-digital-stockpile-research",
       "type": "research",
-      "status": "needs-integration",
-      "contributor": "research-agent / PR #56; reconciled by research PR #72; build/integration pass merged PR #72",
-      "branch_or_pr": "PR #56 closed as superseded; PR #72 merged as c7817a106b4694dbf452ed33a7317840c0a1a9df",
+      "status": "needs-review",
+      "contributor": "research-agent / PR #56; reconciled by research PR #72; replayed by build/integration branch build/replay-aug24-source-health-20260827",
+      "branch_or_pr": "PR #56 closed as superseded; PR #72 merged as c7817a106b4694dbf452ed33a7317840c0a1a9df; replay branch build/replay-aug24-source-health-20260827",
       "path": "intelligence/feeds/2026-08-24-source-health.json",
       "purpose": "Preserve the Aug. 24 source-health snapshot and HHS Digital Stockpile & Manufacturing Response Network Challenge lead, then replay its exact observations canonically in chronological order.",
-      "summary": "PR #72 preserves the reconciled Aug. 24 snapshot on current main and independently verifies complete HHS DS-MRN rule evidence, including the material prohibition on AI-generated narrative and video content. The four Aug. 24 source observations have not yet been replayed into canonical source history or source-registry freshness.",
-      "verification": "PR #72 exact head 0e79c7b8e6eca7302e7e46dd3961f6adacaddad7 passed Core validation 33051244978 and merged as c7817a106b4694dbf452ed33a7317840c0a1a9df. The preserved snapshot keeps checked_at 2026-08-24T19:42:29Z and exact stored SHA-256 values for challenge-gov, ctftime-upcoming, sherlock-bounties, and ethglobal-events.",
+      "summary": "The build/integration replay branch prepends the exact four 2026-08-24T19:42:29Z fingerprints to canonical source history and advances only challenge-gov, ctftime-upcoming, sherlock-bounties, and ethglobal-events registry timestamps. DS-MRN remains human-led intelligence only.",
+      "verification": "All four raw observation strings independently recomputed to the stored SHA-256 fingerprints. Their predecessor fingerprints match the latest canonical 2026-08-23T07:42:04Z history entries. Fresh branch CI and independent integrity review are still required before merge.",
       "risks": ["Do not infer a timezone for the displayed August 28, 2026 at 8 PM Phase 1 deadline.", "Do not create or draft an AI-generated DS-MRN submission; published rules prohibit AI-generated narrative and video content.", "Participant-specific eligibility and acceptance of Government unlimited-rights, tax, release, and indemnification terms remain human participation gates.", "Security-program listings in the same snapshot are discovery evidence only, not testing authorization."],
-      "next_action": "Independently verify each Aug. 24 predecessor fingerprint against the latest canonical history, replay the four exact observations at 2026-08-24T19:42:29Z, advance only matching source-registry timestamps, then run source/intelligence/site-data/Core/Maintenance validation before merge."
+      "next_action": "Verify the four replay records against the protected raw snapshot, require green source/intelligence/site-data/Core/Maintenance validation, then merge before processing Aug. 25 research."
     },
     {
       "id": "20260825-pr62-rascal-source-health-research",
@@ -77,8 +77,8 @@
       "purpose": "Preserve the Aug. 25 source-health snapshot and NASA RASC-AL lead without overtaking earlier research/source state.",
       "summary": "PR #62 is now merged raw research on main. It preserves CTFtime, Sherlock, arXiv and ETHGlobal observations plus a NASA 2027 RASC-AL lead, but intentionally does not advance canonical source history or structured opportunity state before the Aug. 24 replay.",
       "verification": "PR #62 changed only intelligence/feeds/2026-08-25-source-health.json and merged as e19a4b8aa760f4b297028b5f43fa24ea4c4a0f30. Post-merge current main later passed Core validation and Pages deployment after PR #73.",
-      "risks": ["Process only after the Aug. 24 PR #72 observations become canonical.", "Do not convert the RASC-AL headline into a generic actionable opportunity without full official guidelines."],
-      "next_action": "After the Aug. 24 replay, independently verify the complete official RASC-AL rules and replay only exact evidence-backed Aug. 25 source observations."
+      "risks": ["Process only after the Aug. 24 replay is independently verified and merged.", "Do not convert the RASC-AL headline into a generic actionable opportunity without full official guidelines."],
+      "next_action": "After the Aug. 24 replay merges, independently verify the complete official RASC-AL rules and replay only exact evidence-backed Aug. 25 source observations."
     },
     {
       "id": "20260826-pr66-xtech-source-health-research",
