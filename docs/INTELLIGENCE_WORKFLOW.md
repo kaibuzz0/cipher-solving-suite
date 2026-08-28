@@ -13,7 +13,7 @@ Turn external discoveries into concise, timestamped, source-backed intelligence 
 - Source check history: `data/source_check_history.json`
 - Feed manager: `scripts/intelligence_feed.py`
 - Source manager: `scripts/source_registry.py`
-- Check-history/change detector: `scripts/source_check_history.py`
+- Check-history/change detector and snapshot replay tool: `scripts/source_check_history.py`
 - Scheduled report: `.github/workflows/intelligence-report.yml`
 - Public rendering: GitHub Pages `News / Intel` and `Intel Sources` tabs
 
@@ -88,6 +88,36 @@ The tool stores a SHA-256 fingerprint and compares it to the last check for that
 - `first-seen` — no earlier recorded state,
 - `unchanged` — same normalized observed state,
 - `changed` — observed state differs from the previous fingerprint.
+
+### Replaying a preserved source-health snapshot
+
+When research has already preserved a chronological source-health snapshot under `intelligence/feeds/`, do not manually copy fingerprints or replace large provenance files by hand. First dry-run the canonical replay command:
+
+```bash
+python scripts/source_check_history.py replay-snapshot \
+  intelligence/feeds/2026-08-25-source-health.json \
+  --dry-run
+```
+
+The replay contract is deliberately strict:
+
+- every observation's SHA-256 is recomputed from its preserved `observed` string;
+- every `source_id` must exist in the canonical source registry;
+- duplicate source IDs inside one snapshot are rejected;
+- replay is blocked if canonical history for a source is newer than the snapshot;
+- registry timestamps may advance to the preserved snapshot time but are never rewound;
+- an exact same-time/same-fingerprint record is treated as idempotent and skipped;
+- a same-time conflicting fingerprint fails closed;
+- all snapshot, fingerprint, source-ID, and chronology checks complete before either canonical file is written.
+
+After independent review of the dry-run output, replay without `--dry-run`:
+
+```bash
+python scripts/source_check_history.py replay-snapshot \
+  intelligence/feeds/2026-08-25-source-health.json
+```
+
+A replay preserves exactly the source observations already present in the snapshot. It does **not** verify a new external claim, promote an opportunity, authorize security testing, or permit later snapshots to overtake earlier chronology.
 
 Validate history and generate the collection report:
 
