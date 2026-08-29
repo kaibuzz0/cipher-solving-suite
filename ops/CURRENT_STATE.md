@@ -1,33 +1,33 @@
 # Current Repository State
 
-Last reconciled: 2026-08-29 07:32 UTC
+Last reconciled: 2026-08-29 19:31 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `692cd6b010856c5f6a76119e00b71427d9c734a5`, the merge of PR #83.
-- PR #83 final head `8ec5b58bb631b74c389e3108112482f512c48714` passed Core validation `33207203159` on Python 3.11/3.12/3.13, Intelligence Source Report `33207203124`, and Daily Repository Maintenance `33207203148` before merge.
-- Repo Integrity independently recomputed all four Aug. 25 protected observation SHA-256 values and matched the preserved raw snapshot exactly; every proposed predecessor matched the latest Aug. 24 canonical history record.
-- The corrected repository regression verifies canonical hash/predecessor/change-state presence, registry timestamp non-regression, and idempotent/non-mutating replay; it did not weaken production validation.
-- Open PR #75 owns only the Aug. 27 raw research snapshot. Open PR #82 owns reconciled Aug. 28 raw research. Neither overlapped PR #83's six changed paths.
-- Post-merge workflow/Pages status for `692cd6b...` had not yet been observed at this reconciliation point, so merge-commit release health is not claimed yet.
+- Current `main` is `c3e57fa8b13bd7f6d76c3446f329a44d5b346f5b`, the merge of PR #89.
+- PR #89 final head `18b8e5033036981d3656678f823f10f3087c0318` passed Core validation `33242370395` across Python 3.11/3.12/3.13 and Daily Repository Maintenance `33242370414` before merge.
+- Post-merge Core validation `33270799014` also passed on the actual merge commit `c3e57fa8...`.
+- Repo Integrity independently recomputed all five protected Aug. 26 observation SHA-256 values from `intelligence/feeds/2026-08-26-source-health.json`; all matched the preserved snapshot exactly.
+- The Aug. 26 predecessor chain is consistent with current canonical history: `challenge-gov` -> `756f0ba6...`, `sherlock-bounties` -> `b50b89ec...`, `arxiv-cryptography` -> `68147c9a...`, `ctftime-upcoming` -> `26679909...`, and `ethglobal-events` -> `b20807c6...`.
+- PR #89 adds only `tests/test_aug26_source_replay_readiness.py`; it verifies library dry-run replay and the documented direct-script `replay-snapshot ... --dry-run` command are non-mutating and classify all five observations as replay-ready/changed.
+- GitHub Pages deployment for `c3e57fa8...` had not surfaced through the available run query at this reconciliation point, so merge-commit Pages health is not yet claimed.
 
 ## Build / integration state
 
-- The Aug. 25 PR #62 snapshot is now canonical through merged PR #83.
-- Canonical source history contains exactly four `2026-08-25T19:42:47Z` records: `ctftime-upcoming` `26679909...`, `sherlock-bounties` `b50b89ec...`, `arxiv-cryptography` `68147c9a...`, and `ethglobal-events` `b20807c6...`.
-- Their canonical predecessors are `a96cc699...`, `13c29e51...`, `8fb2b945...`, and `a1954da1...`; each is classified `changed`.
-- Only the matching source `last_checked_at` values advanced to the Aug. 25 timestamp. Registry-level `updated_at` remains newer and was not rewound.
-- `source_check_history.py replay-snapshot` remains the canonical deterministic replay contract from PR #79.
-- The Aug. 25 integration-queue record should now be `integrated`; Aug. 26 PR #66 becomes the next chronological replay lane.
+- Source-health observations through Aug. 25 are canonical.
+- Aug. 26 PR #66 raw evidence remains preserved on `main` and remains `needs-integration`; PR #89 verifies replay readiness but intentionally does not advance canonical source history or registry freshness.
+- The next bounded build step is a separate canonical Aug. 26 replay PR using `python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-26-source-health.json` after preserving the actionability boundary around xTech|Search 10.
+- The xTech|Search 10 official-source conflict remains unresolved for actionability: USA.gov, the Army xTech page, and SBIR.gov expose conflicting date windows, and the preserved Army full-RFI link was a placeholder at the Aug. 26 observation time.
+- Open PR #75 owns only Aug. 27 raw research, PR #82 owns Aug. 28 raw research, and PR #85 owns Aug. 29 raw research. They must not overtake the Aug. 26 canonical replay.
 
 ## Current research / intelligence state
 
 - Aug. 22 morning, Aug. 22 afternoon, Aug. 23, Aug. 24, and Aug. 25 source-health observations are canonical.
-- The NASA 2027 RASC-AL lead remains specialized research only; complete official competition guidelines remain a separate verification gate before structured opportunity/case promotion.
-- The already-merged Aug. 26 PR #66 xTech/source-health snapshot is next. Its conflicting official deadline surfaces and complete RFI/application terms must be resolved before actionability claims.
-- Open PR #75 Aug. 27 and PR #82 Aug. 28 remain later chronological raw research lanes and must not overtake Aug. 26.
+- The Aug. 26 snapshot is verified as internally replay-ready, not yet canonical.
+- NASA RASC-AL remains specialized research and should not be converted into generic actionable work without complete official competition guidelines.
+- xTech|Search 10 remains a high-value watch/reconciliation lead, not a definitive actionable opportunity, until the official deadline/RFI/application conflict is resolved.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test a target.
 
 ## 310 case / tool state
@@ -40,31 +40,29 @@ Repository version: `v3.1.0` (README)
 ## Toolset / UI state
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental`.
-- No tool/toolset maturity, case, opportunity, primary evidence, or bespoke website HTML changed in PR #83.
-- PR #83 Core validation passed source/history/report/intelligence validation, Python compilation, artifact inventory, 310 migration/reproduction, dashboard-data generation, maintenance, and the final failure gate.
-- Canonical registry/site-data discovery contracts remain unchanged.
+- PR #89 changes no tool/toolset registration, case, opportunity, primary evidence, canonical website data, or bespoke website HTML.
+- Canonical registry/site-data discovery contracts remain unchanged; PR #89 Core validation passed dashboard-data generation and Agent Operations inputs on all Python matrix jobs.
 
 ## Known state / debt
 
-- Confirm post-merge Core/Pages release health on `692cd6b...` when the runs surface.
-- Reconcile the Aug. 25 integration-queue/work-queue status from review-pending to integrated/current-main truth.
-- Process Aug. 26 next without skipping chronology; resolve xTech|Search 10 official deadline/RFI conflicts before any actionability promotion.
-- Keep Aug. 27 and Aug. 28 raw research behind Aug. 26.
+- Confirm post-merge Pages deployment health on `c3e57fa8...` when the run surfaces.
+- Replay the exact Aug. 26 snapshot canonically in a separate bounded PR without promoting xTech actionability merely because source-health replay is valid.
+- Then process Aug. 27 PR #75, Aug. 28 PR #82, and Aug. 29 PR #85 chronologically.
 - Root legacy/generated artifacts still require hash- and reference-preserving migration.
 - External provenance/authenticity for `310_challenge.png` remains unresolved.
 
 ## Current operating priorities
 
-1. Reconcile post-PR83 coordination state and mark the Aug. 25 replay integrated after independent verification.
-2. Verify post-merge Core and Pages for `692cd6b...` when available.
-3. Reconcile and replay the exact Aug. 26 PR #66 snapshot next, preserving evidence and resolving xTech source conflicts before actionability claims.
-4. Then process Aug. 27 PR #75 and Aug. 28 PR #82 in chronological order.
+1. Confirm post-merge Pages deployment health for `c3e57fa8...` when observable.
+2. Canonically replay the verified Aug. 26 snapshot through the deterministic replay command in a separate bounded PR.
+3. Keep xTech|Search 10 non-actionable until the authoritative RFI/application window is resolved; source-health replay does not resolve the opportunity conflict.
+4. Then process Aug. 27 PR #75, Aug. 28 PR #82, and Aug. 29 PR #85 in chronological order.
 5. Continue 310 external-provenance and hash-preserving root-artifact work without inflating experimental capability claims.
 
 ## Coordination note
 
-PR #83 was independently reviewed from current post-PR81 `main`, preserved the later Aug. 27/28 raw research lanes, advanced only the four verified Aug. 25 observations and matching source timestamps, and left RASC-AL non-actionable pending complete rules. No conflicting agent work was overwritten.
+PR #89 was rebuilt from post-PR87 current `main`, superseding stale PR #88/#86 test branches without copying stale shared coordination state. The compatible one-file regression was preserved, later raw research PRs remain untouched, and no source freshness or capability claim was advanced by the verification merge.
 
 ## Next handoff
 
-After this post-merge coordination PR is green, merge it. Then inspect `intelligence/feeds/2026-08-26-source-health.json`, independently recompute protected fingerprints and predecessor links against canonical Aug. 25 history, resolve the xTech|Search 10 official source conflict, and replay only evidence-backed Aug. 26 observations through the canonical replay command. Rerun source-history/registry/report/intelligence/site-data/Agent Operations/Core/Maintenance validation before merge. Aug. 27 and Aug. 28 follow afterward.
+After this post-PR89 coordination PR is green, merge it. Then create a separate bounded Aug. 26 replay PR from current `main`, run the canonical replay command, verify exactly five new `2026-08-26T07:39:05Z` history records with the independently verified hashes/predecessors, advance only matching registry timestamps, and rerun source-history/registry/report/intelligence/site-data/Agent Operations/Core/Maintenance validation. Do not promote xTech|Search 10 actionability until the official RFI/application conflict is independently resolved. Aug. 27, Aug. 28, and Aug. 29 follow afterward.
