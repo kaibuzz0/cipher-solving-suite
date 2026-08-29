@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-08-29 19:30 UTC
+Last reconciled: 2026-08-29 19:31 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -8,10 +8,11 @@ Repository version: `v3.1.0` (README)
 
 - Current `main` is `c3e57fa8b13bd7f6d76c3446f329a44d5b346f5b`, the merge of PR #89.
 - PR #89 final head `18b8e5033036981d3656678f823f10f3087c0318` passed Core validation `33242370395` across Python 3.11/3.12/3.13 and Daily Repository Maintenance `33242370414` before merge.
+- Post-merge Core validation `33270799014` also passed on the actual merge commit `c3e57fa8...`.
 - Repo Integrity independently recomputed all five protected Aug. 26 observation SHA-256 values from `intelligence/feeds/2026-08-26-source-health.json`; all matched the preserved snapshot exactly.
 - The Aug. 26 predecessor chain is consistent with current canonical history: `challenge-gov` -> `756f0ba6...`, `sherlock-bounties` -> `b50b89ec...`, `arxiv-cryptography` -> `68147c9a...`, `ctftime-upcoming` -> `26679909...`, and `ethglobal-events` -> `b20807c6...`.
 - PR #89 adds only `tests/test_aug26_source_replay_readiness.py`; it verifies library dry-run replay and the documented direct-script `replay-snapshot ... --dry-run` command are non-mutating and classify all five observations as replay-ready/changed.
-- Pre-merge current-main scheduled Intelligence Source Report and Daily Repository Maintenance runs were green on `08d018181d2f4e9aafffb03f98f6a36e73f42b27`. Post-merge workflow/Pages status for `c3e57fa8...` must still be observed before claiming merge-commit release health.
+- GitHub Pages deployment for `c3e57fa8...` had not surfaced through the available run query at this reconciliation point, so merge-commit Pages health is not yet claimed.
 
 ## Build / integration state
 
@@ -44,7 +45,7 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- Confirm post-merge Core/Pages release health on `c3e57fa8...` when runs surface.
+- Confirm post-merge Pages deployment health on `c3e57fa8...` when the run surfaces.
 - Replay the exact Aug. 26 snapshot canonically in a separate bounded PR without promoting xTech actionability merely because source-health replay is valid.
 - Then process Aug. 27 PR #75, Aug. 28 PR #82, and Aug. 29 PR #85 chronologically.
 - Root legacy/generated artifacts still require hash- and reference-preserving migration.
@@ -52,7 +53,7 @@ Repository version: `v3.1.0` (README)
 
 ## Current operating priorities
 
-1. Observe post-merge Core/Pages release health for `c3e57fa8...`.
+1. Confirm post-merge Pages deployment health for `c3e57fa8...` when observable.
 2. Canonically replay the verified Aug. 26 snapshot through the deterministic replay command in a separate bounded PR.
 3. Keep xTech|Search 10 non-actionable until the authoritative RFI/application window is resolved; source-health replay does not resolve the opportunity conflict.
 4. Then process Aug. 27 PR #75, Aug. 28 PR #82, and Aug. 29 PR #85 in chronological order.
