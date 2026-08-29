@@ -142,15 +142,37 @@ class SourceSnapshotReplayTests(unittest.TestCase):
             self.assertEqual(history_path.read_bytes(), before_history)
             self.assertEqual(registry_path.read_bytes(), before_registry)
 
-    def test_repository_aug25_snapshot_is_replay_ready_against_aug24_canonical_state(self):
+    def test_repository_aug25_snapshot_is_canonical_and_idempotent(self):
         snapshot_path = ROOT / "intelligence" / "feeds" / "2026-08-25-source-health.json"
         self.assertTrue(snapshot_path.exists())
+        snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
         expected = {
             "ctftime-upcoming": ("26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964", "a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22"),
             "sherlock-bounties": ("b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a", "13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6"),
             "arxiv-cryptography": ("68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f", "8fb2b94561566e6c143eac47473075dfb0c914a024b12e88052a53e851faa82d"),
             "ethglobal-events": ("b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648", "a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9"),
         }
+        self.assertEqual(snapshot["checked_at"], "2026-08-25T19:42:47Z")
+        observations = {observation["source_id"]: observation for observation in snapshot["observations"]}
+        self.assertEqual(set(observations), set(expected))
+        for source_id, (fingerprint, _) in expected.items():
+            self.assertEqual(observations[source_id]["sha256"], fingerprint)
+            self.assertEqual(digest(observations[source_id]["observed"]), fingerprint)
+
+        canonical_history = json.loads((ROOT / "data" / "source_check_history.json").read_text(encoding="utf-8"))
+        canonical_registry = json.loads((ROOT / "data" / "intelligence_sources.json").read_text(encoding="utf-8"))
+        registry_by_id = {source["id"]: source for source in canonical_registry["sources"]}
+        for source_id, (fingerprint, predecessor) in expected.items():
+            matches = [
+                check for check in canonical_history["checks"]
+                if check["source_id"] == source_id and check["checked_at"] == snapshot["checked_at"]
+            ]
+            self.assertEqual(len(matches), 1)
+            self.assertEqual(matches[0]["content_fingerprint"], fingerprint)
+            self.assertEqual(matches[0]["previous_fingerprint"], predecessor)
+            self.assertEqual(matches[0]["change_state"], "changed")
+            self.assertGreaterEqual(registry_by_id[source_id]["last_checked_at"], snapshot["checked_at"])
+
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             history_path = root / "source_check_history.json"
@@ -160,15 +182,11 @@ class SourceSnapshotReplayTests(unittest.TestCase):
             before_history = history_path.read_bytes()
             before_registry = registry_path.read_bytes()
             result = replay_snapshot(snapshot_path, history_path, registry_path, write=False)
-            self.assertEqual(result["checked_at"], "2026-08-25T19:42:47Z")
+            self.assertEqual(result["checked_at"], snapshot["checked_at"])
             self.assertEqual(result["validated_observations"], 4)
+            self.assertEqual(result["replayed"], [])
+            self.assertEqual(result["skipped_idempotent"], [observation["source_id"] for observation in snapshot["observations"]])
             self.assertFalse(result["wrote_files"])
-            replayed = {entry["source_id"]: entry for entry in result["replayed"]}
-            self.assertEqual(set(replayed), set(expected))
-            for source_id, (fingerprint, predecessor) in expected.items():
-                self.assertEqual(replayed[source_id]["content_fingerprint"], fingerprint)
-                self.assertEqual(replayed[source_id]["previous_fingerprint"], predecessor)
-                self.assertEqual(replayed[source_id]["change_state"], "changed")
             self.assertEqual(history_path.read_bytes(), before_history)
             self.assertEqual(registry_path.read_bytes(), before_registry)
 
