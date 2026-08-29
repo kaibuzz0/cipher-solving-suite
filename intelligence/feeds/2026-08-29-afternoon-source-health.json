@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-29T19:40:52Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "c3e57fa8b13bd7f6d76c3446f329a44d5b346f5b",
+  "purpose": "Preserve a bounded later Aug. 29 ETHGlobal source observation and materially improved ETHOnline 2026 prize evidence without advancing canonical source history ahead of the required Aug. 26 -> Aug. 27 -> Aug. 28 -> Aug. 29 morning replay chain.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events and ethonline 2026 prizes | ethonline 2026 remains sep 4 to sep 16 2026 async hackathon | official ethonline 2026 prize page currently lists 10 sponsor prize pools totaling 77000 usd equivalent headline amounts: the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 | official event listing says apply to attend | exact application deadline was not surfaced in the currently fetchable 2026 official pages | ethglobal rules require disclosure of pre existing work and version control; classic track starts from scratch while continuity tracks may extend existing work under track rules | some sponsor prize details are still marked coming soon",
+      "sha256": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events/ethonline2026/info",
+        "https://ethglobal.com/rules"
+      ],
+      "note": "Material improvement over the canonical date-only ETHOnline intelligence: the official 2026 prize page now exposes ten sponsor prize pools whose displayed headline amounts sum to $77,000. Several sponsor sections still say prize details are coming soon. The event listing currently presents ETHOnline as an upcoming async hackathon and offers Apply to Attend, but this pass did not find an authoritative 2026 application-deadline timestamp in the fetchable official pages. Do not invent that deadline or a stake amount; reopen the event dashboard/application flow before promoting structured active work."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline 2026 now exposes $77,000 across 10 sponsor prize pools",
+      "status": "high-value-near-term-opportunity-needs-final-entry-verification",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal's official ETHOnline 2026 prize page lists The Graph $15k, Hedera $15k, Arc $10k, World $7k, 1inch $7k, ENS $5k, Uniswap Foundation $5k, Ledger $5k, Privy $5k, and Chainlink $3k, totaling $77,000 in displayed sponsor prize pools for the Sep. 4-16 async hackathon. Some sponsor-specific prize details remain marked coming soon.",
+      "entry_and_rules": "ETHGlobal's general event rules require version control and disclosure of pre-existing work. Classic-track projects must begin when hacking starts; Continuity tracks may build on existing work under their track rules. The current official event listing says Apply to Attend, but the exact 2026 application deadline was not surfaced in the official pages fetched during this pass. Older/general ETHGlobal onboarding text mentions a refundable participation stake, but this pass did not establish a current ETHOnline 2026 amount, so no entry-cost amount is claimed.",
+      "recommended_action": "Treat ETHOnline as the strongest near-term build opportunity in this pass, but before creating a structured case, reopen the official application/dashboard and preserve the exact application deadline, current acceptance status, team/track choice, any required stake amount/refund condition, final submission deadline, judging rules, and sponsor-specific qualification requirements."
+    }
+  ],
+  "chronology": "Canonical replay remains blocked on Aug. 26. Integrate Aug. 26 first, then Aug. 27 PR #75, then Aug. 28 PR #82 morning and afternoon observations, then Aug. 29 PR #85 morning, and only then this later Aug. 29 ETHGlobal observation for overlapping source history.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
