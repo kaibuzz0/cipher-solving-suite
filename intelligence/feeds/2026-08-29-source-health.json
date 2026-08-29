@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-29T07:38:35Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "692cd6b010856c5f6a76119e00b71427d9c734a5",
+  "purpose": "Preserve a bounded Aug. 29 current-source research pass without advancing canonical source history ahead of the required Aug. 26 -> Aug. 27 -> Aug. 28 replay chain.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | xtech search 10 remains listed | army xtech competition page currently labels open and coming soon | army page shows submission dates aug 5 to sep 30 2026 and up to 1000000 cash plus 4800000 army sbir or sttr proposals | army download full rfi still resolves to rfi currently unavailable placeholder | sbir gov xtech search 10 topics remain open with open date aug 26 2026 and close date sep 23 2026 | official date and availability conflict remains unresolved",
+      "sha256": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "primary_followup_urls": [
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://xtech.army.mil/wp-content/uploads/2022/09/RFI_PLACEHOLDER.pdf",
+        "https://www.sbir.gov/topics/12919",
+        "https://www.sbir.gov/topics/12926"
+      ],
+      "note": "The xTech|Search 10 conflict remains unresolved on Aug. 29. The Army site simultaneously presents the competition as OPEN and Coming Soon, displays Aug. 5-Sep. 30, and still links to an RFI placeholder. SBIR.gov lists related topics as open Aug. 26-Sep. 23 and explicitly warns its copies may not be the latest agency version. Do not publish a definitive submission deadline or create active work until the actual Army RFI/application path is available and internally consistent."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | aug 29 2026 current online window includes asis ctf quals 2026 aug 29 1400 utc to aug 30 1400 utc and und cyberhawks qualifiers aug 29 1400 utc to aug 30 0500 utc | iran tech olympics ctf 2026 states it has joined forces with asis ctf quals and will be held as a single merged event | organizer confirmation still required for rules prizes and registration details",
+      "sha256": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3033/",
+        "https://ctftime.org/event/3413/"
+      ],
+      "note": "Material calendar clarification: Iran Tech Olympics CTF 2026 and ASIS CTF Quals 2026 state they have joined forces and will be held as one merged event. Avoid counting them as two independent opportunities when estimating the Aug. 29 competition window."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent alphix dec 2025 | max reward 30000 usdc | live | last updated aug 25 2026 1132 pm | listing includes usual labs 16000000 usdc aave v4 2500000 usd cap 1000000 usdc midas 500000 usdc and puffer 100000 usdc | public listing remains discovery evidence only",
+      "sha256": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "primary_followup_urls": [
+        "https://audits.sherlock.xyz/bug-bounties/213"
+      ],
+      "note": "No stronger bounty change was found. Alphix remains the most recent listing and is LIVE at 30,000 USDC. Existing higher-value programs remain discovery leads only; exact scope and rules are mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | latest visible date fri 28 aug 2026 | index includes aug 28 aug 27 aug 26 aug 25 and earlier batches | no additional individual paper promoted in this bounded pass beyond already preserved aug 28 research because stronger direct cipher solving or reusable tooling value was not established",
+      "sha256": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "The recent index is current through the Friday Aug. 28 batch. No additional paper cleared the repository's publication threshold in this pass; avoid duplicate research noise while the Aug. 28 CTF-provenance paper remains pending integration."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 sep 4 to sep 16 async hackathon | ethglobal tokyo 2026 sep 25 to sep 27 | ethglobal mumbai nov 6 to nov 8 | no material change to existing canonical ethonline intelligence",
+      "sha256": "5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c",
+      "note": "ETHOnline remains the next substantive ETHGlobal build opportunity. Existing canonical intelligence already covers it, so no duplicate feed item is recommended."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "xTech|Search 10 official-source conflict persists",
+      "status": "blocked-needs-authoritative-rfi",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "The Army xTech surface still advertises up to $1M cash plus up to $4.8M in follow-on Army SBIR/STTR proposals, but its page remains internally inconsistent and its Full RFI link still serves an unavailable placeholder. SBIR.gov separately lists Aug. 26-Sep. 23 for related topics. Treat existence/prize headline as verified but exact current application dates and eligibility as unresolved.",
+      "recommended_action": "Do not promote xTech|Search 10 into structured active work. Recheck the Army RFI/application portal; only after the real RFI is available should the opportunity-evidence/actionability pipeline preserve deadline, eligibility, judging, award allocation, IP/data-rights, CAGE/NCAGE/export-control, and cost evidence."
+    },
+    {
+      "title": "ASIS Quals and Iran Tech Olympics are a merged CTF event",
+      "status": "calendar-deduplication-correction",
+      "confidence": "medium",
+      "relevance": "useful",
+      "summary": "CTFtime's event pages state that ASIS CTF Quals 2026 and Iran Tech Olympics CTF 2026 joined forces and are being held as a single merged online event on Aug. 29-30, so they should not be counted as two independent competition opportunities.",
+      "recommended_action": "Use the merged event as one planning lane and follow the organizer's official site for authoritative rules, registration, prize and advancement details."
+    }
+  ],
+  "chronology": "Aug. 25 is now canonical through PR #83. Canonical replay must next process the preserved Aug. 26 snapshot, then Aug. 27 PR #75, then the Aug. 28 morning and afternoon snapshots from PR #82, before this Aug. 29 snapshot can advance overlapping source history.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
