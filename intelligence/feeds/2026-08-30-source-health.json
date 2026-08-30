@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T07:38:20Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "8d2b20ba678fd776b0a90a0e38b8a4e061386a13",
+  "purpose": "Preserve a bounded Aug. 30 current-source research pass without advancing canonical source history ahead of the pending Aug. 27 -> Aug. 28 -> Aug. 29 replay chain.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | careers in your community challenge remains open aug 4 2026 0900 et through nov 19 2026 1800 et with 50000 total cash prizes | xtech search 10 usa gov lists sep 10 to oct 19 2026 while army xtech currently labels the competition coming soon and open with aug 5 to sep 30 2026 | official xtech date and application availability conflict remains unresolved",
+      "sha256": "0570aab0fa0e07a2a97db33360d99e65c1a97260df3b71eb88dd753bd3885a75",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/careers-in-your-community-challenge",
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://xtech.army.mil/competition/xtechsearch10/"
+      ],
+      "note": "The Education challenge remains a specialized school/CTE opportunity. xTech|Search 10 remains non-actionable because official Army and USA.gov timing/application surfaces still conflict; do not select a deadline until the authoritative Army RFI/application material is internally consistent."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | next broad online ctf window starts sep 4 2026 with nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc and tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc | tfc organizer describes crypto pwn reverse web and misc challenges and prizes remain tbd | later online events include k17 ctf patriotctf and defcamp quals",
+      "sha256": "1867c7ba3ec559aac232f71474198bd8eef43eb9b5ce0a71689930794044510e",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3344/",
+        "https://ctf.thefewchosen.com/"
+      ],
+      "note": "The immediate late-August window has rolled into the Sep. 4-6 online cluster. TFC is directly relevant to cipher/security practice because the organizer advertises Crypto among its challenge categories, but prize terms are still TBD."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent alphix dec 2025 updated aug 25 2026 with 30000 usdc payout | listing includes usual labs 16000000 usdc aave v4 2500000 usd cap 1000000 usdc midas 500000 usdc and puffer 100000 usdc | no newer listing change detected | public listing remains discovery evidence only",
+      "sha256": "f691382d715d50fcf471cb70e074abbbd1d00b0335a3fa4046ed2b99dbe1b986",
+      "note": "No stronger bounty change was found. Existing programs remain discovery leads only; exact scope, exclusions, prohibited techniques, severity/reward rules, and submission terms remain mandatory before any security testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | latest visible batch fri 28 aug 2026 | total 224 recent entries | no sunday batch and no additional paper promoted in this bounded pass beyond already preserved aug 28 research because stronger direct cipher solving or reusable tooling value was not established",
+      "sha256": "708237551c62ad0e0e7e1b9a823dff2c946745a99c6d279ba894aaf284c00a99",
+      "note": "The index remains current through Friday Aug. 28. No additional paper cleared the publication threshold, so this pass does not add duplicate research-feed noise."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 async hackathon | official prize page lists 10 sponsor prize pools totaling 77000 usd in displayed headline amounts | some sponsor prize details remain coming soon | exact application deadline and final qualification details still require preservation before structured active work",
+      "sha256": "06a6fd437851f24e1b0513421f1389620ee201851f396b5220ac04031a06310a",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "ETHOnline remains the highest-value near-term general build opportunity in the checked source set. The prize page now has useful sponsor-level evidence, but several sponsor details are incomplete and the exact application deadline/status should be preserved before converting it into structured active work."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline 2026 remains the strongest near-term general build opportunity",
+      "status": "candidate-for-structured-opportunity-after-final-entry-verification",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal's official ETHOnline 2026 prize page lists ten sponsor pools totaling $77,000 in displayed headline amounts while the event remains scheduled for Sep. 4-16 as an asynchronous hackathon. Several sponsor prize descriptions are still incomplete, so the exact application deadline/status and final qualification rules remain gating evidence.",
+      "recommended_action": "When chronology reaches this snapshot, reopen the official application/dashboard and preserve exact application deadline/status, any stake/refund requirement, final submission deadline, track choice, judging model, and sponsor-specific qualification rules before creating a structured active case."
+    },
+    {
+      "title": "TFC CTF 2026 provides a near-term crypto challenge lane",
+      "status": "planning-lead",
+      "confidence": "medium",
+      "relevance": "useful",
+      "summary": "CTFtime lists TFC CTF 2026 for Sep. 5-6 online, and the organizer describes challenge categories including Crypto, Pwn, Reverse, Web and Misc. Prize terms are still TBD, so this is currently a skill/competition lead rather than a verified earning opportunity.",
+      "recommended_action": "Follow the organizer for registration/rules and any final prize announcement; create a structured case only if participation is open and the user intends to compete."
+    },
+    {
+      "title": "Two deadline-today external leads are specialized rather than general active work",
+      "status": "watch-only-specialized",
+      "confidence": "medium",
+      "relevance": "watch",
+      "summary": "The Pathways to Quantum Global Industry Challenge is accepting free single-participant submissions through Aug. 30 but is limited to ages 13-18 and awards cohort access rather than a verified cash prize. Midnight's MLH August privacy/ZK hackathon is live through Aug. 30, but this pass did not verify a current prize amount for that specific event from the organizer page.",
+      "source_urls": [
+        "https://www.pqic.org/pathways-challenge",
+        "https://midnight.network/hackathon"
+      ],
+      "recommended_action": "Do not add either as generic active work. Revisit Midnight only if official prize/entry terms become explicit; treat Pathways to Quantum as a youth-only research opportunity."
+    }
+  ],
+  "chronology": "Aug. 26 is canonical through PR #93. Canonical replay should next process Aug. 27 PR #75, then PR #82's Aug. 28 morning and afternoon snapshots, then Aug. 29 PR #85 and later PR #91, before this Aug. 30 snapshot advances overlapping source history.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
