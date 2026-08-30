@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-27T19:39:25Z",
+  "agent": "build-integration-pass",
+  "repository_base": "5441a2fce8abf1fc039daa97305bbad505a491c6",
+  "chronology_gate": "Derived reconciliation of the merged PR #75 raw snapshot. Preserve intelligence/feeds/2026-08-27-source-health.json unchanged. Canonical replay remains review-gated until this corrected snapshot is independently verified against Aug. 26 history.",
+  "reconciliation": {
+    "original_path": "intelligence/feeds/2026-08-27-source-health.json",
+    "original_commit": "3fd83de69a0ec626a6f03143f3207a5c52ec7ade",
+    "merged_commit": "c57aebc027d37df002224199b8da79bab16b1e59",
+    "reason": "All five stored PR #75 SHA-256 values fail the canonical normalize_fingerprint(observed) contract. The introducing commit contains the current observation strings and mismatched hashes together, and no earlier in-repository version of this snapshot was found. This file therefore preserves the exact observed strings while recording recomputed canonical fingerprints as an explicit derived correction rather than silently rewriting primary contributed evidence.",
+    "original_hashes": {
+      "challenge-gov": "d2c287ebc5ba6e4f439201efc1d1f3b6c3769300d20157bfef4c8c1a0a8b8609",
+      "ctftime-upcoming": "fce07b15b6831c7c6a33f01fbb38d5ec4426d2cdd1d78e6cafd87fea49f03b3e",
+      "sherlock-bounties": "09762fbabc3e28722247843901be7ca04a403b5c33c4380a8aadfbd7c55c19fa",
+      "arxiv-cryptography": "2eae08782a5fc7f1ba9aa2a59bfd98a379d504fbef7c163c7f0ed31a72a9c629",
+      "ethglobal-events": "b29a7c1243b4c41422fbc7dbc9cf773aefbbfde18caeef085e56f82eaecc7ec0"
+    }
+  },
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "USA.gov active federal challenges on 2026-08-27 include ACL Caregiver AI Prize Challenge, ACL Cultivating Connected Communities Challenge, Building Disaster-Ready Human Services Systems, Careers in Your Community Challenge, Connecting Talent to Opportunity Challenge, Halt the Hitchhiker: Invasive Species Challenge, NASA Gateways to Blue Skies, NIH Complement-ARIE NAMs Reduction to Practice Challenge, One CDC Data Platform Innovation Challenge, xTech Kinetic Reach, and xTech Search 10.",
+      "sha256": "c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes. Careers in Your Community remains specialized school/team opportunity intelligence."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime upcoming list on 2026-08-27 begins with COMPFEST CTF 2026 Aug 29 00:00 UTC, BlackHat MEA CTF Qualification 2026 Aug 29 07:00 UTC, ASIS CTF Quals 2026 Aug 29 14:00 UTC, UND CyberHawks National CTF Competition 2026 Qualifiers Aug 29 14:00 UTC, and Iran Tech Olympics CTF 2026 Aug 29 14:00 UTC; September includes NNS CTF, TFC CTF, VolgaCTF Final, NullOrigin Qualifiers, DefCamp CTF Quals, and CSAW CTF Qualification Round.",
+      "sha256": "ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "Sherlock Bug Bounties on 2026-08-27 shows Alphix - Dec 2025 as the most recent bounty at 30,000 USDC, last updated Aug 25, 2026; the broader listing still includes Usual Labs at 16,000,000 USDC, Aave V4 at 2,500,000 USD, Cap at 1,000,000 USDC, Midas at 500,000 USDC, and Puffer at 100,000 USDC.",
+      "sha256": "67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes. Discovery evidence only; no testing authorization is inferred."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arXiv cs.CR recent on 2026-08-27 includes a Thu Aug 27 batch and reports 208 recent entries overall; the visible current list includes newly submitted security and cryptography papers, but this bounded pass did not identify a stronger direct cipher-solving/tool-integration lead than existing canonical research.",
+      "sha256": "d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ETHGlobal events on 2026-08-27 still lists ETHOnline 2026 Sep 4-16, ETHGlobal Tokyo Sep 25-27, ETHGlobal Mumbai Nov 6-8, and ETHConf 2027 Jun 14-16; the Aug 26-27 ETHBelgrade happy hour is also listed as an upcoming meetup.",
+      "sha256": "9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."
+    }
+  ],
+  "safety": "No target testing was performed. Public security-program listings are discovery evidence only and are not authorization."
+}
