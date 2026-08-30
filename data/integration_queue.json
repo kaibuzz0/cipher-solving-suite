@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-29T07:32:00Z",
+  "updated_at": "2026-08-29T20:06:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -83,15 +83,15 @@
     {
       "id": "20260826-pr66-xtech-source-health-research",
       "type": "research",
-      "status": "needs-integration",
-      "contributor": "research-agent / PR #66",
-      "branch_or_pr": "PR #66 merged as d4bb5aaee6ee4a79ea88b048ce25f5b04bbb7171; raw evidence preserved on current main",
+      "status": "needs-review",
+      "contributor": "research-agent / PR #66; build-agent / PR #93",
+      "branch_or_pr": "PR #66 merged as d4bb5aaee6ee4a79ea88b048ce25f5b04bbb7171; canonical replay staged in PR #93",
       "path": "intelligence/feeds/2026-08-26-source-health.json",
       "purpose": "Preserve Aug. 26 source health and the xTech|Search 10 deadline conflict without allowing later research to overtake earlier canonical chronology.",
-      "summary": "PR #66 is merged raw research on main. It records conflicting official xTech|Search 10 deadline surfaces, a newer Sherlock listing, and current arXiv/CTFtime/ETHGlobal observations, while intentionally leaving canonical source freshness and actionability unchanged.",
-      "verification": "PR #66 changed only intelligence/feeds/2026-08-26-source-health.json and merged as d4bb5aaee6ee4a79ea88b048ce25f5b04bbb7171. Aug. 25 is now canonical through independently verified PR #83.",
-      "risks": ["Resolve the official xTech date conflict and obtain the complete RFI before actionability claims.", "Aug. 27 and Aug. 28 observations must not overtake this snapshot."],
-      "next_action": "Independently recompute the protected Aug. 26 observation hashes and predecessor links against canonical Aug. 25 history, verify the actual xTech RFI/application portal, and replay only exact evidence-backed observations."
+      "summary": "PR #93 stages the exact five 2026-08-26T07:39:05Z observations into canonical source history and advances only their matching registry timestamps. xTech|Search 10 remains a non-actionable watch/reconciliation lead because official application/RFI surfaces conflict.",
+      "verification": "PR #89 independently verified replay readiness and the five protected snapshot hashes/predecessors. PR #93 diff verification confirms exactly five added history records and exactly five matching last_checked_at advances; final CI/source-report/maintenance review remains required before merge.",
+      "risks": ["Resolve the official xTech date conflict and obtain the complete RFI before actionability claims.", "Aug. 27, Aug. 28, and Aug. 29 observations must not overtake this snapshot.", "Do not treat a public bounty listing as testing authorization."],
+      "next_action": "Repo Integrity should independently verify PR #93 hashes/predecessors, five-record history diff, five registry timestamp advances, generated site/Agent Operations data and final CI; merge only if clean."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",
