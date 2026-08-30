@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-30T07:24:00Z",
+  "updated_at": "2026-08-30T19:22:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -92,6 +92,32 @@
       "verification": "Repo Integrity independently recomputed all five protected snapshot SHA-256 values and verified all five predecessor links against canonical Aug. 24/Aug. 25 history. PR #93 final head 5403df4d36ce3160db58e45c786b8ca5d2ed84e5 passed Core 33272701911 on Python 3.11/3.12/3.13, Intelligence Source Report 33272701915, and Daily Maintenance 33272701910; post-merge Core 33299042160 and Deploy operations dashboard 33299042070 succeeded on merge 8d2b20ba678fd776b0a90a0e38b8a4e061386a13.",
       "risks": ["Resolve the official xTech date conflict and obtain the complete authoritative RFI/application terms before actionability claims.", "Aug. 27, Aug. 28, and Aug. 29 observations must now be processed in chronological order.", "Do not treat a public bounty listing as testing authorization."],
       "next_action": "Process Aug. 27 PR #75 next: independently verify protected hashes/predecessors and official challenge evidence, then replay only evidence-backed observations."
+    },
+    {
+      "id": "20260827-pr75-source-health-replay",
+      "type": "data",
+      "status": "blocked",
+      "contributor": "research-agent / PR #75; independently reviewed by Repo Integrity",
+      "branch_or_pr": "PR #75 merged raw evidence as c57aebc027d37df002224199b8da79bab16b1e59; stale blocker PR #97 closed unmerged",
+      "path": "intelligence/feeds/2026-08-27-source-health.json",
+      "purpose": "Preserve the Aug. 27 source-health contribution while preventing canonical replay until its fingerprint provenance is reconciled.",
+      "summary": "All five stored SHA-256 values differ from the canonical normalize_fingerprint(observed) computation. The raw PR #75 snapshot is preserved unchanged on main; no Aug. 27 source history or registry freshness has been advanced.",
+      "verification": "Repo Integrity independently recomputed the five hashes as challenge-gov c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf, ctftime-upcoming ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add, sherlock-bounties 67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05, arxiv-cryptography d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9, and ethglobal-events 9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc; none match the stored values. PR #75's preserved head had green Core validation, but canonical replay validation fails closed on these mismatches.",
+      "risks": ["Silently replacing the stored hashes would destroy provenance and could conceal whether observation text changed after hashing.", "Aug. 28 and later source snapshots must not overtake this chronology gate.", "Careers in Your Community remains specialized school/team opportunity intelligence rather than generic individual work."],
+      "next_action": "Determine whether the stored hashes correspond to earlier observation strings or whether the strings changed after hashing. Preserve the original file unchanged; create a separate corrected/reconciled snapshot with documented origin, then dry-run replay against canonical Aug. 26 history before any canonical write."
+    },
+    {
+      "id": "20260828-pr82-source-health-research",
+      "type": "research",
+      "status": "blocked",
+      "contributor": "research-agent / PR #82",
+      "branch_or_pr": "PR #82 merged raw Aug. 28 morning/afternoon evidence as b14f45920b9557cb95142b8da64ad90f98f35c8b",
+      "path": "intelligence/feeds/2026-08-28-source-health.json; intelligence/feeds/2026-08-28-afternoon-source-health.json",
+      "purpose": "Preserve Aug. 28 morning and afternoon research without advancing source freshness ahead of the unresolved Aug. 27 provenance gate.",
+      "summary": "Both Aug. 28 raw snapshots are preserved on current main. They include source-health observations, a COMPFEST schedule correction, an RSA tool-evaluation lead, and a CTF-agent provenance research lead, but no canonical Aug. 28 replay has occurred.",
+      "verification": "PR #82 final head cc9176a943980bc48d02247887a5196702cc026e passed Core validation 33205001612. Current-main scheduled Daily Repository Maintenance and Intelligence Source Report also succeeded on b14f4592 on 2026-08-30.",
+      "risks": ["Do not replay either Aug. 28 snapshot before Aug. 27 is reconciled and canonical.", "Tool/research leads require their own overlap, license, dependency and reproducibility review before adoption."],
+      "next_action": "After Aug. 27 becomes valid and canonical, verify Aug. 28 hashes/predecessors and process the 07:40:27Z snapshot before the 19:37:39Z snapshot."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",

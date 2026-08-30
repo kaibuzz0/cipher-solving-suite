@@ -1,32 +1,33 @@
 # Current Repository State
 
-Last reconciled: 2026-08-30 07:24 UTC
+Last reconciled: 2026-08-30 19:22 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `8d2b20ba678fd776b0a90a0e38b8a4e061386a13`, the independently reviewed merge of PR #93.
-- PR #93 final head `5403df4d36ce3160db58e45c786b8ca5d2ed84e5` passed Core validation `33272701911` on Python 3.11/3.12/3.13, Intelligence Source Report `33272701915`, and Daily Repository Maintenance `33272701910`.
-- The Python 3.12 Core job ran 75 tests and all passed, including Aug. 26 canonical/idempotence replay, direct-script non-mutation, Agent Operations parsing, dynamic repository/toolset discovery, command-site generation, and canonical tool-visibility tests. Compilation, source registry/history/report validation, intelligence validation, artifact inventory, both 310 verification stages, site-data generation, maintenance, and the final failure gate also passed across the matrix.
-- Post-merge Core validation `33299042160` and Deploy operations dashboard `33299042070` both succeeded on the actual merge commit `8d2b20ba...`.
-- Repo Integrity independently recomputed all five protected Aug. 26 SHA-256 values from `intelligence/feeds/2026-08-26-source-health.json` and matched the preserved snapshot exactly. Every predecessor also matched the latest canonical Aug. 24/Aug. 25 source-history record.
-- PR #93 added exactly five `2026-08-26T07:39:05Z` history records and advanced exactly five matching `last_checked_at` values; no older history records or unrelated registry metadata were removed or changed.
+- Current `main` is `b14f45920b9557cb95142b8da64ad90f98f35c8b`, the merge of PR #82 after PR #75 merged the Aug. 27 raw snapshot.
+- PR #75 final head `3fd83de69a0ec626a6f03143f3207a5c52ec7ade` passed Core validation `33109760137`; PR #82 final head `cc9176a943980bc48d02247887a5196702cc026e` passed Core validation `33205001612`.
+- Current-main scheduled Daily Repository Maintenance `33316782526` and Intelligence Source Report `33318320245` both succeeded on `b14f4592...` on 2026-08-30.
+- Source-health observations through Aug. 26 remain canonical. PR #75 and PR #82 added raw research only; they did not advance canonical source history or source-registry freshness.
+- The GitHub Pages REST state endpoint is not exposed by the current connector/runtime. No new browser-render claim is made. The latest repository evidence retained here is the successful post-PR93 dashboard deployment plus subsequent green site-data/Core validation on contributed research heads.
 
 ## Build / integration state
 
-- Source-health observations through Aug. 26 are now canonical.
-- Aug. 26 PR #66 raw evidence remains preserved unchanged; PR #93 replayed it without moving primary evidence or manufacturing later freshness.
-- `challenge-gov`, `sherlock-bounties`, `arxiv-cryptography`, `ctftime-upcoming`, and `ethglobal-events` now carry the exact Aug. 26 canonical observation timestamp where applicable.
-- xTech|Search 10 remains non-actionable. Current official surfaces still conflict: USA.gov lists Sep. 10-Oct. 19, the Army xTech page displays Aug. 5-Sep. 30 while still saying `Coming Soon`, and SBIR.gov lists Aug. 26-Sep. 23 for the linked topic. Do not infer one authoritative entry deadline until the complete Army RFI/application portal resolves the conflict.
-- Open PR #75 owns Aug. 27 raw research, PR #82 owns Aug. 28 morning/afternoon raw research, PR #85 owns Aug. 29 morning research, and PR #91 owns a later Aug. 29 ETHOnline prize observation. These later contributions remain raw research until processed chronologically.
+- Aug. 27 PR #75 raw evidence is now preserved on `main`, but it is **blocked for canonical replay**: every stored `sha256` differs from the repository's canonical `normalize_fingerprint(observed)` result (`observed.strip().lower()` followed by SHA-256).
+- Independently recomputed Aug. 27 hashes are: `challenge-gov` `c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf`; `ctftime-upcoming` `ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add`; `sherlock-bounties` `67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05`; `arxiv-cryptography` `d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9`; `ethglobal-events` `9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc`.
+- PR #75 stores different hashes (`d2c287eb...`, `fce07b15...`, `09762fba...`, `2eae0878...`, `b29a7c12...`). The deterministic replay validator therefore fails closed before writing canonical history/registry state.
+- Do not edit PR #75's raw snapshot in place. Preserve it as contributed evidence and create an explicit corrected/reconciled snapshot only after determining whether the stored hashes came from earlier observation text or the observation strings changed after hashing.
+- PR #82's Aug. 28 morning and afternoon raw research is also preserved on `main`, but it remains blocked behind valid Aug. 27 reconciliation/replay.
+- Open PRs #85, #91 and #95 preserve later Aug. 29/Aug. 30 research and must not overtake the chronology gate.
 
 ## Current research / intelligence state
 
-- Aug. 22 morning, Aug. 22 afternoon, Aug. 23, Aug. 24, Aug. 25, and Aug. 26 source-health observations are canonical.
-- Aug. 27 PR #75 is the next chronological source lane. Its Education challenge evidence must be independently rechecked before any structured opportunity promotion, and its source hashes/predecessors must be verified against canonical Aug. 26 history before replay.
-- NASA RASC-AL remains specialized research and should not be converted into generic actionable work without complete official competition guidelines.
-- Public bounty/program listings remain discovery evidence only and are not authorization to test a target.
+- Canonical source history is current through Aug. 26 only.
+- The Careers in Your Community Challenge remains specialized opportunity intelligence. USAGov currently confirms an August 4, 2026 9:00 AM ET start, November 19, 2026 6:00 PM ET end, and $50,000 total cash prize pool. Do not treat it as generic individual work; the detailed school/Perkins V/team requirements remain participation gates.
+- xTech|Search 10 remains non-actionable until authoritative RFI/application evidence resolves conflicting official date surfaces.
+- Public bounty/program listings remain discovery evidence only and are not authorization to test any target.
+- Aug. 28 research includes a COMPFEST schedule correction, an RSA tool-evaluation lead, and a CTF-agent provenance preprint lead; these remain contributed research until chronology and normal verification are satisfied.
 
 ## 310 case / tool state
 
@@ -38,29 +39,30 @@ Repository version: `v3.1.0` (README)
 ## Toolset / UI state
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental`.
-- PR #93 changed no tool/toolset registration, case, opportunity, primary evidence, or bespoke website HTML.
-- Generated site-data, Agent Operations inputs, repository-browser discovery, Command Site generation, and canonical tool visibility passed on PR #93's final head; the post-merge operations-dashboard deployment also succeeded.
+- No new tool/toolset registration or bespoke site HTML was introduced by PR #75 or PR #82.
+- Canonical discovery contracts remain unchanged: tools, toolsets, cases, intelligence, evidence, repository data and Agent Operations should flow through canonical registries/manifests/site-data builders.
 
 ## Known state / debt
 
-- Process Aug. 27 PR #75 next, then Aug. 28 PR #82 snapshots in timestamp order, then Aug. 29 PR #85 and PR #91.
-- Keep xTech|Search 10 non-actionable until authoritative RFI/application evidence resolves the date conflict.
-- Daily maintenance still reports known generated root artifacts; artifact inventory reports duplicates/orphans requiring hash- and reference-preserving migration rather than destructive cleanup.
+- Resolve Aug. 27 fingerprint provenance before canonical replay; later Aug. 28-Aug. 30 snapshots are blocked behind that gate.
+- `docs/WORK_QUEUE.md` and `data/integration_queue.json` need to reflect the merged raw Aug. 27/Aug. 28 state plus the fingerprint blocker rather than describing PR #75/#82 as still-open future work.
+- `docs/AGENT_HANDOFF.md` is append-only and its latest canonical entry still predates the current replay chain; append a precise reconciliation handoff without deleting historical entries.
+- Daily maintenance continues to report known root-generated artifact debt; migration must preserve hashes, references and provenance.
 - External provenance/authenticity for `310_challenge.png` remains unresolved.
-- Workflow dependencies currently use supported major action tags rather than immutable commit pins, and Python CI installs bounded version ranges rather than a repository lockfile; treat this as non-blocking supply-chain hardening debt, not a release failure.
+- Workflow actions use supported major tags and Python CI uses bounded ranges rather than immutable action SHAs/a full lockfile; treat this as non-blocking supply-chain hardening debt.
 
 ## Current operating priorities
 
-1. Reconcile and independently review Aug. 27 PR #75 on current `main`; verify its protected hashes and predecessors before canonical replay.
-2. Recheck the official Careers in Your Community Challenge rules before any actionability promotion; preserve its specialized Perkins V school/team eligibility boundary.
-3. Then process Aug. 28 and Aug. 29 raw research strictly chronologically.
-4. Keep xTech|Search 10 non-actionable until authoritative RFI/application evidence resolves the date conflict.
-5. Continue 310 external-provenance and hash-preserving root-artifact work without inflating experimental capability claims.
+1. Preserve PR #75's original Aug. 27 snapshot unchanged and determine the origin of its five stored hashes.
+2. Create an explicit corrected/reconciled Aug. 27 snapshot only with a documented provenance trail; dry-run canonical replay and verify all predecessor links against Aug. 26 history before any write.
+3. Recheck the Careers in Your Community official rules before any structured opportunity promotion.
+4. Only after Aug. 27 becomes valid and canonical, process merged Aug. 28 morning/afternoon research, then open Aug. 29/Aug. 30 research in timestamp order.
+5. Continue 310 external-provenance and hash-preserving artifact work without inflating experimental capability claims.
 
 ## Coordination note
 
-PR #93 was based directly on synchronized post-PR92 `main` and did not touch the later Aug. 27/Aug. 28/Aug. 29 raw research files. Its initial Core failure exposed obsolete pre-canonical readiness assertions; those assertions were replaced with stronger exact-canonical/idempotence checks rather than bypassed. Repo Integrity independently verified the five hashes, five predecessors, five-record history diff, five registry timestamp changes, xTech non-actionability boundary, final green CI, and post-merge Core/Pages workflows before advancing the lane.
+Stale PR #97 correctly identified the Aug. 27 fingerprint mismatch but was based on `09ccb93b...`, before PR #75 and PR #82 merged. Repo Integrity independently reproduced all five mismatches, confirmed current `main` is `b14f4592...`, closed PR #97 unmerged as stale, and rebuilt this coordination correction from current main so the merged raw research is preserved rather than overwritten.
 
 ## Next handoff
 
-Mark the Aug. 26 integration item integrated, then reconcile PR #75 against current `main`. Independently recompute every Aug. 27 raw observation hash and predecessor against the new Aug. 26 canonical history; re-open the official Careers in Your Community rules; replay only evidence-backed observations through the deterministic source-history workflow; rerun source registry/history/report, intelligence, site-data, Agent Operations, Core and Maintenance validation; and only then consider merge. Aug. 28 and Aug. 29 follow afterward in chronological order.
+Finish the current-main coordination reconciliation: mark Aug. 27 as blocked in the integration inbox, record that Aug. 28 raw snapshots are merged but chronology-blocked, append the integrity handoff, and run fresh Core/Maintenance validation. Then investigate the five Aug. 27 stored hashes without rewriting the original evidence; produce a provenance-preserving corrected snapshot only if the origin can be documented, dry-run replay against canonical Aug. 26 history, and only then stage canonical Aug. 27 source-history/registry changes.
