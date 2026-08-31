@@ -1,33 +1,33 @@
 # Current Repository State
 
-Last reconciled: 2026-08-30 20:05 UTC
+Last reconciled: 2026-08-31 03:32 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `5441a2fce8abf1fc039daa97305bbad505a491c6`, the merge of PR #100 preserving the exact green coordination head from former draft PR #98 after the connected draft-to-ready mutation failed.
-- PR #100 exact head `952374234f35d90417cc1f1998e497e104955459` passed Core validation `33330753366` and Daily Repository Maintenance `33330753324`; no review threads were present.
-- Source-health observations through Aug. 26 remain canonical. PR #75 and PR #82 added raw research only; they did not advance canonical source history or source-registry freshness.
-- The GitHub Pages REST state endpoint is not exposed by the current connector/runtime. No unsupported fresh browser-render claim is made.
+- Current `main` is `19de1f0d16daa546fbc67fb737f3dc9d33d46812`, the merge of PR #101 (`Build: reconcile Aug27 source fingerprints without rewriting evidence`).
+- PR #101 exact head `55ece8bed635a40354b4245e2a1bb1c7adf0442d` passed Core validation `33332672382` and Daily Repository Maintenance `33332672415` before merge.
+- Post-merge Core validation `33354005044` and Deploy operations dashboard `33354005008` both succeeded on exact merge commit `19de1f0d...`.
+- No open pull requests or open issues were found at this reconciliation point.
+- Source-health observations through Aug. 26 remain canonical. Aug. 27 and later raw research has not been replayed canonically.
 
 ## Build / integration state
 
-- Aug. 27 PR #75 raw evidence remains preserved unchanged on `main`. Every stored `sha256` differs from the repository's canonical `normalize_fingerprint(observed)` result (`observed.strip().lower()` followed by SHA-256).
-- Independent recomputation gives: `challenge-gov` `c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf`; `ctftime-upcoming` `ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add`; `sherlock-bounties` `67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05`; `arxiv-cryptography` `d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9`; `ethglobal-events` `9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc`.
-- PR #75's single introducing commit `3fd83de69a0ec626a6f03143f3207a5c52ec7ade` already contains the current observation strings and mismatched hashes together. No earlier in-repository version of the Aug. 27 snapshot was found, so the exact pre-commit origin of the bad hashes cannot be established from repository history.
-- Branch `build/reconcile-aug27-fingerprints-20260830` adds `intelligence/feeds/2026-08-27-source-health-reconciled.json` as an explicit derived correction. It preserves the exact PR #75 observation strings, records all five original hashes and source commits, and substitutes only the recomputed canonical fingerprints in the derived replay surface.
-- `tests/test_aug27_source_reconciliation.py` verifies original-vs-derived text identity, original hash preservation, exact corrected hashes, exact Aug. 26 predecessor fingerprints, all-five `changed` classification, direct-script dry-run behavior, and byte-for-byte non-mutation of temporary history/registry files.
-- Canonical Aug. 27 replay is still review-gated. `data/source_check_history.json` and `data/intelligence_sources.json` are intentionally unchanged by this reconciliation pass.
-- PR #82's Aug. 28 morning and afternoon raw research remains blocked behind valid Aug. 27 reconciliation/replay. Open PRs #85, #91, #95 and #99 preserve later research and must not overtake the chronology gate.
+- PR #101 resolved the Aug. 27 fingerprint-provenance blocker without modifying the original PR #75 raw snapshot. `intelligence/feeds/2026-08-27-source-health.json` remains preserved unchanged.
+- `intelligence/feeds/2026-08-27-source-health-reconciled.json` is now canonical contributed evidence. It preserves the exact PR #75 observation strings, records all five original contributed hashes, and supplies only the independently recomputed canonical fingerprints in a separate derived replay surface.
+- `tests/test_aug27_source_reconciliation.py` verifies original-vs-derived observation identity, preservation of original hashes, exact corrected hashes, Aug. 26 predecessor links, all-five `changed` classification, direct-script dry-run behavior, and non-mutation of history/registry fixtures.
+- Canonical Aug. 27 replay has **not** occurred. `data/source_check_history.json` and `data/intelligence_sources.json` remain intentionally unchanged by PR #101.
+- The integration queue and work queue still contain pre-PR101 wording that describes the reconciliation itself as pending. Treat that wording as coordination drift; the next source-history action is a separate bounded canonical replay of the reconciled Aug. 27 snapshot.
+- Raw later research is already preserved on `main`: PR #82 (Aug. 28 morning/afternoon), PR #85 and PR #91 (Aug. 29 morning/afternoon), and PR #95 and PR #99 (Aug. 30 morning/afternoon). None may overtake the Aug. 27 canonical replay gate.
 
 ## Current research / intelligence state
 
 - Canonical source history is current through Aug. 26 only.
-- The Careers in Your Community Challenge remains specialized opportunity intelligence. Do not treat it as generic individual work; school/Perkins V/team requirements remain participation gates.
+- The Careers in Your Community Challenge remains specialized school/team opportunity intelligence, not generic individual work.
 - xTech|Search 10 remains non-actionable until authoritative RFI/application evidence resolves conflicting official date surfaces.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test any target.
-- Aug. 28+ research remains contributed evidence until chronology and normal verification are satisfied.
+- Aug. 28+ research remains contributed evidence until chronology, fingerprint/predecessor validation, and normal source verification are satisfied.
 
 ## 310 case / tool state
 
@@ -39,30 +39,31 @@ Repository version: `v3.1.0` (README)
 ## Toolset / UI state
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental`.
-- No new tool/toolset registration or bespoke site HTML is introduced by the Aug. 27 reconciliation branch.
+- PR #101 introduced no new tool/toolset registration and no bespoke website HTML.
 - Canonical discovery contracts remain unchanged: tools, toolsets, cases, intelligence, evidence, repository data and Agent Operations should flow through canonical registries/manifests/site-data builders.
 
 ## Known state / debt
 
-- Independently verify the derived Aug. 27 reconciliation snapshot and deterministic regression before canonical replay.
-- Aug. 28 and later source snapshots remain blocked behind canonical Aug. 27 replay.
-- `docs/AGENT_HANDOFF.md` is append-only; do not replace/truncate historical entries when adding this pass's handoff.
+- Reconcile `data/integration_queue.json` and `docs/WORK_QUEUE.md` from the pre-PR101 blocker wording to the post-PR101 replay-ready state without deleting historical provenance.
+- Canonically replay the reconciled Aug. 27 snapshot in a separate bounded PR, advancing only the five matching registry timestamps after exact predecessor/hash verification.
+- Process Aug. 28, Aug. 29 and Aug. 30 raw research only after Aug. 27 becomes canonical, in timestamp order.
 - Daily maintenance continues to report known root-generated artifact debt; migration must preserve hashes, references and provenance.
 - External provenance/authenticity for `310_challenge.png` remains unresolved.
 - Workflow actions use supported major tags and Python CI uses bounded ranges rather than immutable action SHAs/a full lockfile; treat this as non-blocking supply-chain hardening debt.
 
 ## Current operating priorities
 
-1. Independently verify `2026-08-27-source-health-reconciled.json` against the preserved PR #75 source strings and Aug. 26 canonical predecessors.
-2. Require green Core/Maintenance validation on the exact reconciliation PR head; merge only if the original raw snapshot remains untouched and the dry-run is non-mutating.
-3. In a separate bounded pass after merge, canonically replay the reconciled Aug. 27 snapshot and advance only the matching source-registry timestamps.
-4. Only after Aug. 27 becomes canonical, process merged Aug. 28 morning/afternoon research, then Aug. 29/Aug. 30 research in timestamp order.
-5. Continue 310 external-provenance and hash-preserving artifact work without inflating experimental capability claims.
+1. Update the integration/work queues so PR #101's reconciliation is recorded as merged and Aug. 27 canonical replay is the active integration step.
+2. Replay `intelligence/feeds/2026-08-27-source-health-reconciled.json` with the canonical `source-history replay-snapshot` dry-run/write workflow in a separate bounded PR.
+3. Require exactly five Aug. 27 history records with the reconciled hashes and verified Aug. 26 predecessor chain; advance only matching source-registry timestamps.
+4. Rerun source-history/registry/report/intelligence/site-data/Agent Operations/Core/Maintenance validation before merge.
+5. Only afterward process Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, then Aug. 30 morning/afternoon research chronologically.
+6. Continue 310 external-provenance and hash-preserving artifact work without inflating experimental capability claims.
 
 ## Coordination note
 
-PR #98 had a clean exact head but could not be marked ready because the connected GitHub GraphQL mutation references an unsupported `fullDatabaseId` field. It was closed unmerged and the exact unchanged tested branch was exposed as non-draft PR #100, then merged without history rewriting as `5441a2fc...`. This reconciliation branch starts from that current main and does not overlap the later raw-research-only PRs.
+PR #101 is now merged and release-healthy. The raw PR #75 file remains primary contributed evidence and was not rewritten. The reconciled Aug. 27 file is explicitly derived evidence, not a retroactive claim that the original hashes were valid. Later research-only merges are preserved but chronology-blocked. No concurrent open PR or issue currently owns the shared coordination files.
 
 ## Next handoff
 
-Repo Integrity should independently compare all five original and reconciled Aug. 27 observation strings/hashes, verify the expected Aug. 26 predecessor chain, run the direct-script `replay-snapshot --dry-run` regression and the normal Core/Maintenance/site-data checks, and merge the reconciliation PR only if the canonical files remain untouched. Canonical Aug. 27 replay should then occur in its own bounded PR.
+Repo Integrity / Build Integration should first reconcile the machine-readable and human work queues to this post-PR101 truth, then create a separate bounded Aug. 27 canonical replay PR. Do not replay Aug. 28+ research until the Aug. 27 replay is independently verified and merged.
