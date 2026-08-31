@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-30T19:38:16Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "b14f45920b9557cb95142b8da64ad90f98f35c8b",
+  "purpose": "Preserve a bounded Aug. 30 afternoon source-health pass from current main without advancing canonical source history while the Aug. 27 provenance blocker remains unresolved.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | building disaster ready human services systems runs jul 6 2026 0900 et to sep 4 2026 1700 et with one 400000 dollar winner and two 200000 dollar winners | usa gov also lists xtech kinetic reach as active jun 5 to nov 30 2026 with 1500000 cash prizes and up to 12700000 follow on contract opportunities | army xtech kinetic reach official page says submission window is closed and phase 1 ran jun 5 to jun 30 2026 | lifecycle active does not equal submissions open",
+      "sha256": "f822ab30cf02921da3a2f1060d8a3d29c24f4b42f19fea4824abf45141b8d265",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/disaster-ready-human-services",
+        "https://www.usa.gov/challenges/xtech-kinetic-reach",
+        "https://xtech.army.mil/competition/xtechkinetic-reach/"
+      ],
+      "note": "Material source-health correction: USA.gov lifecycle-active metadata can materially outlive the actual application window. Building Disaster-Ready remains a near-term $800,000 aggregate-prize lead, but the ACF rules page returned HTTP 403 in this pass, so exact eligibility and entry terms were not promoted as verified. xTech|Kinetic Reach must be treated as closed to new submissions because the Army primary page explicitly says the submission window is closed and shows Jun. 5-Jun. 30 Phase 1 dates."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | immediate online window has rolled to nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc and tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc | no new cash prize evidence established in this pass | aggregator remains discovery only and organizer rules control participation",
+      "sha256": "d5539ea8a887f31ed9ae35f6592bfc703a6e2b3d751d80dc0937efcac4207d79",
+      "note": "The late-August events have rolled off the immediate upcoming list. NNS and TFC are the next broad online practice windows; no new prize evidence was established, so no duplicate earning-opportunity item was published."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | alphix remains the most recent listed bounty and larger existing programs including usual labs aave v4 cap midas and puffer remain listed | no materially newer bounty lead established in this pass | public listing remains discovery evidence only and exact scope rules are required before testing",
+      "sha256": "d15185c489608fffd00bc0c14d08174a92da69071ad9f25332eb86aa5fdd841e",
+      "note": "No stronger bounty change cleared the publication threshold. Public listings remain discovery evidence only and do not authorize testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | latest visible batch remains fri 28 aug 2026 with 224 recent entries | no weekend batch visible and no additional paper established stronger direct cipher solving or reusable tool value than already preserved aug 28 research",
+      "sha256": "a2928ac189bf345bca4c0620d80389188b3e40ac34f5f99a4675ca42dd4d4843",
+      "note": "No new weekend batch is visible. Existing Aug. 28 research remains the stronger tool/provenance lead, so no duplicate paper item was added."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 async hackathon | official event prize evidence remains 10 sponsor pools totaling 77000 dollars in displayed headline amounts from prior research | no newly verified application deadline or completed sponsor qualification details established in this pass",
+      "sha256": "61693ba556adc9e6eb792e5ff9f6c2930e1e7963846bf5500048d6c9c444fe21",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "ETHOnline remains a strong near-term build candidate, but this pass did not establish new application-deadline or complete sponsor-qualification evidence beyond the already preserved Aug. 29/Aug. 30 research."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Building Disaster-Ready Human Services Systems has an $800,000 aggregate prize pool and a Sep. 4 deadline",
+      "status": "high-value-watch-pending-eligibility-rules",
+      "confidence": "high-for-dates-and-prizes-medium-for-actionability",
+      "relevance": "high",
+      "summary": "USA.gov lists the ACF Building Disaster-Ready Human Services Systems challenge from July 6 through September 4, 2026 at 5:00 PM ET, with one $400,000 winner and two $200,000 winners. The primary ACF challenge page returned HTTP 403 to this research runtime, so exact eligibility, submission fields, judging, IP/data-rights, cost, tax and indemnification terms were not independently preserved.",
+      "recommended_action": "Do not create active work yet. When a browser/runtime can access the ACF rules, preserve complete eligibility and submission terms first; promote only if an intended participant is actually eligible and the application remains open."
+    },
+    {
+      "title": "xTech|Kinetic Reach demonstrates another lifecycle-active versus submissions-closed mismatch",
+      "status": "source-health-correction",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "USA.gov currently lists xTech|Kinetic Reach as active through November 30 with $1.5M in cash prizes and up to $12.7M in follow-on opportunities, but the Army primary competition page explicitly says the submission window is closed and shows Phase 1 as June 5-June 30, 2026. The later lifecycle covers finalist exercises and follow-on acquisition stages rather than new-entry availability.",
+      "recommended_action": "Use this as another deterministic actionable-freshness fixture: preserve lifecycle status separately from submission status, and do not present xTech|Kinetic Reach as open for new applications."
+    }
+  ],
+  "chronology": "Canonical history remains through Aug. 26. PR #98 has independently blocked Aug. 27 replay because the stored Aug. 27 hashes do not match canonical normalize_fingerprint(observed) results. Do not replay this Aug. 30 afternoon snapshot until the Aug. 27 provenance issue is repaired and Aug. 28/Aug. 29/earlier Aug. 30 observations are processed in source-overlap timestamp order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
