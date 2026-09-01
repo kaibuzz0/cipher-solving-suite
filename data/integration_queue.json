@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-31T03:32:00Z",
+  "updated_at": "2026-09-01T07:21:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -144,6 +144,32 @@
       "verification": "Repository commit history confirms both one-file research PRs merged before PR #101. Their source claims and fingerprint/predecessor chains remain to be independently reviewed when chronology reaches Aug. 30.",
       "risks": ["Do not advance Aug. 30 source freshness before Aug. 27, Aug. 28 and Aug. 29 are canonical.", "Research claims remain contributed evidence until independently verified."],
       "next_action": "After earlier dates are canonical, inspect Aug. 30 morning then afternoon snapshots in timestamp order and replay only evidence-backed observations."
+    },
+    {
+      "id": "20260831-pr103-source-health-research",
+      "type": "research",
+      "status": "blocked",
+      "contributor": "research-agent / PR #103",
+      "branch_or_pr": "PR #103 open; head 6db8716645ddd44e5f944fbbd31b4d2e3ccaf05a; base 19de1f0d16daa546fbc67fb737f3dc9d33d46812",
+      "path": "intelligence/feeds/2026-08-31-source-health.json",
+      "purpose": "Preserve the Aug. 31 morning source-health and agent-evidence research contribution without allowing stale-base research to advance canonical freshness ahead of Aug. 27-Aug. 30.",
+      "summary": "PR #103 is a one-file raw-research contribution at 2026-08-31T07:38:39Z. It includes four source observations and an arXiv agent-evidence preprint lead, but no canonical history, registry, opportunity, case or website state is changed.",
+      "verification": "PR #103 head passed Core validation 33369490812. Its base predates current main, and its source/preprint claims remain contributed evidence pending independent verification and current-main reconciliation.",
+      "risks": ["Do not replay or promote this snapshot before Aug. 27-Aug. 30 chronology is canonical.", "Do not treat a preprint as established production assurance without full-paper/reproducibility review.", "Reconcile the one-file contribution against current main before integration."],
+      "next_action": "After Aug. 27-Aug. 30 are canonical, reconcile PR #103 against current main, independently verify its four observations and preprint evidence, then replay only evidence-backed source state."
+    },
+    {
+      "id": "20260831-pr106-ethonline-source-health-research",
+      "type": "research",
+      "status": "blocked",
+      "contributor": "research-agent / PR #106",
+      "branch_or_pr": "PR #106 open; head 772b55e332fe84e0424ccdc50d90f725f047a85b; base ac6cbdd0b1fc55877059a3c4eeed70bbc5e42081",
+      "path": "intelligence/feeds/2026-08-31-afternoon-source-health.json",
+      "purpose": "Preserve the Aug. 31 afternoon ETHOnline/source-health contribution without treating event-page research as canonical source freshness or user-specific actionability.",
+      "summary": "PR #106 is a one-file raw-research contribution at 2026-08-31T19:41:50Z. It records four source observations and stronger ETHOnline event/prize-rule evidence, but intentionally does not create an active case or advance canonical history/registry state.",
+      "verification": "PR #106 head passed Core validation 33432441873. Its base predates current main; participant acceptance/eligibility and any participation stake/refund gate remain unverified, and its source/actionability claims require independent verification when chronology reaches Aug. 31.",
+      "risks": ["Do not replay or promote this snapshot before PR #103 and all earlier chronology are canonical.", "Do not create an ETHOnline active case until participant-specific application/acceptance and participation terms are verified.", "Reconcile the one-file contribution against current main before integration."],
+      "next_action": "After PR #103 is processed, reconcile PR #106 against current main, re-open official ETHOnline application/dashboard and event rules, verify participant-specific gates, and replay only evidence-backed source state."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",
