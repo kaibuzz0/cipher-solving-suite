@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01T07:41:07Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "2b697ea245262971353f29208e1e3fde41e628e2",
+  "purpose": "Preserve a bounded Sep. 1 source-health and opportunity-research pass from current main without advancing canonical source history while the Aug. 27 replay and Aug. 28-Aug. 31 chronology remain pending.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 async hackathon and official prize page now shows 11 sponsor pools | displayed headline amounts are the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 and bazantic 2000 totaling 79000 dollars | global ethglobal rules require attendees to stake cryptocurrency to confirm a spot and return stakes when minimum hackathon requirements are met | exact ethonline stake amount and participant acceptance status remain unverified",
+      "sha256": "eab9db1abd9713c7dca8654042498d2358b9deb6bcebfe4168bdbe40cf3e1370",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/rules"
+      ],
+      "note": "Material change relative to the preserved Aug. 31 afternoon research: the official ETHOnline prize page now displays 11 sponsor pools totaling $79,000, adding Bazantic at $2,000 to the previous ten-pool $77,000 surface. ETHGlobal's global rules independently confirm a cryptocurrency stake is required to confirm event participation and that hackathon stakes are returned when minimum requirements are met. The exact ETHOnline stake amount and the intended participant's acceptance state remain unverified, so no active case is created yet."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | immediate online window is nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc followed by tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc | nns ctftime listing reports global prizes 1024 eur first 512 eur second 256 eur third and separate norway student prizes while the official nnsc tf host independently confirms the sep 4 to sep 6 1600 utc schedule | prize amounts remain aggregator sourced pending organizer rules verification",
+      "sha256": "ab44badcc82eec9451565cb9c1ae3c6b4be06ba1e31bfea02a5e94480313bdbc",
+      "primary_followup_urls": [
+        "https://nnsc.tf/",
+        "https://ctftime.org/event/3097"
+      ],
+      "note": "NNS is a useful near-term cryptography/security practice lead. The organizer host confirms the event dates, while CTFtime reports a global 1024/512/256 EUR podium plus separate Norwegian student awards. Because the organizer's currently fetchable public page did not expose the prize terms in this pass, treat the money claim as medium-confidence discovery evidence until the organizer rules view can be preserved."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | tue 1 sep 2026 batch has 66 entries and 219 recent entries overall | new relevant papers include arxiv 2608.30648 lie to me on adversarial witness injection for zk dsl toolchains reporting support for circom corset gnark and noir and 13 found bugs including seven with soundness impact | arxiv 2608.29977 proposes a new algebraic search lwe algorithm combining linear algebra with s polynomial groebner methods and claims polynomial complexity improvement over prior groebner methods without semi regularity assumptions | both are preprints or under peer review and require independent tool reproducibility review before adoption",
+      "sha256": "5f428a36cafce0dd30c901400a5ff92545c5aad44969debcc3e1e4f18e67d2de",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2608.30648",
+        "https://arxiv.org/abs/2608.29977"
+      ],
+      "note": "The Sep. 1 index materially advances the research lane. Liezz is directly relevant to deterministic adversarial testing of ZK toolchains but should be evaluated for released implementation, license, fixtures, and reproducibility before integration. The Search-LWE paper is under peer review and should be treated as a research lead, not a settled cryptanalytic capability claim."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | current select active list includes caregiver ai connected communities building disaster ready careers in your community connecting talent halt the hitchhiker nasa gateways nih complement one cdc data platform xtech kinetic reach and xtech search 10 | active label remains lifecycle discovery metadata and host level submission status eligibility deadlines and award terms must be verified before actionability",
+      "sha256": "54470a82a1b58ae1afda65dcabbb233690bf17d6154ab7ba6062f15b4cd21b40",
+      "note": "The federal discovery set remains broadly stable. Existing repository evidence already shows that several lifecycle-active entries are not open for new submissions, so no new generic federal opportunity is promoted from this listing alone."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "github search research | yuzu octopus rsawebtool is a public non archived browser oriented rsa ctf tool whose readme claims 47 rsa attacks plus rsa aes ecc hash and dh calculators | readme documents browser biginteger checks sage math cell fallback factordb lookup and automatic submission of discovered factorizations | latest visible commits are jul 26 2026 and a repository license file or explicit mit license was not verified in this pass | treat as evaluation lead only and disable external reporting or use local fixtures before reproducibility review",
+      "sha256": "8bf5540551d2b13a4efed14fa6cc635e75b211425a9731043a5b15f55f1a0a51",
+      "primary_followup_urls": [
+        "https://github.com/yuzu-octopus/RsaWebTool"
+      ],
+      "note": "Promising RSA/CTF tooling lead, but not import-ready. Its documented automatic FactorDB submission is an external side effect that should be disabled for deterministic local evaluation, and this pass did not verify a repository license file. Compare overlap with existing RSA tooling, review dependencies/supply chain, and reproduce representative attacks on local CTF fixtures before any registry or toolset integration."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline prize surface expands to 11 sponsor pools totaling $79,000",
+      "status": "high-value-near-term-opportunity-pending-participant-state",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal's official ETHOnline 2026 prize page now shows eleven sponsor pools totaling $79,000 in displayed headline amounts, adding Bazantic at $2,000 to the ten-pool $77,000 surface preserved in Aug. 31 research. The Graph still includes a $5,000 Continuity AI Tooling / AI Use Case track that can extend an existing open-source project under event-specific provenance rules. ETHGlobal's global rules confirm that participants stake cryptocurrency to confirm a spot and can recover the hackathon stake by meeting minimum participation/submission requirements.",
+      "recommended_action": "When chronology reaches this snapshot, reopen ETHOnline application state, record the exact ETHOnline stake amount and acceptance/eligibility state, preserve the final submission/rules surface, and create a structured case only if the intended participant is accepted and a narrow sponsor track fits the existing repository cleanly."
+    },
+    {
+      "title": "Liezz introduces adversarial witness injection for ZK DSL toolchain testing",
+      "status": "research-tool-evaluation-lead",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "arXiv:2608.30648 describes Liezz, a framework that generates deterministic ZK DSL programs and injects adversarially spliced witnesses. The authors report support for Circom, Corset, Gnark, and Noir and 13 discovered bugs, seven with soundness impact, while a valid-execution baseline did not expose those soundness failures under the same testing budget.",
+      "recommended_action": "Review the full paper and locate any released implementation. Before adoption, verify license, deterministic fixtures, supported compiler versions, reproducibility of reported bugs, and whether its witness-injection model adds reusable local/authorized ZK testing capability rather than duplicating existing tools."
+    },
+    {
+      "title": "New algebraic Search-LWE algorithm claims polynomial improvement over prior Groebner approaches",
+      "status": "cryptography-research-lead",
+      "confidence": "medium",
+      "relevance": "useful",
+      "summary": "arXiv:2608.29977 proposes a Search-LWE algorithm combining linear algebra with S-polynomial/Groebner-basis methods and claims a polynomial complexity improvement over prior Groebner-basis approaches while avoiding semi-regularity assumptions in its complexity analysis. The paper is explicitly under peer review.",
+      "recommended_action": "Do not turn the abstract into a capability claim. Review parameter regimes, asymptotics, implementation availability, and comparisons with lattice/combinatorial solvers before deciding whether it warrants a benchmark fixture or solver research note."
+    },
+    {
+      "title": "RsaWebTool is a broad browser RSA/CTF candidate with an external-reporting side effect",
+      "status": "github-tool-evaluation-lead",
+      "confidence": "medium",
+      "relevance": "useful",
+      "summary": "The public non-archived yuzu-octopus/RsaWebTool README describes 47 RSA attacks plus RSA/AES/ECC/hash/DH calculators, browser-side BigInt checks and SageMathCell fallback. It also documents automatic submission of discovered factorizations to FactorDB. Latest visible commits in this pass are from July 26, 2026, and a root LICENSE file or explicit repository license was not verified.",
+      "recommended_action": "Do not import yet. First verify licensing and dependencies, disable FactorDB reporting/external calls, reproduce a small representative attack set on deterministic local CTF fixtures, and compare overlap with RsaCracker/RsaCtfTool and existing suite capabilities."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 26. The reconciled Aug. 27 snapshot is still the next eligible canonical replay. Process Aug. 27, Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, Aug. 30 morning/afternoon, PR #103 Aug. 31 morning, PR #106 Aug. 31 afternoon, and only then this Sep. 1 snapshot in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing. Tool research was limited to public repository metadata/documentation and recommends local deterministic fixtures before any integration."
+}
