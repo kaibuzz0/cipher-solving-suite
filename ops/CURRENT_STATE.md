@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-09-02 19:24 UTC
+Last reconciled: 2026-09-02 19:26 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -8,9 +8,9 @@ Repository version: `v3.1.0` (README)
 
 - Current `main` is `ab0bfc21277f6bf34b71f1fbb632dae3cf23148c`, the merge of PR #118 (`Build: reconcile Aug 28 morning source fingerprints without rewriting evidence`).
 - PR #118 exact head `58bd0e4225fa2bbaa464ae11c6e90bc325bfceb6` was independently reviewed before merge. Core validation `33606739008` passed on Python 3.11/3.12/3.13 and Daily Repository Maintenance also passed on that exact head; no review threads were present.
+- Post-merge Core validation `33672567059` and Deploy operations dashboard `33672567142` both succeeded on exact merge commit `ab0bfc21277f6bf34b71f1fbb632dae3cf23148c`. The public GitHub Pages Operations Workspace is reachable and exposes repository navigation, opportunities, intelligence, cases, tools, evidence, collection health, source registry, and Agent Operations surfaces.
 - The independently recomputed canonical normalization contract is `sha256(observed.strip().lower().encode("utf-8"))`. All five corrected Aug. 28 morning fingerprints in the reconciled snapshot match that contract and all five predecessor links match canonical Aug. 27 source history.
 - The preserved raw Aug. 28 morning snapshot remains unchanged. PR #118 added only a derived reconciliation surface, a deterministic regression, and coordination state; it did not advance canonical source history or registry freshness.
-- Post-merge Core/Pages runs for `ab0bfc21277...` had not surfaced through the commit-run query at reconciliation time. The immediately preceding `main` (`18e599d11ae82d433921441644f02a1b6105159c`) had successful Core `33606446428`, Deploy operations dashboard `33606446464`, Daily Repository Maintenance `33636998842`, and Intelligence Source Report `33643635979` runs.
 
 ## Build / integration state
 
