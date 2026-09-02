@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-01T07:21:00Z",
+  "updated_at": "2026-09-02T07:22:00Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -13,7 +13,7 @@
       "summary": "PR #44 preserved exact observations for code4rena-contests, sherlock-bounties, and ctftime-upcoming at 2026-08-22T07:42:16Z. PR #50 replayed those exact fingerprints, notes and checked timestamps into canonical source history and source registry.",
       "verification": "The three raw observed strings independently recomputed to the stored SHA-256 fingerprints. PR #50 final head a9693c067b40fee35779e9b2e2c6a860104c0528 passed Core validation 32627332013 on Python 3.11/3.12/3.13, Daily Repository Maintenance 32627332057, and Intelligence Source Report 32627332041.",
       "risks": ["Later source observations must still be replayed chronologically.", "A bounty/platform listing is discovery evidence, not authorization to test any target."],
-      "next_action": "Aug. 22 through Aug. 26 are canonical; continue from Aug. 27 PR #75."
+      "next_action": "Aug. 22 through Aug. 27 are canonical; continue from Aug. 28 morning."
     },
     {
       "id": "20260822-pr47-source-health-replay",
@@ -26,7 +26,7 @@
       "summary": "The exact challenge-gov, ctftime-upcoming and sherlock-bounties observations at 2026-08-22T19:42:58Z are canonical in source history and registry freshness without changing the preserved raw snapshot. NASA Gateways remains a specialized publish candidate and was not converted into a generic active case.",
       "verification": "Repo Integrity independently recomputed raw snapshot fingerprints and verified their predecessor chain. PR #60 final head passed Core 32825016825 on Python 3.11/3.12/3.13, Intelligence Source Report 32825016797 and Daily Maintenance 32825016794; post-merge Core 32888885708 and Pages 32888885847 succeeded.",
       "risks": ["NASA Gateways eligibility is specialized and should not become generic active work without verified eligible participation.", "Public bounty listings are discovery evidence only and are not testing authorization."],
-      "next_action": "Aug. 22 through Aug. 26 are canonical; continue from Aug. 27 PR #75."
+      "next_action": "Aug. 22 through Aug. 27 are canonical; continue from Aug. 28 morning."
     },
     {
       "id": "20260823-pr49-source-health-replay",
@@ -39,7 +39,7 @@
       "summary": "PR #67 replayed the exact four 2026-08-23T07:42:04Z observations from the byte-identical PR #63/former PR #49 raw snapshot into canonical source history and advanced only matching registry timestamps.",
       "verification": "Raw snapshot Git blob SHA remains 2c5eeaa8c4235212ab243cc5eb626411fb204bb5. PR #67 final head passed Core 32946337938, Intelligence Source Report 32946337917, and Daily Maintenance 32946337928; post-merge Core 33004864258 and Pages 33004864246 succeeded.",
       "risks": ["An active federal challenge lifecycle does not prove that submissions are presently open.", "Bounty listings do not establish testing authorization."],
-      "next_action": "Aug. 23 through Aug. 26 are canonical; continue from Aug. 27 PR #75."
+      "next_action": "Aug. 23 through Aug. 27 are canonical; continue from Aug. 28 morning."
     },
     {
       "id": "20260823-pr52-orbital-clarity-research",
@@ -52,7 +52,7 @@
       "summary": "PR #70 preserves reconciled official-source Orbital Clarity research on current main, including deadlines, awards, eligibility, IP/export constraints, hosted-payload requirement, judging model, and the $250,000 insurance/financial-responsibility requirement. It intentionally does not create a structured active case.",
       "verification": "PR #70 final head passed Core validation 33008367703 on Python 3.11/3.12/3.13; preserved research blob d85ba4e450705e85d9cdd987d2541a48e24bdc41 matches superseded PR #69; post-merge Core 33049534979 succeeded.",
       "risks": ["Do not create a structured active case until the complete Phase 1 submission form and mandatory field/format limits are preserved.", "Participant-specific eligibility and ability to meet the $250,000 financial-responsibility requirement remain gates before assigning build work."],
-      "next_action": "Orbital Clarity is preserved; continue the chronological source lane from Aug. 27."
+      "next_action": "Orbital Clarity is preserved; continue the chronological source lane from Aug. 28."
     },
     {
       "id": "20260824-pr56-hhs-digital-stockpile-research",
@@ -65,7 +65,7 @@
       "summary": "PR #76 canonically prepended the exact four 2026-08-24T19:42:29Z fingerprints and advanced only challenge-gov, ctftime-upcoming, sherlock-bounties, and ethglobal-events registry timestamps. DS-MRN remains human-led intelligence only.",
       "verification": "All four raw observation strings independently recomputed to the stored SHA-256 fingerprints and their predecessor fingerprints matched the latest canonical Aug. 23 records. PR #76 exact head passed Core 33111737648, Intelligence Source Report 33111737656 and Daily Maintenance 33111737691 before merge. PR #77 exact head passed Core 33151353058; post-merge main 846eed50 passed Core 33153817545 and Pages 33153817529.",
       "risks": ["Do not infer a timezone for the displayed August 28, 2026 at 8 PM Phase 1 deadline.", "Do not create or draft an AI-generated DS-MRN submission; published rules prohibit AI-generated narrative and video content.", "Participant-specific eligibility and acceptance of Government unlimited-rights, tax, release, and indemnification terms remain human participation gates.", "Security-program listings in the same snapshot are discovery evidence only, not testing authorization."],
-      "next_action": "Aug. 24 through Aug. 26 are canonical; continue from Aug. 27."
+      "next_action": "Aug. 24 through Aug. 27 are canonical; continue from Aug. 28 morning."
     },
     {
       "id": "20260825-pr62-rascal-source-health-research",
@@ -78,7 +78,7 @@
       "summary": "PR #83 canonically prepended the exact four 2026-08-25T19:42:47Z observations and advanced only ctftime-upcoming, sherlock-bounties, arxiv-cryptography, and ethglobal-events last_checked_at timestamps. The RASC-AL lead itself remains specialized research and was not promoted to an active case or generic opportunity.",
       "verification": "Repo Integrity independently recomputed all four protected observation hashes and matched the snapshot exactly; predecessor links matched the latest Aug. 24 canonical history. PR #83 final head 8ec5b58bb631b74c389e3108112482f512c48714 passed Core 33207203159 on Python 3.11/3.12/3.13, Intelligence Source Report 33207203124, and Daily Repository Maintenance 33207203148.",
       "risks": ["Do not convert the RASC-AL headline into a generic actionable opportunity without complete official competition guidelines.", "Public security-program listings are discovery evidence only and do not authorize testing."],
-      "next_action": "Aug. 25 and Aug. 26 are canonical. Process Aug. 27 PR #75 next."
+      "next_action": "Aug. 25 through Aug. 27 are canonical. Process Aug. 28 morning next."
     },
     {
       "id": "20260826-pr66-xtech-source-health-research",
@@ -90,34 +90,34 @@
       "purpose": "Preserve Aug. 26 source health and the xTech|Search 10 deadline conflict, then replay exact evidence-backed observations without promoting an unresolved opportunity claim.",
       "summary": "PR #93 canonically replayed the exact five 2026-08-26T07:39:05Z observations and advanced only their matching source-registry timestamps. xTech|Search 10 remains a non-actionable watch/reconciliation lead because current official application/RFI surfaces still conflict.",
       "verification": "Repo Integrity independently recomputed all five protected snapshot SHA-256 values and verified all five predecessor links against canonical Aug. 24/Aug. 25 history. PR #93 final head 5403df4d36ce3160db58e45c786b8ca5d2ed84e5 passed Core 33272701911 on Python 3.11/3.12/3.13, Intelligence Source Report 33272701915, and Daily Maintenance 33272701910; post-merge Core 33299042160 and Deploy operations dashboard 33299042070 succeeded on merge 8d2b20ba678fd776b0a90a0e38b8a4e061386a13.",
-      "risks": ["Resolve the official xTech date conflict and obtain the complete authoritative RFI/application terms before actionability claims.", "Aug. 27, Aug. 28, and Aug. 29 observations must now be processed in chronological order.", "Do not treat a public bounty listing as testing authorization."],
-      "next_action": "Process Aug. 27 PR #75 next: independently verify protected hashes/predecessors and official challenge evidence, then replay only evidence-backed observations."
+      "risks": ["Resolve the official xTech date conflict and obtain the complete authoritative RFI/application terms before actionability claims.", "Later observations must be processed in chronological order.", "Do not treat a public bounty listing as testing authorization."],
+      "next_action": "Aug. 26 and Aug. 27 are canonical. Process Aug. 28 morning next."
     },
     {
       "id": "20260827-pr75-source-health-replay",
       "type": "data",
-      "status": "needs-integration",
-      "contributor": "research-agent / PR #75; provenance reconciliation PR #101; independently reviewed by Repo Integrity",
-      "branch_or_pr": "PR #75 merged raw evidence as c57aebc027d37df002224199b8da79bab16b1e59; stale blocker PR #97 closed unmerged; PR #101 merged reconciled derived evidence as 19de1f0d16daa546fbc67fb737f3dc9d33d46812",
+      "status": "integrated",
+      "contributor": "research-agent / PR #75; provenance reconciliation PR #101; build replay PR #114; independently verified by Repo Integrity",
+      "branch_or_pr": "PR #75 merged raw evidence as c57aebc027d37df002224199b8da79bab16b1e59; stale blocker PR #97 closed unmerged; PR #101 merged reconciled derived evidence as 19de1f0d16daa546fbc67fb737f3dc9d33d46812; replay PR #114 merged as 222bd054551c44845fa50c1837e379cc1dc6ab53",
       "path": "intelligence/feeds/2026-08-27-source-health.json; intelligence/feeds/2026-08-27-source-health-reconciled.json",
-      "purpose": "Preserve the invalid-hash raw contribution unchanged while using the separately derived, provenance-documented reconciliation as the only eligible Aug. 27 canonical replay surface.",
-      "summary": "PR #101 preserves the exact PR #75 observation strings, records all five original contributed hashes, and stores independently recomputed canonical fingerprints in a separate reconciled snapshot. The original raw file remains untouched. No Aug. 27 source history or registry freshness has yet been advanced.",
-      "verification": "PR #101 exact head 55ece8bed635a40354b4245e2a1bb1c7adf0442d passed Core 33332672382 and Daily Repository Maintenance 33332672415. Post-merge Core 33354005044 and Deploy operations dashboard 33354005008 succeeded on merge 19de1f0d16daa546fbc67fb737f3dc9d33d46812. The reconciliation regression verifies exact source-string identity, preservation of original bad hashes, corrected canonical hashes, Aug. 26 predecessor links, changed classifications, direct-script dry-run and non-mutation.",
-      "risks": ["Do not rewrite or delete the original PR #75 raw snapshot.", "Canonical Aug. 27 replay must use the reconciled snapshot and still receive independent pre-merge verification.", "Aug. 28 and later source snapshots must not overtake this chronology gate.", "Careers in Your Community remains specialized school/team opportunity intelligence rather than generic individual work."],
-      "next_action": "Create a separate bounded canonical replay PR using intelligence/feeds/2026-08-27-source-health-reconciled.json. Dry-run against Aug. 26 history, require exactly five expected predecessor/hash pairs, advance only matching registry timestamps, and rerun source/history/report/intelligence/site-data/Agent Operations/Core/Maintenance validation."
+      "purpose": "Preserve the invalid-hash raw contribution unchanged while using the separately derived, provenance-documented reconciliation as the sole canonical Aug. 27 replay surface.",
+      "summary": "PR #114 canonically replayed exactly five corrected 2026-08-27T19:39:25Z observations from the reconciled snapshot, advanced exactly the five corresponding source last_checked_at timestamps, and preserved the newer registry-level updated_at. The original PR #75 raw snapshot and its five invalid contributed hashes remain untouched.",
+      "verification": "Repo Integrity independently recomputed all five corrected hashes from the preserved observation strings, verified all five Aug. 26 predecessor fingerprints, confirmed registry non-rewind and no review threads, and inspected the idempotence/provenance regression. PR #114 final head cef3541926fb93245de0fa43b851d2b0918ed2e6 passed Core 33554018254 on Python 3.11/3.12/3.13, Intelligence Source Report 33554018512, and Daily Maintenance 33554018586 before merge.",
+      "risks": ["Do not rewrite or delete the original PR #75 raw snapshot.", "Aug. 28 and later source snapshots must continue in timestamp order.", "Careers in Your Community remains specialized school/team opportunity intelligence rather than generic individual work."],
+      "next_action": "Verify and replay intelligence/feeds/2026-08-28-source-health.json before the Aug. 28 afternoon snapshot, using canonical Aug. 27 predecessors and the same independent-review gate."
     },
     {
       "id": "20260828-pr82-source-health-research",
       "type": "research",
-      "status": "blocked",
+      "status": "needs-integration",
       "contributor": "research-agent / PR #82",
       "branch_or_pr": "PR #82 merged raw Aug. 28 morning/afternoon evidence as b14f45920b9557cb95142b8da64ad90f98f35c8b",
       "path": "intelligence/feeds/2026-08-28-source-health.json; intelligence/feeds/2026-08-28-afternoon-source-health.json",
-      "purpose": "Preserve Aug. 28 morning and afternoon research without advancing source freshness ahead of the Aug. 27 canonical replay gate.",
-      "summary": "Both Aug. 28 raw snapshots are preserved on current main. They include source-health observations, a COMPFEST schedule correction, an RSA tool-evaluation lead, and a CTF-agent provenance research lead, but no canonical Aug. 28 replay has occurred.",
-      "verification": "PR #82 final head cc9176a943980bc48d02247887a5196702cc026e passed Core validation 33205001612. The later PR #101 merge is release-green but did not validate or replay Aug. 28 observations.",
-      "risks": ["Do not replay either Aug. 28 snapshot before Aug. 27 is canonical.", "Tool/research leads require their own overlap, license, dependency and reproducibility review before adoption."],
-      "next_action": "After Aug. 27 becomes canonical, verify Aug. 28 hashes/predecessors and process the 07:40:27Z snapshot before the 19:37:39Z snapshot."
+      "purpose": "Preserve Aug. 28 morning and afternoon research and process it after the now-canonical Aug. 27 gate.",
+      "summary": "Both Aug. 28 raw snapshots are preserved on current main. They include source-health observations, a COMPFEST schedule correction, an RSA tool-evaluation lead, and a CTF-agent provenance research lead. Aug. 27 is now canonical; Aug. 28 morning is the next eligible replay surface.",
+      "verification": "PR #82 final head cc9176a943980bc48d02247887a5196702cc026e passed Core validation 33205001612. That stale-base CI does not independently validate Aug. 28 against the now-canonical Aug. 27 predecessor chain; current-main reconciliation and independent fingerprint/source verification are still required.",
+      "risks": ["Process the Aug. 28 07:40:27Z snapshot before the 19:37:39Z snapshot.", "Tool/research leads require their own overlap, license, dependency and reproducibility review before adoption."],
+      "next_action": "Independently verify Aug. 28 morning hashes/predecessors against canonical Aug. 27 history, replay only evidence-backed observations, then run full repository validation before touching Aug. 28 afternoon."
     },
     {
       "id": "20260829-pr85-pr91-source-health-research",
@@ -126,11 +126,11 @@
       "contributor": "research-agent / PR #85 and PR #91",
       "branch_or_pr": "PR #85 merged as 66f7ca2c4235abc61f6aa1dc18e8c97b89f576f6; PR #91 merged as 58fbffc1c2d918404c898511a79bd1154680af8d",
       "path": "intelligence/feeds/2026-08-29-source-health.json; intelligence/feeds/2026-08-29-afternoon-source-health.json",
-      "purpose": "Preserve Aug. 29 morning and afternoon research without allowing it to overtake unresolved Aug. 27/Aug. 28 canonical chronology.",
+      "purpose": "Preserve Aug. 29 morning and afternoon research without allowing it to overtake Aug. 28 canonical chronology.",
       "summary": "Both Aug. 29 research snapshots are preserved on current main as contributed evidence only. No Aug. 29 canonical source-history replay is claimed.",
       "verification": "Repository commit history confirms both one-file research PRs merged before PR #101. Their source claims and fingerprint/predecessor chains remain to be independently reviewed when chronology reaches Aug. 29.",
-      "risks": ["Do not advance Aug. 29 source freshness before Aug. 27 and both Aug. 28 snapshots are canonical.", "Research claims remain contributed evidence until independently verified."],
-      "next_action": "After Aug. 27 and Aug. 28 are canonical, inspect Aug. 29 morning then afternoon snapshots in timestamp order and replay only evidence-backed observations."
+      "risks": ["Do not advance Aug. 29 source freshness before both Aug. 28 snapshots are canonical.", "Research claims remain contributed evidence until independently verified."],
+      "next_action": "After Aug. 28 is canonical, inspect Aug. 29 morning then afternoon snapshots in timestamp order and replay only evidence-backed observations."
     },
     {
       "id": "20260830-pr95-pr99-source-health-research",
@@ -142,7 +142,7 @@
       "purpose": "Preserve Aug. 30 morning and afternoon research while keeping canonical replay behind the earlier chronology gates.",
       "summary": "Both Aug. 30 research snapshots are preserved on current main as contributed evidence only. No Aug. 30 canonical source-history replay is claimed.",
       "verification": "Repository commit history confirms both one-file research PRs merged before PR #101. Their source claims and fingerprint/predecessor chains remain to be independently reviewed when chronology reaches Aug. 30.",
-      "risks": ["Do not advance Aug. 30 source freshness before Aug. 27, Aug. 28 and Aug. 29 are canonical.", "Research claims remain contributed evidence until independently verified."],
+      "risks": ["Do not advance Aug. 30 source freshness before Aug. 28 and Aug. 29 are canonical.", "Research claims remain contributed evidence until independently verified."],
       "next_action": "After earlier dates are canonical, inspect Aug. 30 morning then afternoon snapshots in timestamp order and replay only evidence-backed observations."
     },
     {
@@ -152,11 +152,11 @@
       "contributor": "research-agent / PR #103",
       "branch_or_pr": "PR #103 open; head 6db8716645ddd44e5f944fbbd31b4d2e3ccaf05a; base 19de1f0d16daa546fbc67fb737f3dc9d33d46812",
       "path": "intelligence/feeds/2026-08-31-source-health.json",
-      "purpose": "Preserve the Aug. 31 morning source-health and agent-evidence research contribution without allowing stale-base research to advance canonical freshness ahead of Aug. 27-Aug. 30.",
+      "purpose": "Preserve the Aug. 31 morning source-health and agent-evidence research contribution without allowing stale-base research to advance canonical freshness ahead of Aug. 28-Aug. 30.",
       "summary": "PR #103 is a one-file raw-research contribution at 2026-08-31T07:38:39Z. It includes four source observations and an arXiv agent-evidence preprint lead, but no canonical history, registry, opportunity, case or website state is changed.",
       "verification": "PR #103 head passed Core validation 33369490812. Its base predates current main, and its source/preprint claims remain contributed evidence pending independent verification and current-main reconciliation.",
-      "risks": ["Do not replay or promote this snapshot before Aug. 27-Aug. 30 chronology is canonical.", "Do not treat a preprint as established production assurance without full-paper/reproducibility review.", "Reconcile the one-file contribution against current main before integration."],
-      "next_action": "After Aug. 27-Aug. 30 are canonical, reconcile PR #103 against current main, independently verify its four observations and preprint evidence, then replay only evidence-backed source state."
+      "risks": ["Do not replay or promote this snapshot before Aug. 28-Aug. 30 chronology is canonical.", "Do not treat a preprint as established production assurance without full-paper/reproducibility review.", "Reconcile the one-file contribution against current main before integration."],
+      "next_action": "After Aug. 28-Aug. 30 are canonical, reconcile PR #103 against current main, independently verify its four observations and preprint evidence, then replay only evidence-backed source state."
     },
     {
       "id": "20260831-pr106-ethonline-source-health-research",
@@ -170,6 +170,32 @@
       "verification": "PR #106 head passed Core validation 33432441873. Its base predates current main; participant acceptance/eligibility and any participation stake/refund gate remain unverified, and its source/actionability claims require independent verification when chronology reaches Aug. 31.",
       "risks": ["Do not replay or promote this snapshot before PR #103 and all earlier chronology are canonical.", "Do not create an ETHOnline active case until participant-specific application/acceptance and participation terms are verified.", "Reconcile the one-file contribution against current main before integration."],
       "next_action": "After PR #103 is processed, reconcile PR #106 against current main, re-open official ETHOnline application/dashboard and event rules, verify participant-specific gates, and replay only evidence-backed source state."
+    },
+    {
+      "id": "20260901-pr109-source-health-research",
+      "type": "research",
+      "status": "blocked",
+      "contributor": "research-agent / PR #109",
+      "branch_or_pr": "PR #109 open; head c0ff08a271830a6b0b1c71ad3af0c96e396f0495; base 2b697ea245262971353f29208e1e3fde41e628e2",
+      "path": "intelligence/feeds/2026-09-01-source-health.json",
+      "purpose": "Preserve Sep. 1 morning source-health, ETHOnline, arXiv, RSA-tool, and CTF research without promoting stale-base contributed claims ahead of the chronological replay chain.",
+      "summary": "PR #109 is a one-file raw-research contribution at 2026-09-01T07:41:07Z. Its ETHOnline prize/stake, arXiv preprint, RsaWebTool capability/license/reporting, and NNS CTF prize claims remain contributed evidence and are not canonical repository truth.",
+      "verification": "PR #109 head passed Core validation 33483798783 on its stale base. That validates repository compatibility of the contribution at that head, not present-tense source accuracy, tool safety/license suitability, or canonical freshness.",
+      "risks": ["Do not process before Aug. 28-Aug. 31 chronology is canonical.", "Independently verify primary-source event claims and full-paper/tool license/dependency behavior before promotion.", "Keep any external FactorDB reporting disabled during RSA-tool evaluation."],
+      "next_action": "When chronology reaches Sep. 1 morning, reconcile the one-file contribution onto current main, reopen primary sources, recompute fingerprints/predecessors, and replay only independently verified observations."
+    },
+    {
+      "id": "20260901-pr112-afternoon-source-health-research",
+      "type": "research",
+      "status": "blocked",
+      "contributor": "research-agent / PR #112",
+      "branch_or_pr": "PR #112 open; head bf905e8159e58739ef68999c2c511ca4731de764; base 96c4381ded1847acd891617d96827d89814404ae",
+      "path": "intelligence/feeds/2026-09-01-afternoon-source-health.json",
+      "purpose": "Preserve Sep. 1 afternoon ETHOnline/xTech/source-health research without letting a non-mergeable stale-base contribution advance canonical state.",
+      "summary": "PR #112 is a one-file raw-research contribution at 2026-09-01T19:38:54Z. GitHub currently reports it non-mergeable against current main. Its ETHOnline sponsor-pool and xTech date/state observations remain contributed evidence only.",
+      "verification": "PR #112 head bf905e8159e58739ef68999c2c511ca4731de764 passed Core validation 33551030545 on its original base. No independent source-accuracy or current-main reconciliation claim is made here.",
+      "risks": ["Do not process before PR #109 and all earlier chronology are canonical.", "Preserve the one-file evidence during reconciliation rather than resolving the stale branch by choosing one side wholesale.", "xTech remains watch-only until official Army/RFI/application surfaces are coherent."],
+      "next_action": "When chronology reaches Sep. 1 afternoon, reconcile PR #112 onto current main, reopen ETHOnline and xTech primary sources, verify exact evidence and predecessor chain, and replay only supported observations."
     },
     {
       "id": "20260824-pr48-310-image-analyzer-integration",
