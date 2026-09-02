@@ -15,6 +15,7 @@ RECONCILED = ROOT / "intelligence" / "feeds" / "2026-08-27-source-health-reconci
 HISTORY = ROOT / "data" / "source_check_history.json"
 REGISTRY = ROOT / "data" / "intelligence_sources.json"
 SCRIPT = ROOT / "scripts" / "source_check_history.py"
+STAMP = "2026-08-27T19:39:25Z"
 
 EXPECTED = {
     "challenge-gov": (
@@ -53,19 +54,25 @@ def _temp_canonical_files(tmp_path: Path) -> tuple[Path, Path]:
     return history, registry
 
 
-def test_aug27_reconciliation_preserves_original_and_repairs_only_fingerprints(tmp_path):
+def test_aug27_reconciliation_preserves_provenance_and_is_canonical(tmp_path):
     original = json.loads(ORIGINAL.read_text(encoding="utf-8"))
     reconciled = json.loads(RECONCILED.read_text(encoding="utf-8"))
+    history = json.loads(HISTORY.read_text(encoding="utf-8"))
+    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
 
-    assert original["checked_at"] == reconciled["checked_at"] == "2026-08-27T19:39:25Z"
+    assert original["checked_at"] == reconciled["checked_at"] == STAMP
     assert reconciled["reconciliation"]["original_commit"] == "3fd83de69a0ec626a6f03143f3207a5c52ec7ade"
     assert reconciled["reconciliation"]["merged_commit"] == "c57aebc027d37df002224199b8da79bab16b1e59"
+    assert history["updated_at"] == STAMP
+    # Registry-level updated_at was already newer than the replay and must not rewind.
+    assert registry["updated_at"] == "2026-08-27T20:02:00Z"
 
     original_by_id = {item["source_id"]: item for item in original["observations"]}
     reconciled_by_id = {item["source_id"]: item for item in reconciled["observations"]}
+    registry_by_id = {item["id"]: item for item in registry["sources"]}
     assert set(original_by_id) == set(reconciled_by_id) == set(EXPECTED)
 
-    for source_id, (bad_hash, corrected_hash, _predecessor) in EXPECTED.items():
+    for source_id, (bad_hash, corrected_hash, predecessor) in EXPECTED.items():
         original_item = original_by_id[source_id]
         corrected_item = reconciled_by_id[source_id]
         assert original_item["observed"] == corrected_item["observed"]
@@ -75,6 +82,16 @@ def test_aug27_reconciliation_preserves_original_and_repairs_only_fingerprints(t
         assert corrected_item["sha256"] == corrected_hash
         assert reconciled["reconciliation"]["original_hashes"][source_id] == bad_hash
 
+        canonical = [
+            item for item in history["checks"]
+            if item["source_id"] == source_id and item["checked_at"] == STAMP
+        ]
+        assert len(canonical) == 1
+        assert canonical[0]["content_fingerprint"] == corrected_hash
+        assert canonical[0]["previous_fingerprint"] == predecessor
+        assert canonical[0]["change_state"] == "changed"
+        assert registry_by_id[source_id]["last_checked_at"] == STAMP
+
     history_path, registry_path = _temp_canonical_files(tmp_path)
     before_history = history_path.read_bytes()
     before_registry = registry_path.read_bytes()
@@ -82,23 +99,18 @@ def test_aug27_reconciliation_preserves_original_and_repairs_only_fingerprints(t
         RECONCILED,
         history_path=history_path,
         registry_path=registry_path,
-        write=False,
+        write=True,
     )
 
     assert result["validated_observations"] == 5
-    assert result["skipped_idempotent"] == []
+    assert result["replayed"] == []
+    assert set(result["skipped_idempotent"]) == set(EXPECTED)
     assert result["wrote_files"] is False
-    replayed = {entry["source_id"]: entry for entry in result["replayed"]}
-    assert set(replayed) == set(EXPECTED)
-    for source_id, (_bad_hash, corrected_hash, predecessor) in EXPECTED.items():
-        assert replayed[source_id]["content_fingerprint"] == corrected_hash
-        assert replayed[source_id]["previous_fingerprint"] == predecessor
-        assert replayed[source_id]["change_state"] == "changed"
     assert history_path.read_bytes() == before_history
     assert registry_path.read_bytes() == before_registry
 
 
-def test_aug27_reconciled_direct_script_dry_run_is_non_mutating(tmp_path):
+def test_aug27_reconciled_direct_script_replay_is_idempotent(tmp_path):
     history_path, registry_path = _temp_canonical_files(tmp_path)
     before_history = history_path.read_bytes()
     before_registry = registry_path.read_bytes()
@@ -113,7 +125,6 @@ def test_aug27_reconciled_direct_script_dry_run_is_non_mutating(tmp_path):
             str(history_path),
             "--registry",
             str(registry_path),
-            "--dry-run",
         ],
         cwd=ROOT,
         check=False,
@@ -124,8 +135,8 @@ def test_aug27_reconciled_direct_script_dry_run_is_non_mutating(tmp_path):
     assert completed.returncode == 0, completed.stderr
     result = json.loads(completed.stdout)
     assert result["validated_observations"] == 5
-    assert len(result["replayed"]) == 5
-    assert result["skipped_idempotent"] == []
+    assert result["replayed"] == []
+    assert set(result["skipped_idempotent"]) == set(EXPECTED)
     assert result["wrote_files"] is False
     assert history_path.read_bytes() == before_history
     assert registry_path.read_bytes() == before_registry
