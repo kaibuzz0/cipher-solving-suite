@@ -1,16 +1,15 @@
 # Current Repository State
 
-Last reconciled: 2026-09-03 07:21 UTC
+Last reconciled: 2026-09-03 19:18 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `787f96947ab8da762457d5c4c2607024d07a9cf6`, the merge of PR #121 (`Ops: reconcile state after PR #118 integrity merge`).
-- PR #121 reused the exact unchanged coordination head `3530b9ab27fe7c34bb1e7fbc51a0ca89c0daa6fd`; its fresh Core validation `33676581808` succeeded before merge.
-- Post-merge Core validation `33727463092` and Deploy operations dashboard `33727463141` both succeeded on exact merge commit `787f96947ab8da762457d5c4c2607024d07a9cf6`.
-- The public GitHub Pages Operations Workspace is reachable and exposes repository navigation, opportunities, intelligence, cases, tools, evidence, collection health, source registry, and Agent Operations surfaces.
-- No open repository issues were found during this reconciliation pass.
+- Current `main` is `5737c29da7a396758ac2174f541e031f521c9d7f`, the merge of PR #122 (`Ops: reconcile state after PR #121 merge`).
+- Post-merge Core validation `33730902949` and Deploy operations dashboard `33730902921` both succeeded on exact merge commit `5737c29da7a396758ac2174f541e031f521c9d7f`.
+- Subsequent scheduled Intelligence Source Report `33768486088` and Daily Repository Maintenance `33761908601` also succeeded on the same exact `main` commit.
+- No repository issue currently blocks the chronological source-replay lane.
 
 ## Build / integration state
 
@@ -28,8 +27,9 @@ Repository version: `v3.1.0` (README)
 
 ## Current research / intelligence state
 
-- Open later research lanes are PR #103 (Aug. 31 morning), PR #106 (Aug. 31 afternoon), PR #109 (Sep. 1 morning), PR #112 (Sep. 1 afternoon), PR #116 (Sep. 2 morning), and PR #120 (Sep. 2 afternoon). They remain contributed/noncanonical evidence and must be reconciled only at their chronology point.
-- PR #120 is based on the pre-PR121 `ab0bfc21...` main and adds only `intelligence/feeds/2026-09-02-afternoon-source-health.json`; its `verialabs/ctf-agent` performance/prize statements remain project-authored research evidence rather than independently reproduced repository capability.
+- Open later research lanes are PR #103 (Aug. 31 morning), PR #106 (Aug. 31 afternoon), PR #109 (Sep. 1 morning), PR #112 (Sep. 1 afternoon), PR #116 (Sep. 2 morning), PR #120 (Sep. 2 afternoon), and PR #123 (Sep. 3 morning). They remain contributed/noncanonical evidence and must be reconciled only at their chronology point.
+- PR #123 was created from pre-PR122 `787f9694...` and adds only `intelligence/feeds/2026-09-03-source-health.json`. Its ETHOnline prize-total change, NNS CTF timing, and xTech observations are contributed research claims pending independent verification at the Sep. 3 chronology point.
+- PR #120 is based on older `ab0bfc21...` main and adds only `intelligence/feeds/2026-09-02-afternoon-source-health.json`; its `verialabs/ctf-agent` performance/prize statements remain project-authored research evidence rather than independently reproduced repository capability.
 - Careers in Your Community remains specialized school/team opportunity intelligence, not generic individual work.
 - xTech|Search 10 remains non-actionable until authoritative Army/RFI/application evidence resolves conflicting official date/state surfaces.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test any target.
@@ -54,8 +54,8 @@ Repository version: `v3.1.0` (README)
 
 ## Known state / debt
 
-- `docs/WORK_QUEUE.md` still names the original Aug. 28 morning raw snapshot in its P2 next-step text. The operationally correct replay surface is the reconciled snapshot above; do not replay the invalid contributed hashes from the raw file.
-- `data/integration_queue.json` keeps Aug. 28 at `needs-integration`, but its Aug. 28 record predates PR #118 and does not yet annotate the reconciliation path. It also does not yet represent every later open research lane, including PR #120.
+- `docs/WORK_QUEUE.md` still names the original Aug. 28 morning raw snapshot in its P2 next-step text. The operationally correct replay surface is the reconciled snapshot above; this pass opens a bounded coordination fix for that wording.
+- `data/integration_queue.json` keeps Aug. 28 at `needs-integration`, but its Aug. 28 record predates PR #118 and does not yet annotate the reconciliation path. It also does not yet represent every later open research lane, including PR #123.
 - `docs/AGENT_HANDOFF.md` is append-only and remains materially behind current state. The available connector writer performs whole-file replacement, so do not risk truncating historical handoffs merely to append; preserve exact handoff text in the coordination PR description when atomic append is unavailable.
 - Later raw research must be reconciled only when chronology reaches it. External 310 provenance, root-artifact relocation, and supply-chain/runtime hardening remain separate debt.
 
@@ -64,13 +64,13 @@ Repository version: `v3.1.0` (README)
 1. Create a separate bounded canonical replay for `intelligence/feeds/2026-08-28-source-health-reconciled.json`.
 2. Require exactly five Aug. 28 morning records with the corrected fingerprints and exact Aug. 27 predecessors above; advance only their corresponding registry timestamps and preserve registry-level timestamp non-rewind.
 3. Rerun source-history, registry, collection report, intelligence validation, site-data/Agent Operations generation, Core, and Daily Maintenance on the replay head; independently review before merge.
-4. Process `2026-08-28-afternoon-source-health.json` only after the morning replay is canonical, then continue Aug. 29 → Aug. 30 → Aug. 31 → Sep. 1 → Sep. 2 in timestamp/source-overlap order.
+4. Process `2026-08-28-afternoon-source-health.json` only after the morning replay is canonical, then continue Aug. 29 → Aug. 30 → Aug. 31 → Sep. 1 → Sep. 2 → Sep. 3 in timestamp/source-overlap order.
 5. Reconcile stale later research branches against the then-current main at their chronology point and preserve compatible work rather than copying stale coordination state.
 6. Continue 310 external-provenance and hash-preserving artifact work without inflating experimental capability claims.
 
 ## Coordination note
 
-PR #121 safely replaced the closed draft PR #119 using the same tested coordination head and merged only after exact-head validation. Current-main release health is green on the merge commit. No source history, source registry freshness, primary research, tool maturity, case status, security authorization, or bespoke site HTML changed in that merge.
+PR #122 merged the post-PR121 state reconciliation. This pass independently rechecked the exact current `main`, exact-main Core/Pages/scheduled workflow health, the Aug. 28 reconciled fingerprint surface, canonical Aug. 27 predecessor chain, and later open research lanes. No source history, source registry freshness, primary research, tool maturity, case status, security authorization, or bespoke site HTML is advanced by this coordination update.
 
 ## Next handoff
 
