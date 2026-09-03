@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-01T19:38:54Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "96c4381ded1847acd891617d96827d89814404ae",
+  "purpose": "Preserve a bounded Sep. 1 afternoon source-health and opportunity-research pass from current main without advancing canonical source history while the Aug. 27 replay and later chronology remain pending.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 async hackathon and official prize page now shows 11 sponsor pools | displayed headline amounts are the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 and bazantic 5000 totaling 82000 dollars | bazantic increased from the 2000 amount preserved in the earlier sep 1 contribution | exact ethonline stake amount and participant acceptance status remain unverified",
+      "sha256": "79030f4019c3016f33dde8b02922dafbc779d43d2f974abb22560e3bdb57efec",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/rules"
+      ],
+      "note": "Material same-day change relative to PR #109: ETHGlobal's official ETHOnline prize page now displays Bazantic at $5,000 rather than the $2,000 amount preserved in the earlier Sep. 1 snapshot. The eleven displayed sponsor pools therefore total $82,000, not $79,000. The Graph still exposes the relevant Continuity AI Tooling / AI Use Case track. Exact ETHOnline stake amount and participant acceptance state remain unresolved, so no active case is created."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov xtech search 10 | official usa gov challenge page now lists start sep 10 2026 500 pm et and end oct 19 2026 500 pm et with 1000000 dollars cash prize and eligible us small businesses | army xtech primary page still says coming soon and separately displays aug 5 to sep 30 2026 while the army competitions index also labels it open | official surfaces remain contradictory so current application window is not treated as resolved",
+      "sha256": "6585ab73e7d646931d0ac70605032be91fcdc874e6de22cfd2b99939dfeadacd",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://xtech.army.mil/competitions/"
+      ],
+      "note": "Material source conflict changed again. USA.gov now gives Sep. 10, 2026 5:00 PM ET through Oct. 19, 2026 5:00 PM ET and a $1,000,000 cash prize for eligible U.S. small businesses. The Army's primary competition page still says Coming Soon and displays Aug. 5-Sep. 30, while the Army index labels the competition OPEN. Do not select a definitive deadline until the Army publishes a coherent RFI/application surface."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | immediate online window remains nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc followed by tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc | later september online qualifiers include defcamp sep 18 to sep 20 csaw sep 18 to sep 20 faust sep 26 and sunshinectf sep 26 to sep 28 | ctftime is discovery evidence and organizer rules remain required for prize registration and scope claims",
+      "sha256": "d3dd4dadea59e6938fc26b90e8becc5fdfc95f0e2e2cc8e325617a6449339c82",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming"
+      ],
+      "note": "No stronger new CTF earning claim was verified in this pass. NNS and TFC remain the immediate useful practice window; later September includes DefCamp, CSAW, FAUST and SunshineCTF. Preserve organizer-level rules before treating prizes, eligibility, registration, or authorization as verified."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | current listing still shows usual labs as largest at 16000000 usdc and alphix dec 2025 as most recent at 30000 usdc last updated aug 25 2026 | aave v4 2500000 usd cap 1000000 usdc midas 500000 usdc and puffer 100000 usdc remain listed | listings are discovery evidence only and do not authorize testing",
+      "sha256": "f4fa4c4944ad631bf704a0bea61a860fa4e08d491050cc5b4a0161fe71e94ff1",
+      "primary_followup_urls": [
+        "https://audits.sherlock.xyz/bug-bounties"
+      ],
+      "note": "No material bounty-listing change justified a new canonical feed item. Public listings remain discovery evidence only; exact scope, exclusions, prohibited techniques, severity rules and submission terms must be preserved before any testing."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline displayed sponsor prize total increases to $82,000",
+      "status": "high-value-near-term-opportunity-pending-participant-state",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal's official ETHOnline 2026 prize page now displays eleven sponsor pools totaling $82,000 in headline amounts because Bazantic is currently shown at $5,000 rather than the $2,000 amount preserved by the earlier Sep. 1 contribution. The Graph's $5,000 Continuity AI Tooling / AI Use Case track remains directly relevant to extending an existing open-source repository.",
+      "recommended_action": "When chronology reaches this snapshot, reopen the prize and event-rule surfaces, verify participant acceptance and exact stake requirements, then create a structured build case only if the intended participant is eligible and the selected sponsor track remains open under the final rules."
+    },
+    {
+      "title": "xTech|Search 10 official date conflict changes again",
+      "status": "official-source-conflict-unresolved",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "USA.gov now lists xTech|Search 10 from Sep. 10, 2026 at 5:00 PM ET through Oct. 19, 2026 at 5:00 PM ET with a $1,000,000 cash prize for eligible U.S. small businesses, while the Army's own competition page still says Coming Soon and shows Aug. 5-Sep. 30 and the Army competition index simultaneously labels it OPEN. The conflict is material and prevents a trustworthy current submission deadline from being asserted.",
+      "recommended_action": "Keep xTech|Search 10 watch-only until the Army publishes a coherent RFI/application surface. At integration time, preserve the authoritative RFI, exact submission path, eligibility, judging, award allocation, IP/data-rights, CAGE/NCAGE/export-control and cost requirements before considering structured active work."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 26. Process the reconciled Aug. 27 snapshot first, then Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, Aug. 30 morning/afternoon, PR #103 Aug. 31 morning, PR #106 Aug. 31 afternoon, PR #109 Sep. 1 morning, and only then this Sep. 1 afternoon snapshot in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
