@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T19:42:15Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5737c29da7a396758ac2174f541e031f521c9d7f",
+  "purpose": "Preserve a bounded Sep. 3 afternoon source-health pass from current main without overtaking the chronological Aug. 28+ canonical replay chain or colliding with coordination PR #124.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/new",
+      "observed": "arxiv cs.cr new listings september 3 2026 | 61 total entries with 35 new submissions | replacement arxiv 2608.27141 safety does not compose non-decaying loop state for autonomous llm agents is visible | paper argues trajectory scoped safety monitors can miss evidence fragmented across iterations and proposes persistent non-decaying loop safety state via loopharness | treat as preprint research claim pending reproduction and design review",
+      "sha256": "7bc90d1c6b856dcb9ace7b80940eeab04cfd233cab7a92e555a7cc38f04d5725",
+      "primary_followup_urls": [
+        "https://arxiv.org/list/cs.CR/new",
+        "https://arxiv.org/abs/2608.27141"
+      ],
+      "note": "Material research lead for this repository's recurring autonomous-agent model. The paper's cross-iteration safety argument is directly relevant to long-running automated agents, but it is preserved as a preprint claim only; independently review assumptions, evaluation artifacts and applicability before adopting any persistent safety-state design."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 prizes | official prize page still lists 11 sponsor pools totaling 79500 dollars with the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 bazantic 3000 chainlink 2500 | event remains september 4 to september 16 2026 and apply to attend | no material change from september 3 morning snapshot",
+      "sha256": "a53f6c23d1df113aa417f88417d317b88e128fd38680fd71f29e5346f6aac3a6",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Source-health refresh only. The official prize surface remains $79,500 total and ETHOnline remains Sep. 4-16 with Apply to Attend. Participant acceptance and the exact event-specific stake remain unresolved."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming and organizer followup | nns ctf 2026 remains scheduled september 4 1600 utc through september 6 1600 utc | event begins within one day of this check | prize claims remain discovery level unless final organizer rules are preserved | no target testing or authorization inference",
+      "sha256": "1ded3839debf48949205c829eaab297bb7e6f8e97ff739c956030896d0f79da9",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3097",
+        "https://nnsc.tf/"
+      ],
+      "note": "Near-term timing refresh only. NNS CTF begins Sep. 4 at 16:00 UTC; preserve final organizer rules before treating payout claims as verified."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://xtech.army.mil/competition/xtechsearch10/",
+      "observed": "army xtech search 10 official page and competition index | primary page still says competition details and application information will be available soon while showing august 5 to september 30 2026 phase dates up to 1000000 dollars cash prizes and up to 4800000 dollars sbir or sttr proposals | competition index simultaneously labels it open and apply now | official surfaces remain internally inconsistent and not actionable",
+      "sha256": "10b3d9af052dcf1e4a644cf938a47fd90fb18dc9e0fc49a56a10ee65764cae00",
+      "primary_followup_urls": [
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://xtech.army.mil/competitions/"
+      ],
+      "note": "No actionability promotion. Conflicting primary Army surfaces remain unresolved; require a coherent RFI/application package before assigning build work."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Cross-iteration agent safety paper is directly relevant to recurring automation",
+      "status": "research-lead",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "arXiv:2608.27141, Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents, argues that trajectory-scoped monitors can fail when decisive evidence is fragmented across unattended iterations and proposes a persistent non-decaying loop-level safety state. The Sep. 3 cs.CR surface exposes the paper as a replacement submission.",
+      "recommended_action": "Build/Integration or Repo Integrity should independently inspect the full paper, code/evaluation artifacts if available, threat assumptions, mediated-commit model and reproducibility. Compare the persistent-state concept against this repository's automation, authorization, provenance and handoff contracts before adopting any mechanism."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 27. The provenance-safe Aug. 28 morning reconciled snapshot is still the next canonical replay. Do not replay this Sep. 3 afternoon snapshot until Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, Aug. 30 morning/afternoon, Aug. 31 morning/afternoon, Sep. 1 morning/afternoon, Sep. 2 morning/afternoon, and Sep. 3 morning are independently reconciled in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
