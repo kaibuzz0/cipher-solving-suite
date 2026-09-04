@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-28T19:37:39Z",
+  "agent": "repo-integrity-pass",
+  "repository_base": "388e8a6d131e0215d643f8a22a3f4bb394bffdff",
+  "chronology_gate": "Derived reconciliation for the preserved Aug. 28 afternoon snapshot. Do not replay canonically until this correction is independently reviewed; Aug. 29 and later snapshots remain blocked behind this timestamp.",
+  "reconciliation": {
+    "reason": "Both SHA-256 values stored in the preserved Aug. 28 afternoon snapshot fail the canonical normalize_fingerprint(observed) contract. The original raw snapshot remains unchanged; this derived file preserves its exact observation strings and original hashes while supplying independently recomputed canonical fingerprints for later replay.",
+    "original_path": "intelligence/feeds/2026-08-28-afternoon-source-health.json",
+    "original_commit": "cc9176a943980bc48d02247887a5196702cc026e",
+    "preserved_via_pr": 82,
+    "merged_commit": "b14f45920b9557cb95142b8da64ad90f98f35c8b",
+    "original_hashes": {
+      "ctftime-upcoming": "78ef14e4f60d3e23981176686b6ca9d6b26cd23a222fdd1bf0773e4037613ae8",
+      "github-search": "7ea7f35a0c4f8f8d194af4c8004836769e3a8752193c2a3099180124fbd01c0e"
+    },
+    "method": "sha256(observed.strip().lower().encode('utf-8'))"
+  },
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime and the official COMPFEST CTF host were rechecked on 2026-08-28. CTFtime's COMPFEST event page says the event was extended from 24 to 48 hours because of collisions with ASIS CTF and BlackHat MEA qualifiers; the official COMPFEST CTF host currently gives August 29, 2026 00:00 UTC through August 31, 2026 00:00 UTC. The broader Aug. 29 competition cluster remains current.",
+      "sha256": "8ab1541b75153d193963da65855a7c07f99bf9a26bf701b45b1fbc754272a19b",
+      "evidence_urls": [
+        "https://ctftime.org/event/3290",
+        "https://mirror-ctf.compfest.id/"
+      ],
+      "note": "Current re-verification supports the observation's material point: CTFtime records the stated 24-to-48-hour extension because of ASIS/BlackHat MEA collisions, while the official COMPFEST mirror host gives Aug. 29 00:00 UTC through Aug. 31 00:00 UTC. Preserve the official-host timing as the stronger event-specific source."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "GitHub tool research on 2026-08-28 identified skyf0l/RsaCracker as a public, non-archived Rust RSA/CTF tool candidate. GitHub reports its latest push on 2026-08-24, its current main CI completed successfully, and its latest release is v0.9.1 from 2026-03-22; the README documents RSA key/cipher analysis, targeted and multi-key attacks, partial-prime wildcard recovery, and dual Apache-2.0/MIT licensing.",
+      "sha256": "db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b",
+      "evidence_urls": [
+        "https://github.com/skyf0l/RsaCracker",
+        "https://github.com/skyf0l/RsaCracker/releases/tag/v0.9.1",
+        "https://github.com/skyf0l/RsaCracker/actions"
+      ],
+      "note": "Current repository evidence supports RsaCracker as an RSA/CTF evaluation lead with broad key/cipher/attack support, partial-prime wildcard recovery, Cargo/Docker usage, rug/GMP dependency considerations, and dual Apache-2.0/MIT licensing. This does not independently reproduce historical CI/release timing claims or justify automatic adoption."
+    }
+  ],
+  "new_tool_lead": {
+    "repository": "skyf0l/RsaCracker",
+    "category": "github-tool-research",
+    "status": "evaluation-lead",
+    "confidence": "medium",
+    "relevance": "high",
+    "verified_facts": [
+      "The repository is public and exposes an RSA/CTF command-line tool.",
+      "The README documents RSA key/cipher analysis, targeted and multi-key attacks, partial-prime wildcard recovery, Cargo and Docker usage.",
+      "The README documents a rug/GMP dependency and an MSYS2 requirement for Windows builds.",
+      "The repository is dual licensed under Apache-2.0 and MIT."
+    ],
+    "recommended_action": "Before importing any code, compare attack coverage with existing RSA/number-theory tooling, inspect dependency and supply-chain footprint, choose small deterministic authorized CTF fixtures, verify reproducible direct CLI behavior, and decide whether wrapping an external binary is preferable to vendoring source."
+  },
+  "safety": "Research covered public CTF and open-source tool information only. No public security target or bounty listing was treated as authorization and no target testing was performed."
+}
