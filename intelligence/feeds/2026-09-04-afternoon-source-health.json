@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-04T19:38:30Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "8992891ad511a508509161e4fa976f37030be6d8",
+  "purpose": "Preserve a bounded Sep. 4 afternoon current-source research pass from current main without overtaking the chronological Aug. 29 and later canonical replay chain.",
+  "observations": [
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/yuzu-octopus/ctf-skills",
+      "observed": "github search | sep 4 2026 afternoon | yuzu-octopus/ctf-skills public non-archived repository | enhanced fork of ljagiello/ctf-skills | mit license claimed in readme | agent skills for ctf crypto pwn web reverse forensics osint and more | pure-python crypto default with fpylll sympy gmpy2 py_ecc | readme claims 95 automated tests and 364 code-fence verification | latest visible commit 7cac000 on 2026-09-04 07:25:11z lowering requires-python to >=3.10 | evaluation lead only until independent test and supply-chain review",
+      "sha256": "cf0706f4ed779a32bd9ebc4aefaab9e9cfc2f55132d02c126590f4a9557dad9d",
+      "primary_followup_urls": [
+        "https://github.com/yuzu-octopus/ctf-skills",
+        "https://github.com/yuzu-octopus/ctf-skills/blob/main/LICENSE",
+        "https://github.com/yuzu-octopus/ctf-skills/blob/main/pyproject.toml"
+      ],
+      "note": "New repository-relevant evaluation lead. The repository is public/non-archived, has a root MIT license, requires Python >=3.10, and was updated on Sep. 4. Its README describes a broad Agent Skills pack for CTF work and claims 95 tests plus 364 code-fence checks. Those quality/capability claims were not independently reproduced in this pass. Do not import or execute offensive templates against real systems; evaluate only on local/authorized fixtures and inspect installer/network behavior first."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/3097/",
+      "observed": "ctftime upcoming | sep 4 2026 afternoon | nns ctf 2026 is in its scheduled live window sep 4 1600 utc to sep 6 1600 utc | online jeopardy | categories include crypto blockchain web misc rev pwn and more | ctftime lists global prizes 1024 eur 512 eur 256 eur and norway student prizes 2048 nok 1024 nok 512 nok | prizes were stated subject to change prior to event start | official url nnsc.tf",
+      "sha256": "98aa3593fd6082617f85ea4027a4a27b1ea36e79a78cd9b6daa40acf6e3653b8",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3097/",
+        "https://nnsc.tf/"
+      ],
+      "note": "NNS CTF has crossed from upcoming into its scheduled live event window. CTFtime lists global and Norwegian-student prizes, but the event page states terms apply; preserve organizer terms before treating payout as fully verified. Participation in a CTF does not authorize testing anything outside the event infrastructure and rules."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/info/details",
+      "observed": "ethglobal ethonline 2026 | sep 4 2026 afternoon current official event pages | event listed sep 4 to sep 16 2026 async hackathon and apply to attend remains visible | submission deadline sep 13 2026 1200 pm edt | continuity tracks permit existing codebase with documented pre-existing work and new event-period functionality | ai tools generally permitted with attribution and meaningful team contribution | official prize page remains 11 sponsor pools totaling displayed headline 80000",
+      "sha256": "550a7d402b9cdf2dea2147d6e0efd4897324c3c594435580f5124dd4c9988f9d",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/info/details",
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "ETHOnline is now in its scheduled Sep. 4-16 event window. The official submission page still gives Sep. 13 at 12:00 PM EDT, documents Continuity-track provenance requirements and AI attribution rules, and the official prize page remains at the Sep. 4 morning $80,000 displayed headline total. Participant acceptance and the exact event-specific stake remain unresolved, so no active case is created."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "NNS CTF 2026 enters its live competition window",
+      "category": "ctf",
+      "status": "live-window-confirmed",
+      "source_name": "CTFtime / NNS CTF",
+      "official_source": "https://nnsc.tf/",
+      "discovery_source": "https://ctftime.org/event/3097/",
+      "verified_facts": [
+        "CTFtime lists NNS CTF 2026 from September 4, 2026 at 16:00 UTC through September 6, 2026 at 16:00 UTC.",
+        "The event is online and Jeopardy-style, with crypto and blockchain among the listed categories.",
+        "CTFtime lists global prizes of EUR 1,024 / 512 / 256 and separate Norwegian-student prizes of NOK 2,048 / 1,024 / 512."
+      ],
+      "confidence": "medium",
+      "relevance": "high",
+      "missing_verification": [
+        "Preserve current organizer terms/conditions and any final prize or eligibility changes now that the event has started.",
+        "Use only event-provided infrastructure and rules for any hands-on challenge work."
+      ],
+      "recommended_action": "Treat NNS CTF as the immediate legitimate practice/competition lane. If the build/case agent participates, create or link a structured authorized CTF case and preserve the event rules before any target interaction."
+    }
+  ],
+  "new_lead": {
+    "title": "yuzu-octopus/ctf-skills: Agent Skills pack for CTF workflows",
+    "category": "github-tooling",
+    "status": "evaluation-lead",
+    "source_name": "GitHub",
+    "official_source": "https://github.com/yuzu-octopus/ctf-skills",
+    "verified_facts": [
+      "The repository is public and non-archived.",
+      "A root LICENSE file contains the MIT License text.",
+      "pyproject.toml currently requires Python >=3.10 and configures pytest to use the tests directory.",
+      "The README describes Agent Skills covering CTF cryptography, pwn, web, reverse engineering, forensics, malware, AI/ML, OSINT and challenge routing.",
+      "The latest visible commit in this pass is 7cac000ab2e822e5b30663d1462f94bc57197c8b from September 4, 2026, lowering the Python requirement to >=3.10."
+    ],
+    "contributor_claims_not_independently_reproduced": [
+      "95 automated tests pass.",
+      "364 fenced code examples are verified.",
+      "The pure-Python crypto material and individual attack templates behave correctly across the claimed challenge classes."
+    ],
+    "confidence": "medium",
+    "relevance": "high",
+    "safety_boundary": "Evaluate only on local deterministic fixtures or explicitly authorized CTF infrastructure. Review installers, external clones/downloads, shell execution, network behavior and any offensive templates before importing anything into the suite.",
+    "missing_verification": [
+      "Run the upstream test suite and code-fence verifier in an isolated local fixture environment.",
+      "Review scripts/install_ctf_tools.sh for package-install, shell, network and supply-chain behavior before execution.",
+      "Compare ctf-crypto content against existing suite solvers/toolsets to avoid duplicate capability and narrative-only integration.",
+      "Check provenance and compatibility of the forked content with the stated upstream and license notices."
+    ],
+    "recommended_action": "Build/Integration should evaluate only the crypto/triage components first, on deterministic local fixtures. Import nothing until tests, installer behavior, provenance, overlap and tool-registration fit are independently verified."
+  },
+  "chronology": "Canonical source history is through Aug. 28 afternoon. PR #134 has verified Aug. 29 morning replay readiness but has not replayed it. Process Aug. 29 morning canonically first, then Aug. 29 afternoon, Aug. 30 morning/afternoon, PR #103/#106 Aug. 31, PR #109/#112 Sep. 1, PR #116/#120 Sep. 2, PR #123/#125 Sep. 3, PR #131 Sep. 4 morning, then this Sep. 4 afternoon snapshot in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, paper, or news item was treated as authorization for security testing."
+}
