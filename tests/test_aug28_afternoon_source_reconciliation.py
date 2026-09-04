@@ -39,6 +39,10 @@ def _temp_canonical_files(tmp_path: Path) -> tuple[Path, Path]:
     return history, registry
 
 
+def _replayed_source_ids(result: dict) -> set[str]:
+    return {item["source_id"] for item in result["replayed"]}
+
+
 def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_predecessors(tmp_path):
     original = json.loads(ORIGINAL.read_text(encoding="utf-8"))
     reconciled = json.loads(RECONCILED.read_text(encoding="utf-8"))
@@ -80,7 +84,7 @@ def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_predecessor
     )
 
     assert result["validated_observations"] == 2
-    assert set(result["replayed"]) == set(EXPECTED)
+    assert _replayed_source_ids(result) == set(EXPECTED)
     assert result["skipped_idempotent"] == []
     assert result["wrote_files"] is False
     assert history_path.read_bytes() == before_history
@@ -113,7 +117,7 @@ def test_aug28_afternoon_reconciled_direct_script_dry_run(tmp_path):
     assert completed.returncode == 0, completed.stderr
     result = json.loads(completed.stdout)
     assert result["validated_observations"] == 2
-    assert set(result["replayed"]) == set(EXPECTED)
+    assert _replayed_source_ids(result) == set(EXPECTED)
     assert result["skipped_idempotent"] == []
     assert result["wrote_files"] is False
     assert history_path.read_bytes() == before_history
