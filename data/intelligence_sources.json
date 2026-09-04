@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-28T07:40:27Z",
+  "updated_at": "2026-08-28T19:37:39Z",
   "sources": [
     {
       "id": "ethglobal-events",
@@ -24,7 +24,7 @@
       "categories": ["ctf", "opportunity"],
       "tier": "discovery",
       "freshness_hours": 12,
-      "last_checked_at": "2026-08-28T07:40:27Z",
+      "last_checked_at": "2026-08-28T19:37:39Z",
       "assigned_agent": "ctf-scout",
       "enabled": true,
       "publish_default_confidence": "medium",
@@ -38,7 +38,7 @@
       "categories": ["github", "tool", "research"],
       "tier": "discovery",
       "freshness_hours": 24,
-      "last_checked_at": "2026-08-17T19:39:42Z",
+      "last_checked_at": "2026-08-28T19:37:39Z",
       "assigned_agent": "github-scout",
       "enabled": true,
       "publish_default_confidence": "medium",
