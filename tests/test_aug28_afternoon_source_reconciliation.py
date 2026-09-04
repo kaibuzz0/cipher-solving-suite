@@ -39,14 +39,11 @@ def _temp_canonical_files(tmp_path: Path) -> tuple[Path, Path]:
     return history, registry
 
 
-def _replayed_source_ids(result: dict) -> set[str]:
-    return {item["source_id"] for item in result["replayed"]}
-
-
-def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_predecessors(tmp_path):
+def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_canonical_replay():
     original = json.loads(ORIGINAL.read_text(encoding="utf-8"))
     reconciled = json.loads(RECONCILED.read_text(encoding="utf-8"))
     history = json.loads(HISTORY.read_text(encoding="utf-8"))
+    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
 
     assert original["checked_at"] == reconciled["checked_at"] == STAMP
     assert reconciled["reconciliation"]["original_commit"] == "cc9176a943980bc48d02247887a5196702cc026e"
@@ -54,6 +51,7 @@ def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_predecessor
 
     original_by_id = {item["source_id"]: item for item in original["observations"]}
     reconciled_by_id = {item["source_id"]: item for item in reconciled["observations"]}
+    registry_by_id = {item["id"]: item for item in registry["sources"]}
     assert set(original_by_id) == set(reconciled_by_id) == set(EXPECTED)
 
     for source_id, (bad_hash, corrected_hash, predecessor) in EXPECTED.items():
@@ -66,13 +64,22 @@ def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_predecessor
         assert actual == corrected_hash
         assert corrected_item["sha256"] == corrected_hash
 
-        latest = next(item for item in history["checks"] if item["source_id"] == source_id)
-        assert latest["content_fingerprint"] == predecessor
-        assert not any(
-            item["source_id"] == source_id and item["checked_at"] == STAMP
+        canonical = [
+            item
             for item in history["checks"]
-        )
+            if item["source_id"] == source_id and item["checked_at"] == STAMP
+        ]
+        assert len(canonical) == 1
+        assert canonical[0]["content_fingerprint"] == corrected_hash
+        assert canonical[0]["previous_fingerprint"] == predecessor
+        assert canonical[0]["change_state"] == "changed"
+        assert registry_by_id[source_id]["last_checked_at"] == STAMP
 
+    assert history["updated_at"] == STAMP
+    assert registry["updated_at"] == STAMP
+
+
+def test_aug28_afternoon_reconciled_replay_is_idempotent(tmp_path):
     history_path, registry_path = _temp_canonical_files(tmp_path)
     before_history = history_path.read_bytes()
     before_registry = registry_path.read_bytes()
@@ -84,14 +91,14 @@ def test_aug28_afternoon_reconciliation_preserves_raw_provenance_and_predecessor
     )
 
     assert result["validated_observations"] == 2
-    assert _replayed_source_ids(result) == set(EXPECTED)
-    assert result["skipped_idempotent"] == []
+    assert result["replayed"] == []
+    assert set(result["skipped_idempotent"]) == set(EXPECTED)
     assert result["wrote_files"] is False
     assert history_path.read_bytes() == before_history
     assert registry_path.read_bytes() == before_registry
 
 
-def test_aug28_afternoon_reconciled_direct_script_dry_run(tmp_path):
+def test_aug28_afternoon_reconciled_direct_script_dry_run_is_idempotent(tmp_path):
     history_path, registry_path = _temp_canonical_files(tmp_path)
     before_history = history_path.read_bytes()
     before_registry = registry_path.read_bytes()
@@ -117,8 +124,8 @@ def test_aug28_afternoon_reconciled_direct_script_dry_run(tmp_path):
     assert completed.returncode == 0, completed.stderr
     result = json.loads(completed.stdout)
     assert result["validated_observations"] == 2
-    assert _replayed_source_ids(result) == set(EXPECTED)
-    assert result["skipped_idempotent"] == []
+    assert result["replayed"] == []
+    assert set(result["skipped_idempotent"]) == set(EXPECTED)
     assert result["wrote_files"] is False
     assert history_path.read_bytes() == before_history
     assert registry_path.read_bytes() == before_registry
