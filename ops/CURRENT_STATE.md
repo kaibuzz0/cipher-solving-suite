@@ -1,34 +1,37 @@
 # Current Repository State
 
-Last reconciled: 2026-09-04 08:00 UTC
+Last reconciled: 2026-09-04 14:17 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `d581d4d11fac14ead7444481650f270344b74717`, the merge of PR #132 (`Build: replay reconciled Aug 28 afternoon source health`).
-- PR #132 final head `5c4b6d99e0f6a0ec698694fb5d08af18d4cb8760` passed Core validation `33850817356`, Intelligence Source Report `33850817358`, and Daily Repository Maintenance `33850817510` before merge.
-- Exact-merge Core validation `33850953467` and Deploy operations dashboard `33850953537` both succeeded on `d581d4d11fac14ead7444481650f270344b74717`. The Core matrix passed Python 3.11, 3.12, and 3.13; the Python 3.12 job completed tests, compilation, source-registry/history/report validation, intelligence validation, artifact inventory, both 310 verification stages, site-data generation, maintenance, and the final validation gate.
+- Current `main` is `8992891ad511a508509161e4fa976f37030be6d8`, the merge of PR #134 (`Build: verify Aug 29 morning source replay readiness`).
+- PR #134 final head `6b98c06e5a116728d3cec29fef7625c5787f7b0b` passed Core validation `33851613891` across the Python matrix and Daily Repository Maintenance `33851613886` before merge.
+- On the exact merge commit `8992891ad511a508509161e4fa976f37030be6d8`, scheduled Daily Repository Maintenance `33878566616` and Intelligence Source Report `33884266301` both completed successfully.
 - No open repository issue currently blocks the chronological source-replay lane.
-- A direct public Pages render was not independently fetched in this pass; release-health claims are limited to the observed successful deployment workflow plus successful site-data generation in Core.
+- A fresh exact-merge Core or Pages deployment run was not observed in this pass; do not infer those checks from the successful scheduled Maintenance/Source Report runs.
 
 ## Build / integration state
 
-- Canonical source history now extends through Aug. 28 afternoon at `2026-08-28T19:37:39Z`.
-- PR #132 canonically added exactly two provenance-safe records from `intelligence/feeds/2026-08-28-afternoon-source-health-reconciled.json`:
-  - `ctftime-upcoming`: `8ab1541b75153d193963da65855a7c07f99bf9a26bf701b45b1fbc754272a19b`, predecessor `ab0660900275cf3767cd9b2f49f4bd08c2c0e2f68fa6f074ae1f2f55e66b380f`.
-  - `github-search`: `db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b`, predecessor `993f3601dafc2f452f9267c79a861f1e4de5e33e0065e7be100191cdd95dcca9`.
-- Only the matching `ctftime-upcoming` and `github-search` registry timestamps advanced; the regression now requires exact provenance preservation plus canonical uniqueness/idempotence.
-- The original invalid-hash Aug. 28 afternoon raw snapshot remains preserved unchanged. `RsaCracker` remains an evaluation lead and was not registered or promoted as a repository capability.
-- The next chronological raw evidence on `main` is `intelligence/feeds/2026-08-29-source-health.json`, followed by `2026-08-29-afternoon-source-health.json`, then Aug. 30 morning/afternoon. These must be independently verified against the new Aug. 28 afternoon canonical predecessors before any replay.
+- Canonical source history remains through Aug. 28 afternoon at `2026-08-28T19:37:39Z`.
+- PR #134 did not mutate canonical source history, registry freshness, raw evidence, opportunity/intelligence state, cases, tools, toolsets, or website HTML. It added `tests/test_aug29_source_readiness.py` only.
+- The Aug. 29 morning raw snapshot `intelligence/feeds/2026-08-29-source-health.json` is now independently replay-ready under the canonical normalization contract. All five stored hashes recompute exactly and all five latest canonical predecessors are locked by regression coverage.
+- Verified Aug. 29 fingerprints:
+  - `challenge-gov`: `9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045`
+  - `ctftime-upcoming`: `33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce`
+  - `sherlock-bounties`: `6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f`
+  - `arxiv-cryptography`: `246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3`
+  - `ethglobal-events`: `5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c`
+- The readiness regression allows either the current pre-replay state or exactly one correct canonical/idempotent Aug. 29 replay state; duplicate or mismatched records fail.
+- The next build action is a separate bounded Aug. 29 morning canonical replay: exactly five `2026-08-29T07:38:35Z` history records and only the five matching registry `last_checked_at` advances.
 
 ## Current research / intelligence state
 
-- Later research remains contributed/noncanonical evidence until chronology reaches it. Open research lanes include PR #103/#106 (Aug. 31), PR #109/#112 (Sep. 1), PR #116/#120 (Sep. 2), PR #123/#125 (Sep. 3), and PR #131 (Sep. 4).
-- PR #131 was opened from the pre-#132 current main and contains only a Sep. 4 raw research contribution. Its ETHOnline/prize and hook-supply-chain observations are not canonical truth and must be reconciled at their chronology point after Aug. 29-Aug. 30 and the later open research lanes.
-- Careers in Your Community remains specialized school/team opportunity intelligence, not generic individual work.
-- xTech|Search 10 remains non-actionable until authoritative Army/RFI/application evidence resolves conflicting official date/state surfaces.
+- Later research remains contributed/noncanonical evidence until chronology reaches it. Open research lanes remain PR #103/#106 (Aug. 31), PR #109/#112 (Sep. 1), PR #116/#120 (Sep. 2), PR #123/#125 (Sep. 3), and PR #131 (Sep. 4).
+- `intelligence/feeds/2026-08-29-afternoon-source-health.json`, Aug. 30 morning/afternoon raw evidence, and the later open research PRs must remain blocked until Aug. 29 morning is canonically replayed and verified.
 - Public bounty/program listings remain discovery evidence only and are not authorization to test any target.
+- xTech|Search 10 remains non-actionable until authoritative Army/RFI/application evidence resolves the conflicting official date/state surfaces.
 
 ## 310 case / tool state
 
@@ -40,36 +43,35 @@ Repository version: `v3.1.0` (README)
 ## Toolset / UI state
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental` maturity.
-- Canonical tools, toolsets, cases, source health, repository data, and Agent Operations continue to flow through registries/manifests/site-data builders rather than bespoke HTML.
-- Core validation confirms dashboard/site-data generation continues to succeed on the exact merge commit.
+- Canonical tools, toolsets, cases, source health, repository data, and Agent Operations are expected to flow through registries/manifests/site-data builders rather than bespoke HTML.
+- No user-facing canonical data changed in PR #134, so no site-data content delta was introduced by that merge.
 
 ## Security / maintenance state
 
-- Bounded default-branch searches found no indexed `shell=True` or `os.system(` use. Known `subprocess.run` use in regression coverage uses a fixed argument vector with no shell invocation; this is a targeted check, not a complete security audit.
-- The latest verified artifact inventory remains 40 items, 10 duplicate groups, 11 orphaned items, 12 generated outputs, 7 items needing case links, 1 protected primary-evidence item, and 0 unknown-provenance items.
-- Known root-generated 310 artifacts remain warnings and were left untouched.
-- Workflow dependencies remain bounded but not fully immutable: Actions workflows use major tags such as `actions/checkout@v4`, `actions/setup-python@v5`, and `actions/upload-artifact@v4`, while Python test dependencies use bounded version ranges. Immutable action pinning/runtime migration and lockfile strategy remain supply-chain hardening debt, not a release blocker for the verified replay.
+- The repository maintenance contract remains non-destructive: preserve evidence, report suspicious secret-like files, compile Python entry points, and inventory generated/root artifacts rather than deleting them automatically.
+- Previous bounded default-branch searches found no indexed `shell=True` or `os.system(` usage; this remains a targeted check, not a complete security audit.
+- Workflow dependencies continue to use major-version action tags rather than immutable commit pins; action pinning/runtime migration and dependency lock strategy remain supply-chain hardening debt, not a release blocker for the current replay lane.
 - No primary research artifact was deleted, moved, or rewritten in this pass.
 
 ## Known state / debt
 
-- `docs/WORK_QUEUE.md` and `data/integration_queue.json` still describe Aug. 28 afternoon as the next replay/integration step and must be reconciled to mark PR #132 integrated and make Aug. 29 morning the next chronological verification gate.
-- `data/integration_queue.json` should also gain a traceable Sep. 4 contributed-research record for PR #131 without rewriting older queue history.
-- `docs/AGENT_HANDOFF.md` is append-only and materially behind current state. The available connector performs whole-file replacement rather than atomic append; do not reconstruct or truncate the 51 KB journal from partial output. Preserve the exact intended handoff in the coordination PR until a byte-preserving append can be performed safely.
-- Later raw research must be reconciled only when chronology reaches it. External 310 provenance, root-artifact relocation, immutable Actions/dependency hardening, and direct public Pages render verification remain separate debt.
+- `docs/WORK_QUEUE.md` still describes the already-completed Aug. 28 afternoon replay as the next P2 step. It must be reconciled to make Aug. 29 morning canonical replay the active source-health task.
+- `data/integration_queue.json` is also behind current chronology and should mark the Aug. 28 afternoon lane integrated, record PR #134 replay-readiness verification, and preserve later contributed-research items without replacing historical queue entries.
+- `docs/AGENT_HANDOFF.md` remains append-only and materially behind current state. The available connector performs whole-file replacement rather than atomic append; do not reconstruct or truncate the journal from partial reads. Preserve the exact handoff in the coordination PR description until a byte-preserving append can be performed safely.
+- Direct public Pages render verification and exact-merge Core/Pages checks remain separate release-health debt for this commit.
 
 ## Current operating priorities
 
-1. Reconcile `docs/WORK_QUEUE.md` and `data/integration_queue.json` so Aug. 28 afternoon is marked integrated and Aug. 29 morning is the next source-health gate; add PR #131 as later contributed research.
-2. Independently verify `intelligence/feeds/2026-08-29-source-health.json` from current `main`: recompute every protected fingerprint, compare each source with the exact latest canonical predecessor after PR #132, and preserve the raw snapshot unchanged.
-3. If any Aug. 29 stored hash is invalid, create a separate provenance-preserving reconciliation rather than rewriting primary evidence. If hashes/predecessors are valid, stage only evidence-backed canonical replay records and matching registry timestamps.
-4. Rerun source-history, registry, collection report, intelligence, site-data/Agent Operations, Core, Intelligence Source Report, and Daily Maintenance validation before merge.
-5. Continue Aug. 29 afternoon -> Aug. 30 morning -> Aug. 30 afternoon -> Aug. 31 -> Sep. 1 -> Sep. 2 -> Sep. 3 -> Sep. 4 strictly in timestamp/source-overlap order.
+1. Merge the bounded post-PR134 coordination reconciliation only after its exact-head CI is green.
+2. Stage a separate Aug. 29 morning canonical replay using the verified raw snapshot, writing exactly five `2026-08-29T07:38:35Z` history records with the exact predecessor links locked by `tests/test_aug29_source_readiness.py`.
+3. Advance only the five corresponding source-registry timestamps; preserve all raw research evidence unchanged.
+4. Run source-history, source-registry, collection-report, intelligence, site-data/Agent Operations, Core, Intelligence Source Report, and Daily Maintenance validation on the replay head.
+5. Only after the replay is independently verified may Aug. 29 afternoon advance, followed by Aug. 30 morning/afternoon and then the later research PRs in timestamp/source-overlap order.
 
 ## Coordination note
 
-This pass started from actual `main` `578af9ad05391c94dac0c2959d8c2f30438377ce`, independently revalidated the Aug. 28 afternoon provenance-safe snapshot, staged exactly two canonical records and matching registry timestamps on PR #132, and changed the reconciliation regression to require canonical idempotence. PR #132's exact head passed Core, Source Report, and Daily Maintenance, `main` had not moved, and the PR was merged without stale-state reconciliation. Exact-merge Core and dashboard deployment then passed. No raw evidence, opportunity/case status, security authorization, tool maturity, or bespoke site HTML was changed.
+This integrity pass started from actual `main` `8992891ad511a508509161e4fa976f37030be6d8`, read the governing operating documents, current coordination surfaces, current Aug. 29 raw snapshot, recent commits, open PRs/issues, and current workflow state. PR #134 had already independently locked the five Aug. 29 hashes and predecessors without replaying them. The repository had no open issues, while `ops/CURRENT_STATE.md` and the shared work/integration queues lagged the merge. This reconciliation changes coordination truth only; it does not promote any solve, payout, opportunity, security finding, capability, tool maturity, or release/readiness claim beyond observed evidence.
 
 ## Next handoff
 
-Repo Integrity / Build Integration should first reconcile the remaining queue surfaces, then inspect `intelligence/feeds/2026-08-29-source-health.json` against canonical Aug. 28 afternoon truth. Do not advance Aug. 29 until all observation fingerprints and predecessor links are independently verified; preserve later PRs as contributed evidence until their chronology point.
+Repo Integrity / Build Integration should merge this coordination update only after fresh exact-head validation, then perform the separate bounded Aug. 29 morning canonical replay. Do not advance Aug. 29 afternoon or any later contributed research until the five-record morning replay and matching registry timestamps are independently verified green.
