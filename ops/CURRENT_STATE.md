@@ -1,16 +1,16 @@
 # Current Repository State
 
-Last reconciled: 2026-09-05 19:17 UTC
+Last reconciled: 2026-09-06 07:22 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `a867e6a77ffa3e5bb127804e84313ff97d9d9ad8`, the merge of PR #137 (`Ops: reconcile state after PR #135 merge`).
-- Scheduled Daily Repository Maintenance run `33966788448` completed successfully on exact current `main`.
-- Scheduled Intelligence Source Report run `33969159699` completed successfully on exact current `main`.
-- No open repository issues currently block the chronological source-replay lane.
-- A fresh exact-merge Core/Pages run for `a867e6a7...` was not observed in this pass, so release-health claims are limited to the successful scheduled validation above and the already-reviewed PR #137 lineage.
+- Current `main` is `3568d061b8f0cd34c796f2f276fdd0cda8f1a00e`, the merge of PR #138 (`Ops: reconcile state after PR #137 merge`).
+- Exact-merge Core validation run `33988712288` completed successfully on `3568d061b8f0cd34c796f2f276fdd0cda8f1a00e`.
+- Exact-merge Deploy operations dashboard run `33988712403` completed successfully on the same commit.
+- No open repository issue currently blocks the chronological source-replay lane.
+- Release-health claims in this snapshot are limited to observed GitHub Actions and repository-side validation; a fresh independent browser render was not established in this pass.
 
 ## Build / integration state
 
@@ -28,8 +28,8 @@ Repository version: `v3.1.0` (README)
 ## Current research / intelligence state
 
 - Later research remains contributed/noncanonical evidence until chronology reaches it.
-- Open research lanes remain PR #103/#106 (Aug. 31), PR #109/#112 (Sep. 1), PR #116/#120 (Sep. 2), PR #123/#125 (Sep. 3), and PR #131/#136 (Sep. 4).
-- PR #136 remains a one-file Sep. 4 afternoon research contribution from an older base. Its CTF-skills, NNS CTF, ETHOnline, event-status and prize claims are not canonical repository truth and require independent verification when chronology reaches that snapshot.
+- Open research lanes remain PR #103/#106 (Aug. 31), PR #109/#112 (Sep. 1), PR #116/#120 (Sep. 2), PR #123/#125 (Sep. 3), PR #131/#136 (Sep. 4), and PR #139 (Sep. 5).
+- PR #139 is a one-file Sep. 5 research contribution at head `87dbeb3aee68b45cd9b31c4ef11c2cc2075d5cf3`. It was opened from pre-PR138 main `a867e6a77ffa3e5bb127804e84313ff97d9d9ad8`; GitHub currently reports it mergeable, but its arXiv authorization-memory benchmark claims, TFC CTF status/qualification claims, and ETHOnline prize/actionability claims remain contributed evidence and require independent verification when chronology reaches Sep. 5.
 - Aug. 29 afternoon, Aug. 30 morning/afternoon, and all later research remain blocked until Aug. 29 morning is canonically replayed and verified.
 - Public bounty/program/event listings remain discovery evidence only and are not authorization to test any target.
 - xTech|Search 10 remains non-actionable until authoritative Army/RFI/application evidence resolves conflicting official date/state surfaces.
@@ -45,7 +45,7 @@ Repository version: `v3.1.0` (README)
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental` maturity.
 - Canonical tools, toolsets, cases, source health, repository data, relationship views, and Agent Operations are expected to flow through registries/manifests/site-data builders rather than bespoke HTML.
-- No user-facing canonical source data changed in PR #137, so no source/content freshness advance was introduced by that merge.
+- No user-facing canonical source data changed in PR #138, so no source/content freshness advance was introduced by that merge.
 
 ## Security / maintenance state
 
@@ -57,9 +57,9 @@ Repository version: `v3.1.0` (README)
 ## Known state / debt
 
 - `docs/WORK_QUEUE.md` remains behind current chronology: its P2 source-health row still describes the already-completed Aug. 28 afternoon replay instead of the verified Aug. 29 morning replay.
-- `data/integration_queue.json` is also behind current chronology: the Aug. 28 item still says `needs-integration`, Aug. 29 remains blocked without the PR #134 readiness evidence, and Sep. 4 research PRs are not represented. Preserve prior queue history when reconciling it.
-- `docs/AGENT_HANDOFF.md` remains append-only and its stored latest integrity entry is materially behind current repository state. The current connector exposes whole-file replacement rather than atomic append; do not risk truncating historical entries. This pass records the full handoff in its PR description until a byte-preserving append path is available.
-- Exact current-main public Pages render verification was not independently observed in this pass.
+- `data/integration_queue.json` is also behind current chronology: the Aug. 28 item still says `needs-integration`, Aug. 29 remains blocked without the PR #134 readiness evidence, and Sep. 4/Sep. 5 research lanes are not fully represented. Preserve prior queue history when reconciling it.
+- `docs/AGENT_HANDOFF.md` remains append-only and its stored latest integrity entry is materially behind current repository state. The connected contents writer performs whole-file replacement rather than atomic append; do not risk truncating historical entries. This pass records the complete handoff in its PR description until a byte-preserving append path is available.
+- A fresh independent public Pages browser render was not established in this pass; exact-merge Pages workflow success is verified.
 
 ## Current operating priorities
 
@@ -72,7 +72,7 @@ Repository version: `v3.1.0` (README)
 
 ## Coordination note
 
-This integrity pass started from actual `main` `a867e6a77ffa3e5bb127804e84313ff97d9d9ad8`, re-read the governing operating documents and coordination surfaces, inspected recent commits, open PRs/issues, current-main Actions, the toolset catalog, and current research chronology. PR #137 had merged but `ops/CURRENT_STATE.md` still described pre-merge `e3071cdb...` and framed #137 as pending. Current-main scheduled Maintenance and Intelligence Source Report are green. The open Sep. 4 and earlier research PRs remain contributed evidence and were not promoted. This reconciliation changes coordination truth only; it does not promote any solve, payout, opportunity, security finding, capability, tool maturity, source freshness, or authorization claim.
+This integrity pass started from actual `main` `3568d061b8f0cd34c796f2f276fdd0cda8f1a00e`, re-read README/governance/automation/maintenance/current-state/work-queue/integration-queue surfaces, inspected the stored handoff tail, open PRs, exact-main Actions, and the toolset catalog. PR #138 had merged but `ops/CURRENT_STATE.md` still described pre-merge `a867e6a7...`. Exact-main Core and Pages are green. PR #139 is newer contributed research from the pre-PR138 base and was not promoted. This reconciliation changes coordination truth only; it does not promote any solve, payout, opportunity, security finding, capability, tool maturity, source freshness, or authorization claim.
 
 ## Next handoff
 
