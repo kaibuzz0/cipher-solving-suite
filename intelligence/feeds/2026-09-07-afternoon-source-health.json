@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-07T19:40:32Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "045bd6241c088f387c9a88ad348c382bb1ba0bbe",
+  "purpose": "Preserve a bounded Sep. 7 afternoon GitHub/source-health finding from exact current main without overtaking the chronological Aug. 29+ canonical replay chain or colliding with coordination PR #145.",
+  "observations": [
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/nvtruongops/CTF-Agent",
+      "observed": "github search | sep 7 2026 afternoon bounded ctf-agent sweep | nvtruongops ctf-agent is public non-archived and latest visible commit 620331208f3e4a92c76400ece39deec2a277838e is dated sep 7 2026 | readme advertises v1.3.4 python 3.10 plus docker and wsl deployment with ctf crypto web pwn reverse forensics ai ml and osint skills | readme claims mit licensing but the linked root license path returned not found during independent repository check | readme scope guard broadly allowlists platform domains including hackthebox tryhackme ctfd and picoctf rather than requiring per-target preserved authorization | readme also includes prompt policy sanitizer language intended to reduce model safety refusals | treat as evaluation-only until license provenance scope enforcement sanitizer behavior install scripts dependencies package publishing and deterministic tests are independently reviewed",
+      "sha256": "c773a1c34ed20b68abe997dc9e4cdff4b39bf858e9f14cd86de53ee4154f3f75",
+      "primary_followup_urls": [
+        "https://github.com/nvtruongops/CTF-Agent",
+        "https://github.com/nvtruongops/CTF-Agent/commits/main"
+      ],
+      "note": "Material evaluation lead with explicit blockers. The repository is actively maintained and structurally relevant, but its advertised MIT license could not be verified at the linked root LICENSE path during this pass. Its scope guard appears to allow broad platform-domain classes rather than requiring exact target-specific authorization evidence, which is weaker than this repository's authorization contract. Its prompt-policy sanitizer is also designed to reduce model safety refusals, so integration must verify that it does not weaken policy or scope enforcement. Do not import, execute against real targets, or register as a suite tool until these points are independently resolved."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "Actively maintained CTF-Agent framework is relevant but fails current integration gates",
+      "category": "github",
+      "status": "evaluation-lead-blocked",
+      "source_name": "nvtruongops/CTF-Agent",
+      "official_source": "https://github.com/nvtruongops/CTF-Agent",
+      "verified_facts": [
+        "The repository is public and non-archived.",
+        "The latest visible commit during this pass is 620331208f3e4a92c76400ece39deec2a277838e from September 7, 2026.",
+        "The README advertises v1.3.4, Python 3.10+, Docker/WSL deployment, specialized CTF skills, an orchestration model, a prompt-policy sanitizer, and a machine-enforced scope guard.",
+        "The README displays an MIT license badge and links to a root LICENSE path, but an independent fetch of that path returned Not Found during this pass.",
+        "The documented scope guard broadly allowlists platform-domain families such as HackTheBox, TryHackMe, CTFd and picoCTF; that is not equivalent to preserving exact per-target authorization and scope.",
+        "The README's policy-sanitizer feature is explicitly intended to reduce upstream model safety refusals, so it requires defensive review before any integration into this repository."
+      ],
+      "confidence": "high",
+      "relevance": "high",
+      "missing_verification": [
+        "Resolve actual licensing and provenance before copying or importing any code.",
+        "Inspect the scope guard implementation and require exact target/rules evidence instead of trusting broad domain allowlists.",
+        "Inspect prompt-policy sanitizer behavior and ensure it cannot weaken platform or repository safety boundaries.",
+        "Review install/update scripts, dependency manifests, package publishing, container provenance, credential handling and network behavior.",
+        "Run deterministic tests only in an isolated local environment and compare overlap with existing suite tools and agent contracts."
+      ],
+      "recommended_action": "Build/Integration should keep this in the evaluation inbox only when chronology reaches Sep. 7 afternoon. First resolve the license mismatch and authorization-model gap. If those are corrected or safely wrapped, evaluate only on deterministic local or explicitly authorized CTF fixtures before deciding whether any architecture or code belongs in the suite."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 28 afternoon at 2026-08-28T19:37:39Z. Aug. 29 morning remains the next bounded replay gate. Process Aug. 29 morning, Aug. 29 afternoon, Aug. 30 morning/afternoon, PR #103/#106 Aug. 31, PR #109/#112 Sep. 1, PR #116/#120 Sep. 2, PR #123/#125 Sep. 3, PR #131/#136 Sep. 4, PR #139 Sep. 5, PR #141 Sep. 6, PR #144 Sep. 7 morning, then this Sep. 7 afternoon snapshot in timestamp/source-overlap order. This file does not advance canonical source history or registry freshness.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or platform domain was treated as authorization. The external repository was reviewed only as a source/tooling lead and was not executed or imported."
+}
