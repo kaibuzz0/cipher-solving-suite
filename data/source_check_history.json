@@ -1,78 +1,622 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-28T19:37:39Z",
+  "updated_at": "2026-08-29T07:38:35Z",
   "checks": [
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-28T19:37:39Z","content_fingerprint":"8ab1541b75153d193963da65855a7c07f99bf9a26bf701b45b1fbc754272a19b","previous_fingerprint":"ab0660900275cf3767cd9b2f49f4bd08c2c0e2f68fa6f074ae1f2f55e66b380f","change_state":"changed","note":"Official COMPFEST timing is the stronger event-specific source for this event. The broader CTFtime calendar remains useful for discovery and the overall Aug. 29 competition cluster."},
-    {"source_id":"github-search","checked_at":"2026-08-28T19:37:39Z","content_fingerprint":"db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b","previous_fingerprint":"993f3601dafc2f452f9267c79a861f1e4de5e33e0065e7be100191cdd95dcca9","change_state":"changed","note":"RsaCracker is an evaluation lead only. Current evidence supports local review with deterministic CTF fixtures and dependency/supply-chain inspection before any integration decision."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-28T07:40:27Z","content_fingerprint":"1d4ecd2dfb8dedb600589fa4980dfaa1ce96d71a63dd54201821af7fbfc32aed","previous_fingerprint":"c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf","change_state":"changed","note":"Replayed from the provenance-safe Aug. 28 morning reconciliation. Careers in Your Community remains specialized school/team opportunity intelligence and is not generic individual work."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-28T07:40:27Z","content_fingerprint":"ab0660900275cf3767cd9b2f49f4bd08c2c0e2f68fa6f074ae1f2f55e66b380f","previous_fingerprint":"ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add","change_state":"changed","note":"Replayed from the provenance-safe Aug. 28 morning reconciliation. Organizer rules remain required before creating event-specific work."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-28T07:40:27Z","content_fingerprint":"e86ebfff5d52fc612e515a6bb6a6b771131938816faceed5e1782d14957860c9","previous_fingerprint":"67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05","change_state":"changed","note":"Replayed from the provenance-safe Aug. 28 morning reconciliation. Public bounty listings remain discovery evidence only and do not authorize testing."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-28T07:40:27Z","content_fingerprint":"b8cd96dfef25b74134fe858391b0aa4447f5b779bc46503443aaa8e23a00ef2c","previous_fingerprint":"d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9","change_state":"changed","note":"Replayed from the provenance-safe Aug. 28 morning reconciliation. arXiv:2608.26237 remains a preprint research lead pending license, implementation, benchmark, and reproducibility review."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-28T07:40:27Z","content_fingerprint":"8ae70a5efe8985d347d6fa3d8da1ee68767475a612395c3d1c9b150217fe6a24","previous_fingerprint":"9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc","change_state":"changed","note":"Replayed from the provenance-safe Aug. 28 morning reconciliation. Existing ETHOnline intelligence remains unchanged by this replay."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-27T19:39:25Z","content_fingerprint":"c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf","previous_fingerprint":"eb797b905124aa7ca06577aa2eac6f98734601a851ecad7ad53c4e0628b9fc87","change_state":"changed","note":"Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes. Careers in Your Community remains specialized school/team opportunity intelligence."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-27T19:39:25Z","content_fingerprint":"ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add","previous_fingerprint":"111f238ab58ed2167d6e1e9ab0072516d8e0777b1c35ba1adc327c51f497afc2","change_state":"changed","note":"Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-27T19:39:25Z","content_fingerprint":"67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05","previous_fingerprint":"c8a1e59f595a1d8d788ca5cfc22f3d4cb6ee782b741a443911347ea0cf935665","change_state":"changed","note":"Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes. Discovery evidence only; no testing authorization is inferred."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-27T19:39:25Z","content_fingerprint":"d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9","previous_fingerprint":"f58d8d0792b943fde0bab2a867d452c40ff006d243e8d812e984829009890ab9","change_state":"changed","note":"Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-27T19:39:25Z","content_fingerprint":"9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc","previous_fingerprint":"b9291f5dc88d437f71898fb71674a69535f7083429172423a2422c3e495645d0","change_state":"changed","note":"Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-26T07:39:05Z","content_fingerprint":"eb797b905124aa7ca06577aa2eac6f98734601a851ecad7ad53c4e0628b9fc87","previous_fingerprint":"756f0ba6b3d9b0e5f37d97dd44f1764cfd5e2d370f560411017086628795c85d","change_state":"changed","note":"xTech|Search 10 is a high-value lead but current official surfaces disagree on the application window. USA.gov says Sep. 10-Oct. 19; the Army xTech page says Aug. 5-Sep. 30 while also saying 'Coming Soon'; SBIR.gov lists the related topic open Aug. 26-Sep. 23. The Army's 'Download Full RFI' link currently resolves to a one-page placeholder saying the RFI is unavailable. Do not promote a definitive deadline or active-case claim until the full RFI/application portal resolves the conflict."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-26T07:39:05Z","content_fingerprint":"c8a1e59f595a1d8d788ca5cfc22f3d4cb6ee782b741a443911347ea0cf935665","previous_fingerprint":"b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a","change_state":"changed","note":"Sherlock's 'most recent' slot changed from Midas to Alphix - Dec 2025. Alphix is LIVE with a 30,000 USDC maximum reward and an Aug. 25, 2026 11:32 PM update. This is source-health/discovery evidence only; exact scope and rules remain mandatory before any testing."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-26T07:39:05Z","content_fingerprint":"f58d8d0792b943fde0bab2a867d452c40ff006d243e8d812e984829009890ab9","previous_fingerprint":"68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f","change_state":"changed","note":"The recent index advanced to Aug. 26 with 199 entries. No newly visible paper cleared the publication threshold for direct cipher-solving or reusable-tool value in this bounded pass."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-26T07:39:05Z","content_fingerprint":"111f238ab58ed2167d6e1e9ab0072516d8e0777b1c35ba1adc327c51f497afc2","previous_fingerprint":"26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964","change_state":"changed","note":"The Aug. 29 online cluster remains the next broad competition window; existing canonical late-August intelligence already covers the useful planning period, so no duplicate feed item is recommended."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-26T07:39:05Z","content_fingerprint":"b9291f5dc88d437f71898fb71674a69535f7083429172423a2422c3e495645d0","previous_fingerprint":"b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648","change_state":"changed","note":"ETHGlobal added an Aug. 26-27 Belgrade meetup, but the next substantive build opportunity remains ETHOnline Sep. 4-16. Existing canonical ETHOnline intelligence remains accurate."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-25T19:42:47Z","content_fingerprint":"26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964","previous_fingerprint":"a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22","change_state":"changed","note":"The late-August CTF calendar remains useful. ASIS is more actionable than a bare aggregator listing because the organizer states registration is public, no qualifications are required, teams are limited to four, and the top three global teams receive a fully funded invitation to the onsite finals. This is competition participation evidence, not authorization to test unrelated systems."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-25T19:42:47Z","content_fingerprint":"b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a","previous_fingerprint":"13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6","change_state":"changed","note":"No stronger bounty change was identified than the already preserved Midas/Cap/Aave/Puffer leads. Exact scope, exclusions, prohibited techniques, severity rules, and submission terms remain mandatory before any testing."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-25T19:42:47Z","content_fingerprint":"68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f","previous_fingerprint":"8fb2b94561566e6c143eac47473075dfb0c914a024b12e88052a53e851faa82d","change_state":"changed","note":"The index changed materially, but no paper from the newly visible batch cleared the repository's publication threshold for direct cipher-solving or reusable-tool value during this bounded pass."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-25T19:42:47Z","content_fingerprint":"b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648","previous_fingerprint":"a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9","change_state":"changed","note":"Existing ETHOnline intelligence remains accurate; no duplicate feed item is recommended."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-24T19:42:29Z","content_fingerprint":"756f0ba6b3d9b0e5f37d97dd44f1764cfd5e2d370f560411017086628795c85d","previous_fingerprint":"6d846e460e5e05a9a6614e4d8193c81c747def36bc94aa45e0e95fa19dae21f9","change_state":"changed","note":"Discovery surface remains lifecycle-oriented; challenge-level actionability must be verified on the official host before promotion."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-24T19:42:29Z","content_fingerprint":"a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22","previous_fingerprint":"c91ed13127fd0fb0dcd81ac74e17faf710472725ba7cfe8caf2b2e1449e8ad74","change_state":"changed","note":"Existing late-August CTF intelligence already covers the useful planning window; avoid duplicate feed noise unless an organizer-level rule/prize change is verified."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-24T19:42:29Z","content_fingerprint":"13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6","previous_fingerprint":"f6fea98b831dfe6877b722208cb9fb73fd2e4ae5c650655dc80356c40fbafc6c","change_state":"changed","note":"Listings are discovery evidence only. No testing authorization is inferred; exact program scope/rules remain mandatory before any security work."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-24T19:42:29Z","content_fingerprint":"a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9","previous_fingerprint":"f3bd2bb7e8d298a0cc3fff6ac3f53af86702c69aa603a1a8e57483ceb14d72d9","change_state":"changed","note":"ETHOnline dates remain consistent with canonical intelligence; no duplicate feed item recommended."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-23T07:42:04Z","content_fingerprint":"6d846e460e5e05a9a6614e4d8193c81c747def36bc94aa45e0e95fa19dae21f9","previous_fingerprint":"63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9","change_state":"changed","note":"USA.gov currently lists the ACL Caregiver AI Prize Challenge as active and reports a Feb 6, 2026-Feb 6, 2029 lifecycle with $2.5M total cash prizes. The official ACL host says Phase 1 applications were due July 31, 2026, Phase 1 winners are expected in September, and Phase 2/3 dates will be announced later. Treat the challenge as lifecycle-active but not presently verified open for new submissions; do not promote it as an actionable $2.5M opportunity until a new submission phase and eligibility terms are published."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-23T07:42:04Z","content_fingerprint":"c91ed13127fd0fb0dcd81ac74e17faf710472725ba7cfe8caf2b2e1449e8ad74","previous_fingerprint":"c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef","change_state":"changed","note":"The upcoming list has advanced beyond the Aug 23 PECAN+ window. The next cluster begins Aug 29 with COMPFEST, BlackHat MEA Qualification, ASIS Quals, UND CyberHawks qualifier and Iran Tech Olympics; September then starts with NNS and TFC. Existing canonical late-August CTF intelligence already covers the useful planning window, so no duplicate feed item is recommended."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-23T07:42:04Z","content_fingerprint":"f6fea98b831dfe6877b722208cb9fb73fd2e4ae5c650655dc80356c40fbafc6c","previous_fingerprint":"88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c","change_state":"changed","note":"Sherlock still identifies Midas as the most recent bounty and exposes the broader current listing, including Usual Labs at 16M USDC, Aave V4 at $2.5M, Cap at 1M USDC and Puffer at 100k USDC. The source fingerprint changes because this observation captures the current largest-bounty context as well as the most-recent listing. No bounty listing was treated as testing authorization and no case was activated."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-23T07:42:04Z","content_fingerprint":"f3bd2bb7e8d298a0cc3fff6ac3f53af86702c69aa603a1a8e57483ceb14d72d9","previous_fingerprint":"276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36","change_state":"changed","note":"ETHGlobal's official calendar still has ETHOnline Sep 4-16, Tokyo Sep 25-27 and Mumbai Nov 6-8. The fingerprint changes because the current normalized observation also includes the intervening Bali/Belgrade community events. Existing ETHOnline intelligence remains accurate; no duplicate feed item is needed."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-22T19:42:58Z","content_fingerprint":"63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9","previous_fingerprint":"968c06befa09b1589dd416b28bf850725b3dbf2e3dce6b210653758f25e13e3d","change_state":"changed","note":"USA.gov lists NASA's 2027 Gateways to Blue Skies competition as active. The official competition host independently confirms the competition opened August 18, 2026, Phase-1 Notice of Intent is due October 12, 2026 at 11:59 PM ET, the proposal/video deadline is February 22, 2027 at 11:59 PM ET, up to eight finalist teams receive $9,000 each, and eligibility is limited to student-led teams of 2-6 from accredited U.S.-based postsecondary institutions with one faculty advisor and at least two U.S.-citizen/permanent-resident student members. This is a real current opportunity but specialized, so no generic active case was created."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-22T19:42:58Z","content_fingerprint":"c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef","previous_fingerprint":"b4fd6097726339050cdf68858ae73b4af6e9894f885804e1be44d8ae9b07cea2","change_state":"changed","note":"The upcoming list advanced again after the earlier August 22 snapshot: PECAN+ is now first and is marked school-teams-only, followed by the August 29 COMPFEST, BlackHat MEA Qualification, ASIS Quals, UND CyberHawks qualifier, and Iran Tech Olympics cluster. Existing canonical late-August CTF intelligence already covers the useful planning window, so another feed item would be duplicate noise."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-22T19:42:58Z","content_fingerprint":"88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c","previous_fingerprint":"88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c","change_state":"unchanged","note":"Rechecked the current Sherlock bounty listing after the PR #44 observation. Midas remains the most recently updated entry at 500,000 USDC; Cap, Aave V4 and Puffer remain represented. No stronger new bounty change was found, and no listing was treated as testing authorization."},
-    {"source_id":"code4rena-contests","checked_at":"2026-08-22T07:42:16Z","content_fingerprint":"29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2","previous_fingerprint":"1ad4a847998aae2c914414769818d8056a00d259c2d8fa4c177bcc0af3244228","change_state":"changed","note":"Official Code4rena homepage now states the platform is winding down and active competitions/bounties are being seen through to completion. Current surface shows 0 bounties, Rujira report in progress and K2 completed."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-22T07:42:16Z","content_fingerprint":"88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c","previous_fingerprint":"43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321","change_state":"changed","note":"Midas is now the most recently updated Sherlock bounty; its page reports LIVE, 500,000 USDC maximum reward, and Aug 21 2026 9:23 PM last update. Exact Scope-tab contents were not preserved, so no case/testing was started."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-22T07:42:16Z","content_fingerprint":"b4fd6097726339050cdf68858ae73b4af6e9894f885804e1be44d8ae9b07cea2","previous_fingerprint":"5e8abffab04098daaae5f4ae845a69d4c72898877e7d75c9e987f7bceef260e9","change_state":"changed","note":"Upcoming list advanced as Aug 22 events began; TallDwarf remains immediately upcoming, followed by PECAN+ and the Aug 29 cluster. Existing canonical intelligence already covers the late-August window, so no duplicate feed item is recommended."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-21T19:42:02Z","content_fingerprint":"5e8abffab04098daaae5f4ae845a69d4c72898877e7d75c9e987f7bceef260e9","previous_fingerprint":"9520c7eba50086d617a1ed1a15f6a647d81145f8cc5d120ffc5d0d9300c4d5bc","change_state":"changed","note":"Reviewed the current CTFtime upcoming calendar after the Aug 21 events started. The upcoming list now begins with Haruulzangi, $N1PH€RS 3.0, E0F and TallDwarf on Aug 22, followed by PECAN+ on Aug 23 and COMPFEST, BlackHat MEA Qualification and ASIS Quals on Aug 29. BrunnerCTF and z0d1ak no longer appear in the upcoming list because their Aug 21 start times have passed. Existing feed coverage already captures the late-August window, so no duplicate CTF intelligence or case was created."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-21T19:42:02Z","content_fingerprint":"8fb2b94561566e6c143eac47473075dfb0c914a024b12e88052a53e851faa82d","previous_fingerprint":"9c3eccc30b5839f5a2c82b9998c6241a4f547440e704eece9646a9e8a8674913","change_state":"changed","note":"Reviewed the official cs.CR recent list: Fri Aug 21 has 27 entries and the recent list has 207 total. Independently opened arXiv:2608.19191, which studies Structured Totient Preimage reconstruction/collisions, supplies ancillary enumeration/reconstruction code, and explicitly does not claim a security reduction or post-quantum hardness. The paper is promoted separately as medium-confidence research intelligence."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-21T19:42:02Z","content_fingerprint":"43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321","previous_fingerprint":"43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321","change_state":"unchanged","note":"Reviewed the current Sherlock bug-bounty listing. Cap remains the most recent high-value listing at 1,000,000 USDC, with Aave V4 at 2,500,000 USD, Puffer at 100,000 USDC and Midas at 500,000 USDC. No stronger new bounty change was found; exact program scope/rules remain mandatory before any case activation or testing."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-21T19:42:02Z","content_fingerprint":"276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36","previous_fingerprint":"276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36","change_state":"unchanged","note":"Reviewed the official ETHGlobal event calendar. ETHOnline remains September 4-16, Tokyo remains September 25-27, and Mumbai remains November 6-8. Existing intelligence already covers ETHOnline, so no duplicate feed item was created."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-20T19:42:41Z","content_fingerprint":"968c06befa09b1589dd416b28bf850725b3dbf2e3dce6b210653758f25e13e3d","previous_fingerprint":"20a6b520de7fa34d508d7735a94620a2b342472b82e52c1105e97b5d15546303","change_state":"changed","note":"Reviewed USA.gov active federal challenges and followed current federal challenge discovery to official NIH pages. The source-health issue persists beyond the earlier 3D Surface Fuels example: TOPx is labeled Phase 2 open through Oct 15 but Phase 2 is only for teams advancing from Phase 1, while Complement-ARIE Phase 2 Milestone 1 is open through Mar 22, 2027 only to Phase 1 winners. NIH also lists the NCI Office of Data Sharing Impact Prize open Aug 3-Oct 5, and NCI independently states a $200,000 total prize, but exact eligibility and entry terms were not preserved in this pass, so it was not promoted as a canonical actionable opportunity. No case or target testing was created."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-19T19:39:26Z","content_fingerprint":"9520c7eba50086d617a1ed1a15f6a647d81145f8cc5d120ffc5d0d9300c4d5bc","previous_fingerprint":"d61305fc2c15a7fad89ad28881b50420ce78656e19545f1cbd2b681f5202a2e4","change_state":"changed","note":"Reviewed the current CTFtime upcoming calendar. The Aug 21-23 online window still includes BrunnerCTF and z0d1ak while PwnSec remains postponed; Aug 22 now also includes $N1PH€RS 3.0 alongside Haruulzangi, E0F and TallDwarf. BrunnerCTF's event page states prizes are exclusively for eligible Danish teams on a separate strict no-AI scoreboard, so it should not be treated as a general AI-assisted earning opportunity. No duplicate late-August feed item or active case was created."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-19T19:39:26Z","content_fingerprint":"9c3eccc30b5839f5a2c82b9998c6241a4f547440e704eece9646a9e8a8674913","previous_fingerprint":"50a0708cb545307f9d829acd60537639ab16657270b43e590edd11226e32e4e3","change_state":"changed","note":"Reviewed the official cs.CR recent list. August 19 has 53 entries and the recent list has 213 total. Notable current research includes Efficient Fuzzy PSI under One-Sided Assumptions (accepted ACM CCS 2026), BullsEye directed firmware fuzzing, and SpecTrum differential fuzzing for Ethereum consensus clients (accepted ASE 2026). No feed item was promoted because this pass did not establish a stronger direct cipher-solving or immediate opportunity payoff than existing published research."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-18T19:37:37Z","content_fingerprint":"43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321","previous_fingerprint":"86152338fe803588c775fddf23c2333a85d3dde610ecae17158e0abc20861c68","change_state":"changed","note":"Reviewed the current Sherlock bug-bounty listing and opened the newly most-recent Cap program page. Cap is LIVE with a 1,000,000 USDC maximum reward and Last Updated Aug 18, 2026 4:35 PM. The fetched page exposes status and max reward but not enough Scope-tab detail to preserve exact in-scope assets, exclusions, severity/prohibited-technique rules and submission terms, so no active testing case was created."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"20a6b520de7fa34d508d7735a94620a2b342472b82e52c1105e97b5d15546303","previous_fingerprint":"c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8","change_state":"changed","note":"Reviewed USA.gov's active federal-challenge discovery page and followed the 3D Surface Fuels challenge to its official host. USA.gov still presents the challenge in its active lifecycle, but the host says submissions closed July 20, 2026 and the final demo moved to virtual on August 20. Treat discovery-page active windows as lifecycle metadata, not proof that submissions are currently open."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36","previous_fingerprint":"45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc","change_state":"changed","note":"Reviewed the official ETHGlobal event calendar. ETHOnline remains September 4-16, followed by Tokyo September 25-27 and Mumbai in November. No material user-facing correction was found; the fingerprint changed because this check records a fuller normalized calendar snapshot than the initial source-migration-era observation."},
-    {"source_id":"code4rena-contests","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"1ad4a847998aae2c914414769818d8056a00d259c2d8fa4c177bcc0af3244228","previous_fingerprint":"57c0cd73dab578a26a093ad87d0546745c7894759e985174ed209a2f82b44b70","change_state":"changed","note":"Reviewed the official Code4rena audits page. It still shows submissions closed, with K2 at 135,000 USDC and Rujira at 40,000 USDC in report-in-progress state. No open contest was promoted; the fingerprint changed because the current check uses a normalized compact state string rather than the first-seen observation format."},
-    {"source_id":"sherlock-contests","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"ef8d92bf429af77cad4bfc2296c090fffb3fb999852c0943708a2a9e30225f70","previous_fingerprint":"c08885d4abf54e312df5b4e6a97881d268967e6f81df69adb25c547f63160aa6","change_state":"changed","note":"Reviewed the official Sherlock contests page. It still shows All 0 and no active/upcoming contest cards. No contest was promoted; the fingerprint changed because this check uses a normalized compact state representation rather than the first-seen observation format."},
-    {"source_id":"algora-bounties","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"db528ee8efafffc3b5a3725fc0ff0c604fe6dc2566a74afee008a8005f984ccb","previous_fingerprint":"bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff","change_state":"changed","note":"Reviewed Algora's current homepage and the bounty links it surfaces. Turso explicitly says Challenge Completed, submissions closed and all bounties awarded; TSPerf and Prettier show winners. The Golem page advertises a 15,000 bounty but exposes old launch-event wording without a current 2026 deadline. No individual Algora challenge was promoted; registry notes now warn that homepage bounty navigation can lead to completed/historical pages."},
-    {"source_id":"topcoder-challenges","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"fca388228f224780a05124099923da4624adcfd18981de4a4132b78445837e02","previous_fingerprint":"b20e3b6d097f23555653a9ef7af2cd50079409a161064832537e83da511a51a0","change_state":"changed","note":"Reviewed the Topcoder challenge listing surface. The listing remains available, but dynamic per-challenge registration, reward, deadline and acceptance details still require item-level verification before promotion. No individual challenge was promoted in this pass."},
-    {"source_id":"upwork-software-development","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"566581fdf1b36b116a1afad15979f82945620b68afee22686bd7c002e098d0f5","previous_fingerprint":"af90e52b45fe3c1f7ef8a1165acf5b3a0e3bdca6e6a0f00b182560b22cbc639d","change_state":"changed","note":"Reviewed the current Upwork software-development jobs page. Current listings are visible, but no individual posting was promoted because client legitimacy, payment terms, competition and acceptance/delivery criteria require per-job verification."},
-    {"source_id":"freelancer-software-development","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"132600afd7f32dc10f46f5b73741541c1df226b730d6f1c6342b0cdffd6fc594","previous_fingerprint":"3c530eafe68ab6d996eca93375b7a6b033bcbc3e158c49543c9b4ca6c61d905d","change_state":"changed","note":"Reviewed the current Freelancer software-development jobs page. Current projects are visible, but no individual posting was promoted because budget/payment terms, client legitimacy, competition and acceptance criteria require per-project verification."},
-    {"source_id":"intigriti-public-programs","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"f9440df1110aebd45b0f641d75f5620992be0c3fc21d15f7c1f0fd99127f2c3b","previous_fingerprint":"fefc385faf1303ec6494b8bef24c765b723f7d25bdf1cbe8a46f6cdacadd6774","change_state":"changed","note":"Reviewed Intigriti public programs sorted by newest. Current entries include multiple VDPs, Challenge 0726, NVIDIA Public Bug Bounty and Daytona Bug Bounty. Independently opened NVIDIA's brief and confirmed exact tiered scope/reward information is available there; no active case or testing was started."},
-    {"source_id":"bugcrowd-engagements","checked_at":"2026-08-18T07:38:11Z","content_fingerprint":"ad2009e02ab9ff6b9d01fb90538ab66ee330d11372b1efe469eb7a02d676bbd5","previous_fingerprint":"34080c0dfce5ec0f70c27c369283910d26423b1fa9ab29e4ed4d15cdfe3a2872","change_state":"changed","note":"Reviewed the Bugcrowd public engagements URL. The fetchable surface exposed only the login shell in this pass, so no individual engagement facts were promoted. Exact engagement briefs remain mandatory before any testing."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-17T19:39:42Z","content_fingerprint":"86152338fe803588c775fddf23c2333a85d3dde610ecae17158e0abc20861c68","previous_fingerprint":"0eab47bb499757fdfe0c670fe9e6bf4e6e660361a9a44e287bbf1890ad1de5d8","change_state":"changed","note":"Reviewed the current Sherlock bug-bounty listing. Puffer now appears as the most recent bounty, marked Upcoming with a 100,000 USDC payout and Last Updated Aug 17, 2026. Aave V4 remains listed at 2,500,000 USD and Midas at 500,000 USDC. Puffer was not treated as authorization or activated as a case."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-17T19:39:42Z","content_fingerprint":"d61305fc2c15a7fad89ad28881b50420ce78656e19545f1cbd2b681f5202a2e4","previous_fingerprint":"6532529d2b340e5f8f9ff59a835c8f44d6756c2e1dd5d832faf825a37edc118a","change_state":"changed","note":"Reviewed the live CTFtime upcoming calendar. PwnSec CTF 2026 is now explicitly marked postponed; BrunnerCTF, z0d1ak, Haruulzangi, E0F, TallDwarf, COMPFEST and ASIS Quals remain listed in the late-August window. Follow organizer pages for authoritative rescheduling and rules."},
-    {"source_id":"github-search","checked_at":"2026-08-17T19:39:42Z","content_fingerprint":"993f3601dafc2f452f9267c79a861f1e4de5e33e0065e7be100191cdd95dcca9","previous_fingerprint":null,"change_state":"first-seen","note":"Performed a bounded GitHub discovery check for CTF/cryptography tooling and independently inspected RsaCtfTool/RsaCtfTool. GitHub reports it public, non-archived, MIT-licensed, Python-based and pushed Aug 12, 2026; README documents broad RSA/CTF attack methods and pytest coverage. Treat as a tool-evaluation lead, not an automatic dependency adoption."},
-    {"source_id":"arxiv-cryptography","checked_at":"2026-08-17T19:39:42Z","content_fingerprint":"50a0708cb545307f9d829acd60537639ab16657270b43e590edd11226e32e4e3","previous_fingerprint":null,"change_state":"first-seen","note":"Successfully reopened the official cs.CR recent list after the prior timeout. The Aug 17 list showed 30 entries for the day and 184 recent entries total. Independently opened arXiv:2608.13792 and arXiv:2608.13784; both are preprints and are summarized conservatively."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-17T07:43:55Z","content_fingerprint":"0eab47bb499757fdfe0c670fe9e6bf4e6e660361a9a44e287bbf1890ad1de5d8","previous_fingerprint":"d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec","change_state":"changed","note":"Reviewed the current Sherlock bug-bounty listing and program pages. The listing now highlights Usual Labs at 16,000,000 USDC and Aave V4 at 2,500,000 USD; Aave V4 is verified LIVE with a 2,500,000 USD maximum reward and Midas remains LIVE at 500,000 USDC. The full Scope tab contents were not available in the fetched page, so no active testing case was created."},
-    {"source_id":"ctftime-upcoming","checked_at":"2026-08-17T07:43:55Z","content_fingerprint":"6532529d2b340e5f8f9ff59a835c8f44d6756c2e1dd5d832faf825a37edc118a","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed the live CTFtime upcoming calendar. The next listed event is CTFZone on August 19; the next online window begins August 21 with BrunnerCTF, PwnSec, z0d1ak, Haruulzangi, E0F and TallDwarf, followed by COMPFEST and ASIS Quals August 29-30. Existing late-August intelligence already covers the useful planning window, so no duplicate feed item was added."},
-    {"source_id":"hackerone-directory","checked_at":"2026-08-17T07:43:55Z","content_fingerprint":"9d2c0567f4a1ca4a2ca9ec498c34b31cce3edba4b3b7193df4de3e674f5858d5","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed the official HackerOne Program Directory and current HackerOne documentation. The Directory remains the discovery surface; official docs expose Active Program and Offers bounties filters. No individual program was promoted because exact scope, rules, disclosure preferences and reward conditions remain program-specific."},
-    {"source_id":"code4rena-contests","checked_at":"2026-08-17T07:43:55Z","content_fingerprint":"57c0cd73dab578a26a093ad87d0546745c7894759e985174ed209a2f82b44b70","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed the official Code4rena audits page. It currently shows submissions closed; K2 ($135,000 USDC) and Rujira ($40,000 USDC) are report-in-progress, with completed audits below. No currently open contest was promoted and no testing was performed."},
-    {"source_id":"sherlock-contests","checked_at":"2026-08-17T07:43:55Z","content_fingerprint":"c08885d4abf54e312df5b4e6a97881d268967e6f81df69adb25c547f63160aa6","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed the official Sherlock contests page. The fetched current page displays All 0 and no active/upcoming contest cards, so no contest was promoted. This check does not affect separately tracked Sherlock bug-bounty programs."},
-    {"source_id":"algora-bounties","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Algora bounty discovery. ProjectDiscovery currently exposes open GitHub-linked bounties, but no individual bounty was promoted because issue state, acceptance criteria, competing claims/landed fixes and payout terms still need per-item verification."},
-    {"source_id":"topcoder-challenges","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"b20e3b6d097f23555653a9ef7af2cd50079409a161064832537e83da511a51a0","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Topcoder challenge discovery. The active challenge interface is available with registration/review filters; individual challenge reward, deadline, requirements and acceptance criteria still require per-item verification before promotion."},
-    {"source_id":"upwork-software-development","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"af90e52b45fe3c1f7ef8a1165acf5b3a0e3bdca6e6a0f00b182560b22cbc639d","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Upwork software-development discovery and observed current hourly/fixed-price listings. No posting was promoted because client legitimacy, exact payment terms, competition and delivery/acceptance requirements need per-job verification."},
-    {"source_id":"freelancer-software-development","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"3c530eafe68ab6d996eca93375b7a6b033bcbc3e158c49543c9b4ca6c61d905d","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Freelancer software-development discovery and observed current project listings with time-left and bid information. No posting was promoted because client legitimacy, payment terms, competition and acceptance criteria need per-job verification."},
-    {"source_id":"gitcoin-bounties","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"b368af7586cae66cc48a0ed7fde617a29e0c213a512191958bacbd6e64154e2a","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Gitcoin's official bounty-mechanism reference. It documents task-based funding with defined deliverables, rewards, claiming, review and payment release, but it is not itself a guaranteed live bounty catalog; no specific bounty was promoted."},
-    {"source_id":"intigriti-public-programs","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"fefc385faf1303ec6494b8bef24c765b723f7d25bdf1cbe8a46f6cdacadd6774","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Intigriti public programs and confirmed current public bug-bounty/VDP discovery. No security case was created; exact scope, exclusions, prohibited techniques, rate limits, safe-harbor terms, severity/reward rules and submission requirements remain mandatory before testing."},
-    {"source_id":"bugcrowd-engagements","checked_at":"2026-08-16T22:37:00Z","content_fingerprint":"34080c0dfce5ec0f70c27c369283910d26423b1fa9ab29e4ed4d15cdfe3a2872","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed Bugcrowd researcher engagement discovery documentation confirming bug-bounty/VDP/pen-test search and filters for rewards, scope, target category and dates. No security case was created; the exact engagement brief remains required before any testing."},
-    {"source_id":"challenge-gov","checked_at":"2026-08-16T19:39:00Z","content_fingerprint":"c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8","previous_fingerprint":null,"change_state":"first-seen","note":"Verified Challenge.gov was sunset on March 30, 2026 and USA.gov is now the official active federal challenges discovery page."},
-    {"source_id":"ethglobal-events","checked_at":"2026-08-16T19:39:00Z","content_fingerprint":"45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc","previous_fingerprint":null,"change_state":"first-seen","note":"Reviewed official upcoming ETHGlobal calendar; ETHOnline 2026 remains listed for Sep 4-16 with Tokyo and Mumbai events later in 2026."},
-    {"source_id":"sherlock-bounties","checked_at":"2026-08-16T19:39:00Z","content_fingerprint":"d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec","previous_fingerprint":null,"change_state":"first-seen","note":"Verified several current Sherlock bug-bounty pages reporting LIVE status and six-figure maximum rewards; scope must be opened and preserved before any testing."}
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "previous_fingerprint": "1d4ecd2dfb8dedb600589fa4980dfaa1ce96d71a63dd54201821af7fbfc32aed",
+      "change_state": "changed",
+      "note": "The xTech|Search 10 conflict remains unresolved on Aug. 29. The Army site simultaneously presents the competition as OPEN and Coming Soon, displays Aug. 5-Sep. 30, and still links to an RFI placeholder. SBIR.gov lists related topics as open Aug. 26-Sep. 23 and explicitly warns its copies may not be the latest agency version. Do not publish a definitive submission deadline or create active work until the actual Army RFI/application path is available and internally consistent."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "previous_fingerprint": "8ab1541b75153d193963da65855a7c07f99bf9a26bf701b45b1fbc754272a19b",
+      "change_state": "changed",
+      "note": "Material calendar clarification: Iran Tech Olympics CTF 2026 and ASIS CTF Quals 2026 state they have joined forces and will be held as one merged event. Avoid counting them as two independent opportunities when estimating the Aug. 29 competition window."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "previous_fingerprint": "e86ebfff5d52fc612e515a6bb6a6b771131938816faceed5e1782d14957860c9",
+      "change_state": "changed",
+      "note": "No stronger bounty change was found. Alphix remains the most recent listing and is LIVE at 30,000 USDC. Existing higher-value programs remain discovery leads only; exact scope and rules are mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "previous_fingerprint": "b8cd96dfef25b74134fe858391b0aa4447f5b779bc46503443aaa8e23a00ef2c",
+      "change_state": "changed",
+      "note": "The recent index is current through the Friday Aug. 28 batch. No additional paper cleared the repository's publication threshold in this pass; avoid duplicate research noise while the Aug. 28 CTF-provenance paper remains pending integration."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c",
+      "previous_fingerprint": "8ae70a5efe8985d347d6fa3d8da1ee68767475a612395c3d1c9b150217fe6a24",
+      "change_state": "changed",
+      "note": "ETHOnline remains the next substantive ETHGlobal build opportunity. Existing canonical intelligence already covers it, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-28T19:37:39Z",
+      "content_fingerprint": "8ab1541b75153d193963da65855a7c07f99bf9a26bf701b45b1fbc754272a19b",
+      "previous_fingerprint": "ab0660900275cf3767cd9b2f49f4bd08c2c0e2f68fa6f074ae1f2f55e66b380f",
+      "change_state": "changed",
+      "note": "Official COMPFEST timing is the stronger event-specific source for this event. The broader CTFtime calendar remains useful for discovery and the overall Aug. 29 competition cluster."
+    },
+    {
+      "source_id": "github-search",
+      "checked_at": "2026-08-28T19:37:39Z",
+      "content_fingerprint": "db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b",
+      "previous_fingerprint": "993f3601dafc2f452f9267c79a861f1e4de5e33e0065e7be100191cdd95dcca9",
+      "change_state": "changed",
+      "note": "RsaCracker is an evaluation lead only. Current evidence supports local review with deterministic CTF fixtures and dependency/supply-chain inspection before any integration decision."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-28T07:40:27Z",
+      "content_fingerprint": "1d4ecd2dfb8dedb600589fa4980dfaa1ce96d71a63dd54201821af7fbfc32aed",
+      "previous_fingerprint": "c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf",
+      "change_state": "changed",
+      "note": "Replayed from the provenance-safe Aug. 28 morning reconciliation. Careers in Your Community remains specialized school/team opportunity intelligence and is not generic individual work."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-28T07:40:27Z",
+      "content_fingerprint": "ab0660900275cf3767cd9b2f49f4bd08c2c0e2f68fa6f074ae1f2f55e66b380f",
+      "previous_fingerprint": "ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add",
+      "change_state": "changed",
+      "note": "Replayed from the provenance-safe Aug. 28 morning reconciliation. Organizer rules remain required before creating event-specific work."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-28T07:40:27Z",
+      "content_fingerprint": "e86ebfff5d52fc612e515a6bb6a6b771131938816faceed5e1782d14957860c9",
+      "previous_fingerprint": "67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05",
+      "change_state": "changed",
+      "note": "Replayed from the provenance-safe Aug. 28 morning reconciliation. Public bounty listings remain discovery evidence only and do not authorize testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-28T07:40:27Z",
+      "content_fingerprint": "b8cd96dfef25b74134fe858391b0aa4447f5b779bc46503443aaa8e23a00ef2c",
+      "previous_fingerprint": "d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9",
+      "change_state": "changed",
+      "note": "Replayed from the provenance-safe Aug. 28 morning reconciliation. arXiv:2608.26237 remains a preprint research lead pending license, implementation, benchmark, and reproducibility review."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-28T07:40:27Z",
+      "content_fingerprint": "8ae70a5efe8985d347d6fa3d8da1ee68767475a612395c3d1c9b150217fe6a24",
+      "previous_fingerprint": "9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc",
+      "change_state": "changed",
+      "note": "Replayed from the provenance-safe Aug. 28 morning reconciliation. Existing ETHOnline intelligence remains unchanged by this replay."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-27T19:39:25Z",
+      "content_fingerprint": "c0e125df5360a452d731c08f76412c7d62381054fca56e6fcb4e2184575d12cf",
+      "previous_fingerprint": "eb797b905124aa7ca06577aa2eac6f98734601a851ecad7ad53c4e0628b9fc87",
+      "change_state": "changed",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes. Careers in Your Community remains specialized school/team opportunity intelligence."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-27T19:39:25Z",
+      "content_fingerprint": "ef2d96986e610ccbfbb877ba67ddc2c5f975182de29629b4401a34a81e0d4add",
+      "previous_fingerprint": "111f238ab58ed2167d6e1e9ab0072516d8e0777b1c35ba1adc327c51f497afc2",
+      "change_state": "changed",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-27T19:39:25Z",
+      "content_fingerprint": "67f240a38ead70926e9776f3e5aa3afb6dc25920b3f7c555f34c7b9dbe262b05",
+      "previous_fingerprint": "c8a1e59f595a1d8d788ca5cfc22f3d4cb6ee782b741a443911347ea0cf935665",
+      "change_state": "changed",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes. Discovery evidence only; no testing authorization is inferred."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-27T19:39:25Z",
+      "content_fingerprint": "d126279a1ebded4a02bb4dca40b381c8cf72484831d9913bf924ae5ebfc2b1c9",
+      "previous_fingerprint": "f58d8d0792b943fde0bab2a867d452c40ff006d243e8d812e984829009890ab9",
+      "change_state": "changed",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-27T19:39:25Z",
+      "content_fingerprint": "9f0a188daf173966ee324470229a9bfbf2e864807b8f46200ea17f6bca9741dc",
+      "previous_fingerprint": "b9291f5dc88d437f71898fb71674a69535f7083429172423a2422c3e495645d0",
+      "change_state": "changed",
+      "note": "Derived from PR #75's preserved observation text; original contributed hash is retained in reconciliation.original_hashes."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-26T07:39:05Z",
+      "content_fingerprint": "eb797b905124aa7ca06577aa2eac6f98734601a851ecad7ad53c4e0628b9fc87",
+      "previous_fingerprint": "756f0ba6b3d9b0e5f37d97dd44f1764cfd5e2d370f560411017086628795c85d",
+      "change_state": "changed",
+      "note": "xTech|Search 10 is a high-value lead but current official surfaces disagree on the application window. USA.gov says Sep. 10-Oct. 19; the Army xTech page says Aug. 5-Sep. 30 while also saying 'Coming Soon'; SBIR.gov lists the related topic open Aug. 26-Sep. 23. The Army's 'Download Full RFI' link currently resolves to a one-page placeholder saying the RFI is unavailable. Do not promote a definitive deadline or active-case claim until the full RFI/application portal resolves the conflict."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-26T07:39:05Z",
+      "content_fingerprint": "c8a1e59f595a1d8d788ca5cfc22f3d4cb6ee782b741a443911347ea0cf935665",
+      "previous_fingerprint": "b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a",
+      "change_state": "changed",
+      "note": "Sherlock's 'most recent' slot changed from Midas to Alphix - Dec 2025. Alphix is LIVE with a 30,000 USDC maximum reward and an Aug. 25, 2026 11:32 PM update. This is source-health/discovery evidence only; exact scope and rules remain mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-26T07:39:05Z",
+      "content_fingerprint": "f58d8d0792b943fde0bab2a867d452c40ff006d243e8d812e984829009890ab9",
+      "previous_fingerprint": "68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f",
+      "change_state": "changed",
+      "note": "The recent index advanced to Aug. 26 with 199 entries. No newly visible paper cleared the publication threshold for direct cipher-solving or reusable-tool value in this bounded pass."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-26T07:39:05Z",
+      "content_fingerprint": "111f238ab58ed2167d6e1e9ab0072516d8e0777b1c35ba1adc327c51f497afc2",
+      "previous_fingerprint": "26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964",
+      "change_state": "changed",
+      "note": "The Aug. 29 online cluster remains the next broad competition window; existing canonical late-August intelligence already covers the useful planning period, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-26T07:39:05Z",
+      "content_fingerprint": "b9291f5dc88d437f71898fb71674a69535f7083429172423a2422c3e495645d0",
+      "previous_fingerprint": "b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648",
+      "change_state": "changed",
+      "note": "ETHGlobal added an Aug. 26-27 Belgrade meetup, but the next substantive build opportunity remains ETHOnline Sep. 4-16. Existing canonical ETHOnline intelligence remains accurate."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-25T19:42:47Z",
+      "content_fingerprint": "26679909f0f486874d44e2574329c21a18974bc8b532d8f6795272f008668964",
+      "previous_fingerprint": "a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22",
+      "change_state": "changed",
+      "note": "The late-August CTF calendar remains useful. ASIS is more actionable than a bare aggregator listing because the organizer states registration is public, no qualifications are required, teams are limited to four, and the top three global teams receive a fully funded invitation to the onsite finals. This is competition participation evidence, not authorization to test unrelated systems."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-25T19:42:47Z",
+      "content_fingerprint": "b50b89eca829c002003f350b0648e7852d0d7b330fa19f5380d84cadcf27c67a",
+      "previous_fingerprint": "13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6",
+      "change_state": "changed",
+      "note": "No stronger bounty change was identified than the already preserved Midas/Cap/Aave/Puffer leads. Exact scope, exclusions, prohibited techniques, severity rules, and submission terms remain mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-25T19:42:47Z",
+      "content_fingerprint": "68147c9ac8991c6742911d99c927bf5b4610961df1263a281ed54dd5a284697f",
+      "previous_fingerprint": "8fb2b94561566e6c143eac47473075dfb0c914a024b12e88052a53e851faa82d",
+      "change_state": "changed",
+      "note": "The index changed materially, but no paper from the newly visible batch cleared the repository's publication threshold for direct cipher-solving or reusable-tool value during this bounded pass."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-25T19:42:47Z",
+      "content_fingerprint": "b20807c6f1f3ac021a0111c72f2ea6dd211f64714728951fcf7769b2bdfa2648",
+      "previous_fingerprint": "a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9",
+      "change_state": "changed",
+      "note": "Existing ETHOnline intelligence remains accurate; no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-24T19:42:29Z",
+      "content_fingerprint": "756f0ba6b3d9b0e5f37d97dd44f1764cfd5e2d370f560411017086628795c85d",
+      "previous_fingerprint": "6d846e460e5e05a9a6614e4d8193c81c747def36bc94aa45e0e95fa19dae21f9",
+      "change_state": "changed",
+      "note": "Discovery surface remains lifecycle-oriented; challenge-level actionability must be verified on the official host before promotion."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-24T19:42:29Z",
+      "content_fingerprint": "a96cc699e3f8a7f727dd097f6b716986c2673381f78d6a093531259feec10c22",
+      "previous_fingerprint": "c91ed13127fd0fb0dcd81ac74e17faf710472725ba7cfe8caf2b2e1449e8ad74",
+      "change_state": "changed",
+      "note": "Existing late-August CTF intelligence already covers the useful planning window; avoid duplicate feed noise unless an organizer-level rule/prize change is verified."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-24T19:42:29Z",
+      "content_fingerprint": "13c29e51e7cfabbf62a22338a5db82e72455b78d14e76ff2dfeb4bdb56ab9dd6",
+      "previous_fingerprint": "f6fea98b831dfe6877b722208cb9fb73fd2e4ae5c650655dc80356c40fbafc6c",
+      "change_state": "changed",
+      "note": "Listings are discovery evidence only. No testing authorization is inferred; exact program scope/rules remain mandatory before any security work."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-24T19:42:29Z",
+      "content_fingerprint": "a1954da1fd67d5f200745c9b5c5cd7f2053eb930571d9e1ac28f7c0b7def8cd9",
+      "previous_fingerprint": "f3bd2bb7e8d298a0cc3fff6ac3f53af86702c69aa603a1a8e57483ceb14d72d9",
+      "change_state": "changed",
+      "note": "ETHOnline dates remain consistent with canonical intelligence; no duplicate feed item recommended."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-23T07:42:04Z",
+      "content_fingerprint": "6d846e460e5e05a9a6614e4d8193c81c747def36bc94aa45e0e95fa19dae21f9",
+      "previous_fingerprint": "63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9",
+      "change_state": "changed",
+      "note": "USA.gov currently lists the ACL Caregiver AI Prize Challenge as active and reports a Feb 6, 2026-Feb 6, 2029 lifecycle with $2.5M total cash prizes. The official ACL host says Phase 1 applications were due July 31, 2026, Phase 1 winners are expected in September, and Phase 2/3 dates will be announced later. Treat the challenge as lifecycle-active but not presently verified open for new submissions; do not promote it as an actionable $2.5M opportunity until a new submission phase and eligibility terms are published."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-23T07:42:04Z",
+      "content_fingerprint": "c91ed13127fd0fb0dcd81ac74e17faf710472725ba7cfe8caf2b2e1449e8ad74",
+      "previous_fingerprint": "c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef",
+      "change_state": "changed",
+      "note": "The upcoming list has advanced beyond the Aug 23 PECAN+ window. The next cluster begins Aug 29 with COMPFEST, BlackHat MEA Qualification, ASIS Quals, UND CyberHawks qualifier and Iran Tech Olympics; September then starts with NNS and TFC. Existing canonical late-August CTF intelligence already covers the useful planning window, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-23T07:42:04Z",
+      "content_fingerprint": "f6fea98b831dfe6877b722208cb9fb73fd2e4ae5c650655dc80356c40fbafc6c",
+      "previous_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "change_state": "changed",
+      "note": "Sherlock still identifies Midas as the most recent bounty and exposes the broader current listing, including Usual Labs at 16M USDC, Aave V4 at $2.5M, Cap at 1M USDC and Puffer at 100k USDC. The source fingerprint changes because this observation captures the current largest-bounty context as well as the most-recent listing. No bounty listing was treated as testing authorization and no case was activated."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-23T07:42:04Z",
+      "content_fingerprint": "f3bd2bb7e8d298a0cc3fff6ac3f53af86702c69aa603a1a8e57483ceb14d72d9",
+      "previous_fingerprint": "276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36",
+      "change_state": "changed",
+      "note": "ETHGlobal's official calendar still has ETHOnline Sep 4-16, Tokyo Sep 25-27 and Mumbai Nov 6-8. The fingerprint changes because the current normalized observation also includes the intervening Bali/Belgrade community events. Existing ETHOnline intelligence remains accurate; no duplicate feed item is needed."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-22T19:42:58Z",
+      "content_fingerprint": "63881e1a0e5ac478acad55449a2484229c4485d8c39cc7ba05ec8bb47a72f8a9",
+      "previous_fingerprint": "968c06befa09b1589dd416b28bf850725b3dbf2e3dce6b210653758f25e13e3d",
+      "change_state": "changed",
+      "note": "USA.gov lists NASA's 2027 Gateways to Blue Skies competition as active. The official competition host independently confirms the competition opened August 18, 2026, Phase-1 Notice of Intent is due October 12, 2026 at 11:59 PM ET, the proposal/video deadline is February 22, 2027 at 11:59 PM ET, up to eight finalist teams receive $9,000 each, and eligibility is limited to student-led teams of 2-6 from accredited U.S.-based postsecondary institutions with one faculty advisor and at least two U.S.-citizen/permanent-resident student members. This is a real current opportunity but specialized, so no generic active case was created."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-22T19:42:58Z",
+      "content_fingerprint": "c4264bc414116673c87a242df65c7ab7f86457823cd025fd9b0a7ca8976cbbef",
+      "previous_fingerprint": "b4fd6097726339050cdf68858ae73b4af6e9894f885804e1be44d8ae9b07cea2",
+      "change_state": "changed",
+      "note": "The upcoming list advanced again after the earlier August 22 snapshot: PECAN+ is now first and is marked school-teams-only, followed by the August 29 COMPFEST, BlackHat MEA Qualification, ASIS Quals, UND CyberHawks qualifier, and Iran Tech Olympics cluster. Existing canonical late-August CTF intelligence already covers the useful planning window, so another feed item would be duplicate noise."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-22T19:42:58Z",
+      "content_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "previous_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "change_state": "unchanged",
+      "note": "Rechecked the current Sherlock bounty listing after the PR #44 observation. Midas remains the most recently updated entry at 500,000 USDC; Cap, Aave V4 and Puffer remain represented. No stronger new bounty change was found, and no listing was treated as testing authorization."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "checked_at": "2026-08-22T07:42:16Z",
+      "content_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "previous_fingerprint": "1ad4a847998aae2c914414769818d8056a00d259c2d8fa4c177bcc0af3244228",
+      "change_state": "changed",
+      "note": "Official Code4rena homepage now states the platform is winding down and active competitions/bounties are being seen through to completion. Current surface shows 0 bounties, Rujira report in progress and K2 completed."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-22T07:42:16Z",
+      "content_fingerprint": "88227008a0c88a59bb548c536416248cc7be78b779a449816650e8c6dfb46e4c",
+      "previous_fingerprint": "43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321",
+      "change_state": "changed",
+      "note": "Midas is now the most recently updated Sherlock bounty; its page reports LIVE, 500,000 USDC maximum reward, and Aug 21 2026 9:23 PM last update. Exact Scope-tab contents were not preserved, so no case/testing was started."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-22T07:42:16Z",
+      "content_fingerprint": "b4fd6097726339050cdf68858ae73b4af6e9894f885804e1be44d8ae9b07cea2",
+      "previous_fingerprint": "5e8abffab04098daaae5f4ae845a69d4c72898877e7d75c9e987f7bceef260e9",
+      "change_state": "changed",
+      "note": "Upcoming list advanced as Aug 22 events began; TallDwarf remains immediately upcoming, followed by PECAN+ and the Aug 29 cluster. Existing canonical intelligence already covers the late-August window, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-21T19:42:02Z",
+      "content_fingerprint": "5e8abffab04098daaae5f4ae845a69d4c72898877e7d75c9e987f7bceef260e9",
+      "previous_fingerprint": "9520c7eba50086d617a1ed1a15f6a647d81145f8cc5d120ffc5d0d9300c4d5bc",
+      "change_state": "changed",
+      "note": "Reviewed the current CTFtime upcoming calendar after the Aug 21 events started. The upcoming list now begins with Haruulzangi, $N1PH\u20acRS 3.0, E0F and TallDwarf on Aug 22, followed by PECAN+ on Aug 23 and COMPFEST, BlackHat MEA Qualification and ASIS Quals on Aug 29. BrunnerCTF and z0d1ak no longer appear in the upcoming list because their Aug 21 start times have passed. Existing feed coverage already captures the late-August window, so no duplicate CTF intelligence or case was created."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-21T19:42:02Z",
+      "content_fingerprint": "8fb2b94561566e6c143eac47473075dfb0c914a024b12e88052a53e851faa82d",
+      "previous_fingerprint": "9c3eccc30b5839f5a2c82b9998c6241a4f547440e704eece9646a9e8a8674913",
+      "change_state": "changed",
+      "note": "Reviewed the official cs.CR recent list: Fri Aug 21 has 27 entries and the recent list has 207 total. Independently opened arXiv:2608.19191, which studies Structured Totient Preimage reconstruction/collisions, supplies ancillary enumeration/reconstruction code, and explicitly does not claim a security reduction or post-quantum hardness. The paper is promoted separately as medium-confidence research intelligence."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-21T19:42:02Z",
+      "content_fingerprint": "43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321",
+      "previous_fingerprint": "43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321",
+      "change_state": "unchanged",
+      "note": "Reviewed the current Sherlock bug-bounty listing. Cap remains the most recent high-value listing at 1,000,000 USDC, with Aave V4 at 2,500,000 USD, Puffer at 100,000 USDC and Midas at 500,000 USDC. No stronger new bounty change was found; exact program scope/rules remain mandatory before any case activation or testing."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-21T19:42:02Z",
+      "content_fingerprint": "276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36",
+      "previous_fingerprint": "276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36",
+      "change_state": "unchanged",
+      "note": "Reviewed the official ETHGlobal event calendar. ETHOnline remains September 4-16, Tokyo remains September 25-27, and Mumbai remains November 6-8. Existing intelligence already covers ETHOnline, so no duplicate feed item was created."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-20T19:42:41Z",
+      "content_fingerprint": "968c06befa09b1589dd416b28bf850725b3dbf2e3dce6b210653758f25e13e3d",
+      "previous_fingerprint": "20a6b520de7fa34d508d7735a94620a2b342472b82e52c1105e97b5d15546303",
+      "change_state": "changed",
+      "note": "Reviewed USA.gov active federal challenges and followed current federal challenge discovery to official NIH pages. The source-health issue persists beyond the earlier 3D Surface Fuels example: TOPx is labeled Phase 2 open through Oct 15 but Phase 2 is only for teams advancing from Phase 1, while Complement-ARIE Phase 2 Milestone 1 is open through Mar 22, 2027 only to Phase 1 winners. NIH also lists the NCI Office of Data Sharing Impact Prize open Aug 3-Oct 5, and NCI independently states a $200,000 total prize, but exact eligibility and entry terms were not preserved in this pass, so it was not promoted as a canonical actionable opportunity. No case or target testing was created."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-19T19:39:26Z",
+      "content_fingerprint": "9520c7eba50086d617a1ed1a15f6a647d81145f8cc5d120ffc5d0d9300c4d5bc",
+      "previous_fingerprint": "d61305fc2c15a7fad89ad28881b50420ce78656e19545f1cbd2b681f5202a2e4",
+      "change_state": "changed",
+      "note": "Reviewed the current CTFtime upcoming calendar. The Aug 21-23 online window still includes BrunnerCTF and z0d1ak while PwnSec remains postponed; Aug 22 now also includes $N1PH\u20acRS 3.0 alongside Haruulzangi, E0F and TallDwarf. BrunnerCTF's event page states prizes are exclusively for eligible Danish teams on a separate strict no-AI scoreboard, so it should not be treated as a general AI-assisted earning opportunity. No duplicate late-August feed item or active case was created."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-19T19:39:26Z",
+      "content_fingerprint": "9c3eccc30b5839f5a2c82b9998c6241a4f547440e704eece9646a9e8a8674913",
+      "previous_fingerprint": "50a0708cb545307f9d829acd60537639ab16657270b43e590edd11226e32e4e3",
+      "change_state": "changed",
+      "note": "Reviewed the official cs.CR recent list. August 19 has 53 entries and the recent list has 213 total. Notable current research includes Efficient Fuzzy PSI under One-Sided Assumptions (accepted ACM CCS 2026), BullsEye directed firmware fuzzing, and SpecTrum differential fuzzing for Ethereum consensus clients (accepted ASE 2026). No feed item was promoted because this pass did not establish a stronger direct cipher-solving or immediate opportunity payoff than existing published research."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-18T19:37:37Z",
+      "content_fingerprint": "43e4bbbb00223a49175519d0ba1fd6c608c7e6f0bc595cbdccdf958c8482a321",
+      "previous_fingerprint": "86152338fe803588c775fddf23c2333a85d3dde610ecae17158e0abc20861c68",
+      "change_state": "changed",
+      "note": "Reviewed the current Sherlock bug-bounty listing and opened the newly most-recent Cap program page. Cap is LIVE with a 1,000,000 USDC maximum reward and Last Updated Aug 18, 2026 4:35 PM. The fetched page exposes status and max reward but not enough Scope-tab detail to preserve exact in-scope assets, exclusions, severity/prohibited-technique rules and submission terms, so no active testing case was created."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "20a6b520de7fa34d508d7735a94620a2b342472b82e52c1105e97b5d15546303",
+      "previous_fingerprint": "c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8",
+      "change_state": "changed",
+      "note": "Reviewed USA.gov's active federal-challenge discovery page and followed the 3D Surface Fuels challenge to its official host. USA.gov still presents the challenge in its active lifecycle, but the host says submissions closed July 20, 2026 and the final demo moved to virtual on August 20. Treat discovery-page active windows as lifecycle metadata, not proof that submissions are currently open."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "276adb8a23ddeb927231aec6f264b455cafca3d522173ed235abf291b329db36",
+      "previous_fingerprint": "45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc",
+      "change_state": "changed",
+      "note": "Reviewed the official ETHGlobal event calendar. ETHOnline remains September 4-16, followed by Tokyo September 25-27 and Mumbai in November. No material user-facing correction was found; the fingerprint changed because this check records a fuller normalized calendar snapshot than the initial source-migration-era observation."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "1ad4a847998aae2c914414769818d8056a00d259c2d8fa4c177bcc0af3244228",
+      "previous_fingerprint": "57c0cd73dab578a26a093ad87d0546745c7894759e985174ed209a2f82b44b70",
+      "change_state": "changed",
+      "note": "Reviewed the official Code4rena audits page. It still shows submissions closed, with K2 at 135,000 USDC and Rujira at 40,000 USDC in report-in-progress state. No open contest was promoted; the fingerprint changed because the current check uses a normalized compact state string rather than the first-seen observation format."
+    },
+    {
+      "source_id": "sherlock-contests",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "ef8d92bf429af77cad4bfc2296c090fffb3fb999852c0943708a2a9e30225f70",
+      "previous_fingerprint": "c08885d4abf54e312df5b4e6a97881d268967e6f81df69adb25c547f63160aa6",
+      "change_state": "changed",
+      "note": "Reviewed the official Sherlock contests page. It still shows All 0 and no active/upcoming contest cards. No contest was promoted; the fingerprint changed because this check uses a normalized compact state representation rather than the first-seen observation format."
+    },
+    {
+      "source_id": "algora-bounties",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "db528ee8efafffc3b5a3725fc0ff0c604fe6dc2566a74afee008a8005f984ccb",
+      "previous_fingerprint": "bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff",
+      "change_state": "changed",
+      "note": "Reviewed Algora's current homepage and the bounty links it surfaces. Turso explicitly says Challenge Completed, submissions closed and all bounties awarded; TSPerf and Prettier show winners. The Golem page advertises a 15,000 bounty but exposes old launch-event wording without a current 2026 deadline. No individual Algora challenge was promoted; registry notes now warn that homepage bounty navigation can lead to completed/historical pages."
+    },
+    {
+      "source_id": "topcoder-challenges",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "fca388228f224780a05124099923da4624adcfd18981de4a4132b78445837e02",
+      "previous_fingerprint": "b20e3b6d097f23555653a9ef7af2cd50079409a161064832537e83da511a51a0",
+      "change_state": "changed",
+      "note": "Reviewed the Topcoder challenge listing surface. The listing remains available, but dynamic per-challenge registration, reward, deadline and acceptance details still require item-level verification before promotion. No individual challenge was promoted in this pass."
+    },
+    {
+      "source_id": "upwork-software-development",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "566581fdf1b36b116a1afad15979f82945620b68afee22686bd7c002e098d0f5",
+      "previous_fingerprint": "af90e52b45fe3c1f7ef8a1165acf5b3a0e3bdca6e6a0f00b182560b22cbc639d",
+      "change_state": "changed",
+      "note": "Reviewed the current Upwork software-development jobs page. Current listings are visible, but no individual posting was promoted because client legitimacy, payment terms, competition and acceptance/delivery criteria require per-job verification."
+    },
+    {
+      "source_id": "freelancer-software-development",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "132600afd7f32dc10f46f5b73741541c1df226b730d6f1c6342b0cdffd6fc594",
+      "previous_fingerprint": "3c530eafe68ab6d996eca93375b7a6b033bcbc3e158c49543c9b4ca6c61d905d",
+      "change_state": "changed",
+      "note": "Reviewed the current Freelancer software-development jobs page. Current projects are visible, but no individual posting was promoted because budget/payment terms, client legitimacy, competition and acceptance criteria require per-project verification."
+    },
+    {
+      "source_id": "intigriti-public-programs",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "f9440df1110aebd45b0f641d75f5620992be0c3fc21d15f7c1f0fd99127f2c3b",
+      "previous_fingerprint": "fefc385faf1303ec6494b8bef24c765b723f7d25bdf1cbe8a46f6cdacadd6774",
+      "change_state": "changed",
+      "note": "Reviewed Intigriti public programs sorted by newest. Current entries include multiple VDPs, Challenge 0726, NVIDIA Public Bug Bounty and Daytona Bug Bounty. Independently opened NVIDIA's brief and confirmed exact tiered scope/reward information is available there; no active case or testing was started."
+    },
+    {
+      "source_id": "bugcrowd-engagements",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "ad2009e02ab9ff6b9d01fb90538ab66ee330d11372b1efe469eb7a02d676bbd5",
+      "previous_fingerprint": "34080c0dfce5ec0f70c27c369283910d26423b1fa9ab29e4ed4d15cdfe3a2872",
+      "change_state": "changed",
+      "note": "Reviewed the Bugcrowd public engagements URL. The fetchable surface exposed only the login shell in this pass, so no individual engagement facts were promoted. Exact engagement briefs remain mandatory before any testing."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-17T19:39:42Z",
+      "content_fingerprint": "86152338fe803588c775fddf23c2333a85d3dde610ecae17158e0abc20861c68",
+      "previous_fingerprint": "0eab47bb499757fdfe0c670fe9e6bf4e6e660361a9a44e287bbf1890ad1de5d8",
+      "change_state": "changed",
+      "note": "Reviewed the current Sherlock bug-bounty listing. Puffer now appears as the most recent bounty, marked Upcoming with a 100,000 USDC payout and Last Updated Aug 17, 2026. Aave V4 remains listed at 2,500,000 USD and Midas at 500,000 USDC. Puffer was not treated as authorization or activated as a case."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-17T19:39:42Z",
+      "content_fingerprint": "d61305fc2c15a7fad89ad28881b50420ce78656e19545f1cbd2b681f5202a2e4",
+      "previous_fingerprint": "6532529d2b340e5f8f9ff59a835c8f44d6756c2e1dd5d832faf825a37edc118a",
+      "change_state": "changed",
+      "note": "Reviewed the live CTFtime upcoming calendar. PwnSec CTF 2026 is now explicitly marked postponed; BrunnerCTF, z0d1ak, Haruulzangi, E0F, TallDwarf, COMPFEST and ASIS Quals remain listed in the late-August window. Follow organizer pages for authoritative rescheduling and rules."
+    },
+    {
+      "source_id": "github-search",
+      "checked_at": "2026-08-17T19:39:42Z",
+      "content_fingerprint": "993f3601dafc2f452f9267c79a861f1e4de5e33e0065e7be100191cdd95dcca9",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Performed a bounded GitHub discovery check for CTF/cryptography tooling and independently inspected RsaCtfTool/RsaCtfTool. GitHub reports it public, non-archived, MIT-licensed, Python-based and pushed Aug 12, 2026; README documents broad RSA/CTF attack methods and pytest coverage. Treat as a tool-evaluation lead, not an automatic dependency adoption."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-08-17T19:39:42Z",
+      "content_fingerprint": "50a0708cb545307f9d829acd60537639ab16657270b43e590edd11226e32e4e3",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Successfully reopened the official cs.CR recent list after the prior timeout. The Aug 17 list showed 30 entries for the day and 184 recent entries total. Independently opened arXiv:2608.13792 and arXiv:2608.13784; both are preprints and are summarized conservatively."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-17T07:43:55Z",
+      "content_fingerprint": "0eab47bb499757fdfe0c670fe9e6bf4e6e660361a9a44e287bbf1890ad1de5d8",
+      "previous_fingerprint": "d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec",
+      "change_state": "changed",
+      "note": "Reviewed the current Sherlock bug-bounty listing and program pages. The listing now highlights Usual Labs at 16,000,000 USDC and Aave V4 at 2,500,000 USD; Aave V4 is verified LIVE with a 2,500,000 USD maximum reward and Midas remains LIVE at 500,000 USDC. The full Scope tab contents were not available in the fetched page, so no active testing case was created."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-08-17T07:43:55Z",
+      "content_fingerprint": "6532529d2b340e5f8f9ff59a835c8f44d6756c2e1dd5d832faf825a37edc118a",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed the live CTFtime upcoming calendar. The next listed event is CTFZone on August 19; the next online window begins August 21 with BrunnerCTF, PwnSec, z0d1ak, Haruulzangi, E0F and TallDwarf, followed by COMPFEST and ASIS Quals August 29-30. Existing late-August intelligence already covers the useful planning window, so no duplicate feed item was added."
+    },
+    {
+      "source_id": "hackerone-directory",
+      "checked_at": "2026-08-17T07:43:55Z",
+      "content_fingerprint": "9d2c0567f4a1ca4a2ca9ec498c34b31cce3edba4b3b7193df4de3e674f5858d5",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed the official HackerOne Program Directory and current HackerOne documentation. The Directory remains the discovery surface; official docs expose Active Program and Offers bounties filters. No individual program was promoted because exact scope, rules, disclosure preferences and reward conditions remain program-specific."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "checked_at": "2026-08-17T07:43:55Z",
+      "content_fingerprint": "57c0cd73dab578a26a093ad87d0546745c7894759e985174ed209a2f82b44b70",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed the official Code4rena audits page. It currently shows submissions closed; K2 ($135,000 USDC) and Rujira ($40,000 USDC) are report-in-progress, with completed audits below. No currently open contest was promoted and no testing was performed."
+    },
+    {
+      "source_id": "sherlock-contests",
+      "checked_at": "2026-08-17T07:43:55Z",
+      "content_fingerprint": "c08885d4abf54e312df5b4e6a97881d268967e6f81df69adb25c547f63160aa6",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed the official Sherlock contests page. The fetched current page displays All 0 and no active/upcoming contest cards, so no contest was promoted. This check does not affect separately tracked Sherlock bug-bounty programs."
+    },
+    {
+      "source_id": "algora-bounties",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Algora bounty discovery. ProjectDiscovery currently exposes open GitHub-linked bounties, but no individual bounty was promoted because issue state, acceptance criteria, competing claims/landed fixes and payout terms still need per-item verification."
+    },
+    {
+      "source_id": "topcoder-challenges",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "b20e3b6d097f23555653a9ef7af2cd50079409a161064832537e83da511a51a0",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Topcoder challenge discovery. The active challenge interface is available with registration/review filters; individual challenge reward, deadline, requirements and acceptance criteria still require per-item verification before promotion."
+    },
+    {
+      "source_id": "upwork-software-development",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "af90e52b45fe3c1f7ef8a1165acf5b3a0e3bdca6e6a0f00b182560b22cbc639d",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Upwork software-development discovery and observed current hourly/fixed-price listings. No posting was promoted because client legitimacy, exact payment terms, competition and delivery/acceptance requirements need per-job verification."
+    },
+    {
+      "source_id": "freelancer-software-development",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "3c530eafe68ab6d996eca93375b7a6b033bcbc3e158c49543c9b4ca6c61d905d",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Freelancer software-development discovery and observed current project listings with time-left and bid information. No posting was promoted because client legitimacy, payment terms, competition and acceptance criteria need per-job verification."
+    },
+    {
+      "source_id": "gitcoin-bounties",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "b368af7586cae66cc48a0ed7fde617a29e0c213a512191958bacbd6e64154e2a",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Gitcoin's official bounty-mechanism reference. It documents task-based funding with defined deliverables, rewards, claiming, review and payment release, but it is not itself a guaranteed live bounty catalog; no specific bounty was promoted."
+    },
+    {
+      "source_id": "intigriti-public-programs",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "fefc385faf1303ec6494b8bef24c765b723f7d25bdf1cbe8a46f6cdacadd6774",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Intigriti public programs and confirmed current public bug-bounty/VDP discovery. No security case was created; exact scope, exclusions, prohibited techniques, rate limits, safe-harbor terms, severity/reward rules and submission requirements remain mandatory before testing."
+    },
+    {
+      "source_id": "bugcrowd-engagements",
+      "checked_at": "2026-08-16T22:37:00Z",
+      "content_fingerprint": "34080c0dfce5ec0f70c27c369283910d26423b1fa9ab29e4ed4d15cdfe3a2872",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed Bugcrowd researcher engagement discovery documentation confirming bug-bounty/VDP/pen-test search and filters for rewards, scope, target category and dates. No security case was created; the exact engagement brief remains required before any testing."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-08-16T19:39:00Z",
+      "content_fingerprint": "c632677c3c2573487e67f95c52ceca777d1a4520be28997c31ce670a07baf6e8",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Verified Challenge.gov was sunset on March 30, 2026 and USA.gov is now the official active federal challenges discovery page."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-16T19:39:00Z",
+      "content_fingerprint": "45e75e1f2fce1390b65487e81b809ff3f841121578419306fe577e17b0ad7cbc",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Reviewed official upcoming ETHGlobal calendar; ETHOnline 2026 remains listed for Sep 4-16 with Tokyo and Mumbai events later in 2026."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-08-16T19:39:00Z",
+      "content_fingerprint": "d63886bde2b4d926336ce43ff5fb91c1183de35e64516e5fdec067d5bc5714ec",
+      "previous_fingerprint": null,
+      "change_state": "first-seen",
+      "note": "Verified several current Sherlock bug-bounty pages reporting LIVE status and six-figure maximum rewards; scope must be opened and preserved before any testing."
+    }
   ]
 }

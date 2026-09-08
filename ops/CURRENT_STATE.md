@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-09-08 07:21 UTC
+Last reconciled: 2026-09-08 08:09:49 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -73,3 +73,13 @@ This integrity pass began from actual default-branch commit `901f481293fec25907f
 ## Next handoff
 
 Repo Integrity / Build Integration should merge this coordination update only after fresh exact-head validation is green. Then perform a history-preserving work-queue/integration-queue/handoff reconciliation and the separate bounded Aug. 29 morning canonical replay. Do not advance Aug. 29 afternoon or later contributed research until the five-record morning replay and matching registry timestamps are independently verified green.
+
+## Build replay staging — Aug. 29 morning
+
+- Baseline `main`: `bc91575ef1148ba124c53f502f03769715b67db3` (PR #147 merge); exact-main Core and Pages push workflows succeeded.
+- `build/replay-aug29-morning-20260908` staged the repository-native replay of `intelligence/feeds/2026-08-29-source-health.json`.
+- Exactly five source-history records were added at `2026-08-29T07:38:35Z` and only the five matching registry `last_checked_at` values advanced.
+- Branch validation passed the Aug. 29 readiness regression, source-history/registry validation, source report, intelligence validation, site-data generation, and maintenance check.
+- This is staged, not merged. `main` remains canonical only through Aug. 28 afternoon until independent integrity review and merge.
+- No raw research evidence, solve claim, tool maturity, opportunity status, authorization boundary, or bespoke site HTML changed.
+- After merge, Aug. 29 afternoon is the next chronological replay lane.
