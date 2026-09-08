@@ -49,10 +49,14 @@ Repository version: `v3.1.0` (README)
 - This post-merge integrity branch updates repository truth without changing source history, registry freshness, raw evidence, tools, cases, opportunities, authorization boundaries, or site HTML.
 - `docs/WORK_QUEUE.md`, the Aug. 29 `data/integration_queue.json` item, and the append-only handoff should next be finalized to record PR #148 as merged/integrated before Aug. 29 afternoon is replayed. Preserve prior queue and handoff history rather than reconstructing it.
 
-## Exact next action
+## Current operating priorities
 
 1. Finalize the post-merge coordination wording for PR #148: mark the Aug. 29 morning queue item integrated, update the work-queue P2 row to identify Aug. 29 afternoon as the next gate, and append an integrity handoff recording the exact PR #148 head and post-merge green runs.
 2. Independently inspect `intelligence/feeds/2026-08-29-afternoon-source-health.json` against canonical Aug. 29 morning history.
 3. Recompute every protected fingerprint from preserved observation text and verify each predecessor against the latest canonical record for that source.
 4. If any contributed hash is invalid, preserve the raw snapshot unchanged and create a separate provenance-safe reconciliation rather than rewriting evidence.
 5. If valid, replay only evidence-backed Aug. 29 afternoon records, advance only matching registry timestamps, regenerate repository-managed site/source outputs, and require source-history, registry, collection-report, intelligence, Agent Operations/site-data, Core, Intelligence Source Report, Daily Maintenance, and Pages validation before Aug. 30 advances.
+
+## Next handoff
+
+Finalize the PR #148 coordination status history-preservingly, then verify and process Aug. 29 afternoon as the next chronological replay gate. Preserve raw evidence unchanged; if contributed hashes or predecessor links are invalid, create a separate reconciliation rather than rewriting the contribution. Do not advance Aug. 30 or later research until the Aug. 29 afternoon replay and generated user-facing/Agent Operations data are independently green.
