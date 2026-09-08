@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-08T19:38:19Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "418e9a7c7c101aa499fe76114c6b614ab4c82ba0",
+  "purpose": "Preserve a bounded Sep. 8 source-health pass from current main after the canonical Aug. 29 morning replay, without overtaking the still-required Aug. 29 afternoon and later chronology. Record the material K17 CTF schedule correction plus stable ETHOnline and arXiv checks without duplicating later contributed research.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming and k17 ctf official | k17 ctf 2026 is now confirmed by organizer for sep 11 10:00 utc to sep 12 10:00 utc, 24 hours | organizer says open to everyone, teams any size, solo allowed, categories include web pwn misc crypto rev golf beginner | ctftime listing still displays an older sep 11 to sep 13 shell but includes a note that event was shortened to 24 hours ending sep 12 10:00 utc | ctftime lists first prize as one ida pro essential license | registration is available via organizer scoreboard",
+      "sha256": "2b1dec95ccb3de93c8eca6c9fda4d045a4c9ea8a172c6d2ff540b3265bc1d872",
+      "primary_followup_urls": [
+        "https://k17ctf.secso.cc/",
+        "https://ctftime.org/event/3145"
+      ],
+      "note": "Material schedule correction. Prefer the organizer-primary 24-hour Sep. 11 10:00 UTC -> Sep. 12 10:00 UTC window over CTFtime's stale headline end date. CTFtime itself carries a note acknowledging the shortening. The organizer confirms open participation, any team size, solo play, registration, and challenge categories. CTFtime lists one IDA Pro Essential license for first place; treat that prize as discovery evidence unless organizer prize terms are preserved before participation."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events and ethonline 2026 prizes | ethonline remains sep 4 to sep 16 2026 async hackathon | official prize page currently lists 11 sponsor pools with displayed headline amounts totaling 80000 usd | no material prize total change from sep 7 contributed evidence | apply to attend remains visible",
+      "sha256": "01c8331f7e781b4106e932e7dd1465ad7da4cf0c5d64ddebb492455b8f7821b5",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Stable source-health check. The official prize surface still displays 11 sponsor pools totaling $80,000 in headline amounts. No duplicate intelligence promotion is warranted. Participant-specific acceptance/stake state remains outside the publicly verified evidence in this pass."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cryptography recent | recent cs.cr submissions page still tops out at mon sep 7 2026 with 33 entries for that batch | no sep 8 batch visible at check time | continuity arxiv 2609.05269 remains in sep 7 batch and is already preserved as contributed evidence in pr 144",
+      "sha256": "6284ae2b4cea5d8296cf12b02146506a8784eac6b2b96ce9e710ecc9d00c182b",
+      "primary_followup_urls": [
+        "https://arxiv.org/list/cs.CR/recent",
+        "https://arxiv.org/abs/2609.05269"
+      ],
+      "note": "No Sep. 8 cs.CR batch was visible at check time, so no new paper is promoted. CONTINUITY is already represented by later contributed PR #144 and is not duplicated here."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "K17 CTF 2026 shortened to 24 hours",
+      "status": "verified-current-ctf-schedule-correction",
+      "confidence": "high",
+      "relevance": "medium-high",
+      "summary": "The K17 CTF organizer-primary site now confirms a 24-hour online event from September 11, 2026 at 10:00 UTC through September 12 at 10:00 UTC. CTFtime's event shell still shows the former September 13 end date but explicitly notes that the competition was shortened to 24 hours.",
+      "eligibility_and_cost": "Organizer says participation is open to everyone, teams may be any size, solo play is allowed, and registration is available through the event scoreboard. No entry fee is stated on the organizer page fetched in this pass.",
+      "scope_and_authorization": "This finding authorizes nothing beyond participation under the final event rules. If the suite participates, preserve the organizer/scoreboard rules and interact only with event-provided challenge infrastructure.",
+      "prize_evidence": "CTFtime lists first place as one IDA Pro Essential license. The organizer page fetched in this pass names Hex-Rays among sponsors but does not expose prize terms, so the prize remains discovery-level rather than organizer-verified.",
+      "recommended_action": "If selecting a near-term practice CTF before PwnSec, use the organizer-primary Sep. 11 10:00 -> Sep. 12 10:00 UTC window. Re-open and preserve final rules immediately before participation; do not rely on the stale CTFtime headline end date."
+    }
+  ],
+  "chronology": "Canonical source history now reaches Aug. 29 morning after PR #148. Do not replay this Sep. 8 snapshot yet. Process Aug. 29 afternoon next, then Aug. 30 morning/afternoon and later contributed research in timestamp/source-overlap order before this snapshot becomes eligible for canonical source-history integration.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, event listing, or news item was treated as authorization for security testing."
+}
