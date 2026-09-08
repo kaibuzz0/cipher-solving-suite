@@ -1,0 +1,436 @@
+{
+  "generated_at": "2026-09-08T08:09:48Z",
+  "summary": {
+    "total_sources": 16,
+    "due_sources": 16,
+    "changed_sources": 14,
+    "history_entries": 77
+  },
+  "due_sources": [
+    {
+      "id": "ethglobal-events",
+      "name": "ETHGlobal Events",
+      "source_type": "official",
+      "url": "https://ethglobal.com/events",
+      "categories": [
+        "hackathon",
+        "opportunity"
+      ],
+      "tier": "primary",
+      "freshness_hours": 24,
+      "last_checked_at": "2026-08-29T07:38:35Z",
+      "assigned_agent": "opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Official ETHGlobal event calendar. Verify event-specific eligibility, deadlines and prize rules before publishing those details.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "ctftime-upcoming",
+      "name": "CTFtime Upcoming Events",
+      "source_type": "aggregator",
+      "url": "https://ctftime.org/event/list/upcoming",
+      "categories": [
+        "ctf",
+        "opportunity"
+      ],
+      "tier": "discovery",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-29T07:38:35Z",
+      "assigned_agent": "ctf-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Use for discovery. Follow through to organizer pages before treating rules, scope, registration or prize claims as verified.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "github-search",
+      "name": "GitHub Search",
+      "source_type": "platform",
+      "url": "https://github.com/search",
+      "categories": [
+        "github",
+        "tool",
+        "research"
+      ],
+      "tier": "discovery",
+      "freshness_hours": 24,
+      "last_checked_at": "2026-08-28T19:37:39Z",
+      "assigned_agent": "github-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Use to discover relevant repositories and tools. Verify repository license, recent maintenance, release status and documentation before recommending adoption.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "challenge-gov",
+      "name": "USA.gov Active Federal Challenges",
+      "source_type": "official",
+      "url": "https://www.usa.gov/find-active-challenge",
+      "categories": [
+        "opportunity",
+        "research"
+      ],
+      "tier": "primary",
+      "freshness_hours": 24,
+      "last_checked_at": "2026-08-29T07:38:35Z",
+      "assigned_agent": "opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Official successor discovery page after Challenge.gov was sunset on March 30, 2026. An item labeled active can cover the overall challenge lifecycle even after a submission phase has closed, so verify the actual submission deadline, current phase, eligibility, judging criteria and award terms on the official host/agency page. The stable source ID is retained for compatibility.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "hackerone-directory",
+      "name": "HackerOne Program Directory",
+      "source_type": "platform",
+      "url": "https://hackerone.com/directory/programs",
+      "categories": [
+        "bug-bounty",
+        "opportunity"
+      ],
+      "tier": "primary",
+      "freshness_hours": 24,
+      "last_checked_at": "2026-08-17T07:43:55Z",
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Program discovery only. A program listing is not authorization for arbitrary testing; agents must open and preserve the exact target scope and rules before security work.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "code4rena-contests",
+      "name": "Code4rena Contests",
+      "source_type": "platform",
+      "url": "https://code4rena.com/contests",
+      "categories": [
+        "bug-bounty",
+        "opportunity",
+        "crypto"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-22T07:42:16Z",
+      "assigned_agent": "web3-audit-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Track public audit competitions. Verify active contest status, scope, repository/commit, dates and award rules before creating a case.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "sherlock-contests",
+      "name": "Sherlock Contests",
+      "source_type": "platform",
+      "url": "https://audits.sherlock.xyz/contests",
+      "categories": [
+        "bug-bounty",
+        "opportunity",
+        "crypto"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "web3-audit-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Track public smart-contract audit contests. Preserve exact contest scope/rules before testing.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "sherlock-bounties",
+      "name": "Sherlock Bug Bounties",
+      "source_type": "platform",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "categories": [
+        "bug-bounty",
+        "opportunity",
+        "crypto"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-29T07:38:35Z",
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Track Sherlock-hosted bug-bounty programs. A LIVE listing is only a discovery lead; preserve and verify the exact scope, exclusions, severity rules and submission terms before any testing.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "arxiv-cryptography",
+      "name": "arXiv Cryptography Research",
+      "source_type": "research-index",
+      "url": "https://arxiv.org/list/cs.CR/recent",
+      "categories": [
+        "research",
+        "crypto"
+      ],
+      "tier": "discovery",
+      "freshness_hours": 24,
+      "last_checked_at": "2026-08-29T07:38:35Z",
+      "assigned_agent": "research-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Research discovery source. Distinguish preprints from peer-reviewed work and summarize claims conservatively.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "algora-bounties",
+      "name": "Algora Open-Source Bounties",
+      "source_type": "platform",
+      "url": "https://algora.io/",
+      "categories": [
+        "coding-bounty",
+        "github",
+        "opportunity"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "coding-opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Discover GitHub/open-source coding bounties, but the homepage bounty navigation can surface completed or historical challenge pages. Before promotion, verify the challenge itself is still open, the underlying issue/task remains available, reward and acceptance criteria are current, competing claims or landed fixes do not make it obsolete, required technologies are understood, and payout terms are clear.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "topcoder-challenges",
+      "name": "Topcoder Challenges",
+      "source_type": "platform",
+      "url": "https://www.topcoder.com/challenges",
+      "categories": [
+        "coding-challenge",
+        "ai",
+        "opportunity"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "coding-opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Track active development, AI, data and related challenges. Verify registration/open status, reward, deadline, submission and acceptance criteria, technology requirements, competition state and any final-fix obligations before promoting a challenge.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "upwork-software-development",
+      "name": "Upwork Software Development Jobs",
+      "source_type": "platform",
+      "url": "https://www.upwork.com/freelance-jobs/software-development/",
+      "categories": [
+        "freelance",
+        "coding",
+        "opportunity"
+      ],
+      "tier": "discovery",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "freelance-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Use as a discovery lane for software-development freelance work. Verify each posting remains open, budget and payment terms, client/project legitimacy, technical requirements, deadline, acceptance/delivery expectations and competition before recommending it.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "freelancer-software-development",
+      "name": "Freelancer Software Development Jobs",
+      "source_type": "platform",
+      "url": "https://www.freelancer.com/jobs/software-development/",
+      "categories": [
+        "freelance",
+        "coding",
+        "opportunity"
+      ],
+      "tier": "discovery",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "freelance-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Use as a discovery lane for programming jobs and contests. Verify each project/contest remains open, budget or prize, payment terms, client legitimacy, technology requirements, deadline, acceptance criteria and existing bid/entry competition before recommending it.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "gitcoin-bounties",
+      "name": "Gitcoin Bounty Mechanisms",
+      "source_type": "official",
+      "url": "https://gitcoin.co/mechanisms/bounties",
+      "categories": [
+        "coding-bounty",
+        "web3",
+        "opportunity"
+      ],
+      "tier": "discovery",
+      "freshness_hours": 72,
+      "last_checked_at": "2026-08-16T22:37:00Z",
+      "assigned_agent": "coding-opportunity-scout",
+      "enabled": true,
+      "publish_default_confidence": "medium",
+      "notes": "Official Gitcoin reference for task-based bounty mechanisms, not a guarantee of a current live bounty catalog. Follow any lead to the actual funder/project/platform and verify open status, deliverables, reward, acceptance criteria, competing claims and payment terms before promoting it.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "intigriti-public-programs",
+      "name": "Intigriti Public Bug Bounty Programs",
+      "source_type": "platform",
+      "url": "https://www.intigriti.com/researchers/bug-bounty-programs",
+      "categories": [
+        "bug-bounty",
+        "opportunity"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Public-program discovery only; public visibility is not blanket authorization. Before testing, preserve the exact program brief and verify in-scope assets, exclusions, prohibited techniques, request/rate limits, safe-harbor terms, severity/reward rules and submission requirements.",
+      "freshness_state": "due"
+    },
+    {
+      "id": "bugcrowd-engagements",
+      "name": "Bugcrowd Public Engagements",
+      "source_type": "platform",
+      "url": "https://bugcrowd.com/engagements",
+      "categories": [
+        "bug-bounty",
+        "opportunity"
+      ],
+      "tier": "primary",
+      "freshness_hours": 12,
+      "last_checked_at": "2026-08-18T07:38:11Z",
+      "assigned_agent": "bounty-scout",
+      "enabled": true,
+      "publish_default_confidence": "high",
+      "notes": "Discover public Bugcrowd engagements. A listing does not authorize activity outside its brief; verify engagement status, exact targets/scope, exclusions, prohibited techniques, rate limits, safe-harbor/disclosure terms, severity/reward rules and submission requirements before any security testing.",
+      "freshness_state": "due"
+    }
+  ],
+  "changed_sources": [
+    {
+      "source_id": "ethglobal-events",
+      "name": "ETHGlobal Events",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c",
+      "previous_fingerprint": "8ae70a5efe8985d347d6fa3d8da1ee68767475a612395c3d1c9b150217fe6a24",
+      "change_state": "changed",
+      "note": "ETHOnline remains the next substantive ETHGlobal build opportunity. Existing canonical intelligence already covers it, so no duplicate feed item is recommended."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "name": "CTFtime Upcoming Events",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "previous_fingerprint": "8ab1541b75153d193963da65855a7c07f99bf9a26bf701b45b1fbc754272a19b",
+      "change_state": "changed",
+      "note": "Material calendar clarification: Iran Tech Olympics CTF 2026 and ASIS CTF Quals 2026 state they have joined forces and will be held as one merged event. Avoid counting them as two independent opportunities when estimating the Aug. 29 competition window."
+    },
+    {
+      "source_id": "github-search",
+      "name": "GitHub Search",
+      "checked_at": "2026-08-28T19:37:39Z",
+      "content_fingerprint": "db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b",
+      "previous_fingerprint": "993f3601dafc2f452f9267c79a861f1e4de5e33e0065e7be100191cdd95dcca9",
+      "change_state": "changed",
+      "note": "RsaCracker is an evaluation lead only. Current evidence supports local review with deterministic CTF fixtures and dependency/supply-chain inspection before any integration decision."
+    },
+    {
+      "source_id": "challenge-gov",
+      "name": "USA.gov Active Federal Challenges",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "previous_fingerprint": "1d4ecd2dfb8dedb600589fa4980dfaa1ce96d71a63dd54201821af7fbfc32aed",
+      "change_state": "changed",
+      "note": "The xTech|Search 10 conflict remains unresolved on Aug. 29. The Army site simultaneously presents the competition as OPEN and Coming Soon, displays Aug. 5-Sep. 30, and still links to an RFI placeholder. SBIR.gov lists related topics as open Aug. 26-Sep. 23 and explicitly warns its copies may not be the latest agency version. Do not publish a definitive submission deadline or create active work until the actual Army RFI/application path is available and internally consistent."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "name": "Code4rena Contests",
+      "checked_at": "2026-08-22T07:42:16Z",
+      "content_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "previous_fingerprint": "1ad4a847998aae2c914414769818d8056a00d259c2d8fa4c177bcc0af3244228",
+      "change_state": "changed",
+      "note": "Official Code4rena homepage now states the platform is winding down and active competitions/bounties are being seen through to completion. Current surface shows 0 bounties, Rujira report in progress and K2 completed."
+    },
+    {
+      "source_id": "sherlock-contests",
+      "name": "Sherlock Contests",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "ef8d92bf429af77cad4bfc2296c090fffb3fb999852c0943708a2a9e30225f70",
+      "previous_fingerprint": "c08885d4abf54e312df5b4e6a97881d268967e6f81df69adb25c547f63160aa6",
+      "change_state": "changed",
+      "note": "Reviewed the official Sherlock contests page. It still shows All 0 and no active/upcoming contest cards. No contest was promoted; the fingerprint changed because this check uses a normalized compact state representation rather than the first-seen observation format."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "name": "Sherlock Bug Bounties",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "previous_fingerprint": "e86ebfff5d52fc612e515a6bb6a6b771131938816faceed5e1782d14957860c9",
+      "change_state": "changed",
+      "note": "No stronger bounty change was found. Alphix remains the most recent listing and is LIVE at 30,000 USDC. Existing higher-value programs remain discovery leads only; exact scope and rules are mandatory before any testing."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "name": "arXiv Cryptography Research",
+      "checked_at": "2026-08-29T07:38:35Z",
+      "content_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "previous_fingerprint": "b8cd96dfef25b74134fe858391b0aa4447f5b779bc46503443aaa8e23a00ef2c",
+      "change_state": "changed",
+      "note": "The recent index is current through the Friday Aug. 28 batch. No additional paper cleared the repository's publication threshold in this pass; avoid duplicate research noise while the Aug. 28 CTF-provenance paper remains pending integration."
+    },
+    {
+      "source_id": "algora-bounties",
+      "name": "Algora Open-Source Bounties",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "db528ee8efafffc3b5a3725fc0ff0c604fe6dc2566a74afee008a8005f984ccb",
+      "previous_fingerprint": "bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff",
+      "change_state": "changed",
+      "note": "Reviewed Algora's current homepage and the bounty links it surfaces. Turso explicitly says Challenge Completed, submissions closed and all bounties awarded; TSPerf and Prettier show winners. The Golem page advertises a 15,000 bounty but exposes old launch-event wording without a current 2026 deadline. No individual Algora challenge was promoted; registry notes now warn that homepage bounty navigation can lead to completed/historical pages."
+    },
+    {
+      "source_id": "topcoder-challenges",
+      "name": "Topcoder Challenges",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "fca388228f224780a05124099923da4624adcfd18981de4a4132b78445837e02",
+      "previous_fingerprint": "b20e3b6d097f23555653a9ef7af2cd50079409a161064832537e83da511a51a0",
+      "change_state": "changed",
+      "note": "Reviewed the Topcoder challenge listing surface. The listing remains available, but dynamic per-challenge registration, reward, deadline and acceptance details still require item-level verification before promotion. No individual challenge was promoted in this pass."
+    },
+    {
+      "source_id": "upwork-software-development",
+      "name": "Upwork Software Development Jobs",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "566581fdf1b36b116a1afad15979f82945620b68afee22686bd7c002e098d0f5",
+      "previous_fingerprint": "af90e52b45fe3c1f7ef8a1165acf5b3a0e3bdca6e6a0f00b182560b22cbc639d",
+      "change_state": "changed",
+      "note": "Reviewed the current Upwork software-development jobs page. Current listings are visible, but no individual posting was promoted because client legitimacy, payment terms, competition and acceptance/delivery criteria require per-job verification."
+    },
+    {
+      "source_id": "freelancer-software-development",
+      "name": "Freelancer Software Development Jobs",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "132600afd7f32dc10f46f5b73741541c1df226b730d6f1c6342b0cdffd6fc594",
+      "previous_fingerprint": "3c530eafe68ab6d996eca93375b7a6b033bcbc3e158c49543c9b4ca6c61d905d",
+      "change_state": "changed",
+      "note": "Reviewed the current Freelancer software-development jobs page. Current projects are visible, but no individual posting was promoted because budget/payment terms, client legitimacy, competition and acceptance criteria require per-project verification."
+    },
+    {
+      "source_id": "intigriti-public-programs",
+      "name": "Intigriti Public Bug Bounty Programs",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "f9440df1110aebd45b0f641d75f5620992be0c3fc21d15f7c1f0fd99127f2c3b",
+      "previous_fingerprint": "fefc385faf1303ec6494b8bef24c765b723f7d25bdf1cbe8a46f6cdacadd6774",
+      "change_state": "changed",
+      "note": "Reviewed Intigriti public programs sorted by newest. Current entries include multiple VDPs, Challenge 0726, NVIDIA Public Bug Bounty and Daytona Bug Bounty. Independently opened NVIDIA's brief and confirmed exact tiered scope/reward information is available there; no active case or testing was started."
+    },
+    {
+      "source_id": "bugcrowd-engagements",
+      "name": "Bugcrowd Public Engagements",
+      "checked_at": "2026-08-18T07:38:11Z",
+      "content_fingerprint": "ad2009e02ab9ff6b9d01fb90538ab66ee330d11372b1efe469eb7a02d676bbd5",
+      "previous_fingerprint": "34080c0dfce5ec0f70c27c369283910d26423b1fa9ab29e4ed4d15cdfe3a2872",
+      "change_state": "changed",
+      "note": "Reviewed the Bugcrowd public engagements URL. The fetchable surface exposed only the login shell in this pass, so no individual engagement facts were promoted. Exact engagement briefs remain mandatory before any testing."
+    }
+  ]
+}

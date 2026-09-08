@@ -301,3 +301,14 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Evidence / artifacts:** PR #67; merge `f7bbeabd...`; protected raw snapshot blob SHA `2c5eeaa8...`; `data/source_check_history.json`; `data/intelligence_sources.json`; `data/integration_queue.json`; workflow runs above.
 - **Known risks / blockers:** A direct public-site fetch from this runtime returned a cache miss, so release health is based on the successful Pages workflow rather than an independent browser render. PR #52 still lacks complete Orbital Clarity rules; PR #56 retains unresolved HHS timezone/judging/travel/IP gates; PR #62 and PR #66 are later contributed research and must not be copied wholesale into canonical freshness. Root artifact migration and external provenance for `310_challenge.png` remain unresolved.
 - **Next action:** Reconcile PR #52 against current `main`, preserve its raw evidence, independently verify complete official Orbital Clarity rules before actionability claims, and rerun source/intelligence/site-data/Core/Maintenance validation on any canonical integration branch. Continue PR #56, PR #62, and PR #66 only afterward in chronology/source-overlap order.
+
+---
+
+### 2026-09-08T08:09:49Z — Build Integration / Aug. 29 morning replay staging
+
+- **Branch:** `build/replay-aug29-morning-20260908` from exact main `bc91575ef1148ba124c53f502f03769715b67db3`.
+- **Built / integrated:** Native replay of the preserved Aug. 29 morning source-health snapshot into branch-canonical history; exactly five `2026-08-29T07:38:35Z` records and only five matching source-registry timestamp advances; stale work/integration queue chronology reconciled.
+- **Verification:** replay dry-run and write; explicit exact-scope assertions; `tests/test_aug29_source_readiness.py` 2/2; source-history 77 checks valid; source registry 16 sources valid; source report; intelligence validation; site-data generation; maintenance check.
+- **Collision handling:** Stale Aug. 29 replay branches were not reused. Later research PRs remain untouched and chronology-blocked.
+- **Failures / risks:** Three temporary execution attempts failed before commit (missing pytest; queue selector mismatch; then handoff EOF whitespace). Each failure occurred after preserving or validating the replay contract, and no failed attempt pushed canonical replay data. This branch remains noncanonical until independent PR verification and merge.
+- **Next integrity verification:** Confirm exact five-record/five-registry scope, no raw evidence rewrite, generated Pages/data compatibility, and exact-head Core/maintenance checks before merge; then advance Aug. 29 afternoon.

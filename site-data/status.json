@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-09-08T08:09:48.766909+00:00",
+  "active_cases": 1,
+  "tools": 20,
+  "toolsets": 1,
+  "toolsets_needing_attention": 0,
+  "repository_files": 104,
+  "previewable_files": 72,
+  "opportunities": 21,
+  "prompts": 5,
+  "intelligence": 13,
+  "intelligence_sources": 16,
+  "sources_due": 16,
+  "sources_changed": 14,
+  "source_history_entries": 77,
+  "artifacts": 40,
+  "artifacts_review_before_move": 0
+}

@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-09-08T08:09:48.686494+00:00",
+  "summary": {
+    "total": 1,
+    "registered": 1,
+    "healthy": 1,
+    "needs_attention": 0
+  },
+  "items": [
+    {
+      "id": "repo-factory",
+      "name": "Repo Factory",
+      "path": "toolsets/repo-factory",
+      "version": "0.1.0",
+      "maturity": "experimental",
+      "entrypoint": "export_toolset.py",
+      "description": "Exportable AI-friendly repository bootstrap with diagnostic CI, blueprints, research logs, work queues, handoffs, checklists, current state, and integration inbox.",
+      "schema_version": 1,
+      "dependencies": [],
+      "outputs": [
+        "AGENTS.md",
+        "ops/CURRENT_STATE.md",
+        "docs/PROJECT_BLUEPRINT.md",
+        "docs/RESEARCH_LOG.md",
+        "docs/WORK_QUEUE.md",
+        "docs/AGENT_HANDOFF.md",
+        "docs/BUILD_CHECKLIST.md",
+        "data/integration_queue.json",
+        ".github/workflows/diagnostic-ci.yml"
+      ],
+      "manifest_path": "toolsets/repo-factory/toolset.json",
+      "readme_path": "toolsets/repo-factory/README.md",
+      "registered": true,
+      "health": "ok",
+      "warnings": [],
+      "files": [
+        "toolsets/repo-factory/export_toolset.py",
+        "toolsets/repo-factory/README.md",
+        "toolsets/repo-factory/templates/.github/workflows/diagnostic-ci.yml",
+        "toolsets/repo-factory/templates/AGENTS.md",
+        "toolsets/repo-factory/templates/data/integration_queue.json",
+        "toolsets/repo-factory/templates/docs/AGENT_HANDOFF.md",
+        "toolsets/repo-factory/templates/docs/BUILD_CHECKLIST.md",
+        "toolsets/repo-factory/templates/docs/PROJECT_BLUEPRINT.md",
+        "toolsets/repo-factory/templates/docs/RESEARCH_LOG.md",
+        "toolsets/repo-factory/templates/docs/WORK_QUEUE.md",
+        "toolsets/repo-factory/templates/ops/CURRENT_STATE.md",
+        "toolsets/repo-factory/toolset.json"
+      ],
+      "tools": [
+        {
+          "id": "repo-factory-exporter",
+          "name": "Repo Factory Exporter",
+          "category": "toolset",
+          "path": "toolsets/repo-factory/export_toolset.py",
+          "command": "python toolsets/repo-factory/export_toolset.py /path/to/new-repo --project-name \"My Project\" --dry-run",
+          "description": "Export the reusable Repo Factory toolset into a new repository without overwriting existing files unless explicitly forced.",
+          "maturity": "experimental",
+          "user_visible": true
+        }
+      ]
+    }
+  ]
+}
