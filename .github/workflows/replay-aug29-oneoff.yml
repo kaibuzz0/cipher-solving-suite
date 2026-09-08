@@ -1,0 +1,131 @@
+name: One-off Aug 29 morning replay
+
+on:
+  push:
+    branches:
+      - build/replay-aug29-morning-20260908
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: build/replay-aug29-morning-20260908
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify baseline and replay snapshot
+        run: |
+          set -euo pipefail
+          python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-29-source-health.json --dry-run > /tmp/replay-dry-run.json
+          python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-29-source-health.json > /tmp/replay-write.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          stamp = '2026-08-29T07:38:35Z'
+          snapshot = json.loads(Path('intelligence/feeds/2026-08-29-source-health.json').read_text())
+          expected = {o['source_id']: o['sha256'] for o in snapshot['observations']}
+          assert len(expected) == 5, expected
+          history = json.loads(Path('data/source_check_history.json').read_text())
+          records = [r for r in history['checks'] if r.get('checked_at') == stamp and r.get('source_id') in expected]
+          assert len(records) == 5, records
+          assert len({r['source_id'] for r in records}) == 5, records
+          for r in records:
+              assert r['content_fingerprint'] == expected[r['source_id']], r
+          registry = json.loads(Path('data/intelligence_sources.json').read_text())
+          by_id = {s['id']: s for s in registry['sources']}
+          for source_id in expected:
+              assert by_id[source_id]['last_checked_at'] == stamp, (source_id, by_id[source_id]['last_checked_at'])
+          result = json.loads(Path('/tmp/replay-write.json').read_text())
+          assert len(result['replayed']) == 5, result
+          assert not result['skipped_idempotent'], result
+          PY
+      - name: Run bounded validation
+        run: |
+          set -euo pipefail
+          python -m pytest tests/test_aug29_source_readiness.py -q
+          python scripts/source_check_history.py validate
+          python scripts/source_registry.py validate
+          python scripts/source_check_history.py report
+          python scripts/intelligence_feed.py validate
+          python scripts/build_site_data.py
+          python scripts/maintenance_check.py
+      - name: Reconcile coordination state without rewriting history
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, re
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
+          branch = 'build/replay-aug29-morning-20260908'
+          stamp = '2026-08-29T07:38:35Z'
+
+          # Work queue: replace only the stale link-health row; preserve completed history.
+          p = Path('docs/WORK_QUEUE.md')
+          text = p.read_text()
+          pattern = r'^\| P2 \| in-progress \| Add link health and catalog freshness checks \| build-agent \|.*$'
+          replacement = ('| P2 | in-progress | Add link health and catalog freshness checks | build-agent | '
+                         'Aug. 29 morning source health is now staged canonically at `2026-08-29T07:38:35Z` via the repository-native replay contract: exactly five history records and only the five matching registry timestamps. '
+                         'Independent PR CI/integrity verification is still required before merge. After merge, Aug. 29 afternoon is the next chronological replay lane; later Aug. 30+ research remains blocked until earlier overlapping source snapshots are processed in order. |')
+          new_text, n = re.subn(pattern, replacement, text, count=1, flags=re.M)
+          assert n == 1, 'stale P2 row not found exactly once'
+          p.write_text(new_text)
+
+          # Integration queue: update matching historical entries in place; do not delete/reorder items.
+          p = Path('data/integration_queue.json')
+          q = json.loads(p.read_text())
+          aug28 = []
+          aug29 = []
+          for item in q.get('items', []):
+              path = str(item.get('path',''))
+              if '2026-08-28-afternoon-source-health-reconciled.json' in path:
+                  aug28.append(item)
+              if '2026-08-29-source-health.json' in path and 'afternoon' not in path:
+                  aug29.append(item)
+          assert len(aug28) == 1, [i.get('id') for i in aug28]
+          assert len(aug29) == 1, [i.get('id') for i in aug29]
+          aug28[0]['status'] = 'integrated'
+          aug28[0]['next_action'] = 'Aug. 28 afternoon is canonical via PR #132. Aug. 29 morning is staged by the build replay branch; independently verify/merge that replay before advancing Aug. 29 afternoon.'
+          a = aug29[0]
+          a['status'] = 'needs-integration'
+          a['contributor'] = str(a.get('contributor','')).rstrip() + '; build-agent staged native replay on ' + branch
+          a['summary'] = 'The repository-native replay has staged exactly five 2026-08-29T07:38:35Z canonical history records and only the five matching source-registry timestamps from the preserved Aug. 29 morning snapshot. This remains needs-integration until independent PR CI/integrity verification and merge.'
+          a['verification'] = 'One-off branch execution required replay-snapshot --dry-run, replay-snapshot write, exactly five unique timestamp/source records matching snapshot hashes, five matching registry last_checked_at values, test_aug29_source_readiness, source-history validation, source-registry validation, source report generation, intelligence validation, site-data generation, and maintenance validation. Independent PR CI remains required.'
+          a['next_action'] = 'Repo Integrity must independently inspect the branch diff and exact-head CI, confirm five-record/five-registry-timestamp scope and no evidence rewrite, then merge. Only after merge may Aug. 29 afternoon advance.'
+          q['updated_at'] = now
+          p.write_text(json.dumps(q, indent=2) + '\n')
+
+          # Current state: make the replay branch truth explicit without pretending it is already main.
+          p = Path('ops/CURRENT_STATE.md')
+          text = p.read_text()
+          text = re.sub(r'^Last reconciled: .*$', 'Last reconciled: ' + now.replace('T',' ').replace('Z',' UTC'), text, count=1, flags=re.M)
+          marker = '## Build replay staging — Aug. 29 morning\n'
+          assert marker not in text
+          section = f'''\n## Build replay staging — Aug. 29 morning\n\n- Baseline `main` for this build pass is `bc91575ef1148ba124c53f502f03769715b67db3` (PR #147 merge), whose Core and Pages push workflows succeeded.\n- Branch `{branch}` staged the repository-native replay of `intelligence/feeds/2026-08-29-source-health.json`.\n- The replay wrote exactly five canonical source-history records at `{stamp}` and advanced only the five matching source-registry `last_checked_at` values.\n- Local branch validation passed: Aug. 29 readiness regression, source-history validation, source-registry validation, source report generation, intelligence validation, site-data generation, and maintenance validation.\n- This is **staged, not merged**. Canonical `main` must still be treated as ending at Aug. 28 afternoon until Repo Integrity independently verifies the branch diff and exact-head CI and merges it.\n- No raw research evidence, puzzle solve status, tool maturity, opportunity status, authorization boundary, or bespoke website HTML was changed.\n- After independent merge verification, Aug. 29 afternoon is the next chronological source replay lane.\n'''
+          text = text.rstrip() + '\n' + section
+          p.write_text(text)
+
+          # Append-only handoff: append a new entry only.
+          p = Path('docs/AGENT_HANDOFF.md')
+          text = p.read_text()
+          entry = f'''\n\n---\n\n### {now} — Build Integration / Aug. 29 morning canonical replay staging\n\n- **Branch / PR:** `{branch}` / PR to be opened after this execution commit.\n- **Objective:** Execute the long-blocked Aug. 29 morning replay through the repository-native `source-history` contract from current main without manually reconstructing provenance-bearing JSON.\n- **Changed:** Replayed `intelligence/feeds/2026-08-29-source-health.json` into canonical branch state, producing exactly five `{stamp}` history records and advancing only the five matching source-registry timestamps; reconciled the stale work-queue and integration-queue chronology; appended this handoff and current-state staging note. Raw research snapshots remain unchanged.\n- **Verification:** `replay-snapshot --dry-run`; native replay write; explicit five-record/five-source assertions against snapshot hashes; `python -m pytest tests/test_aug29_source_readiness.py -q`; source-history validate; source-registry validate; source report; intelligence validate; site-data build; maintenance check. PR CI and independent integrity verification remain required before merge.\n- **Collision handling:** Started from exact `main` `bc91575ef1148ba124c53f502f03769715b67db3`; stale older Aug. 29 replay branches were not reused; open later research PRs remain chronology-blocked and untouched.\n- **Known risks / blockers:** This branch is not canonical until merged. Do not advance Aug. 29 afternoon or later overlapping source research before exact-head CI and independent diff verification confirm the intended five-record/five-registry-timestamp scope.\n- **Next action:** Repo Integrity should verify the exact branch/PR head, confirm no raw evidence rewrite and exact replay scope, require Core plus relevant source/report/maintenance/Pages compatibility checks, and merge only if green. Then advance Aug. 29 afternoon chronologically.\n'''
+          p.write_text(text.rstrip() + entry + '\n')
+          PY
+      - name: Remove one-off workflow and commit staged replay
+        run: |
+          set -euo pipefail
+          rm .github/workflows/replay-aug29-oneoff.yml
+          git status --short
+          git diff --check
+          git config user.name 'cipher-suite-build-agent'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/source_check_history.json data/intelligence_sources.json data/integration_queue.json docs/WORK_QUEUE.md docs/AGENT_HANDOFF.md ops/CURRENT_STATE.md artifacts/intelligence-source-report.json site-data .github/workflows/replay-aug29-oneoff.yml
+          git commit -m 'build: replay Aug 29 morning source health'
+          git push origin HEAD:build/replay-aug29-morning-20260908
