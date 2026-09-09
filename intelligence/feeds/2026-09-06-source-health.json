@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-06T07:40:01Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "3568d061b8f0cd34c796f2f276fdd0cda8f1a00e",
+  "purpose": "Preserve a bounded Sep. 6 current-source research pass from exact current main without overtaking the chronological Aug. 29 and later canonical replay chain, while preserving the independently verified PwnSec CTF reschedule and AI-participation rules.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/3159/",
+      "observed": "ctftime upcoming | sep 6 2026 current upcoming calendar | pwnsec ctf 2026 is rescheduled for sep 12 1400 utc to sep 13 1400 utc and no longer merely postponed | official organizer pwnsec.ctf.ae confirms registration open free entry teams up to four and categories web crypto reverse pwn cloud forensics mobile misc | official ai policy has separate human and cyborg leaderboards and explicitly permits scripts agents and autonomous pipelines for cyborg teams | prizes currently tbd on ctftime | event rules authorize challenge solving only and prohibit attacking infrastructure",
+      "sha256": "b1b818bfa6723928b3ebac6cfd8570c4993c85849df21d81cb1b80445926e95f",
+      "primary_followup_urls": [
+        "https://pwnsec.ctf.ae/",
+        "https://ctftime.org/event/3159/"
+      ],
+      "note": "Material status correction. The canonical Aug. 17 intelligence item says PwnSec was postponed; the organizer now provides a replacement Sep. 12-13 UTC window, open registration, free entry, teams up to four, and explicit Human/Cyborg AI rules. The Cyborg lane permits scripts, agents and autonomous pipelines. Prize evidence remains unresolved/TBD. Hands-on work is limited to event challenges and published rules; the organizer explicitly says to attack challenges, not infrastructure."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 | sep 6 2026 current official prize page | 11 sponsor pools remain displayed totaling 80000 | the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 bazantic 3000 | no material prize change from sep 5 snapshot",
+      "sha256": "b4eb195c5657d3387ac154a51b37129a485503b35ab46def00352faff1bcde1e",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "No material change from the Sep. 5 contributed research snapshot. ETHOnline remains useful existing research, but this observation does not create another duplicate intelligence item or case."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cryptography | sep 6 2026 current recent index | no new sunday cs.cr batch beyond the sep 4 friday batch was identified in this bounded pass | no new paper cleared the repository publication threshold beyond already preserved sep 4 and sep 5 research leads",
+      "sha256": "3030eb87210be598a6e4f28e5f3f88073297a3a3102d7553f11de3c05d697586",
+      "primary_followup_urls": [
+        "https://arxiv.org/list/cs.CR/recent"
+      ],
+      "note": "No new research promotion. Existing Sep. 4 and Sep. 5 preprint leads remain contributed evidence pending chronological reconciliation and independent build-side evaluation."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "github search | sep 6 2026 bounded repository sweep for ctf cryptography and cipher solver projects pushed sep 5 to sep 6 | results were predominantly small writeups training repositories or unrelated projects | no newly surfaced repository cleared the adoption threshold beyond already preserved ctf-skills ctf-agent liezz rsawebtool and related evaluation leads",
+      "sha256": "cdc0d2d0a2a28afd6d9e60e7a3cb12829fa870144570f8179c1d7570773d52cc",
+      "primary_followup_urls": [
+        "https://github.com/search"
+      ],
+      "note": "No new GitHub/tool adoption lead met the repository threshold in this bounded sweep. No tool was imported or registered."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "PwnSec CTF 2026 has a replacement date and an explicit agent-enabled Cyborg lane",
+      "category": "ctf",
+      "status": "registration-open-actionable",
+      "source_name": "PwnSec CTF 2026",
+      "official_source": "https://pwnsec.ctf.ae/",
+      "discovery_source": "https://ctftime.org/event/3159/",
+      "verified_facts": [
+        "The organizer schedules PwnSec CTF 2026 for September 12, 2026 at 14:00 UTC through September 13, 2026 at 14:00 UTC.",
+        "Registration is open and entry is free.",
+        "Teams may have up to four participants; solo players may request matching.",
+        "The event is a 24-hour Jeopardy CTF with Web, Crypto, Reverse, Pwn, Cloud, Forensics, Mobile and Misc categories.",
+        "The organizer runs separate Human and Cyborg leaderboards.",
+        "Cyborg teams may use AI, including scripts, agents and autonomous pipelines; Human teams have materially stricter AI restrictions.",
+        "The organizer rules say to attack the challenges, not the infrastructure, and prohibit flag sharing outside the team and scoreboard games.",
+        "CTFtime currently lists prizes as TBD; no monetary payout is asserted."
+      ],
+      "confidence": "high",
+      "relevance": "high",
+      "missing_verification": [
+        "Preserve the registered team's faction/participation confirmation before event start.",
+        "Re-open the organizer rules immediately before hands-on participation in case the AI policy, team rules or infrastructure boundaries change.",
+        "Do not claim any prize value unless the organizer publishes current prize terms."
+      ],
+      "related_case": "20260906-pwnsec-ctf-2026",
+      "recommended_action": "Build/Case agent should treat the Cyborg lane as the authorized agent-assisted competition path, register or confirm a team under the published rules, preserve the final rules at event start, and use only challenge-provided infrastructure during the Sep. 12-13 window."
+    }
+  ],
+  "chronology": "Canonical source history is through Aug. 28 afternoon. PR #134 verified Aug. 29 morning replay readiness but did not replay it. Process Aug. 29 morning canonically first, then Aug. 29 afternoon, Aug. 30 morning/afternoon, PR #103/#106 Aug. 31, PR #109/#112 Sep. 1, PR #116/#120 Sep. 2, PR #123/#125 Sep. 3, PR #131/#136 Sep. 4, PR #139 Sep. 5, then this Sep. 6 snapshot in timestamp/source-overlap order. This raw snapshot does not advance canonical source history or registry freshness.",
+  "safety": "No target testing was performed. PwnSec's published competition rules authorize challenge solving within the event but explicitly prohibit attacking infrastructure. No public target, hostname, contract, repository, bounty listing, paper, or unrelated news item was treated as authorization for security testing."
+}
