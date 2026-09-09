@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-07T07:42:09Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "a9526e36315ac82ad0d47c38db59c46d12d32e23",
+  "purpose": "Preserve a bounded Sep. 7 current-source research pass from exact current main without overtaking the chronological Aug. 29 and later canonical replay chain, while preserving one new high-relevance agent-security research/tooling lead.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cryptography | sep 7 2026 current recent index | monday sep 7 batch contains 33 cs.cr entries | arxiv 2609.05269 continuity security-context contracts for composable llm agent controls defines security-context discontinuity and end-to-end consequence integrity for provenance authorization policy transformation and finality across agent control boundaries | paper reports deterministic conformance across 3460 scenarios and 24220 system-scenario runs with 30 regression tests and a public research artifact | authors explicitly limit results to the declared trusted-computing-base model and do not claim real-world attack probability or semantic correctness",
+      "sha256": "39f6c619dd7ad630c4371c1702186b5c16b98dcc156725552c335a5e9ca74b70",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2609.05269",
+        "https://github.com/zast-ai/continuity"
+      ],
+      "note": "Material new research lead. The paper directly addresses security-context loss across composed agent controls and provides an executable artifact, but its reported results are deterministic conformance results under an explicit trusted-computing-base model rather than a real-world attack-probability estimate. Treat the design as an evaluation candidate only until locally reproduced and compared against existing repository authorization/provenance controls."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/zast-ai/continuity",
+      "observed": "github search | sep 7 2026 bounded tool and research sweep | zast-ai continuity is a public non-archived research artifact for arxiv 2609.05269 | repository readme documents python 3.11 plus deterministic tests quick and full experiment reproduction and no model api key requirement | root license is mit | latest visible commit 59cfe60930d247d1890b366ded686c718020a11e dated sep 4 2026 | capability claims remain project-authored until independently reproduced locally",
+      "sha256": "fd061e286f33afd0ec9caaf82d291963b0343c32793d6b5ea445e34bfd48ddc5",
+      "primary_followup_urls": [
+        "https://github.com/zast-ai/continuity",
+        "https://github.com/zast-ai/continuity/blob/main/LICENSE"
+      ],
+      "note": "The artifact is sufficiently documented and MIT-licensed to justify build-side evaluation. No code is imported in this pass. Before adoption, inspect dependency/runtime behavior, run the 30 regression tests and quick/full experiment paths in isolation, compare overlap with current source-event/authorization/finality contracts, and preserve any reproduction delta."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | sep 7 2026 current upcoming calendar | weekend nns tfc and sunctf windows have ended | next listed online jeopardy events include k17 ctf sep 11 1000 utc to sep 13 1000 utc cat ctf 26 sep 11 1200 utc to sep 12 1200 utc and pwnsec ctf sep 12 1400 utc to sep 13 1400 utc | pwnsec organizer still shows registration open and the previously verified human versus cyborg rules | ctftime remains discovery evidence and organizer rules must be preserved before participation",
+      "sha256": "53a28abc1d538ebd4ed7f6fe2694536a1f5ce4b7ac249cae4c82618d3406e3d1",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming",
+        "https://pwnsec.ctf.ae/"
+      ],
+      "note": "Source-state rollover only. PwnSec remains the strongest already-preserved near-term CTF because the organizer explicitly provides an agent-enabled Cyborg lane. This observation does not create a duplicate case or new payout claim."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 | sep 7 2026 current official prize page | 11 sponsor pools remain displayed totaling 80000 | the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 bazantic 3000 | the graph continuity track and ledger continuity track remain visible | no material prize-total change from sep 6 contributed research",
+      "sha256": "2620a31ad6ddc254893421a98332d0a8d4006d070e5b2c064204c5ea6c1efd83",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "No material prize-total change. ETHOnline remains useful existing opportunity research; do not create a duplicate intelligence item or active case until participant-specific acceptance and any participation-stake gate are resolved."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "CONTINUITY publishes executable security-context contracts for composed LLM-agent controls",
+      "category": "research",
+      "status": "evaluation-lead",
+      "source_name": "arXiv / zast-ai continuity artifact",
+      "official_source": "https://arxiv.org/abs/2609.05269",
+      "artifact_source": "https://github.com/zast-ai/continuity",
+      "verified_facts": [
+        "The Sep. 7 cs.CR batch contains arXiv:2609.05269, CONTINUITY: Security-Context Contracts for Composable LLM Agent Controls.",
+        "The paper models security-context discontinuity across provenance, authorization, policy, transformation, and finality boundaries and defines end-to-end consequence integrity.",
+        "The paper reports a deterministic conformance evaluation spanning 3,460 scenarios and 24,220 system-scenario runs, with 30 regression tests and reproducibility scripts in the public artifact.",
+        "The authors explicitly state that these are conformance results under an explicit trusted-computing-base model, not an estimate of real-world attack probability or a claim to solve semantic correctness.",
+        "The public zast-ai/continuity repository is non-archived, documents Python 3.11+ reproduction commands, requires no model API key for the deterministic experiment path, and has an MIT root license.",
+        "The latest visible repository commit in this pass is 59cfe60930d247d1890b366ded686c718020a11e from September 4, 2026."
+      ],
+      "confidence": "high",
+      "relevance": "high",
+      "missing_verification": [
+        "Run the artifact's regression tests and quick/full deterministic experiment paths in an isolated local environment.",
+        "Compare its root-grant, provenance/context manifest, transformation-witness, replay/finality, and trusted-sink assumptions against this repository's existing authorization and provenance contracts.",
+        "Record any reproduction delta before adopting controls or capability claims.",
+        "Review dependency and key-management assumptions before integrating any code."
+      ],
+      "recommended_action": "Build/Integration should evaluate the artifact on benign deterministic fixtures when chronology reaches this contribution. Prefer architectural comparison and reproducibility evidence first; do not import code or claim improved security until the local results and fit are independently verified."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 28 afternoon. Aug. 29 morning remains the next bounded canonical replay gate. Process Aug. 29 morning, Aug. 29 afternoon, Aug. 30 morning/afternoon, PR #103/#106 Aug. 31, PR #109/#112 Sep. 1, PR #116/#120 Sep. 2, PR #123/#125 Sep. 3, PR #131/#136 Sep. 4, PR #139 Sep. 5, PR #141 Sep. 6, then this Sep. 7 snapshot in timestamp/source-overlap order. This raw snapshot does not advance canonical source history or registry freshness.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, paper, or news item was treated as authorization for security testing. The CONTINUITY artifact is preserved only for defensive local evaluation and architecture comparison."
+}
