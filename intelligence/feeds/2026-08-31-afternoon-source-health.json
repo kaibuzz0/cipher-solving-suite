@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T19:41:50Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "ac6cbdd0b1fc55877059a3c4eeed70bbc5e42081",
+  "purpose": "Preserve a bounded Aug. 31 afternoon research/source-health pass from current main without advancing canonical source history while the Aug. 27 replay and earlier preserved snapshots remain chronology gates.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/info/details",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 async and official details now give a project submission deadline of sun sep 13 2026 at 1200 pm edt | submission requires public project evidence and a 2 to 4 minute demo video and teams may select up to 3 partner prizes | ai tools are generally permitted with attribution but must assist rather than create the entire project and ai text to speech voiceover is prohibited | prize page lists 10 sponsor pools totaling 77000 usd in displayed headline amounts and now exposes detailed tracks for the graph hedera arc world 1inch ens and uniswap while ledger privy and chainlink details remain pending",
+      "sha256": "8b799679d5b0ffcf51cb9d19655b31561e8484723559dfe1c7b16f94439e810b",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/info/details",
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "Material actionability upgrade. The project submission deadline, demo requirement, partner-prize selection rule, judging outline and AI-use boundaries are now directly preserved from ETHGlobal. The application/acceptance deadline and any participation stake/refund requirement remain unverified, and three sponsor pools still lack detailed qualification rules."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | building disaster ready human services systems remains listed through sep 4 2026 at 500 pm et with 800000 total cash awards but linked acf primary rules remain inaccessible from this research environment so exact eligibility submission judging ip tax and indemnification terms are not independently preserved | xtech search 10 remains internally inconsistent because army labels it coming soon while also showing it under open competitions with an aug 5 to sep 30 submission window | do not promote either lead beyond the evidence available",
+      "sha256": "2735f25dbdb3412692eeb3fe74fd5ab4bb191965c71ba507f71a6e5820df16af",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/disaster-ready-human-services",
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://xtech.army.mil/competitions/"
+      ],
+      "note": "Building Disaster-Ready is deadline-near and high-value on the official discovery page, but primary ACF rules could not be preserved in this environment, so it remains a watch item. xTech|Search 10 remains non-actionable until the Army resolves its own Coming Soon/Open contradiction and publishes authoritative application rules."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | next broad online practice window is nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc and tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc | later september includes nullorigin qualifiers defcamp quals csaw qualification faust and sunshinectf | no new verified cash prize evidence established in this pass and organizer rules remain controlling",
+      "sha256": "fe435ab838b80ee99982288fea82ea9249e22bc5c5e42caeb01797340787ec0a",
+      "note": "Useful practice calendar only. No new verified prize or organizer-level eligibility evidence justified a duplicate user-facing intelligence item."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | largest listed program remains usual labs at 16000000 usdc and most recent remains alphix dec 2025 at 30000 usdc updated aug 25 2026 | aave v4 cap midas and puffer remain listed at their previously observed headline payouts | no stronger material listing change established and public listing status is discovery evidence only not authorization to test any target",
+      "sha256": "24e9b5d683be15281bfb9191b4b28e1fea99a215cbc678465a270af359a3bf45",
+      "note": "No new bounty promotion. Exact program scope/rules remain mandatory before any security work and no target testing was performed."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline 2026 now exposes an exact submission deadline, AI-use rules, and detailed sponsor tracks",
+      "status": "high-confidence-opportunity-enrichment",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal now states that ETHOnline 2026 projects are due September 13, 2026 at 12:00 PM EDT, require a 2-4 minute demo, and may select up to three partner prizes. AI tools are generally allowed with explicit attribution, but must assist rather than create the entire project, and AI text-to-speech voiceover is prohibited. The prize page displays ten sponsor pools totaling $77,000 in headline amounts; detailed tracks are currently visible for The Graph, Hedera, Arc, World, 1inch, ENS, and Uniswap. The Graph's $5,000 AI-tooling Continuity track explicitly permits extending an existing open-source repository and judges only substantive work added during the event, making it particularly relevant to this repository's build/tooling model.",
+      "recommended_action": "After the canonical replay chain reaches this observation, verify participant application/acceptance status and any stake/refund requirement, then evaluate a structured ETHOnline build case. If eligible, prefer a bounded continuity-track feature with clear pre-event provenance, commit history, live Graph data, a public README/SKILL.md, and human-directed AI use that complies with ETHGlobal's attribution and involvement rules."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 26. The eligible next canonical action is the reconciled Aug. 27 replay. After Aug. 27, process both Aug. 28 snapshots, both Aug. 29 snapshots, both Aug. 30 snapshots, the Aug. 31 morning PR #103 snapshot at 2026-08-31T07:38:39Z, and only then this 2026-08-31T19:41:50Z snapshot in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
