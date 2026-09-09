@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-02T19:38:28Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "ab0bfc21277f6bf34b71f1fbb632dae3cf23148c",
+  "purpose": "Preserve a bounded Sep. 2 afternoon source-health and GitHub-tool discovery pass from current main without overtaking the chronological Aug. 28+ canonical replay chain.",
+  "observations": [
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "github search | verialabs ctf-agent is a public non-archived repository for an autonomous multi-model ctf solver using a coordinator and isolated docker solver swarms | readme claims 52 of 52 challenges solved and first place with a 1500 dollar prize at bsidessf 2026 | repository has an mit license | latest visible commit is 2026-03-29 | requirements include python 3.14 or newer docker provider api keys and claude or codex tooling | treat performance claims as project-authored until independently reproduced on deterministic authorized ctf fixtures",
+      "sha256": "843b4ad5779deaedf002eea82117eaeca732dfa3885ea9e3e4d0c490a2b82158",
+      "primary_followup_urls": [
+        "https://github.com/verialabs/ctf-agent",
+        "https://github.com/verialabs/ctf-agent/blob/main/LICENSE"
+      ],
+      "note": "Material tool-evaluation lead. The repository is public, non-archived, MIT-licensed, and documents a multi-model coordinator/solver-swarm design with per-solver Docker isolation and a broad CTF tool image. The project-authored README claims a 52/52, first-place BSidesSF 2026 result and $1,500 prize; this pass did not independently reproduce those benchmark claims. Latest visible repository commit is 2026-03-29. Evaluate architecture and provenance patterns on local deterministic CTF fixtures before adopting code or capability claims."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | nns ctf 2026 runs sep 4 1600 utc to sep 6 1600 utc | ctftime currently lists global prizes of 1024 eur 512 eur and 256 eur plus norway student prizes and states prizes may change before event start | official organizer url is nnsc.tf | aggregator remains discovery evidence and organizer rules control participation",
+      "sha256": "5d27867dc7ba2a852d297a452e7eac1c5f2213aa8b1f649011f5562f61454672",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3097",
+        "https://nnsc.tf/"
+      ],
+      "note": "NNS CTF is the nearest broad online CTF window. CTFtime currently lists 1024/512/256 EUR global awards and separate Norwegian-student prizes, but the aggregator explicitly says prizes may change before the event starts. Treat this as medium-confidence discovery evidence until organizer rules preserve final prize and participation terms."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 | no materially newer official event or prize change established since the sep 2 morning snapshot | participant acceptance and exact event specific stake remain unresolved | later tokyo event is sep 25 to sep 27 and mumbai is nov 6 to nov 8",
+      "sha256": "95efa38d3057d04552c96b35c6af31b603bc61fce25e88928feca9f82722e97b",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events",
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "No new ETHOnline promotion in this pass. The previously preserved Sep. 2 morning state remains the stronger evidence set; participant acceptance and exact event-specific stake still gate actionability."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | xtech search 10 remains listed for eligible us small businesses with a 1000000 dollar cash prize and sep 10 2026 1700 et to oct 19 2026 1700 et dates | prior army source conflict remains unresolved | halt the hitchhiker invasive species challenge remains a long horizon specialized scientific challenge with up to 550000 dollars across three phases through sep 30 2027 and is not a generic coding opportunity",
+      "sha256": "7f9e8d531c1c5a5770495cf8f15d4e0bd35f17742d3b9f8e1314390d2552fd8d",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://www.usa.gov/challenges/halt-the-hitchhiker-invasive-species"
+      ],
+      "note": "No xTech actionability promotion: the previously documented Army/USA.gov conflict remains unresolved. Halt the Hitchhiker is current but specialized scientific/hardware work, not a generic coding or cryptography opportunity."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Veria Labs ctf-agent is a relevant multi-agent CTF architecture evaluation lead",
+      "status": "tool-evaluation-lead",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "verialabs/ctf-agent is a public MIT-licensed CTF solver architecture that coordinates multiple AI models and races isolated Docker solver swarms across CTF challenges. Its README claims 52/52 challenges solved and first place at BSidesSF 2026, but this run treats that result as project-authored evidence rather than independently reproduced repository truth.",
+      "recommended_action": "Build/Integration should compare its coordinator, swarm isolation, message-sharing, challenge polling, and tool-image design against the suite's existing agent/case contracts using deterministic local or authorized CTF fixtures. Do not import code or adopt benchmark/capability claims until dependency, credential-handling, license/provenance, direct-script/runtime, and reproducibility review is complete."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 27. PR #118 merged the provenance-safe Aug. 28 morning reconciliation as ab0bfc21277f6bf34b71f1fbb632dae3cf23148c, but the actual canonical Aug. 28 morning replay is still a separate required step. Do not replay this Sep. 2 afternoon snapshot until Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, Aug. 30 morning/afternoon, Aug. 31 morning/afternoon, Sep. 1 morning/afternoon, and the Sep. 2 morning snapshot are independently reconciled in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
