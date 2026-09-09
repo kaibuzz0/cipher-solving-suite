@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-31T07:38:39Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "19de1f0d16daa546fbc67fb737f3dc9d33d46812",
+  "purpose": "Preserve a bounded Aug. 31 source-health pass from current main without advancing canonical source history while the Aug. 27 canonical replay remains pending.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | active list still includes building disaster ready human services systems careers in your community challenge gateways to blue skies and xtech search 10 | xtech search 10 remains internally inconsistent because army competition page says coming soon while its open competitions surface shows open with aug 5 to sep 30 2026 submission dates and sbir gov lists aug 26 open with sep 23 close | do not infer a definitive submission deadline until the army publishes authoritative application rules",
+      "sha256": "6a05fc75396f866ac274d162e4efb55adb4ccc86e26624fb01a4aa73cf1a7745",
+      "primary_followup_urls": [
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://xtech.army.mil/competitions/",
+        "https://www.sbir.gov/topics/12926"
+      ],
+      "note": "No actionable federal-challenge promotion was justified. xTech|Search 10 remains a high-confidence source inconsistency but a low-confidence actionable opportunity until the Army publishes authoritative application rules and resolves the conflicting date surfaces."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | next broad online practice window is nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc and tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc | later september includes nullorigin qualifiers defcamp quals csaw qualification and sunshinectf | no new cash prize evidence established in this pass and organizer rules remain controlling",
+      "sha256": "03ac30863492d81ba9284d47e50d0dbc77b73b060fd1b3751fcea369c12be8c8",
+      "note": "The immediate online practice window is stable relative to the Aug. 30 research. No duplicate CTF intelligence item was added because no new prize, eligibility, or schedule correction cleared the publication threshold."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | mon 31 aug 2026 batch has 39 entries and recent index has 226 entries | arxiv 2608.28542 proposes preserved evidence bundles and policy controlled offline verification for cross organization agent messaging with sender authentication authenticated log commitments witness backed checkpoints append only continuity delegation authorization and signed receipt evidence | paper reports prototype tests over 300 workflows and 1200 valid bundles and is a preprint research lead rather than established production evidence",
+      "sha256": "7d27c717814b2a6b03defed205d4c2fd423dc2a988bc9f9a083498b33093e5ec",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2608.28542"
+      ],
+      "note": "Material research lead: the paper is directly relevant to this repository's cross-agent provenance and offline audit model. Treat it as a preprint; independently review the full design, assumptions, prototype implementation availability, license, and overlap before adapting any mechanism."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 async hackathon and the official events page still says apply to attend | tokyo remains sep 25 to sep 27 and mumbai nov 6 to nov 8 | no newly verified authoritative ethonline application deadline or complete sponsor qualification update established in this pass",
+      "sha256": "193b77498251154e98474aff66f09c7e1398857f8f6a15d4c140aef85bf09a0d",
+      "note": "ETHOnline remains the strongest near-term hackathon build lead already preserved by earlier research, but this pass did not establish a new authoritative application deadline or complete sponsor qualification rules, so no new canonical item or case was created."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "New arXiv preprint proposes offline-verifiable preserved evidence bundles for multi-agent workflows",
+      "status": "research-tooling-evaluation-lead",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "arXiv:2608.28542 proposes event-level preserved evidence bundles for cross-organization agent messaging, including sender authentication, authenticated log commitments, witness-backed checkpoints, append-only continuity, delegation-aware authorization evidence, and explicit signed receipt evidence when policy requires it. The authors report a prototype evaluation over 300 complete workflows and 1,200 valid bundles plus negative-evidence tests that rejected corrupted or policy-insufficient bundles. It is a preprint and should not be treated as established production assurance.",
+      "recommended_action": "Have the build/integrity lane review the full paper and any available prototype artifacts for license, reproducibility, cryptographic assumptions, evidence schema overlap, and whether its verifier-centered bundle model can strengthen source snapshots, integration-queue contributions, case evidence, and append-only agent handoffs without duplicating existing repository structures."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 26. PR #101 merged the provenance-preserving Aug. 27 reconciliation, but canonical Aug. 27 replay has not yet occurred. Do not replay this Aug. 31 snapshot until Aug. 27, both Aug. 28 snapshots, both Aug. 29 snapshots, and both Aug. 30 snapshots are independently verified and processed in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
