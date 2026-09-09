@@ -1,39 +1,36 @@
 # Current Repository State
 
-Last reconciled: 2026-09-08 19:27 UTC
+Last reconciled: 2026-09-09 07:20 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `418e9a7c7c101aa499fe76114c6b614ab4c82ba0`, the merge of PR #148 (`Build: replay Aug 29 morning source health`).
-- Exact-main Core validation run `34268952166` completed successfully on `418e9a7c7c101aa499fe76114c6b614ab4c82ba0`.
-- Exact-main Deploy operations dashboard run `34268952068` completed successfully on the same commit.
-- PR #148 exact head `894cb281b30a7186310e89b1ae17a37c4d8006fc` independently passed Core validation `34203251256`, Daily Repository Maintenance `34203251103`, and Intelligence Source Report `34203251082` before merge.
+- Current `main` is `d807fd615dfeb3cdc8d6e254f9409277408ca925`, the merge of PR #112 (`Research: preserve Sep 1 afternoon source health`).
+- Exact-main Core validation run `34306464867` completed successfully on `d807fd615dfeb3cdc8d6e254f9409277408ca925`.
 - No open repository issues currently block the chronological source-replay lane.
+- A fresh exact-main Pages deployment was not independently observed in this pass; do not infer Pages health solely from prior merge state.
 
 ## Canonical source / integration state
 
-- Canonical source history now ends at Aug. 29 morning, `2026-08-29T07:38:35Z`.
-- PR #148 added exactly five Aug. 29 morning records for `challenge-gov`, `ctftime-upcoming`, `sherlock-bounties`, `arxiv-cryptography`, and `ethglobal-events` using the verified predecessor chain from Aug. 28 canonical history.
-- Only those five matching source-registry `last_checked_at` values advanced. `github-search` did not advance.
-- The preserved raw snapshot `intelligence/feeds/2026-08-29-source-health.json` was not rewritten by PR #148.
-- The historical Aug. 28 afternoon regression now requires registry/history freshness to remain monotonic rather than incorrectly requiring equality to the older Aug. 28 timestamp; canonical Aug. 28 records and fingerprints remain required.
-- Generated source-report and site-data files were refreshed through repository-native builders; PR #148 did not hand-edit `site/index.html`.
-- Aug. 29 afternoon is now the next chronological replay gate. Aug. 30 and later research must not advance canonical freshness before it.
+- Canonical source history still ends at Aug. 29 morning, `2026-08-29T07:38:35Z`.
+- PR #148 remains the last canonical replay: exactly five Aug. 29 morning records for `challenge-gov`, `ctftime-upcoming`, `sherlock-bounties`, `arxiv-cryptography`, and `ethglobal-events`, with only those five matching source-registry timestamp advances.
+- The preserved raw Aug. 29 morning snapshot remains evidence and was not rewritten by the later research merges.
+- Aug. 29 afternoon remains the next chronological replay gate. Aug. 30 and later evidence must not advance canonical freshness before it.
 
-## Concurrent research / evidence state
+## Rapid research-merge reconciliation
 
-- Open later research lanes remain contributed/noncanonical evidence until chronology reaches them: PR #103/#106 (Aug. 31), #109/#112 (Sep. 1), #116/#120 (Sep. 2), #123/#125 (Sep. 3), #131/#136 (Sep. 4), #139 (Sep. 5), #141 (Sep. 6), and #144/#146 (Sep. 7).
-- Stale branches must be reconciled onto then-current `main` while preserving compatible one-file research evidence. Do not copy their source, benchmark, prize, license, security, or capability claims into canonical truth without independent verification.
-- Public bounty/program/event listings remain discovery evidence only and are not authorization to test unrelated targets.
+- Since the prior integrity reconciliation, multiple previously contributed/noncanonical one-file research PRs were merged into `main` in rapid succession: PR #146, #144, #141, #136, #103, #106, #109, #120, and #112, plus Sep. 8 research PR #150.
+- These merges preserve research/evidence files on `main`; they do **not** by themselves make the contained source, benchmark, prize, security, licensing, event-status, or capability claims canonical or independently verified.
+- The rapid merges do not change the canonical source-history gate: Aug. 29 afternoon is still next.
+- Previously documented statements that those merged PRs are still open/stale are now coordination drift and must be reconciled history-preservingly.
+- Remaining open research PRs include #116, #123, #125, #131, and #139. They remain contributed/noncanonical until independently reconciled at their chronological gates.
 
 ## Toolset / case / UI state
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental` maturity.
 - The 310 tools remain `experimental`; repository-internal reproduction does not establish an external puzzle solve, private key, payout, or provenance of `310_challenge.png`.
 - Normal tools, toolsets, cases, intelligence, evidence, and opportunity state must flow through canonical registries/manifests/site-data builders rather than bespoke HTML.
-- Exact-main Pages deployment is green after PR #148.
 
 ## Security / maintenance state
 
@@ -42,16 +39,16 @@ Repository version: `v3.1.0` (README)
 - GitHub Actions continue to use major-version action tags rather than immutable commit SHAs; action pinning and stronger dependency locking remain supply-chain hardening debt.
 - Known root/generated artifact duplicate/orphan work remains preservation-sensitive maintenance, not a deletion task.
 
-## Coordination reconciliation after PR #148
+## Coordination drift requiring follow-up
 
-- PR #148 successfully repaired the previously stale `docs/WORK_QUEUE.md`, `data/integration_queue.json`, `docs/AGENT_HANDOFF.md`, and generated Agent Operations/site-data surfaces for the staged Aug. 29 morning replay.
-- Because those entries were intentionally written before independent merge verification, their wording still says the replay is staged / needs integration. That wording became stale immediately when PR #148 merged.
-- This post-merge integrity branch updates repository truth without changing source history, registry freshness, raw evidence, tools, cases, opportunities, authorization boundaries, or site HTML.
-- `docs/WORK_QUEUE.md`, the Aug. 29 `data/integration_queue.json` item, and the append-only handoff should next be finalized to record PR #148 as merged/integrated before Aug. 29 afternoon is replayed. Preserve prior queue and handoff history rather than reconstructing it.
+- `docs/WORK_QUEUE.md` still describes the Aug. 29 morning replay as staged and awaiting merge verification even though PR #148 merged.
+- `data/integration_queue.json` still describes several now-merged research PRs as open/stale/blocked and therefore no longer reflects repository truth.
+- `docs/AGENT_HANDOFF.md` latest stored entry still describes the Aug. 29 morning replay as staged; this append-only journal requires a history-preserving follow-up append.
+- These coordination files must be reconciled without deleting prior entries or rewriting contributed research evidence.
 
 ## Current operating priorities
 
-1. Finalize the post-merge coordination wording for PR #148: mark the Aug. 29 morning queue item integrated, update the work-queue P2 row to identify Aug. 29 afternoon as the next gate, and append an integrity handoff recording the exact PR #148 head and post-merge green runs.
+1. History-preservingly reconcile `docs/WORK_QUEUE.md`, `data/integration_queue.json`, and `docs/AGENT_HANDOFF.md` to record PR #148 as merged/integrated and the rapid research PRs as preserved evidence on `main` without promoting their claims.
 2. Independently inspect `intelligence/feeds/2026-08-29-afternoon-source-health.json` against canonical Aug. 29 morning history.
 3. Recompute every protected fingerprint from preserved observation text and verify each predecessor against the latest canonical record for that source.
 4. If any contributed hash is invalid, preserve the raw snapshot unchanged and create a separate provenance-safe reconciliation rather than rewriting evidence.
@@ -59,4 +56,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Finalize the PR #148 coordination status history-preservingly, then verify and process Aug. 29 afternoon as the next chronological replay gate. Preserve raw evidence unchanged; if contributed hashes or predecessor links are invalid, create a separate reconciliation rather than rewriting the contribution. Do not advance Aug. 30 or later research until the Aug. 29 afternoon replay and generated user-facing/Agent Operations data are independently green.
+First reconcile the stale coordination surfaces after the rapid evidence-only research merges. Then verify and process Aug. 29 afternoon as the next chronological canonical replay gate. Preserve all merged research artifacts and raw evidence unchanged; no later research claim becomes canonical merely because its PR is now merged.
