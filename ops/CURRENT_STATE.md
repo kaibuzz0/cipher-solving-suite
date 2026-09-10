@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-09-10 19:18 UTC
+Last reconciled: 2026-09-10 19:24 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
@@ -14,7 +14,7 @@ Repository version: `v3.1.0` (README)
 - The public GitHub Pages workspace responds at `https://kaibuzz0.github.io/cipher-solving-suite/`; exact-release health is based on the successful Pages workflow because the public crawler snapshot is not proof that every dynamic data request reflects the newest build.
 - No open repository issues currently block the chronological source-replay lane.
 - Exact-current-main validation reports `Source registry valid: 16 sources`, `Source check history valid: 77 checks`, and `Intelligence feed valid: 13 items`.
-- PR #158 prior head `7cafa9a2197aef8d4c51d5b854023f2fa04dbf25` passed Core validation run `34453321321` and had no review threads. This follow-up state correction changes that head and therefore requires fresh exact-head validation before merge.
+- PR #158 prior head `7cafa9a2197aef8d4c51d5b854023f2fa04dbf25` passed Core validation run `34453321321` and had no review threads. Subsequent state-correction commits require fresh exact-head validation before merge.
 
 ## Canonical source / integration state
 
@@ -47,9 +47,10 @@ Repository version: `v3.1.0` (README)
 - Preserve all primary evidence, hashes, provenance, and research artifacts. Do not delete or relocate evidence silently.
 - Exact-main artifact inventory reports 40 items, 10 duplicate groups, 11 orphaned items, 20 duplicate-marked items, 12 generated outputs, 7 items needing case links, 1 protected primary-evidence item, and 0 unknown-provenance items. No artifact cleanup is safe as a blind deletion task.
 - Exact-main maintenance is `ok` with the known warning for 12 generated/root image files, including protected `310_challenge.png`; resolve only through hash/provenance-preserving migration work.
-- Fresh bounded GitHub code searches returned no indexed `shell=True` or `os.system(` use, but the search API reported incomplete results; treat this as a bounded signal, not a complete security audit.
+- Fresh bounded GitHub code searches returned no indexed `shell=True`, `os.system(`, `subprocess.run(`, or literal `BEGIN PRIVATE KEY` matches, but the search API reported incomplete results; treat this as a bounded signal, not a complete security audit.
 - GitHub Actions still reference major action tags (`actions/checkout@v4`, `actions/setup-python@v5`, `actions/upload-artifact@v4`) rather than immutable commit SHAs. The current runner warns that Node-20-targeting actions are being forced onto Node 24.
 - CI installs broad dependency ranges (`pytest>=8,<10`, `numpy>=1.26,<3`, `Pillow>=10,<13`) rather than a fully locked dependency set. On the inspected Python 3.12 run those resolved to pytest 9.1.1, NumPy 2.5.3, and Pillow 12.3.0. Immutable action pinning and stronger dependency locking remain supply-chain hardening debt.
+- Legacy root truthfulness debt remains outside the canonical tool registry: `QUICK_START_REAL_MONEY.sh` contains unsourced earnings/payout-ceiling marketing claims and direct external-platform launch instructions, while `TOOLS_AUDIT.md` is dated 2026-07-24 but still presents old tool/completion status and uses `production-complete` language that conflicts with the current capability-label policy. Neither file should be treated as current verified capability, payout, or readiness truth; preserve their history and add explicit legacy/status guidance in a separate bounded docs cleanup rather than silently deleting them.
 
 ## Coordination drift requiring follow-up
 
@@ -68,7 +69,8 @@ Repository version: `v3.1.0` (README)
 5. If any contributed hash is invalid, preserve the raw snapshot unchanged and create a separate provenance-safe reconciliation rather than rewriting evidence.
 6. If valid, replay only evidence-backed Aug. 29 afternoon records, advance only matching registry timestamps, regenerate repository-managed site/source outputs, and require source-history, registry, collection-report, intelligence, Agent Operations/site-data, Core, Intelligence Source Report, Daily Maintenance, and Pages validation before Aug. 30 advances.
 7. Reconcile stale one-file research PRs from current `main` only when their chronology gate is reached; preserve useful evidence without accepting stale shared coordination state.
+8. In a separate docs-only cleanup, mark `TOOLS_AUDIT.md` and `QUICK_START_REAL_MONEY.sh` explicitly historical/legacy or otherwise reconcile their claims with current capability and payout-evidence policy without erasing provenance.
 
 ## Next handoff
 
-Current `main` is `a163c7ecae321ae93037b0503f9d313eb3a62719`, and exact-main Core, Pages, Daily Maintenance, and Intelligence Source Report are all green. PR #158 is the bounded one-file coordination repair; its prior head was Core-green, and this updated head must be revalidated before merge. Do not advance source freshness past Aug. 29 morning until the coordination surfaces are reconciled and the Aug. 29 afternoon snapshot is independently hash/predecessor-verified. Preserve all raw and merged research evidence unchanged; no later agent-authored claim becomes canonical merely because its PR exists or has merged.
+Current `main` is `a163c7ecae321ae93037b0503f9d313eb3a62719`, and exact-main Core, Pages, Daily Maintenance, and Intelligence Source Report are all green. PR #158 is the bounded one-file coordination repair; its earlier head was Core-green, and the final updated head must be revalidated before merge. Do not advance source freshness past Aug. 29 morning until the coordination surfaces are reconciled and the Aug. 29 afternoon snapshot is independently hash/predecessor-verified. Preserve all raw and merged research evidence unchanged; no later agent-authored claim becomes canonical merely because its PR exists or has merged. Treat legacy root payout/readiness marketing as noncanonical until separately reconciled.
