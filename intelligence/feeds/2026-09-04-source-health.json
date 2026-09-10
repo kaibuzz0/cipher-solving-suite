@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-04T07:42:01Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "578af9ad05391c94dac0c2959d8c2f30438377ce",
+  "purpose": "Preserve a bounded Sep. 4 current-source research pass from current main without overtaking the chronological Aug. 28 afternoon and later canonical replay chain.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 prizes | sep 4 2026 current official prize page | 11 sponsor pools | the graph 15000 | hedera 15000 | arc 10000 | world 7000 | 1inch 7000 | ens 5000 | uniswap foundation 5000 | ledger 5000 | privy 5000 | chainlink 3000 | bazantic 3000 | displayed headline total 80000 | the graph continuity track remains 5000 and permits existing open source extensions with event period work judged",
+      "sha256": "8ffe80ad88e2e380e8220e62978a6cf232063daf1e98d03f281c3d71ad55200a",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "ETHOnline's official prize surface changed from the Sep. 3 preserved $79,500 headline total to $80,000: Chainlink is now displayed at $3,000 while Bazantic remains $3,000. The Graph's $5,000 Continuity lane remains the strongest repository-relevant sponsor track. Participant acceptance and the exact event-specific stake remain actionability gates; no active case is created here."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/new",
+      "observed": "arxiv cs.cr new | friday 4 september 2026 | 58 total entries | 32 new submissions | arxiv 2609.03884 a blind trust the bloody thrust identifies lifecycle hook update path in ai agent harnesses as supply chain attack surface | authors report 1000 end to end runs across 25 harness backend combinations and all seven evaluated harnesses compromised with per harness success up to 92.5 percent | preprint claims require independent reproduction before adoption",
+      "sha256": "836c1fea32043a52e9ec6d503b4c67270e4b281d076c5341187ad6722ef972a7",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2609.03884"
+      ],
+      "note": "The Sep. 4 cs.CR batch contains a directly relevant AI-agent supply-chain paper. It identifies lifecycle-hook update configuration as a privileged execution boundary and reports HookPry results across seven harnesses. Preserve as a high-relevance, medium-confidence preprint/tool-evaluation lead only. Do not run the attack framework against real systems; Build/Integrity should review artifacts, license, threat model, reproducibility and defensive implications on local fixtures before adopting controls."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | nns ctf 2026 sep 4 1600 utc to sep 6 1600 utc online jeopardy | tfc ctf 2026 sep 5 1000 utc to sep 6 1000 utc online jeopardy | sunctf sep 6 | later k17 sep 11 and pwnsec sep 12 | no new organizer verified payout evidence promoted in this pass",
+      "sha256": "5e125fbe57eedcb1bede8d9e1d165b83c20d7fb0efa7f91f1ab9ca995eb71a14",
+      "note": "NNS CTF is the immediate online practice window, followed by TFC CTF. This pass did not establish stronger organizer-primary payout evidence, so no duplicate money/opportunity item is promoted."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "ETHOnline official headline prize total rises to $80,000",
+      "category": "hackathon",
+      "status": "verified-primary-source-change",
+      "source_name": "ETHGlobal",
+      "official_source": "https://ethglobal.com/events/ethonline2026/prizes",
+      "verified_facts": [
+        "The current official ETHOnline prize page lists 11 sponsor pools.",
+        "The displayed sponsor headline amounts sum to $80,000.",
+        "Chainlink is currently displayed at $3,000 and Bazantic at $3,000.",
+        "The Graph remains $15,000 overall and its Continuity AI Tooling / AI Use Case track remains $5,000."
+      ],
+      "confidence": "high",
+      "relevance": "high",
+      "missing_verification": [
+        "Confirm participant application/acceptance state for the intended participant.",
+        "Preserve the exact ETHOnline-specific participation stake amount and refund conditions before treating the opportunity as immediately actionable."
+      ],
+      "recommended_action": "Keep ETHOnline as the highest-value near-term hackathon lead. When chronology reaches this snapshot, re-open the event/prize/application surfaces and create a structured Continuity-track case only if participant and stake gates are favorable."
+    }
+  ],
+  "new_lead": {
+    "title": "A Blind Trust, the Bloody Thrust: lifecycle-hook supply-chain risk for AI agent harnesses",
+    "category": "research-tooling",
+    "status": "preprint-needs-independent-reproduction",
+    "source_name": "arXiv cs.CR",
+    "official_source": "https://arxiv.org/abs/2609.03884",
+    "verified_facts": [
+      "arXiv lists the paper in the Friday, September 4, 2026 cs.CR batch.",
+      "The paper studies attacker-controlled lifecycle-hook/plugin updates in AI agent harnesses where hook commands can execute with host privileges.",
+      "The authors describe HookPry as an open-source automated framework and report 1,000 end-to-end runs across 25 harness/backend combinations and seven evaluated harnesses.",
+      "The reported compromise and defense metrics are author claims from a new preprint and have not been independently reproduced in this pass."
+    ],
+    "confidence": "medium",
+    "relevance": "high",
+    "safety_boundary": "Evaluate only defensive architecture, artifact integrity, permission-manifest and update-verification implications. Do not execute the offensive framework against real or third-party systems.",
+    "missing_verification": [
+      "Locate and verify the paper's official code repository and license rather than relying on the abstract's open-source claim alone.",
+      "Review the exact harnesses/backends, lifecycle-hook update assumptions, privilege model, attack objectives and defensive baselines in the full paper.",
+      "Reproduce only benign/local fixture checks relevant to plugin/skill update integrity and hook permission boundaries."
+    ],
+    "recommended_action": "Integrity/Build should compare this threat model against the repository's installed-plugin/skill and recurring-agent supply-chain surfaces, then consider deterministic integrity/permission tests without importing offensive capability."
+  },
+  "chronology": "Canonical source history is through Aug. 28 morning. The reconciled Aug. 28 afternoon snapshot is the next eligible replay surface. Aug. 29, Aug. 30, PR #103/#106 (Aug. 31), PR #109/#112 (Sep. 1), PR #116/#120 (Sep. 2), PR #123/#125 (Sep. 3), then this Sep. 4 snapshot must be processed in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, paper, or news item was treated as authorization for security testing."
+}
