@@ -1,16 +1,18 @@
 # Current Repository State
 
-Last reconciled: 2026-09-10 07:19 UTC
+Last reconciled: 2026-09-10 08:05 UTC
 Default branch: `main`
 Repository version: `v3.1.0` (README)
 
 ## Verified health
 
-- Current `main` is `962b80c70fa724794c08991682d7832bd410f834`, the merge of PR #155 (`Ops: record PR #153 merge and current replay gate`).
-- Exact-main Core validation run `34398567688` completed successfully on `962b80c70fa724794c08991682d7832bd410f834`; Python 3.11, 3.12 and 3.13 all passed. The inspected Python 3.12 job ran 84/84 tests successfully and also passed direct-script regressions, Python compilation, source-registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction verification, dashboard-data generation, maintenance, Agent Operations parsing, repository-browser/tool/toolset discovery, relationship/visibility contracts, diagnostics, and the final failure gate.
-- Exact-main Deploy operations dashboard run `34398567728` also completed successfully on `962b80c70fa724794c08991682d7832bd410f834`.
+- Current `main` is `a163c7ecae321ae93037b0503f9d313eb3a62719`, the merge of PR #156 (`Ops: reconcile exact main after PR #155`).
+- PR #156 exact head `a735710d5ce1abce2431776452b33088a1ef1454` was mergeable, had no review threads, and passed Core validation run `34449721001` before merge.
+- No post-merge workflow run had surfaced for merge commit `a163c7ecae321ae93037b0503f9d313eb3a62719` at this reconciliation point; do not infer exact-merge Core or Pages health until a run is observed.
+- The preceding exact-main Core validation run `34398567688` completed successfully on `962b80c70fa724794c08991682d7832bd410f834`; Python 3.11, 3.12 and 3.13 all passed. The inspected Python 3.12 job ran 84/84 tests successfully and also passed direct-script regressions, Python compilation, source-registry/history/report validation, intelligence validation, artifact inventory, 310 migration/reproduction verification, dashboard-data generation, maintenance, Agent Operations parsing, repository-browser/tool/toolset discovery, relationship/visibility contracts, diagnostics, and the final failure gate.
+- The preceding Deploy operations dashboard run `34398567728` also completed successfully on `962b80c70fa724794c08991682d7832bd410f834`.
 - No open repository issues currently block the chronological source-replay lane.
-- The Core run reports `Source registry valid: 16 sources`, `Source check history valid: 77 checks`, and `Intelligence feed valid: 13 items`.
+- The preceding Core run reports `Source registry valid: 16 sources`, `Source check history valid: 77 checks`, and `Intelligence feed valid: 13 items`.
 
 ## Canonical source / integration state
 
@@ -22,7 +24,8 @@ Repository version: `v3.1.0` (README)
 
 ## Concurrent / stale contribution state
 
-- Open PR #154 is a one-file Sep. 9 afternoon research contribution based on stale `939ae4c978b8ec26d5fe5a13a481f3a2d7cb4a64`; GitHub currently reports it non-mergeable against current `main`. Preserve its Ledger/ETHOnline, CTFtime, and arXiv observations as contributed evidence only until independently verified and chronologically eligible.
+- Open PR #157 is a one-file Sep. 10 research/source-health contribution created from pre-PR156 main. It is noncanonical, does not own coordination files, and must remain behind the Aug. 29 afternoon and subsequent chronological replay gates.
+- Open PR #154 is a one-file Sep. 9 afternoon research contribution based on stale `939ae4c978b8ec26d5fe5a13a481f3a2d7cb4a64`. Preserve its Ledger/ETHOnline, CTFtime, and arXiv observations as contributed evidence only until independently verified and chronologically eligible.
 - PR #152 remains a stale one-file Sep. 9 morning contribution from pre-PR151 state. Preserve its contribution when reconciling, but do not treat its Chainlink/ETHOnline/MemSentry/CTF claims as canonical truth.
 - Older open research PRs #116, #123, #125, #131, and #139 remain contributed/noncanonical and stale relative to current `main`.
 - Several later research PRs are already merged as preserved evidence only. Merge status does not promote their source, benchmark, prize, security, licensing, event-status, or capability claims to canonical truth.
@@ -38,9 +41,9 @@ Repository version: `v3.1.0` (README)
 ## Security / maintenance state
 
 - Preserve all primary evidence, hashes, provenance, and research artifacts. Do not delete or relocate evidence silently.
-- The exact-main artifact inventory reports 40 items, 10 duplicate groups, 11 orphaned items, 20 duplicate-marked items, 12 generated outputs, 7 items needing case links, 1 protected primary-evidence item, and 0 unknown-provenance items. No artifact cleanup is safe as a blind deletion task.
-- Maintenance remains `ok` with the known warning for 12 generated/root image files, including protected `310_challenge.png`; resolve only through hash/provenance-preserving migration work.
-- Fresh bounded default-branch searches found no indexed `shell=True` or `os.system(` use; this is not a complete security audit.
+- The last inspected artifact inventory reports 40 items, 10 duplicate groups, 11 orphaned items, 20 duplicate-marked items, 12 generated outputs, 7 items needing case links, 1 protected primary-evidence item, and 0 unknown-provenance items. No artifact cleanup is safe as a blind deletion task.
+- Maintenance was `ok` on the preceding verified main with the known warning for 12 generated/root image files, including protected `310_challenge.png`; resolve only through hash/provenance-preserving migration work.
+- Recent bounded default-branch searches found no indexed `shell=True` or `os.system(` use; this is not a complete security audit.
 - GitHub Actions still reference major action tags (`actions/checkout@v4`, `actions/setup-python@v5`, `actions/upload-artifact@v4`) rather than immutable commit SHAs. The current runner also warns that Node-20-targeting actions are being forced onto Node 24.
 - CI installs broad dependency ranges (`pytest>=8,<10`, `numpy>=1.26,<3`, `Pillow>=10,<13`) rather than a fully locked dependency set. Immutable action pinning and stronger dependency locking remain supply-chain hardening debt.
 
@@ -48,8 +51,8 @@ Repository version: `v3.1.0` (README)
 
 - `docs/WORK_QUEUE.md` still describes the already-merged Aug. 29 morning replay as staged and awaiting independent verification instead of recording PR #148 as completed.
 - `data/integration_queue.json` still marks the Aug. 29 morning item `needs-integration` and contains stale `open` wording for several research PRs that were subsequently merged as preserved evidence (including #103, #106, #109, #112, and #120). Reconcile statuses history-preservingly rather than deleting entries or promoting claims.
-- `docs/AGENT_HANDOFF.md` latest stored entry remains the Sep. 8 Aug. 29 morning replay-staging handoff and therefore predates PR #148, the rapid research merges, PR #151, PR #153, and PR #155. Append a new entry without truncating prior journal history.
-- PR #155 itself is now merged, so any state describing its coordination snapshot as pending is stale.
+- `docs/AGENT_HANDOFF.md` latest stored entry remains the Sep. 8 Aug. 29 morning replay-staging handoff and therefore predates PR #148, the rapid research merges, PR #151, PR #153, PR #155, and PR #156. The GitHub connector can read the complete blob but exposes no append-only file mutation primitive; do not replace or truncate the journal merely to append a status entry.
+- PR #156 is merged, so any state describing it as pending is stale.
 
 ## Current operating priorities
 
@@ -62,4 +65,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-First complete the history-preserving coordination reconciliation after PR #155 and the completed Aug. 29 morning replay. Then independently verify and process Aug. 29 afternoon as the next chronological canonical replay gate. Preserve all raw and merged research evidence unchanged; no later agent-authored claim becomes canonical merely because its PR exists or has merged.
+PR #156 is merged and its pre-merge exact head was Core-green. First complete the history-preserving coordination reconciliation for the completed Aug. 29 morning replay, then independently verify and process Aug. 29 afternoon as the next chronological canonical replay gate. Preserve all raw and merged research evidence unchanged; no later agent-authored claim becomes canonical merely because its PR exists or has merged. Independently confirm post-merge Core/Pages health for `a163c7ec...` when those runs surface.
