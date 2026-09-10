@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-05T19:37:27Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "a867e6a77ffa3e5bb127804e84313ff97d9d9ad8",
+  "purpose": "Preserve a bounded Sep. 5 current-source research pass from current main without overtaking the chronological Aug. 29 and later canonical replay chain.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/abs/2609.01836",
+      "observed": "arxiv cryptography | sep 5 2026 current recent index | arxiv:2609.01836 agent memory is a surface for endogenous authorization laundering submitted 2026-09-01 | paper defines endogenous authorization laundering where persistent memory can carry false permissions | evaluates five llm memory writers and two executors across procurement cybersecurity and finance | authors report false authority for up to 50.2 percent of unauthorized requests under incremental updates and executor action on false authority in 98.6 percent of trials | proposed safeguards require source-event-backed permissions and bounded event sourcing | preprint research lead only",
+      "sha256": "a74939fc2b2e72ca9852b02c5e03512d59cc28bccd2509db5d7d7d9262a110c7",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2609.01836",
+        "https://arxiv.org/list/cs.CR/recent"
+      ],
+      "note": "High-relevance preprint lead for this repository's recurring-agent authorization/provenance model. The authors report substantial authorization-laundering rates under their benchmark and reductions from source-event-backed permissions plus bounded event sourcing. These are paper claims, not independently reproduced repository guarantees; review methodology, code/data availability and fit before adopting controls."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/",
+      "observed": "ctftime upcoming | sep 5 2026 afternoon | nns ctf 2026 remains live sep 4 1600 utc to sep 6 1600 utc | tfc ctf 2026 entered live window sep 5 1000 utc to sep 6 1000 utc | tfc is online jeopardy with pwn reverse web crypto misc | top five tfc teams qualify for dctf x tfcctf finals in bucharest | event listings are authorized competition discovery only and exact organizer rules govern participation",
+      "sha256": "dd73311e2e7c7a3a718bc5de3eb33abc5230a2a1152183e8e8a7c5497f7feca5",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3097/",
+        "https://nnsc.tf/",
+        "https://ctftime.org/event/3344/",
+        "https://ctf.thefewchosen.com/"
+      ],
+      "note": "NNS remains inside its scheduled live window and TFC has now entered its scheduled live window. TFC's CTFtime page states that the top five teams qualify for the DCTF x TFCCTF finals. Preserve organizer rules before hands-on participation; no event listing authorizes testing outside event-provided infrastructure."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 | sep 5 2026 current official prize page | 11 sponsor pools remain displayed totaling 80000 | the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 bazantic 3000 | the graph continuity ai tooling or ai use case prize remains 5000 | continuity permits extending existing open-source work with documented pre-existing work and only event-period work judged | live graph data public repository and 2 to 4 minute demo required",
+      "sha256": "d02e5d610a0203cf96c9c5fd8644da5880a1ef71730498558c218931db60f4d9",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events/ethonline2026/info/details"
+      ],
+      "note": "No new prize-total change from the Sep. 4 contribution: the official page still displays 11 sponsor pools totaling $80,000. The Graph's $5,000 Continuity AI Tooling / AI Use Case lane remains the strongest repository-relevant track. Participant acceptance and exact event-specific stake remain unresolved actionability gates, so no active case is created."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "Persistent agent memory can launder authorization state",
+      "category": "research",
+      "status": "preprint-evaluation-lead",
+      "source_name": "arXiv",
+      "official_source": "https://arxiv.org/abs/2609.01836",
+      "verified_facts": [
+        "arXiv:2609.01836 was submitted on September 1, 2026 and is categorized under cs.CR and cs.AI.",
+        "The paper defines endogenous authorization laundering as false permissions entering persistent agent memory and later being treated as valid authority.",
+        "The authors evaluate five LLMs as memory writers and two as executors across procurement, cybersecurity and finance.",
+        "The paper reports false authority for up to 50.2% of unauthorized requests under incremental memory updates and executor action on false authority in 98.6% of trials once the false authority is present.",
+        "The paper reports that source-event-backed permissions and bounded event sourcing reduce the problem while introducing a safety-utility tradeoff."
+      ],
+      "confidence": "medium",
+      "relevance": "high",
+      "missing_verification": [
+        "Inspect the full benchmark design, prompts, models and statistical methodology.",
+        "Verify whether code, benchmark data or evaluation artifacts are publicly available under a usable license.",
+        "Reproduce a small benign authorization-state fixture before adapting any repository control.",
+        "Compare the proposal against existing repository provenance, integration-queue and current-repo-truth contracts to avoid duplicating policy without enforcement."
+      ],
+      "recommended_action": "Integrity/Build should evaluate source-event-backed authorization and bounded event-sourcing concepts on benign local agent fixtures. Adopt no enforcement or security claim until the benchmark and implementation artifacts are independently reviewed."
+    },
+    {
+      "title": "TFC CTF 2026 enters its live competition window",
+      "category": "ctf",
+      "status": "live-window-confirmed",
+      "source_name": "CTFtime / The Few Chosen",
+      "official_source": "https://ctf.thefewchosen.com/",
+      "discovery_source": "https://ctftime.org/event/3344/",
+      "verified_facts": [
+        "CTFtime lists TFC CTF 2026 from September 5, 2026 at 10:00 UTC through September 6, 2026 at 10:00 UTC.",
+        "The event is online and Jeopardy-style, with Pwn, Reverse, Web, Crypto and Misc challenges.",
+        "CTFtime states that the top five teams qualify for the DCTF x TFCCTF Finals in Bucharest, Romania."
+      ],
+      "confidence": "medium",
+      "relevance": "high",
+      "missing_verification": [
+        "Preserve the organizer's current competition rules and any team-size, AI-use, eligibility or conduct restrictions before participation.",
+        "Verify finals travel/prize terms before treating qualification as a financial opportunity."
+      ],
+      "recommended_action": "Treat TFC as a current legitimate competition lane only under its published event rules. If a build/case agent participates, create or link a structured CTF case and preserve the rules before interacting with challenge infrastructure."
+    }
+  ],
+  "chronology": "Canonical source history is through Aug. 28 afternoon. PR #134 verified Aug. 29 morning replay readiness but did not replay it. Process Aug. 29 morning canonically first, then Aug. 29 afternoon, Aug. 30 morning/afternoon, PR #103/#106 Aug. 31, PR #109/#112 Sep. 1, PR #116/#120 Sep. 2, PR #123/#125 Sep. 3, PR #131/#136 Sep. 4, then this Sep. 5 snapshot in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, paper, or news item was treated as authorization for security testing."
+}
