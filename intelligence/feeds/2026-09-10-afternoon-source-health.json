@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-10T19:41:46Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "a6c6cf915f0f7bb96c6fdc7df8972171718f28d8",
+  "purpose": "Preserve a bounded Sep. 10 afternoon research/source-health pass from current main after PR #158, without overtaking the still-required Aug. 29 afternoon and later canonical replay chronology. Record the newly launched DHS Ready, Set...ID the Biothreat prize challenge plus stable CTFtime and ETHOnline checks without promoting unverified or biologically sensitive work into active execution.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges and ready set id the biothreat | ready set id the biothreat is a new dhs ai-assisted algorithmic biodetection prize challenge | usa.gov lists start sep 8 2026 9:30 am et, end oct 14 2026 12:00 pm et, total cash prizes 999990 usd, and three-stage structure | dhs sep 9 release says eligible individuals must be age 18 or older and be us citizens or legal permanent residents at submission, and eligible entities must be legally incorporated in the us with primary place of business in the us | challenge focuses on computational ai algorithms for detecting known novel and unknown biological threats in environmental metagenomic datasets | complete rules and submission terms remain on the dhs challenge host",
+      "sha256": "3c2ac9646577ba1123c436c2843f5d21e1338d2c85e61a4a8dcb5844853ee8c3",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/ready-set-id-biothreat",
+        "https://www.dhs.gov/science-and-technology/ready-set-id-bio-threat",
+        "https://www.dhs.gov/science-and-technology/news/2026/09/09/st-launches-prize-challenge-advance-ai-assisted-biodetection"
+      ],
+      "note": "Material new federal prize opportunity. USA.gov is the canonical federal challenge discovery surface and links to the DHS host for complete rules. The DHS Sep. 9 announcement independently supplies the high-level eligibility and three-stage structure. This pass did not fetch the complete DHS rules page because the public fetch path returned 403, so detailed stage payouts, judging rubric, submission artifacts, data-use/IP terms, team/entity nuances, and any biosafety/data restrictions remain unverified. Do not create active implementation work until those complete rules are preserved and independently reviewed."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | immediate online window remains k17 ctf sep 11 10:00 utc, cat ctf 26 sep 11 12:00 utc, and pwnsec ctf sep 12 14:00 utc | k17 event text continues to state the competition was shortened to 24 hours ending sep 12 10:00 utc despite stale headline metadata | no new organizer-primary prize change verified in this pass",
+      "sha256": "bd0c282d907c29030cfd950325f836af01046de1b455370bc7c31f637e21ea67",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming",
+        "https://ctftime.org/event/3145"
+      ],
+      "note": "Stable near-term CTF source-health check. No duplicate CTF opportunity promotion is warranted. Organizer rules still control participation and authorization boundaries."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events and ethonline 2026 prizes | ethonline remains sep 4 to sep 16 2026 async hackathon | official prize page still lists 11 sponsor pools with displayed headline amounts totaling 80000 usd | no material prize-total change verified in this pass",
+      "sha256": "dad6d90c83092875d83bb5097812e38261b2045483aa383ab08301ee4c8ff9e8",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Stable source-health check. Existing Ledger, Chainlink and Continuity-track contributions remain separate pending chronology and participant-specific eligibility checks; no duplicate intelligence is promoted here."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "DHS launches Ready, Set...ID the Biothreat AI prize challenge",
+      "status": "verified-current-federal-opportunity-with-rules-gate",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "USA.gov lists a new DHS three-stage AI-assisted algorithmic biodetection challenge running September 8 through October 14, 2026 with $999,990 in total cash prizes. A DHS September 9 launch announcement says the challenge seeks algorithms that detect known, novel, and unknown biological threats in environmental metagenomic data and gives high-level U.S. eligibility requirements.",
+      "eligibility_and_cost": "DHS's launch announcement says eligible individual entrants must be at least 18 and be U.S. citizens or legal permanent residents at submission; eligible entities must be legally incorporated in the United States with their primary place of business in the United States. No entry fee was identified on the official federal listing. Complete rules must still be reviewed for team, employee, contractor, conflict-of-interest, residency, and other exclusions.",
+      "prize_and_deadline_evidence": "USA.gov states total cash prizes of $999,990, a start date of September 8, 2026 at 9:30 AM ET, and an end date of October 14, 2026 at 12:00 PM ET. DHS says the competition has proposal evaluation, prototype development/testing, and final blinded validation stages and that finalists may receive awards as they advance. Stage-by-stage award allocation is not yet preserved in this repository contribution.",
+      "scope_and_safety": "This is a prize-competition discovery finding, not authorization to test any external system and not a directive to develop harmful biological capability. Any future work must remain inside competition-provided datasets/rules and should be limited to defensive detection/classification objectives. Complete DHS rules, dataset handling terms, biosafety constraints, IP/data licenses, judging criteria, and submission requirements must be independently reviewed before an active case is created.",
+      "recommended_action": "Build/Integration should keep this as a high-value opportunity lead until chronology reaches Sep. 10 afternoon. At that point, reopen the DHS host and complete rules, preserve stage payouts, judging/submission requirements, data/IP terms and all eligibility exclusions, then decide whether a narrowly scoped defensive algorithm-development case is appropriate."
+    }
+  ],
+  "chronology": "Canonical source history still ends at Aug. 29 morning. Do not replay this Sep. 10 afternoon snapshot yet. Process Aug. 29 afternoon first, then Aug. 30 and later contributed snapshots in timestamp/source-overlap order before this snapshot becomes eligible for canonical source-history integration.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, event listing, biological dataset, paper, package, or news item was treated as authorization for security or biological testing. No biological design, synthesis, pathogen enhancement, wet-lab, or harmful operational work was performed."
+}
