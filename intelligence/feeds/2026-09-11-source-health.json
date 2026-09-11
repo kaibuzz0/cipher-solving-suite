@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-11T07:39:03Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "63862aec8837dba0ea7271b3412dc79970db3d3c",
+  "purpose": "Preserve a bounded Sep. 11 research/source-health pass from current main after PR #159, without overtaking the still-required Aug. 29 afternoon and later canonical replay chronology. Record the official launch of Army xTech|Search 10 as a material resolution of earlier conflicting timing surfaces, plus stable near-term CTFtime and ETHOnline checks.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges and army xtech search 10 | usa.gov lists xtech search 10 start sep 10 2026 5:00 pm et, end oct 19 2026 5:00 pm et, and 1000000 usd cash prize | army xtech official announcement now says xtech search 10 has launched, applications are open to eligible us small businesses, up to 1000000 usd in cash prizes, phase i army sbir and for the first time sttr awards valued up to 300000 usd each, finals at emerge americas in march 2027, and apply by oct 19 2026 5:00 pm et | army competition page still contains stale coming soon text plus older aug 5 to sep 30 dates, so the sep 10 launch announcement and usa.gov current listing supersede that stale page metadata for present application timing",
+      "sha256": "953a0b7979b9be16c0a22dbad1d05f6335542e6d10696ff220a7ac2a45bb9f71",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://xtech.army.mil/announcement/army-launches-xtechsearch-10-continuing-flagship-competition-to-discover-the-armys-next-generation-of-innovation/",
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://xtech.army.mil/competitions/"
+      ],
+      "note": "Material federal opportunity/source-state change. The Army's dated launch announcement now explicitly says applications are open and gives the Oct. 19, 2026 5:00 PM ET deadline, aligning with the current USA.gov federal listing. The Army competition detail page still carries stale 'Coming Soon' language and older Aug. 5-Sep. 30 timing, so the dated launch announcement and USA.gov current listing should control present application timing until the detail page is corrected. Preserve the full RFI/application terms before promoting participant-specific eligibility or creating active work."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | k17 ctf starts sep 11 2026 10:00 utc and event body states it was shortened to 24 hours ending sep 12 10:00 utc despite stale headline metadata | cat ctf 26 starts sep 11 12:00 utc and ends sep 12 12:00 utc | pwnsec ctf runs sep 12 14:00 utc to sep 13 14:00 utc and prizes remain tbd | k17 currently lists one ida pro essential license for first place with further prizes tbd",
+      "sha256": "1dd6fe8fadf0d354c164861b68c419ab60b6995d867de35a91d29ece0af0ace0",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3145",
+        "https://ctftime.org/event/3159/"
+      ],
+      "note": "Real source-health check immediately before the Sep. 11-13 CTF window. K17 retains contradictory headline/body timing; the body explicitly states the 24-hour corrected end. Prize information remains discovery-level unless organizer-primary rules confirm it. No public CTF listing is treated as authorization outside event rules/challenge infrastructure."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal ethonline 2026 prizes | official prize page still lists 11 sponsor pools with displayed headline amounts totaling 80000 usd | ledger remains 5000 usd with 3500 usd ai agents x ledger lane and continuity extension lane represented on the current prize surface | no material overall prize-total change verified in this pass",
+      "sha256": "e52bc2a6badb15605e38fcda95a0974ee3cd12a9f2902ce058cd1d39c24a7ca0",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Stable ETHOnline source-health check. No overall prize-total change from the already-preserved $80,000 surface was found, so no duplicate intelligence promotion is warranted."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Army formally launches xTech|Search 10 and opens applications",
+      "status": "verified-current-federal-opportunity-with-rfi-gate",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "The Army FUZE xTech Program has now formally launched xTech|Search 10. Its official dated announcement says applications are open to eligible U.S. small businesses, offers up to $1 million in cash prizes, adds Phase I Army SBIR and for the first time STTR award opportunities valued up to $300,000 each, and sets the application deadline at October 19, 2026 at 5:00 PM ET. USA.gov independently lists the same Sep. 10-Oct. 19 application window and $1 million cash-prize headline.",
+      "eligibility_and_cost": "The Army launch announcement limits applications to eligible U.S. small businesses. The complete RFI/application package should be preserved before asserting detailed size, ownership, employee, registration, conflict-of-interest, prior-award or submission exclusions. No entry fee was identified in the official pages reviewed, but this contribution does not assert a guaranteed zero-cost participation state without the full RFI.",
+      "prize_and_deadline_evidence": "Army's official launch announcement says up to $1 million in cash prizes, Phase I Army SBIR and first-time STTR awards valued up to $300,000 each, applications open now, and apply by October 19, 2026 at 5:00 PM ET. USA.gov lists start September 10, 2026 at 5:00 PM ET, end October 19, 2026 at 5:00 PM ET and a $1,000,000 cash prize. The older Army competition detail page remains stale with 'Coming Soon' and Aug. 5-Sep. 30 metadata; do not use that stale timing as current truth.",
+      "scope_and_safety": "This is a legitimate prize/innovation opportunity, not authorization to test Army systems, networks, software, contracts or third-party assets. Any future work should be limited to a lawful competition submission under the final RFI and application terms.",
+      "recommended_action": "When chronology reaches Sep. 11, reopen the dated Army launch announcement, application page and complete RFI; preserve exact eligibility, phase structure, per-stage cash awards, SBIR/STTR conditions, submission format, IP/data rights and judging criteria. If those gates fit an existing suite capability and the participant is eligible, convert the lead into a structured opportunity/case rather than leaving it as narrative."
+    }
+  ],
+  "chronology": "Canonical source history still ends at Aug. 29 morning. Do not replay this Sep. 11 snapshot yet. Process Aug. 29 afternoon first, then later preserved snapshots in timestamp/source-overlap order before this snapshot becomes eligible for canonical source-history integration.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, CTF listing, event page, government system, or news item was treated as authorization for security testing. This pass only reviewed public opportunity/research sources and preserved source-state evidence."
+}
