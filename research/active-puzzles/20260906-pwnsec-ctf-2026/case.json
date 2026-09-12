@@ -4,7 +4,7 @@
   "type": "ctf",
   "status": "triage",
   "created_at": "2026-09-06T07:40:01Z",
-  "updated_at": "2026-09-06T07:40:01Z",
+  "updated_at": "2026-09-12T07:38:52Z",
   "source": "PwnSec CTF 2026 official organizer",
   "source_url": "https://pwnsec.ctf.ae/",
   "authorization_url": "https://pwnsec.ctf.ae/",
@@ -19,10 +19,14 @@
     {
       "path": "intelligence/feeds/2026-09-06-source-health.json",
       "role": "research-source-health"
+    },
+    {
+      "path": "intelligence/feeds/2026-09-12-source-health.json",
+      "role": "latest-event-rules-source-health"
     }
   ],
   "notes": [
     "research/active-puzzles/20260906-pwnsec-ctf-2026/notes.md"
   ],
-  "next_action": "Before event start, confirm registration/team state and choose the Cyborg faction if agent-assisted solving will be used. Re-open and preserve the organizer's final rules/AI policy immediately before hands-on work. During Sep. 12 14:00 UTC through Sep. 13 14:00 UTC, interact only with event-provided challenge infrastructure and keep exact challenge/attempt provenance. Prize value remains TBD and must not be inferred."
+  "next_action": "Organizer-primary rules now make the practical AI-lane gate explicit: registration remains open, entry is free, teams may have up to four participants, and the Human/Cyborg faction locks one hour before the board opens. If agent-assisted solving will be used, confirm account/team registration and select the Cyborg faction before 2026-09-12T13:00:00Z. Immediately before hands-on work, re-open and preserve the organizer's final rules/AI policy. During 2026-09-12T14:00:00Z through 2026-09-13T14:00:00Z, interact only with event-provided challenge infrastructure and keep exact challenge/attempt provenance. Prize value remains TBD and must not be inferred."
 }
