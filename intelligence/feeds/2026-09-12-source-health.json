@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-12T07:38:52Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "fbd9f7bd0a7e097873113d02bbe29e557c9634c4",
+  "purpose": "Preserve a bounded Sep. 12 research/source-health pass from exact current main after PR #162. Record final PwnSec participation/AI rules, current xTech|Search 10 phase/prize evidence and eligibility conflict, stable ETHOnline prize state, and Code4rena wind-down/source-value state without overtaking the still-required Aug. 29 afternoon canonical replay gate.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges and xtech search 10 | usa.gov lists xtech search 10 open sep 10 2026 5:00 pm et through oct 19 2026 5:00 pm et with 1000000 usd cash prize headline and eligible small businesses around the us | current army xtech page confirms sep 10 to oct 19 2026, phase 1 up to 50 semifinalists at 5000 usd each, phase 2 up to 20 finalists at 20000 usd each, phase 3 prizes 200000 100000 and 50000 usd, plus up to 20 phase i sbir or sttr proposals at up to 300000 usd each | army page eligibility text says small for-profit independent us businesses with no more than 500 employees, while the same page footer says small and large us-based and allied foreign country businesses, creating an internal eligibility conflict that must be resolved from the full rfi before active work",
+      "sha256": "98393ee34f34f5afb4387ed313f1ab079ab71fe32b6131f88f6489ba6892b17e",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://xtech.army.mil/competition/xtechsearch10/",
+        "https://armysbir.army.mil/topics/xtechsearch-10-competition/"
+      ],
+      "note": "Material opportunity-detail update. USA.gov and Army primary surfaces now agree on the Sep. 10-Oct. 19 application window and $1M cash-prize headline; the Army page also exposes phase-level prize structure and up to $6M in follow-on Phase I SBIR/STTR proposals. However, the same Army page contains conflicting eligibility text: the detailed Eligibility section limits the competition to small, for-profit, independent U.S. businesses while the page footer says small and large U.S.-based and allied foreign-country businesses. Do not create participant-specific active work until the full RFI controls this conflict and complete ownership, size, prior-support, submission, IP/data-rights, and judging terms are preserved."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming and pwnsec official organizer | pwnsec ctf 2026 runs sep 12 2026 14:00 utc through sep 13 2026 14:00 utc | organizer says registration is open, entry is free, teams up to four, faction locks one hour before the board opens, and cyborg teams may use ai including scripts agents and autonomous pipelines | organizer rules say attack the challenges not the infrastructure, no flag sharing outside the team, and no scoreboard games | ctftime still lists prizes as tbd | k17 event text continues to state the competition was shortened to 24 hours ending sep 12 10:00 utc despite stale headline metadata",
+      "sha256": "6a7119df02f84817b28229c0de0b738c27abf224b4e775a3be809ce2ecc603c3",
+      "primary_followup_urls": [
+        "https://pwnsec.ctf.ae/",
+        "https://ctftime.org/event/3159/",
+        "https://ctftime.org/event/3145/"
+      ],
+      "note": "Material case-readiness update for the existing structured PwnSec case. Organizer-primary rules now give the exact faction-lock gate: one hour before the Sep. 12 14:00 UTC board open. Registration remains open, entry is free, teams are capped at four, and agent-assisted solving belongs in the Cyborg faction. Prize value remains unverified/TBD. Do not interact with event infrastructure outside challenge-provided surfaces or before the competition window."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events and ethonline 2026 prizes | ethonline remains sep 4 to sep 16 2026 async hackathon | official prize page still lists 11 sponsor pools with displayed headline amounts totaling 80000 usd | no material prize-total change verified in this pass",
+      "sha256": "dad6d90c83092875d83bb5097812e38261b2045483aa383ab08301ee4c8ff9e8",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Stable source-health check. Existing Ledger, Chainlink and Continuity-track research remains separate pending replay chronology and participant-specific eligibility/acceptance checks; no duplicate intelligence is promoted here."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena official platform | code4rena states it is winding down and closing its doors after five years, with active competitions and bounties being seen through to completion | current official home and audits surfaces show 0 bounties and no open audit competition accepting submissions, with displayed audits either submissions closed, report in progress, or completed | the canonical code4rena source lane should be marked for source-network review rather than silently deleted because historical reports and any remaining completion work still have research value",
+      "sha256": "1f6ee0cde129307195ff4226f31c7d53602ef9eefc467dd280c53dc03f2f111a",
+      "primary_followup_urls": [
+        "https://code4rena.com/",
+        "https://code4rena.com/audits",
+        "https://go.code4rena.com/start"
+      ],
+      "note": "Source-network health finding. The opportunity catalog already warns that Code4rena is winding down, so this is not new user-facing opportunity intelligence. It is, however, a reason to review the recurring source registry lane: keep historical/report value and any remaining completion tracking, but do not treat Code4rena as a normal live-contest discovery source without a specific current engagement. Mark/reconfigure after chronological source reconciliation rather than silently deleting the source."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "PwnSec CTF 2026 final participation gate is now concrete",
+      "status": "verified-current-case-readiness",
+      "confidence": "high",
+      "relevance": "urgent",
+      "summary": "The PwnSec organizer confirms registration is open for the Sep. 12 14:00 UTC-Sep. 13 14:00 UTC event, entry is free, teams are capped at four, and the Human/Cyborg faction locks one hour before the board opens. Cyborg teams may use AI, scripts, agents and autonomous pipelines; challenge work must stay on event-provided challenge surfaces.",
+      "eligibility_and_cost": "Organizer page says free entry, teams up to four, and solo players may request matching. Registration/account/team state is participant-specific and is not asserted complete by this repository.",
+      "prize_and_deadline_evidence": "Organizer gives a Sep. 12, 2026 14:00 UTC start and Sep. 13, 2026 14:00 UTC end; faction lock is one hour before board open, making 13:00 UTC Sep. 12 the current practical AI-lane decision deadline. CTFtime continues to list prizes as TBD, so no monetary claim is made.",
+      "scope_and_safety": "Organizer rule boundary is attack the challenges, not the infrastructure; no flag sharing outside the team and no scoreboard games. AI-assisted work belongs in the Cyborg faction only. Public event infrastructure, hostnames or organizer services are not blanket testing authorization.",
+      "recommended_action": "Advance the existing PwnSec structured case with the exact 13:00 UTC faction-lock gate and preserve final organizer rules immediately before any challenge interaction. Do not create a duplicate case."
+    },
+    {
+      "title": "xTech|Search 10 exposes phase-level awards but retains an eligibility conflict",
+      "status": "verified-current-opportunity-with-rules-conflict",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "Current Army and USA.gov surfaces agree that xTech|Search 10 is open Sep. 10-Oct. 19, 2026 with up to $1M in cash prizes. The Army page now exposes $5K semifinalist, $20K finalist, $200K/$100K/$50K final awards, plus up to 20 Phase I SBIR/STTR proposals at up to $300K each, but the same page contains conflicting statements about who can submit.",
+      "eligibility_and_cost": "Detailed Army eligibility text says small, for-profit, independent U.S. businesses with no more than 500 employees, while the footer says small and large U.S.-based and allied foreign-country businesses. USA.gov says eligible small businesses around the U.S. No entry fee was identified. Full RFI controls eligibility and must be preserved before case promotion.",
+      "prize_and_deadline_evidence": "Army: Phase 1 up to 50 semifinalists at $5K each; Phase 2 up to 20 finalists at $20K each; Phase 3 first/second/third at $200K/$100K/$50K; Phase 4 up to 20 SBIR/STTR selectees at up to $300K each. Application deadline is Oct. 19, 2026 at 5 PM ET. USA.gov independently lists a $1M cash-prize headline and the same opening/closing dates.",
+      "scope_and_safety": "This is an innovation/prize opportunity, not authorization to test Army or government systems. Any security-related concept would still require a competition-defined problem and data/test environment.",
+      "recommended_action": "When chronology reaches this contribution, preserve and review the full RFI to resolve eligibility, ownership, prior-support, submission, IP/data-rights and judging terms before creating active participant-specific work."
+    },
+    {
+      "title": "Code4rena recurring discovery lane has degraded to wind-down monitoring",
+      "status": "source-network-review-recommended",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "Code4rena's official site says the platform is winding down and closing its doors; current official surfaces show zero bounties and no open audit contest accepting submissions. Existing engagements are being seen through to completion.",
+      "eligibility_and_cost": "Not applicable as a new opportunity finding. Any remaining engagement would require its own current rules and submission state.",
+      "prize_and_deadline_evidence": "No current open contest or bounty prize is asserted. Historical/completed audit award pages remain useful as research records.",
+      "scope_and_safety": "Historical reports and any residual completion work remain research evidence, but they do not authorize testing. Do not infer scope from archived contests.",
+      "recommended_action": "Review the canonical code4rena-contests source lane after chronological reconciliation. Prefer marking/reconfiguring it as low-frequency wind-down/history monitoring rather than silently deleting it; current opportunity discovery should prioritize still-active platforms."
+    }
+  ],
+  "chronology": "Canonical source history still ends at Aug. 29 morning. Do not replay this Sep. 12 snapshot yet. Process Aug. 29 afternoon and all intervening contributed snapshots in timestamp/source-overlap order before this snapshot becomes eligible for canonical source-history integration.",
+  "safety": "No target testing was performed. No public hostname, contract, repository, bounty listing, event page, government system or historical audit was treated as blanket authorization. PwnSec hands-on activity remains limited to event-provided challenge infrastructure during the published competition window and under the selected faction rules."
+}
