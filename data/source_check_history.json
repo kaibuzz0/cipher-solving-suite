@@ -1,7 +1,15 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-29T07:38:35Z",
+  "updated_at": "2026-08-29T19:40:52Z",
   "checks": [
+    {
+      "source_id": "ethglobal-events",
+      "checked_at": "2026-08-29T19:40:52Z",
+      "content_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "previous_fingerprint": "5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c",
+      "change_state": "changed",
+      "note": "Material improvement over the canonical date-only ETHOnline intelligence: the official 2026 prize page now exposes ten sponsor prize pools whose displayed headline amounts sum to $77,000. Several sponsor sections still say prize details are coming soon. The event listing currently presents ETHOnline as an upcoming async hackathon and offers Apply to Attend, but this pass did not find an authoritative 2026 application-deadline timestamp in the fetchable official pages. Do not invent that deadline or a stake amount; reopen the event dashboard/application flow before promoting structured active work."
+    },
     {
       "source_id": "challenge-gov",
       "checked_at": "2026-08-29T07:38:35Z",
