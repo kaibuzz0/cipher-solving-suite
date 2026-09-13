@@ -1,0 +1,34 @@
+name: Append post PR171 handoff once
+
+on:
+  push:
+    branches:
+      - ops/post-pr171-reconcile-20260913
+
+permissions:
+  contents: write
+
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Append final PR171 reconciliation handoff
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('docs/AGENT_HANDOFF.md')
+          entry = '''\n---\n\n### 2026-09-13 08:12 UTC — Build Integration / post-PR171 reconciliation\n\n- **Branch / PR:** `ops/post-pr171-reconcile-20260913` / PR pending\n- **Objective:** Reconcile repository coordination after the Aug. 29 afternoon native replay merged through PR #171.\n- **Changed:** PR #171 merged as `584fa02155392f7b024bbc024f02bac1ed2ec0bf`, making exactly one `ethglobal-events` record at `2026-08-29T19:40:52Z` canonical and advancing only that source registry timestamp. `ops/CURRENT_STATE.md` now records the merged state and makes Aug. 30 morning the next chronology gate. No raw research snapshot was rewritten.\n- **Verification:** Native replay workflow `34746769854` succeeded with 78 source-history checks, 16 registry sources, exact fingerprint/predecessor assertions, and the Aug. 29 afternoon readiness test. First PR Core run `34746859968` exposed one over-strict morning readiness assertion: it required the ETHGlobal registry timestamp to remain frozen at the morning replay forever. `tests/test_aug29_source_readiness.py` was repaired to preserve exact morning hashes/predecessors while requiring registry freshness to equal the latest canonical history record. Repaired exact-head Core `34746920680`, Intelligence Source Report `34746920645`, and Daily Maintenance `34746920669` succeeded; PR #171 had no review threads and was mergeable. Post-merge Core `34746964346` and Pages `34746964352` both succeeded on exact merge commit `584fa02155392f7b024bbc024f02bac1ed2ec0bf`.\n- **Evidence / artifacts:** `data/source_check_history.json`; `data/intelligence_sources.json`; `data/integration_queue.json`; `tests/test_aug29_source_readiness.py`; fingerprint `361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179`; predecessor `5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c`.\n- **Collision / conflict handling:** Current-base PR #170 was research-only and did not overlap the replay state. Later Sep. research was not used to advance canonical freshness. The failing regression test was fixed rather than weakened or bypassed.\n- **Known risks / blockers:** `docs/WORK_QUEUE.md` may still describe Aug. 29 afternoon as the next gate; stale research PRs still require current-main reconciliation. GitHub Actions action-tag pinning and broad dependency ranges remain supply-chain debt.\n- **Next action:** Independently verify the Aug. 30 morning snapshot fingerprints and predecessors against canonical Aug. 29 afternoon. If valid, stage only that chronological replay through the native replay command and repeat the full PR/post-merge validation chain before advancing further.\n'''
+          if '### 2026-09-13 08:12 UTC — Build Integration / post-PR171 reconciliation' not in p.read_text():
+              p.write_text(p.read_text() + entry)
+          PY
+          rm .github/workflows/post-pr171-handoff-once.yml
+      - name: Commit reconciliation handoff
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/AGENT_HANDOFF.md .github/workflows/post-pr171-handoff-once.yml
+          git commit -m 'docs: append post PR171 handoff'
+          git push origin HEAD:ops/post-pr171-reconcile-20260913
