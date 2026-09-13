@@ -1,0 +1,79 @@
+name: Sync post PR171 queues once
+
+on:
+  push:
+    branches:
+      - ops/post-pr171-reconcile-20260913
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconcile work and integration queues
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          # Human-readable work queue.
+          work = Path('docs/WORK_QUEUE.md')
+          text = work.read_text()
+          old = '| P2 | in-progress | Add link health and catalog freshness checks | build-agent | Aug. 29 morning source health is canonical via PR #148 at `2026-08-29T07:38:35Z` with exactly five replayed records and five matching registry timestamp advances. Aug. 29 afternoon is the next replay gate: independently verify its fingerprints and predecessors before any canonical write. |'
+          new = '| P2 | in-progress | Add link health and catalog freshness checks | build-agent | Aug. 29 morning is canonical via PR #148 and Aug. 29 afternoon is canonical via PR #171 at `2026-08-29T19:40:52Z` with exactly one later ETHGlobal record and one matching registry timestamp advance. Aug. 30 morning is the next replay gate: independently verify every protected fingerprint and predecessor before any canonical write. |'
+          assert old in text, 'expected P2 source-health row not found'
+          text = text.replace(old, new, 1)
+          marker = '| Completed | Work | Evidence |\n|---|---|---|\n'
+          completed = '| 2026-09-13 | Canonically replay Aug. 29 afternoon source health and repair forward-freshness regression | PR #171 merged as `584fa021...`; native replay run `34746769854` added exactly one `ethglobal-events` record at `2026-08-29T19:40:52Z` and advanced only that registry timestamp; repaired exact-head Core `34746920680`, Source Report `34746920645`, and Maintenance `34746920669` succeeded; post-merge Core `34746964346` and Pages `34746964352` succeeded. |\n'
+          assert marker in text
+          if completed not in text:
+              text = text.replace(marker, marker + completed, 1)
+          work.write_text(text)
+
+          # Machine-readable integration queue.
+          queue_path = Path('data/integration_queue.json')
+          queue = json.loads(queue_path.read_text())
+          aug29 = next(x for x in queue['items'] if x['id'] == '20260829-pr85-pr91-source-health-research')
+          aug29['status'] = 'integrated'
+          merged_suffix = '; Aug. 29 afternoon replay PR #171 merged as 584fa02155392f7b024bbc024f02bac1ed2ec0bf'
+          if merged_suffix not in aug29['branch_or_pr']:
+              aug29['branch_or_pr'] += merged_suffix
+          aug29['purpose'] = 'Preserve Aug. 29 morning and afternoon research and their canonical replays in chronology without rewriting the raw snapshots.'
+          aug29['summary'] = 'PR #148 made exactly five 2026-08-29T07:38:35Z morning records canonical. PR #171 made exactly one 2026-08-29T19:40:52Z ethglobal-events record canonical and advanced only that matching registry timestamp; raw Aug. 29 snapshots remain unchanged.'
+          aug29['verification'] = 'Native replay run 34746769854 passed source-history/source-registry validation, bounded one-record/one-registry assertions, and the Aug. 29 afternoon readiness regression. After repairing an over-strict morning freshness test, exact-head Core 34746920680, Intelligence Source Report 34746920645, and Daily Maintenance 34746920669 succeeded; post-merge Core 34746964346 and Pages 34746964352 succeeded on exact merge commit 584fa02155392f7b024bbc024f02bac1ed2ec0bf.'
+          aug29['next_action'] = 'Preserve Aug. 29 evidence unchanged. Aug. 30 morning is now the next chronological replay gate.'
+
+          aug30 = next(x for x in queue['items'] if x['id'] == '20260830-pr95-pr99-source-health-research')
+          aug30['status'] = 'needs-integration'
+          aug30['summary'] = 'Both Aug. 30 research snapshots are preserved on current main as contributed evidence only. With Aug. 29 afternoon canonical via PR #171, Aug. 30 morning is now the next eligible replay gate; no Aug. 30 canonical source-history replay is claimed yet.'
+          aug30['verification'] = 'Repository commit history confirms both one-file research PRs merged before PR #101. PR #171 and exact-main post-merge Core/Pages establish that the preceding Aug. 29 chronology gate is now complete. Aug. 30 fingerprints and predecessor chains still require independent verification before replay.'
+          aug30['next_action'] = 'Independently verify the Aug. 30 morning snapshot hashes, latest canonical predecessors, uniqueness, and replay scope. If valid, replay morning only through the native source-history command; verify before considering Aug. 30 afternoon.'
+          queue['updated_at'] = '2026-09-13T08:13:00Z'
+          queue_path.write_text(json.dumps(queue, indent=2) + '\n')
+
+          # Current-state coordination section now reflects this same branch.
+          state = Path('ops/CURRENT_STATE.md')
+          s = state.read_text()
+          s = s.replace('- This post-PR171 reconciliation must append the final merge/verification record to `docs/AGENT_HANDOFF.md` without rewriting prior entries.\n- `docs/WORK_QUEUE.md` may still describe Aug. 29 afternoon as the next gate and should be reconciled to Aug. 30 morning in the next coordination-safe change if not already updated elsewhere.\n- Open research PRs must be reconciled from current `main` and rerun through validation before merge.', '- `docs/AGENT_HANDOFF.md`, `docs/WORK_QUEUE.md`, and `data/integration_queue.json` are reconciled on this branch to the merged PR #171 state and Aug. 30 morning next gate.\n- Open research PRs must be reconciled from current `main` and rerun through validation before merge.')
+          state.write_text(s)
+
+          # Append-only operational closure.
+          handoff = Path('docs/AGENT_HANDOFF.md')
+          h = handoff.read_text()
+          entry = '''\n---\n\n### 2026-09-13 08:13 UTC — Build Integration / PR171 queue synchronization\n\n- **Branch / PR:** `ops/post-pr171-reconcile-20260913` / PR pending\n- **Objective:** Finish the post-PR171 coordination sync so machine and human queue surfaces match the newly canonical Aug. 29 afternoon replay.\n- **Changed:** `docs/WORK_QUEUE.md` now records PR #171 as completed and makes Aug. 30 morning the next replay gate. `data/integration_queue.json` records the Aug. 29 lane as fully merged/verified and promotes the preserved Aug. 30 morning/afternoon research lane from chronology-blocked to `needs-integration`, with morning explicitly first. `ops/CURRENT_STATE.md` records that these coordination surfaces are reconciled on this branch. No source-history, source-registry, raw research, tool, toolset, case, opportunity, or site HTML data changed in this closure.\n- **Verification:** PR #171 merge `584fa02155392f7b024bbc024f02bac1ed2ec0bf`; repaired exact-head Core `34746920680`, Source Report `34746920645`, Maintenance `34746920669`; post-merge exact-main Core `34746964346` and Pages `34746964352`, all successful. This coordination PR still requires its own exact-head validation before merge.\n- **Files affected:** `docs/WORK_QUEUE.md`; `data/integration_queue.json`; `ops/CURRENT_STATE.md`; append-only `docs/AGENT_HANDOFF.md`.\n- **Collision / conflict handling:** No canonical replay files are touched. Later Sep. research remains noncanonical; open research PRs must reconcile from current main rather than leapfrog Aug. 30.\n- **Known risks / blockers:** Aug. 30 morning is eligible for independent verification, not automatically trusted. Its contributed fingerprints/predecessors still need recomputation before any replay.\n- **Next action:** Validate and merge this coordination-only branch if green, then independently verify the Aug. 30 morning source-health snapshot and stage only the evidence-backed morning replay.\n'''
+          if '### 2026-09-13 08:13 UTC — Build Integration / PR171 queue synchronization' not in h:
+              handoff.write_text(h + entry)
+          PY
+          rm .github/workflows/post-pr171-queue-sync-once.yml
+      - name: Commit synchronized coordination state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/WORK_QUEUE.md data/integration_queue.json ops/CURRENT_STATE.md docs/AGENT_HANDOFF.md .github/workflows/post-pr171-queue-sync-once.yml
+          git commit -m 'ops: synchronize queues after PR 171'
+          git push origin HEAD:ops/post-pr171-reconcile-20260913
