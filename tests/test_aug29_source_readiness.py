@@ -57,6 +57,12 @@ def _latest_before(checks, source_id: str, checked_at: str):
     return max(candidates, key=lambda record: record["checked_at"])
 
 
+def _latest_for_source(checks, source_id: str):
+    candidates = [record for record in checks if record["source_id"] == source_id]
+    assert candidates, f"missing canonical history for {source_id}"
+    return max(candidates, key=lambda record: record["checked_at"])
+
+
 def test_aug29_snapshot_hashes_and_predecessors_are_replay_safe():
     snapshot = _load(SNAPSHOT_PATH)
     history = _load(HISTORY_PATH)
@@ -93,6 +99,12 @@ def test_aug29_canonical_state_is_absent_or_exact_and_idempotent():
             record = matching[0]
             assert record["content_fingerprint"] == expected["fingerprint"]
             assert record["previous_fingerprint"] == expected["predecessor"]
-            assert registry_by_id[source_id]["last_checked_at"] == CHECKED_AT
+
+            # Registry freshness may legitimately advance after this protected
+            # morning replay. It must track the latest canonical history record,
+            # rather than being frozen forever at the morning timestamp.
+            latest = _latest_for_source(history["checks"], source_id)
+            assert latest["checked_at"] >= CHECKED_AT
+            assert registry_by_id[source_id]["last_checked_at"] == latest["checked_at"]
         else:
             assert registry_by_id[source_id]["last_checked_at"] == expected["predecessor_checked_at"]
