@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T07:23:00Z",
+  "updated_at": "2026-09-13T08:05:06Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -153,19 +153,19 @@
     {
       "id": "20260829-pr85-pr91-source-health-research",
       "type": "research",
-      "status": "needs-integration",
-      "contributor": "research-agent / PR #85 and PR #91; morning replay by PR #148; independently verified by Repo Integrity",
-      "branch_or_pr": "PR #85 merged as 66f7ca2c4235abc61f6aa1dc18e8c97b89f576f6; PR #91 merged as 58fbffc1c2d918404c898511a79bd1154680af8d; Aug. 29 morning replay PR #148 merged as 418e9a7c7c101aa499fe76114c6b614ab4c82ba0",
+      "status": "integrated",
+      "contributor": "research-agent / PR #85 and PR #91; morning replay by PR #148; independently verified by Repo Integrity; afternoon replay by build-agent one-shot workflow",
+      "branch_or_pr": "PR #85 merged as 66f7ca2c4235abc61f6aa1dc18e8c97b89f576f6; PR #91 merged as 58fbffc1c2d918404c898511a79bd1154680af8d; Aug. 29 morning replay PR #148 merged as 418e9a7c7c101aa499fe76114c6b614ab4c82ba0; Aug. 29 afternoon replay staged on build/aug29-afternoon-replay-20260913",
       "path": "intelligence/feeds/2026-08-29-source-health.json; intelligence/feeds/2026-08-29-afternoon-source-health.json",
       "purpose": "Preserve Aug. 29 morning and afternoon research, keep the morning replay canonical, and leave the afternoon observation as the next bounded chronology gate.",
-      "summary": "PR #148 made exactly five 2026-08-29T07:38:35Z morning records canonical and advanced only the five matching registry timestamps. The Aug. 29 afternoon snapshot remains intentionally un-replayed and is the next chronology gate.",
-      "verification": "Current source history validates at 77 checks and source registry at 16 sources. `tests/test_aug29_afternoon_source_readiness.py` protects the single afternoon ETHGlobal observation fingerprint `361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179`, predecessor `5b270d1af189b17c8508993b6c5ed10d6794acec5e254eee7dc77f2c2f84925c`, uniqueness and idempotence. Core `34745069661` and Pages `34745069671` succeeded on current main after PR #168.",
+      "summary": "PR #148 made exactly five 2026-08-29T07:38:35Z morning records canonical. This build replay adds exactly one 2026-08-29T19:40:52Z ethglobal-events record and advances only that matching registry timestamp; raw Aug. 29 snapshots remain unchanged.",
+      "verification": "Native replay plus source-history/source-registry validation and tests/test_aug29_afternoon_source_readiness.py passed in GitHub Actions run 34746769854. Exact-head Core/Source Report/Maintenance and post-merge Pages remain required before the next chronology gate advances.",
       "risks": [
         "Do not treat the later Sep. research merges as canonical source freshness.",
         "Preserve the raw Aug. 29 snapshots unchanged.",
         "Research claims remain contributed evidence until independently verified."
       ],
-      "next_action": "Replay only the single Aug. 29 afternoon `ethglobal-events` observation, require exact one-record/one-registry scope and full validation, then independently verify before Aug. 30 advances."
+      "next_action": "Independently inspect the one-record/one-registry replay diff and exact-head CI; after merge and post-merge validation, Aug. 30 morning becomes the next chronology gate."
     },
     {
       "id": "20260830-pr95-pr99-source-health-research",
