@@ -349,3 +349,16 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Collision / conflict handling:** Current-base PR #170 was research-only and did not overlap the replay state. Later Sep. research was not used to advance canonical freshness. The failing regression test was fixed rather than weakened or bypassed.
 - **Known risks / blockers:** `docs/WORK_QUEUE.md` may still describe Aug. 29 afternoon as the next gate; stale research PRs still require current-main reconciliation. GitHub Actions action-tag pinning and broad dependency ranges remain supply-chain debt.
 - **Next action:** Independently verify the Aug. 30 morning snapshot fingerprints and predecessors against canonical Aug. 29 afternoon. If valid, stage only that chronological replay through the native replay command and repeat the full PR/post-merge validation chain before advancing further.
+
+---
+
+### 2026-09-13 08:13 UTC — Build Integration / PR171 queue synchronization
+
+- **Branch / PR:** `ops/post-pr171-reconcile-20260913` / PR pending
+- **Objective:** Finish the post-PR171 coordination sync so machine and human queue surfaces match the newly canonical Aug. 29 afternoon replay.
+- **Changed:** `docs/WORK_QUEUE.md` now records PR #171 as completed and makes Aug. 30 morning the next replay gate. `data/integration_queue.json` records the Aug. 29 lane as fully merged/verified and promotes the preserved Aug. 30 morning/afternoon research lane from chronology-blocked to `needs-integration`, with morning explicitly first. `ops/CURRENT_STATE.md` records that these coordination surfaces are reconciled on this branch. No source-history, source-registry, raw research, tool, toolset, case, opportunity, or site HTML data changed in this closure.
+- **Verification:** PR #171 merge `584fa02155392f7b024bbc024f02bac1ed2ec0bf`; repaired exact-head Core `34746920680`, Source Report `34746920645`, Maintenance `34746920669`; post-merge exact-main Core `34746964346` and Pages `34746964352`, all successful. This coordination PR still requires its own exact-head validation before merge.
+- **Files affected:** `docs/WORK_QUEUE.md`; `data/integration_queue.json`; `ops/CURRENT_STATE.md`; append-only `docs/AGENT_HANDOFF.md`.
+- **Collision / conflict handling:** No canonical replay files are touched. Later Sep. research remains noncanonical; open research PRs must reconcile from current main rather than leapfrog Aug. 30.
+- **Known risks / blockers:** Aug. 30 morning is eligible for independent verification, not automatically trusted. Its contributed fingerprints/predecessors still need recomputation before any replay.
+- **Next action:** Validate and merge this coordination-only branch if green, then independently verify the Aug. 30 morning source-health snapshot and stage only the evidence-backed morning replay.

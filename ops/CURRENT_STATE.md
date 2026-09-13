@@ -61,8 +61,7 @@ Repository version: `v3.1.0` (README)
 
 ## Coordination drift requiring follow-up
 
-- This post-PR171 reconciliation must append the final merge/verification record to `docs/AGENT_HANDOFF.md` without rewriting prior entries.
-- `docs/WORK_QUEUE.md` may still describe Aug. 29 afternoon as the next gate and should be reconciled to Aug. 30 morning in the next coordination-safe change if not already updated elsewhere.
+- `docs/AGENT_HANDOFF.md`, `docs/WORK_QUEUE.md`, and `data/integration_queue.json` are reconciled on this branch to the merged PR #171 state and Aug. 30 morning next gate.
 - Open research PRs must be reconciled from current `main` and rerun through validation before merge.
 
 ## Current operating priorities
