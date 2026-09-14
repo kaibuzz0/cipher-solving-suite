@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-14T07:41:39Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "a7b1f685e212d0302e546f5b915fa03433f18ac8",
+  "purpose": "Preserve a bounded Sep. 14 research/source-health pass from exact current main after PR #173, without overtaking the canonical Aug. 30 morning replay gate or rewriting older open research contributions.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | monday sep 14 2026 batch contains 37 entries | arxiv 2609.12001 scan the skill govern the action presents open agent trust system oats for separating registry security verdicts from operator-specific runtime consequence authorization | authors report measurements over 66192 public clawhub skill versions, a 100-sample hand audit with 92 percent detector precision, a sandbox live-agent study, and a 64-case obfuscation benchmark; these measurements are author-reported and not independently reproduced here | arxiv 2609.12582 novafabric is a secondary audit-evidence lead for tamper-evident replayable autonomous-agent runs",
+      "sha256": "7551734282e11279a69f15d51cc88aa490596859d0eebb52247299fdecc9e3db",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2609.12001",
+        "https://arxiv.org/abs/2609.12582"
+      ],
+      "note": "Material research change. OATS is the stronger lead because a public reference artifact is available for independent inspection; all paper-reported measurements remain unreproduced in this repository. NovaFabric is preserved as a secondary audit-evidence lead only."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "github direct artifact verification for arxiv 2609.12001 | pheo-ai open-agent-trust-system is a public repository exposing schemas, a 33-consequence-class spec, dependency-free validator, reference runtime, examples, tests, paper and research reproduction scripts | readme describes action-scoped authority policy, action receipts, lifecycle attestations and evidence-backed autonomy transitions with revoked state terminal until explicit restoration | repository license is apache-2.0 copyright 2026 pheo inc | implementation and reported benchmarks have not been independently executed by this repository and no code is imported in this pass",
+      "sha256": "63f24778f9dfd7eafd0efca57367dd3f02847c6e7299d38cb864e547f3769b97",
+      "primary_followup_urls": [
+        "https://github.com/pheo-ai/open-agent-trust-system",
+        "https://github.com/pheo-ai/open-agent-trust-system/blob/main/LICENSE"
+      ],
+      "note": "Independent artifact/provenance check for the arXiv lead. Public source and Apache-2.0 licensing are verified from GitHub, but the reference runtime, validator and benchmark claims still require isolated benign execution before any integration proposal."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming events | next broad online qualification window begins sep 18 2026 | nullorigin ctf qualifiers begins sep 18 04:30 utc, defcamp d-ctf 2026 quals runs sep 18 10:00 utc through sep 20 10:00 utc, and csaw ctf qualification round 2026 runs sep 18 16:00 utc through sep 20 16:00 utc | aggregator listings are discovery evidence only and organizer rules, eligibility, registration, scope and prize terms require primary-source verification before promotion",
+      "sha256": "8a3776f0c2f45138000e8de0b5184e97b87d5178535a7f89fbeb0bd078f2d571",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming"
+      ],
+      "note": "Source-health check only. No CTF is promoted from aggregator evidence alone; organizer-primary rules and any payout evidence remain required before case creation or money claims."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges | ready set id the biothreat remains listed through oct 14 2026 and xtech search 10 remains listed through oct 19 2026 | the active index also lists specialized lanes including nasa techrise, acl caregiver ai, one cdc data platform 1cdp and other federal challenges | no newly discovered general-purpose opportunity in this check outranks the already preserved biothreat and xtech leads; complete host rules and participant-specific eligibility remain required before active work",
+      "sha256": "d4817e739f74afa77a6b99f9eacedbe7afc503229d4efca8d01a3114ce7df97a",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/ready-set-id-biothreat",
+        "https://www.usa.gov/challenges/xtech-search-10"
+      ],
+      "note": "Stable opportunity check. Existing Biothreat and xTech research remains stronger than the newly visible specialized federal lanes, so no duplicate canonical opportunity or active case is created."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "OATS provides a public action-scoped authority and receipt model for autonomous agents",
+      "status": "evaluation-lead-artifact-verified-unreproduced",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "The Sep. 14 cs.CR batch includes arXiv:2609.12001, which argues that clean registry scans do not answer whether an agent action is permitted for a specific operator. Its public OATS repository defines portable authority policies, action receipts, lifecycle attestations and evidence-backed autonomy transitions. GitHub independently confirms the public artifact and Apache-2.0 license. The paper's measurements and the implementation's behavior have not been independently reproduced by this repository.",
+      "recommended_action": "When chronological research integration reaches this contribution, preserve the exact repository commit used for evaluation, run the dependency-free validator/reference-runtime tests in an isolated benign environment, exercise action-policy/receipt/demotion behavior against local fixtures, and compare the model with the suite's existing authorization and provenance contracts before proposing any integration."
+    },
+    {
+      "title": "Sep. 14 CTF and federal-opportunity surfaces do not justify duplicate promotion",
+      "status": "verified-source-health-no-new-promotion",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "CTFtime's next broad online qualifier window begins Sep. 18 and still requires organizer-primary verification. USA.gov continues to expose the already-preserved Biothreat and xTech Search 10 lanes; newly observed federal listings are more specialized and do not displace those existing leads.",
+      "recommended_action": "Keep opportunity research focused on primary-rule verification for already-preserved high-value lanes rather than adding duplicate catalog entries."
+    }
+  ],
+  "chronology": "Canonical source history is through Aug. 29 afternoon. Aug. 30 morning remains the next replay gate after PR #173's independent readiness check. Do not replay this Sep. 14 snapshot until Aug. 30 morning, Aug. 30 afternoon and all intervening overlapping snapshots have been integrated in chronological/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, package, paper, bounty listing, CTF listing or challenge listing was treated as authorization for security testing. OATS and NovaFabric are evaluation leads only; no external code was executed or imported in this pass."
+}
