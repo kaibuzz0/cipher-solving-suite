@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-03T07:40:40Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "787f96947ab8da762457d5c4c2607024d07a9cf6",
+  "purpose": "Preserve a bounded Sep. 3 source-health pass from current main without overtaking the chronological Aug. 28+ canonical replay chain or colliding with coordination PR #122.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 prizes | official prize page currently lists 11 sponsor pools with headline amounts the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 bazantic 3000 and chainlink 2500 totaling 79500 dollars | this is a material change from the sep 1 afternoon preserved 82000 dollar surface | event remains sep 4 to sep 16 2026 and still shows apply to attend | the graph continuity ai tooling or ai use case track remains 5000 dollars with live graph data public repo and 2 to 4 minute demo requirements",
+      "sha256": "601b6802285e28c91d6d28932be8ed6db39122dc5d161b91d476252c26e644bb",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Material prize-surface change. The current official sponsor totals sum to $79,500, down from the $82,000 headline surface preserved in the Sep. 1 afternoon contribution. Bazantic is currently $3,000 and Chainlink $2,500. The Graph Continuity AI track remains directly relevant, but participant acceptance and the exact event-specific stake remain unresolved, so no active case is created."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | nns ctf 2026 remains scheduled sep 4 1600 utc to sep 6 1600 utc | nearest broad online ctf window remains imminent | prize claims should remain discovery level until organizer rules are preserved | no target testing or authorization inference",
+      "sha256": "55b420e4d1f31535d5dc7667be406800f86d1f84a6f9ffb04ccbcf45fbcd9775",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3097",
+        "https://nnsc.tf/"
+      ],
+      "note": "Source-health refresh only. NNS CTF begins Sep. 4 at 16:00 UTC and remains a legitimate near-term practice/competition lead. Preserve organizer rules before treating any payout figure as final."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://xtech.army.mil/competition/xtechsearch10/",
+      "observed": "army xtech search 10 official page | page still says competition details and application information will be available soon while also displaying aug 5 to sep 30 2026 submission dates up to 1000000 dollars cash prizes up to 4800000 dollars army sbir or sttr proposals and a submit your application link | page also contains incomplete placeholder fields and a jan 1 1970 winner announced date | treat the official surface as internally inconsistent and not yet actionable",
+      "sha256": "00f4719675b5f94421e5ebae37ca9a255d7345678c5f796b0a7d1f99dde7b92f",
+      "primary_followup_urls": [
+        "https://xtech.army.mil/competition/xtechsearch10/"
+      ],
+      "note": "The Army primary page remains internally inconsistent and visibly incomplete. Do not promote xTech|Search 10 to an actionable case until a coherent RFI/application package resolves the contradictory state and dates."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline 2026 official prize surface decreased to $79,500",
+      "status": "verified-source-change",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal's current official ETHOnline prize page lists 11 sponsor pools totaling $79,500. This supersedes the $82,000 prize-surface observation preserved in the Sep. 1 afternoon contribution. The strongest repository-relevant lane remains The Graph's $5,000 Continuity AI Tooling / AI Use Case track.",
+      "recommended_action": "When chronology reaches this snapshot, independently reopen ETHOnline's event, prize, application and participant surfaces. If the account is accepted and the exact stake/participation requirements are favorable, create a structured case for a narrowly scoped Continuity-track feature with pre-event provenance and live Graph data."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 27. PR #118/PR #121 preserved coordination and the provenance-safe Aug. 28 morning reconciliation, but the actual canonical Aug. 28 morning replay remains the next required write. Do not replay this Sep. 3 snapshot until Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, Aug. 30 morning/afternoon, Aug. 31 morning/afternoon, Sep. 1 morning/afternoon, and Sep. 2 morning/afternoon are independently reconciled in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
