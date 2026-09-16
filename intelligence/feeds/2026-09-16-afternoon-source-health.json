@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-16T19:40:02Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "391f806ede892b8df6e54322b20265d1f561c41d",
+  "purpose": "Preserve a bounded Sep. 16 afternoon federal source-health delta from exact current main without overtaking the canonical Aug. 30 morning replay gate or duplicating the Sep. 16 DARPA D2 contribution.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges | documentation and decision support d2 sprint listing was updated sep 15 and now gives federal-directory start date sep 15 2026 09:00 et, end mar 1 2027 17:00 et and 1000000 usd total cash prizes | this directory-level start date differs from darpa primary d2 materials that describe rolling qualification activity beginning sep 11; preserve both with darpa rules controlling competition mechanics and usa.gov serving as federal discovery metadata | ready set id the biothreat remains open sep 8 through oct 14 with 999990 usd total cash prizes | xtech search 10 remains open sep 10 through oct 19 with 1000000 usd cash prize headline | no new participant-specific registration or authorization state is established",
+      "sha256": "c46e565978c9aa3df30be5c6ab191972c62da16a1841b1c6807bc218c51140d4",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/documentation-decision-support",
+        "https://www.darpa.mil/research/challenges/d2",
+        "https://www.usa.gov/challenges/ready-set-id-biothreat",
+        "https://www.usa.gov/challenges/xtech-search-10"
+      ],
+      "note": "Material source-quality delta rather than a new opportunity promotion. USA.gov's D2 directory metadata now carries a Sep. 15 start date while DARPA primary competition materials describe qualification activity beginning Sep. 11. Preserve the discrepancy explicitly; use DARPA's current rules/resources for competition mechanics. Biothreat and xTech remain previously known open federal lanes and are not duplicated into canonical opportunity data here."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "D2 federal-directory metadata now exposes a start-date discrepancy that should remain provenance-visible",
+      "status": "verified-source-metadata-conflict",
+      "confidence": "high",
+      "relevance": "medium",
+      "summary": "USA.gov's D2 listing, updated Sep. 15, gives a Sep. 15 federal-directory start date and Mar. 1, 2027 end date with $1M total prizes. DARPA primary materials used in the Sep. 16 morning contribution describe rolling qualification activity beginning Sep. 11. This is a source-metadata discrepancy, not evidence that the opportunity changed twice. DARPA primary rules should control participation mechanics while the USA.gov value remains preserved as directory provenance.",
+      "recommended_action": "When chronology reaches Sep. 16, reconcile this observation with the morning D2 snapshot rather than creating a duplicate opportunity. Preserve both timestamps/URLs, mark the USA.gov/DARPA start-date discrepancy, and prefer the current DARPA rules/resources for operational deadlines."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay this Sep. 16 afternoon snapshot until Aug. 30 morning, Aug. 30 afternoon and intervening overlapping source snapshots have been integrated in chronological/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, repository, challenge listing or government system was treated as security-testing authorization. This pass records public competition metadata only."
+}
