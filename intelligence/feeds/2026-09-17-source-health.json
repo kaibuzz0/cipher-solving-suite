@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-17T19:40:23Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 17 official-source opportunity lead from exact current main without overtaking the canonical Aug. 30 morning replay gate or treating specialized eligibility as generic public actionability.",
+  "observations": [
+    {
+      "source_id": "research-lead-gsa-ai-community",
+      "source_url": "https://www.gsa.gov/artificial-intelligence/ai-community-of-practice/events-and-training/mcp-server-and-ai-agent-government-hackathon",
+      "observed": "gsa mcp server and ai agent government hackathon | official gsa page last updated sep 14 2026 | virtual sep-nov 2026; registration open with limited space | eligibility restricted to government employees with .gov or .mil email addresses across federal state local territorial or tribal government | solo or teams recommended up to five | build dataset access, service read, or sandbox-only service write mcp server prototypes | scope limited to sandbox environments and publicly available government data; prototypes not publicly deployed | no monetary prizes due to federal legal requirements; winners receive senior-government recognition | kickoff oct 13; six-week development window; exact completion/final presentation/awards dates still being finalized | this is a specialized government-workforce opportunity and not generic public active work",
+      "sha256": "85160a03b21b4fe0ee87ab2cef740b21ef81c30db6e46652b78a309556cac3f5",
+      "primary_followup_urls": [
+        "https://www.gsa.gov/artificial-intelligence/ai-community-of-practice/events-and-training/mcp-server-and-ai-agent-government-hackathon"
+      ],
+      "note": "Official GSA primary-source lead. Do not add a competing canonical source registry entry from this raw snapshot. Eligibility is specialized and participant-specific government employment/.gov-or-.mil state is not established. No cash prize is offered. Exact completion/final presentation/awards dates remain unresolved on the official page."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "GSA opened a government-workforce MCP and AI-agent hackathon with explicit sandbox authorization boundaries",
+      "status": "verified-specialized-opportunity-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "GSA is running a virtual Sep-Nov 2026 MCP Server and AI Agent Government Hackathon for government employees with .gov or .mil addresses. Participants prototype dataset-access, service-read, or sandbox-only service-write MCP servers. The official page explicitly limits exploration to sandbox environments and publicly available government data and says prototypes will not be publicly deployed. There are no monetary prizes; winners receive recognition. Registration is open but space is limited, while exact completion/final-presentation/awards dates are still being finalized.",
+      "recommended_action": "Keep this as a specialized lead unless participant eligibility is independently established. If eligibility exists, preserve registration state, agency/system-owner approval for any service-delivery API, exact final dates, and the specific sandbox/data scope before creating a structured case. Otherwise use the published architecture/evaluation criteria only as research inspiration for benign local MCP fixtures."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 17 lead ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. GSA explicitly limits hackathon work to sandbox environments and publicly available government data, with service-write work in sandbox only. Public government APIs, services, repositories and hostnames are not treated as authorization outside those rules."
+}
