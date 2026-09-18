@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-13T07:38:09Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "359f9b9fd8996050533ee1d7a35e480d7377c4af",
+  "purpose": "Preserve the Sep. 13 live-source pass from current main, including the exact ETHOnline submission deadline and current PwnSec live-window state, without overtaking the canonical Aug. 29 afternoon replay gate or promoting participant-specific eligibility that has not been established.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal official ethonline 2026 submission rules | all projects must be submitted by sunday september 13 2026 at 12:00 pm edt and late submissions are not accepted | required submission includes project details and repository plus a required 2 to 4 minute demo video | teams may select up to 3 partner prizes | continuity submissions may extend existing code but must clearly document pre-existing work and new event-period functionality | ai tools are generally permitted with attribution and meaningful human contribution | official prize page remains 11 sponsor pools with displayed headline amounts totaling 80000 usd",
+      "sha256": "5755a020be740a8d6bfca7e063095b7289e7cfd07dd1590834e5388cbbd52561",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/info/details",
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "Material deadline clarification from ETHGlobal primary rules. The event calendar continues through Sep. 16, but project submissions close Sep. 13 at 12:00 PM EDT; do not treat the broader event date as the project-submission deadline. Participant acceptance/account state remains unverified in repository evidence."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "pwnsec official organizer and ctftime | pwnsec ctf 2026 remains live in its published sep 12 2026 14:00 utc through sep 13 2026 14:00 utc window | organizer says cyborg teams may use scripts agents and autonomous pipelines while rules restrict activity to challenges not infrastructure and prohibit flag sharing outside the team and scoreboard games | faction selection locked one hour before board open and repository evidence still does not establish participant registration team or cyborg selection | ctftime currently lists prizes as tbd",
+      "sha256": "5d51a94ba2c3291e2f4519fdec6623e352778c20803c5e73f6bb48100fc9d4c2",
+      "primary_followup_urls": [
+        "https://pwnsec.ctf.ae/",
+        "https://ctftime.org/event/3159/"
+      ],
+      "note": "Urgent source-health check only. The event ends Sep. 13 at 14:00 UTC. Existing case state should remain triage unless participant account/team/faction state is independently confirmed; no payout is asserted because CTFtime still lists prizes as TBD."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline project submissions close Sep. 13 at 12:00 PM EDT",
+      "status": "verified-primary-deadline-participant-state-unknown",
+      "confidence": "high",
+      "relevance": "urgent",
+      "summary": "ETHGlobal's primary submission rules establish the project cutoff as Sunday Sep. 13, 2026 at 12:00 PM EDT, despite the broader event calendar continuing through Sep. 16. The same rules require a repository, a 2-4 minute demo video, transparent continuity provenance, and AI-use attribution.",
+      "recommended_action": "If an already-accepted ETHOnline participant intends to submit, finish and submit before the exact ETHGlobal cutoff and select no more than three partner prizes. Do not infer participant acceptance or create a participant-specific case without evidence."
+    },
+    {
+      "title": "PwnSec remains live until Sep. 13 at 14:00 UTC",
+      "status": "verified-live-window-participant-state-unknown",
+      "confidence": "high",
+      "relevance": "urgent",
+      "summary": "PwnSec remains inside its organizer-published 24-hour competition window. Cyborg AI use is permitted only for teams that selected that faction before the lock; repository evidence does not establish registration or faction state.",
+      "recommended_action": "Keep the existing PwnSec case in triage unless participant state is independently confirmed. If a valid Cyborg team already exists, limit work to event-provided challenges and organizer rules through the 14:00 UTC close."
+    }
+  ],
+  "chronology": "Canonical source history still ends at Aug. 29 morning. The independently protected Aug. 29 afternoon ETHGlobal observation remains the next canonical replay gate. Do not replay this Sep. 13 snapshot until Aug. 29 afternoon and all intervening overlapping snapshots are integrated in chronological order.",
+  "safety": "No target testing was performed. No public hostname, contract, repository, bounty listing, event page or scoreboard was treated as blanket authorization. PwnSec activity is limited to event-provided challenge surfaces under the participant's actually selected faction and organizer rules."
+}
