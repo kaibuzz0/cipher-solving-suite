@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-14T19:38:00Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5d78a1dd81176ec0a1f4cca705e130065b94dea0",
+  "purpose": "Preserve a bounded Sep. 14 afternoon research/source-health pass from exact current main after PR #175, without overtaking the canonical Aug. 30 morning replay gate or colliding with coordination PR #176.",
+  "observations": [
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "observed": "github primary organizer artifact verification for csaw cyber reasoning challenge 2026 | secure-reasoning-lab/crc-csaw is a public organizer repository for an aixcc-style student competition in autonomous vulnerability discovery and repair | current college or university students compete in teams of one to four with one advisor; us-canada and mena regions; online | registration deadline sep 24 2026 23:59 aoe, qualification crs lock sep 25 23:59 aoe, qualification sep 26 00:00 through sep 27 23:59 aoe, finals nov 12 | awards are 600 usd first, 300 usd second, 100 usd third and top three are invited to submit a paper | scored discovery and patch generation must be performed autonomously by the submitted crs after a run starts; fuzzers, static or dynamic analysis, language models and agent systems are allowed | scope is limited to released competition targets and infrastructure for participation, research and education; attacking competition infrastructure, other teams, external services or systems outside the released environment is prohibited | top qualification results are subject to organizer reproducibility and integrity audit | entry cost was not stated on the checked primary competition page or repository readme and remains unresolved | no code was imported or executed and public competition artifacts are not blanket authorization outside the released challenge environment",
+      "sha256": "a227b766b4d79afe4a9814c6dcced7e9863362ea338be1010740310acd6323eb",
+      "primary_followup_urls": [
+        "https://csaw.io/competition/cyber-reasoning-challenge",
+        "https://github.com/Secure-Reasoning-Lab/CRC-CSAW",
+        "https://github.com/Secure-Reasoning-Lab/CRC-CSAW/blob/main/RULES.md"
+      ],
+      "note": "Material opportunity discovery. The organizer page and official public repository independently agree on the autonomous find-and-patch format, student/team eligibility and explicit challenge-only authorization boundary. Entry cost remains unresolved because it was not stated on the checked primary surfaces. Participant-specific eligibility is also not established, so no active case is created."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime discovery follow-through for sep 18 qualifier window | null origin official organizer page confirms registration open, qualifier sep 18 2026 10:00 ist for 12 hours, finals sep 25 and winners sep 26 | entry is free, participation is worldwide, teams are one to four, and the advertised prize pool is worth 10 lakh in cybersecurity training, certifications, labs, cloud credits and career opportunities rather than a verified all-cash purse | this organizer-primary verification improves the earlier aggregator-only lead but does not authorize activity outside the dedicated ctf platform or challenge rules",
+      "sha256": "ae152c34a9d172acae782e4d3aa97d433591d7de14a2a668dbb9ee5db9e5c1db",
+      "primary_followup_urls": [
+        "https://nullorigin.cyberhx.com/"
+      ],
+      "note": "Useful near-term CTF verification. The official page resolves free entry, global eligibility, team size and reward composition. Because the reward headline is value-in-kind rather than a verified all-cash purse and the event is a conventional CTF, it ranks below the CSAW autonomous-agent opportunity for this repository."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "CSAW Cyber Reasoning Challenge is a high-fit autonomous vulnerability discovery and repair competition",
+      "status": "verified-opportunity-eligibility-gated",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "CSAW's primary competition page and its official CRC-CSAW repository describe an online AIxCC-style challenge where student teams submit an autonomous cyber reasoning system to find crashing proofs of vulnerability and produce compiling, behavior-preserving patches for released C/C++ targets. Registration closes Sep. 24 at 23:59 AoE, qualification runs Sep. 26-27, cash awards total $1,000, and top three teams are invited to submit a paper. The rules explicitly allow language models and agent systems while confining activity to released challenge targets/infrastructure. Current college/university student status and regional eligibility are mandatory, and entry cost was not stated on the checked primary surfaces.",
+      "recommended_action": "Do not create participant-specific active work until student/region eligibility and registration intent are established. If eligible, preserve the registration confirmation, exact released qualification challenge statements, frozen CRS revision and organizer rules in a structured case; treat only released CRC targets as authorized; design evaluation around autonomous PoV discovery, patch correctness, build/test preservation and reproducibility audit artifacts."
+    },
+    {
+      "title": "Null Origin qualifier is primary-source verified as free and globally open",
+      "status": "verified-near-term-ctf",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "Null Origin's organizer page confirms a free worldwide 1-4 person qualifier on Sep. 18 at 10:00 IST for 12 hours, with finals Sep. 25. Its ₹10 lakh+ reward headline is explicitly described as a pool of training, certifications, labs, cloud credits and career opportunities, so it should not be represented as a ₹10 lakh cash purse.",
+      "recommended_action": "Keep as a legitimate near-term CTF option. Before creating a case, preserve the final challenge-platform rules and registration/team state; do not infer authorization beyond the dedicated competition environment."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon. Aug. 30 morning remains the next replay gate. Do not replay this Sep. 14 afternoon snapshot until Aug. 30 morning, Aug. 30 afternoon and all intervening overlapping snapshots have been integrated in chronological/source-overlap order.",
+  "coordination": "PR #176 owns current-state reconciliation after PR #175. This contribution intentionally changes one raw research snapshot only and does not edit ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, docs/AGENT_HANDOFF.md or data/integration_queue.json. The PR description carries the bounded handoff so concurrent coordination state is not overwritten.",
+  "safety": "No target testing was performed. The CSAW CRC rules were used only to establish competition scope: released challenge targets and infrastructure may be used for CRC participation, research and education, while competition infrastructure, other teams, external services and systems outside the released challenge environment are prohibited. No public repository, hostname, competition page or CTF listing was treated as blanket authorization."
+}
