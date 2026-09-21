@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-21T07:42:46Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 21 primary-platform authorized bug-bounty lead from exact current main without overtaking the canonical Aug. 30 morning replay gate or creating testing authorization beyond the published program rules.",
+  "observations": [
+    {
+      "source_id": "research-lead-immunefi-cosmos-2026",
+      "source_url": "https://immunefi.com/bug-bounty/cosmos/information/",
+      "observed": "cosmos immunefi bug bounty | live since 22 june 2026 | last updated 17 september 2026 | maximum bounty $50000 | blockchain/dlt rewards: critical $50000, high $4000, medium $1000, low $500 | primacy of rules | poc required | kyc required | triaged by immunefi | vault program | focus is cosmos stack distributed systems, cryptography, smart contract platform, consensus and interoperability; not web app xss/csrf/header misconfigurations | assets in scope are integral cosmos source-code components and exclude third-party services and it assets | responsible publication category 3 approval required | no testing performed by repository",
+      "sha256": "dac60e101ecaf56066f51c8cee52b75c9c1ef0b459e00bb0c8a03abdeafa904b",
+      "primary_followup_urls": [
+        "https://immunefi.com/bug-bounty/cosmos/information/",
+        "https://immunefi.com/bug-bounty/cosmos/scope/",
+        "https://immunefi.com/bug-bounty/cosmos/resources/"
+      ],
+      "note": "Immunefi's current program surface shows a materially relevant authorized Cosmos Stack research lane updated Sep. 17. The program is explicitly protocol/source-code focused rather than general web testing. Public visibility is not blanket authorization: exact in-scope assets, impacts, exclusions, PoC rules, KYC, and responsible-publication terms must be preserved before any security work. No testing was performed in this pass."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Cosmos Stack Immunefi bounty is live with a $50,000 maximum and cryptography/protocol scope",
+      "status": "verified-opportunity-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "Immunefi currently lists the Cosmos bug-bounty program as live, last updated Sep. 17, 2026, with a $50,000 maximum. Blockchain/DLT rewards are $50,000 critical, $4,000 high, $1,000 medium, and $500 low under Primacy of Rules. The program specifically targets the Cosmos Stack's distributed-systems protocols, cryptography, smart-contract platform, consensus and interoperability components; it says ordinary web-application findings such as XSS, CSRF and header misconfiguration are not the program focus. PoC and KYC are required, and responsible publication requires approval.",
+      "recommended_action": "When chronology reaches this contribution, reopen the information/scope/resources pages, preserve exact target revisions and in-scope impacts/exclusions, verify researcher eligibility and acceptance of KYC/disclosure terms, then create a structured authorized bounty case only if participation is intended. Restrict all work to the exact published program scope and preferably local/source-code reproduction where the rules permit it."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 21 lead ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. A public bounty listing does not authorize arbitrary testing. Any future work must preserve and obey the exact Immunefi/Cosmos in-scope assets, impacts, exclusions, PoC requirements, KYC, disclosure rules and prohibited activities; third-party services and IT assets are not treated as in scope."
+}
