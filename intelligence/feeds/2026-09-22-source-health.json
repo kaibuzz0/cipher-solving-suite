@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-22T07:39:24Z",
+  "agent": "research-intelligence-pass",
+  "base_main": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "canonical_chronology": {
+    "history_through": "2026-08-29T19:40:52Z",
+    "next_replay_gate": "2026-08-30T07:38:20Z",
+    "note": "This is raw contributed research only. Do not replay it ahead of the protected Aug. 30 morning/afternoon and intervening chronological source-health snapshots."
+  },
+  "observations": [
+    {
+      "source_id": null,
+      "source_name": "lablab.ai / IBM Bob 2.0 hackathon",
+      "source_tier": "primary-platform",
+      "source_url": "https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon/live",
+      "primary_product_context_url": "https://www.ibm.com/new/announcements/ibm-project-bob",
+      "observed": "IBM Bob 2.0 hackathon | organizer/platform: lablab.ai with IBM | status: registration open | build window: 2026-09-25T15:00:00Z to 2026-09-27T15:00:00Z | registration closes at kickoff: 2026-09-25T15:00:00Z | format: online, 48 hours | participation: solo or team | advertised prize pool: USD 10,000 | build focus: AI-assisted software development with IBM Bob 2.0 | current tracks: TBA | participant-specific registration: not established | entry cost, exact prize allocation, team-size cap, full governing rules/IP/submission terms: not fully established by this bounded primary-platform check | safety: build competition only; no public repository/system is testing authorization",
+      "content_fingerprint": "1dbb7dedfc523a012f80b3cb414e816c7f8242319da044ecd47633c19627b8e9",
+      "change_state": "contributed-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "facts": {
+        "registration_state": "open",
+        "registration_closes_at": "2026-09-25T15:00:00Z",
+        "starts_at": "2026-09-25T15:00:00Z",
+        "ends_at": "2026-09-27T15:00:00Z",
+        "format": "online",
+        "duration": "48 hours",
+        "participation": "solo or team",
+        "advertised_prize_pool_usd": 10000,
+        "tracks": "TBA",
+        "participant_registration_verified": false
+      },
+      "missing_verification": [
+        "Complete event-specific governing rules and eligibility terms",
+        "Entry cost from an event-specific authoritative surface",
+        "Exact prize allocation and whether every advertised dollar is cash",
+        "Maximum team size",
+        "Submission deliverables and judging criteria",
+        "IP/licensing and pre-existing-code rules",
+        "Participant-specific registration/account state"
+      ],
+      "deduplication_note": "No IBM Bob 2.0 item is present in current canonical data/intelligence.json or data/opportunities.json, and the inspected open research PR set does not already preserve this event.",
+      "source_network_note": "Do not create a parallel recurring source list. If lablab.ai proves useful as a recurring AI-hackathon lane, review it deliberately for addition to data/intelligence_sources.json after chronology and source-policy reconciliation.",
+      "next_action": "When chronology reaches this contribution, reopen the event and full rules. Verify all missing fields and participant registration. If participation is intended and eligible, create one structured build case limited to organizer-provided Bob access and the entrant's own/authorized codebase."
+    }
+  ],
+  "safety": [
+    "No target testing was performed.",
+    "A public repository, hostname, API, service, or IBM/lablab system is not security-testing authorization.",
+    "Any future build should use only organizer-provided access and code/data the participant owns or is authorized to use."
+  ]
+}
