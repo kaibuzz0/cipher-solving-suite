@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-22T19:38:53Z",
+  "agent": "research-intelligence-pass",
+  "base_main": "7f389014e53bbf3aae99c1f69f327b6e2cf75e31",
+  "canonical_chronology": {
+    "history_through": "2026-08-29T19:40:52Z",
+    "next_replay_gate": "2026-08-30T07:38:20Z",
+    "note": "This is raw contributed research only. Do not replay it ahead of the protected Aug. 30 morning/afternoon and intervening chronological source-health snapshots."
+  },
+  "observations": [
+    {
+      "source_id": null,
+      "source_name": "TRACE Specification / Linux Foundation project",
+      "source_tier": "primary-project",
+      "source_url": "https://trace.agentrust-io.com/",
+      "primary_repository_url": "https://github.com/agentrust-io/trace-spec",
+      "primary_governance_context_url": "https://trace.agentrust-io.com/CHARTER/",
+      "observed": "TRACE Specification v0.2 | project: TRACE Specification, a Series of LF Projects, LLC | status: Developer Preview | current spec: v0.2 | reference library: agentrust-trace 0.10.0 | purpose: portable signed runtime evidence for AI-agent runs binding workload, policy, data class and tool transcript for offline verification | verification boundary: v0.2 software signature proves producer identity/signature integrity but does not prove execution occurred, policy enforcement, hardware provenance, data classification truth, transcript truth or transparency anchoring without separate evidence | conformance: published conformance test suite; production reliance explicitly limited | standards: RFC 9711 EAT, RFC 9334 RATS, SCITT | licenses: specification Community Specification License 1.0; code Apache 2.0 | repository fit: evaluation lead for agent provenance/authorization evidence only, not a verified repository capability | external code execution/import: none",
+      "content_fingerprint": "5c1b3eda5d9282ba8c0098b19cc41951e1755656693b5c8b78f6ad7f90853c6b",
+      "change_state": "contributed-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "facts": {
+        "status": "Developer Preview",
+        "spec_version": "v0.2",
+        "reference_library_version": "0.10.0",
+        "linux_foundation_project": true,
+        "conformance_suite_published": true,
+        "production_ready_claimed": false,
+        "external_code_imported_or_executed": false
+      },
+      "missing_verification": [
+        "Pin the exact trace-spec and conformance-suite revisions before any local evaluation",
+        "Independently run the conformance/reference-library tests on benign local fixtures",
+        "Compare TRACE record semantics against the repository's existing provenance, authorization, handoff and source-evidence contracts",
+        "Evaluate dependency and supply-chain surface before importing any package",
+        "Do not claim hardware attestation, policy enforcement or transparency anchoring from software-only v0.2 signature verification"
+      ],
+      "deduplication_note": "No TRACE Specification / Trust Runtime Attestation and Compliance Evidence item was found in current canonical intelligence/opportunity data or repository code search. Microsoft Trace and similarly named observability projects are distinct and must not be conflated with this specification.",
+      "source_network_note": "Do not create a parallel recurring source list. If agent-governance standards become a durable research lane, review a dedicated primary standards/project source for canonical registry addition only after chronology and source-policy reconciliation.",
+      "next_action": "When chronology reaches this contribution, pin exact upstream revisions, preserve licenses and dependency metadata, and run only benign local schema/signature/conformance fixtures. Compare the resulting evidence model to existing suite provenance/authorization contracts before proposing any integration or capability label."
+    }
+  ],
+  "safety": [
+    "No target testing was performed.",
+    "No external TRACE code or package was imported or executed in this pass.",
+    "A signed TRACE record is evidence with explicit verification limits; it is not security-testing authorization and must not be represented as proof of policy enforcement or hardware provenance without the required independent evidence."
+  ]
+}
