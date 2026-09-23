@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-23T07:39:04Z",
+  "agent": "research-intelligence-pass",
+  "base_main": "e567920d13e8b8b93475cc1fe1ba62d73d7b255f",
+  "canonical_chronology": {"history_through":"2026-08-29T19:40:52Z","next_replay_gate":"2026-08-30T07:38:20Z","note":"Raw contributed research only; do not leapfrog protected chronological replay."},
+  "observations": [{
+    "source_id": null,
+    "source_name": "QoreChain / Break QoreChain",
+    "source_tier": "primary-project",
+    "source_url": "https://qorechain.io/security",
+    "observed": "QoreChain Break QoreChain | status: structured public bounty active | season: 2026-09-01 through 2027-02-28 | rewards: Critical 5000 USDT, High 2000, Medium 750, Low 250, Insight 100 plus shares of 10,125,000 QOR season pool | PoC required against local devnet or public testnet | in-scope opening: consensus/block production, bank/locked-coin/escrow, ML-DSA-87 signing and PQ key registration Go implementation, EVM lane chain 9801, public RPC/API, QoreX wallet | prohibited: volumetric/DoS production, social engineering, third-party dependencies without demonstrated QoreChain impact, mainnet testing affecting users/funds, automated mass submissions | safe harbor: good-faith research within scope | reporting: private to security@qore.network",
+    "content_fingerprint": "017ab81d28661595b424a6c930c49d22b5ae44d64222054a66eb33e00599871c",
+    "change_state": "contributed-lead",
+    "confidence": "high",
+    "relevance": "very-high",
+    "facts": {"program_state":"active","season_starts":"2026-09-01","season_ends":"2027-02-28","critical_reward_usdt":5000,"high_reward_usdt":2000,"medium_reward_usdt":750,"low_reward_usdt":250,"insight_reward_usdt":100,"season_pool_qor":10125000,"proof_of_concept_required":true,"allowed_poc_environment":"local devnet or public testnet","safe_harbor_published":true},
+    "missing_verification": ["Pin exact repository/component revisions before active research","Verify researcher-specific eligibility and current disclosure/payment terms","Reopen staged scope immediately before work","Preserve applicable tax/KYC/payment requirements before representing payout eligibility"],
+    "deduplication_note": "No QoreChain/Break QoreChain item was found in inspected canonical opportunity state or open research PR set.",
+    "source_network_note": "Do not create a competing recurring source list; consider deliberate canonical source-policy review only after chronological reconciliation.",
+    "authorization_boundary": "Not blanket authorization. Routine research must stay inside current published scope and use local devnet or public testnet PoCs; do not affect mainnet users/funds, production volumetric/DoS test, social engineer, or mass-submit automated findings.",
+    "next_action": "When chronology reaches this contribution, reopen the security page, pin exact in-scope revisions/exclusions, verify participant/payment terms, and create a structured authorized bounty case only if participation is intended."
+  }],
+  "safety": ["No target testing was performed.","No public hostname, RPC, API, wallet, repository, chain, or contract is authorization beyond explicit current bounty scope.","Mainnet-impacting tests, production volumetric/DoS, social engineering, and automated mass submissions are explicitly out of scope."]
+}
