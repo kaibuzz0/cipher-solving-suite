@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "snapshot_type": "research_source_health",
+  "checked_at": "2026-09-24T19:42:22Z",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": null,
+      "name": "Catalina Cyber Response Challenge",
+      "source_url": "https://ccrc.dev/",
+      "source_class": "organizer-primary",
+      "status": "live-registration",
+      "fingerprint_sha256": "3604ac9bd121132c4692a53d59aab65d9d27e083c986666b13fba43a3743e7da",
+      "facts": {
+        "event_date": "2026-10-03",
+        "event_time": "08:00-12:00 local",
+        "location": "Pima Community College East Campus, Tucson, Arizona",
+        "registration_deadline": "2026-09-25",
+        "entry_cost": "free",
+        "eligibility": "Organizer FAQ says anyone may enter; event is students-first but professionals, educators, and industry partners are welcome.",
+        "team_model": "Teams are assigned on event day and deliberately mix students with industry professionals; entrants may arrive alone or with friends.",
+        "format": "Defensive incident-response CTF using evidence from a deliberately attacked fake company; browser-based; organizer says competitors will not perform live attack activity this year.",
+        "scoring": "Flags earn points and each team submits a short SANS PICERL incident report within 48 hours; both contribute to winner selection.",
+        "prize_evidence": "Organizer says prizes are awarded but the checked primary page does not publish prize values or allocation.",
+        "authorization_boundary": "Competition activity is limited to organizer-provided evidence, credentials, platform, practice case, and explicitly released challenge material. The organizer explicitly describes the 2026 event as defensive and says competitors will not perform live attacks. Public partner systems, websites, infrastructure, or third parties are not testing targets."
+      },
+      "missing_verification": [
+        "Exact prize values/allocation and any non-cash award terms.",
+        "Any age, residency, capacity, waitlist, cancellation, media-release, liability, or Eventbrite-specific participation terms not stated on the checked organizer page.",
+        "Participant-specific registration/acceptance state.",
+        "Final block times and any rule revisions published closer to the event."
+      ],
+      "deduplication": "No matching Catalina Cyber Response Challenge item was identified in the inspected open research PR set. Treat this as a contributed lead until canonical chronology reaches Sep. 24 afternoon.",
+      "recommended_next_action": "Because registration closes Sep. 25, surface this as a time-sensitive optional defensive competition lead. Do not claim participation. When chronologically eligible, reopen organizer/Eventbrite terms, preserve prize and participation conditions, and create a structured case only if registration/attendance intent is established."
+    }
+  ],
+  "notes": [
+    "This file preserves contributed research only and does not advance data/source_check_history.json or data/intelligence_sources.json.",
+    "Do not leapfrog the protected Aug. 30 morning five-record/five-registry replay gate.",
+    "No security testing was performed."
+  ]
+}
