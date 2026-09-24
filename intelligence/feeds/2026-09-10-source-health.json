@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-10T07:37:51Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "962b80c70fa724794c08991682d7832bd410f834",
+  "purpose": "Preserve a bounded Sep. 10 research/source-health pass from exact current main without overtaking the canonical Aug. 29 afternoon replay gate, while recording one new high-relevance research-agent verification lead.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | sep 10 2026 current upcoming calendar | k17 ctf begins sep 11 1000 utc and its own event text says the competition was shortened to 24 hours ending sep 12 1000 utc despite the stale headline end date | cat ctf 26 runs sep 11 1200 utc to sep 12 1200 utc and is open worldwide | pwnsec ctf runs sep 12 1400 utc to sep 13 1400 utc with prizes still tbd | ctftime remains discovery evidence and organizer rules control participation",
+      "sha256": "5c8b6955b1985cdda7b8cb142b45008c5b44c211ae6fae246045bdcd1b3d9083",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3145/",
+        "https://ctftime.org/event/3360/",
+        "https://ctftime.org/event/3159/"
+      ],
+      "note": "Near-term event window remains useful. K17 still has an aggregator headline/body inconsistency; preserve organizer rules before participation. PwnSec remains the existing structured planning case and its prize remains TBD. No duplicate case or payout claim is created here."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events/ethonline2026/prizes",
+      "observed": "ethglobal ethonline 2026 | sep 10 2026 current official prize page | 11 sponsor pools remain displayed totaling 80000 | the graph 15000 hedera 15000 arc 10000 world 7000 1inch 7000 ens 5000 uniswap foundation 5000 ledger 5000 privy 5000 chainlink 3000 bazantic 3000 | no material prize-total change from the already preserved sep 9 research",
+      "sha256": "138f8534db086d8f8912cde0a91a0f2a2363704c4287fe86b52a68955113c1f1",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes"
+      ],
+      "note": "No material ETHOnline prize-total change. Existing Chainlink/Ledger/Graph contributed findings remain subject to chronology and participant-specific eligibility checks; this pass does not create duplicate intelligence or a new case."
+    }
+  ],
+  "material_changes": [
+    {
+      "title": "Discovery Certification Protocol proposes executable audits for AI-research-agent novelty claims",
+      "category": "research",
+      "status": "evaluation-lead",
+      "source_name": "arXiv / PyPI",
+      "official_source": "https://arxiv.org/abs/2609.09219",
+      "artifact_sources": [
+        "https://pypi.org/project/dcp-audit/",
+        "https://pypi.org/project/dcp-harness/"
+      ],
+      "verified_facts": [
+        "arXiv:2609.09219 is titled 'Scores Alone Do Not Prove Discovery: The Discovery Certification Protocol for Auditing AI Research Agents' and is categorized under Multiagent Systems, Artificial Intelligence, and Software Engineering rather than cs.CR.",
+        "The paper proposes sealed evaluation, matched-agent recovery tests, recovery witnesses, finite-sample recovery bounds, optional truthful-feedback effect tests, and a deterministic LLM-free verifier over frozen evidence.",
+        "The authors report two controlled audits with zero recoveries in 96 episodes each and an upper recovery bound of 0.0468, plus paired feedback studies with 30 truthful recoveries and zero neutral recoveries; these are author-reported experimental results, not independently reproduced repository guarantees.",
+        "PyPI currently exposes dcp-audit 0.4.2 as an Apache-2.0 Python 3.11+ package and reports Trusted Publishing provenance tied to the cxcscmu/Discovery-Certification-Protocol repository at commit 59ca3a95fe8bf87e408b5940330e99e002675293.",
+        "The provenance-linked GitHub source repository is reported as private by PyPI, so repository-source inspection is not currently available from the public GitHub surface."
+      ],
+      "confidence": "medium",
+      "relevance": "high",
+      "missing_verification": [
+        "Independently install dcp-audit and dcp-harness in an isolated environment and reproduce their deterministic verifier/harness behavior on benign local fixtures.",
+        "Inspect package source distributions and dependency metadata before adopting code, because the provenance-linked GitHub repository is private.",
+        "Compare DCP's sealed-evaluation, recovery-witness, null-control, and evidence-bundle model against this repository's current research/intelligence provenance and independent-verification contracts.",
+        "Do not claim that DCP proves novelty or discovery outside its declared audit assumptions; preserve negative/ambiguous reproduction results if encountered."
+      ],
+      "recommended_action": "Build/Integrity should evaluate DCP only as a defensive research-verification framework on benign local fixtures. If its deterministic bundle verifier is reproducible and materially improves the suite's evidence model, propose a separate integration item rather than importing it directly from this research pass."
+    }
+  ],
+  "source_network_note": "The DCP paper is not a cs.CR paper, so it is intentionally not recorded under the canonical arxiv-cryptography source ID. Repeated high-value AI-agent research outside cs.CR suggests a future source-registry review for a dedicated arXiv agent-systems/research lane, but this pass does not create a new canonical source because doing so would change registry chronology and ownership while the Aug. 29 replay chain is still catching up.",
+  "chronology": "Canonical source history remains through Aug. 29 morning at 2026-08-29T07:38:35Z. Aug. 29 afternoon remains the next canonical replay gate. This raw Sep. 10 contribution must not advance canonical source history or registry freshness ahead of Aug. 29 afternoon and the subsequent preserved snapshots.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, event listing, paper, package, or news item was treated as authorization for security testing. DCP is preserved only as a defensive research-verification evaluation lead."
+}
