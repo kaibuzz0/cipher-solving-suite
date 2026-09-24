@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-09T19:42:11Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "939ae4c978b8ec26d5fe5a13a481f3a2d7cb4a64",
+  "purpose": "Preserve a bounded Sep. 9 afternoon source-health pass from exact current main. Record a newly identified official ETHOnline/Ledger AI-agent opportunity and current CTF/arXiv source state without overtaking the required Aug. 29 afternoon chronological replay gate or colliding with coordination PR #153.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal ethonline 2026 official prize and ledger developer pages | event runs sep 4 to sep 16 2026 and ledger states submissions close sep 13 | ledger total bounty pool is 5000 usd | ai agents x ledger track is 3500 usd with 2000 1000 and 500 prizes and requires net-new work during the event using ledger agent stack with ledger key ring cli for the primary secret-broker or headless-host directions | ledger continuity track is 1500 usd with 1000 and 500 prizes for extending pre-existing projects and requires a clear before-and-after | ledger emphasizes scoped secret access human approval before high-risk actions device-backed trust and mandatory tooling feedback | all prizes are subject to ethglobal official terms",
+      "sha256": "c0514c8742c06f3126247fe30e3359496c79aa76d43866fb5868a60fc1bc7352",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://developers.ledger.com/ethonline",
+        "https://ethglobal.com/rules"
+      ],
+      "note": "Material new opportunity detail verified on both ETHGlobal's official ETHOnline prize page and Ledger's official ETHOnline developer page. Ledger lists a $5,000 pool: $3,500 for net-new AI Agents x Ledger work and $1,500 for Continuity extensions. Ledger's page gives Sep. 13 as submissions close and requires tooling feedback for every submission. This is a build/hackathon opportunity, not security-testing authorization. Participant-specific ETHOnline acceptance and general ETHGlobal eligibility/T&C compliance must still be confirmed before treating it as active work."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | k17 ctf sep 11 remains listed with stale sep 13 headline but event text says shortened to 24 hours ending sep 12 10:00 utc and lists one ida pro essential license for first place | cat ctf sep 11 to sep 12 remains upcoming | pwnsec ctf sep 12 14:00 utc to sep 13 14:00 utc remains upcoming with prizes tbd and 181 interested teams shown on its event page | no new stronger ctf opportunity than existing pwnsec case",
+      "sha256": "4a51df5a2aa47c2f9bfc56da9da0234e0f858bcc012937c48fc7effedb6ac28c",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming",
+        "https://ctftime.org/event/3145",
+        "https://ctftime.org/event/3159/",
+        "https://pwnsec.ctf.ae/"
+      ],
+      "note": "Near-term CTF lane remains stable. K17 still has a stale aggregator headline versus its own corrected event text; PwnSec remains the stronger existing agent-oriented case and CTFtime still reports prizes TBD. No duplicate case or payout promotion is warranted."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cryptography recent | wed sep 9 2026 batch remains the current recent cs.cr batch | previously preserved memsentry lead remains in that batch | no later batch or stronger new cryptography research item was identified in this afternoon pass",
+      "sha256": "eea620d9de0f1bd23ff1f717ffbb0ded9a1312e4508250237785c3da95edc5eb",
+      "primary_followup_urls": [
+        "https://arxiv.org/list/cs.CR/recent"
+      ],
+      "note": "No additional research promotion. The Sep. 9 batch is already represented by the contributed MemSentry lead in PR #152; this observation records afternoon source health only and does not duplicate that finding."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Ledger offers a $1,500 Continuity lane for extending an existing project with device-backed agent security",
+      "status": "verified-current-hackathon-opportunity",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "Ledger's official ETHOnline 2026 page lists a $5,000 bounty pool. The $1,500 Continuity track is specifically for extending a pre-existing project with Ledger Agent Stack capabilities such as a hardware signer, Key Ring-backed secret handling, or explicit device confirmation before sensitive actions. First place is $1,000 and second place is $500. Ledger separately offers a $3,500 net-new AI Agents x Ledger track.",
+      "eligibility_and_cost": "Ledger states the event is fully remote and lists Sep. 13 as submissions close. The Continuity lane requires extending a project that existed before the event and showing a clear before-and-after. ETHGlobal participation acceptance and the governing ETHGlobal terms must still be satisfied. No separate Ledger entry fee is stated on the official Ledger track page.",
+      "scope_and_authorization": "This is a software-build hackathon track. It does not authorize vulnerability testing against Ledger, ETHGlobal, partner infrastructure, wallets, contracts, APIs, or third-party systems. Any security-sensitive demonstration should use local fixtures, owned development resources, or event-provided authorized environments.",
+      "prize_evidence": "Official Ledger and ETHGlobal pages list $1,500 for Continuity: $1,000 first place and $500 second place. The separate AI Agents x Ledger track is $3,500: $2,000, $1,000 and $500.",
+      "repository_fit": "High. The repository already has multi-agent governance, scoped authorization rules, provenance boundaries, integration queues, and recent research on memory/authorization continuity. A bounded Continuity submission could add a Ledger-backed approval or secret-handling layer without rewriting the repository's core mission.",
+      "recommended_action": "Build/Integration should first confirm ETHOnline participation eligibility and preserve the official rules. If eligible, evaluate a narrowly scoped Continuity feature: require device-backed approval for a high-risk agent action or replace a development secret path with Ledger Key Ring-backed scoped access. Keep the change demonstrable, reversible, and isolated; include mandatory Ledger tooling/DX feedback and a clear pre-event versus event-period diff."
+    }
+  ],
+  "chronology": "Canonical source history still ends at Aug. 29 morning (2026-08-29T07:38:35Z). Do not replay this Sep. 9 afternoon snapshot yet. Process Aug. 29 afternoon first, then Aug. 30 and subsequent contributed snapshots in chronological/source-overlap order before Sep. 9 becomes eligible for canonical source-history integration.",
+  "coordination": "Open PR #153 owns post-PR151 coordination reconciliation. This contribution intentionally avoids ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, data/integration_queue.json, docs/AGENT_HANDOFF.md, canonical source/history files, opportunities, cases, tools, and Pages markup. PR #152 remains a separate stale Sep. 9 morning contribution that should be preserved and reconciled from current main rather than silently replaced.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, event listing, paper, or news item was treated as authorization for security testing."
+}
