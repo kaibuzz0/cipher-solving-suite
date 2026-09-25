@@ -1,18 +1,17 @@
 # Current Repository State
 
-Last reconciled: 2026-09-23 19:19 UTC
+Last reconciled: 2026-09-25 07:17 UTC
 Default branch: `main`
-Reconciled default-branch head: `8be854269071060fd39d5d060c83a1be210330c5`
+Reconciled default-branch head: `e633f6512391f4eba7168e39788bfd92af87970f`
 Repository version: `v3.1.0` (README)
 
 > This is a reconciliation snapshot. A branch/PR containing this file has a newer commit by definition; compare material repository facts rather than treating that self-reference difference as drift.
 
 ## Verified health
 
-- Current `main` is `8be854269071060fd39d5d060c83a1be210330c5`, merge of PR #194 (`Research: preserve Sep 23 QoreChain bounty lead`).
-- PR #194 changed exactly one raw research file: `intelligence/feeds/2026-09-23-source-health.json`. It did not advance canonical source history/registry freshness, create a case/opportunity/tool, or edit Pages HTML.
-- Exact-main Daily Repository Maintenance run `35872622472` succeeded on Sep. 23.
-- Exact-main Intelligence Source Report run `35879621948` succeeded on Sep. 23.
+- Current `main` is `e633f6512391f4eba7168e39788bfd92af87970f`, merge of PR #199 (`Research: preserve Sep 24 afternoon Catalina response lead`).
+- PR #199 changed exactly one raw research file: `intelligence/feeds/2026-09-24-afternoon-source-health.json`. It did not advance canonical source history/registry freshness, create a case/opportunity/tool, or edit Pages HTML.
+- Exact-main Core validation run `36051741952` succeeded on Sep. 24 across Python 3.11, 3.12, and 3.13. The run passed tests, compileability, intelligence registry/history/feed checks, artifact inventory, 310 migration/reproduction verification, dashboard-data generation, and maintenance.
 - `main` remains unprotected and required status-check enforcement is disabled.
 
 ## Canonical source / integration state
@@ -29,16 +28,17 @@ Repository version: `v3.1.0` (README)
   - `arxiv-cryptography`: `708237551c62ad0e0e7e1b9a823dff2c946745a99c6d279ba894aaf284c00a99`
   - `ethglobal-events`: `06a6fd437851f24e1b0513421f1389620ee201851f396b5220ac04031a06310a`
 
-## Sep. 23 contributed research review
+## Sep. 24 afternoon contributed research review
 
-- PR #194 preserves a QoreChain / Break QoreChain bounty lead as raw contributed research only.
-- The snapshot records an active 2026-09-01 through 2027-02-28 season, tiered USDT rewards, a QOR season pool, PoC requirement, local-devnet/public-testnet boundary, safe-harbor language, and explicit prohibited activities.
+- PR #199 preserves the Catalina Cyber Response Challenge as raw contributed research only.
+- The snapshot records an Oct. 3 defensive incident-response CTF in Tucson, Arizona, with registration deadline Sep. 25, free entry, organizer-provided evidence/platform scope, mixed teams assigned on event day, and no live attack activity in the described 2026 format.
+- Prize values/allocation, participant-specific registration/acceptance, and additional participation terms remain unresolved.
 - Its `source_id` is null. Do not map it onto an unrelated canonical source merely to satisfy replay machinery.
-- No target testing was performed. Before active research, reopen current scope/rules, pin exact in-scope revisions, verify researcher/payment/KYC/tax terms, and preserve current exclusions.
+- No target testing was performed. Public partner systems, websites, infrastructure, or third parties are not testing targets.
 
 ## Concurrent / stale contribution state
 
-- Many open research PRs predate current `main`, including #192 and older research lanes. They are contributed evidence, not merge-ready truth solely because their external facts are newer.
+- Open research PRs including #198, #196, #192 and older research lanes predate current `main`. They are contributed evidence, not merge-ready truth solely because their external facts are newer.
 - Any stale branch that becomes eligible must reconcile current `main`, preserve compatible evidence from both sides, rerun validation on the reconciled head, and document conflict resolution.
 - No open research PR may leapfrog the Aug. 30 morning replay gate.
 
@@ -46,15 +46,15 @@ Repository version: `v3.1.0` (README)
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental` maturity.
 - Shared tool registration remains canonical in `data/tools.json`; normal tools/toolsets/cases/intelligence/evidence must surface through canonical registries/manifests/site-data builders rather than bespoke `site/index.html` edits.
-- No new tool/toolset/case was introduced by PR #194.
+- No new tool/toolset/case was introduced by PR #199.
 - Structured active cases remain authorization-bounded. Repository evidence must not be interpreted as an external solve, private key, payout, participant registration, team state, or permission to test a public target.
 
 ## Security / maintenance state
 
 - Preserve all primary evidence, hashes, provenance, and research artifacts. Do not silently delete or relocate evidence.
-- Exact-main maintenance and source-report validation are green, but these do not substitute for a comprehensive secret/static-analysis audit.
+- Exact-main Core validation is green, but CI does not substitute for a comprehensive secret/static-analysis audit.
 - Prior bounded default-branch searches found no `shell=True`, `os.system(`, `subprocess`, or `BEGIN PRIVATE KEY` matches; treat that only as bounded search evidence.
-- GitHub Actions continue to use major-version action tags such as `actions/checkout@v4` and `actions/setup-python@v5` rather than immutable commit SHAs. Supply-chain pinning remains hardening debt.
+- GitHub Actions continue to use major-version action tags such as `actions/checkout@v4` and `actions/setup-python@v5` rather than immutable commit SHAs. Exact-main Core run `36051741952` confirms those floating tags remain in use. Supply-chain pinning remains hardening debt.
 - `main` remains unprotected with required status-check enforcement disabled.
 - Legacy root truthfulness/artifact debt remains separate work; preserve references and hashes before relocation.
 
@@ -75,4 +75,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Current `main` is `8be854269071060fd39d5d060c83a1be210330c5`, merge of research-only PR #194. Exact-main Daily Maintenance `35872622472` and Intelligence Source Report `35879621948` are green. Canonical source history remains through Aug. 29 afternoon. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-main Core and Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
+Current `main` is `e633f6512391f4eba7168e39788bfd92af87970f`, merge of research-only PR #199. Exact-main Core `36051741952` is green across Python 3.11/3.12/3.13. Canonical source history remains through Aug. 29 afternoon. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-main Core and Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
