@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-19T19:40:27Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 19 afternoon organizer-primary opportunity delta from exact current main without overtaking the canonical Aug. 30 morning replay gate or duplicating the existing Crypto World's Fair contribution.",
+  "observations": [
+    {
+      "source_id": "research-lead-colosseum-builder-station-2026",
+      "source_url": "https://blog.colosseum.com/builder-station-sbpfv3-solana-resilience/",
+      "observed": "colosseum crypto world's fair | official colosseum codex | sf builder station sep 28-oct 12 2026 | selected hackathon founders | desk monitor snacks 24/7 office access | host approval required | approved builders receive automatic interview for next accelerator batch | hackathon remains online sep 14-oct 12 2026",
+      "sha256": "c0151ee670d35c6c257219c1e0bc0d1e3e5ec82a0a9acda85cbfd1fd49c0ecdc",
+      "primary_followup_urls": [
+        "https://blog.colosseum.com/builder-station-sbpfv3-solana-resilience/",
+        "https://colosseum.com/hackathon"
+      ],
+      "note": "Organizer-primary Sep. 17 update adds a concrete optional in-person support/accelerator-interview lane to the already-preserved Crypto World's Fair opportunity. Colosseum says the San Francisco Builder Station covers Sep. 28-Oct. 12, requires host approval, provides selected founders a desk, monitor, snacks and 24/7 office access, and gives approved builders an automatic interview for the next accelerator batch. This does not replace or duplicate the core hackathon record; it is a material participation/reward-state delta. Exact event-page application deadline, capacity, travel/lodging coverage, and acceptance state were not established in this bounded check."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Crypto World's Fair now has a selected-founder SF Builder Station with an automatic accelerator interview",
+      "status": "verified-opportunity-delta",
+      "confidence": "high for organizer-published dates/benefits; medium for participant actionability",
+      "relevance": "high",
+      "summary": "Colosseum's official Sep. 17 Codex says selected Crypto World's Fair founders can use its San Francisco office from Sep. 28 through Oct. 12. Host-approved builders receive a desk, monitor, snacks and 24/7 office access, plus an automatic interview for Colosseum's next accelerator batch. The underlying hackathon remains a global online competition running Sep. 14-Oct. 12, so this is an optional selected-founder support lane rather than a change to general participation eligibility.",
+      "recommended_action": "When chronology reaches the existing Crypto World's Fair contribution, reconcile this delta into that single opportunity rather than creating a duplicate. Reopen the Builder Station event/application surface and verify application deadline, capacity, travel/lodging responsibility, exact approval criteria and participant acceptance state. If participation is intended and feasible, record the Builder Station application as a next action on the structured hackathon case."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 19 afternoon delta ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. Crypto World's Fair and the Builder Station are build/startup opportunities only. Public blockchains, contracts, repositories, APIs, hostnames, wallets and third-party services are not treated as testing authorization."
+}
