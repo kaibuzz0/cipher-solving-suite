@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-18T07:42:23Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 18 official-source opportunity lead from exact current main without overtaking the canonical Aug. 30 morning replay gate or duplicating existing federal challenge research.",
+  "observations": [
+    {
+      "source_id": "research-lead-world-bank-small-ai",
+      "source_url": "https://www.worldbank.org/en/events/2026/10/19/global-ai-and-digital-summit-2026",
+      "observed": "world bank group small ai for development hackathon challenge | official world bank page | applications open through sep 26 2026 | competition oct 3-4 2026 | ages 18-35 across world bank member countries; individuals or teams up to four; each member registers and meets eligibility | choose agriculture health or tourism and build a small ai solution for constrained environments | three winners, one per category, receive fully covered reasonable travel and accommodation/event expenses to present in seoul at global ai and digital summit; visa application costs remain participant responsibility unless expressly approved | entries remain participant property subject to worldwide non-exclusive royalty-free world bank license for competition educational promotional and knowledge-sharing use | exact hack-nation technical submission requirements remain external to this page",
+      "sha256": "15810b291587a6b004fc1ed99ff46a36570eb943b81a5a2a349e59b91b5c5d65",
+      "primary_followup_urls": [
+        "https://www.worldbank.org/en/events/2026/10/19/global-ai-and-digital-summit-2026"
+      ],
+      "note": "Official World Bank primary-source lead. Do not add a competing canonical source registry entry from this raw snapshot. Participant-specific age/member-country eligibility and application acceptance are not established. The World Bank page establishes travel support rather than a cash prize. Exact Hack-Nation technical/submission requirements should be preserved before structured active work."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "World Bank opened a Small AI development hackathon with a Sep. 26 application deadline and Seoul showcase award",
+      "status": "verified-opportunity-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "The World Bank Group's official Global AI and Digital Summit page now carries the Small AI for Development Hackathon Challenge: applications through Sep. 26, a virtual Oct. 3-4 build weekend, and agriculture, health, or tourism tracks focused on AI that works under constrained connectivity/device conditions. Eligible applicants are ages 18-35 across World Bank member countries, solo or teams up to four. Three category winners receive covered reasonable travel, accommodation and designated event expenses to present in Seoul; the page does not advertise a cash prize. Participants retain ownership subject to a World Bank competition/education/promotion license.",
+      "recommended_action": "Keep as verified opportunity intelligence until participant eligibility/application intent is established. Before active work, preserve the current Hack-Nation registration and technical submission rules, acceptance state, exact deliverables, originality constraints, and any tool/data restrictions. If eligible, a narrow offline/low-connectivity agent or cryptographic verification utility would be a repository-relevant concept without implying authorization to test external systems."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 18 lead ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. This is a build competition lead only. Public World Bank systems, datasets, APIs, repositories, sector targets and third-party services are not treated as authorization for security testing."
+}
