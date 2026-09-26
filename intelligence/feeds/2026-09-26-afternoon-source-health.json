@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "snapshot_type": "research_source_health",
+  "checked_at": "2026-09-26T19:38:51Z",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": null,
+      "name": "CyberX 26 CTF — Read Between the Bytes",
+      "source_url": "https://ctf26.rnsitcy.site/",
+      "source_class": "organizer-primary",
+      "status": "live-registration",
+      "fingerprint_sha256": "b2f05a16416e4ccedf5a35937f28c6ae52ea7496e389c08ae3c1304fd31fe86e",
+      "facts": {
+        "event_date": "2026-10-01",
+        "event_time": "09:00-17:00 local",
+        "location": "RNS Institute of Technology, Bengaluru, India",
+        "entry_cost": "INR 600 per team",
+        "team_size": "2-4",
+        "eligibility": "Inter-college competition; organizer-associated RNSIT Department of Cyber Security material specifies B.E./B.Tech, MCA & MBA students.",
+        "format": "8-hour in-person CTF with RECON, EXPLOIT, and ZERO HOUR rounds; cryptography is a published category.",
+        "prize_evidence": "INR 30,000 total cash: INR 15,000 first, INR 10,000 second, INR 5,000 third.",
+        "authorization_boundary": "Competition activity is limited to organizer-issued platform, challenges, and the isolated vulnerable-machine environment under current rules. Public RNSIT systems, websites, networks, repositories, sponsor systems, or third parties are not testing targets."
+      },
+      "missing_verification": [
+        "Exact registration deadline/capacity and participant-specific acceptance state.",
+        "Complete governing rules, including AI/tool policy, prohibited techniques, tie-breaking, technical-failure handling, and disqualification conditions; the organizer page exposes these headings but the bounded retrieval did not expose all answers.",
+        "Whether the Devpost generic geographic/age eligibility language is controlling or subordinate to the organizer's inter-college/student eligibility.",
+        "Prize payment/tax terms and any conditions attached to goodies/vouchers.",
+        "Travel/lodging responsibility for participants attending the Bengaluru venue."
+      ],
+      "deduplication": "No CyberX 26 item was identified in the inspected current-main state or open research PR titles/bodies. Treat this as contributed research until canonical chronology reaches Sep. 26 afternoon.",
+      "recommended_next_action": "When chronologically eligible, reopen the organizer registration/rules surface and Devpost rules, resolve eligibility/deadline/tool-policy conflicts, and create a structured competition case only if participation is intended and eligible."
+    }
+  ],
+  "notes": [
+    "This file preserves contributed research only and does not advance data/source_check_history.json or data/intelligence_sources.json.",
+    "Do not leapfrog the protected Aug. 30 morning five-record/five-registry replay gate.",
+    "No security testing was performed."
+  ]
+}
