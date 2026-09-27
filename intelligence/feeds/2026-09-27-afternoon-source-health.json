@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "snapshot_type": "contributed_research",
+  "observed_at": "2026-09-27T19:42:25Z",
+  "canonical": false,
+  "source_id": "intigriti-public-programs",
+  "title": "Adobe public bug bounty migration to Intigriti and current payout tiers",
+  "status": "verified_source_migration_requires_exact_scope_refresh_before_active_work",
+  "summary": "Adobe moved its public Bug Bounty Program to Intigriti effective September 1, 2026. Adobe's first-party security announcement and Intigriti's current public program surface agree on the migration. The live Intigriti brief currently publishes tiered monetary rewards up to USD 15,000, safe harbor, eligibility rules, nine Adobe AI assets in a bonus Tier 1 group, and explicit testing restrictions. This is preserved as contributed source-network and opportunity research; it is not blanket authorization to test Adobe or third-party systems.",
+  "facts": {
+    "program": "Adobe Public Bug Bounty Program",
+    "platform": "Intigriti",
+    "migration_effective": "2026-09-01",
+    "migration_state": "all new reports from September 1 onward must use Intigriti; pre-September-1 reports continue under the prior process and previously communicated rewards",
+    "reward_tiers_usd": {
+      "tier_1": "$150-$15,000",
+      "tier_2": "$100-$10,000",
+      "tier_3": "$75-$5,000"
+    },
+    "ai_asset_group": "Current Intigriti brief lists nine Adobe AI assets in an Adobe AI (Bonus Tier 1) group, including Acrobat/Express/Lightroom/Firefly/Photoshop AI features and Adobe Stock AI Studio; exact product-specific test plans must be reopened before any work.",
+    "safe_harbor": "Current Intigriti program states safe harbour for researchers is applied.",
+    "reward_gate": "A report must concern an in-scope asset and eligible vulnerability type, be previously unknown, valid/reproducible, first received, sufficiently detailed, and include the researcher's testing IP address.",
+    "prohibited_or_bounded_activity": [
+      "existing customer environments without explicit owner permission",
+      "social engineering",
+      "physical attacks",
+      "denial-of-service or resource-exhaustion testing",
+      "testing that interrupts or degrades Adobe services",
+      "unauthorized access to data or data corruption",
+      "privacy violations",
+      "exploitation beyond what is necessary to demonstrate impact",
+      "public disclosure without Adobe express consent"
+    ],
+    "authorization_boundary": "Only assets and environments explicitly listed in the current Intigriti program, under their product-specific test plans and restrictions, may be treated as program scope. Adobe domains/products generally, customer environments, third-party systems, repositories and public infrastructure are not authorized merely because the program is public."
+  },
+  "primary_sources": [
+    {
+      "url": "https://blog.adobe.com/security/a-new-home-for-the-adobe-bug-bounty-program",
+      "verified": true,
+      "notes": "Adobe first-party announcement dated August 3, 2026: migration to Intigriti effective September 1; new reports use Intigriti; earlier reports continue through prior process and rewards are honored."
+    },
+    {
+      "url": "https://app.intigriti.com/programs/adobe/adobepublic/detail",
+      "verified": true,
+      "notes": "Current platform-primary brief: payout tiers, safe harbor, eligibility, in-scope asset groups including AI assets, reward gates and explicit prohibited activity."
+    },
+    {
+      "url": "https://www.adobe.com/trust/security/bug-bounty.html",
+      "verified": true,
+      "notes": "Adobe current Trust Center confirms monetary rewards and routes researchers to the current program page for full scope and reward structure."
+    }
+  ],
+  "source_network": {
+    "canonical_source_id": "intigriti-public-programs",
+    "registry_url": "https://www.intigriti.com/researchers/bug-bounty-programs",
+    "recommendation": "When chronology permits, retain the canonical Intigriti platform source and record Adobe as a program-level migration/current-state observation rather than creating a competing Adobe source registry. Refresh the canonical Intigriti source only through chronological replay."
+  },
+  "confidence": "high_for_migration_current_platform_and_payout_ranges; scope_must_be_reopened_immediately_before_any_testing",
+  "missing_verification": [
+    "participant-specific Intigriti account/KYC/payment eligibility and acceptance of current terms",
+    "exact asset/product-specific test plan applicable to any proposed research target",
+    "current attached Adobe CVSS guidance and any asset-specific reward modifiers or bonus mechanics",
+    "jurisdiction/payment/tax restrictions applicable to the participant",
+    "whether any program update after this observation changes payout tiers, AI asset grouping, scope or prohibited techniques"
+  ],
+  "deduplication": "No Adobe migration observation was found in the current canonical source registry; preserve this as an Intigriti program-level contribution rather than a new recurring source list.",
+  "recommended_next_action": "Do not leapfrog the protected Aug. 30 replay. At chronological integration time, reopen Adobe and Intigriti together, preserve the exact current brief/test-plan/CVSS versions, verify participant eligibility, and only then create a structured authorized bounty case for a specifically in-scope asset if participation is intended.",
+  "safety": {
+    "testing_performed": false,
+    "authorization_inferred_from_public_targets": false,
+    "notes": "Research-only verification. No target testing, credential activity, destructive action, persistence, evasion, customer-data access or out-of-scope activity performed."
+  }
+}
