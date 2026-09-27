@@ -1,18 +1,18 @@
 # Current Repository State
 
-Last reconciled: 2026-09-25 07:17 UTC
+Last reconciled: 2026-09-27 07:19 UTC
 Default branch: `main`
-Reconciled default-branch head: `e633f6512391f4eba7168e39788bfd92af87970f`
+Reconciled default-branch head: `9c3ba21c8c067233d892a31ed8f0087249e3aa09`
 Repository version: `v3.1.0` (README)
 
 > This is a reconciliation snapshot. A branch/PR containing this file has a newer commit by definition; compare material repository facts rather than treating that self-reference difference as drift.
 
 ## Verified health
 
-- Current `main` is `e633f6512391f4eba7168e39788bfd92af87970f`, merge of PR #199 (`Research: preserve Sep 24 afternoon Catalina response lead`).
-- PR #199 changed exactly one raw research file: `intelligence/feeds/2026-09-24-afternoon-source-health.json`. It did not advance canonical source history/registry freshness, create a case/opportunity/tool, or edit Pages HTML.
-- Exact-main Core validation run `36051741952` succeeded on Sep. 24 across Python 3.11, 3.12, and 3.13. The run passed tests, compileability, intelligence registry/history/feed checks, artifact inventory, 310 migration/reproduction verification, dashboard-data generation, and maintenance.
-- `main` remains unprotected and required status-check enforcement is disabled.
+- Current `main` is `9c3ba21c8c067233d892a31ed8f0087249e3aa09`, merge of PR #203 (`Research: preserve Sep 26 afternoon CyberX 26 lead`).
+- PR #203 changed exactly one raw research file: `intelligence/feeds/2026-09-26-afternoon-source-health.json`. It did not advance canonical source history/registry freshness, create a case/opportunity/tool, or edit Pages HTML.
+- Exact-main Core validation run `36267914450` succeeded on Sep. 26 after the merge.
+- The most recent scheduled Intelligence Source Report visible before the merge, run `36249445947`, succeeded on prior main `d10f06da27affe233434e95551354293982d1e7e`; require the next scheduled source-report/maintenance runs or an explicit exact-head run before treating those scheduled surfaces as freshly verified on `9c3ba21c...`.
 
 ## Canonical source / integration state
 
@@ -28,17 +28,17 @@ Repository version: `v3.1.0` (README)
   - `arxiv-cryptography`: `708237551c62ad0e0e7e1b9a823dff2c946745a99c6d279ba894aaf284c00a99`
   - `ethglobal-events`: `06a6fd437851f24e1b0513421f1389620ee201851f396b5220ac04031a06310a`
 
-## Sep. 24 afternoon contributed research review
+## Sep. 26 afternoon contributed research review
 
-- PR #199 preserves the Catalina Cyber Response Challenge as raw contributed research only.
-- The snapshot records an Oct. 3 defensive incident-response CTF in Tucson, Arizona, with registration deadline Sep. 25, free entry, organizer-provided evidence/platform scope, mixed teams assigned on event day, and no live attack activity in the described 2026 format.
-- Prize values/allocation, participant-specific registration/acceptance, and additional participation terms remain unresolved.
+- PR #203 preserves CyberX'26 — Read Between the Bytes as raw contributed research only.
+- The snapshot records an Oct. 1 in-person inter-college CTF at RNS Institute of Technology, Bengaluru, with cryptography among the categories, teams of 2-4, INR 600/team entry, and INR 30,000 advertised total cash prizes.
+- Complete governing rules, exact registration deadline/capacity, participant-specific acceptance, Devpost-versus-organizer eligibility precedence, prize tax/payment terms, and travel/lodging responsibility remain unresolved.
 - Its `source_id` is null. Do not map it onto an unrelated canonical source merely to satisfy replay machinery.
-- No target testing was performed. Public partner systems, websites, infrastructure, or third parties are not testing targets.
+- No target testing was performed. Public RNSIT/sponsor/third-party systems are not testing targets.
 
 ## Concurrent / stale contribution state
 
-- Open research PRs including #198, #196, #192 and older research lanes predate current `main`. They are contributed evidence, not merge-ready truth solely because their external facts are newer.
+- Open research PRs #202, #201, #198, #196, #192 and older research lanes all predate current `main`. They are contributed evidence, not merge-ready truth solely because their external facts are newer.
 - Any stale branch that becomes eligible must reconcile current `main`, preserve compatible evidence from both sides, rerun validation on the reconciled head, and document conflict resolution.
 - No open research PR may leapfrog the Aug. 30 morning replay gate.
 
@@ -46,23 +46,22 @@ Repository version: `v3.1.0` (README)
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental` maturity.
 - Shared tool registration remains canonical in `data/tools.json`; normal tools/toolsets/cases/intelligence/evidence must surface through canonical registries/manifests/site-data builders rather than bespoke `site/index.html` edits.
-- No new tool/toolset/case was introduced by PR #199.
+- No new tool/toolset/case was introduced by PR #203.
 - Structured active cases remain authorization-bounded. Repository evidence must not be interpreted as an external solve, private key, payout, participant registration, team state, or permission to test a public target.
 
 ## Security / maintenance state
 
 - Preserve all primary evidence, hashes, provenance, and research artifacts. Do not silently delete or relocate evidence.
 - Exact-main Core validation is green, but CI does not substitute for a comprehensive secret/static-analysis audit.
-- Prior bounded default-branch searches found no `shell=True`, `os.system(`, `subprocess`, or `BEGIN PRIVATE KEY` matches; treat that only as bounded search evidence.
-- GitHub Actions continue to use major-version action tags such as `actions/checkout@v4` and `actions/setup-python@v5` rather than immutable commit SHAs. Exact-main Core run `36051741952` confirms those floating tags remain in use. Supply-chain pinning remains hardening debt.
-- `main` remains unprotected with required status-check enforcement disabled.
+- Prior bounded default-branch searches found no `shell=True`, `os.system(`, `subprocess`, or `BEGIN PRIVATE KEY` matches; treat that only as bounded search evidence until repeated on current head.
+- GitHub Actions have historically used major-version action tags such as `actions/checkout@v4` and `actions/setup-python@v5` rather than immutable commit SHAs; immutable action pinning remains supply-chain hardening debt until separately remediated and verified.
 - Legacy root truthfulness/artifact debt remains separate work; preserve references and hashes before relocation.
 
 ## Coordination state
 
 - `docs/WORK_QUEUE.md` still correctly points to Aug. 30 morning as the next replay gate.
 - `data/integration_queue.json` remains the machine-readable integration inbox and must be preserved chronologically.
-- `docs/AGENT_HANDOFF.md` is append-only. The available connector exposes replacement writes while retrieval is truncated, so it is intentionally not rewritten; historical handoff provenance must not be sacrificed to satisfy bookkeeping.
+- `docs/AGENT_HANDOFF.md` is append-only. Do not replace it from a truncated read; preserve historical handoff provenance.
 
 ## Current operating priorities
 
@@ -75,4 +74,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Current `main` is `e633f6512391f4eba7168e39788bfd92af87970f`, merge of research-only PR #199. Exact-main Core `36051741952` is green across Python 3.11/3.12/3.13. Canonical source history remains through Aug. 29 afternoon. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-main Core and Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
+Current `main` is `9c3ba21c8c067233d892a31ed8f0087249e3aa09`, merge of research-only PR #203. Exact-main Core `36267914450` is green. Canonical source history remains through Aug. 29 afternoon. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-main Core and Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
