@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "snapshot_type": "research_source_health",
+  "checked_at": "2026-09-29T07:40:41Z",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "name": "Crimson Defense CTF (CDCTF) 2026",
+      "source_url": "https://crimsondefense.org/cdctf/",
+      "secondary_discovery_url": "https://ctftime.org/event/3293/",
+      "source_class": "organizer-primary-with-ctftime-deadline-corroboration",
+      "status": "registration-open-near-deadline",
+      "fingerprint_sha256": "d8029dfb97196f48f8b187c10636ee63f1209d9fe1dfdc62d37f770d198b2904",
+      "facts": {
+        "event_window": "2026-10-03 10:00-22:00 CDT (15:00 UTC Oct. 3 through 03:00 UTC Oct. 4)",
+        "format": "Virtual 12-hour collegiate-level Jeopardy CTF; teams up to four; universities may field multiple teams.",
+        "categories": "Reverse Engineering, Log & Network Traffic Analysis, Forensics, Password Cracking, Cryptography, Open Source Intelligence, Social Engineering, and AI.",
+        "eligibility_evidence": "Organizer says the competition was opened to any college student in the United States in 2025 and describes the 2026 event as collegiate-level. CTFtime currently states registration is open through September 30, 2026.",
+        "prize_evidence": "CTFtime currently lists trophies for the top three teams if US-based; no cash prize was verified.",
+        "rules_boundary": "Organizer explicitly prohibits attacking the CDCTF platform, brute-forcing, automated tools against hosted challenges unless specified, receiving help from non-team members, cross-team flag/solution sharing, sabotage, multiple accounts, automated submissions, and sharing competition materials during the event.",
+        "authorization_boundary": "Authorization is limited to organizer-issued competition challenges under the current rules. Public Crimson Defense/University of Alabama systems, unrelated hosts, accounts, networks, repositories, and third-party services are not testing targets."
+      },
+      "missing_verification": [
+        "Open the current Google registration form directly and preserve its exact September 30 cutoff/timezone, required participant fields, capacity, and acceptance state.",
+        "Confirm whether 2026 eligibility is exactly all U.S. college students or has school/enrollment/residency restrictions beyond the organizer page wording.",
+        "Verify entry cost; the organizer page does not publish a fee.",
+        "Verify current award/trophy terms from organizer-primary rules rather than relying on the CTFtime prize field.",
+        "Preserve any platform-specific challenge rules, permitted-tool exceptions, scoring details, and participant-specific registration/team state before active work."
+      ],
+      "deduplication": "No CDCTF research item was identified in inspected current-main coordination state or open research PR titles/bodies. This maps to the existing ctftime-upcoming discovery lane and does not create a competing recurring source registry.",
+      "recommended_next_action": "Because registration closes imminently, reopen the organizer registration form and rules before the deadline. If participant eligibility and registration intent are established, create a structured CTF case limited to organizer-issued challenges; otherwise preserve this as lifecycle/source-health evidence only."
+    }
+  ],
+  "notes": [
+    "This file preserves contributed research only and does not advance data/source_check_history.json or data/intelligence_sources.json.",
+    "The registration-deadline and trophy statements are current CTFtime corroboration; they are not promoted as organizer-primary facts until independently preserved from the registration/rules surface.",
+    "Do not leapfrog the protected Aug. 30 morning five-record/five-registry replay gate.",
+    "No security testing was performed."
+  ]
+}
