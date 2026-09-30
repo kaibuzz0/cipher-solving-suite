@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "snapshot_type": "research_source_health",
+  "checked_at": "2026-09-26T07:42:15Z",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": null,
+      "name": "Intel Vulnerability Disclosure Program on Intigriti",
+      "source_url": "https://app.intigriti.com/programs/intel/intelvulnerabilitydisclosureprogram/detail",
+      "source_class": "platform-primary",
+      "status": "live-no-bounty-vdp",
+      "fingerprint_sha256": "081238a1071365dabfa5804b9ce222a006ad1c0495d256dfb66e48ebda564ebb",
+      "facts": {
+        "program": "Intel Vulnerability Disclosure Program on Intigriti",
+        "status": "responsible disclosure program without bounties",
+        "checked_date": "2026-09-26",
+        "submission_route": "Intigriti",
+        "safe_harbor": "reasonable safe harbor when program terms are followed; does not authorize research involving other parties",
+        "bounty_status": "No bounty for Software, Firmware, Hardware, Services; first-party products show bounty eligibility No and reputation eligibility Yes",
+        "scope_summary": "Maintained Intel-branded products/technologies may be eligible for reporting; third-party products, IT infrastructure, pre-release products, credentials, owner-attacker/physical-access attacks and other listed categories are excluded or separately routed.",
+        "activity": "Intigriti page shows recent submissions through 2026-09-25"
+      },
+      "missing_verification": [
+        "Exact effective date on which Intel's prior bounty-paying terms ceased and the current no-bounty VDP terms became controlling.",
+        "Whether any separate Intel incentive/bonus lane remains currently payable outside this VDP; do not infer one from stale Intel pages or historical program language.",
+        "Whether Intel should become a recurring canonical source; this observation alone does not justify adding a competing source registry entry."
+      ],
+      "deduplication": "No Intel item was found on current default-branch code search. Preserve as contributed source-lifecycle intelligence only; do not create a money opportunity because the controlling Intigriti program explicitly states there are no bounties.",
+      "recommended_next_action": "When chronology reaches this contribution, re-open Intel's Product Security Center and the Intigriti program together, preserve the then-current terms and any dated transition notice, and classify the lane as disclosure/recognition rather than paid opportunity unless a primary source explicitly restores rewards."
+    }
+  ],
+  "notes": [
+    "This file preserves contributed research only and does not advance data/source_check_history.json or data/intelligence_sources.json.",
+    "Intel's own Product Security Center routes vulnerability reports to Intigriti, but some Intel wording still calls the process a Bug Bounty Program; the current Intigriti program terms control the no-bounty classification captured here.",
+    "Do not leapfrog the protected Aug. 30 morning five-record/five-registry replay gate.",
+    "No security testing was performed and no public Intel or third-party system was treated as authorization."
+  ]
+}
