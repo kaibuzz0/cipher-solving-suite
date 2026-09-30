@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-20T19:42:16Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 20 afternoon organizer-primary crypto-data/API hackathon lead from exact current main without overtaking the canonical Aug. 30 morning replay gate or duplicating existing September research.",
+  "observations": [
+    {
+      "source_id": "research-lead-cmc-api-hackathon-2026",
+      "source_url": "https://coinmarketcap.com/api/resources/api-hackathon/",
+      "observed": "coinmarketcap build with cmc api hackathon | organizer-primary page updated aug 28 2026 | virtual sep 9 2026 00:00 utc through sep 30 2026 23:59 utc | open worldwide | age 18+ | solo or teams up to 4 | four tracks: markets and trading tools, ai agents and automation, data and visualisation, real world assets | $10000 worth of prizes is non-cash api access and swag; top 3 receive 1-year cmc pro api grants: professional, growth, startup; top 30 receive swag; every participant receives free startup tier during event | prizes cannot be exchanged for cash | public repository plus working demo/deployed link/screen recording, x post with #buildwithcmc, named api endpoints, visible real api call, short api feedback note, one selected track required | original work built for hackathon; pre-existing projects allowed only with new clearly identified cmc integration | open-source dependencies and ai coding assistants allowed | participants retain ownership; cmc may feature/repost/showcase with credit | registration through dorahacks and matching coinmarketcap api account email required | participant registration state not established by repository",
+      "sha256": "691c8bed5c63fdd55dc41889a42f676da7a96b45bed0e11b2ac198bbab04b5d6",
+      "primary_followup_urls": [
+        "https://coinmarketcap.com/api/resources/api-hackathon/",
+        "https://coinmarketcap.com/api/documentation/v1/",
+        "https://dorahacks.io/hackathon/coinmarketcap-api-202609"
+      ],
+      "note": "Organizer-primary CoinMarketCap rules are unusually complete. The advertised $10K is value-in-kind rather than cash: API-plan grants plus swag, and the rules explicitly say prizes cannot be exchanged for cash. The AI Agents and Automation track is directly relevant to this repository's agent/tool architecture. This snapshot does not establish participant-specific registration, API-account upgrade state, or submission intent."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "CoinMarketCap API Hackathon is live through Sep. 30 with an AI Agents and Automation track",
+      "status": "verified-opportunity-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "CoinMarketCap's organizer-primary page defines a virtual worldwide hackathon running Sep. 9-30, 2026 for entrants age 18+, solo or teams up to four. Its four tracks include AI Agents and Automation, Markets and Trading Tools, Data and Visualisation, and Real World Assets. Submissions require a public repository, working demo or recording, an X post, explicit CMC API endpoints and visible real API-call evidence. The headline $10K prize value is not cash: the top three receive one-year CMC Pro API-plan grants, the top 30 receive swag, and all registered participants receive Startup-tier API access during the event; prizes cannot be exchanged for cash. Pre-existing projects are allowed only when the CMC integration is new and clearly identified, and AI coding assistants/open-source dependencies are allowed.",
+      "recommended_action": "When chronology reaches this contribution, reopen the organizer and DoraHacks surfaces, verify participant registration and any rule revisions, and evaluate a narrow agent/research-tool build using CMC data only if participation is intended. Preserve API-key handling and never commit keys. If this lane proves recurring, review CoinMarketCap deliberately for addition to the canonical source registry rather than creating a parallel source list."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 20 afternoon lead ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. This is a build/API competition lead only. Public markets, exchanges, APIs, repositories, blockchains, contracts, wallets and third-party systems are not treated as testing authorization. API keys are credentials and must not be committed or shared."
+}
