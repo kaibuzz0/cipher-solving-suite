@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-02T07:38:42Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "222bd054551c44845fa50c1837e379cc1dc6ab53",
+  "purpose": "Preserve a bounded Sep. 2 source-health pass from current main without overtaking the chronological Aug. 28+ canonical replay chain.",
+  "observations": [
+    {
+      "source_id": "hackerone-directory",
+      "source_url": "https://hackerone.com/directory/programs",
+      "observed": "hackerone id verification | all hackers must complete identity verification before submitting to bug bounty programs while vulnerability disclosure programs are unaffected | verification eligibility generally requires age 18 or older and a supported physical identity document through veriff | verification reviews can take up to 48 hours | verification lasts 12 months and must be renewed annually | losing verification removes the ability to submit to bug bounty programs | this is a platform participation gate and does not itself authorize testing",
+      "sha256": "1bfd2ae44b0cf0c82578eddd7ca88333d590524e834d0441a8f4910da1fed054",
+      "primary_followup_urls": [
+        "https://docs.hackerone.com/en/articles/8399430-id-verification",
+        "https://www.hackerone.com/bug-bounty-programs"
+      ],
+      "note": "Material participation-state finding. HackerOne's current official help documentation says identity verification is required before any BBP submission, while VDP submissions are unaffected. Verification generally requires an eligible physical ID, may take up to 48 hours, expires after 12 months, and must be renewed annually. The page reports only a relative update age, so no exact policy-change date is asserted. This changes platform actionability but does not authorize testing of any program or asset."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | nns ctf 2026 runs sep 4 1600 utc to sep 6 1600 utc and tfc ctf 2026 runs sep 5 1000 utc to sep 6 1000 utc | no materially newer immediate online event or organizer verified cash prize evidence established in this pass | aggregator remains discovery only and organizer rules control participation",
+      "sha256": "34bf96c4873cb8fa2dbdfee11db98cbed8e76d972631fc0206f9ef3bba997b46",
+      "note": "No new CTF promotion. NNS and TFC remain the immediate broad online practice window; prize and registration claims still require organizer evidence before actionability or earning claims."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | ethonline 2026 remains sep 4 to sep 16 | official prize page currently shows 11 sponsor pools totaling 82000 dollars in displayed headline amounts with bazantic at 5000 dollars | the graph continuity ai tooling or ai use case track remains 5000 dollars and permits extending existing open source work subject to event rules | no new participant acceptance or exact event stake amount verified in this pass",
+      "sha256": "a9ab6f396d3c1b72c6c9ac4b8b130845d3275f34e10b559ea665d8da3410a84b",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events/ethonline2026/info"
+      ],
+      "note": "Stable against the latest preserved Sep. 1 afternoon research: 11 displayed sponsor pools total $82,000, including Bazantic at $5,000. The Graph Continuity AI track remains directly relevant, but participant acceptance and the exact event-specific stake remain unresolved, so no active build case is created."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | xtech search 10 remains listed for eligible us small businesses with a 1000000 dollar cash prize and sep 10 2026 1700 et to oct 19 2026 1700 et dates on usa gov | prior army xtech surfaces remain inconsistent with those dates and actionability remains unresolved | do not assert a definitive army application deadline until the authoritative army rfi and application surface agree",
+      "sha256": "bb0873bb9c0460c4974809a9eb57691c32c35afdcf734c2caf70d83aeb88d1ce",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/xtech-search-10",
+        "https://xtech.army.mil/"
+      ],
+      "note": "No actionability promotion. USA.gov still exposes the later Sep. 10-Oct. 19 lifecycle/application dates, while previously preserved Army surfaces conflict. The repository should continue treating xTech|Search 10 as unresolved until one authoritative Army RFI/application path settles the discrepancy."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "HackerOne now requires identity verification before bug-bounty submissions",
+      "status": "platform-participation-gate",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "HackerOne's current official ID Verification documentation states that all hackers must complete identity verification before submitting to bug bounty programs. VDP submissions are not affected. The verification flow generally requires an eligible physical identity document, can take up to 48 hours, lasts 12 months, and must be renewed annually. The official page exposes only a relative update age, so the exact effective date of this requirement is not asserted here.",
+      "recommended_action": "Before recommending a HackerOne BBP as immediately actionable, verify that the intended participant can satisfy the platform identity-verification gate and separately preserve the exact program scope/rules. Do not treat verification eligibility or a public listing as authorization to test any asset."
+    }
+  ],
+  "chronology": "Canonical source history is now through Aug. 27 after PR #114 merged as 222bd054551c44845fa50c1837e379cc1dc6ab53. Aug. 28 morning is the next canonical replay lane. Do not replay this Sep. 2 snapshot until Aug. 28 morning/afternoon, Aug. 29 morning/afternoon, Aug. 30 morning/afternoon, Aug. 31 morning/afternoon, and Sep. 1 morning/afternoon observations are independently reconciled in timestamp/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, or news item was treated as authorization for security testing."
+}
