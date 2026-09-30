@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-20T07:39:05Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 20 organizer-primary quantum coding competition lead from exact current main without overtaking the canonical Aug. 30 morning replay gate or duplicating existing September research.",
+  "observations": [
+    {
+      "source_id": "research-lead-qhack-2026",
+      "source_url": "https://qhack.ai/terms-and-conditions/",
+      "observed": "qhack 2026 | xanadu/pennylane organizer-primary terms last updated sep 11 2026 | registration open | coding competition oct 16 2026 10:00 am et through oct 23 2026 6:00 pm et | teams 1-4 | up to 20 coding challenges across three difficulty levels | cash awards top 10: $15000 $13000 $11000 $7000 $6000 $5000 $4000 $3000 $2000 $1000, totaling $67000 | no purchase necessary | eligibility excludes quebec, russia, iran, north korea, belarus and otherwise requires age 18+ under ontario law or written parent/guardian consent | entries must be original, english, cite past work used, and comply with organizer rules | participant registration state not established by repository",
+      "sha256": "128e2c9f753c550284ed0ccabffaa475c2ed7b5a243d652ec24dab1d6303ddd6",
+      "primary_followup_urls": [
+        "https://qhack.ai/",
+        "https://qhack.ai/terms-and-conditions/",
+        "https://pennylane.ai/codebook"
+      ],
+      "note": "Organizer-primary Xanadu/QHack terms and PennyLane surfaces. The terms are dated Sep. 11, registration is open, and the coding competition is a concrete quantum-computing challenge lane with a verified $67,000 top-10 cash award schedule. This snapshot does not establish participant-specific registration, tax/award acceptance state, or whether any additional challenge-specific restrictions will be published before the board opens."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "QHack 2026 is open for registration with $67,000 in coding-challenge cash awards",
+      "status": "verified-opportunity-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "Xanadu's current QHack 2026 terms define an online quantum coding competition running Oct. 16 at 10:00 AM ET through Oct. 23 at 6:00 PM ET. Teams may contain one to four participants and may submit answers to up to twenty coding challenges across three difficulty levels. The top ten cash awards are $15,000, $13,000, $11,000, $7,000, $6,000, $5,000, $4,000, $3,000, $2,000 and $1,000, totaling $67,000. No purchase is necessary. Eligibility excludes residents of Quebec, Russia, Iran, North Korea and Belarus and otherwise requires age of majority under Ontario law or written parent/guardian consent. Entries must be original, in English, and acknowledge past work used.",
+      "recommended_action": "When chronology reaches this contribution, reopen the current QHack rules and challenge surface, preserve any rule revisions and challenge-specific restrictions, and verify participant registration. If participation is intended and eligible, create one structured competition case limited to organizer-issued QHack challenge material. Consider PennyLane/QHack as a candidate recurring quantum-coding opportunity source only through a deliberate canonical source-registry review rather than creating a parallel source list."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 20 lead ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. QHack is treated only as an organizer-issued quantum coding competition. Public systems, services, repositories, quantum infrastructure and third-party assets are not testing authorization."
+}
