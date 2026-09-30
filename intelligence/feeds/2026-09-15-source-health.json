@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-15T07:41:15Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "391f806ede892b8df6e54322b20265d1f561c41d",
+  "purpose": "Preserve a bounded Sep. 15 research/source-health pass from exact current main after PR #176, without overtaking the canonical Aug. 30 morning replay gate or merging stale later research out of chronology.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming discovery for sep 18-20 window | defcamp capture the flag d-ctf 2026 qualifiers run sep 18 10:00 utc through sep 20 10:00 utc online | ctftime lists access open and free for everyone, team-only jeopardy format with crypto, pwning, reversing, web, forensics and miscellaneous challenges | up to 15 teams may be invited to the bucharest final nov 18-19; finalists receive free defcamp tickets and full or partial accommodation reimbursement | final onsite international prizes are 1536 eur first, 1024 eur second, 512 eur third, plus 512 eur best romanian team; best write-up is 512 eur for online and onsite, available only to top 30 teams | public listing and dedicated competition platform authorize only competition challenge activity under event rules, not external target testing",
+      "sha256": "0f917dc9f1607b2135756d6406e90e24410127d3e9c36b60cfde92291a3a7c4b",
+      "primary_followup_urls": [
+        "https://dctf26-quals.cyber-edu.co/",
+        "https://ctftime.org/event/3392"
+      ],
+      "note": "Material near-term opportunity discovery. The current CTFtime event record links the dedicated organizer platform and supplies concrete free/open access, qualification, finalist benefit and prize evidence. Re-open organizer rules immediately before participation and keep all activity inside released competition challenges."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2300146&lang=2&reg=48",
+      "observed": "government of india pib primary source status for cyber kushti 2026 | registration ran aug 15 through sep 10 2026 and is now closed | round 1 the akhada is scheduled online sep 15 2026, round 2 the dangal sep 24, and ten finalists proceed to an in-person final oct 9 in new delhi | participation was free for three-member teams of students and independent researchers | all competition activity is confined to organizer-provided controlled environments and participants are not permitted or instructed to interact with live systems, third parties or public infrastructure | because registration is closed this is current event-state intelligence rather than a new actionable opportunity",
+      "sha256": "a4d83e658e9895ae61ebedd094cffe16cc7bc4df1a52d621f6f525d7da972706",
+      "primary_followup_urls": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2300146&lang=2&reg=48"
+      ],
+      "note": "Current primary-source lifecycle check. Round 1 occurs Sep. 15, but the Sep. 10 registration cutoff has passed, so do not promote this into new active work without participant-specific prior registration evidence. The organizer-controlled-environment boundary is explicit."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "D-CTF 2026 qualifiers are a verified free near-term competition with concrete finalist benefits and prizes",
+      "status": "verified-near-term-ctf",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "DefCamp D-CTF qualifiers run online Sep. 18 10:00 UTC through Sep. 20 10:00 UTC, are listed as open/free and team-only, and can advance up to 15 teams to the Nov. 18-19 Bucharest final. Finalists receive conference tickets and full or partial accommodation reimbursement. Published final prizes are EUR 1,536 / 1,024 / 512 for the top three international teams, with additional Romanian-team and write-up awards.",
+      "recommended_action": "Before creating a structured case, preserve the dedicated platform rules, registration/team state, finalist travel/reimbursement conditions and exact challenge authorization. If participation is intended and registration is available, create one bounded CTF case and interact only with organizer-released challenge targets."
+    },
+    {
+      "title": "CYBER KUSHTI 2026 entered Round 1 but is no longer a new-registration opportunity",
+      "status": "verified-lifecycle-closed-to-new-registration",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "Government of India primary material says registration closed Sep. 10 and Round 1 is Sep. 15, followed by Round 2 Sep. 24 and an Oct. 9 in-person final. The event is free and uses organizer-controlled environments only. Without participant-specific prior registration evidence, this should be tracked as current event-state intelligence rather than promoted as actionable work.",
+      "recommended_action": "Do not create new active work from the public event page. If a future contribution establishes valid prior registration, preserve that participant evidence and organizer rules before any competition interaction."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon. Aug. 30 morning remains the next replay gate. Do not replay this Sep. 15 snapshot until Aug. 30 morning, Aug. 30 afternoon and all intervening overlapping snapshots have been integrated in chronological/source-overlap order.",
+  "coordination": "Current main includes PR #176 coordination reconciliation. This contribution changes one raw research snapshot only and does not edit ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, docs/AGENT_HANDOFF.md or data/integration_queue.json. Open later research PRs remain contributed evidence and are not silently accepted or discarded.",
+  "safety": "No target testing was performed. Public CTF pages, platforms, hostnames, repositories and event listings were not treated as blanket authorization. Any future D-CTF interaction must remain inside organizer-released competition challenges and current rules. CYBER KUSHTI explicitly confines activity to organizer-provided controlled environments and excludes live systems, third parties and public infrastructure."
+}
