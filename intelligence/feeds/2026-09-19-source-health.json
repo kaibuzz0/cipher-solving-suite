@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-19T07:39:56Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "5c94db5d771dabdb6886ca29e89a5403b0212017",
+  "purpose": "Preserve a bounded Sep. 19 primary-source cryptography competition lead from exact current main without overtaking the canonical Aug. 30 morning replay gate or duplicating existing September research.",
+  "observations": [
+    {
+      "source_id": "research-lead-nsucrypto-2026",
+      "source_url": "https://nsucrypto.nsu.ru/",
+      "observed": "nsucrypto 2026 | official olympiad site | thirteenth international olympiad in cryptography | everybody can participate: school students, university students, professionals | individual online round oct 11 2026 | team online round oct 12-19 2026 | registration stated to open in september 2026 | exact registration-open state, entry cost, prizes/awards, team-size rules and 2026 governing terms not established on checked landing page",
+      "sha256": "f0ae5bf953671375a38db525787a77aac455661c0ec606c4e301c9ecf90e7851",
+      "primary_followup_urls": [
+        "https://nsucrypto.nsu.ru/"
+      ],
+      "note": "Organizer-primary cryptography competition surface. The landing page explicitly invites school students, university students and professionals and gives two October online rounds. It says registration will be open in September 2026 but the bounded check did not independently establish that registration is currently open, nor complete 2026 rules, entry cost, awards, team size, submission mechanics or eligibility restrictions. Keep as a research/opportunity lead until those fields are verified."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "NSUCRYPTO 2026 provides a broad-access October cryptography competition lane",
+      "status": "verified-opportunity-lead",
+      "confidence": "high for dates/audience; medium for current actionability",
+      "relevance": "high",
+      "summary": "The official NSUCRYPTO site announces the Thirteenth International Olympiad in Cryptography for 2026 and states that school students, university students and professionals may participate. It lists an individual online round on Oct. 11 and a team online round from Oct. 12-19, with registration to open in September. This is directly relevant to the suite's cipher/cryptography mission, but current registration state and complete governing/reward terms remain unresolved.",
+      "recommended_action": "Reopen the organizer site and 2026 registration/rules surfaces before promotion. Verify registration-open state, cost, exact eligibility, team-size rules, prizes/recognition, problem/submission mechanics, permitted tools/AI policy, and deadlines. If participation remains open and terms are favorable, create a structured competition case limited to organizer-issued olympiad problems; do not treat unrelated public systems or cryptographic implementations as authorized targets."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay or promote this Sep. 19 lead ahead of Aug. 30 morning/afternoon and intervening overlapping snapshots.",
+  "safety": "No target testing was performed. NSUCRYPTO is treated only as an organizer-issued cryptography problem competition. Public systems, services, repositories, cryptographic deployments and third-party infrastructure are not testing authorization."
+}
