@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "snapshot_type": "research_source_health",
+  "checked_at": "2026-09-28T19:40:29Z",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": null,
+      "name": "Gloo AI Hackathon 2026",
+      "source_url": "https://gloo.com/ai/hackathon",
+      "source_class": "organizer-primary",
+      "status": "live-registration-build-window",
+      "fingerprint_sha256": "c8d1601029a72f3a848faf751c176601385008423a8a22375f9f03433041cb6b",
+      "facts": {
+        "event_dates": "2026-10-06 through 2026-10-08",
+        "location": "Limelight Hotel, Boulder, Colorado",
+        "entry_cost": "Free registration",
+        "eligibility": "Ages 18+; all experience levels and professional/academic backgrounds welcome, subject to organizer registration/acceptance.",
+        "format": "In-person AI hackathon; 2026 theme Build Together: Humans, Agents, and the Future of Flourishing; organizer says challenges are live and 30-day build window is open.",
+        "prize_evidence": "USD 200,000 in cash prizes advertised by organizer.",
+        "authorization_boundary": "Build competition only. Public Gloo systems, APIs, repositories, partner systems, user data, or third-party services are not security-testing targets."
+      },
+      "missing_verification": [
+        "Complete governing rules and exact cash-prize allocation by challenge/placement.",
+        "Registration/application cutoff, capacity, acceptance criteria, and participant-specific acceptance state.",
+        "Team-size/team-formation rules and whether solo participation is permitted through final judging.",
+        "Submission requirements, judging criteria, originality/pre-existing-work rules, permitted AI/tool/data policy, and IP/publicity terms.",
+        "Travel/lodging responsibility and any reimbursement or attendance conditions for the Boulder event.",
+        "Prize payment, tax, geographic/jurisdiction, identity, and disbursement restrictions."
+      ],
+      "deduplication": "No Gloo AI Hackathon item was identified in current-main code search or inspected open research PR titles/bodies. Treat this as contributed research until canonical chronology reaches Sep. 28.",
+      "recommended_next_action": "When chronologically eligible, reopen the organizer rules/registration/challenge surfaces, preserve complete prize and participation terms, and create a structured build-competition case only if attendance/participation is intended and accepted."
+    }
+  ],
+  "notes": [
+    "This file preserves contributed research only and does not advance data/source_check_history.json or data/intelligence_sources.json.",
+    "Do not leapfrog the protected Aug. 30 morning five-record/five-registry replay gate.",
+    "No security testing was performed."
+  ]
+}
