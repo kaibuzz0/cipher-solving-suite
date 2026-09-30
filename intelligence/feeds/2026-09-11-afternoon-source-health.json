@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-11T19:40:45Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "8b9736c87d73e96df8658d3ae2f4d6147de9aeb3",
+  "purpose": "Preserve a bounded Sep. 11 afternoon research/source-health pass from exact current main after PR #160, without overtaking the still-required Aug. 29 afternoon and later canonical replay chronology or colliding with coordination PR #162. Record the new EBL-Core execution-boundary authorization research lead plus real CTFtime and ETHOnline source checks without promoting unreproduced research into repository security truth.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | fri sep 11 2026 batch has 59 entries | arxiv:2609.11596 from intent to execution grant proposes ebl-core for deciding whether one fully materialized ai-generated candidate may receive action-scoped execution authority | profile binds structured intent, root and operational policies, typed evidence, context, time, decision derivation and a separate redemption-time execution grant | ancillary reference artifact reports 34 of 34 static vectors and 15 of 15 lifecycle checks passing, plus 100 concurrent-redemption trials with exactly one successful redemption per trial and 100 revoke-redeem races ending in valid terminal outcomes | authors explicitly state these bounded results do not establish intent correctness, evidence truth, complete mediation, production readiness or deployment security",
+      "sha256": "4db2bdf3bbe52f6c2ae593257b12f8e8267eee661ad6d55df206cb1145e852b6",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2609.11596",
+        "https://arxiv.org/src/2609.11596v1/anc/results/validation-summary.json"
+      ],
+      "note": "Material new research lead with unusually direct relevance to this repository's authorization boundary. The paper includes an arXiv-hosted ancillary reference artifact with schemas, test vectors, adjudication and an independent verifier. The published validation summary is author-provided evidence, not independent reproduction. Do not import the implementation or claim a security improvement until the artifact is reproduced on benign local fixtures and compared against the repository's current intent/provenance/authorization contracts."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime current online event surface | k17 ctf and cat ctf 26 are in their sep 11 start window and pwnsec ctf begins sep 12 14:00 utc | ctftime headline metadata still shows k17 through sep 13 despite previously observed organizer/event-text correction to a 24-hour sep 12 10:00 utc end | pwnsec remains sep 12 14:00 utc to sep 13 14:00 utc | no organizer-primary payout change verified in this pass",
+      "sha256": "e0c27b595f2be7624b05b14e9168dd990f958a50f8ded0f5f9273fe32a9f7a36",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming",
+        "https://ctftime.org/event/3145"
+      ],
+      "note": "Live source-health check only. CTFtime continues to expose stale K17 headline metadata, so organizer/event rules remain authoritative for exact timing and any hands-on activity. No duplicate CTF opportunity or prize claim is promoted."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal ethonline 2026 prizes | official prize page still lists 11 sponsor pools with displayed headline amounts totaling 80000 usd | the graph remains 15000 usd including continuity eligibility for extending existing open-source work | ledger remains 5000 usd and chainlink 3000 usd | no material prize-total change verified in this pass",
+      "sha256": "4ddf6ed271fb3b08b8b335040116f9d981e1d99e608a49c9e913bb3343c015f2",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Stable official-source check. Existing ETHOnline continuity, Ledger and Chainlink contributions remain separate and chronology-gated; no duplicate intelligence or case promotion is warranted."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "EBL-Core provides an executable execution-boundary conformance profile for high-risk AI actions",
+      "status": "evaluation-lead-unreproduced",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "arXiv:2609.11596, From Intent to Execution Grant, defines EBL-Core: a profile for deciding whether one canonical fully materialized AI-generated action candidate may receive action-scoped execution authority. It separates an Execution Release Contract from the actual Execution Grant and requires redemption-time validation, while binding intent, policy, evidence, context, time and a verifiable decision derivation.",
+      "verification_evidence": "The arXiv page exposes an ancillary reference artifact and a validation summary reporting 34/34 static vectors, 15/15 lifecycle checks, 100 concurrent-redemption trials with exactly one successful redemption/effect per trial, and 100 revoke-redeem races ending in valid terminal states. Those are author-provided retained-run results; this repository has not independently executed the artifact.",
+      "scope_and_limits": "The authors explicitly state that the bounded executable evidence does not establish human-intent correctness, evidence truth, complete mediation, production readiness, mechanized correctness or deployment-level security. This contribution therefore records EBL-Core only as a defensive architecture/evaluation lead and does not import code, alter authorization rules, or expand any target scope.",
+      "recommended_action": "When chronology reaches this Sep. 11 afternoon contribution, Build/Integration should download or otherwise preserve the complete arXiv ancillary artifact, verify its license/provenance, run the static/lifecycle/concurrency validation in an isolated benign environment, and compare EBL-Core's intent/policy/evidence/grant lifecycle against the suite's current authorization, provenance and recurring-agent contracts. Promote only specific controls that are reproducible and fit the existing canonical architecture."
+    }
+  ],
+  "chronology": "Canonical source history still ends at Aug. 29 morning (2026-08-29T07:38:35Z). Do not replay this Sep. 11 afternoon snapshot yet. Process Aug. 29 afternoon first, then Aug. 30 and all intervening preserved snapshots in timestamp/source-overlap order before this contribution becomes eligible for canonical source-history integration.",
+  "coordination": "PR #162 owns current post-PR160 coordination state and PR #161 already preserves the Sep. 11 xTech research contribution from a stale base. This snapshot is intentionally a separate one-file afternoon contribution from exact current main and does not edit ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, docs/AGENT_HANDOFF.md, data/integration_queue.json or PR #161's raw evidence.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, CTF listing, paper, package or news item was treated as authorization for security testing. No credential attacks, destructive actions, persistence, evasion or out-of-scope activity were performed."
+}
