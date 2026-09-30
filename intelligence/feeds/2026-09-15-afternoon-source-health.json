@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-15T19:40:43Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "391f806ede892b8df6e54322b20265d1f561c41d",
+  "purpose": "Preserve a bounded Sep. 15 afternoon research/source-health pass from exact current main after PR #176, without overtaking the canonical Aug. 30 morning replay gate or duplicating the Sep. 15 morning contribution in PR #178.",
+  "observations": [
+    {
+      "source_id": "github-search",
+      "source_url": "https://colosseum.com/hackathon",
+      "observed": "colosseum crypto world's fair current primary source status | live global online hackathon runs sep 14 through oct 12 2026 and is open to builders across all blockchain ecosystems | builders must register and join the current hackathon; solo founders are allowed and every team member needs an account | products may use pre-existing code but only work completed during the competition window is judged and relevant prior development must be disclosed | one product submission per individual/team | official current page says winners receive non-dilutive prizes and select hackathon winners accepted into the accelerator receive 250000 usd in capital; sep 3 organizer announcement says hundreds of thousands in prizes and millions in venture funding will be on the line but detailed track prize amounts are still being released | submission requires product/business information, github repository access, 2-3 minute presentation video, product demo video no more than 3 minutes, go-to-market strategy and development provenance | this is a build/startup competition and does not authorize security testing of public blockchains, contracts, repositories or third-party systems",
+      "sha256": "1e13d64255d256259c79872ccb32b860ab65d26b6d50ed8191ef6aa3f39d7ec5",
+      "primary_followup_urls": [
+        "https://colosseum.com/hackathon",
+        "https://blog.colosseum.com/expanding-the-arena/"
+      ],
+      "note": "Material current opportunity discovered from organizer-primary surfaces. This is Colosseum's first competition open across blockchain ecosystems and is live now. Exact dedicated track prize amounts and full competition terms should be re-opened before canonical promotion or participant-specific active work."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Crypto World's Fair is a live cross-chain startup hackathon through October 12",
+      "status": "verified-live-hackathon-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "Colosseum's current primary surface marks Crypto World's Fair live from Sep. 14 through Oct. 12, open globally across blockchain ecosystems. Solo founders may participate, pre-existing code is allowed with disclosure, and only competition-window work is judged. Winners receive non-dilutive prizes; select winners may enter Colosseum's accelerator with $250,000 in capital. The organizer announcement says hundreds of thousands in prizes and millions in venture funding are at stake, while detailed track prize amounts are still being released.",
+      "recommended_action": "When chronology reaches this contribution, reopen the live campaign and terms, capture exact track/general prize amounts, eligibility and any entry-cost terms, then evaluate whether an existing suite capability can become a genuinely new startup/product submission with clear pre-hackathon provenance. Create structured active work only after participant registration and governing terms are preserved."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon. Aug. 30 morning remains the next replay gate. Do not replay this Sep. 15 afternoon snapshot until Aug. 30 morning, Aug. 30 afternoon and all intervening overlapping snapshots have been integrated in chronological/source-overlap order.",
+  "coordination": "Current main includes PR #176 coordination reconciliation. PR #178 preserves the Sep. 15 morning D-CTF/CYBER KUSHTI pass. This contribution is a separate one-file afternoon snapshot and does not edit ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, docs/AGENT_HANDOFF.md or data/integration_queue.json. Stale/open research PRs remain contributed evidence and are not silently accepted or discarded.",
+  "safety": "No target testing was performed. Crypto World's Fair is a product/startup build competition. Its public pages, blockchain ecosystems, contracts, repositories, developer resources and third-party services are not security-testing authorization. Any future security-related feature must remain benign unless an organizer provides an explicit scoped challenge environment."
+}
