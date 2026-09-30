@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-30T07:42:16Z",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve one current, independently checked AI build-competition lead without overtaking protected canonical source chronology.",
+  "observations": [
+    {
+      "source_id": null,
+      "source_name": "Devpost — Build With AI: Basics official rules",
+      "source_url": "https://learn-ai-basics.devpost.com/rules",
+      "source_tier": "primary",
+      "category": "hackathon",
+      "checked_at": "2026-09-30T07:42:16Z",
+      "content_fingerprint": "a3e47c431f82cd54568b189c95a54bcfc09b79c5290b28d973f5ee0bd0ae76d1",
+      "observed": "Devpost Build With AI: Basics official rules checked 2026-09-30: registration and submission run 2026-09-22 10:00 ET through 2026-10-26 17:00 ET; no purchase/payment necessary; eligible entrants include age-of-majority individuals, teams, and organizations subject to listed geographic/conflict exclusions; projects must be new during the submission period, use the Devpost Learn Skill Pack, include scope.md/prd.md/spec.md, be a working end-to-end proof of concept, provide a public open-source repository and <3 minute public demo video; standard development tools and AI coding assistants are allowed with disclosure of other pre-existing work; third-party SDK/API/data use must be authorized. Cash prizes are $1,250 first, $750 second, $500 third ($2,500 total), subject to winner verification/forms/tax and payment terms. Submissions remain entrant IP with judging and promotional licenses described in the rules.",
+      "change_state": "research-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "entry_cost": "No purchase or payment necessary under the official rules.",
+      "deadline": "2026-10-26 17:00 Eastern Time for registration and submission.",
+      "prize_evidence": "$2,500 total cash: $1,250 / $750 / $500 for first through third, plus non-cash participation/profile benefits.",
+      "eligibility": "Age-of-majority individuals, teams, and organizations are generally eligible, subject to the rules' geographic sanctions/prohibitions and conflict exclusions.",
+      "authorization_scope": "This is a software-build competition only. Public services, repositories, APIs, third-party systems, or security targets are not authorized for testing by this listing. Third-party SDK/API/data use must itself be authorized under applicable terms.",
+      "deduplication": "No matching Build With AI: Basics item was found in the inspected canonical intelligence/opportunity catalogs or open research PR titles. Devpost already exists as a general opportunity directory entry; do not create a competing recurring source list solely for this event.",
+      "missing_verification": [
+        "Participant-specific Devpost registration/account state is not established.",
+        "Before active work, re-open the live rules for amendments and confirm the entrant's jurisdiction remains eligible.",
+        "If reusing any repository concepts, preserve a clean pre-event/new-project boundary because the rules require a new project during the submission period and disclosure of incorporated pre-existing work.",
+        "Confirm any third-party SDK/API/data licenses and credentials without committing secrets."
+      ],
+      "next_action": "After the protected chronological replay lane reaches this contribution, re-open the current rules. If participation is intended and eligibility/registration are established, create one structured build-competition case centered on a genuinely new end-to-end project using the required Skill Pack; keep credentials and third-party authorization outside repository assumptions."
+    }
+  ],
+  "publication_state": {
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "active_case_created": false,
+    "pages_html_edited": false
+  },
+  "chronology_note": "Canonical source history remains through 2026-08-29T19:40:52Z. The protected Aug. 30 morning five-source replay remains next and must not be leapfrogged by this Sep. 30 research contribution."
+}
