@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-30T19:40:33Z",
+  "kind": "research_contribution",
+  "canonical_status": "unpromoted",
+  "source_lane": "opportunity-discovery",
+  "title": "QHack 2026 quantum coding competition is open for October 16-23",
+  "summary": "Primary QHack/Xanadu surfaces advertise QHack 2026 as a PennyLane-powered quantum coding competition running October 16-23, 2026. Registration is open. Coding teams may contain 1-4 participants and the published coding-challenge cash awards total USD 67,000, led by USD 15,000 for first place. Treat this snapshot as contributed research until canonical chronology and integration review reach it.",
+  "verification": {
+    "primary_urls": [
+      "https://qhack.ai/",
+      "https://qhack.ai/prizes/",
+      "https://qhack.ai/terms-and-conditions"
+    ],
+    "organizer": "Xanadu Quantum Technologies Inc.",
+    "event_window": "2026-10-16 10:00 ET through 2026-10-23 18:00 ET",
+    "registration_state": "open on primary event page as observed",
+    "team_size": "1-4",
+    "entry_cost": "No purchase necessary",
+    "prize_evidence": "Coding challenge awards total USD 67,000: $15,000, $13,000, $11,000, $7,000, $6,000, $5,000, $4,000, $3,000, $2,000 and $1,000. Separate referral awards are ten x $100.",
+    "eligibility": "Not open to residents of Quebec, Russia, Iran, North Korea, or Belarus; participant must be 18+ under Ontario law or have parent/legal-guardian written consent; organizer/agency employees and specified immediate family excluded; void where prohibited.",
+    "submission_rules": "Original work; English; necessary rights and permissions required; citations or references acknowledging past work used.",
+    "confidence": "high"
+  },
+  "relevance": "high",
+  "deduplication_note": "No QHack entry found in the current canonical intelligence or opportunity catalogs reviewed on main.",
+  "unresolved": [
+    "Re-open FAQ and terms immediately before promotion because organizer terms may change.",
+    "Confirm participant-specific registration acceptance and jurisdiction eligibility.",
+    "Resolve the current FAQ answer on permitted AI or LLM assistance before planning an agent-assisted competition workflow; the indexed FAQ exposes the question but not its answer.",
+    "Confirm payout logistics and tax handling for the intended participant."
+  ],
+  "next_action": "When canonical chronology reaches this contribution, re-open the primary QHack terms and FAQ, resolve AI-tool policy and participant eligibility, then promote to canonical intelligence or opportunities and create a structured competition case only if participation is intended.",
+  "provenance_note": "Observed from current public primary organizer surfaces."
+}
