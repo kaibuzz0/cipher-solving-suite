@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-13T19:38:26Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e61b39d26aaaf46459ac1d45a7621a5d3a1854d9",
+  "purpose": "Preserve a bounded Sep. 13 afternoon source-health pass after the ETHOnline project-submission cutoff and PwnSec competition window ended, without overtaking the canonical Aug. 30 morning replay gate or colliding with coordination PR #173.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal official ethonline 2026 submission rules and event calendar | project submission deadline was sunday sep 13 2026 at 12:00 pm edt, equivalent to 16:00 utc, and late submissions are not accepted | checked at 2026-09-13t19:38:26z after that cutoff, so new project submissions are no longer timely under the published rules | broader ethonline event calendar still runs sep 4 through sep 16 2026 and judging/event activity can continue after the submission cutoff | rules require a repository and 2 to 4 minute demo video, allow up to three partner prizes, and permit ai assistance only with attribution and meaningful human contribution",
+      "sha256": "c108863c271652a18c31962836a08337ee8fb91fced51857d2b5a6102a8427af",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/info/details",
+        "https://ethglobal.com/events"
+      ],
+      "note": "Material deadline-state change. The broader event remains listed through Sep. 16, but the authoritative project-submission cutoff has passed and the rules explicitly reject late submissions. Do not present Sep. 16 as the submission deadline."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime pwnsec ctf 2026 | published event window was sep 12 2026 14:00 utc through sep 13 2026 14:00 utc | checked at 2026-09-13t19:38:26z after that published end time, so the competition window has ended | ctftime still lists prizes as tbd and links the official organizer | the event description distinguishes human and cyborg factions and says cyborg competitors may use tools including ai, but repository evidence never established participant registration or faction selection",
+      "sha256": "a0156afb8f48d2cdb53c1fa624c17ac41a0442b6e2c2ef4fd8803bcfe76d1e1f",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/3159/",
+        "https://pwnsec.ctf.ae/"
+      ],
+      "note": "Material lifecycle change. The published competition window is over. Preserve the existing case and evidence as historical/triage state; do not infer participation, faction selection, solve credit, prize eligibility or payout from the event listing."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges | ready set id the biothreat remains listed sep 8 2026 9:30 am et through oct 14 2026 12:00 pm et with 999990 usd total cash prizes for an ai assisted defensive biological-threat detection algorithm challenge | xtech search 10 remains listed sep 10 2026 5:00 pm et through oct 19 2026 5:00 pm et with a 1000000 usd cash prize headline for eligible us small businesses | both remain discovery or planning leads until complete host rules, eligibility and submission terms are preserved",
+      "sha256": "50b7094d98ce5cd3de3f1ab9849fab96bc9aab0ac6e8ccf54d85853200985cc3",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/ready-set-id-biothreat",
+        "https://www.usa.gov/challenges/xtech-search-10"
+      ],
+      "note": "Stable opportunity check. Both federal opportunities remain open according to USA.gov, but prior research already preserves them. No duplicate canonical intelligence or active case is warranted until complete host rules and participant-specific eligibility are verified."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline project submissions are closed while the broader event continues",
+      "status": "verified-submission-window-closed",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "ETHGlobal's official rules set the project deadline at Sep. 13, 2026 12:00 PM EDT and reject late submissions. This check occurred after that cutoff. The event calendar still runs through Sep. 16, so later judging/event activity must not be mistaken for an open submission window.",
+      "recommended_action": "Do not create new ETHOnline submission work from the Sep. 16 calendar date. Preserve any already-submitted project only if participant-specific submission evidence exists."
+    },
+    {
+      "title": "PwnSec CTF 2026 competition window has ended",
+      "status": "verified-published-window-ended",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "CTFtime lists PwnSec CTF 2026 as Sep. 12 14:00 UTC through Sep. 13 14:00 UTC. This check occurred after that endpoint. Prizes remain TBD and repository evidence never established registration or faction selection.",
+      "recommended_action": "Transition planning from live participation to historical outcome/evidence reconciliation. Do not infer solve, rank, prize or payout state without participant-specific evidence."
+    },
+    {
+      "title": "Federal challenge lane remains open after the weekend deadline transitions",
+      "status": "verified-stable-opportunity-window",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "USA.gov continues to list Ready, Set...ID the Biothreat through Oct. 14 with $999,990 total cash prizes and xTech|Search 10 through Oct. 19 with a $1,000,000 cash-prize headline.",
+      "recommended_action": "Keep these as the stronger current planning lanes, but preserve complete agency/host rules, eligibility and submission terms before assigning active build work."
+    }
+  ],
+  "chronology": "Canonical source history has advanced through Aug. 29 afternoon. Aug. 30 morning is the next replay gate. Do not replay this Sep. 13 afternoon snapshot until Aug. 30 morning, Aug. 30 afternoon and all intervening overlapping snapshots have been integrated in chronological/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, event page or challenge listing was treated as authorization to test it. The federal biothreat item is recorded only as a defensive algorithmic competition lead and not as permission or guidance for harmful biological work."
+}
