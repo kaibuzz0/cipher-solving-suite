@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-16T07:39:16Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "391f806ede892b8df6e54322b20265d1f561c41d",
+  "purpose": "Preserve a bounded Sep. 16 federal-opportunity/source-health pass from exact current main, without overtaking the canonical Aug. 30 morning replay gate or colliding with open Sep. 14-15 research contributions.",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges and darpa d2 primary rules | documentation and decision support d2 sprint is newly active in the federal challenge lane with 1000000 usd total prizes across two tracks | darpa primary page says qualification is rolling, with qualification window open sep 11 through dec 1 2026 and final algorithm package due mar 1 2027 | darpa sep 14 announcement gives each track prizes of 300000 first, 150000 second and 50000 third | terms version 1.0 dated sep 9 says applicants/team representatives must be us citizens or permanent residents representing us entities or government employees; non-us individuals and organizations may join teams if the applicant and team representative is a us citizen or permanent resident; government organizations and ffrdcs may participate but cannot receive prizes | qualification guide says part 1 narrative deadline nov 4, part 2 deadline dec 1, up to 20 teams selected, part 2 uses simulated-casualty images and submitted algorithms run in isolated evaluation as docker containers | darpa-provided data is limited to local sprint development and training, cannot be shared with unauthorized third parties, and may not be used for re-identification, facial recognition, profiling or biometric surveillance | this is a legitimate ai algorithm competition and not authorization for unrelated security testing or use of controlled data outside the sprint",
+      "sha256": "8bad239e1bb2616552aa66629e3c062a1f583bb73fdcd724b69576fe54f2fef0",
+      "primary_followup_urls": [
+        "https://www.usa.gov/challenges/documentation-decision-support",
+        "https://www.darpa.mil/research/challenges/d2",
+        "https://www.darpa.mil/research/challenges/d2/resources",
+        "https://www.darpa.mil/news/2026/darpa-sprint-d2",
+        "https://www.darpa.mil/sites/default/files/attachment/2026-09/darpa-sprint-d2-terms-conditions.pdf",
+        "https://www.darpa.mil/sites/default/files/attachment/2026-09/darpa-sprint-d2-qualifications-guide.pdf"
+      ],
+      "note": "Material federal-opportunity change independently followed from USA.gov to DARPA primary pages and published terms/qualification documents. Eligibility, prize structure, rolling qualification, submission milestones, data-use limits and evaluation mechanics are preserved. Participant-specific registration/qualification state is unknown, so no active case is created."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "DARPA D2 Sprint opens a $1M autonomous medical-documentation and decision-support competition",
+      "status": "verified-primary-rules-participant-state-unresolved",
+      "confidence": "high",
+      "relevance": "high",
+      "summary": "DARPA's Documentation and Decision Support Sprint is a current virtual AI/algorithm competition with $1,000,000 total prizes across Documentation and Decision Support tracks. DARPA lists rolling qualification through Dec. 1, a Nov. 4 Part 1 narrative deadline, Dec. 1 Part 2 deadline, up to 20 qualified teams, and a Mar. 1, 2027 final algorithm-package deadline. Each track pays $300,000 / $150,000 / $50,000 for first through third. Primary terms establish U.S.-representative eligibility, prize/TIN conditions, limited-use DARPA datasets, no re-identification/facial-recognition/profiling, and isolated Docker-based qualification evaluation on simulated-casualty data.",
+      "recommended_action": "When chronological integration reaches this contribution, reopen the current DARPA D2 rules/resources and registration surface, confirm whether participant eligibility and registration intent exist, and only then create a structured competition case. If pursued, keep all DARPA-provided data within the published local-development scope, preserve the exact rule/document versions, and treat medical/algorithm outputs as competition artifacts rather than validated clinical capability."
+    }
+  ],
+  "chronology": "Canonical source history remains through Aug. 29 afternoon on the inspected current main, with Aug. 30 morning still the exact next replay gate. Do not replay this Sep. 16 snapshot until Aug. 30 morning, Aug. 30 afternoon and all intervening overlapping source snapshots have been integrated in chronological/source-overlap order.",
+  "safety": "No target testing was performed. No public target, hostname, repository, challenge listing or government system was treated as security-testing authorization. DARPA D2 data authorization is limited to the competition terms: local development/training for the Sprint, with explicit prohibitions on unauthorized sharing, re-identification, facial recognition, profiling and biometric surveillance. No controlled dataset was downloaded or used in this pass."
+}
