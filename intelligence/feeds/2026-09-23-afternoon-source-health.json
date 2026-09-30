@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-23T19:40:58Z",
+  "agent": "research-intelligence-pass",
+  "base_main": "8be854269071060fd39d5d060c83a1be210330c5",
+  "canonical_chronology": {"history_through":"2026-08-29T19:40:52Z","next_replay_gate":"2026-08-30T07:38:20Z","note":"Raw contributed research only; do not leapfrog protected chronological replay."},
+  "observations": [{
+    "source_id": null,
+    "source_name": "CSAW / AI Hardware Attack Challenge 2026",
+    "source_tier": "primary-organizer",
+    "source_url": "https://csaw.io/competition/ai-hardware-attack-challenge",
+    "observed": "CSAW AI Hardware Attack Challenge 2026 | region: US-Canada only | eligibility: currently-enrolled university students | preliminary release: 2026-09-18 12:00 EST | preliminary due: 2026-10-02 23:59 EST | finalists announced: 2026-10-04 12:00 EST | final challenge released: 2026-11-12 09:00 EST | final due/presentations: 2026-11-13 09:00 EST | task: use generative AI to insert and demonstrate exploits for hardware vulnerabilities/Trojans in organizer-provided FPGA-targeted hardware designs, including cryptographic accelerators/processors/communications IP | target: Hackster education board from Calico Computer | controlled competition context only",
+    "content_fingerprint": "d192fb857e1dbd43564470e53916455baca0c499d68a724217946c6a96be9b53",
+    "change_state": "contributed-lead",
+    "confidence": "high",
+    "relevance": "high",
+    "facts": {"competition_state":"preliminary-phase-live","region":"US-Canada","student_only":true,"preliminary_released":"2026-09-18T12:00:00-05:00","preliminary_due":"2026-10-02T23:59:00-05:00","finalists_announced":"2026-10-04T12:00:00-05:00","final_challenge_released":"2026-11-12T09:00:00-05:00","final_due":"2026-11-13T09:00:00-05:00"},
+    "missing_verification": ["Verify participant-specific current university enrollment and US-Canada regional eligibility before active work","Preserve exact team-size, registration, entry-cost, award/prize, IP, submission, judging, and permitted-tool rules from the current governing materials","Pin the organizer-issued challenge repository/revision and exact released target artifacts before any technical work","Confirm whether the published EST label is intended literally or as US Eastern local time across DST transitions"],
+    "deduplication_note": "Repository default-branch search found no existing AI Hardware Attack Challenge item; CSAW Cyber Reasoning Challenge is a distinct competition already preserved separately.",
+    "source_network_note": "Do not create a competing recurring source list; evaluate CSAW for deliberate canonical source-policy addition only after chronological reconciliation.",
+    "authorization_boundary": "Authorization is limited to organizer-released challenge artifacts and competition infrastructure under current rules. Public hardware, Calico Computer systems, repositories, hostnames, services, or third-party devices are not testing authorization.",
+    "next_action": "When chronology reaches this contribution, reopen CSAW governing rules and official challenge repository, verify participant eligibility and complete participation/prize/IP terms, pin exact organizer-issued artifacts, then create a structured competition case only if participation is intended and eligible."
+  }],
+  "safety": ["No target testing was performed.","Hardware-vulnerability and Trojan work is preserved only as a controlled organizer-issued competition lead.","Do not test public or third-party hardware, systems, repositories, services, or infrastructure based on this listing."]
+}
