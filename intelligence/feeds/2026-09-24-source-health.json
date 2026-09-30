@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-24T07:37:12Z",
+  "agent": "research-intelligence-pass",
+  "base_main": "38fbdd36f90a42cc978d214491a6c839a726f1bf",
+  "canonical_chronology": {"history_through":"2026-08-29T19:40:52Z","next_replay_gate":"2026-08-30T07:38:20Z","note":"Raw contributed research only; do not leapfrog protected chronological replay."},
+  "observations": [{
+    "source_id": null,
+    "source_name": "HKCERT Capture The Flag Challenge 2026",
+    "source_tier": "primary-organizer",
+    "source_url": "https://www.hkcert.org/event/hkcert-capture-the-flag-challenge-2026",
+    "observed": "HKCERT Capture The Flag Challenge 2026 | status: registration open | registration deadline: 2026-10-20 | qualifying round: 2026-11-06 through 2026-11-07, 24-hour online | final round: 2027-01-07 physical | divisions: Secondary School, Tertiary Institution, Open, International | challenge categories include cryptography, binary exploitation, forensics, reverse engineering, web exploitation, miscellaneous | organizers: Digital Policy Office, HKPC, HKCERT | registration: official HKCERT form",
+    "content_fingerprint": "7a25d9e991d14eceff0904bbdaff05d55358ce1e0a349dc0b3431d25e23bb851",
+    "change_state": "contributed-lead",
+    "confidence": "high",
+    "relevance": "high",
+    "facts": {"registration_state":"open","registration_deadline":"2026-10-20","qualifying_round_starts":"2026-11-06","qualifying_round_ends":"2026-11-07","qualifying_round_online":true,"final_round":"2027-01-07","divisions":["Secondary School","Tertiary Institution","Open","International"],"cryptography_category":true},
+    "missing_verification": ["Verify exact eligibility and geographic restrictions for Open and International divisions from current governing terms","Verify team-size rules and whether solo participation is allowed in each division","Verify entry cost, prize amounts/classification, finalist travel obligations, IP/publication terms, and complete scoring/submission rules","Resolve the organizer contest site's apparent year typo on the final-round detail before promotion"],
+    "deduplication_note": "No HKCERT item was found in default-branch repository code search before preservation.",
+    "source_network_note": "Do not create a competing recurring source list; evaluate HKCERT as a deliberate canonical CTF source candidate only after chronological reconciliation.",
+    "authorization_boundary": "Competition authorization is limited to organizer-provided challenge infrastructure and artifacts during the published event. Public systems, organizers, sponsors, repositories, hostnames, or third-party services are not targets.",
+    "next_action": "When chronology reaches this contribution, reopen HKCERT contest eligibility/rules/prize pages, resolve all missing participation terms and date inconsistencies, then create a structured competition case only if participation is intended and eligible."
+  }],
+  "safety": ["No target testing was performed.","Only organizer-issued challenge infrastructure and artifacts within current competition rules may be treated as authorized competition targets.","No public HKCERT/HKPC/DPO or third-party system is authorization for security testing."]
+}
