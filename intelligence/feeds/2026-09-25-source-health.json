@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "snapshot_type": "research_source_health",
+  "checked_at": "2026-09-25T07:42:04Z",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": null,
+      "name": "Narxoz CTF 2026",
+      "source_url": "https://narxploit.narxoz.kz/register.html",
+      "source_class": "organizer-primary",
+      "status": "live-registration",
+      "fingerprint_sha256": "7de97eda99d70345a02b349c941d6bd7388a38ed9492deb587f4f870596266d3",
+      "facts": {
+        "event_date": "2026-10-10",
+        "location": "Narxoz University, 55 Zhandosov Street, Almaty, Kazakhstan",
+        "mode": "offline",
+        "scope": "international",
+        "registration_deadline": "2026-09-30 23:59 UTC+5",
+        "team_size": "up to five participants",
+        "format": "Scenario-based Cyber Range CTF",
+        "prize_evidence": "Organizer-primary NarXploit event surface publishes a KZT 1,700,000 total prize fund: KZT 1,000,000 first, KZT 500,000 second, KZT 200,000 third.",
+        "entry_cost": "not stated on the checked organizer-primary event and registration surfaces",
+        "authorization_boundary": "Organizer describes the event as an isolated competition environment where teams complete connected technical objectives and submit flags within authorized infrastructure. This does not authorize testing Narxoz University, NarXploit, sponsors, public hostnames, repositories, services, networks, or third parties outside organizer-issued competition infrastructure."
+      },
+      "missing_verification": [
+        "Complete governing rules, scoring, tie-breaks, prohibited techniques, and challenge-specific boundaries.",
+        "Whether registration or participation has any fee, deposit, travel, lodging, visa, tax, or payout conditions not shown on the checked primary pages.",
+        "Exact participant eligibility constraints beyond the organizer's international scope and team-size statement.",
+        "Prize payment form/timing and any identity, residency, tax, or banking requirements.",
+        "Participant-specific registration/acceptance state."
+      ],
+      "deduplication": "Repository code search found no existing Narxoz/NarXploit opportunity or intelligence item on current main. This is preserved as contributed research only until canonical chronology reaches Sep. 25.",
+      "recommended_next_action": "When chronologically eligible, reopen the organizer's current registration/rules surfaces and verify the missing cost, eligibility, prize-payment, scoring, travel, and authorization terms. Create a structured competition case only if participation is intended and feasible for the offline Almaty event."
+    }
+  ],
+  "notes": [
+    "This file preserves contributed research only and does not advance data/source_check_history.json or data/intelligence_sources.json.",
+    "Do not leapfrog the protected Aug. 30 morning five-record/five-registry replay gate.",
+    "No security testing was performed."
+  ]
+}
