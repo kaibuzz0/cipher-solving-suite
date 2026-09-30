@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-09T07:42:56Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "d807fd615dfeb3cdc8d6e254f9409277408ca925",
+  "purpose": "Preserve a bounded Sep. 9 source-health pass from exact current main without overtaking the required Aug. 29 afternoon and later chronological replay chain. Record the newly opened ETHOnline Chainlink liquidation-challenge join window, the Sep. 9 cs.CR MemSentry research lead, and the stable immediate CTF window without promoting unverified claims into canonical source history.",
+  "observations": [
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events and ethonline 2026 prizes | ethonline remains sep 4 to sep 16 2026 async hackathon | official prize page lists 11 sponsor pools with displayed headline amounts totaling 80000 usd | chainlink automated liquidation protection challenge is 500 usd and official qualification requirements say participants may join the event-provided ethereum sepolia challenge contract from sep 9 through the hackathon submission deadline using join() | participant-specific ethonline acceptance and exact stake amount remain unresolved in this pass",
+      "sha256": "2976a64c602fcd075ada49e01c1b4163bf334afc6d86c028c887c5680d5599c4",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/ethonline2026/prizes",
+        "https://ethglobal.com/events/ethonline2026/info",
+        "https://ethglobal.com/rules"
+      ],
+      "note": "Material Sep. 9 participation-state change inside ETHOnline. The official prize page says the $500 Chainlink Automated Liquidation Protection Challenge can be joined from Sep. 9 through the hackathon submission deadline using the event-provided Ethereum Sepolia challenge contract and join() function. This is event participation mechanics only, not blanket authorization to probe contracts or infrastructure. The public pages reviewed in this pass do not establish this repository user's participant acceptance or exact stake amount, so no active case is created."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cryptography recent | wed sep 9 2026 cs.cr batch is now visible with 106 entries | arxiv 2609.08747 memsentry proposes deterministic accept review or quarantine decisions for persistent-memory writes using source trust semantic risk dependency-dag attack radius access risk and signed security-state delta | paper evaluates 1000 gpt-4-generated scenarios and reports sbert+lr 91.7 percent accuracy 0.908 macro-f1 and 100 percent detection of external quarantine-class threats across four compared classifiers | preprint results are not independently reproduced and no official code repository was found in this pass",
+      "sha256": "7ad8df44869473431c341b8b8a4c3a67c7873a2a9764bb697843342ebfbdfb1d",
+      "primary_followup_urls": [
+        "https://arxiv.org/list/cs.CR/recent",
+        "https://arxiv.org/abs/2609.08747"
+      ],
+      "note": "New high-relevance defensive research lead. MemSentry is a Sep. 8-submitted preprint appearing in the Sep. 9 cs.CR batch. Its reported benchmark results are author claims, not independently reproduced repository truth. No official code repository surfaced through the bounded GitHub/web search in this pass, so evaluation should begin with paper/design review and local benign fixtures rather than importing an implementation."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | immediate online window remains k17 ctf sep 11, cat ctf sep 11, and pwnsec ctf sep 12 | k17 event page still carries a stale sep 13 headline end time but explicitly says the competition was shortened to 24 hours ending sep 12 10:00 utc | pwnsec remains sep 12 14:00 utc to sep 13 14:00 utc and ctftime prize field remains tbd | no stronger new ctf opportunity than the already-preserved pwnsec case was identified",
+      "sha256": "e293063539e3a3bae97583487f9c31286be649d5025a4e589ce2e3ca0d9aa35a",
+      "primary_followup_urls": [
+        "https://ctftime.org/event/list/upcoming",
+        "https://ctftime.org/event/3145",
+        "https://ctftime.org/event/3159",
+        "https://pwnsec.ctf.ae/"
+      ],
+      "note": "Stable near-term CTF check. K17's known aggregator-headline mismatch remains visible, while its event text states the corrected 24-hour end time. PwnSec remains the stronger existing agent-oriented case already present on main; CTFtime still shows prizes as TBD. No duplicate case or payout claim is warranted."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "ETHOnline Chainlink liquidation-challenge join window opened Sep. 9",
+      "status": "verified-current-hackathon-subtrack-window",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "ETHGlobal's official ETHOnline prize page now says the $500 Chainlink Automated Liquidation Protection Challenge accepts joins from September 9 through the hackathon submission deadline using the event-provided Ethereum Sepolia challenge contract and join() function.",
+      "eligibility_and_cost": "This is an ETHOnline partner-prize subtrack. The public evidence reviewed here does not establish participant-specific acceptance or the exact ETH stake amount for this user, so actionability remains gated on confirmed event participation. No separate entry fee is stated for the subtrack on the prize page.",
+      "scope_and_authorization": "The official page defines participation mechanics for the event challenge only. It does not authorize unrelated contract, hostname, infrastructure, credential, or security testing. Any build should stay within ETHGlobal/Chainlink rules and event-provided testnet mechanics.",
+      "prize_evidence": "ETHGlobal's official prize page lists the Automated Liquidation Protection Challenge at $500 within Chainlink's $3,000 sponsor pool.",
+      "recommended_action": "If ETHOnline participation is confirmed, preserve the current event/partner rules and submission deadline, then evaluate whether a bounded CRE Confidential Workflow entry is worth pursuing. Do not create active work until the participant gate is resolved."
+    },
+    {
+      "title": "MemSentry adds a persistent-memory write-policy research lead",
+      "status": "preprint-evaluation-lead",
+      "confidence": "medium",
+      "relevance": "high",
+      "summary": "arXiv:2609.08747 proposes a configuration-driven gate for persistent-memory writes that emits Accept, Review, or Quarantine decisions based on source trust, semantic risk, dependency-graph attack radius, access risk, and signed security-state change.",
+      "evidence_boundary": "The authors report evaluation over 1,000 GPT-4-generated scenarios, with SBERT+LR at 91.7% accuracy and 0.908 macro-F1 and all four compared classifiers detecting 100% of external quarantine-class threats. These are unreproduced preprint claims and should not be converted into a repository security guarantee.",
+      "repository_fit": "The design is directly relevant to this repository's existing external-agent contribution, provenance, authorization, and persistent-state boundaries. It may complement the already-preserved authorization-laundering and CONTINUITY research leads.",
+      "recommended_action": "Build/Integrity should review the decision model and assumptions, then create deterministic benign memory-write fixtures that compare source trust, security-state weakening, dependency impact, and human-review escalation. Import no code or dependency until an official artifact/license is established and results are independently reproduced."
+    }
+  ],
+  "chronology": "Canonical source history remains at Aug. 29 morning (2026-08-29T07:38:35Z). Do not replay this Sep. 9 snapshot yet. Process Aug. 29 afternoon first, then Aug. 30 and subsequent contributed snapshots in chronological/source-overlap order before Sep. 9 becomes eligible for canonical source-history integration.",
+  "coordination": "Open PR #151 owns current coordination reconciliation after the rapid research merges. This contribution intentionally avoids ops/CURRENT_STATE.md, docs/WORK_QUEUE.md, data/integration_queue.json, docs/AGENT_HANDOFF.md, canonical source/history files, opportunities, cases, tools, and Pages markup to prevent collision and chronology drift.",
+  "safety": "No target testing was performed. No public target, hostname, contract, repository, bounty listing, event listing, paper, or news item was treated as authorization for security testing."
+}
