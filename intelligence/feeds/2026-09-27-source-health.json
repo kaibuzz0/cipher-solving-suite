@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "snapshot_type": "contributed_research",
+  "observed_at": "2026-09-27T07:41:14Z",
+  "canonical": false,
+  "source_id": null,
+  "title": "Huntress CTF 2026 registration and AI Arena lead",
+  "status": "verified_lead_requires_terms_refresh_before_promotion",
+  "summary": "Huntress' current first-party CTF surfaces say its annual CTF returns for October 2026, registration is open before challenges begin October 1, participation is free and open to the internet, and the 2026 format explicitly encourages AI-assisted defensive challenge solving. Current prize details are not yet finalized on the dedicated prize page, so this is preserved as contributed research rather than promoted into canonical opportunities or an active case.",
+  "facts": {
+    "event": "Huntress CTF 2026",
+    "start": "2026-10-01",
+    "duration": "month of October 2026",
+    "registration": "open as of observation; organizer says to register before the first challenge drops October 1",
+    "entry_cost": "free",
+    "eligibility": "organizer FAQ says open to the entire internet; account/platform terms may impose additional legal/account conditions and must be checked before participation",
+    "focus": ["malware analysis", "incident response", "threat hunting", "cyber threat intelligence", "general security", "AI-assisted defensive workflows"],
+    "ai_policy": "AI use is strongly encouraged but not required; organizer says participants may use Claude or another AI model and that an environment/tokens are provided",
+    "prizes": "prizes confirmed, but dedicated 2026 prize page says details are still being finalized",
+    "authorization_boundary": "Only organizer-issued CTF challenges, artifacts and infrastructure under the event rules are competition scope. Huntress customer systems, public infrastructure, third-party systems, real malware victims, unrelated hostnames/repositories and external targets are not authorized merely because the CTF exists."
+  },
+  "primary_sources": [
+    {
+      "url": "https://ctf.huntress.com/",
+      "verified": true,
+      "notes": "Current 2026 landing page: month-long October event, registration open, first challenges October 1."
+    },
+    {
+      "url": "https://ctf.huntress.com/faq",
+      "verified": true,
+      "notes": "Current FAQ: free, open to the internet, defensive challenge focus, AI strongly encouraged and organizer-provided model tokens/environment."
+    },
+    {
+      "url": "https://ctf.huntress.com/prizes",
+      "verified": true,
+      "notes": "Current prize page confirms prize details are still being finalized."
+    }
+  ],
+  "confidence": "high_for_event_and_free_open_registration; incomplete_for_final_prizes_and_full_participation_terms",
+  "missing_verification": [
+    "final 2026 prize lineup, value, allocation and geographic/payment restrictions",
+    "complete 2026 competition rules, scoring/tie-breaks, team/prize-size limits and submission mechanics",
+    "participant-specific account eligibility and acceptance",
+    "exact end timestamp and any daily release cadence",
+    "any additional platform/account terms that narrow the FAQ's 'open to the entire internet' statement"
+  ],
+  "recommended_next_action": "At chronological integration time, reopen the live Huntress CTF FAQ, rules/platform and prize pages. If the unresolved terms are available and participation is intended, promote a structured competition opportunity/case through canonical registries and generated site-data only; do not edit Pages HTML directly.",
+  "safety": {
+    "testing_performed": false,
+    "authorization_inferred_from_public_targets": false,
+    "notes": "Research-only source verification. No target testing, credential activity, persistence, evasion or destructive action performed."
+  }
+}
