@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-02T19:44:06Z",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve one current, independently checked AI-security CTF lead without overtaking protected canonical source chronology.",
+  "observations": [
+    {
+      "source_id": null,
+      "source_name": "RedTeam Hacker Academy — India's First AI CTF 2026 official registration/rules",
+      "source_url": "https://redteamacademy.com/all-india-ai-ctf-registration/",
+      "source_tier": "primary",
+      "category": "ctf",
+      "checked_at": "2026-10-02T19:44:06Z",
+      "content_fingerprint": "76a6b39560cfa5ec1f25e6ec37ed9e1b2c5e7444ef0ec524559158e432a99cb2",
+      "observed": "RedTeam Hacker Academy AI CTF official page checked 2026-10-02: registration is open and closes 2026-10-06; event is offline across listed RedTeam branches in India on 2026-10-10 10:00-16:00; entry is free; teams must have 2-3 members (solo not allowed); mandatory pre-event training attendance is required; organizer says public participation is open; prizes are ₹50,000 / ₹25,000 / ₹5,000 (₹80,000 total); challenges focus on AI security including prompt injection and model exploitation. Rules prohibit DoS/DDoS, brute force, automated scans, excessive traffic, attacking CTF infrastructure, cross-team collaboration/flag sharing, and publishing solutions during the contest.",
+      "change_state": "research-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "entry_cost": "Free under the organizer's current official page.",
+      "deadline": "Registration closes 2026-10-06; exact cutoff clock time is not stated on the retrieved primary page.",
+      "prize_evidence": "₹80,000 total cash: ₹50,000 first, ₹25,000 second, ₹5,000 third.",
+      "eligibility": "Organizer says participation is open to the public, but requires a team rather than solo entry, valid ID/profile verification, physical attendance at a listed India branch, and attendance at mandatory pre-event training.",
+      "authorization_scope": "Authorization is limited to the organizer-provided CTF challenges under the event rules. DoS/DDoS, brute force, automated scans, excessive traffic, attacks on CTF infrastructure, cross-team collaboration/flag sharing, and publishing solutions during the contest are prohibited. No external target testing is authorized by this listing.",
+      "deduplication": "No matching AI CTF item was found in the inspected repository search. Do not create a competing recurring source list solely for this event.",
+      "missing_verification": [
+        "Participant-specific registration, travel feasibility, branch selection, and mandatory-training attendance are not established.",
+        "The official page does not state an exact clock time/timezone for the Oct. 6 registration cutoff.",
+        "Before active work, re-open the rules for amendments and obtain the training/tool instructions supplied to registered teams."
+      ],
+      "next_action": "After the protected chronological replay lane reaches this contribution, re-open the official page. If participation is intended and physical attendance/training are feasible, create one structured CTF case preserving the organizer's explicit no-scan/no-bruteforce/no-infrastructure-attack boundary."
+    }
+  ],
+  "publication_state": {
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "active_case_created": false,
+    "pages_html_edited": false
+  },
+  "chronology_note": "Canonical source history remains through 2026-08-29T19:40:52Z. The protected Aug. 30 morning five-source replay remains next and must not be leapfrogged by this Oct. 2 research contribution."
+}
