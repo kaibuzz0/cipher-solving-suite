@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-04T19:39:32Z",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve one current organizer-primary global developer-hackathon lead without overtaking protected canonical source chronology.",
+  "observations": [
+    {
+      "source_id": null,
+      "source_name": "Amazon Developer / Devpost — Build, Ship, Shape official rules",
+      "source_url": "https://amazonappdev2026.devpost.com/rules",
+      "source_tier": "primary",
+      "category": "hackathon",
+      "checked_at": "2026-10-04T19:39:32Z",
+      "content_fingerprint": "e46917a4c055f6ef17aae1c5d607c6fc4ed738ca7eb8d271406e90b6b6af70e1",
+      "observed": "Amazon Build, Ship, Shape official rules checked 2026-10-04: submissions close 2026-10-23 12:00 PDT; no purchase/payment; working projects across Amazon device/service tracks; code repository and <3 minute demo required; Amazon official developer page advertises $190K in cash and AWS credits; FAQ says gated Alexa+ preview tools are not available to hackathon participants and self-hosted MCP server or Agent Skill can be used instead.",
+      "change_state": "research-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "entry_cost": "No purchase or payment necessary under the official rules.",
+      "deadline": "2026-10-23 12:00 Pacific Daylight Time.",
+      "prize_evidence": "Amazon Developer's official event page advertises $190K in cash and AWS credits; exact track-level award allocation must be re-opened from the live rules before promotion.",
+      "eligibility": "Rules describe an online developer competition subject to age-of-majority, geographic/sanctions, conflict, and track-specific requirements; participant-specific eligibility is not established by this snapshot.",
+      "authorization_scope": "This is a software-build competition, not authorization to test Amazon or third-party systems. Use only documented APIs, SDKs, simulators, devices, data, and services under their applicable terms.",
+      "deduplication": "No matching Build, Ship, Shape item was found in the inspected canonical intelligence/opportunity catalogs or repository search. Devpost already exists as a general opportunity directory entry; do not create a competing recurring source list solely for this event.",
+      "missing_verification": [
+        "Participant-specific registration/account and jurisdiction eligibility are not established.",
+        "Re-open the live rules immediately before active work for amendments and exact track-level cash/AWS-credit allocation.",
+        "Choose a track only after confirming its hardware, simulator, API/SDK, and demo requirements are practically available.",
+        "Preserve third-party API/data authorization and do not commit credentials or secrets."
+      ],
+      "next_action": "After the protected chronological replay lane reaches this contribution, re-open Amazon Developer and Devpost rules together. If participation is intended and eligibility/registration are established, create one structured build-competition case for a feasible track and preserve exact device/API/demo requirements."
+    }
+  ],
+  "publication_state": {
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "active_case_created": false,
+    "pages_html_edited": false
+  },
+  "chronology_note": "Canonical source history remains through 2026-08-29T19:40:52Z. The protected Aug. 30 morning five-source replay remains next and must not be leapfrogged by this Oct. 4 research contribution."
+}
