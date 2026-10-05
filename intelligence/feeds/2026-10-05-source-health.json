@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-05T08:10:00Z",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve one current, independently checked AI build-competition lead without overtaking protected canonical source chronology.",
+  "observations": [
+    {
+      "source_id": null,
+      "source_name": "Devpost — PayPal AI Hackathon official rules",
+      "source_url": "https://paypalaihackathon.devpost.com/rules",
+      "source_tier": "primary",
+      "category": "hackathon",
+      "checked_at": "2026-10-05T08:10:00Z",
+      "content_fingerprint": "17b5eea3154f0653aa8356920d9715b760293ea4725a8d42f3dccc60b0b03692",
+      "observed": "PayPal AI Hackathon official rules checked 2026-10-05: submission period runs 2026-10-01 09:00 PT through 2026-11-12 12:00 PT; no purchase/payment necessary; age-of-majority individuals, teams, and organizations are generally eligible subject to listed geographic/sanctions/conflict exclusions. Projects must build or significantly update an application during the submission period, integrate the PayPal developer platform through its free sandbox, and use an AI tool/model/platform of the entrant's choice. Existing projects are allowed only if significantly updated after the submission period starts, with the update explained. A functional demo, public GitHub repository with visible open-source license, and public demonstration video under three minutes are required. Third-party SDK/API/data use must be authorized. Official cash awards include $12,000/$8,000/$5,000 grand prizes, five $5,000 honorable-mention prizes, and multiple sponsor cash/credit prizes; multiple-prize eligibility is constrained by the rules.",
+      "change_state": "research-lead",
+      "confidence": "high",
+      "relevance": "high",
+      "entry_cost": "No purchase or payment necessary under the official rules; PayPal sandbox access is described as free.",
+      "deadline": "2026-11-12 12:00 Pacific Time for submission under the live official rules checked 2026-10-05.",
+      "prize_evidence": "Official rules list $12,000 / $8,000 / $5,000 grand prizes; five $5,000 honorable mentions; AG Grid cash prizes of $5,000, $2,000 and three $1,000 awards; three $1,000 APIMatic cash awards plus subscriptions; three $1,000 Bryntum awards; one $1,500 Channel3 award; and Render credit awards. Prize verification/forms/tax/payment terms apply.",
+      "eligibility": "Age-of-majority individuals, teams, and organizations are generally eligible, subject to listed geographic/sanctions prohibitions, promotion-entity/judge conflicts, and other official exclusions.",
+      "authorization_scope": "This is a software-build competition. The listing authorizes use of the PayPal developer sandbox and permitted sponsor tools under their terms; it does not authorize security testing of PayPal, Venmo, Braintree, other PayPal services, third-party systems, public hosts, or repositories. Third-party SDK/API/data use must independently satisfy applicable terms and licensing.",
+      "deduplication": "No matching PayPal AI Hackathon item was found by repository code search on current main before this snapshot. Do not create a competing recurring source list solely for this event.",
+      "missing_verification": [
+        "Participant-specific Devpost registration/account state is not established.",
+        "Re-open the live rules immediately before active work because the displayed deadline changed in indexed/current Devpost material and organizer rules may be amended.",
+        "If adapting an existing repository, document the post-2026-10-01 significant update clearly enough for judging.",
+        "Confirm licenses and authorization for every third-party SDK/API/data dependency and keep credentials/secrets out of the public repository.",
+        "Choose target prize tracks only after checking each sponsor-specific requirement and current tool availability."
+      ],
+      "next_action": "After the protected chronological replay reaches this contribution, re-open the current official rules. If participation is intended and entrant eligibility/registration are established, create one structured competition case, define a demonstrably significant post-Oct-1 PayPal+AI integration, and preserve the public-repo/open-source-license/demo requirements and third-party authorization boundary."
+    }
+  ],
+  "publication_state": {
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "active_case_created": false,
+    "pages_html_edited": false
+  },
+  "chronology_note": "Canonical source history remains through 2026-08-29T19:40:52Z. The protected Aug. 30 morning five-source replay remains next and must not be leapfrogged by this Oct. 5 research contribution."
+}
