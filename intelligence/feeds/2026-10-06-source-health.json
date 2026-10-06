@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-06T07:39:00Z",
+  "agent_role": "research-intelligence",
+  "base_main_sha": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "observations": [
+    {
+      "id": "2026-10-06-hackfw-made-challenge",
+      "kind": "opportunity",
+      "title": "HackFW: MADE Challenge is open through October 30 in Fort Worth",
+      "status": "verified-current",
+      "official_sources": [
+        "https://hack.fwtx.city/",
+        "https://hackfw.devpost.com/",
+        "https://hackfw.devpost.com/rules"
+      ],
+      "checked_at": "2026-10-06T07:39:00Z",
+      "facts": {
+        "period": "2026-10-01 through 2026-10-30",
+        "submission_deadline": "2026-10-30T11:00:00-05:00",
+        "location": "Fort Worth, Texas",
+        "format": "October virtual incubation/support with mandatory in-person Demo Day for prize eligibility",
+        "entry_cost": "No entry fee identified on official challenge surfaces; verify at registration",
+        "prize_pool_usd": 1900,
+        "prizes": [
+          "1st: $1,000 cash",
+          "2nd: $600 cash",
+          "3rd: $300 cash"
+        ],
+        "eligibility": [
+          "Legal age of majority",
+          "Physical proximity to North Texas",
+          "Must attend final ceremonies/Demo Day for prizes",
+          "Every participant must register in Fort Worth DAO Talent Database"
+        ],
+        "submission": [
+          "Select a problem track",
+          "Public GitHub repository",
+          "Brief end-to-end video demo",
+          "Talent registration",
+          "In-person Demo Day"
+        ],
+        "tracks": [
+          "AI for Manufacturing",
+          "Supplier Relationship Management",
+          "AI for Transportation",
+          "Tokenized Industrial Real Estate",
+          "Open Forum"
+        ],
+        "authorization": "Hackathon participation authorizes only work under its competition rules. Public systems, infrastructure, repositories, property records, rail/industrial systems, or third-party targets are not testing authorization."
+      },
+      "confidence": "high",
+      "relevance": "high",
+      "deduplication": "Repository code search for HackFW and MADE Challenge returned no existing canonical match on current main.",
+      "promotion_state": "contributed-research-only",
+      "missing_verification": [
+        "Confirm successful Devpost registration",
+        "Confirm Talent Database registration",
+        "Confirm Demo Day venue/attendance logistics",
+        "Confirm whether a chosen project may reuse pre-existing code and any IP/licensing constraints",
+        "Confirm selected track requirements and any sponsor-specific terms before build"
+      ],
+      "next_action": "After protected canonical chronology is reconciled, re-open official rules and, if participation is feasible, promote to canonical opportunity/intelligence and create a structured competition case. Use the generated Pages pipeline; do not hand-edit HTML."
+    }
+  ]
+}
