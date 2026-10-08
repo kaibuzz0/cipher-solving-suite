@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-08T19:36:18Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "2026-10-08 code4rena contests redirects to code4rena audits | k2 judging submissions closed | rujira report in progress | no currently open submission window confirmed",
+      "latest_canonical_predecessor_at_check": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Keep stable source ID. Review migration to /audits; no active contest verified.",
+      "sha256": "8e2cb04d401eeb864408c2ff121e9719ca0396a9b3d77f9c9e18021599efe921",
+      "change_state": "changed-vs-canonical-not-replayed"
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "2026-10-08 arxiv cs.cr recent index includes 2610.09793 formal runtime verification for tool using llm agents and 2610.09581 evidence binding in forensic reconstruction of llm agent logs | author reported results only | reproduction and code review pending",
+      "latest_canonical_predecessor_at_check": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Read both primary arXiv abstracts; no local replication. Evaluate provenance bindings with offline fixtures.",
+      "sha256": "a645ddba9ed1f4e940583688fa59f82e411d9559893ba6d51b8b3b0ff7318839",
+      "change_state": "changed-vs-canonical-not-replayed"
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Agent trace provenance research",
+      "source_urls": [
+        "https://arxiv.org/abs/2610.09793",
+        "https://arxiv.org/abs/2610.09581"
+      ],
+      "confidence": "medium",
+      "relevance": "high",
+      "status": "verification-pending",
+      "next_action": "Compare proposed evidence-binding and trace schemas with current repo; independently test offline fixtures before any integration."
+    },
+    {
+      "title": "Code4rena source URL migration",
+      "source_url": "https://code4rena.com/audits",
+      "confidence": "high",
+      "status": "review-url",
+      "next_action": "After protected chronological replay, verify redirect and update existing source URL without creating a new source ID."
+    }
+  ],
+  "publication_state": "Raw contributed evidence only. No canonical data, cases or Pages changes.",
+  "next_action": "Complete Aug 30 morning protected replay before processing this later source health."
+}
