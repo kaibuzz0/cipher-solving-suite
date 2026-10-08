@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-08T07:42:05Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve one new primary-source AI/multi-agent competition and a materially changed CTF discovery/registration state without advancing canonical chronology or inventing a source registry.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "source_tier": "discovery",
+      "observed": "ctftime upcoming checked 2026-10-08 | Oct 9 ByteMe CTF 26 04:30-12:30 UTC; FortID CTF 2026 Oct 9 18:00 to Oct 11 18:00 UTC; kBxAc CTF 2026 Oct 9 18:30 to Oct 10 18:30 UTC; GaianSpace CTF 2026 Oct 10 21:00 to Oct 14 21:00 UTC remains listed upcoming, but official GaianSpace rules state registration closed Oct 7 21:00 UTC; official prize rules list 10000 5000 2500 and 5000 sats for first second third and best category write-up; team size 1-3; no platform attacks, automated brute-force flag submissions, or outside-team collaboration; do not promote GaianSpace as open for new registration.",
+      "sha256": "762911bc9f5872f99207d7b20fc6a6c643aa6a0a7b627cbda97540ddb3ee2183",
+      "latest_canonical_predecessor_at_check": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "change_state": "changed-vs-latest-canonical-but-not-replayed",
+      "primary_followup_urls": [
+        "https://gaian.space/ctf/",
+        "https://gaian.space/ctf/rules/",
+        "https://ctftime.org/event/3354/"
+      ],
+      "note": "CTFtime is an aggregator and shows upcoming events, not registration eligibility. The organizer's official GaianSpace rules explicitly close registration on Oct 7 at 21:00 UTC. Do not treat its Oct 10 start as an open registration. This observation is preserved for later chronological integration; canonical freshness remains unchanged."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Microsoft Inside the Game: Premier League Developer Hackathon — new AI/multi-agent build lead",
+      "status": "verified-primary-rules-participant-registration-unverified",
+      "category": "hackathon",
+      "source_id": null,
+      "source_tier": "primary",
+      "source_name": "Microsoft official rules and Microsoft Reactor",
+      "source_url": "https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md",
+      "immutable_rules_url": "https://github.com/microsoft/insidethegamehackathon/blob/9c6c99620b06b2b04dcf69a434cdf4d203d19eda/OFFICIAL%20RULES.md",
+      "supporting_url": "https://developer.microsoft.com/en-us/reactor/series/S-1709/",
+      "registration_url": "https://aka.ms/insidethegame",
+      "observed": "microsoft premier league inside the game official rules checked 2026-10-08 | registration Sep 29 2026 09:00 PT to Oct 20 2026 12:00 PT | submissions Oct 6 2026 09:00 PT to Oct 27 2026 23:59 PT | no purchase/payment necessary | age-of-majority individuals and teams up to four subject to geographic and conflict exclusions | newly created project using synthetic football event data and Microsoft AI platform | public GitHub repository, under-two-minute public demo, pitch, rights to all data | Best Multi-Agent System category | first prize 4000 USD e-gift-card per individual team member plus ticket and store voucher, second 2500 per member, category awards 1500 per member; total prize-pool ARV 14800-59200 depending team sizes | entrant registration and cloud cost unconfirmed | listing does not authorize testing.",
+      "content_fingerprint": "865c01637f0901c076eb5d2567e2d9b21867bdbfdb6986faae2dac15a777d88b",
+      "confidence": "high",
+      "relevance": "high",
+      "dates": {
+        "registration_open": "2026-09-29T09:00:00-07:00",
+        "registration_deadline": "2026-10-20T12:00:00-07:00",
+        "submission_open": "2026-10-06T09:00:00-07:00",
+        "submission_deadline": "2026-10-27T23:59:00-07:00",
+        "winner_announcement_by": "2026-11-20T23:59:00-08:00"
+      },
+      "entry_cost": "Official rules state no purchase/payment necessary to enter or win. Azure/cloud usage costs and any credits were not independently established.",
+      "eligibility": "Age-of-majority individuals, teams up to four, and organizations, subject to geographic/legal and organizer-conflict exclusions; participant-specific eligibility/registration not established.",
+      "prize_evidence": "Official rules Section 8: first grand prize includes USD 4,000 per team member as an e-gift-card plus Premier League ticket/store voucher; second includes USD 2,500 per member plus ticket/voucher; four category prizes include USD 1,500 e-gift-card per member. Total ARV USD 14,800–59,200 depends on winning team sizes and includes non-cash components. A project may win one grand and one category prize. E-gift-cards are not equivalent to a guaranteed bank cash payout; identity/forms/taxes and redemption terms apply.",
+      "requirements": "New project after Sep 29 registration begins; synthetic football-realistic event data, Microsoft AI platform integration, meaningful football analytics/narratives; public GitHub repository, functional project and public demo video shorter than two minutes, plus pitch. Best Multi-Agent System prize is relevant to the suite's agent orchestration lane. Existing suite cannot be submitted unchanged.",
+      "authorization_scope": "This is a build competition, not permission to test Microsoft, Premier League, Azure, GitHub, public infrastructure, third-party services, or copyrighted football footage. Use synthetic or properly licensed data and comply with all SDK/API/cloud terms.",
+      "deduplication": "No matching Microsoft Premier League / insidethegamehackathon finding in current-main canonical intelligence/opportunities, repository code search, or open PR titles. The Sep 30 Build With AI Basics finding is a different Devpost competition and was not duplicated.",
+      "missing_verification": [
+        "Live registration portal redirected to Microsoft Innovation Studio but was not accessible in this read-only research runtime; confirm it accepts registration and that the entrant is registered before active case creation.",
+        "Verify entrant-specific jurisdiction and conflict exclusions, actual Azure service costs/available credits, and access to the Microsoft AI platform features needed for a feasible prototype.",
+        "Recheck official rules for amendments, confirm synthetic football data provenance and licenses, and preserve proof of new post-Sep-29 development.",
+        "Check the discrepancy between category label 'Best Multi-Agent System' in Section 4.2 and 'Best Multi-Agent Orchestration' in the prize table; treat as one category only after organizer confirmation."
+      ],
+      "next_action": "After Aug 30 morning canonical replay and chronological integration, re-open official Microsoft rules and registration. If participant registration/eligibility and platform costs pass, create one structured build case for a genuinely new synthetic-football multi-agent project; document provenance and integrate through canonical intelligence/opportunities/cases and site-data builder. Do not add Microsoft as a recurring source solely for this one-off event."
+    },
+    {
+      "title": "GaianSpace CTF 2026: registration already closed despite upcoming-event listing",
+      "status": "closed-to-new-entrants",
+      "category": "ctf",
+      "source_id": "ctftime-upcoming",
+      "source_tier": "primary-organizer-confirmed",
+      "source_url": "https://gaian.space/ctf/rules/",
+      "confidence": "high",
+      "relevance": "useful",
+      "dates": {
+        "registration_closed": "2026-10-07T21:00:00Z",
+        "event_start": "2026-10-10T21:00:00Z",
+        "event_end": "2026-10-14T21:00:00Z",
+        "writeup_deadline": "2026-10-21T21:00:00Z"
+      },
+      "entry_cost": "No entry fee statement verified in official rules; do not infer free registration.",
+      "prize_evidence": "Organizer rules: 10,000 / 5,000 / 2,500 SATS for first/second/third plus 5,000 SATS for best category write-up; amounts can change. No USD payout equivalent is claimed.",
+      "eligibility": "Organizer rules permit worldwide entrants age 18+ or minors with parental consent, teams 1–3; registration deadline has passed.",
+      "authorization_scope": "Only organizer-provided CTF challenges; no attacks on platform/infrastructure, automated brute-force submissions, or outside-team collaboration.",
+      "deduplication": "No matching GaianSpace canonical intelligence/opportunity record or open research PR found. Keep as source-health warning, not a new active opportunity.",
+      "next_action": "Do not create an active new-entry case. If an existing registered team is later established, recheck the official rules and scope before any competition activity; otherwise retain as historical source-health context."
+    }
+  ],
+  "publication_state": {
+    "canonical_source_history_advanced": false,
+    "source_registry_freshness_advanced": false,
+    "canonical_intelligence_promoted": false,
+    "canonical_opportunities_promoted": false,
+    "active_case_created": false,
+    "integration_queue_modified": false,
+    "site_data_built": false,
+    "pages_html_edited": false,
+    "security_target_testing_performed": false
+  },
+  "handoff": {
+    "priority_1": "Build/Integration must replay only protected Aug 30 morning five-source snapshot (challenge-gov, ctftime-upcoming, sherlock-bounties, arxiv-cryptography, ethglobal-events) with verified hashes/predecessors and no timestamp rewind.",
+    "priority_2": "When chronology reaches Oct 8, revalidate Microsoft registration, category labeling, platform costs, and prize redemption; if actionable, add canonical record and structured case, regenerate site data and validate Core/Pages.",
+    "priority_3": "Do not promote GaianSpace as a fresh open registration. Confirm CTFtime calendar events with organizers before publishing payout/eligibility."
+  }
+}
