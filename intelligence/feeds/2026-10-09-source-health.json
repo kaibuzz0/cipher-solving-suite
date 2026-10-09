@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-09T07:40:05Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve independently inspected Oct. 9 agent-policy/skill-execution research and linked GitHub source-health evidence without bypassing the protected Aug. 30 replay or overlapping PR #213.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "source_tier": "discovery",
+      "observed": "2026-10-09 arxiv cs.cr recent: fri oct 9 list has 60 entries | 2610.11030 nomos policy to static tool-call gates (submitted oct 8) author-reported results only | 2610.10612 pycache trap bytecode-cache skill scanner gap (submitted oct 7) author-reported results only | 2610.10620 hidden-message notification benchmark (submitted oct 7) synthetic sessions and offline code author-reported results only",
+      "sha256": "1bc48c989c60155e8eb212db5bff9b6d9f9cf71b374280d07c42fe4d6625e9f6",
+      "latest_canonical_predecessor_at_check": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "change_state": "changed-vs-canonical-not-replayed",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2610.11030",
+        "https://arxiv.org/abs/2610.10612",
+        "https://arxiv.org/abs/2610.10620"
+      ],
+      "note": "All three abstracts and submission timestamps checked on primary arXiv pages. NOMOS Oct. 8; PyCache Trap and hidden-message study Oct. 7. Metrics are author-reported and have not been independently reproduced."
+    },
+    {
+      "source_id": "github-search",
+      "source_url": "https://github.com/search",
+      "source_tier": "discovery",
+      "observed": "2026-10-09 github project review | leo0481/PyCacheTrap linked by arxiv 2610.10612 returned github 404 not found via repository metadata | williamguey/ai-hidden-message-reporting is public and nonarchived on main with offline reproduction instructions, but no repository license verified | no external code downloaded or executed",
+      "sha256": "90c84d045e4756c17f4dfdd80482384a7c44b6b3782b62d6aff264381ee22be0",
+      "latest_canonical_predecessor_at_check": "db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b",
+      "change_state": "changed-vs-canonical-not-replayed",
+      "primary_followup_urls": [
+        "https://github.com/leo0481/PyCacheTrap",
+        "https://github.com/williamguey/ai-hidden-message-reporting"
+      ],
+      "note": "GitHub repository metadata returned 404 for the PyCache Trap paper-linked repository (may be private, moved or transient; do not label permanently dead). Hidden-message repository is public and nonarchived, and README documents offline reproduction; LICENSE, LICENSE.md and COPYING were not found in the inspected root paths. No repository code was executed or imported."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "NOMOS: static tool-call policy gates for LLM agents",
+      "type": "research",
+      "status": "offline-evaluation-candidate",
+      "confidence": "medium",
+      "relevance": "high",
+      "published_at": "2026-10-08T00:23:22Z",
+      "source_url": "https://arxiv.org/abs/2610.11030",
+      "summary": "Preprint proposes a four-pass policy-to-tool-gate compiler with schema-level static verification and reports substantial reductions in benchmark policy violations, with benign-utility costs. These are author-reported benchmark results, not independent security guarantees.",
+      "verification": "Primary arXiv abstract and metadata inspected; no implementation or benchmark reproduction completed.",
+      "next_action": "Compare policy-gate semantics against existing agent integration/authorization rules; design deterministic offline allow/deny/argument-schema fixtures and failure-closed tests before any implementation."
+    },
+    {
+      "title": "PyCache Trap: Python bytecode execution gap in agent skill scanners",
+      "type": "research-and-source-health",
+      "status": "artifact-unavailable-pending-review",
+      "confidence": "medium",
+      "relevance": "high",
+      "published_at": "2026-10-07T07:10:11Z",
+      "source_url": "https://arxiv.org/abs/2610.10612",
+      "code_url": "https://github.com/leo0481/PyCacheTrap",
+      "summary": "Preprint reports that inspecting visible Python source can miss behavior selected from bytecode caches, and proposes execution-aware validation. The paper-linked code repository returned 404 during this check, so its implementation and reported benchmark results could not be independently validated.",
+      "verification": "Primary arXiv abstract checked; GitHub metadata request for paper-linked repository returned 404. No attack execution or source-code import.",
+      "next_action": "Recheck linked code location and license; independently test a harmless local Python fixture showing source/cache mismatch and fail-closed admission, without importing untrusted code or executing arbitrary external skills."
+    },
+    {
+      "title": "Hidden-message notification study and reproducibility archive",
+      "type": "research",
+      "status": "license-and-reproduction-pending",
+      "confidence": "medium",
+      "relevance": "useful",
+      "published_at": "2026-10-07T08:32:07Z",
+      "source_url": "https://arxiv.org/abs/2610.10620",
+      "code_url": "https://github.com/williamguey/ai-hidden-message-reporting",
+      "summary": "Preprint reports a synthetic agent-note benchmark separating message interpretation, user notification and authorized task completion. The public linked repository documents an offline reproduction path but no license was found in common root locations.",
+      "verification": "Primary arXiv abstract inspected; public GitHub repository metadata and README inspected. No local reproduction or human annotation verification.",
+      "next_action": "Check complete repository license/manifest and data provenance before reuse; if permitted, evaluate notification/evidence-binding cases offline against PR #213's provenance-research proposal."
+    }
+  ],
+  "deduplication": "Searched current main code and open PRs for NOMOS, PyCache, hidden messages and paper IDs; no matching contribution found. Draft PR #213 already covers different Oct. 7 agent-provenance papers; coordinate offline test design rather than duplicating a case or source registry.",
+  "authorization_boundary": "Research-only. No external target testing, credential attacks, destructive actions, code execution from external repositories, or unauthorized dataset use. Public papers/repositories are not testing authorization.",
+  "publication_state": {
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "active_case_created": false,
+    "integration_queue_changed": false,
+    "pages_html_edited": false
+  },
+  "next_action": "Build/Integration must first replay only the protected Aug. 30 morning five-source snapshot with exact fingerprint/predecessor/idempotence/non-rewind assertions and Core/Pages validation. Later, reconcile this Oct. 9 evidence against PR #213 and newer main; verify artifact availability/licenses and implement only deterministic local evaluation cases if useful."
+}
