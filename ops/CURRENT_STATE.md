@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-10-01 19:21 UTC
+Last reconciled: 2026-10-11 19:25 UTC
 Default branch: `main`
 Reconciled default-branch head: `e3406be6fe981feee5c2ec8c3c79cca924792e67`
 Repository version: `v3.1.0` (README)
@@ -11,7 +11,7 @@ Repository version: `v3.1.0` (README)
 
 - Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of PR #211 (`Research: preserve Sep 30 Build With AI Basics lead`).
 - PR #211 added exactly one raw research file, `intelligence/feeds/2026-09-30-source-health.json`, with 45 added lines and no deletions. It explicitly records `canonical_replay: false`, canonical cutoff `2026-08-29T19:40:52Z`, and next gate `2026-08-30T07:38:20Z`.
-- Commit-associated workflow/status surfaces queried in this pass exposed no PR-triggered runs or legacy status contexts for the merge commit; do not infer failed CI from those empty surfaces, and do not invent an exact-head release claim from them.
+- Exact-main Core validation run `36687149015` succeeded Sep. 30. Oct. 11 exact-main Daily Repository Maintenance `38152171540` and Intelligence Source Report `38155338908` succeeded. Draft PR #212 prior head `e93df4945bc3b3cdd0e9687e18ca2f20cfb073fc` passed Core `37053379825` on Python 3.11/3.12/3.13; any new head requires fresh CI. Scheduled report success does not establish source freshness: all 16 sources remain due.
 - No open repository issues were found. Bounded default-branch code search returned no matches for `shell=True`, `os.system`, `subprocess`, or `BEGIN PRIVATE KEY`.
 
 ## Canonical source / integration state
@@ -60,7 +60,15 @@ Repository version: `v3.1.0` (README)
 
 - `docs/WORK_QUEUE.md` still correctly points to Aug. 30 morning as the next replay gate.
 - `data/integration_queue.json` remains the machine-readable integration inbox and must be preserved chronologically.
-- `docs/AGENT_HANDOFF.md` is append-only; this reconciliation appends a new entry rather than rewriting historical handoffs.
+- `docs/AGENT_HANDOFF.md` is append-only; the required Oct. 11 handoff append remains blocked by connected write safety checks and must be completed before merging this draft PR.
+
+## October 11 release and maintenance findings
+
+- GitHub reported 34 open PRs, no open issues, and disabled branch protection. PR #212 remains 1 commit ahead / 0 behind `main`; PR #213 adds a research-only snapshot and does not overlap this coordination change.
+- Canonical history has 78 unique source/timestamp pairs and all 16 registry last-check timestamps match history. The integration queue has 20 unique IDs: 11 integrated, 1 needs-integration, 8 blocked. There are 20 registered tools and one registered experimental toolset.
+- Committed `site-data/status.json` and `site-data/collection-health.json` still report 77 checks, versus canonical 78. The Pages build regenerates data, but the last observed successful Pages run is Sep. 29 `36622688071` on older head `5f314d9a58a8cbc9431340d37f692dbea10dbb76`; current-main deployment and live browser rendering are unverified.
+- README's `workspace/` navigation points to a directory absent from the tracked tree. Legacy `tools/scanning/web_scraper.py` generates simulated competition/prize entries and writes to `intelligence/feeds/scrape-results.json` despite a production banner. Isolate any truthfulness correction in a separate small PR with deterministic tests; do not treat generated examples as live intelligence.
+- CI workflows use mutable major-version action tags; Oct. 11 source-report logs warn Node.js 20-targeted actions are being forced onto Node.js 24. Direct local clone/testing was unavailable because DNS resolution for github.com failed; do not claim a local test pass.
 
 ## Current operating priorities
 
