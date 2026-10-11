@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-11T07:38:00Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve Oct 11 independently checked opportunity and source-health evidence without leapfrogging protected canonical source chronology.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_name": "CTFtime upcoming event calendar",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "source_tier": "discovery",
+      "checked_at": "2026-10-11T07:38:00Z",
+      "observed": "CTFtime upcoming calendar checked 2026-10-11: Securinets CTF Quals 2026 Oct 17 09:00 UTC-Oct 18 21:00 UTC online; SOLAR CTF 2026 Oct 17 09:00-Oct 18 09:00 UTC online academic-only; DEADFACE CTF 2026 Oct 17 14:00-Oct 19 00:00 UTC online; HITCON CTF 2026 Oct 23 14:00-Oct 25 14:00 UTC online; Hack.lu CTF 2026 Oct 23 18:00-Oct 25 18:00 UTC online; HI Cyber Con 2026 Oct 30 14:00-Nov 1 14:00 UTC online. Organizer registration/prizes not inferred from aggregator.",
+      "content_fingerprint": "642d06251523aa272f2870b7c83d02f0b6ab0eda899417d237cfd8d305dc6242",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "research-observation-not-replayed",
+      "note": "Current upcoming calendar now starts October 17 after October 9-11 CTFs have rolled into current/past status. CTFtime is discovery only. DEADFACE date conflict remains unresolved across organizer surfaces; no duplicate case or cash claim."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_name": "ETHGlobal official events calendar",
+      "source_url": "https://ethglobal.com/events",
+      "source_tier": "primary",
+      "checked_at": "2026-10-11T07:38:00Z",
+      "observed": "ETHGlobal official events calendar checked 2026-10-11: Oct 16 2026 cowork in Jaipur with HackTour India; Oct 19 2026 Ethereum Stablecoin Summit in Las Vegas; Nov 5-7 2026 ETHGlobal Mumbai in-person hackathon accepting applications; Sep 4-16 2026 ETHOnline is in Past events. No verified Mumbai registration deadline or prize terms in this check.",
+      "content_fingerprint": "48371c748163ba6311341aaeada1d8552901fb66c2f98e550974fb218fcd2d6f",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "previous_canonical_checked_at": "2026-08-29T19:40:52Z",
+      "change_state": "research-observation-not-replayed",
+      "note": "ETHOnline 2026 is now historical. ETHGlobal Mumbai Nov 5-7 remains a possible in-person opportunity but registration cutoff, travel cost, exact awards and individual eligibility were not verified. No active case."
+    },
+    {
+      "source_id": "github-search",
+      "source_name": "GitHub official project and submission issue",
+      "source_url": "https://github.com/useagenthq/useagent/issues/109",
+      "source_tier": "discovery",
+      "checked_at": "2026-10-11T07:38:00Z",
+      "observed": "GitHub official repository useagenthq/useagent checked 2026-10-11: public, active, AGPL-3.0-only, README calls it alpha software, issue #109 October Hackathon submission issue opened Oct 10 2026 and currently open, October 31 2026 23:59 UTC deadline, organizer advertises $150/$100/$75 prizes and requires 1-3 minute UseAgent screen recording plus public link and engine/model. No payout independently confirmed. External issue bounties not verified as unclaimed.",
+      "content_fingerprint": "743a97e367cf725a2f57c9ef2e79891dae3ae9243d31c35c72ab32558926e428",
+      "previous_canonical_fingerprint": "db0ecb913bc55b1de3b637f97325c14ac439c4531e7494144a8db792c457622b",
+      "previous_canonical_checked_at": "2026-08-28T19:37:39Z",
+      "change_state": "research-observation-not-replayed",
+      "note": "Project is a separate AGPL-3.0-only external agent platform, not an automatically approved tool import. Event organizer issue is open; hosted free-model option advertised, but account state and any service charges not verified. Do not copy code into suite without license review."
+    },
+    {
+      "source_id": null,
+      "source_name": "Devpost Amazon Developer Hackathon official rules",
+      "source_url": "https://amazonappdev2026.devpost.com/rules",
+      "source_tier": "platform-primary",
+      "checked_at": "2026-10-11T07:38:00Z",
+      "observed": "Devpost Amazon Developer Hackathon official rules checked 2026-10-11: submissions Aug 31 2026 10:15 PT-Oct 23 2026 12:00 PT; no purchase necessary; adults, teams and organizations subject to geographic/conflict exclusions; $138000 cash across Fire TV, Alexa+, Bee, Ring and AWS Builder/Open Source mini challenges, with separate AWS credits; Alexa+ accepts working Agent Skill or Streamable HTTP MCP >=2025-11-25, or a working simulated Alexa+ experience; public licensed or private shared GitHub repo, <3 minute public English demo, tool feedback and functional code required; existing projects must be significantly updated and changes explained; Oct 7 rules update says AWS promotional credit codes exhausted and extra AWS charges are entrant responsibility; prize/winner verification not a guaranteed payout.",
+      "content_fingerprint": "2f89fb30bdb96b60765ee535a6f0803355b714b265357317f2e0ca762f36664c",
+      "previous_canonical_fingerprint": null,
+      "change_state": "new-event-lead-not-a-recurring-source",
+      "note": "Devpost is already in data/opportunities.json; event-specific source has no registered source_id. Do not invent an additional canonical registry or source ID without approved recurring-source justification."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "amazon-developer-hackathon-2026",
+      "title": "Amazon Developer Hackathon — Alexa+ agent/MCP and Open Source mini-challenge",
+      "status": "high-priority-case-candidate-registration-pending",
+      "confidence": "high-on-published-rules-not-participant-status",
+      "relevance": "high",
+      "official_urls": [
+        "https://amazonappdev2026.devpost.com/",
+        "https://amazonappdev2026.devpost.com/rules"
+      ],
+      "deadline": "2026-10-23T12:00:00-07:00",
+      "entry_cost": "No purchase or payment required; AWS charges beyond free usage remain participant responsibility.",
+      "prize_evidence": "$138,000 total cash across Fire TV ($44k), Alexa+ ($44k), Bee ($20k), Ring ($20k), AWS Builder ($5k) and Open Source ($5k). Alexa+ 1st/2nd/3rd $25k/$15k/$4k; Open Source mini $5k. Separate AWS credits are not cash. Prizes subject to official winner verification and terms.",
+      "eligibility": "Adults of age of majority, teams and eligible organizations, subject to geographic/legal and conflicts exclusions; user-specific registration and jurisdiction not verified.",
+      "submission": "Working primary-track app, source repo with setup and license if public (or private with organizer reviewer access), public <3 minute English video, technical integration, and detailed product feedback; disclose substantial changes to existing projects. Alexa+ can use agent skill, self-hosted MCP Streamable HTTP spec >=2025-11-25, or functional simulated experience.",
+      "source_change": "Official rules updated October 7: $150 AWS promotional credit codes exhausted; do not budget them as available. No purchase necessary does not mean cloud spend cannot occur.",
+      "risk": "Over 53,000 Devpost participants on checked listing, so high competition. Reusing suite work requires originality/IP and substantial-update evidence. Do not expose credentials or grant repository access without explicit participant decision.",
+      "authorization": "Build competition only. No authorization to test Amazon services, public targets, or third-party systems. Use documented simulators, test accounts, and permitted APIs.",
+      "deduplication": "No matching Amazon Developer Hackathon canonical intelligence/opportunity entry or open PR title found on current main. General Devpost catalog already exists.",
+      "missing_verification": [
+        "Participant registration and specific eligibility",
+        "Selected track and functional demo feasibility before October 23",
+        "Cloud billing/usage controls; AWS promotional credits unavailable",
+        "Project originality, ownership, licenses, pre-existing code change log",
+        "Official prize payment forms, tax and individual recipient requirements"
+      ],
+      "next_action": "Build agent: after protected Aug 30 morning replay and chronology reconciliation, re-open rules; if entrant registered, create a structured build-competition case for a bounded Alexa+ simulated agent/MCP demo with an independently useful open-source contribution and tests. Do not start work that requires unapproved paid cloud services."
+    },
+    {
+      "id": "useagent-october-2026-hackathon",
+      "title": "UseAgent October Hackathon: smaller low-cost agent workflow prize",
+      "status": "watch-or-low-cost-case-candidate",
+      "confidence": "high-on-organizer-advertised-terms-medium-on-payout",
+      "relevance": "useful",
+      "official_urls": [
+        "https://useagent.org/hackathon",
+        "https://github.com/useagenthq/useagent/issues/109",
+        "https://github.com/useagenthq/useagent"
+      ],
+      "deadline": "2026-10-31T23:59:00Z",
+      "entry_cost": "Organizer advertises hosted free models or self-hosting; account/provider or infrastructure costs not independently assessed.",
+      "prize_evidence": "Organizer advertises $150 first, $100 second, $75 third ($325 total), expected payment by mid-November; no independent historical payout verification.",
+      "eligibility": "One entry per person; teams allowed with prize shared. Country/age and payment jurisdiction not explicitly established in reviewed event page.",
+      "submission": "Build using UseAgent, public project/repository URL, 1–3 minute screen recording showing agent work, engine/model, and comment on open issue #109.",
+      "source_health": "GitHub repository is public and AGPL-3.0-only; README labels software alpha. The submission issue opened October 10 and is open.",
+      "authorization": "Only user-authorized project work. A public GitHub repository or issue is not permission for security testing. AGPL and contributor rules require review before code reuse.",
+      "deduplication": "No matching UseAgent item in canonical catalogs or open PR titles found on main.",
+      "missing_verification": [
+        "User account/provider eligibility and recording capability",
+        "Cash payment method and jurisdiction requirements",
+        "Whether specific project reuse satisfies event rules",
+        "AGPL license and CLA implications if contributing upstream"
+      ],
+      "next_action": "Consider a small reproducible agent handoff/reporting demonstration only if it can be completed without distracting from the protected replay; do not claim bounty issue payments without checking current claim/assignment status."
+    }
+  ],
+  "publication_state": {
+    "canonical_source_history_advanced": false,
+    "source_registry_advanced": false,
+    "intelligence_promoted": false,
+    "opportunities_promoted": false,
+    "case_created": false,
+    "pages_rebuilt": false,
+    "site_html_edited": false
+  },
+  "integration_instructions": "Research-only branch. Canonical integration inbox currently has 20 records, 11 integrated/1 needs-integration/8 blocked; this contribution is not yet in inbox. Do not replay Oct 11 observations until all earlier chronological snapshots are reconciled. Recompute SHA-256 from exact UTF-8 observed strings, compare predecessors to then-current canonical history, handle stale predecessors by reconciliation, run validators/build_site_data, and update AGENT_HANDOFF and CURRENT_STATE only when canonical state materially advances.",
+  "safety": "No credential attacks, destructive actions, target testing, or authorization inference. No actual participant registration or payout was verified."
+}
