@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-13T07:43:03Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_replay_gate": "intelligence/feeds/2026-08-30-source-health.json",
+  "purpose": "Preserve independently checked external-source and opportunity evidence without leapfrogging the protected Aug. 30 chronological replay.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-10-13 | securinets ctf quals 2026 oct 17 09:00 utc to oct 18 21:00 utc online | deadface ctf 2026 oct 17 14:00 utc to oct 19 00:00 utc online | hitcon ctf 2026 oct 23 14:00 utc to oct 25 14:00 utc online | hack.lu ctf 2026 oct 23 18:00 utc to oct 25 18:00 utc online",
+      "sha256": "e76eb600aa4c60d2642f0bd10f3ab0f436959bbfb92a78336b4e81ebcfb0e023",
+      "latest_canonical_predecessor": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Aggregator calendar only; prizes, registration, and participation authorization require organizer rules."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events 2026-10-13 | ethonline 2026 sep 4-16 historical | ethglobal mumbai nov 5-7 2026 in-person hackathon apply to attend | no upcoming online ethglobal hackathon shown in featured upcoming list",
+      "sha256": "dab24db402c4c87323fc1dfb3938b807aea79ff487a68f4c075d4c4a961ad5c8",
+      "latest_canonical_predecessor": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Mumbai requires onsite attendance and separate application, travel, prize and eligibility checks."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent 2026-10-13 | latest listed batch mon oct 12 2026 37 entries | recent listing 315 total entries | arxiv 2610.13043 provably subexponential algorithms for bounded-error lwe with few samples submitted oct 9 2026 | no independent reproduction",
+      "sha256": "d1d56188615042e1b3919b90a9bb9c9b27e87fce98f44c37247afaaf323606e7",
+      "latest_canonical_predecessor": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "LWE theoretical asymptotic result is a research lead, not evidence of breaking deployed schemes."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "PayPal AI Hackathon: $67,500 cash awards",
+      "status": "verified-event-structured-case-candidate",
+      "confidence": "high",
+      "relevance": "high",
+      "catalog_discovery_id": "devpost",
+      "official_rules_url": "https://paypalaihackathon.devpost.com/rules",
+      "official_event_url": "https://paypalaihackathon.devpost.com/",
+      "checked_at": "2026-10-13T07:43:03Z",
+      "submission_deadline": "2026-11-12 12:00 Pacific Time (rules; site says PST)",
+      "entry_cost": "No purchase/payment; PayPal sandbox free; ancillary costs not established",
+      "eligibility": "Age of majority, teams/organizations permitted subject to geographic, employee and conflict exclusions; entrant registration unknown",
+      "payout": "$67,500 cash total: $12k/$8k/$5k grand, five $5k honorable awards, $17.5k sponsor cash; separate $2,250 Render credits are not cash. Site advertises $69,750 including credits.",
+      "requirements": "Working PayPal developer platform plus AI; public open-source repository with visible license, runnable demo or setup, public YouTube demo under 3 minutes; existing project must be significantly updated after Oct 1.",
+      "authorization": "Only documented PayPal sandbox/developer APIs; no production testing permission.",
+      "license_gap": "Current cipher-solving-suite main tree lacks root LICENSE; do not assume existing code is submission-eligible.",
+      "next_action": "Confirm participant eligibility and registration, API/compute costs and license; create a separate properly licensed original project or verify significant update; then open a structured case."
+    },
+    {
+      "title": "Provably Subexponential Algorithms for Bounded-Error LWE with Few Samples",
+      "status": "research-review-candidate",
+      "confidence": "medium",
+      "relevance": "useful",
+      "source_id": "arxiv-cryptography",
+      "primary_url": "https://arxiv.org/abs/2610.13043",
+      "submitted_at": "2026-10-09T05:58:55Z",
+      "checked_at": "2026-10-13T07:43:03Z",
+      "evidence": "Lin and Vasudevan claim a Wagner/BKW-style LWE algorithm with 2^{O(n/log log n)} running time under specified modulus, error and sample restrictions.",
+      "limitations": "Abstract and source index verified; proof and experiments not reproduced. No inference about concrete ML-KEM/ML-DSA breaks.",
+      "next_action": "Inspect full proof/assumptions and evaluate toy deterministic examples before promoting a research case."
+    }
+  ],
+  "deduplication": "Reviewed 13 canonical intelligence items, 21 catalog opportunities, 2 active/triage cases and open PR titles; no PayPal hackathon or this paper canonically published. Devpost is an opportunity directory, not a registered recurring source; PayPal evidence stays in material_findings.",
+  "chronology": "All observation hashes are SHA-256 over lowercase-trimmed observed strings. Predecessors are latest canonical Aug. 29 history at observation time; recompute after Aug. 30 and later chronological replay. Research-only; no source-history/registry advances.",
+  "safety": "No target testing. Public source pages do not confer authorization."
+}
