@@ -12,7 +12,7 @@ Repository version: `v3.1.0` (README)
 - Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of PR #211 (`Research: preserve Sep 30 Build With AI Basics lead`).
 - PR #211 added exactly one raw research file, `intelligence/feeds/2026-09-30-source-health.json`, with 45 added lines and no deletions. It explicitly records `canonical_replay: false`, canonical cutoff `2026-08-29T19:40:52Z`, and next gate `2026-08-30T07:38:20Z`.
 - Exact-main Core validation run `36687149015` succeeded Sep. 30. Oct. 11 exact-main Daily Repository Maintenance `38152171540` and Intelligence Source Report `38155338908` succeeded. Draft PR #212 prior head `e93df4945bc3b3cdd0e9687e18ca2f20cfb073fc` passed Core `37053379825` on Python 3.11/3.12/3.13; any new head requires fresh CI. Scheduled report success does not establish source freshness: all 16 sources remain due.
-- No open repository issues were found. Bounded default-branch code search returned no matches for `shell=True`, `os.system`, `subprocess`, or `BEGIN PRIVATE KEY`.
+- No open repository issues were found. A bounded indexed-code search returned no matches for selected patterns, but it was incomplete: direct inspection confirms `subprocess` imports in `scripts/export_command_site_snapshot.py` and `tests/test_agent_ops_site_data.py`. Do not treat negative indexed-search results as an absence or security-audit claim.
 
 ## Canonical source / integration state
 
@@ -52,7 +52,7 @@ Repository version: `v3.1.0` (README)
 
 - Preserve all primary evidence, hashes, provenance, and research artifacts. Do not silently delete or relocate evidence.
 - Exact-main Core, Daily Maintenance, and Intelligence Source Report are green, but these do not substitute for a comprehensive secret/static-analysis audit.
-- This pass repeated bounded default-branch searches and found no `shell=True`, `os.system`, `subprocess`, or `BEGIN PRIVATE KEY` matches; this is not a comprehensive secret/static-analysis audit.
+- Earlier indexed-code searches returned no matches for selected patterns, but direct file inspection confirms `subprocess` imports and argument-vector subprocess calls. No repository-wide absence or comprehensive security-audit claim is supported.
 - GitHub Actions have historically used major-version action tags such as `actions/checkout@v4` and `actions/setup-python@v5` rather than immutable commit SHAs; immutable action pinning remains supply-chain hardening debt until separately remediated and verified.
 - Legacy root truthfulness/artifact debt remains separate work; preserve references and hashes before relocation.
 
