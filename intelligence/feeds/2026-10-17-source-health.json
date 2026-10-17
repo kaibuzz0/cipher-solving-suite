@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-17T07:42:32Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve independently checked Oct 17 source observations and bounded findings as contributed research; do not advance canonical registry/history past protected Aug 30 morning replay.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-10-17 | securinets quals oct 17 09:00 utc to oct 18 21:00 utc online | deadface oct 17 14:00 utc to oct 19 00:00 utc online | hitcon oct 23 14:00 utc to oct 25 14:00 utc online | deadface organizer official faq confirms free entry 10-person maximum and pre-start registration; organizer homepage lists 600 usd total prizes",
+      "sha256": "a63a30608dd59f2fd46f02f2fc3c411f0930ebfa906498e7a12861c2c2abb67b",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Organizer primary sources: https://deadface.io/faq https://deadface.io/rules https://deadface.io/schedule https://deadface.io/ . Official rules require registration before start, prohibit infrastructure attacks and automated flag brute force. CTFtime lists 300/200/100 USD prize breakdown, organizer confirms 600 USD total. No participant registration verified."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent 2026-10-17 | latest friday 16 oct 2026 batch 57 entries; recent index 334 entries | infuse 2610.20776 indirect prompt injection benchmark submitted 14 oct; 40 tasks 56 attack scenarios and public mit-licensed code | no experimental reproduction",
+      "sha256": "c138c2805bdce7861534d2c9ac36d5f69a4c4b3ab7a0261db9c9ac3b0ba84c25",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Paper: https://arxiv.org/abs/2610.20776 ; author repository https://github.com/judydnguyen/infuse ; GitHub repository metadata confirms MIT license and root LICENSE. Results author-reported, no tests executed."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests url redirects to audits 2026-10-17 | k2 judging submissions closed | rujira report in progress | no confirmed open audit submission window | preserve registry source id; migration already covered by pr 213",
+      "sha256": "d750a51d19d8b461cb8414d16c087b985fb2ed312ee266413d7969d922d2a641",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Source URL migrates to https://code4rena.com/audits . Already covered by open PR #213; do not duplicate registry migration."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events 2026-10-17 | upcoming ethglobal mumbai in person hackathon nov 5 to nov 7 2026 | oct 19 ethereum stablecoin summit conference | no online hackathon entry or prize eligibility verified",
+      "sha256": "4c28239c242227dee48b6b66adff7f241c587d81341f99ab6989fb20fa86ce3d",
+      "previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Organizer calendar confirms Mumbai November 5-7, in person. Participation/travel/entry/prizes not verified; no active case."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active challenges 2026-10-17 | darpa surgical competition; documentation and decision support sprint; nasa human lander challenge; nourish; ready set id the biothreat; 2026-27 nasa techrise student; acl caregiver ai prize; xtech search 10 remains listed | listing is discovery only; no new participant eligibility verified",
+      "sha256": "f43428debe6746802f6b8ce8482cd3c7c7e64425706d974662d39485033b2da8",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "Official federal challenge directory accessible. No individual contest was promoted without primary rules."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "DEADFACE CTF 2026: free, 600 USD prizes, starts October 17 14:00 UTC",
+      "category": "ctf",
+      "status": "time-sensitive-actionable-if-already-registered",
+      "confidence": "high-for-schedule-cost-rules-medium-for-individual-prize-eligibility",
+      "relevance": "high",
+      "official_urls": [
+        "https://deadface.io/",
+        "https://deadface.io/faq",
+        "https://deadface.io/rules",
+        "https://deadface.io/schedule",
+        "https://ctf.deadface.io/"
+      ],
+      "corroboration_url": "https://ctftime.org/event/3279",
+      "verified": "Official organizer confirms Oct 17 14:00 UTC to Oct 19 00:00 UTC, 34-hour online event, free registration, solo or up to 10 teammates, cryptography challenges, 600 USD total advertised prizes. CTFtime gives 300/200/100 USD placement breakdown. Organizer rules require registration before competition starts; tools for challenge solving permitted but automated flag brute force, infrastructure attacks, other-team attacks and cross-team solution sharing prohibited.",
+      "entry_cost": "free",
+      "deadline": "2026-10-17T14:00:00Z registration must precede start; no later registration assumed",
+      "prize": "600 USD total advertised, not guaranteed; regional restrictions and recipient-specific eligibility unresolved",
+      "scope": "Only organizer-issued challenge targets under organizer rules; do not infer authorization for infrastructure or external targets",
+      "next_action": "Confirm a participant account is registered before 14:00 UTC, organizer's current prize eligibility and AI-assistance rules. Create structured CTF case only with participation intent/state and bounded challenge scope. Do not claim registration or payout."
+    },
+    {
+      "title": "INFUSE indirect prompt-injection benchmark with MIT-licensed research code",
+      "category": "research",
+      "status": "review-candidate",
+      "confidence": "high-for-paper-repo-license; author-reported-experiments",
+      "relevance": "high",
+      "source_url": "https://arxiv.org/abs/2610.20776",
+      "code_url": "https://github.com/judydnguyen/infuse",
+      "verified": "Paper submitted Oct 14; describes 40 tasks, 56 scenarios, 19 models and 41,824 attack trajectories. GitHub metadata and LICENSE confirm MIT license. No benchmark executed, no outcomes reproduced.",
+      "next_action": "Compare with PR #213 and existing local fixture tests; select a small offline synthetic prompt-injection provenance test before any code import; inspect dependencies and third_party licenses."
+    }
+  ],
+  "deduplication": "No matching INFUSE or DEADFACE open PR found in repository PR search; current canonical intelligence.json is dated Aug 21 and opportunities.json is a directory, not a live event catalog. Existing PR #213 already covers Code4rena migration.",
+  "validation": "Observation SHA-256 uses source_check_history.py normalize_fingerprint: sha256(observed.strip().lower().encode('utf-8')). Independently calculated locally. Native replay, repository tests, and Pages builders not executed.",
+  "safety": "No external target testing, credentials, destructive actions, persistence, evasion or out-of-scope activity.",
+  "handoff": "Build/integration agent: complete protected Aug 30 morning five-record/five-registry replay with exact fingerprints/predecessors, idempotence and non-rewind checks, validate Core/source-history/registry/intelligence/site-data/Pages; then reconcile this research snapshot chronologically, verify current DEADFACE participation and prize eligibility, and review INFUSE offline."
+}
