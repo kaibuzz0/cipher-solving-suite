@@ -1,19 +1,18 @@
 # Current Repository State
 
-Last reconciled: 2026-09-29 19:23 UTC
+Last reconciled: 2026-10-11 19:25 UTC
 Default branch: `main`
-Reconciled default-branch head: `332780356db3efdf1074edc8af4a4d19b975766f`
+Reconciled default-branch head: `e3406be6fe981feee5c2ec8c3c79cca924792e67`
 Repository version: `v3.1.0` (README)
 
 > This is a reconciliation snapshot. A branch/PR containing this file has a newer commit by definition; compare material repository facts rather than treating that self-reference difference as drift.
 
 ## Verified health
 
-- Current `main` is `332780356db3efdf1074edc8af4a4d19b975766f`, merge of PR #209 (`Research: preserve Sep 29 CDCTF lead`).
-- PR #209 added exactly one raw research file, `intelligence/feeds/2026-09-29-source-health.json`, with 43 added lines and no deletions. It explicitly records `canonical_replay: false`, canonical cutoff `2026-08-29T19:40:52Z`, and next gate `2026-08-30T07:38:20Z`.
-- Exact-main Core validation run `36539717505` succeeded after the merge.
-- Exact-main scheduled Daily Repository Maintenance run `36593215060` and Intelligence Source Report run `36599072811` both succeeded on Sep. 29.
-- The latest observed successful Pages deployment is run `36304835112` on earlier main `b4037e21117a9b7ebfb9e21c56b9d80ae21f00ba`; no Pages push run was observed for PR #209's research-only merge, so Pages is not claimed freshly redeployed on `332780356...`.
+- Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of PR #211 (`Research: preserve Sep 30 Build With AI Basics lead`).
+- PR #211 added exactly one raw research file, `intelligence/feeds/2026-09-30-source-health.json`, with 45 added lines and no deletions. It explicitly records `canonical_replay: false`, canonical cutoff `2026-08-29T19:40:52Z`, and next gate `2026-08-30T07:38:20Z`.
+- Exact-main Core validation run `36687149015` succeeded Sep. 30. Oct. 11 exact-main Daily Repository Maintenance `38152171540` and Intelligence Source Report `38155338908` succeeded. Draft PR #212 prior head `e93df4945bc3b3cdd0e9687e18ca2f20cfb073fc` passed Core `37053379825` on Python 3.11/3.12/3.13; any new head requires fresh CI. Scheduled report success does not establish source freshness: all 16 sources remain due.
+- No open repository issues were found. A bounded indexed-code search returned no matches for selected patterns, but it was incomplete: direct inspection confirms `subprocess` imports in `scripts/export_command_site_snapshot.py` and `tests/test_agent_ops_site_data.py`. Do not treat negative indexed-search results as an absence or security-audit claim.
 
 ## Canonical source / integration state
 
@@ -29,16 +28,16 @@ Repository version: `v3.1.0` (README)
   - `arxiv-cryptography`: `708237551c62ad0e0e7e1b9a823dff2c946745a99c6d279ba894aaf284c00a99`
   - `ethglobal-events`: `06a6fd437851f24e1b0513421f1389620ee201851f396b5220ac04031a06310a`
 
-## Sep. 29 contributed research review
+## Sep. 30 contributed research review
 
-- PR #209 preserves Crimson Defense CTF (CDCTF) 2026 as raw contributed research only.
-- The preserved snapshot says the organizer describes a collegiate-level virtual 12-hour Jeopardy CTF on Oct. 3, with CTFtime corroborating registration through Sep. 30 and trophies for top-three US-based teams; no cash prize is verified.
-- The contribution explicitly limits authorization to organizer-issued competition challenges and preserves unresolved registration, eligibility, fee, award, scoring, permitted-tool, and participant-state questions.
-- It does not advance canonical history or registry freshness and does not create a case, opportunity, tool, or testing authorization.
+- PR #211 preserves Devpost Build With AI: Basics as raw contributed research only.
+- The snapshot records a Sep. 22-Oct. 26 build window, a $2,500 advertised cash-prize pool, project/originality/open-source/demo requirements, and explicit third-party authorization/licensing boundaries.
+- Participant-specific registration, jurisdiction eligibility, rule amendments, clean new-project/pre-existing-work separation, and third-party SDK/API/data authorization remain unresolved.
+- It does not advance canonical history or registry freshness and does not create a case, opportunity, tool, payout claim, or testing authorization.
 
 ## Concurrent / stale contribution state
 
-- Open research PRs including #208, #207, #205, #202, #201, #198, #196, #192 and older lanes predate current `main`; they are contributed evidence, not merge-ready truth solely because their external facts are newer.
+- Open research PRs including #208, #207, #205, #202 and older lanes predate current `main`; they are contributed evidence, not merge-ready truth solely because their external facts are newer.
 - Any stale branch that becomes eligible must reconcile current `main`, preserve compatible evidence from both sides, rerun validation on the reconciled head, and document conflict resolution.
 - No open research PR may leapfrog the Aug. 30 morning replay gate.
 
@@ -46,14 +45,14 @@ Repository version: `v3.1.0` (README)
 
 - `repo-factory` remains the sole catalogued reusable toolset at `experimental` maturity.
 - Shared tool registration remains canonical in `data/tools.json`; normal tools/toolsets/cases/intelligence/evidence must surface through canonical registries/manifests/site-data builders rather than bespoke `site/index.html` edits.
-- No new tool/toolset/case was introduced by PR #209.
+- No new tool/toolset/case was introduced by PR #211.
 - Structured active cases remain authorization-bounded. Repository evidence must not be interpreted as an external solve, private key, payout, participant registration, team state, or permission to test a public target.
 
 ## Security / maintenance state
 
 - Preserve all primary evidence, hashes, provenance, and research artifacts. Do not silently delete or relocate evidence.
 - Exact-main Core, Daily Maintenance, and Intelligence Source Report are green, but these do not substitute for a comprehensive secret/static-analysis audit.
-- Prior bounded searches found no `shell=True`, `os.system(`, `subprocess`, or `BEGIN PRIVATE KEY` matches; treat that as bounded historical evidence until repeated on the current head.
+- Earlier indexed-code searches returned no matches for selected patterns, but direct file inspection confirms `subprocess` imports and argument-vector subprocess calls. No repository-wide absence or comprehensive security-audit claim is supported.
 - GitHub Actions have historically used major-version action tags such as `actions/checkout@v4` and `actions/setup-python@v5` rather than immutable commit SHAs; immutable action pinning remains supply-chain hardening debt until separately remediated and verified.
 - Legacy root truthfulness/artifact debt remains separate work; preserve references and hashes before relocation.
 
@@ -61,7 +60,15 @@ Repository version: `v3.1.0` (README)
 
 - `docs/WORK_QUEUE.md` still correctly points to Aug. 30 morning as the next replay gate.
 - `data/integration_queue.json` remains the machine-readable integration inbox and must be preserved chronologically.
-- `docs/AGENT_HANDOFF.md` is append-only; this reconciliation appends a new entry rather than rewriting historical handoffs.
+- `docs/AGENT_HANDOFF.md` is append-only; the required Oct. 11 handoff append remains blocked by connected write safety checks and must be completed before merging this draft PR.
+
+## October 11 release and maintenance findings
+
+- GitHub reported 34 open PRs, no open issues, and disabled branch protection. PR #212 remains 1 commit ahead / 0 behind `main`; PR #213 adds a research-only snapshot and does not overlap this coordination change.
+- Canonical history has 78 unique source/timestamp pairs and all 16 registry last-check timestamps match history. The integration queue has 20 unique IDs: 11 integrated, 1 needs-integration, 8 blocked. There are 20 registered tools and one registered experimental toolset.
+- Committed `site-data/status.json` and `site-data/collection-health.json` still report 77 checks, versus canonical 78. The Pages build regenerates data, but the last observed successful Pages run is Sep. 29 `36622688071` on older head `5f314d9a58a8cbc9431340d37f692dbea10dbb76`; current-main deployment and live browser rendering are unverified.
+- README's `workspace/` navigation points to a directory absent from the tracked tree. Legacy `tools/scanning/web_scraper.py` generates simulated competition/prize entries and writes to `intelligence/feeds/scrape-results.json` despite a production banner. Isolate any truthfulness correction in a separate small PR with deterministic tests; do not treat generated examples as live intelligence.
+- CI workflows use mutable major-version action tags; Oct. 11 source-report logs warn Node.js 20-targeted actions are being forced onto Node.js 24. Direct local clone/testing was unavailable because DNS resolution for github.com failed; do not claim a local test pass.
 
 ## Current operating priorities
 
@@ -74,4 +81,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Current `main` is `332780356db3efdf1074edc8af4a4d19b975766f`, merge of research-only PR #209. Exact-main Core `36539717505`, Daily Maintenance `36593215060`, and Intelligence Source Report `36599072811` are green. Canonical source history remains through Aug. 29 afternoon. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-main Core and Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
+Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of research-only PR #211. Canonical source history remains through Aug. 29 afternoon. This reconciliation intentionally makes no new exact-head CI/Pages claim from empty commit-status surfaces. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-head and post-merge Core/Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
