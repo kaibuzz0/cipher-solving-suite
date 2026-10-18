@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-18T19:42:40Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve primary-source-checked October 18 afternoon intelligence without advancing canonical chronology or duplicating source registries; independent integration required.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-10-18 | online hitcon ctf 2026 oct 23 14:00 utc to oct 25 14:00 utc | organizer ctf2026.hitcon.org confirms first 8000 usd second 4000 usd third 2000 usd and taiwan special 1000 usd | 48 hour jeopardy teams unlimited size one team per player | registration link present | no participant registration or payout eligibility confirmed",
+      "sha256": "f65fb34424deca1e8119494be899f747aab35a5e1806275dacd28ace12cdc506",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Primary organizer: https://ctf2026.hitcon.org/ ; aggregator: https://ctftime.org/event/3340 . $14,000 general placement awards and separate $1,000 Taiwan-only award; registration link exists. Entry fee, geographic payout eligibility, AI-assistance rules and participant state not independently established. Challenge scope only."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties 2026-10-18 | most recent kamino last updated oct 16 2026 17:26 listed live with max reward 1000000 usdc | official program page 433 confirms live since oct 16 2026 | exact scope exclusions severity payment and testing restrictions not visible in fetched details | no security testing performed",
+      "sha256": "80d8c192646f54742367c287ca4227fab270bd544abd76b1c1bf4fdb11d9bcfb",
+      "previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "Primary listing https://audits.sherlock.xyz/bug-bounties and program https://audits.sherlock.xyz/bug-bounties/433 ; page shows LIVE, start/update Oct 16 2026 17:26 and max 1,000,000 USDC. Scope tab not available in fetched text. Public listing is NOT authorization."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent 2026-10-18 | latest visible batch fri oct 16 2026 57 entries | recent index 334 entries | no new sunday batch and no additional research promoted from this check",
+      "sha256": "f9543861c32f1bbf9d75acdcfc7db7cd6c76f43671b01d20c1b53f288bf12719",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Official index https://arxiv.org/list/cs.CR/recent . No new batch beyond Friday Oct 16; existing research leads in other PRs not duplicated."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests 2026-10-18 | old /contests url redirects to /audits | k2 submissions closed and judging | rujira report in progress | no verified open audit submissions | migration already covered by open pr 213",
+      "sha256": "f60fedd2a76a40d3a96fe2d036d042940556fb71401f525b4cae674360aadcae",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Official https://code4rena.com/audits . Redirect verified, K2 closed and Rujira report in progress. Do not duplicate existing PR #213 migration; mark source for review, not deletion."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active challenges 2026-10-18 | official directory accessible | lists darpa surgical competition, documentation and decision support sprint, acl caregiver ai prize, connecting talent to opportunity challenge, xtech search 10 | directory is discovery only; individual eligibility and submission dates not reverified",
+      "sha256": "d7ef6952be41201f16d9cd7c69a3d52e9fa10df3e98f718f8584e0e8ed8c2211",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "Official USA.gov directory accessible; do not infer that all listed competitions still accept entries. No new verified payout opportunity promoted."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Kamino Sherlock bug bounty is LIVE with 1,000,000 USDC maximum reward",
+      "category": "bug-bounty",
+      "status": "watch-only-scope-unverified",
+      "confidence": "high for listing/status/max; insufficient for authorization or payout",
+      "relevance": "high",
+      "official_urls": [
+        "https://audits.sherlock.xyz/bug-bounties/433",
+        "https://audits.sherlock.xyz/bug-bounties"
+      ],
+      "published_or_updated_at": "2026-10-16T17:26:00",
+      "checked_at": "2026-10-18T19:42:40Z",
+      "prize": "1,000,000 USDC maximum, not guaranteed",
+      "entry_cost": "unknown; program-specific participation requirements not reviewed",
+      "deadline": "no end date verified; live listing at check time",
+      "eligibility": "not verified",
+      "authorization": "NO TESTING: complete in-scope assets, exclusions, prohibited techniques, severity/payout and safe-harbor terms not obtained",
+      "verified": "Sherlock official directory lists Kamino as most recent bounty and dedicated page shows LIVE since Oct 16 2026 with 1m USDC maximum.",
+      "next_action": "Open complete Sherlock Scope and Details in an authenticated browser if necessary; preserve exact assets, restrictions, terms and eligibility before considering any security case. Do not probe targets."
+    },
+    {
+      "title": "HITCON CTF 2026 offers 14,000 USD general prizes and 1,000 USD Taiwan-specific award",
+      "category": "ctf",
+      "status": "structured-case-candidate-pending-registration",
+      "confidence": "high for dates/organizer prize rules; medium for individual eligibility",
+      "relevance": "high",
+      "official_urls": [
+        "https://ctf2026.hitcon.org/"
+      ],
+      "corroboration_url": "https://ctftime.org/event/3340",
+      "checked_at": "2026-10-18T19:42:40Z",
+      "event_start": "2026-10-23T14:00:00Z",
+      "event_end": "2026-10-25T14:00:00Z",
+      "prize": "1st $8,000; 2nd $4,000; 3rd $2,000; Taiwan special $1,000. Conditional placement awards, not guaranteed.",
+      "entry_cost": "not stated on inspected organizer page",
+      "deadline": "registration link available; cutoff not stated on inspected page",
+      "eligibility": "teams unlimited size, one team per player; geography/payout conditions unverified; Taiwan special requires Taiwan country at registration",
+      "authorization": "Organizer-issued CTF challenges only; organizer prohibits attacking contest systems/personnel and exchanging solutions/flags",
+      "verified": "Official HITCON organizer page confirms 48-hour online jeopardy, exact start/end, prize breakdown and core rules.",
+      "next_action": "Confirm registration, participation intent, participant payout eligibility, any entry cost, AI assistance restrictions and platform challenge scope; create structured case only when actionable."
+    }
+  ],
+  "deduplication": "Checked canonical intelligence.json (13 entries) and opportunities.json (21 directory entries), searched current GitHub code and PRs for Kamino and HITCON with no matches. Existing PR #213 covers Code4rena URL migration; PR #214 covers Oct 17 DEADFACE/INFUSE and should not be duplicated.",
+  "validation": "Five observed strings fingerprinted as SHA-256(observed.strip().lower().encode('utf-8')) using local Python hashlib; native replay, Core tests and Pages builder not executed because repository checkout unavailable. Do not advance canonical source history until Aug 30 morning replay.",
+  "repository_health": "Current main e3406be6fe981feee5c2ec8c3c79cca924792e67; 16 canonical sources; 78 source checks; 13 feed items; 21 directory opportunities; 20 integration inbox items. Oct 18 scheduled maintenance and source report successful. PR #214 Core passed; no Pages run found in latest 100 runs. Existing PwnSec case still references Sep 12-13 and needs expiry reconciliation.",
+  "safety": "No credential attacks, target testing, destructive actions, persistence, evasion or out-of-scope activity.",
+  "handoff": "Build/integration: complete protected Aug 30 morning five-source replay with exact fingerprint, predecessor, idempotence, timestamp non-rewind checks; run source/registry/intelligence validators, Core and site-data/Pages checks. Then reconcile this contributed snapshot and open PR, verify Kamino full scope and HITCON registration/eligibility, and only then promote canonical intelligence or create actionable structured cases."
+}
