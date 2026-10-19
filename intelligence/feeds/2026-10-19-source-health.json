@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-19T07:48:52Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "source_registry": "data/intelligence_sources.json",
+  "source_history": "data/source_check_history.json",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | oct 23-25 online: cruxipher oct 23 0030 utc, hitcon oct 23 1400 utc, hack.lu oct 23 1800 utc | hitcon organizer confirms 15000 usd total awards | hack.lu organizer prizes tba and registration not yet open at check | aggregator listings are discovery only",
+      "sha256": "55f8bae5219261f5bc190b0c46cde3346c34084bef64a1551db9b3b056aabbf3",
+      "canonical_previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "CTFtime is an aggregator; verified HITCON and Hack.lu dates/prizes on their organizer sites. HITCON already appears in the Oct. 18 contributed research; no duplicate opportunity promotion."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | mon 19 oct 2026 batch 47 of 47 | total recent entries 321 | papers submitted fri 16 oct include hardeval 2610.23685 and abf-bench 2610.23656 | author claims unreplicated",
+      "sha256": "d63db517284e795655f95f7ac4de6d8f8130310132d50c4482ff10e1611a1c25",
+      "canonical_previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Verified submission dates and abstracts directly on arXiv. Benchmarks and numerical results remain author-reported; no code executed."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal official events | oct 19 ethereum stablecoin summit conference las vegas | nov 5-7 ethglobal mumbai in-person hackathon apply to attend | ethonline sep 4-16 2026 appears in past events | no online open event in immediate list",
+      "sha256": "4275d60cb3c2da51f3ac268739a2aa478ab4f6afb6d7babace29fe314511ad71",
+      "canonical_previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "ETHGlobal's current official calendar lists Mumbai as in-person and ETHOnline as historical. Participant-specific travel/entry and prize eligibility unverified."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties official directory | most recent kamino last updated oct 16 2026 payout 1000000 usdc | largest usual labs 16000000 usdc | no newer than kamino in fetched listing | scope not independently reviewed no testing authorization",
+      "sha256": "4a88d2305fd282d707597160152dafdf4843da022fbcfcf8ee663ea2565364c4",
+      "canonical_previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "Directory check confirms the Oct. 18 contributed Kamino finding is still the newest displayed listing. Max reward is not guaranteed; exact scope/exclusions were not reviewed and no testing occurred."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena /contests redirects to /audits | visible submissions closed | k2 judging audit 135000 usdc apr 17-may 27 | no currently open submissions in fetched first page | existing pr 213 covers migration",
+      "sha256": "b1014ec8246b1e399f9f6c757b525503b20d78d776ef9f85a564e23dfd1882ae",
+      "canonical_previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Verified live redirect and first-page submissions-closed state; do not infer all historical/other audit pages are closed. URL migration already contributed in PR #213."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261019-hardeval-execution-verified-hardening-benchmark",
+      "title": "HardEval: execution-verified agent security-hardening benchmark",
+      "category": "research",
+      "confidence": "high for existence and methodology; unverified author results",
+      "relevance": "high for deterministic verification",
+      "status": "candidate-for-offline-research-review",
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/abs/2610.23685",
+      "source_published_at": "2026-10-16T16:14:58Z",
+      "code_url": "https://github.com/manoharvellala/Hardeval",
+      "code_license": "MIT (verified from repository LICENSE)",
+      "summary": "Paper describes RHEL8 STIG hardening scripts graded on isolated virtual machines with OpenSCAP/OVAL rather than superficial code similarity. Authors evaluate 14 model configurations; reported results not reproduced.",
+      "eligibility": "Not a prize competition",
+      "prize": "none",
+      "entry_cost": "Not applicable; running benchmark requires suitable isolated VM/OS dependencies",
+      "authorization": "Local isolated fixtures/VM only; do not apply generated remediation to production hosts",
+      "deduplication": "Not present in 13 canonical intelligence entries; inspect PR #213 agent-security overlap before adoption.",
+      "next_action": "Inspect license/dependencies and design a small deterministic mock compliance fixture first; avoid external target tests and hazardous system changes."
+    },
+    {
+      "id": "20261019-abf-bench-evidence-backed-blockchain-forensics",
+      "title": "ABF-Bench: verifiable agentic blockchain forensics",
+      "category": "research",
+      "confidence": "high for paper existence; medium for unreplicated experimental claims",
+      "relevance": "high for evidence provenance",
+      "status": "research-watch-until-artifacts-available",
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/abs/2610.23656",
+      "source_published_at": "2026-10-16T15:51:03Z",
+      "summary": "Paper proposes evidence-backed ledger-tracing tasks requiring citations to retrieved transactions and explicit stops at ambiguous boundaries. Authors report 75% edge recall for their harness; not independently reproduced.",
+      "code_license": "No official code artifact/license independently verified during this pass",
+      "eligibility": "Not a prize competition",
+      "prize": "none",
+      "entry_cost": "Not applicable",
+      "authorization": "Read-only public-ledger research only; no wallet access or live intervention",
+      "deduplication": "Not in canonical intelligence; distinct from earlier agent provenance/security papers.",
+      "next_action": "Locate official benchmark artifacts and license, then assess a synthetic transaction-graph fixture for evidence-citation correctness before proposing a structured case."
+    }
+  ],
+  "opportunity_screening": [
+    {
+      "title": "HITCON CTF 2026",
+      "status": "already-contributed-do-not-duplicate",
+      "official_url": "https://ctf2026.hitcon.org/",
+      "date": "2026-10-23T14:00:00Z to 2026-10-25T14:00:00Z",
+      "prize": "USD 8,000 / 4,000 / 2,000; Taiwan special USD 1,000",
+      "gaps": "Participant registration, fees, payout eligibility and AI-assistance rules not established",
+      "next_action": "Review Oct. 18 contributed snapshot; create case only if participation and organizer scope are verified."
+    },
+    {
+      "title": "Hack.lu CTF 2026",
+      "status": "watch-only-no-verified-cash",
+      "official_url": "https://flu.xxx/",
+      "date": "2026-10-23T18:00:00Z to 2026-10-25T18:00:00Z",
+      "prize": "TBA",
+      "entry_cost": "not confirmed",
+      "gaps": "Official organizer says registration will open some days before contest; no verified prize, registration, participant eligibility or AI rules",
+      "next_action": "Reopen official organizer page for registration and rules before any case."
+    },
+    {
+      "title": "cruXipher 2026",
+      "status": "discovery-only",
+      "official_url": "https://cruxipher.crux-bphc.com/",
+      "date": "2026-10-23T00:30:00Z to 2026-10-25T00:30:00Z (aggregator)",
+      "prize": "INR 15,000 / 9,000 / 6,000 claimed by CTFtime, not independently confirmed on organizer page",
+      "gaps": "Organizer page only exposes CTFd countdown; no accessible official prize, eligibility, cost, scope, or AI rules",
+      "next_action": "Do not publish a cash claim until organizer documentation independently confirms it."
+    }
+  ],
+  "source_health": [
+    {
+      "source_id": "code4rena-contests",
+      "finding": "Legacy /contests redirects to /audits; PR #213 already addresses migration.",
+      "disposition": "no duplicate registry change"
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "finding": "Kamino remains newest listed bounty; no newer bounty independently confirmed.",
+      "disposition": "unchanged from Oct. 18 contribution"
+    },
+    {
+      "source_id": "ethglobal-events",
+      "finding": "ETHOnline is historical; Mumbai is in-person.",
+      "disposition": "no generic remote case"
+    }
+  ],
+  "verification": {
+    "method": "Current official/primary pages opened Oct. 19 UTC; fingerprints are SHA-256 of observed.strip().lower() matching scripts/source_check_history.py",
+    "fingerprints_recomputed_locally": true,
+    "repo_native_validators_run": false,
+    "reason": "GitHub connector can read/write files but the execution container has no network access to clone the repository; canonical chronology intentionally unchanged",
+    "target_testing_performed": false
+  },
+  "integration": {
+    "status": "contributed-research-not-canonical",
+    "blocked_by": "Protected Aug. 30 morning replay and subsequent chronology",
+    "next_build_action": "Run python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-30-source-health.json --dry-run; verify five hashes/predecessors, idempotence and registry non-rewind, replay morning only, run Core/source-history/registry/intelligence/site-data validation and Pages checks. Then review this Oct. 19 research for duplicate/overlap, and promote only verified useful findings via canonical feed/case/inbox."
+  }
+}
