@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-20T19:41:54Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | oct 23 2026 online ctf cluster includes cruxipher crest hitcon rstcon and hacklu | hitcon 23 oct 1400 utc to 25 oct 1400 utc | no new cash prize promoted from aggregator alone",
+      "sha256": "8ed284b252dfee36cab9d74e5eacbb71bdd915bae8896190f6ed2891aeda1f41",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce"
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs cr recent | 20 oct 2026 batch 81 entries | recent index total 365 entries | 19 oct and 16 oct batches also listed | research preprints are not independently reproduced",
+      "sha256": "28d0fb87cf9f57ee27fe199b9f78c1d04f045da2897d6c0fa8cc54240a2618ab",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3"
+    }
+  ],
+  "findings": [
+    {
+      "title": "PayPal AI Hackathon",
+      "rules": "https://paypalaihackathon.devpost.com/rules",
+      "deadline": "2026-11-12T12:00:00-08:00",
+      "cash_pool_usd": 67500,
+      "entry": "free",
+      "requirement": "PayPal sandbox plus AI",
+      "next_action": "Verify registration and sandbox access before creating a case"
+    },
+    {
+      "title": "Nebius x NVIDIA Global AI Hackathon",
+      "rules": "https://nebiusglobalaihackathon.devpost.com/rules",
+      "deadline": "2026-10-30T10:00:00-07:00",
+      "grand_prize_usd": 20000,
+      "entry": "free; cloud costs possible",
+      "requirement": "NVIDIA open-source model running via Nebius with public licensed code and demo",
+      "next_action": "Verify registration, credits, cloud access and original licensed project"
+    },
+    {
+      "title": "OpenCV competition prize discrepancy",
+      "rules": "https://opencv26.devpost.com/rules",
+      "cash_rules_usd": 12000,
+      "listing_total_usd": 20250,
+      "next_action": "Reconcile cash vs noncash prizes and conflicting deadline banners"
+    }
+  ],
+  "next_action": "Integrate protected Aug 30 morning source replay first; no October canonical timestamp changes."
+}
