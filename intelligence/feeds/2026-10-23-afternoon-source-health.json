@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-23T19:40:08Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve five real registry-source rechecks and two new official-rule verified online AI development prize leads without bypassing the protected historical replay gate or creating competing source lists.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | fri oct 23 2026 at 1940 utc hitcon ctf 2026 online oct 23 1400 utc to oct 25 1400 utc and rstcon oct 23 1700 utc to oct 25 1700 utc are underway | hacklu ctf oct 23 1800 utc to oct 25 1800 utc listed | aggregator timing only",
+      "sha256": "09d7f9036be2ce979b6c482a8a35b0c76a3c3f88d1421051dcc0947dddb2871a",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "CTFtime current event list checked after the earlier Oct 23 morning contribution. No new organizer-verified payout or participation authorization."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | fri oct 23 2026 batch 51 entries and total recent index 272 | no new paper promoted beyond existing oct 23 agentphishing and afterdeletebench contribution",
+      "sha256": "fb1fc88b9eb8b6a3e2a49d4ff9b163f3ff308c58476df264a5f9381fcb21b786",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Index reopened; unchanged daily batch. Avoid duplicate agent-security publication."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena legacy contests url redirects to audits | official homepage says winding down after five years | k2 submissions closed and rujira report in progress | no verified new audit submission window",
+      "sha256": "a1f9c12de1ec0b4cb720f5bf83b862a44db4b2ea25908fff5a92f58a3119172a",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "previous_canonical_checked_at": "2026-08-22T07:42:16Z",
+      "note": "Official redirect and wind-down confirmed. Existing PR #213 overlaps; retain source history, recommend source status review."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenge directory | oct 23 2026 lists darpa surgical competition documentation and decision support sprint nasa human lander nourish caregiver ai techrise and others | directory lifecycle does not establish open submission phase",
+      "sha256": "b4e3af4633d4372be1d053f0c8922a21ccb24d700a384457c84edc81d5d18636",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Official directory accessible; individual current application phases not established."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal official events | upcoming in person ethglobal mumbai nov 5 to nov 7 2026 and pragma mumbai nov 6 | ethonline sep 4 to sep 16 listed as past | no new online general hackathon verified",
+      "sha256": "04e480ebec85e477d1c162c82bb34a292b8b744062a16f6065a4873f96491d30",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "previous_canonical_checked_at": "2026-08-29T19:40:52Z",
+      "note": "Official event calendar reviewed; no new remote event qualifying for promotion."
+    }
+  ],
+  "source_retrieval_failures": [
+    {
+      "source_id": "sherlock-bounties",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "result": "direct fetch timeout; not recorded as successful check; previously contributed bounty claims not re-verified this pass"
+    },
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404; migration review required, no successful source check and no silent deletion"
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261023-ugreen-ai-nas-hackathon",
+      "title": "UGREEN Hackathon 2026 on AI NAS",
+      "category": "hackathon",
+      "source_url": "https://ugreenhackathon.devpost.com/rules",
+      "organizer_page": "https://ugreenhackathon.devpost.com/",
+      "verified_at": "2026-10-23T19:40:08Z",
+      "status": "official-rules-verified-candidate-registration-not-confirmed",
+      "confidence": "high",
+      "relevance": "high",
+      "start_at": "2026-10-22T09:00:00-07:00",
+      "round1_deadline": "2026-11-15T23:45:00-08:00",
+      "round2_deadline": "2026-11-30T23:45:00-08:00",
+      "prize_currency": "USD",
+      "total_cash_prizes": 46000,
+      "prize_breakdown": [
+        {
+          "award": "gold",
+          "cash_usd": 20000,
+          "quantity": 1
+        },
+        {
+          "award": "silver",
+          "cash_usd": 10000,
+          "quantity": 1
+        },
+        {
+          "award": "bronze",
+          "cash_usd": 6000,
+          "quantity": 1
+        },
+        {
+          "award": "most creative",
+          "cash_usd": 5000,
+          "quantity": 2
+        }
+      ],
+      "entry_cost": "No purchase or payment required; initial round does not require a NAS. Finalists receive one assigned free remote NAS test day.",
+      "eligibility": "Adult individual or team of up to three; US included; geographic exclusions apply; companies/organizations excluded. Participant registration not independently confirmed.",
+      "requirements": "Original UGOS AI NAS skill using official Uliya SKILL.md format and supported CLI/expert agents; round 1 PDF plus ZIP <=10 MB, no executable scripts or arbitrary NAS access; up to 30 finalists; final working skill plus <3 minute public YouTube demo.",
+      "authorization": "Competition rules permit only contest-provided development and assigned finalist NAS testing; no permission to test any other NAS or network.",
+      "missing_verification": [
+        "Entrant-specific Devpost registration and acceptance",
+        "Official starter-kit license/terms and supported CLI capabilities",
+        "Ability to produce compliant original SKILL.md and PDF by deadline",
+        "Round-2 assigned hardware access only if selected"
+      ],
+      "next_action": "Review starter kit, register if eligible, select one original AI NAS skill idea, prepare a separate bounded case after registration; do not submit the existing suite as an unmodified entry."
+    },
+    {
+      "id": "20261023-qloo-agentic-hackathon",
+      "title": "Qloo Agentic Hackathon",
+      "category": "hackathon",
+      "source_url": "https://qloo.devpost.com/rules",
+      "organizer_page": "https://qloo.devpost.com/",
+      "verified_at": "2026-10-23T19:40:08Z",
+      "status": "official-rules-verified-candidate-api-and-demo-not-confirmed",
+      "confidence": "high",
+      "relevance": "high",
+      "start_at": "2026-09-30T09:00:00-04:00",
+      "submission_deadline": "2026-10-30T23:45:00-04:00",
+      "prize_currency": "USD",
+      "total_cash_prizes": 25000,
+      "prize_breakdown": [
+        {
+          "award": "first",
+          "cash_usd": 15000,
+          "quantity": 1
+        },
+        {
+          "award": "second",
+          "cash_usd": 6000,
+          "quantity": 1
+        },
+        {
+          "award": "third",
+          "cash_usd": 4000,
+          "quantity": 1
+        }
+      ],
+      "entry_cost": "No purchase or payment required; actual API/hosting resource costs and free quotas not independently confirmed.",
+      "eligibility": "Adults, teams, organizations allowed subject to official geographic and conflict-of-interest exclusions; US not listed as excluded. Registration not independently confirmed.",
+      "requirements": "Working agentic application meaningfully using Qloo API; request API key through official developer guide; provide functional accessible demo URL and public open-source licensed repository; prior project must be substantially updated during submission period.",
+      "authorization": "Competition participation is not authorization to test third-party systems; respect Qloo API and hosting terms.",
+      "missing_verification": [
+        "Entrant registration and Qloo API key availability/limits",
+        "Hosted demo feasibility and cost",
+        "Exact originality and third-party license compliance",
+        "Current rules versus cached historical schedule discrepancies"
+      ],
+      "next_action": "Check API access and feasible hosted demo immediately; create a separate candidate case only after participant access is confirmed."
+    }
+  ],
+  "source_network_recommendation": {
+    "candidate": "Devpost managed hackathon official-rule pages",
+    "rationale": "Both findings were verified from organizer-sponsored official rules on Devpost, which is already in canonical data/opportunities.json; if recurring monitoring is justified, propose one reviewed source entry in data/intelligence_sources.json, not a parallel registry.",
+    "status": "proposal-only-no-source-added"
+  },
+  "integration_inbox_proposal": {
+    "id": "20261023-afternoon-ugreen-qloo-contributed-research",
+    "type": "research",
+    "status": "blocked",
+    "contributor": "research-intelligence-pass",
+    "path": "intelligence/feeds/2026-10-23-afternoon-source-health.json",
+    "blocked_by": "Canonical Aug 30 morning five-observation replay and later chronology reconciliation",
+    "missing_verification": [
+      "Confirm source-check fingerprints/predecessors and replay chronology",
+      "Confirm no overlap with other open PRs/newer main before promotion",
+      "Verify participant registration, starter kit/API/hosting terms before active cases",
+      "Rebuild generated Pages data from canonical state; do not edit HTML"
+    ],
+    "next_action": "After protected Aug 30 replay and validators, reconcile this contributed evidence chronologically and promote only still-open independently verified opportunities."
+  },
+  "safety": "No external target testing, credential attempts, network scanning, destructive actions or claims of participation were performed. All bounty/CTF listings are discovery only."
+}
