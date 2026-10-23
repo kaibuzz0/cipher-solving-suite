@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-23T07:42:36Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve six reviewed registered sources and new primary-source agent-security papers without skipping protected Aug 30 canonical replay or inflating in-kind prize values.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | fri oct 23 2026 online ctf events include cruxipher oct 23 0030 utc to oct 25 0030 utc hitcon oct 23 1400 utc to oct 25 1400 utc rstcon oct 23 1700 utc to oct 25 1700 utc and hacklu oct 23 1800 utc to oct 25 1800 utc | aggregator schedule only not prize eligibility or registration proof",
+      "sha256": "1e15a577da8f84b5daf126d2520221114815335732bb5c6771be6b45f213ce1d",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "CTFtime calendar inspected Oct 23; no organizer participation or prize terms inferred."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | fri oct 23 2026 batch has 51 entries and total recent index 272 entries | afterdeletebench arxiv 2610.31366 submitted oct 22 144136 utc | agentphishing arxiv 2610.31404 submitted oct 22 150749 utc | author results not reproduced",
+      "sha256": "b46bd31658ba9951d69848941258ccf8517f9e3d68755b5b3faf5028f9140a9f",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Current arXiv recent index and both primary abstracts independently opened; results are author claims."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent monolith stablecoin factory last updated oct 22 2026 max payout 20000 dola | aero updated oct 21 2026 max 500000 usdc | kamino updated oct 16 2026 max 1000000 usdc | no new oct 23 listing observed | program listing is not testing authorization",
+      "sha256": "c39dfa8789a26748c45681cfb590e2359ee4648d069aed8fb599658c232f48d2",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "Directory checked Oct 23. Exact scope, exclusions, payout and permission require dedicated program brief."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena | legacy contests url redirects to https://code4rena.com/audits | official homepage says winding down after five years and existing engagements completed | audits page shows submissions closed for k2 and rujira | no open audit submission window verified",
+      "sha256": "7a514159de51d679756c19a0fca0e0ce3c070c63d619f4879ecf05a7d5d34113",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Migration and closure confirmed; preserve registry history and mark for review rather than deleting."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov federal challenge directory | oct 23 2026 directory lists darpa surgical competition documentation and decision support sprint nasa human lander challenge nourish autoimmunity challenge caregiver ai challenge nasa techrise and others | directory listing alone does not prove current application window",
+      "sha256": "64ba0a8b809e3b9a5cb2ebb717a4ad4c8b448749c28c20223628e428e17ada09",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "Official directory accessible; no new general eligible cash competition independently verified."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal official events | upcoming ethglobal mumbai in person nov 5 to nov 7 2026 | pragma mumbai nov 6 2026 | ethonline sep 4 to sep 16 2026 appears in past events | no new online general participation event verified",
+      "sha256": "623769a5aeb12507e8ea9219a35a1bf4c4dcb276e41b9adf9a20257e40284dea",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Official event calendar reviewed; travel, eligibility and prizes not verified."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261023-afterdeletebench",
+      "title": "AfterDeleteBench: post-deletion secret persistence in agent memory",
+      "source_url": "https://arxiv.org/abs/2610.31366",
+      "published_at": "2026-10-22T14:41:36Z",
+      "status": "research-candidate-needs-reproduction",
+      "confidence": "high-publication-medium-experimental-claims",
+      "relevance": "high",
+      "facts": "Authors report recovery of deleted secrets from previously exposed agents, including 62-99% reconstruction from separated components under public composition rules. Results not reproduced.",
+      "missing_verification": [
+        "No independent reproduction or verified official implementation license.",
+        "Overlap with SAFE-Mem, CarryoverBench and compaction-laundering contributions."
+      ],
+      "next_action": "Evaluate deletion, derived-claim closure and fresh-session leakage on synthetic nonsecret fixtures before proposing a case."
+    },
+    {
+      "id": "20261023-agentphishing",
+      "title": "AgentPhishing: adaptive phishing benchmark for email agents",
+      "source_url": "https://arxiv.org/abs/2610.31404",
+      "published_at": "2026-10-22T15:07:49Z",
+      "status": "research-candidate-needs-reproduction",
+      "confidence": "high-publication-medium-experimental-claims",
+      "relevance": "useful",
+      "facts": "Authors evaluated nine email agents; four had detection below 10% and malicious-request compliance above 45% under adaptive evaluation. Results not reproduced.",
+      "missing_verification": [
+        "Code release and license unverified.",
+        "Benchmark reuse rights and overlap with existing agent-security fixtures unverified."
+      ],
+      "next_action": "Evaluate defensive agent decision fixtures with synthetic emails only; never send phishing or test real accounts."
+    },
+    {
+      "id": "20261023-neighborhood-hacks-prize-mislabel",
+      "title": "Neighborhood Hacks headline cash figure mixes in-kind benefits",
+      "source_url": "https://neighborhood-hacks-2026.devpost.com/",
+      "status": "screened-out-ineligible",
+      "confidence": "high",
+      "relevance": "prize-metadata-quality",
+      "facts": "Devpost labels $57,866 as cash but prize descriptions include software credits/licenses explicitly marked NOT A CASH PRIZE. Grand prize describes $125 cash within a $10,468 cash-labeled package, second prize $25 cash within $4,449. Ages 13-21 and high-school students only; deadline Oct 24 00:00 CDT.",
+      "missing_verification": [
+        "Exact aggregate actual cash total not calculated.",
+        "Full official rules beyond overview not independently preserved."
+      ],
+      "next_action": "Do not promote as a $57,866 cash earning opportunity; retain as prize-validation caution."
+    }
+  ],
+  "failed_source_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "Direct fetch returned HTTP 404; historical individual challenge pages are indexed but finished.",
+      "status": "migration-review-not-successful-check",
+      "next_action": "Find official live challenge index/API before changing canonical registry URL."
+    }
+  ],
+  "deduplication": "No identical title/URL in main canonical 13 intelligence entries and 21 opportunity catalog entries. Existing research PR #213 and #214 checked for broad overlap. HITCON and Amazon are already contributed; not republished.",
+  "integration_guidance": "Contributed evidence only. Reconcile Aug 30 morning and subsequent chronological source snapshots first; then recheck live facts. Route incomplete verification to data/integration_queue.json when integration is ready. No authorization, registration, payout or active case claimed.",
+  "safety": "No target testing, credential attacks, phishing delivery or out-of-scope actions."
+}
