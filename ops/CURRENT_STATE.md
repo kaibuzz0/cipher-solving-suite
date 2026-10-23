@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-10-23 07:24 UTC
+Last reconciled: 2026-10-23 19:24 UTC
 Default branch: `main`
 Reconciled default-branch head: `e3406be6fe981feee5c2ec8c3c79cca924792e67`
 Repository version: `v3.1.0` (README)
@@ -60,7 +60,7 @@ Repository version: `v3.1.0` (README)
 
 - `docs/WORK_QUEUE.md` still correctly points to Aug. 30 morning as the next replay gate.
 - `data/integration_queue.json` remains the machine-readable integration inbox and must be preserved chronologically.
-- `docs/AGENT_HANDOFF.md` is append-only; the required Oct. 11 handoff append remains blocked by connected write safety checks and must be completed before merging this draft PR.
+- `docs/AGENT_HANDOFF.md` is append-only; the Oct. 23 integrity handoff is now present on PR #212. Earlier Oct. 11 write failures are historical, not an active handoff blocker. Exact-head CI must be rerun after any further edits.
 
 ## October 11 release and maintenance findings
 
@@ -73,8 +73,8 @@ Repository version: `v3.1.0` (README)
 ## Current research/intelligence state
 
 - Canonical source history is 78 records with 78 unique source/time pairs, latest through 2026-08-29 afternoon; 16/16 source registry last-check timestamps match latest canonical history.
-- All 16 registered intelligence sources are overdue. Oct. 22 Source Report `39806644419` succeeded on current main but does not constitute a fresh external source check.
-- The protected Aug. 30 morning five-observation replay remains pending; contributed PRs #213 and #214 contain overlapping Code4rena observations and must not be promoted without reconciliation and independent evidence review.
+- All 16 registered intelligence sources are overdue. Oct. 23 Source Report `39978318791` succeeded on current main with 78 history checks and 14 marked changed; reporting does not constitute a fresh external source check.
+- The protected Aug. 30 morning five-observation replay remains pending; contributed PRs #213, #214 and newly opened #215 contain overlapping Code4rena/source-health observations and must not be promoted without deduplication, chronological reconciliation and independent evidence review.
 
 ## Known state / debt
 
@@ -83,7 +83,7 @@ Repository version: `v3.1.0` (README)
 - `scripts/build_agent_ops.py` expects the `Current research/intelligence state` and `Known state / debt` sections now supplied here; existing tests do not require these fields to be nonempty. Rebuild/CI is required before declaring the Agent Operations console fixed.
 - Pages push triggers omit `intelligence/**`; README `workspace/` navigation has no tracked target; 11 of 20 tools use undocumented `verified` maturity. The PwnSec case still describes an expired Sep. 12–13 competition window as current.
 - Preserve primary evidence and root artifact hashes before moving files. Filename screening found no obvious credential/private-key paths, but this is not a content secret audit. Actions use mutable tags; full supply-chain and security review remain outstanding.
-- Local clone/test execution failed due DNS resolution; Oct. 22 Maintenance `39796200533` and Source Report `39806644419` passed on main. Last observed Core for PR #212 was `39013625784` before this documentation update; rerun exact-head Core.
+- Local clone/test execution remains blocked by DNS resolution. Oct. 23 Maintenance `39967810647` and Source Report `39978318791` passed on main. PR #212 head `d9c14a6c1490107fb8fe040f94d01db61a95b434` passed Core `39917791913` (Python 3.11/3.12/3.13) and Maintenance `39917791877`; any later documentation commit requires new exact-head CI.
 - Open PRs: 35; standalone open issues: zero. Draft PR #212 is the coordination lane; stale research PRs must reconcile current main and preserve compatible contributions.
 
 ## Current operating priorities
@@ -97,4 +97,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of research-only PR #211. Canonical source history remains through Aug. 29 afternoon. The Oct. 22 scheduled maintenance and intelligence workflows passed on main, but this Oct. 23 documentation head has not yet passed exact-head Core; no current-main Pages or live browser rendering is verified. The exact next action remains the protected Aug. 30 morning five-record/five-registry replay, followed by exact-head and post-merge Core/Pages verification before any Aug. 30 afternoon or September contribution advances canonical chronology.
+Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of research-only PR #211. Canonical source history remains through Aug. 29 afternoon. Oct. 23 scheduled Maintenance `39967810647` and Source Report `39978318791` passed on main; PR #212's preceding head `d9c14a6c` passed exact-head Core `39917791913`, but new documentation edits require fresh CI. PR #215 is contributed research only and overlaps #213/#214. No current-main Pages deployment or live browser rendering is verified. Next: rerun exact-head Core on PR #212, review and merge only if green, then stage the protected Aug. 30 morning five-record/five-registry replay with idempotence/non-rewind and post-merge Core/Pages verification before later chronology.
