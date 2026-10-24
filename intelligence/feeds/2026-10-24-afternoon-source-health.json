@@ -81,8 +81,7 @@
       "type": "hackathon",
       "title": "Build With AI: Basics",
       "status": "official-rules-reviewed; registration and submission not performed",
-      "source_id": "devpost-hackathons",
-      "canonical_source_note": "Devpost is present in data/opportunities.json, not among the 16 recurring source IDs; do not invent a registry source ID. Consider devpost platform source only through reviewed registry change.",
+      "canonical_source_note": "Devpost is in data/opportunities.json as id devpost, but is not one of the 16 recurring intelligence source IDs. Do not invent a recurring source ID or publish a canonical feed item without registry reconciliation.",
       "source_url": "https://learn-ai-basics.devpost.com/rules",
       "tool_repo": "https://github.com/challengepost/learn-ai-basics",
       "checked_at": "2026-10-24T19:43:22.658Z",
@@ -105,7 +104,8 @@
         "local Git/Node/coding-agent availability and clean-room project feasibility",
         "actual project, demo and submission completion"
       ],
-      "next_action": "Verify personal registration/tool access immediately; create a new isolated project only if feasible before Oct 26 21:00 UTC; do not submit existing suite as newly built."
+      "next_action": "Verify personal registration/tool access immediately; create a new isolated project only if feasible before Oct 26 21:00 UTC; do not submit existing suite as newly built.",
+      "discovery_catalog_id": "devpost"
     },
     {
       "id": "20261024-renderjuice-speed-blender-contest",
