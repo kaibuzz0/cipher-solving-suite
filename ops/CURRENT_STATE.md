@@ -1,6 +1,6 @@
 # Current Repository State
 
-Last reconciled: 2026-10-23 19:24 UTC
+Last reconciled: 2026-10-24 07:23 UTC
 Default branch: `main`
 Reconciled default-branch head: `e3406be6fe981feee5c2ec8c3c79cca924792e67`
 Repository version: `v3.1.0` (README)
@@ -11,7 +11,7 @@ Repository version: `v3.1.0` (README)
 
 - Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of PR #211 (`Research: preserve Sep 30 Build With AI Basics lead`).
 - PR #211 added exactly one raw research file, `intelligence/feeds/2026-09-30-source-health.json`, with 45 added lines and no deletions. It explicitly records `canonical_replay: false`, canonical cutoff `2026-08-29T19:40:52Z`, and next gate `2026-08-30T07:38:20Z`.
-- Exact-main Core validation run `36687149015` succeeded Sep. 30. Oct. 11 exact-main Daily Repository Maintenance `38152171540` and Intelligence Source Report `38155338908` succeeded. Draft PR #212 prior head `e93df4945bc3b3cdd0e9687e18ca2f20cfb073fc` passed Core `37053379825` on Python 3.11/3.12/3.13; any new head requires fresh CI. Scheduled report success does not establish source freshness: all 16 sources remain due.
+- Latest inspected default-branch scheduled checks (Oct. 23) passed: Daily Repository Maintenance `39967810647` and Intelligence Source Report `39978318791` on `e3406be6`. PR #212 exact head `26c00d59aa2ba05c4bcea77e654eebe6698b2a71` passed Core `40011485695` (86 tests each on Python 3.11/3.12/3.13) and Daily Maintenance `40011485660`, including compile and source/data validation. Any further PR commit requires fresh exact-head CI. Scheduled report success does not establish source freshness: all 16 sources remain due.
 - No open repository issues were found. A bounded indexed-code search returned no matches for selected patterns, but it was incomplete: direct inspection confirms `subprocess` imports in `scripts/export_command_site_snapshot.py` and `tests/test_agent_ops_site_data.py`. Do not treat negative indexed-search results as an absence or security-audit claim.
 
 ## Canonical source / integration state
@@ -74,7 +74,7 @@ Repository version: `v3.1.0` (README)
 
 - Canonical source history is 78 records with 78 unique source/time pairs, latest through 2026-08-29 afternoon; 16/16 source registry last-check timestamps match latest canonical history.
 - All 16 registered intelligence sources are overdue. Oct. 23 Source Report `39978318791` succeeded on current main with 78 history checks and 14 marked changed; reporting does not constitute a fresh external source check.
-- The protected Aug. 30 morning five-observation replay remains pending; contributed PRs #213, #214 and newly opened #215 contain overlapping Code4rena/source-health observations and must not be promoted without deduplication, chronological reconciliation and independent evidence review.
+- The protected Aug. 30 morning five-observation replay remains pending. Oct. 24 independent SHA-256 recomputation (implementation checked against the `abc` test vector) matched all five raw `observed.strip().lower()` fingerprints; each latest predecessor matched the current registry timestamp, ordering was forward, and none was already replayed. This is pre-replay evidence, not native replay/idempotence execution. Contributed PRs #213, #214, #215 and new Oct. 23 afternoon PR #216 overlap on Code4rena/source-health observations and must not be promoted without deduplication, chronology and independent review; PR #216's UGREEN/Qloo eligibility, deadlines and prizes remain contributed claims, not independently verified by Repo Integrity.
 
 ## Known state / debt
 
@@ -83,8 +83,8 @@ Repository version: `v3.1.0` (README)
 - `scripts/build_agent_ops.py` expects the `Current research/intelligence state` and `Known state / debt` sections now supplied here; existing tests do not require these fields to be nonempty. Rebuild/CI is required before declaring the Agent Operations console fixed.
 - Pages push triggers omit `intelligence/**`; README `workspace/` navigation has no tracked target; 11 of 20 tools use undocumented `verified` maturity. The PwnSec case still describes an expired Sep. 12–13 competition window as current.
 - Preserve primary evidence and root artifact hashes before moving files. Filename screening found no obvious credential/private-key paths, but this is not a content secret audit. Actions use mutable tags; full supply-chain and security review remain outstanding.
-- Local clone/test execution remains blocked by DNS resolution. Oct. 23 Maintenance `39967810647` and Source Report `39978318791` passed on main. PR #212 head `d9c14a6c1490107fb8fe040f94d01db61a95b434` passed Core `39917791913` (Python 3.11/3.12/3.13) and Maintenance `39917791877`; any later documentation commit requires new exact-head CI.
-- Open PRs: 35; standalone open issues: zero. Draft PR #212 is the coordination lane; stale research PRs must reconcile current main and preserve compatible contributions.
+- Local clone/test execution remains blocked by DNS resolution. Oct. 23 main Maintenance `39967810647` and Source Report `39978318791` passed. PR #212 head `26c00d59aa2ba05c4bcea77e654eebe6698b2a71` passed Core `40011485695` (86 tests per Python 3.11/3.12/3.13) and Maintenance `40011485660`; any later documentation commit requires new exact-head CI. Actions logs still report Node.js deprecations.
+- Open PRs: 36 at Oct. 24 inspection (including new PR #216); standalone open issues: zero. Draft PR #212 is the coordination lane; stale research PRs must reconcile current main and preserve compatible contributions.
 
 ## Current operating priorities
 
@@ -97,4 +97,4 @@ Repository version: `v3.1.0` (README)
 
 ## Next handoff
 
-Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of research-only PR #211. Canonical source history remains through Aug. 29 afternoon. Oct. 23 scheduled Maintenance `39967810647` and Source Report `39978318791` passed on main; PR #212's preceding head `d9c14a6c` passed exact-head Core `39917791913`, but new documentation edits require fresh CI. PR #215 is contributed research only and overlaps #213/#214. No current-main Pages deployment or live browser rendering is verified. Next: rerun exact-head Core on PR #212, review and merge only if green, then stage the protected Aug. 30 morning five-record/five-registry replay with idempotence/non-rewind and post-merge Core/Pages verification before later chronology.
+Current `main` is `e3406be6fe981feee5c2ec8c3c79cca924792e67`, merge of research-only PR #211. Canonical source history remains through Aug. 29 afternoon (78 records). Oct. 23 main Maintenance `39967810647` and Source Report `39978318791` passed; PR #212 exact prior head `26c00d59` passed Core `40011485695` (86 tests per Python 3.11/3.12/3.13) and Maintenance `40011485660`. New Oct. 24 coordination edits require fresh exact-head CI. PR #216 is additional unpromoted research and overlaps #213/#214/#215 on Code4rena. The protected Aug. 30 morning snapshot passed five independent SHA-256/predecessor/ordering preflight checks but has not been natively replayed. No current-main Pages deployment or live browser rendering is verified. Next: verify PR #212 final diff and exact-head Core/Maintenance, review and merge only if green; then stage the Aug. 30 morning five-record/five-registry native replay with idempotence/non-rewind and post-merge Core/Pages checks before later chronology.
