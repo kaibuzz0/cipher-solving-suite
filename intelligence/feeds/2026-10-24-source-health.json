@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-24T07:46:10.888Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "purpose": "Preserve six real canonical-registry source checks and independently verified official-rule competition leads without leapfrogging the protected chronological source replay.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming oct 24 2026 | bsides peoria ctf oct 24 1445 to 2045 utc onsite casual | sudocrypt v16 online oct 27 0330 to oct 28 1530 utc | hi cyber con 2026 ctf online oct 30 1400 to nov 1 1400 utc | homepage lists hitcon rstcon and hacklu currently running online | no organizer verified payout from this index",
+      "sha256": "b7405b246d5ed620b7d0316276e76fd26ebde59300e4d45d12c4c6cfba7c4ff9",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Reviewed live upcoming and now-running CTFtime views. Event listings are discovery only, not authorized testing outside organizer challenge surfaces.",
+      "observed_at": "2026-10-24T07:46:10.888Z"
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent oct 24 2026 | newest batch fri oct 23 2026 51 entries | recent index total 272 entries | agentphishing and afterdeletebench already contributed via pr 215 | no fresh saturday batch or new paper promoted",
+      "sha256": "516624c42358e9bb1915a8c2ed8f5df8478ba56c2d49fe38e9050eabe15524bd",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Index reopened. No duplicate paper promoted; published abstracts are research leads, not independently reproduced results.",
+      "observed_at": "2026-10-24T07:46:10.888Z"
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bounties oct 24 2026 | monolith stablecoin factory most recently updated oct 23 2026 1644 local display | status live and maximum 20000 dola | aero last updated oct 21 2026 500000 usdc | public listings do not establish exact authorized scope or payout eligibility",
+      "sha256": "805ae3a95caf5b3182c19b79922ce3746adc928e5725dd9754f231fff1626b75",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Monolith updated since Oct 22 contributed evidence; scope tab content and full conditions not verified. No testing.",
+      "observed_at": "2026-10-24T07:46:10.888Z"
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena oct 24 2026 | legacy contests redirects to audits | official homepage says platform winding down and closing | bounties count zero | k2 submissions closed | rujira report in progress | no verified open audit submission window",
+      "sha256": "8485d11591253ee6b99d54791a38622885eca942ab36b986505ee52632038c8e",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "previous_canonical_checked_at": "2026-08-22T07:42:16Z",
+      "note": "Source migration and closure overlap existing PR 213; do not create duplicate source registry, mark for review not silent deletion.",
+      "observed_at": "2026-10-24T07:46:10.888Z"
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events oct 24 2026 | ethglobal mumbai in person nov 5 to nov 7 2026 apply to attend | pragma mumbai nov 6 2026 | ethonline sep 4 to sep 16 2026 now in past list | no new general online event eligible for immediate promotion",
+      "sha256": "ca2d08ce452d00b0a4a13c6f9caf1daa1e82174126cc9a87d3d8c89e6ecf0a6d",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "previous_canonical_checked_at": "2026-08-29T19:40:52Z",
+      "note": "Organizer calendar reopened; Mumbai is in-person and eligibility, acceptance and travel costs not established.",
+      "observed_at": "2026-10-24T07:46:10.888Z"
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usagov federal challenges oct 24 2026 | directory includes xtech kinetic reach as active lifecycle through nov 30 2026 with 1500000 cash prize headline | official army xtech kinetic reach page explicitly states phase 1 submission window closed jun 30 2026 | subsequent soldier exercise nov 9 to nov 20 and follow on contract windows are not new public entry opportunities",
+      "sha256": "f0905423c615f1d4d8b23fa33fd56413334fc174f95ea5ba19a88fbb93514f9c",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "previous_canonical_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Verified USA.gov directory and Army organizer page; high headline prize is not an open application. Organizer requires eligible businesses, TRL 6+, and CAGE/NCAGE before awards.",
+      "observed_at": "2026-10-24T07:46:10.888Z"
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Life After Code - GitLab Transcend Hackathon",
+      "category": "hackathon",
+      "status": "verified-official-rules-needs-participant-onboarding",
+      "source_id": null,
+      "source_url": "https://gitlab-transcend.devpost.com/rules",
+      "official_event_url": "https://gitlab-transcend.devpost.com/",
+      "checked_at": "2026-10-24T07:46:10.888Z",
+      "confidence": "high",
+      "relevance": "urgent",
+      "submission_window": "2026-10-05T10:00:00Z to 2026-10-27T13:00:00Z",
+      "entry_cost": "No purchase/payment required by official rules; compute/hosting costs not independently verified",
+      "prizes": "USD 45,000 aggregate cash: Path A $4k/$4k/$5k; Path B $4k/$4k/$5k; special $5k x2, $5k, $4k; one path prize plus one special prize max per project",
+      "eligibility": "Adults, qualifying individuals/teams/organizations; USA not listed as excluded. Geographic and promotion-entity restrictions apply; participant-specific status unverified.",
+      "requirements": "Register on Devpost and as GitLab contributor (about 24 business hours approval); use GitLab Duo Agent Platform; Path A new work after Oct 5 or Path B prior MIT-licensed project with new automation after Oct 5; public MIT-licensed GitLab repository, visible pipeline, working demo and public YouTube video under 3 minutes. Path B requires deployed public project until about Nov 16.",
+      "verification": "Directly reviewed organizer-managed Devpost official rules Sections 1,3,4,8 and event overview Oct 24. No signup, cloud account, build, submission or payout verified.",
+      "next_action": "Immediately check registration and GitLab contributor approval feasibility, GitLab Duo access, repository license and 72-hour implementation feasibility; do not claim the existing cipher suite is MIT licensed without checking. If feasible, build a separate authorized entry and structured case; otherwise retain as time-limited watch."
+    },
+    {
+      "title": "Codex x TwitchCon Hackathon",
+      "category": "hackathon",
+      "status": "verified-official-rules-needs-tool-and-participant-access",
+      "source_id": null,
+      "source_url": "https://twitchcon-codex.devpost.com/rules",
+      "official_event_url": "https://twitchcon-codex.devpost.com/",
+      "checked_at": "2026-10-24T07:46:10.888Z",
+      "confidence": "high",
+      "relevance": "high",
+      "submission_window": "2026-10-23 10:00 Pacific to 2026-11-02 14:00 Pacific (organizer schedule lists Nov 2 PST)",
+      "entry_cost": "No purchase/payment required by official rules; developer-tool, API and hosting costs not verified",
+      "prizes": "USD 25,000 total cash: first $10k, second $6k, third $4k, two runner-up $2.5k. In-person TwitchCon travel is not required to retain monetary prize; winners pay their own travel if attending.",
+      "eligibility": "Individuals 18+ or age of majority, teams; U.S. generally eligible subject to exclusions, sanctions and promotion-entity conflicts. Organizations not eligible.",
+      "requirements": "Project newly created within Oct 23-Nov 2 period, interactive experience connecting to Twitch built with OpenAI Codex; GitHub/GitLab/Bitbucket code repository, public YouTube demo under 3 minutes showing functioning Twitch integration and Codex use, description, Codex session ID, accessible project for judging. Prize subject to verification and taxes.",
+      "verification": "Directly reviewed official Devpost rules Sections 1,3,4,8 and official event overview Oct 24. No registration, Codex access, Twitch account or live integration verified.",
+      "next_action": "Check available Codex access and Twitch API/EventSub development constraints, account registration, demo hosting cost and time budget. Create an isolated new project only if requirements can be met; do not reuse pre-Oct 23 work as new."
+    },
+    {
+      "title": "USA.gov xTech Kinetic Reach active-lifecycle vs closed application",
+      "category": "source-health",
+      "status": "verified-closed-to-new-applicants",
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/challenges/xtech-kinetic-reach",
+      "primary_followup_url": "https://xtech.army.mil/competition/xtechkinetic-reach/",
+      "checked_at": "2026-10-24T07:46:10.888Z",
+      "confidence": "high",
+      "relevance": "useful",
+      "summary": "USA.gov advertises $1.5M in cash and an overall Nov 30 end date, but the Army organizer explicitly says submission window is closed and Phase 1 ran June 5-30. November is a finalist soldier exercise, not an open application window. Eligibility requires an established eligible business and TRL 6+ capabilities.",
+      "next_action": "Keep discovery listing but mark application closed; do not promote $1.5M as presently accessible prize money or create a new active case."
+    }
+  ],
+  "deduplication": "Compared against current main data/intelligence.json and data/opportunities.json and open PRs #213, #215 and #216. No existing Life After Code or TwitchCon research found via repository code/PR search; no duplicate arXiv/Code4rena/UGREEN/Qloo content promoted.",
+  "source_health": "Six official/registry source views opened. Code4rena is closing and redirects; Sherlock Monolith updated Oct 23; arXiv has no new Saturday batch; ETHOnline is historical; USA.gov active means lifecycle, not necessarily submissions open. All source registry timestamps remain canonical Aug 2026 and must not be advanced out of order.",
+  "integration_requirements": "Do not replay Oct 24 source observations until protected Aug 30 morning and intervening chronology are canonical. Build agent must independently verify hashes and predecessors, perform native replay and idempotence/non-rewind tests, then validate source-history/registry/intelligence/site-data/CI. If registration, access, or entry feasibility cannot be confirmed, route leads to data/integration_queue.json with exact missing checks. No new case or canonical feed record was created.",
+  "security": "No public asset, contract, repository or bounty listing was treated as authorization to test. No target testing, account registration, or payout claim was performed."
+}
