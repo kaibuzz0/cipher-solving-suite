@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-24T19:43:22.658Z",
+  "canonical_replay": false,
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_replay_gate": "2026-08-30T07:38:20Z",
+  "main_at_review": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "summary": "Six directly reviewed canonical sources; two primary-rule-verified cash competition leads. Observations are contributed research, not chronological canonical source checks.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "CTFtime upcoming on 2026-10-24: Sudocrypt v16.0 online 2026-10-27 03:30 UTC to 2026-10-28 15:30 UTC; HI Cyber Con 2026 CTF online 2026-10-30 14:00 UTC to 2026-11-01 14:00 UTC; HKCERT CTF 2026 qualifying online 2026-11-06 10:00 UTC to 2026-11-07 10:00 UTC.",
+      "content_fingerprint": "0cd0562754f6345f07b1951aa5087608637ec192e68b60687a8af21d3dad8a29",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "Aggregator calendar; organizer rules/prizes and participant status not verified. HKCERT already has an open research PR; do not duplicate."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arXiv cs.CR recent on 2026-10-24: latest listed submission batch Fri 2026-10-23 contains 51 entries; page shows 272 recent entries across 2026-10-19 through 2026-10-23. AfterDeleteBench 2610.31366 and AgentPhishing 2610.31404 are already contributed via PR 215.",
+      "content_fingerprint": "3040b762aa59668e4139155e6059fde7ec7c6e929929ff917f4f4f65ee6ca5de",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "No new research promoted; preprints are not reproduced findings."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "Sherlock bounties on 2026-10-24: most recent Monolith Stablecoin Factory 20,000 DOLA last updated 2026-10-23; Aero 500,000 USDC last updated 2026-10-21; Kamino 1,000,000 USDC last updated 2026-10-16. Directory lists maximum rewards, not guaranteed payouts or authorization.",
+      "content_fingerprint": "4c94a3efc5325a3fa42ac664a6fe86aa1d55c978322f525dfa860fb3491afd19",
+      "previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "Existing Monolith/Aero contributions; no scope reviewed or testing performed."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "Code4rena on 2026-10-24: /contests redirects to /audits; homepage says platform winding down and closing, zero bounties, submissions closed, K2 judging and Rujira report in progress. No open new audit verified.",
+      "content_fingerprint": "c4a4bf9c260b014087fab0377b225c928287d38debae89c564cca03aa4b116ea",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed",
+      "note": "Source migration/closure overlaps open PR 213; mark for review without deleting history."
+    },
+    {
+      "source_id": "challenge-gov",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "USA.gov federal challenge discovery on 2026-10-24 lists DARPA Surgical Competition, Documentation and Decision Support Sprint, NASA Human Lander Challenge, NOURISH, ACL Caregiver AI Prize Challenge, and xTech Kinetic Reach. Directory lifecycle status is not an open submission window.",
+      "content_fingerprint": "cfce1c97f0ad5a21cb850a64c7164c72929c7dd25ec78d58d7f69579153cccd1",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "No newly verified open federal application phase; avoid promoting expired phases."
+    },
+    {
+      "source_id": "algora-bounties",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "source_url": "https://algora.io/",
+      "observed": "Algora homepage on 2026-10-24 presents open-source engineer recruitment, customer stories, candidate matching and hiring workflows. No current public coding-bounty issue, claimability or verified reward was established from this homepage.",
+      "content_fingerprint": "a9b59e3556da4c53477ca38cb1a26799c4061331c258fcfd2c9c3b6c1937b1a4",
+      "previous_fingerprint": "db528ee8efafffc3b5a3725fc0ff0c604fe6dc2566a74afee008a8005f984ccb",
+      "canonical_predecessor_checked_at": "2026-08-18T07:38:11Z",
+      "change_state": "changed",
+      "note": "No bounty promotion; investigate whether canonical source has migrated to a more specific official URL."
+    }
+  ],
+  "findings": [
+    {
+      "id": "20261024-devpost-build-with-ai-basics",
+      "type": "hackathon",
+      "title": "Build With AI: Basics",
+      "status": "official-rules-reviewed; registration and submission not performed",
+      "source_id": "devpost-hackathons",
+      "canonical_source_note": "Devpost is present in data/opportunities.json, not among the 16 recurring source IDs; do not invent a registry source ID. Consider devpost platform source only through reviewed registry change.",
+      "source_url": "https://learn-ai-basics.devpost.com/rules",
+      "tool_repo": "https://github.com/challengepost/learn-ai-basics",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "submission_deadline": "2026-10-26T21:00:00Z",
+      "entry_cost": "no purchase/payment necessary; development costs not assessed",
+      "prize_cash_usd_total": 2500,
+      "prize_breakdown_usd": [
+        1250,
+        750,
+        500
+      ],
+      "noncash": "profile features and participation badges/roles",
+      "eligibility": "adults at local age of majority, eligible teams and organizations; sanctions/geographic and organizer/judge conflict exclusions",
+      "scope": "new functioning software project created within Sep 22-Oct 26 period using Devpost Learn Skill Pack; required planning documents scope.md/prd.md/spec.md; public licensed repo, under-3-minute public demo video",
+      "confidence": "high on published rules; unknown participant readiness",
+      "relevance": "urgent if registered and can finish in time; otherwise watch",
+      "license_verification": "challengepost/learn-ai-basics public, MIT, not archived, last pushed 2026-10-05 (GitHub API checked 2026-10-24)",
+      "missing_verification": [
+        "participant registration and account eligibility",
+        "local Git/Node/coding-agent availability and clean-room project feasibility",
+        "actual project, demo and submission completion"
+      ],
+      "next_action": "Verify personal registration/tool access immediately; create a new isolated project only if feasible before Oct 26 21:00 UTC; do not submit existing suite as newly built."
+    },
+    {
+      "id": "20261024-renderjuice-speed-blender-contest",
+      "type": "coding-art-competition",
+      "title": "RenderJuice Blender Animation and Programmatic Rendering Contest",
+      "status": "official-contest-rules-reviewed; no registration",
+      "source_url": "https://programmatic-rendering-contest.devpost.com/rules",
+      "general_terms_url": "https://www.renderjuice.com/contests/terms",
+      "checked_at": "2026-10-24T19:43:22.658Z",
+      "submission_deadline": "2026-10-31T23:59:00Z",
+      "deadline_note": "Contest-specific rules say Oct 31 23:59 UTC; Devpost page header says Nov 1 00:00 UTC. Use earlier official rules deadline, do not wait for final minute.",
+      "entry_cost": "free account and Discord membership; no required paid subscription per general terms",
+      "prize_cash_usd_total": 1500,
+      "prize_credits_usd_total": 3500,
+      "prize_breakdown_usd": "$500/$250/$150 major awards plus six $100 specialty/community awards; nine cash prizes total",
+      "eligibility": "18+ globally subject to applicable law/geographic exclusions, no organizer/judge households",
+      "scope": "new 5-30 second Blender animation about Speed; procedural Blender Python allowed; official entry via RenderJuice Discord, Devpost mirror alone insufficient; WIP image and rights/AI disclosure required",
+      "confidence": "high on posted rules, medium on practical eligibility",
+      "relevance": "useful niche option, lower relevance to cipher suite",
+      "missing_verification": [
+        "participant free RenderJuice account and Discord access",
+        "Blender development capacity, rights/asset disclosure, project feasibility",
+        "prize payment logistics and successful Discord submission"
+      ],
+      "next_action": "Only consider if Blender Python skill and time exist; use Discord official entry before Oct 31 23:59 UTC."
+    }
+  ],
+  "source_health_alerts": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 from direct fetch 2026-10-24",
+      "action": "investigate official replacement URL; do not mark successful or delete source"
+    },
+    {
+      "source_id": "ethglobal-events",
+      "url": "https://ethglobal.com/events",
+      "result": "direct calendar fetch timed out; separate official Mumbai sponsor page confirms Nov 5-7 dates",
+      "action": "do not fingerprint as full calendar check"
+    },
+    {
+      "source_id": "code4rena-contests",
+      "result": "closing and /contests -> /audits migration",
+      "action": "coordinate with PR 213; preserve canonical ID/history"
+    }
+  ],
+  "deduplication": "No matching Build With AI Basics or RenderJuice entries in main code search or open PR 215-217 descriptions; catalog remains platform-only, not event-specific.",
+  "validation": {
+    "sha256_method": "SHA-256 of exact ASCII observed strings; JS implementation self-tested with abc standard vector",
+    "fingerprint_count": 6,
+    "canonical_registry_or_history_modified": false,
+    "repository_native_validators": "not run on research-only contribution; PR CI required"
+  },
+  "integration_instructions": "Research-only PR: do not replay out of chronological order. Build agent first completes protected Aug 30 morning native replay; later independently re-open official rules, reconcile existing queue and source history, add verified intelligence/opportunity and structured case if participant-actionable, rebuild site-data. No external security target testing authorized."
+}
