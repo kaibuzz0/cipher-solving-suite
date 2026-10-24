@@ -84,7 +84,7 @@ Repository version: `v3.1.0` (README)
 - Pages push triggers omit `intelligence/**`; README `workspace/` navigation has no tracked target; 11 of 20 tools use undocumented `verified` maturity. The PwnSec case still describes an expired Sep. 12–13 competition window as current.
 - Preserve primary evidence and root artifact hashes before moving files. Filename screening found no obvious credential/private-key paths, but this is not a content secret audit. Actions use mutable tags; full supply-chain and security review remain outstanding.
 - Local clone/test execution remains blocked by DNS resolution. Oct. 23 main Maintenance `39967810647` and Source Report `39978318791` passed. PR #212 head `26c00d59aa2ba05c4bcea77e654eebe6698b2a71` passed Core `40011485695` (86 tests per Python 3.11/3.12/3.13) and Maintenance `40011485660`; any later documentation commit requires new exact-head CI. Actions logs still report Node.js deprecations.
-- Open PRs: 36 at Oct. 24 inspection (including new PR #216); standalone open issues: zero. Draft PR #212 is the coordination lane; stale research PRs must reconcile current main and preserve compatible contributions.
+- Open PRs: 37 at Oct. 24 inspection (including new PR #216); standalone open issues: zero. Draft PR #212 is the coordination lane; stale research PRs must reconcile current main and preserve compatible contributions.
 
 ## Current operating priorities
 
