@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-25T07:45:16Z",
+  "agent": "research-intelligence-pass",
+  "canonical_replay": false,
+  "main_at_review": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_cutoff": "2026-08-29T19:40:52Z",
+  "next_replay_gate": "2026-08-30T07:38:20Z",
+  "summary": "Six directly checked registered source surfaces and one newly screened, official-rule-verified cash competition; no canonical freshness, opportunity, intelligence, case, or website updates.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "observed": "CTFtime upcoming on 2026-10-25: Sudocrypt v16.0 online Oct 27 03:30 UTC to Oct 28 15:30 UTC; HI Cyber Con 2026 CTF online Oct 30 14:00 UTC to Nov 1 14:00 UTC; several Oct 30-31 finals are prequalified or in-person.",
+      "content_fingerprint": "1a774bc6050fae184b73562253e8eb5c508f5637aaccdf8ca34b3bb48f92b4cf",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "Calendar only; no organizer prize or entry-cost verification for these events."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "observed": "arXiv cs.CR recent on 2026-10-25: latest batch Fri Oct 23 has 51 entries; 272 total entries across Oct 19-23; AfterDeleteBench 2610.31366 and AgentPhishing 2610.31404 already contributed in PR 215; no new Sunday batch.",
+      "content_fingerprint": "a660da32d432020316aabf1c1fd9928f557565dbf9a1c8716abad0f8338246eb",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "No new paper independently promoted; preprints do not establish reproduced results."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "observed": "Sherlock bug bounties on 2026-10-25: most recent Monolith Stablecoin Factory payout maximum 20000 DOLA last updated Oct 23; Aero 500000 USDC updated Oct 21; Kamino 1000000 USDC updated Oct 16. Directory payout maximum is not guaranteed compensation or testing authorization.",
+      "content_fingerprint": "fb69ae2dfa8656c306f7286367cc7fc77f63f91328c2132163f070d855caeea7",
+      "previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "No new program beyond existing contributions; exact scope/exclusions not checked and no testing performed."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "observed": "Code4rena on 2026-10-25: legacy /contests redirects to /audits; submissions closed; K2 audit judging and Rujira report in progress; no open new audit submission window verified.",
+      "content_fingerprint": "3a32e885dc842d1348a487cc61cdad6166f3767122d8c8db613f7e15c558b247",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed",
+      "note": "URL migration and platform closure overlap existing PR 213; preserve source ID and history, mark migration review rather than delete."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "observed": "ETHGlobal events on 2026-10-25: upcoming ETHGlobal Mumbai in-person hackathon Nov 5-7 2026; ETHOnline Sep 4-16 is in past events; official calendar lists Pragma Mumbai Nov 6 and ETHConf 2027 Jun 14-16.",
+      "content_fingerprint": "427eaeaf1055ba9d86af3fcdf3e086bb38c74ba88d4cf08a934bc1f480acc654",
+      "previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "canonical_predecessor_checked_at": "2026-08-29T19:40:52Z",
+      "change_state": "changed",
+      "note": "Application eligibility, travel and prize terms not verified; no new active case."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "observed": "USA.gov federal challenge directory on 2026-10-25 lists DARPA Surgical Competition, Documentation and Decision Support Sprint, NASA Human Lander Challenge, NOURISH Autoimmunity Digital Health Challenge, Ready Set ID the Biothreat, NASA TechRise student challenge, and ACL Caregiver AI Prize; directory listing is not evidence of an open application phase.",
+      "content_fingerprint": "28215285fa38260d574a5cc748fa0298ecab966ff05e718415203e8fb0591428",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed",
+      "note": "xTech Kinetic Reach no longer visible in fetched directory; prior official Army deadline already closed; do not infer newly open submissions from directory."
+    }
+  ],
+  "findings": [
+    {
+      "id": "20261025-learn-ar-with-specs",
+      "type": "hackathon",
+      "title": "Learn AR with SPECS (Snap/Devpost)",
+      "status": "official-rules-verified; participant readiness unknown",
+      "source_url": "https://learn-specs.devpost.com/rules",
+      "resources_url": "https://learn-specs.devpost.com/resources",
+      "organizer_update_url": "https://learn-specs.devpost.com/updates",
+      "tool_repo": "https://github.com/challengepost/learn-specs",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "submission_deadline": "2026-11-09T22:00:00Z",
+      "registration_open": "2026-10-15T14:00:00Z",
+      "entry_cost": "no purchase or payment necessary; Lens Studio is free, but participant hardware/compute and incidental costs not verified",
+      "prize_cash_usd_total": 2500,
+      "prize_breakdown_usd": [
+        1250,
+        750,
+        500
+      ],
+      "eligibility": "adults at age of majority; qualifying teams/organizations; excludes certain jurisdictions including Brazil and Quebec, sanctioned territories, organizer/judge affiliates and conflicts",
+      "scope": "New SPECS AR Lens created Oct 15-Nov 9, planned with Devpost Learn skill pack and built with CLAD, Lens Studio, Lens Studio MCP; must run in Lens Studio preview; public source repo, description, under-3-minute public YouTube demonstration required; no physical glasses needed",
+      "tool_requirements": "Windows 11 or macOS 12+ computer, Lens Studio 5.22+, Node.js, Git, coding agent with skills and CLAD; verify actual hardware/tool access",
+      "implementation_license": "challengepost/learn-specs is public, not archived; MIT LICENSE text independently read via GitHub connector",
+      "source_update": "Organizer update around Oct 22 reports CLAD login readiness issue and recommends Lens Studio 5.23.2 downgrade if encountered; this is organizer advice, not locally reproduced",
+      "confidence": "high on official published rules and public MIT license; participant eligibility/tool access unknown",
+      "relevance": "useful agent-assisted build opportunity, lower monetary value than previously contributed GitLab/TwitchCon/UGREEN/Qloo leads",
+      "missing_verification": [
+        "actual participant registration and geographic/legal eligibility",
+        "Windows 11/macOS 12+ hardware, Node/Git/Lens Studio/CLAD access and working preview",
+        "new project implementation feasibility, demo and submission completion",
+        "any account costs or tool terms not covered by no-entry-fee clause"
+      ],
+      "next_action": "Only if participant tooling is available, verify registration and run Lens Studio/CLAD preview smoke test; develop a new isolated Lens before Nov 9 22:00 UTC; do not relabel existing cipher suite code as new."
+    },
+    {
+      "id": "20261025-dakar-bitcoin-eligibility-screen",
+      "type": "screened-out-hackathon",
+      "title": "Dakar Bitcoin Hack by BTrust: Africa residency restriction",
+      "status": "not a general US-accessible opportunity",
+      "source_url": "https://dakar-bitcoin-hack-2026.devpost.com/rules",
+      "checked_at": "2026-10-25T07:45:16Z",
+      "submission_window": "2026-10-26T08:00:00Z to 2026-11-20T20:00:00Z",
+      "prizes": "500000/250000/100000 sats; Devpost header describes about $900 in crypto, exchange value variable",
+      "eligibility": "official rules say participants should reside in Africa; Devpost landing-page generic geographic label is broader and should not override specific rules; landing page also marks students only",
+      "confidence": "high on organizer-published rule text; any exception requires organizer confirmation",
+      "relevance": "exclude from general US opportunity shortlist",
+      "next_action": "Do not promote or create an active case absent confirmed Africa residency/student eligibility."
+    }
+  ],
+  "source_health_alerts": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 on direct fetch",
+      "action": "find official replacement before registry migration; do not mark successful check"
+    },
+    {
+      "source_id": "code4rena-contests",
+      "result": "/contests redirects to /audits and submissions closed",
+      "action": "coordinate with existing PR 213; do not duplicate migration or delete historical records"
+    }
+  ],
+  "deduplication": "Main intelligence/opportunity catalogs contain no event-specific Learn AR with SPECS record; existing open research PRs 215-218 cover other competitions and agent papers. Devpost already exists as a platform discovery catalog entry; no new recurring source ID created.",
+  "validation": {
+    "hash_method": "SHA-256(observed.trim().toLowerCase()) of exact ASCII observation text",
+    "hash_count": 6,
+    "sha256_self_test_abc": true,
+    "source_history_mutated": false,
+    "source_registry_mutated": false,
+    "repo_native_validators": "not executed locally; PR Core required"
+  },
+  "integration_instructions": "Keep noncanonical until protected Aug 30 morning replay and intervening chronological snapshots are integrated. Build agent should independently re-open organizer rules, reconcile any later source checks and existing integration queue, then promote only if participant readiness is established. No external target testing was performed or authorized."
+}
