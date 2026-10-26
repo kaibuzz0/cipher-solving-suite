@@ -1,0 +1,35 @@
+{
+  "case_id": "20261026-tool-evidence-deference",
+  "name": "Tool-Evidence Deference in AI Vulnerability Auditors",
+  "type": "research",
+  "status": "triage",
+  "created_at": "2026-10-26T19:43:11Z",
+  "updated_at": "2026-10-26T19:43:11Z",
+  "source": "ZhiHong Liu and Shuyao Gao, arXiv and author replication repository",
+  "source_url": "https://arxiv.org/abs/2610.32876",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "ai-agent",
+    "defensive-research",
+    "static-analysis",
+    "prompt-injection",
+    "provenance",
+    "offline-only"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-26-afternoon-source-health.json",
+      "role": "contributed-official-source-observations",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261026-tool-evidence-deference/evidence/README.md",
+      "role": "paper-code-license-and-reproduction-provenance"
+    }
+  ],
+  "testing_status": "none; synthetic local fixtures only, no real targets",
+  "research_claim_status": "paper and MIT code verified; author performance claims not reproduced",
+  "next_action": "Confirm PrimeVul and Zenodo data licensing, run pinned author unit tests in isolated environment, design offline synthetic fixtures with false assurances and false alarms, verify claims independently, and record evidence before moving from triage."
+}

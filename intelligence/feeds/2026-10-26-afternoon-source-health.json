@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-26T19:43:11Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "summary": "Six real registered-source reviews and one new independently sourced agent-audit reliability research case; no canonical source freshness, published intelligence, or opportunity catalog advanced.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "checked_at": "2026-10-26T19:43:11Z",
+      "observed": "ctftime upcoming 2026-10-26 afternoon | sudocrypt v16 2026-10-27 03:30 UTC to 2026-10-28 15:30 UTC online | HI Cyber Con CTF 2026-10-30 14:00 UTC to 2026-11-01 14:00 UTC online | Srdnlen Finals 2026-10-29 prequalified | no new generally accessible cash CTF verified beyond existing PR 222",
+      "content_fingerprint": "1e15b92abbbf4962e16f7ef1cd7938c086483c1a6ba9b0b27754a8774f48f7c6",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Calendar reviewed. HI Cyber Con already covered by PR 222; team counts are volatile and not used as stable observation state."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "checked_at": "2026-10-26T19:43:11Z",
+      "observed": "arxiv cs.CR recent 2026-10-26 afternoon | Monday Oct 26 batch 38 entries | 263 total recent entries | 2610.32876 trusting the tool static-analysis evidence deference MIT code | 2610.32531 near-target prompt injection benchmark already noted PR 222 | 2610.32453 smart contract task mutation",
+      "content_fingerprint": "7118f06dffc51a9a76c7e2f50d7e54d867db6b18b140c1fdf5f7df21d1028716",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Paper existence and code/license verified on author and GitHub primary sources; author-reported metrics are not independently reproduced."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "checked_at": "2026-10-26T19:43:11Z",
+      "observed": "sherlock bounties 2026-10-26 afternoon | most recent Monolith Stablecoin Factory updated 2026-10-23 max 20000 DOLA | Aero updated 2026-10-21 max 500000 USDC | no newer listing identified | listing is not testing authorization",
+      "content_fingerprint": "13687bebef510f97cd55283410946aff711ebaad0220d62063821260c8439378",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "No new program since prior research; complete in-scope assets, exclusions, safe-harbor and payout rules not checked."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "checked_at": "2026-10-26T19:43:11Z",
+      "observed": "code4rena 2026-10-26 afternoon | legacy contests redirects to audits | official closure notice says winding down after five years | K2 judging submissions closed | Rujira report in progress submissions closed | no open audit window verified",
+      "content_fingerprint": "edcbd378b619b67caa721190b9e81db3fd2637a9419ed394d8df79bfd8a631ff",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Duplicate of PR 213 source migration; recommend closure review retaining historical source ID and records."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "checked_at": "2026-10-26T19:43:11Z",
+      "observed": "usa gov challenges 2026-10-26 afternoon | directory lists DARPA Surgical Competition | Documentation and Decision Support Sprint | NASA Human Lander Challenge | NOURISH | xTech Kinetic Reach | directory presence does not verify that entry is open",
+      "content_fingerprint": "e71c20e8d49b237ea73661d1db4c1d36e58d19c739959337c58d06c4a9e3db9e",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Official discovery directory reviewed. No new federally open entry phase independently confirmed."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "checked_at": "2026-10-26T19:43:11Z",
+      "observed": "ethglobal events 2026-10-26 afternoon | upcoming ETHGlobal Mumbai in person 2026-11-05 to 2026-11-07 | Pragma Mumbai 2026-11-06 | ETHOnline Sep 4-16 2026 now past | no new online ETHGlobal cash opportunity verified",
+      "content_fingerprint": "6e4b337eed854c2e3b8d547758bb197aa9cff855cb6ce11e98220940809ed457",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "canonical_predecessor_checked_at": "2026-08-29T19:40:52Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Official calendar reviewed; participant travel, eligibility and prize claims not independently verified."
+    }
+  ],
+  "failed_or_unresolved_source_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 on direct retrieval 2026-10-26; no successful check recorded",
+      "next_action": "Locate a currently functioning official Topcoder challenge index and verify active listing before changing registry URL; retain historical checks."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261026-trusting-tool-deference",
+      "type": "research",
+      "title": "Trusting the Tool: LLM auditors may over-trust fabricated static-analysis assurances",
+      "official_paper": "https://arxiv.org/abs/2610.32876",
+      "paper_submitted": "2026-10-23T16:45:10Z",
+      "official_code": "https://github.com/lzh0082-cloud/CODE-DETECTION",
+      "code_commit": "7d7123df073e1cce224c4e47c4d698b1e6ebc470",
+      "code_license": "MIT (LICENSE independently fetched via GitHub connector)",
+      "code_status": "public, non-archived; author repo contains tests and reproduction instructions",
+      "claim": "Authors report 916 vulnerable/patched function pairs, 16572 model audits, up to 19 percentage-point lower vulnerability detection under false assurances, and a 12-point improvement in one pre-specified verify-show test.",
+      "claim_status": "author-reported only; no independent experimental replication",
+      "data_requirements": "PrimeVul data not redistributed; separately licensed. Full records and LLM response cache archived separately on Zenodo per author README; access and license not independently checked.",
+      "authorization": "Offline synthetic code and mocked tool outputs only. No real target or third-party scanning authorized.",
+      "confidence": "high for paper/code/license existence; low for independently reproduced efficacy",
+      "relevance": "high",
+      "related_case": "research/active-puzzles/20261026-tool-evidence-deference/case.json",
+      "next_action": "Build agent: run repository unit tests on pinned commit in isolated environment, verify PrimeVul and archive licensing, then design deterministic synthetic tests for fabricated assurances versus alarms and claim-by-claim verification. No network targets."
+    },
+    {
+      "id": "20261026-build-ai-basics-deadline",
+      "type": "existing-opportunity-deadline-check",
+      "title": "Build With AI: Basics closes October 26 at 5pm EDT",
+      "official_rules": "https://learn-ai-basics.devpost.com/rules",
+      "deadline": "2026-10-26T21:00:00Z",
+      "entry_cost": "no purchase required",
+      "eligibility": "qualifying adults; location exclusions",
+      "prize": "previously verified 2500 USD cash total; no new prize claim",
+      "deduplication": "Already covered by merged PR 211 and research PR 218; do not duplicate canonical opportunity or case",
+      "participant_status": "registration and completed project unknown",
+      "next_action": "Do not treat as actionable without a participant who already has a qualifying new project, public repo, planning documents and demo video; deadline is imminent."
+    }
+  ],
+  "source_health": [
+    {
+      "source_id": "code4rena-contests",
+      "status": "redirected-and-winding-down",
+      "review": "PR 213 already covers migration; do not duplicate; preserve history"
+    },
+    {
+      "source_id": "topcoder-challenges",
+      "status": "failed-retrieval-404",
+      "review": "Do not mark checked; verify official successor"
+    }
+  ],
+  "deduplication": "Current main 13 intelligence items, 21 opportunity directory entries, 78 canonical source checks; research PR 222 covers KnotScryer, MCP provenance, HI Cyber Con and mentions NTBench. New contribution focuses on distinct Trusting the Tool evidence-deference methodology. No new cash opportunity met full verification threshold.",
+  "validation": {
+    "fingerprint_method": "SHA-256(observed.trim().toLowerCase())",
+    "fingerprint_count": 6,
+    "hash_implementation": "Pure JavaScript SHA-256 checked against abc, empty string and hello world standard vectors",
+    "native_repo_tests": "not run locally (container has no GitHub network access); PR CI required",
+    "source_registry_mutated": false,
+    "source_history_mutated": false,
+    "pages_data_mutated": false
+  },
+  "integration_instructions": "Preserve Aug 30 morning chronological replay first. Review this snapshot as contributed evidence only. Independently verify code/data licenses and offline reproducibility; triage the structured case through integration queue. Do not paste raw claims into canonical intelligence without checking and deduplicating. PR 212 owns docs/AGENT_HANDOFF.md and ops/CURRENT_STATE.md; append coordination updates after reconciliation, not by overwriting concurrent work."
+}
