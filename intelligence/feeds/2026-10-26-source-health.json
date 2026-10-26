@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-26T07:57:54.443Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "canonical_replay": false,
+  "publication_state": "contributed research only; no canonical freshness or feed promotion",
+  "purpose": "October 26 official-source checks and verified CTF/agent-security opportunity triage; preserve chronological replay boundary",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-10-26 | sudocrypt v16 2026-10-27 03:30 UTC to 2026-10-28 15:30 UTC online hack quest | HI Cyber Con 2026 CTF 2026-10-30 14:00 UTC to 2026-11-01 14:00 UTC online jeopardy | in-person and prequalified finals are not generic open opportunities",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "followup_urls": [
+        "https://ctftime.org/event/3460",
+        "https://hicybercon.hiddeninvestigations.net/ctf",
+        "https://ctftime.org/event/3443",
+        "https://sudocrypt.com/"
+      ],
+      "note": "Reviewed calendar and followed organizer pages. HI Cyber Con explicitly supports a separate Agentic AI division; organizer-issued challenges only. Sudocrypt official site requires teams of 3 and advertises INR cash awards, so do not assume individual participation.",
+      "checked_at": "2026-10-26T07:57:54.443Z",
+      "sha256": "e605f75877d2b509a6fbabbe1808d8164c3860fb5cffa736e28d69d575ec61ec"
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.CR recent 2026-10-26 | Monday batch 38 entries | 263 entries across recent pages | 2610.32155 agent skill capability-flow composition | 2610.31974 MCP decode-time provenance binding | 2610.32531 near-target prompt injection benchmark",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "followup_urls": [
+        "https://arxiv.org/abs/2610.32155",
+        "https://arxiv.org/abs/2610.31974",
+        "https://arxiv.org/abs/2610.32531"
+      ],
+      "note": "Paper existence and author-reported abstract results verified on arXiv. No reproduction performed; do not treat preprint benchmarks as independently established.",
+      "checked_at": "2026-10-26T07:57:54.443Z",
+      "sha256": "1fd1d2de347e9f71c5c6586cfef5a23b1110de7c4b923ed9d7422f46275b2b09"
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties 2026-10-26 | most recent Monolith Stablecoin Factory last updated 2026-10-23 max 20000 DOLA | Aero last updated 2026-10-21 max 500000 USDC | listings alone do not establish testing authorization",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "No newer bounty than Monolith identified. No scope or exclusions reviewed; no testing conducted.",
+      "checked_at": "2026-10-26T07:57:54.443Z",
+      "sha256": "be03b44afa5c68dbb5ced50f7f0f8db4e241def3abec0201fd8cecb3aae26179"
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena 2026-10-26 | legacy /contests redirects to /audits | official homepage says winding down and closing after five years | audit submissions closed | no new open contests verified",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "followup_urls": [
+        "https://code4rena.com/",
+        "https://code4rena.com/audits"
+      ],
+      "note": "Closure and URL migration are already represented in earlier contributed research PR #213. Recommend review/disable or redirect in canonical registry when chronology permits; do not delete history.",
+      "checked_at": "2026-10-26T07:57:54.443Z",
+      "sha256": "d367697e92431c22be4bc9a00860e990cd26271ab86ef61b849a8dff0bc1a4cb"
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active challenges 2026-10-26 | directory still lists Ready Set ID the Biothreat Challenge despite displayed end 2026-10-21 12:00 ET | a directory listing does not establish an open application phase",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "followup_urls": [
+        "https://www.usa.gov/challenges/ready-set-id-biothreat"
+      ],
+      "note": "Checked official federal directory and linked listing; not promoted as an active opportunity because its stated end date has passed.",
+      "checked_at": "2026-10-26T07:57:54.443Z",
+      "sha256": "5dcc13aa38066962ecdbbfc70cdded3a3bbf738bb4b2bb3e1e0bfe50a0954149"
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events 2026-10-26 | next featured ETHGlobal Mumbai 2026-11-05 to 2026-11-07 in-person India | ETHOnline 2026 Sep 4-16 appears under past | no new online ETHGlobal event verified",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Official calendar checked. Mumbai is an in-person event, not an accessible remote cash opportunity without travel/acceptance verification.",
+      "checked_at": "2026-10-26T07:57:54.443Z",
+      "sha256": "6f501095c3cca505a86f68a4dda304f31dc15fcf0936820961f64816391db870"
+    }
+  ],
+  "failed_or_unresolved_source_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 from direct retrieval",
+      "note": "Do not record as successful check or delete source; official Topcoder help still links this path. Find supported successor before proposing migration."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261026-hi-cybercon-agentic-ctf",
+      "title": "HI Cyber Con 2026 CTF: Agentic AI division and 2500 USD cash pool",
+      "category": "ctf",
+      "source_id": "ctftime-upcoming",
+      "official_url": "https://hicybercon.hiddeninvestigations.net/ctf",
+      "discovery_url": "https://ctftime.org/event/3460",
+      "event_start": "2026-10-30T14:00:00Z",
+      "event_end": "2026-11-01T14:00:00Z",
+      "cash_prize_total_usd": 2500,
+      "cash_breakdown_usd": [
+        1000,
+        700,
+        500,
+        200,
+        100
+      ],
+      "entry_cost": "free",
+      "eligibility": "official organizer says worldwide and teams of 1-5; participant registration not independently established",
+      "scope": "Only organizer-issued challenges on official competition platform and only under live event rules; Agentic AI division permits AI-assisted solving, but infrastructure/rate-limit/fair-play rules still apply",
+      "confidence": "high",
+      "relevance": "high",
+      "related_case": "research/active-puzzles/20261026-hi-cyber-con-2026-ctf/case.json",
+      "next_action": "Before start, register and explicitly select Agentic AI division, read live platform rules and exact challenge scope, then work only on issued challenges. No registration or testing performed."
+    },
+    {
+      "id": "20261026-knot-scryer-skill-composition",
+      "title": "KnotScryer: insecure compositions of individually clean agent skills",
+      "category": "research",
+      "source_id": "arxiv-cryptography",
+      "official_url": "https://arxiv.org/abs/2610.32155",
+      "paper_submitted": "2026-10-23",
+      "claim": "Authors report 612 insecure skill compositions from 13598 skills; experiments and results not independently reproduced",
+      "confidence": "high for publication; unverified for efficacy",
+      "relevance": "high",
+      "next_action": "Review full paper and availability/license of any implementation; compare with existing agent-security research and design offline synthetic capability-flow regression fixtures. Do not import unlicensed code."
+    },
+    {
+      "id": "20261026-mcp-decode-provenance",
+      "title": "Decode-time provenance binding for MCP tool outputs",
+      "category": "research",
+      "source_id": "arxiv-cryptography",
+      "official_url": "https://arxiv.org/abs/2610.31974",
+      "code_url": "https://github.com/ericyoc/stego_provenance_defense",
+      "paper_submitted": "2026-10-22",
+      "claim": "Authors report zero attack success in their mediated testbed; no independent reproduction",
+      "code_review": "Public GitHub repository non-archived, last pushed 2026-10-24; GitHub license field null and no root LICENSE observed",
+      "confidence": "high for paper/repository existence; unverified for effectiveness",
+      "relevance": "high",
+      "next_action": "Confirm implementation license and dependencies; do not copy code without license; evaluate only offline synthetic image/tool-output fixtures after overlap review."
+    },
+    {
+      "id": "20261026-opencv-prize-correction",
+      "title": "OpenCV AI Competition 2026 prize pool misclassified as cash",
+      "category": "opportunity-screening",
+      "official_urls": [
+        "https://opencv26.devpost.com/rules",
+        "https://opencv26.devpost.com/",
+        "https://opencv.org/opencv-ai-competition-2026/"
+      ],
+      "cash_prize_total_usd": 12000,
+      "aws_credits_total_usd": 8250,
+      "advertised_headline_usd": 20250,
+      "deadline_discrepancy": "Devpost banner Oct 26 11:45pm PDT; overview and organizer update Oct 26 11:59pm Pacific",
+      "registration_discrepancy": "OpenCV organizer page says registration closed Aug 17; Devpost Join button visible but late acceptance not established",
+      "requirements": "OpenCV 5 substantive computer vision and meaningful AWS component; grant applications already processed",
+      "confidence": "high for cash/credits split; low for late eligibility",
+      "relevance": "useful",
+      "next_action": "Do not promote as a new entrant opportunity; obtain direct confirmation of late registration and final deadline if participant already registered. Avoid presenting 20250 as cash."
+    }
+  ],
+  "integration_notes": [
+    "No canonical source-history replay: protected Aug 30 morning five-source snapshot is still next chronological gate.",
+    "This contribution intentionally does not alter data/intelligence_sources.json, data/source_check_history.json, data/intelligence.json, data/opportunities.json or data/integration_queue.json.",
+    "PR #212 owns coordination-state files and PR #221 owns Pages workflow trigger changes; avoid overlapping them.",
+    "Review new papers against existing agent-security contributions before creating duplicate engineering cases.",
+    "The structured CTF case is triage-only, not proof of participant registration or authorization to test any external system."
+  ]
+}
