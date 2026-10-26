@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-26T19:43:11Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,24 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261026-afternoon-tool-evidence-deference-research",
+      "type": "research",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass (scheduled role)",
+      "branch_or_pr": "research/2026-10-26-afternoon-tool-evidence-deference",
+      "path": "intelligence/feeds/2026-10-26-afternoon-source-health.json; research/active-puzzles/20261026-tool-evidence-deference/case.json",
+      "purpose": "Evaluate independently sourced research on false static-analysis assurances causing LLM auditor deference; stage defensive offline reproducibility without trusting author metrics.",
+      "summary": "arXiv 2610.32876 and author CODE-DETECTION GitHub replication package independently checked. MIT code license verified. Structured triage case records only offline synthetic test authorization. Six source observations are preserved but not canonically replayed.",
+      "verification": "Official arXiv abstract, GitHub repository README, MIT LICENSE, pinned commit 7d7123d, six official source pages reviewed; six SHA-256 fingerprints computed from exact observed strings. No paper results reproduced; no repository-native tests run in this runtime.",
+      "risks": [
+        "Paper performance results are author-reported, not independently replicated.",
+        "PrimeVul and archived run-record datasets have separate unverified licensing/access; do not import automatically.",
+        "No live target testing is authorized.",
+        "Chronological source-history replay is still blocked at Aug 30 morning; PR 212 owns coordination documents."
+      ],
+      "next_action": "Build/integration agent: independently validate all six hashes and canonical predecessors, run offline author tests with pinned dependencies, verify dataset/archive licenses, compare existing agent-security cases, and add deterministic synthetic assurance/alarm fixtures. Reconcile current main, run source/queue/case/site-data/Core validation, then decide whether to promote to active research. Do not advance source history ahead of Aug 30 morning."
     }
   ]
 }
