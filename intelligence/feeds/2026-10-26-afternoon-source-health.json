@@ -18,7 +18,8 @@
       "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
       "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
       "change_state": "changed-versus-canonical",
-      "note": "Calendar reviewed. HI Cyber Con already covered by PR 222; team counts are volatile and not used as stable observation state."
+      "note": "Calendar reviewed. HI Cyber Con already covered by PR 222; team counts are volatile and not used as stable observation state.",
+      "sha256": "1e15b92abbbf4962e16f7ef1cd7938c086483c1a6ba9b0b27754a8774f48f7c6"
     },
     {
       "source_id": "arxiv-cryptography",
@@ -29,7 +30,8 @@
       "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
       "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
       "change_state": "changed-versus-canonical",
-      "note": "Paper existence and code/license verified on author and GitHub primary sources; author-reported metrics are not independently reproduced."
+      "note": "Paper existence and code/license verified on author and GitHub primary sources; author-reported metrics are not independently reproduced.",
+      "sha256": "7118f06dffc51a9a76c7e2f50d7e54d867db6b18b140c1fdf5f7df21d1028716"
     },
     {
       "source_id": "sherlock-bounties",
@@ -40,7 +42,8 @@
       "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
       "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
       "change_state": "changed-versus-canonical",
-      "note": "No new program since prior research; complete in-scope assets, exclusions, safe-harbor and payout rules not checked."
+      "note": "No new program since prior research; complete in-scope assets, exclusions, safe-harbor and payout rules not checked.",
+      "sha256": "13687bebef510f97cd55283410946aff711ebaad0220d62063821260c8439378"
     },
     {
       "source_id": "code4rena-contests",
@@ -51,7 +54,8 @@
       "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
       "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
       "change_state": "changed-versus-canonical",
-      "note": "Duplicate of PR 213 source migration; recommend closure review retaining historical source ID and records."
+      "note": "Duplicate of PR 213 source migration; recommend closure review retaining historical source ID and records.",
+      "sha256": "edcbd378b619b67caa721190b9e81db3fd2637a9419ed394d8df79bfd8a631ff"
     },
     {
       "source_id": "challenge-gov",
@@ -62,7 +66,8 @@
       "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
       "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
       "change_state": "changed-versus-canonical",
-      "note": "Official discovery directory reviewed. No new federally open entry phase independently confirmed."
+      "note": "Official discovery directory reviewed. No new federally open entry phase independently confirmed.",
+      "sha256": "e71c20e8d49b237ea73661d1db4c1d36e58d19c739959337c58d06c4a9e3db9e"
     },
     {
       "source_id": "ethglobal-events",
@@ -73,7 +78,8 @@
       "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
       "canonical_predecessor_checked_at": "2026-08-29T19:40:52Z",
       "change_state": "changed-versus-canonical",
-      "note": "Official calendar reviewed; participant travel, eligibility and prize claims not independently verified."
+      "note": "Official calendar reviewed; participant travel, eligibility and prize claims not independently verified.",
+      "sha256": "6e4b337eed854c2e3b8d547758bb197aa9cff855cb6ce11e98220940809ed457"
     }
   ],
   "failed_or_unresolved_source_checks": [
@@ -138,7 +144,8 @@
     "native_repo_tests": "not run locally (container has no GitHub network access); PR CI required",
     "source_registry_mutated": false,
     "source_history_mutated": false,
-    "pages_data_mutated": false
+    "pages_data_mutated": false,
+    "native_replay_shape": "All six observations include sha256 required by scripts/source_check_history.py _validate_snapshot; canonical replay remains intentionally false until earlier chronological snapshots are integrated."
   },
   "integration_instructions": "Preserve Aug 30 morning chronological replay first. Review this snapshot as contributed evidence only. Independently verify code/data licenses and offline reproducibility; triage the structured case through integration queue. Do not paste raw claims into canonical intelligence without checking and deduplicating. PR 212 owns docs/AGENT_HANDOFF.md and ops/CURRENT_STATE.md; append coordination updates after reconciliation, not by overwriting concurrent work."
 }
