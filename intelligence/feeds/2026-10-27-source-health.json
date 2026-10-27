@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-27T07:39:37Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "summary": "Five registered sources directly reviewed and fingerprinted; two official hackathon pages reviewed; two registered sources failed retrieval. Nebius is a verified short-deadline $50,000 advertised cash pool with participation unconfirmed; I-HITL is author-reported security research.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "ctftime upcoming 2026-10-27 07:39 UTC | HI Cyber Con 2026 CTF Oct 30 14:00 UTC to Nov 1 14:00 UTC online | HKCERT CTF 2026 Qualifying Round Nov 6 10:00 UTC to Nov 7 10:00 UTC online | Russian CTF Cup X Qualifier Oct 31 09:00 UTC to Nov 1 09:00 UTC online | no new cash amount verified on aggregator",
+      "content_fingerprint": "1561cf8c00541f0b9c69d821ca16d7c5ff32b300bd2c7d2c8563cfe87fcddfe3",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Observed current source; do not advance canonical history out of chronological order."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "arxiv cs.CR recent 2026-10-27 07:39 UTC | Tuesday Oct 27 batch 81 entries | 263 total recent entries | 2610.35835 I-HITL submitted Oct 26 17:52:14 UTC | 2610.35541 The Agent in the Middle submitted Oct 26 14:53:22 UTC | paper claims not reproduced",
+      "content_fingerprint": "fea395d9b28e7b549517501638c9a07db63d0eca78dcfd04fce68ad25d62927d",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Observed current source; do not advance canonical history out of chronological order."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "code4rena legacy contests 2026-10-27 07:39 UTC | redirects to /audits | K2 judging submissions closed | Rujira report in progress submissions closed | no new open audit verified | winding-down status previously confirmed",
+      "content_fingerprint": "36b0f84fc3ef29a6e6927b770bd4c829ccceeb02565366eb454c7761a5ad296e",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Redirect and closed submissions; preserve historical registry ID and coordinate with PR #213."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "usa gov active challenges 2026-10-27 07:39 UTC | official directory includes DARPA Surgical Competition, Documentation and Decision Support Sprint, NASA Human Lander Challenge, NIH-NASA QuSAFE, NOURISH, Ready Set ID the Biothreat, 2026-27 NASA TechRise Student Challenge, ACL Caregiver AI Prize, xTech Kinetic Reach | directory presence does not verify open application window",
+      "content_fingerprint": "d89d0dd776eb52ac48e28345ba1279486a32b0696fa755807081151a3ccb3a5a",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Observed current source; do not advance canonical history out of chronological order."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "ethglobal events 2026-10-27 07:39 UTC | upcoming ETHGlobal Mumbai Nov 5-7 2026 in-person Mumbai India | Pragma Mumbai Nov 6 2026 conference | ETHOnline Sep 4-16 2026 past | no new online ETHGlobal competition verified",
+      "content_fingerprint": "003d7a25d336a39728492bfbee2bc4c7876888c5e465b89084c234f743c319d9",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "canonical_predecessor_checked_at": "2026-08-29T19:40:52Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Observed current source; do not advance canonical history out of chronological order."
+    },
+    {
+      "source_id": null,
+      "source_url": "https://nebiusglobalaihackathon.devpost.com/rules",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "nebius nvidia official devpost rules 2026-10-27 07:39 UTC | online hackathon closes Oct 30 10:00 PDT 17:00 UTC | 50000 USD total cash advertised, with 20000 grand 10000 second 6000 third 3000 Tavily, 20 x 500 city attendance awards and 10 x 100 feedback awards | free entry | adults subject to geographic exclusions | NVIDIA open model on Nebius Token Factory or AI Cloud | public open-source repo and demo and YouTube video | registration and hosting feasibility unverified",
+      "content_fingerprint": "351d36f9b689e9e904c53d4a08de8ac1715d407f4accee0ef2fb4c9d5e468821",
+      "source_tier": "primary",
+      "change_state": "research-lead-not-registered",
+      "note": "Event-specific official page; do not create a competing recurring source registry entry."
+    },
+    {
+      "source_id": null,
+      "source_url": "https://kiroween.devpost.com/rules",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "observed": "kiroween 2026 official devpost rules 2026-10-27 07:39 UTC | Oct 30 to Dec 4 2026 | official rules not yet available | Kiro organizer community advertises 100000 USD cash pool | exact payout eligibility and terms cannot yet be independently verified, watch only",
+      "content_fingerprint": "c6205c8bf9a627ca3e844d3e351786883d2b9b3fdfed9e6792c0956af06c887d",
+      "source_tier": "primary",
+      "change_state": "research-lead-not-registered",
+      "note": "Event-specific official page; do not create a competing recurring source registry entry."
+    }
+  ],
+  "failed_or_unresolved_source_checks": [
+    {
+      "source_id": "sherlock-bounties",
+      "url": "https://audits.sherlock.xyz/bug-bounties",
+      "result": "Direct retrieval timed out; no successful check recorded.",
+      "next_action": "Retry official listing; verify any claimed program updates and full authorized scope before promotion or testing."
+    },
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404; no successful check recorded.",
+      "next_action": "Find and verify official replacement challenge directory; preserve old ID/history and mark migration for review."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261027-nebius-nvidia-ai-hackathon",
+      "type": "hackathon",
+      "title": "Nebius x NVIDIA Global AI Hackathon",
+      "official_rules": "https://nebiusglobalaihackathon.devpost.com/rules",
+      "official_event": "https://nebiusglobalaihackathon.devpost.com/",
+      "checked_at": "2026-10-27T07:39:37Z",
+      "deadline": "2026-10-30T17:00:00Z",
+      "entry_cost": "No purchase or payment necessary per official rules; cloud usage and ongoing demo costs not independently established.",
+      "eligibility": "Age-of-majority individuals, teams and organizations; rules exclude Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea and sanctioned jurisdictions plus conflicts of interest. Participant-specific eligibility and registration unverified.",
+      "prize_evidence": "$50,000 advertised cash: $20,000 grand, $10,000 second, $6,000 third, $3,000 Tavily, 20 x $500 city awards (requires prior in-person event attendance), 10 x $100 feedback awards. Four NVIDIA Jetson Orin Nano track prizes are hardware, not cash. Remote entrants should not count city awards as accessible.",
+      "requirements": "Working app using at least one NVIDIA open-source model via Nebius Token Factory runtime API or Nebius AI Cloud; public open-source repository and setup README; hosted working demo (except Physical AI); public YouTube video under three minutes; track selection and tool feedback; significant new work during submission period for preexisting projects. Demo must remain accessible through Dec 15 judging end.",
+      "authorization": "Software-build competition only. No public service or security target is authorized for testing by this listing. Third-party APIs/data require separate permission.",
+      "confidence": "high for official terms, unknown for participant-specific eligibility/feasibility",
+      "relevance": "high",
+      "related_case": "research/active-puzzles/20261027-nebius-nvidia-ai-hackathon/case.json",
+      "missing_verification": [
+        "Confirm participant's Devpost registration and jurisdiction/eligibility.",
+        "Confirm Nebius Builder Program account, NVIDIA-model access, actual credits/pricing and deployment availability.",
+        "Verify ability to keep a live demo free and unrestricted for judges through December 15.",
+        "Verify an original/substantially updated project and public open-source license; confirm YouTube demo and submission before deadline."
+      ],
+      "next_action": "Build agent: urgently verify participant registration and Nebius model access, then choose one feasible original coding-agent demo; do not imply a submitted entry or guaranteed prize."
+    },
+    {
+      "id": "20261027-ihitl-paper",
+      "type": "research",
+      "title": "I-HITL: Inalienable Human-in-the-Loop",
+      "official_paper": "https://arxiv.org/abs/2610.35835",
+      "submitted_at": "2026-10-26T17:52:14Z",
+      "summary": "Authors propose human approvals resistant to agent-compromised local harnesses and describe a Countersign prototype using consumer mobile devices. The paper reports agent spending-cap bypass experiments involving OTP access; no reproduction or code/license validation was performed.",
+      "confidence": "high for publication, low for independent efficacy",
+      "relevance": "high",
+      "authorization": "Offline simulated approval flows only; no wallet, email account, OTP or real target testing authorized.",
+      "next_action": "Review full paper and prototype availability/license, then design synthetic tests of explicit human approval with independent trusted channel; avoid overlap with existing agent-provenance cases."
+    },
+    {
+      "id": "20261027-kiroween-rules-pending",
+      "type": "watch-only",
+      "title": "Kiroween 2026 rules not yet posted",
+      "official_rules": "https://kiroween.devpost.com/rules",
+      "organizer": "https://kiro.dev/community/",
+      "window": "2026-10-30 to 2026-12-04",
+      "advertised_cash_pool": "$100,000 per organizer, but no 2026 official prize table or complete eligibility terms published yet.",
+      "confidence": "high for rules missing, medium for advertised cash pool",
+      "relevance": "watch",
+      "next_action": "Reopen official rules after October 30 and verify prize breakdown, eligibility, start-of-work restrictions, cost and submission requirements before promotion."
+    }
+  ],
+  "deduplication": "Checked current main 13 intelligence items and 21 opportunity directory entries, active cases, and open research PR titles; no Nebius, I-HITL, or Kiroween item found. Existing PR #222 covers HI Cyber Con and PR #213 covers Code4rena migration.",
+  "publication_state": {
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "active_case_created_on_branch": true,
+    "pages_html_edited": false
+  },
+  "chronology_note": "This snapshot is contributed evidence only; do not replay it before protected Aug 30 morning five-source gate and all intervening snapshots. Its 2026-10-27 observations must not be used to rewrite historical source freshness.",
+  "safety": "No security testing, account access, registrations, or external submission was performed."
+}
