@@ -1,0 +1,37 @@
+{
+  "case_id": "20261027-nebius-nvidia-ai-hackathon",
+  "name": "Nebius x NVIDIA Global AI Hackathon — Coding and Agentic Engineering",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-27T07:39:37Z",
+  "updated_at": "2026-10-27T07:39:37Z",
+  "source": "Nebius / Devpost official hackathon rules",
+  "source_url": "https://nebiusglobalaihackathon.devpost.com/rules",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "ai-agents",
+    "hackathon",
+    "coding",
+    "cash-prize",
+    "registration-pending",
+    "no-security-testing"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-27-source-health.json",
+      "role": "verified-organizer-terms",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261027-nebius-nvidia-ai-hackathon/evidence/README.md",
+      "role": "verification-checklist"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261027-nebius-nvidia-ai-hackathon/notes.md"
+  ],
+  "participant_status": "Unknown: no account, registration, platform credits or project submission verified.",
+  "next_action": "Before Oct 30 2026 17:00 UTC, verify participant registration and eligibility, Nebius Token Factory/NVIDIA model access and credits, hosted demo feasibility through Dec 15, then build and submit only a genuinely original or significantly updated working app with public open-source repo, public YouTube demo and required feedback. Do not perform security testing."
+}
