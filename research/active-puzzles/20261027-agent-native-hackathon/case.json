@@ -1,0 +1,37 @@
+{
+  "case_id": "20261027-agent-native-hackathon",
+  "name": "Builder.io Agent-Native Hackathon — deadline conflict triage",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-27T19:44:44Z",
+  "updated_at": "2026-10-27T19:44:44Z",
+  "source": "Builder.io official rules and submission form",
+  "source_url": "https://www.builder.io/hackathon/rules",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "ai-agents",
+    "hackathon",
+    "cash-prize",
+    "deadline-conflict",
+    "registration-not-required",
+    "no-security-testing"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-27-afternoon-source-health.json",
+      "role": "official-source-terms-and-conflict",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261027-agent-native-hackathon/evidence/README.md",
+      "role": "source-reconciliation-checklist"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261027-agent-native-hackathon/notes.md"
+  ],
+  "participant_status": "Unknown; no app created, Clips recording, participant verification, sponsor reply, or submission receipt.",
+  "next_action": "Resolve official Nov 2 vs Nov 9 2026 11:59 PM PT submission deadline conflict via sponsor and live form. Until resolved, plan for earlier Nov 2 cutoff. Verify Agent-Native/Clips functionality, participant eligibility and optional hosting costs before building original in-window app; submit and preserve receipt. No security testing."
+}
