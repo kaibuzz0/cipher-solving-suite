@@ -521,3 +521,12 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Changed:** Posted bounded evidence-preserving correction on PR #224 (comment `6463171633`); updated the Oct. 28 current-state finding on this coordination branch. No raw snapshot, hash, source registry/history, queue, governance, case, tool or website file changed.
 - **Verification / risks:** PR #223's correct normalized hashes provide a control; green PR CI for #224/#225 does not validate canonical replay readiness. External observations and research-paper metrics are not independently reproduced. Exact PR #212 head CI must rerun after this addendum.
 - **Next action:** Preserve raw PR #224/#225 evidence and derive corrected canonical hashes (plus PR #225 Algora predecessor), with chronology-aware review before replay. Validate PR #212 exact final head, then separately review Pages PR #221 and the protected Aug. 30 morning replay gate.
+
+---
+
+### 2026-10-28 07:23 UTC — Repo Integrity / native replay schema compatibility
+
+- **Branch / PR:** Draft PR #212 coordination addendum; research PRs #224/#225 unchanged.
+- **Independent check:** Current main `scripts/source_check_history.py::_validate_snapshot` requires each `observations[]` entry to have a registered `source_id`, nonempty `observed`, and `sha256` matching `normalize_fingerprint(observed)`. PRs #224 and #225 use only `content_fingerprint` (missing `sha256` on 7/7 each), and PR #224 additionally contains two non-registry observations without `source_id`. These files are **not native replay-ready even if raw hashes match**; do not interpret passing Core CI as replay validation. PR #223 supplies `sha256` and its 6/6 normalized hashes match.
+- **Changed / evidence:** Posted precise schema findings on PR #225 comment `6463201706` and PR #224 comment `6463202529`. Updated `ops/CURRENT_STATE.md` on this authorized coordination branch. No raw evidence, canonical registry/history, queue, tools, cases or governance contracts changed.
+- **Next action:** Derive separate provenance-preserving replay inputs with canonical normalized `sha256` fields, correct PR #225 Algora predecessor, and include only PR #224's five registered-source observations. Complete protected Aug. 30 morning replay first. Rerun exact-head Core/Maintenance on PR #212 after this addendum; do not merge on a stale green check.
