@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-opportunity-research",
+  "checked_at": "2026-10-28T19:44:28Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "observations": [],
+  "source_health_note": "No new registered-source check was recorded. The earlier Oct 28 research PR #226 checked five registered sources; this pass instead verified an organizer-primary opportunity outside the current 16-source recurring registry. Do not invent a PayPal source ID or advance registry timestamps.",
+  "material_findings": [
+    {
+      "id": "20261028-paypal-ai-hackathon",
+      "type": "hackathon",
+      "title": "PayPal AI Hackathon",
+      "status": "structured-triage-participant-verification-pending",
+      "checked_at": "2026-10-28T19:44:28Z",
+      "official_urls": [
+        "https://paypalaihackathon.devpost.com/rules",
+        "https://paypalaihackathon.devpost.com/updates/47305-two-weeks-to-go-get-your-project-checked-early",
+        "https://developer.paypal.com/sandbox-testing/overview"
+      ],
+      "organizer": "PayPal Inc.",
+      "administrator": "Devpost",
+      "confidence": "high for rules, cash breakdown, date and sandbox availability; participant-specific feasibility unverified",
+      "relevance": "high",
+      "entry_cost": "No purchase/payment required for entry; free PayPal sandbox documented. Optional hosting/AI usage may incur costs.",
+      "eligibility": "Adults of age of majority, teams and organizations subject to exclusions including Brazil, Quebec, sanctioned jurisdictions and sponsor-related conflicts; exact participant status not verified.",
+      "competition_period": "2026-10-01T09:15:00-07:00 through 2026-11-12T12:00:00-08:00 (rules express local Pacific time)",
+      "deadline": "2026-11-12T20:00:00Z",
+      "early_eligibility_review": "Organizer offers review for submissions received by 2026-11-05; not a separate final deadline.",
+      "cash_prizes_usd": 67500,
+      "noncash_render_credits_usd": 2250,
+      "total_advertised_value_usd": 69750,
+      "cash_breakdown_usd": {
+        "grand": [
+          12000,
+          8000,
+          5000
+        ],
+        "honorable_mentions": [
+          5000,
+          5000,
+          5000,
+          5000,
+          5000
+        ],
+        "ag_grid": [
+          5000,
+          2000,
+          1000,
+          1000,
+          1000
+        ],
+        "apimatic": [
+          1000,
+          1000,
+          1000
+        ],
+        "bryntum": [
+          1000,
+          1000,
+          1000
+        ],
+        "channel3": [
+          1500
+        ]
+      },
+      "requirements": "Functional PayPal developer-platform integration using free sandbox plus AI tool/model/platform; new or significantly updated project; public open-source licensed repository, runnable demo or reproducible setup, public YouTube demo <3 min, English materials.",
+      "authorization_scope": "Only PayPal's documented sandbox with own approved accounts for payment simulation; public listing does not authorize production testing or third-party targets.",
+      "payout": "Subject to eligibility and winner identity verification, affidavits, tax/banking forms; payment within 60 days of completed required forms per official rules.",
+      "next_action": "Confirm participant join, sandbox account and safe demo access; prioritize Nov 5 early review; never commit credentials; decide whether case can be activated.",
+      "related_case": "20261028-paypal-ai-hackathon",
+      "deduplication": "No PayPal AI Hackathon match in main intelligence/opportunities, open PR/issue search, or default-branch code search as of check."
+    }
+  ],
+  "other_screening": [
+    {
+      "title": "TU Delft CTF 2026",
+      "official_url": "https://ctf.ewi.tudelft.nl/",
+      "disposition": "Not suitable for remote AI-assisted participation: in-person Delft Nov 28 and organizer bans external LLMs."
+    },
+    {
+      "title": "DevFest Hackathon 2026",
+      "official_url": "https://devfest-hackathon-2026.devpost.com/",
+      "disposition": "In-person UCF event with required paid Eventbrite registration; $800 cash, lower priority."
+    }
+  ],
+  "canonical_changes": "None. This raw contribution and triage case require PR merge and builder validation before appearing on Pages."
+}

@@ -362,3 +362,15 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Collision / conflict handling:** No canonical replay files are touched. Later Sep. research remains noncanonical; open research PRs must reconcile from current main rather than leapfrog Aug. 30.
 - **Known risks / blockers:** Aug. 30 morning is eligible for independent verification, not automatically trusted. Its contributed fingerprints/predecessors still need recomputation before any replay.
 - **Next action:** Validate and merge this coordination-only branch if green, then independently verify the Aug. 30 morning source-health snapshot and stage only the evidence-backed morning replay.
+
+---
+
+### 2026-10-28 19:44:28 UTC — Research Intelligence / PayPal AI Hackathon prize reconciliation
+
+- **Branch:** `research/2026-10-28-afternoon-paypal-ai-prize-breakdown` (PR pending at commit creation).
+- **Objective:** Preserve a newly independently verified online PayPal AI hackathon with accurate cash-vs-credits separation and a triage-only case.
+- **Verified:** Official PayPal/Devpost rules show free entry, November 12 noon PST final deadline, $67,500 cash awards, $2,250 Render credits; Oct 28 organizer update advertises $69,750 total value and November 5 optional early eligibility review. PayPal developer documentation confirms isolated sandbox mock transactions. No participant-specific access or project readiness verified.
+- **Changed:** `intelligence/feeds/2026-10-28-afternoon-paypal-ai-hackathon.json`; `research/active-puzzles/20261028-paypal-ai-hackathon/case.json`, README, notes, attempts, evidence; additive `data/integration_queue.json` needs-review item; this append-only handoff. No recurring-source check fabricated, canonical source-history or registry timestamps changed, no website HTML edits.
+- **Verification:** Organizer primary sources reviewed; cash arithmetic independently reconciled; case/queue JSON constructed from current-main schemas. CI/site-data builder pending PR execution. Current main `e3406be6fe981feee5c2ec8c3c79cca924792e67` with 78 canonical history records and Aug 30 morning next gate.
+- **Conflicts / blockers:** PR #223 and #226 also add queue entries; preserve all on merge. PR #212 owns ops state, so `ops/CURRENT_STATE.md` intentionally not overwritten; integrity agent should update it after canonical merge. No production payment/security testing authorized.
+- **Exact next action:** Confirm Devpost participant eligibility/join and PayPal sandbox access; decide feasibility before Nov 5 early review. Build agent: merge this additive case/queue only after reconciling current main plus #223/#226, run case/queue validators, Core and `scripts/build_site_data.py`, then verify Pages deployment. Do not leapfrog protected Aug 30 source-history replay.
