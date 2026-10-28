@@ -1,0 +1,39 @@
+{
+  "case_id": "20261028-epic-ai-megajam",
+  "name": "2026 Epic AI MegaJam — AI-assisted game development",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-28T07:42:20Z",
+  "updated_at": "2026-10-28T07:42:20Z",
+  "source": "Epic Games official announcement and organizer itch.io jam",
+  "source_url": "https://itch.io/jam/2026-epic-ai-megajam",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "game-development",
+    "ai-agents",
+    "unreal-engine",
+    "uefn",
+    "hackathon",
+    "cash-prize",
+    "rules-review-pending",
+    "no-security-testing"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-28-source-health.json",
+      "role": "official-source-research",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261028-epic-ai-megajam/evidence/README.md",
+      "role": "official-links-and-verification-gates"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261028-epic-ai-megajam/notes.md"
+  ],
+  "participant_status": "Unknown; no Epic account, itch.io registration, full-rules eligibility, build toolchain or contest submission confirmed.",
+  "next_action": "Open complete Epic Box official rules; verify participant eligibility, no-purchase terms, costs and prize restrictions; verify Unreal/UEFN toolchain and itch.io join status. Do not build the jam game before Nov 12 2026. Submission cutoff Nov 15 17:59 PST (Nov 16 01:59 UTC). No external security testing authorized."
+}

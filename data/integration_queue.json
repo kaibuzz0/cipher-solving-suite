@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-28T07:42:20Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,24 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261028-epic-ai-megajam-rules-gate",
+      "type": "case",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / 2026-10-28",
+      "branch_or_pr": "research/2026-10-28-epic-ai-megajam-source-health (PR pending)",
+      "path": "research/active-puzzles/20261028-epic-ai-megajam/case.json",
+      "purpose": "Review Epic AI MegaJam official rules and participant feasibility before activating a new game-development competition case.",
+      "summary": "Epic organizer announcement and itch.io jam independently confirm Nov 12-15 window, Nov 15 17:59 PST cutoff, $65,000 in category cash awards and separate conditional grants up to $50,000 per team. The complete official rules link redirects to a Box host that could not be retrieved; country eligibility, payment terms and full entry cost are not yet verified. No registration, development or submission was performed.",
+      "verification": "Primary Epic announcement and organizer jam page reviewed on 2026-10-28; five registered-source observations SHA-256 fingerprinted in intelligence/feeds/2026-10-28-source-health.json. Complete binding rules, local toolchain and participant status not verified.",
+      "risks": [
+        "Do not promote full eligibility, free entry or grant accessibility before reading binding rules.",
+        "Do not start contest game before Nov 12; do not infer registration or a prize payout.",
+        "Queue file is also modified by concurrent PR #223; reconcile both queue additions on merge rather than choosing one side.",
+        "No security testing is authorized by the jam listing."
+      ],
+      "next_action": "Open complete Epic Box official rules; verify participant eligibility, entry cost, prize payment terms, Epic/itch.io account, Unreal/UEFN toolchain and upload feasibility. Then decide active versus screened triage; preserve this queue record and all newer concurrent items."
     }
   ]
 }

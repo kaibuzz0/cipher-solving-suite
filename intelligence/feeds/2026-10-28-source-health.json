@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-28T07:42:20Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "summary": "Five registered sources actually reviewed and their stable observations independently SHA-256 fingerprinted; new Epic AI MegaJam verified from Epic announcement and organizer itch.io page; two new agent-security preprints screened. Full Epic official rules hosted on Box could not be opened, so complete eligibility and entry-cost terms remain unverified. No canonical replay or Pages deployment.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "checked_at": "2026-10-28T07:42:20Z",
+      "observed": "ctftime upcoming 2026-10-28 | HI Cyber Con 2026 Oct 30 14:00 UTC to Nov 1 14:00 UTC online | Russian CTF Cup X qualifier Oct 31 09:00 UTC to Nov 1 09:00 UTC online | HKCERT CTF 2026 qualifier Nov 6 10:00 UTC to Nov 7 10:00 UTC online | no prize verified from aggregator",
+      "content_fingerprint": "b73da354b8f6fe587a0de85f62176667e8fa17994a9b407a535d6ac8d9fe8b3d",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "CTFtime is discovery only. HI Cyber Con is already covered by PR #222; no duplicate case or award claim."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "checked_at": "2026-10-28T07:42:20Z",
+      "observed": "arxiv cs.CR recent 2026-10-28 | Wed Oct 28 batch 47 entries | 250 recent total | 2610.37415 Envelope Layer submitted Oct 27 15:32:10 UTC | 2610.37055 Blindfold submitted Oct 27 11:24:12 UTC | author results not reproduced",
+      "content_fingerprint": "a6e09b10064b7ca431c422b6dffa5501fa66f238983e503ce6a9663eb2542c21",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "New research candidates; full paper, license and reproduction not yet independently validated."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "checked_at": "2026-10-28T07:42:20Z",
+      "observed": "code4rena /contests 2026-10-28 | redirects to /audits | K2 judging submissions closed 135000 USDC historical pool | Rujira report in progress submissions closed 40000 USDC | no new open contest verified",
+      "content_fingerprint": "6f2c30434e5ce1dbb0e0661051e4593b0c21824497dfd2d1ccf62f2d4fa3fb9d",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Confirmed legacy URL redirect; source migration already covered by PR #213; do not duplicate or silently delete."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "checked_at": "2026-10-28T07:42:20Z",
+      "observed": "usa gov active challenges 2026-10-28 | directory includes DARPA Surgical Competition, Documentation and Decision Support Sprint, NASA Human Lander Challenge, NIH-NASA QuSAFE, NOURISH, ACL Caregiver AI Prize, xTech Kinetic Reach | directory presence does not prove applications remain open",
+      "content_fingerprint": "a43a8d1b78c8e1930fda5bb1ebc0c89b80cae1fecbe417ae891165fc8f3faffe",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Agency-level deadlines and eligibility must be checked; prior xTech closed application is not currently accessible."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "checked_at": "2026-10-28T07:42:20Z",
+      "observed": "sherlock bug bounties 2026-10-28 | most recent Monolith Stablecoin Factory Oct 23 2026 payout 20000 DOLA | Usual Labs 16000000 USDC | Aave V4 2500000 USD | listing only, exact scope not checked",
+      "content_fingerprint": "fe28cbcaad1233b3a3ed76d648edb1878f6f193a2b41848b7a6f469865f16187",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Listing amounts are maximum advertised payouts, not guaranteed cash; no security testing or scope verification."
+    }
+  ],
+  "failed_or_unresolved_source_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 on direct retrieval 2026-10-28; no successful check or registry timestamp advance.",
+      "next_action": "Verify a working official replacement URL and propose migration, preserving historical source ID and checks."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "url": "https://ethglobal.com/events",
+      "result": "Direct retrieval timed out on 2026-10-28; no successful check or registry timestamp advance.",
+      "next_action": "Retry the official event calendar before reporting fresh event state."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261028-epic-ai-megajam",
+      "type": "hackathon",
+      "title": "2026 Epic AI MegaJam",
+      "status": "structured-triage-full-rules-pending",
+      "confidence": "high for official organizer announcement and prize schedule; medium for complete eligibility/entry cost",
+      "relevance": "high",
+      "checked_at": "2026-10-28T07:42:20Z",
+      "official_urls": [
+        "https://www.unrealengine.com/news/2026-epic-ai-megajam",
+        "https://itch.io/jam/2026-epic-ai-megajam",
+        "https://epicgames.box.com/s/a7xcgl07fqoieeb99sjtd3juhj4agc4z"
+      ],
+      "event_window": "2026-11-12 through 2026-11-15",
+      "deadline": "2026-11-16T01:59:00Z",
+      "deadline_display": "2026-11-15 17:59 PST / 20:59 EST",
+      "prize_evidence": "Organizer lists $65,000 in category cash awards: three $15,000 main prize ladders (Unreal Engine, UEFN, student-only), plus $20,000 in modifier awards. Development Continuation Grants up to $50,000 per team are separate conditional grants, not cash awards available to every entrant. Solo Driver modifier $2,500; overall Unreal Engine and UEFN top awards $7,500 each.",
+      "eligibility": "Organizer overview says developers 18+ with active Epic Games account, solo or up to five humans, online from anywhere subject to full official rules; complete geography/affiliation exclusions not verified because official Box rules inaccessible.",
+      "entry_cost": "Not independently verified from complete official rules; online participation advertised, Unreal Engine/UEFN setup and optional AI/cloud costs not verified.",
+      "authorization": "Competition authorizes building and submitting an original game only; no security testing of public services, game servers or third-party assets authorized.",
+      "requirements": "Choose Unreal Engine or UEFN; work begins no earlier than Nov 12; packaged playable game or immutable UEFN private version code; 30-60 second gameplay video; team member Epic account email; licensed assets with disclosure; optional dev log required for Glass Box modifier.",
+      "related_case": "research/active-puzzles/20261028-epic-ai-megajam/case.json",
+      "missing_verification": [
+        "Open and review Epic's complete Box-hosted official rules; validate geography, eligibility, award payout conditions, taxes and entry fee.",
+        "Confirm actual participant account and itch.io jam enrollment; do not infer registration.",
+        "Confirm access to Unreal Engine/UEFN, build/packaging hardware, credits, and demo upload capacity.",
+        "Ensure all project work starts within the event window and pre-existing materials are disclosed."
+      ],
+      "next_action": "Build/integration agent: inspect full official rules, participant readiness and build environment; if feasible, prepare tools now but do not build the contest game until Nov 12; keep case in triage until gates clear."
+    },
+    {
+      "id": "20261028-envelope-layer",
+      "type": "research",
+      "title": "The Envelope Layer: An Underestimated Surface of LLM Agent Defense",
+      "official_url": "https://arxiv.org/abs/2610.37415",
+      "submitted_at": "2026-10-27T15:32:10Z",
+      "status": "research-candidate-not-reproduced",
+      "confidence": "high for publication; low for reproduced efficacy",
+      "relevance": "high",
+      "summary": "Author reports stronger authenticated labels reduce agent semantic breaches, forged envelopes weaken protection, and prior success/failure memories materially change breach rates; claims are from abstract, not independent replication.",
+      "next_action": "Read full paper, license and methods; compare with existing prompt-injection, provenance and memory-safety cases; test only isolated synthetic fixtures if nonduplicative."
+    },
+    {
+      "id": "20261028-blindfold-audit-coin",
+      "type": "research",
+      "title": "Blindfold: Keeping the Audit Coin Secret from LLM Agents",
+      "official_url": "https://arxiv.org/abs/2610.37055",
+      "submitted_at": "2026-10-27T11:24:12Z",
+      "status": "research-candidate-not-reproduced",
+      "confidence": "high for publication; low for reproduced efficacy",
+      "relevance": "high",
+      "summary": "Authors propose pre-commit noninterference for randomized agent audit decisions and report timing-channel leakage in a prototype; no implementation, dataset or experimental reproduction independently checked.",
+      "next_action": "Evaluate overlap with I-HITL and audit-evidence cases, inspect license/code and derive synthetic timing-channel tests before any engineering adoption."
+    },
+    {
+      "id": "20261028-stem2connect-screen",
+      "type": "screening",
+      "title": "STEM2Connect AI Hackathon deadline extended but no cash awards",
+      "official_url": "https://stem2connect-online-hackathon.devpost.com/",
+      "status": "screened-noncash-student-only",
+      "confidence": "high for Devpost current listing; participant eligibility not applicable",
+      "relevance": "watch",
+      "summary": "Current Devpost page says Nov 21 2026 11:59 PM EST and four noncash awards; students only. Prior Oct 28 deadline was superseded by organizer Oct 20 update. Do not advertise this as a current cash opportunity.",
+      "next_action": "No promotion to general cash shortlist."
+    }
+  ],
+  "deduplication": "Compared current main 13 intelligence entries, 21 opportunity-directory items, two main active cases, recent commits, and 46 open PRs; no Epic AI MegaJam case or current canonical item found. Existing PR #222 already owns HI Cyber Con; PR #213 covers Code4rena migration. New papers overlap partially with PR #223/#224 research and are not yet promoted.",
+  "source_health_notes": [
+    "Five successful checks are preserved as contributed observations only. The 78-entry canonical history and registry timestamps remain untouched until the protected Aug 30 chronological replay gate.",
+    "Code4rena /contests redirects to /audits with submissions closed; avoid mislabeling historical USDC audit pools as open.",
+    "Topcoder HTTP 404 and ETHGlobal timeout were not recorded as successful checks."
+  ],
+  "publication_state": {
+    "raw_evidence_on_pr": true,
+    "case_on_pr": true,
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "pages_html_edited": false,
+    "pages_deployed": false
+  },
+  "next_build_action": "From current main, dry-run python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-30-source-health.json --dry-run; assert exactly five protected additions and registry advances, fingerprint/predecessor integrity, idempotence and non-rewind. Then native replay and validators/Pages builder. Chronologically reconcile this Oct 28 snapshot later. Independently check Epic full rules and environment before promoting the triage case."
+}
