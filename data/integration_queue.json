@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-28T19:44:28Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,25 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261028-paypal-ai-hackathon-participation-gate",
+      "type": "case",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / 2026-10-28 afternoon",
+      "branch_or_pr": "research/2026-10-28-afternoon-paypal-ai-prize-breakdown (PR pending)",
+      "path": "research/active-puzzles/20261028-paypal-ai-hackathon/case.json",
+      "purpose": "Determine participant feasibility and preserve verified prize distinctions for PayPal AI Hackathon.",
+      "summary": "Official PayPal/Devpost rules independently confirm free entry, online Oct 1-Nov 12 2026 contest, $67,500 cash awards, $2,250 Render credits, and mandatory PayPal sandbox+AI functional open-source project. Organizer Oct 28 update advertises $69,750 total prizes including noncash credits and offers early eligibility review for submissions by Nov 5. No participant account, submission, or running build confirmed.",
+      "verification": "Organizer Devpost rules, same-day organizer update and PayPal first-party sandbox guide opened 2026-10-28. Cash math: grand 25k + five honorable mentions 25k + AG Grid 10k + APIMatic 3k + Bryntum 3k + Channel3 1.5k = 67.5k. No external API calls or credentials used.",
+      "risks": [
+        "Do not equate $69,750 total prizes with cash; $2,250 is Render credits.",
+        "Do not publish sandbox keys, credentials, private user data, or live payment transactions in a public repository.",
+        "Participant registration, actual account eligibility, development feasibility and judge access remain unverified.",
+        "This PR overlaps integration queue changes in PR #223 and PR #226; preserve all distinct items on reconciliation.",
+        "Canonical Aug 30 morning source-history replay remains prior chronology gate."
+      ],
+      "next_action": "Verify Devpost join and PayPal developer sandbox access, user eligibility, project concept and working demo feasibility; submit by Nov 5 for optional early eligibility review or by Nov 12 12:00 PST final; only activate case after participant-specific gates. Integrate queue additively with PR #223/#226."
     }
   ]
 }

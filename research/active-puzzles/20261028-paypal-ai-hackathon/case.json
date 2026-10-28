@@ -1,0 +1,38 @@
+{
+  "case_id": "20261028-paypal-ai-hackathon",
+  "name": "PayPal AI Hackathon — AI payment sandbox application",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-28T19:44:28Z",
+  "updated_at": "2026-10-28T19:44:28Z",
+  "source": "PayPal Inc. / Devpost official competition rules",
+  "source_url": "https://paypalaihackathon.devpost.com/rules",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "hackathon",
+    "ai-agents",
+    "payments",
+    "paypal-sandbox",
+    "cash-prize",
+    "no-production-testing",
+    "participant-gate"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-28-afternoon-paypal-ai-hackathon.json",
+      "role": "primary-rules-and-prize-reconciliation",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261028-paypal-ai-hackathon/evidence/README.md",
+      "role": "primary-source-links-and-unresolved-gates"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261028-paypal-ai-hackathon/notes.md"
+  ],
+  "participant_status": "Unknown; no Devpost registration, PayPal developer account, sandbox integration, open-source demo or submission confirmed.",
+  "next_action": "Verify participant eligibility and Devpost join, PayPal sandbox access and API terms, working demo and safe judge access. Aim for optional early review by Nov 5; final deadline Nov 12 2026 12:00 PST (20:00 UTC). Never put credentials in public repository; do not test production/third-party assets."
+}
