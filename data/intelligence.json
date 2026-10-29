@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-21T19:42:02Z",
+  "updated_at": "2026-10-29T19:39:31Z",
   "items": [
+    {
+      "id": "2026-10-29-codegeist-2026-offers-120-000-in-verified-cash-prizes-for-atlassian-forge-apps",
+      "fingerprint": "27082c83b7d7a98024105808",
+      "title": "Codegeist 2026 offers $120,000 in verified cash prizes for Atlassian Forge apps",
+      "summary": "Atlassian's Codegeist 2026 official rules offer $120,000 in cash awards for new or Forge-rebuilt applications integrating Jira, Confluence, JSM, Bitbucket, Teamwork Graph or Rovo. Three categories award $84,000 across nine grand prizes, while four bonus categories (including Rovo agents and Atlassian MCP) award $36,000 across 24 bonuses. Online submissions close December 22, 2026 at 20:00 UTC. Entry requires no purchase; participant registration, developer access and judge-installable app feasibility remain unverified.",
+      "category": "opportunity",
+      "source_id": "",
+      "source_name": "Atlassian / Devpost",
+      "source_url": "https://codegeist2026.devpost.com/rules",
+      "published_at": "2026-10-27T16:00:00Z",
+      "checked_at": "2026-10-29T19:39:31Z",
+      "confidence": "high",
+      "relevance": "high",
+      "agent_notes": "Primary organizer rules checked Oct 29; published_at denotes competition registration opening, not verified web-page publication time. Official prize math 3*(15000+8000+5000)+4*6*1500=120000 USD. Free entry and developer license specified, but actual costs/quotas, personal eligibility and submission readiness unknown. This is not a security testing authorization. Structured case triage. No canonical source-check freshness advanced; six afternoon observations preserved as contributed raw snapshot pending chronological replay.",
+      "related_case": "20261029-codegeist-2026-forge-agent-hackathon",
+      "tags": ["hackathon", "atlassian", "forge", "rovo", "mcp", "ai-agent", "cash-prize", "competition"]
+    },
     {
       "id": "2026-08-21-structured-totient-preimage-paper-adds-reconstruction-algorithms-and-ancillary-code",
       "fingerprint": "0f26ee08e389bd5cabfadcf1",

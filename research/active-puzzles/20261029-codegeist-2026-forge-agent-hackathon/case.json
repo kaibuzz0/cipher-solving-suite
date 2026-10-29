@@ -1,0 +1,40 @@
+{
+  "case_id": "20261029-codegeist-2026-forge-agent-hackathon",
+  "name": "Codegeist 2026 — Atlassian Forge, Rovo agents and MCP",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-29T19:39:31Z",
+  "updated_at": "2026-10-29T19:39:31Z",
+  "source": "Atlassian / Devpost official 2026 rules",
+  "source_url": "https://codegeist2026.devpost.com/rules",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "hackathon",
+    "atlassian",
+    "forge",
+    "rovo",
+    "mcp",
+    "ai-agents",
+    "cash-prize",
+    "participant-gate",
+    "no-security-testing"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-29-afternoon-codegeist-source-health.json",
+      "role": "official-rules-and-registered-source-observations",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261029-codegeist-2026-forge-agent-hackathon/evidence/README.md",
+      "role": "primary-official-links-and-verification-gates"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261029-codegeist-2026-forge-agent-hackathon/notes.md"
+  ],
+  "participant_status": "Unknown: no Devpost registration, Forge developer license, tenant access, Rovo/MCP integration, working app, judge installation link or video confirmed.",
+  "next_action": "Confirm eligible entrant and free Forge license; build smallest installable Forge app in a sanctioned test tenant; validate at least one Atlassian integration, optional Rovo agent/MCP bonus, judge installation and public video. Submit by Dec 22 2026 12:00 PST (20:00 UTC) only if all gates clear."
+}
