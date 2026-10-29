@@ -1,0 +1,39 @@
+{
+  "case_id": "20261029-meta-vr-start-competition",
+  "name": "Meta VR Start Developer Competition 2026 — hands-first VR/WebXR",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-29T07:38:18Z",
+  "updated_at": "2026-10-29T07:38:18Z",
+  "source": "Meta Platforms / Devpost official rules",
+  "source_url": "https://start-developer-competition-26.devpost.com/rules",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "hackathon",
+    "meta-vr-start",
+    "webxr",
+    "hands-first",
+    "ai-agents",
+    "cash-prize",
+    "participant-gate",
+    "no-security-testing"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-29-source-health.json",
+      "role": "primary-sponsor-rules-and-source-health",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261029-meta-vr-start-competition/evidence/README.md",
+      "role": "official-primary-links-and-verification-gates"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261029-meta-vr-start-competition/notes.md"
+  ],
+  "participant_status": "Unknown: no Meta Developer Access, VR Start membership, Devpost registration, build/test environment or submission confirmed.",
+  "next_action": "Verify VR Start membership and developer access, then test hands-first IWSDK/WebXR demo in supported simulator with authorized local fixtures. Confirm project/asset originality and division, capture public video, submit by Nov 18 2026 12:00 PST (20:00 UTC) only if participant gates clear."
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-29T07:38:18Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,24 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261029-meta-vr-start-competition",
+      "type": "research",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / 2026-10-29 PR pending",
+      "branch_or_pr": "research/2026-10-29-meta-vr-start-midas-source-health",
+      "path": "research/active-puzzles/20261029-meta-vr-start-competition/case.json",
+      "purpose": "Reconcile official $1m Meta VR Start 2026 hackathon into an actionable, participant-verified hands-first development case without promoting unverified enrollment or code compatibility.",
+      "summary": "Official Meta/Devpost rules independently verify up to $1m aggregate cash across 20 prizes, $25k Agentic Interaction special award, free entry, Nov 18 20:00 UTC deadline, Meta VR Start and Developer Access requirements. Structured triage case and raw source checks preserved; participant access and WebXR feasibility unverified.",
+      "verification": "Official sponsor announcement, Devpost binding rules and FAQs reviewed 2026-10-29; five registered-source observation strings independently SHA-256 checked against preserved values; canonical predecessor links match current main. No contest registration, build or submission verified.",
+      "risks": [
+        "Member representative must be accepted into VR Start and have Meta Developer Access by submission.",
+        "Hands-first functional Quest 3/3S build or WebXR link and video are required; no headset ownership required but simulation capability unverified.",
+        "No external target testing authorization; Sherlock Midas bounty listing in same research snapshot lacks full Scope tab.",
+        "PRs #223, #226 and #227 have overlapping queue edits; preserve all compatible entries during chronological reconciliation."
+      ],
+      "next_action": "Verify participant Meta Developer Access, VR Start acceptance, Devpost enrollment and WebXR simulator/build/video workflow; only then advance the structured case. Independently review full Midas Scope/Details before any security work. Integrate after Aug 30 chronological source replay and reconcile concurrent queue PRs."
     }
   ]
 }
