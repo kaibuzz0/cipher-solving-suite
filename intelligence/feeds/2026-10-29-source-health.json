@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-29T07:38:18Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "summary": "Five actual registered-source reviews preserved with independently recomputed SHA-256 observation fingerprints and canonical predecessor links. Meta VR Start Developer Competition official $1m cash schedule and Nov 18 deadline verified; Midas Sherlock LIVE listing newly observed with $500k USDC advertised maximum but no complete scope. No canonical freshness, opportunity, intelligence, or Pages deployment claims.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "observed": "ctftime upcoming 2026-10-29 | HI Cyber Con 2026 CTF Oct 30 14:00 UTC to Nov 1 14:00 UTC online | HKCERT CTF 2026 qualifying Nov 6 10:00 UTC to Nov 7 10:00 UTC online | Russian CTF Cup X qualifier Oct 31 09:00 UTC to Nov 1 09:00 UTC online | no organizer prize inferred",
+      "content_fingerprint": "61b51fc20c4347dc8de966e18909fc6d713ca119bc759e9ecacc44109f26f46b",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "CTFtime is a discovery aggregator. HI Cyber Con is already handled by PR #222; no duplicate case or reward."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "observed": "arxiv cs.CR recent 2026-10-29 | newest displayed batch Wed Oct 28 2026 47 entries | recent index 250 entries | Envelope Layer 2610.37415 and Blindfold 2610.37055 already covered in PR 226 | research claims not reproduced",
+      "content_fingerprint": "1b9daa014812fe34f3d2220af8410976d5622466c7f810fb70f8561ee9c65ac9",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "The displayed Oct 28 batch and two papers are already preserved by PR #226. No duplicate research case."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "observed": "sherlock bug bounties 2026-10-29 | most recent Midas LIVE since Oct 29 2026 02:12 AM max 500000 USDC | Inverse Finance LIVE since Oct 28 2026 04:06 PM max 100000 DOLA | exact Scope tab inaccessible in fetched text, no target testing",
+      "content_fingerprint": "0f61d5b60189f0864389d25b3038d3e4a653ee1040c6b1ec5cebc2f6fbac7460",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Material newly live listing. Payouts are advertised maximums, not earned or guaranteed. Scope and exclusions not visible in fetched text; no testing."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "observed": "code4rena contests 2026-10-29 | /contests redirects to /audits | official homepage says closing doors | zero bounties | K2 judging and Rujira report in progress both submissions closed | no open contest verified",
+      "content_fingerprint": "e9a8d063005d2e5c8a160526703f811833fdb9150ba0f4fb67c506364052a29e",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Official closure and migration remain assigned to PR #213. Preserve source ID, mark migration review, do not count historical pools as live."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "observed": "usa gov active challenges 2026-10-29 | official directory lists DARPA Surgical Competition, Documentation and Decision Support Sprint, NASA Human Lander Challenge, NIH NASA QuSAFE, ACL Caregiver AI Prize, xTech Kinetic Reach | directory active label does not prove submissions open",
+      "content_fingerprint": "2f7bb3e530cb61f676791903f83bf5c7151aed37663a0600e1c26cf21a50d365",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Discovery directory only. Federal challenge phase/eligibility must be independently checked before promotion."
+    }
+  ],
+  "failed_or_unresolved_source_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "Direct retrieval returned HTTP 404 on 2026-10-29. Not recorded as successful check.",
+      "next_action": "Locate and independently validate an official replacement URL, preserve stable source ID and prior history."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "url": "https://ethglobal.com/events",
+      "result": "Direct official events URL timed out on 2026-10-29; homepage separately showed Mumbai Nov 5-7 but registered source was not successfully opened. No source check recorded.",
+      "next_action": "Retry registered URL and event-specific eligibility; do not advance freshness on homepage-only fallback."
+    }
+  ],
+  "material_findings": [
+    {
+      "id": "20261029-meta-vr-start-competition",
+      "type": "hackathon",
+      "title": "Meta VR Start Developer Competition 2026",
+      "status": "structured-triage-participant-gate",
+      "confidence": "high for official sponsor rules and prize schedule; participant eligibility and build readiness unknown",
+      "relevance": "high",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "official_urls": [
+        "https://start-developer-competition-26.devpost.com/rules",
+        "https://start-developer-competition-26.devpost.com/details/faqs",
+        "https://developers.meta.com/blog/meta-connect-2026-vr-start-developer-competition/",
+        "https://developers.meta.com/vr/discover/programs/start/"
+      ],
+      "entry_period": "2026-09-24 through 2026-11-18",
+      "deadline": "2026-11-18T20:00:00Z",
+      "deadline_display": "2026-11-18 12:00 PST",
+      "prize_evidence": "Official rules enumerate 20 cash prizes totalling up to $1,000,000: Entertainment and Gaming each have two $100k winners and two $50k runners-up; Productivity has two $70k winners and two $35k runners-up; six special awards at $25k; two Judges Choice awards at $20k. Best Agentic Interaction is a $25k special award. These are competitive conditional prizes, not guaranteed income.",
+      "eligibility": "Adults 18+ in eligible regions; excludes Brazil, Quebec, sanctioned areas and other restricted parties; Meta account with Developer Access and a Meta VR Start member representative required by submission. Individual, team or organization entries permitted; project must not have Meta development funding.",
+      "entry_cost": "No purchase necessary per official rules. Internet, developer access, membership, toolchain/hosting and any participant hardware/software costs are the entrant's responsibility; no Quest headset required per official FAQ.",
+      "authorization": "Only authorizes original competition submissions on approved build paths, not security testing or production probing.",
+      "requirements": "Hands-first experience end-to-end for Quest 3/3S. New or significantly updated experience built during eligible window; choose Gaming/Entertainment/Productivity track and new/adapted division. Native APK via Competition release channel or IWSDK/WebXR hosted link (including GitHub Pages). Public YouTube/Vimeo demonstration under three minutes, text description and Devpost submission required.",
+      "related_case": "research/active-puzzles/20261029-meta-vr-start-competition/case.json",
+      "missing_verification": [
+        "Confirm real participant account with Developer Access, VR Start acceptance and Devpost registration; none verified.",
+        "Check access to an emulator/WebXR/IWSDK, ability to run and capture hands-only Quest 3/3S experience, and availability of hosting/video upload.",
+        "Select new vs significantly updated division; verify project provenance, license of all assets, and absence of Meta-funded development.",
+        "Check entrant-specific jurisdiction, payment, tax and compliance terms before spending development effort."
+      ],
+      "next_action": "Build/integration agent: verify account/program and WebXR feasibility first; if gates clear, scope a small original hands-first experience (possibly agentic interaction) for Nov 18, otherwise keep triage."
+    },
+    {
+      "id": "20261029-midas-sherlock-bounty",
+      "type": "bug-bounty",
+      "title": "Midas appears LIVE on Sherlock with 500,000 USDC maximum",
+      "status": "watch-scope-unverified",
+      "confidence": "high for platform listing status and advertised maximum; low for exact testing scope/participation",
+      "relevance": "high",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "official_url": "https://audits.sherlock.xyz/bug-bounties/122",
+      "platform_url": "https://audits.sherlock.xyz/bug-bounties",
+      "listing": "LIVE since Oct 29 2026, 2:12 AM displayed; 500,000 USDC maximum",
+      "entry_cost": "Not verified; no submission or identity eligibility terms opened",
+      "eligibility": "Not verified; account/participation rules pending",
+      "deadline_or_cadence": "LIVE listing; no closing date established",
+      "authorization": "Listing alone does not authorize any testing. Scope tab, exclusions, severity and prohibited techniques were not available in fetched text.",
+      "next_action": "Review full official Scope and Details through permitted read-only access; do not create active security case or touch targets until explicit authorization and exclusions are documented."
+    },
+    {
+      "id": "20261029-inverse-sherlock-bounty",
+      "type": "bug-bounty",
+      "title": "Inverse Finance appears LIVE on Sherlock with 100,000 DOLA maximum",
+      "status": "watch-scope-unverified",
+      "confidence": "high for listing status; scope unknown",
+      "relevance": "watch",
+      "checked_at": "2026-10-29T07:38:18Z",
+      "official_url": "https://audits.sherlock.xyz/bug-bounties/233",
+      "listing": "LIVE since Oct 28 2026, 4:06 PM displayed; 100,000 DOLA advertised maximum",
+      "authorization": "Listing is not testing permission",
+      "next_action": "Read complete program scope and reward conditions before any testing or financial claims."
+    }
+  ],
+  "deduplication": "Compared canonical 13 intelligence items, 21 opportunity directory links, 2 main active cases, 48 open PRs and recent research PRs. PR #222 already covers HI Cyber Con, PR #226 already covers Envelope Layer and Blindfold, PR #213 owns Code4rena migration. No existing Meta VR Start structured case or dedicated research PR found. Midas is a new Oct 29 platform listing, not a verified scope.",
+  "source_health_notes": [
+    "Five successful reviews are contributed raw observations only; canonical history remains 78 records and 16 source IDs until chronological replay.",
+    "Topcoder 404 and ETHGlobal timeout not counted as successful checks.",
+    "No bounty target testing performed."
+  ],
+  "publication_state": {
+    "raw_evidence_on_pr": true,
+    "case_on_pr": true,
+    "integration_queue_on_pr": true,
+    "canonical_history_advanced": false,
+    "registry_freshness_advanced": false,
+    "intelligence_promoted": false,
+    "opportunity_promoted": false,
+    "pages_html_edited": false,
+    "pages_deployed": false
+  },
+  "next_build_action": "Dry-run the protected Aug 30 morning native replay on current main and verify exactly five fingerprints/predecessors/history additions and five registry advances, idempotence/non-rewind; execute and validate before any later source snapshot replay. Then reconcile this PR and queue with PRs #223/#226/#227 and rebuild Pages data. Independently clear Meta participant gates and Sherlock scope separately."
+}
