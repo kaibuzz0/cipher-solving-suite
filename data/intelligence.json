@@ -1,7 +1,33 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-21T19:42:02Z",
+  "updated_at": "2026-10-29T19:39:31Z",
   "items": [
+    {
+      "id": "2026-10-29-codegeist-2026-offers-120-000-in-verified-cash-prizes-for-atlassian-forge-apps",
+      "fingerprint": "27082c83b7d7a98024105808",
+      "title": "Codegeist 2026 offers $120,000 in verified cash prizes for Atlassian Forge apps",
+      "summary": "Atlassian's Codegeist 2026 official rules offer $120,000 in cash awards for new or Forge-rebuilt applications integrating Jira, Confluence, JSM, Bitbucket, Teamwork Graph or Rovo. Three categories award $84,000 across nine grand prizes, while four bonus categories (including Rovo agents and Atlassian MCP) award $36,000 across 24 bonuses. Online submissions close December 22, 2026 at 20:00 UTC. Entry requires no purchase; participant registration, developer access and judge-installable app feasibility remain unverified.",
+      "category": "opportunity",
+      "source_id": "",
+      "source_name": "Atlassian / Devpost",
+      "source_url": "https://codegeist2026.devpost.com/rules",
+      "published_at": "2026-10-27T16:00:00Z",
+      "checked_at": "2026-10-29T19:39:31Z",
+      "confidence": "high",
+      "relevance": "high",
+      "agent_notes": "Primary organizer rules checked Oct 29; published_at denotes competition registration opening, not verified web-page publication time. Official prize math 3*(15000+8000+5000)+4*6*1500=120000 USD. Free entry and developer license specified, but actual costs/quotas, personal eligibility and submission readiness unknown. This is not a security testing authorization. Structured case triage. No canonical source-check freshness advanced; six afternoon observations preserved as contributed raw snapshot pending chronological replay.",
+      "related_case": "20261029-codegeist-2026-forge-agent-hackathon",
+      "tags": [
+        "hackathon",
+        "atlassian",
+        "forge",
+        "rovo",
+        "mcp",
+        "ai-agent",
+        "cash-prize",
+        "competition"
+      ]
+    },
     {
       "id": "2026-08-21-structured-totient-preimage-paper-adds-reconstruction-algorithms-and-ancillary-code",
       "fingerprint": "0f26ee08e389bd5cabfadcf1",
@@ -17,7 +43,13 @@
       "relevance": "useful",
       "agent_notes": "Verified directly from arXiv v1 and its ancillary-file listing. The paper evaluates small parameter regimes and motivates an assumption for growing families; do not present it as a security proof. Next build-side action is to evaluate the ancillary reconstruction scripts for deterministic-fixture value and overlap with existing number-theory/RSA tooling before importing anything.",
       "related_case": "",
-      "tags": ["research", "cryptography", "number-theory", "reconstruction", "code"]
+      "tags": [
+        "research",
+        "cryptography",
+        "number-theory",
+        "reconstruction",
+        "code"
+      ]
     },
     {
       "id": "2026-08-18-cap-bug-bounty-is-live-on-sherlock-with-a-1-000-000-usdc-maximum-reward",
@@ -34,7 +66,13 @@
       "relevance": "high",
       "agent_notes": "Verified directly on the current Sherlock listing and Cap program page. The fetched view exposes LIVE status and max reward but not complete Scope-tab contents, so no active security case was created and no target testing was performed.",
       "related_case": "",
-      "tags": ["sherlock", "cap", "web3", "bug-bounty", "security"]
+      "tags": [
+        "sherlock",
+        "cap",
+        "web3",
+        "bug-bounty",
+        "security"
+      ]
     },
     {
       "id": "2026-08-18-usa-gov-active-listing-outlives-the-3d-surface-fuels-submission-window",
@@ -51,7 +89,13 @@
       "relevance": "high",
       "agent_notes": "Official host timeline shows submissions closed July 20, semi-finalist/final materials already due, and virtual Demo Day on August 20. No case was created because the entry window is closed. The source-network lesson is to distinguish overall challenge lifecycle dates from actionable submission deadlines.",
       "related_case": "",
-      "tags": ["government", "challenge", "deadline", "source-health", "closed-submissions"]
+      "tags": [
+        "government",
+        "challenge",
+        "deadline",
+        "source-health",
+        "closed-submissions"
+      ]
     },
     {
       "id": "2026-08-17-puffer-appears-as-an-upcoming-sherlock-bug-bounty-with-a-100-000-usdc-payout",
@@ -68,7 +112,13 @@
       "relevance": "watch",
       "agent_notes": "Verified from the current Sherlock listing. No dedicated complete program scope/rules page was preserved in this pass, and no target testing was performed.",
       "related_case": "",
-      "tags": ["sherlock", "puffer", "web3", "bug-bounty", "upcoming"]
+      "tags": [
+        "sherlock",
+        "puffer",
+        "web3",
+        "bug-bounty",
+        "upcoming"
+      ]
     },
     {
       "id": "2026-08-17-new-defi-incident-study-separates-project-audit-history-from-actual-incident-path-scope",
@@ -85,7 +135,13 @@
       "relevance": "high",
       "agent_notes": "This is a preprint, not a peer-reviewed final result. Preserve its corpus/method limitations and do not generalize the reported percentages beyond the studied incidents. It is useful evidence for keeping project-level audit labels separate from exact incident-path scope.",
       "related_case": "",
-      "tags": ["research", "defi", "audit", "scope", "security"]
+      "tags": [
+        "research",
+        "defi",
+        "audit",
+        "scope",
+        "security"
+      ]
     },
     {
       "id": "2026-08-17-pwnsec-ctf-2026-is-now-marked-postponed-on-ctftime",
@@ -102,7 +158,12 @@
       "relevance": "useful",
       "agent_notes": "CTFtime is a discovery aggregator. Follow the organizer's official page for the authoritative replacement date, registration and rules before creating a case.",
       "related_case": "",
-      "tags": ["ctf", "calendar", "postponed", "planning"]
+      "tags": [
+        "ctf",
+        "calendar",
+        "postponed",
+        "planning"
+      ]
     },
     {
       "id": "2026-08-17-aave-v4-bug-bounty-is-live-on-sherlock-with-a-2-5m-maximum-reward",
@@ -119,7 +180,13 @@
       "relevance": "high",
       "agent_notes": "Verified directly on the current Sherlock program page. The fetched page exposes LIVE status and max reward but not the full Scope tab contents, so no active security case was created during this pass.",
       "related_case": "",
-      "tags": ["sherlock", "aave", "web3", "bug-bounty", "security"]
+      "tags": [
+        "sherlock",
+        "aave",
+        "web3",
+        "bug-bounty",
+        "security"
+      ]
     },
     {
       "id": "2026-08-16-midas-sherlock-bounty-live",
@@ -136,7 +203,13 @@
       "relevance": "high",
       "agent_notes": "Current Sherlock page was re-opened during this pass and reported LIVE status. Do not treat the listing itself as authorization beyond the program's exact published scope/rules.",
       "related_case": "",
-      "tags": ["sherlock", "web3", "bug-bounty", "security", "midas"]
+      "tags": [
+        "sherlock",
+        "web3",
+        "bug-bounty",
+        "security",
+        "midas"
+      ]
     },
     {
       "id": "2026-08-16-connecting-talent-opportunity-15m",
@@ -153,7 +226,13 @@
       "relevance": "useful",
       "agent_notes": "USA.gov is the official government discovery source; it directs participants to the hosting competition page for complete rules, eligibility and terms.",
       "related_case": "",
-      "tags": ["government", "challenge", "prize", "education", "innovation"]
+      "tags": [
+        "government",
+        "challenge",
+        "prize",
+        "education",
+        "innovation"
+      ]
     },
     {
       "id": "2026-08-16-challenge-gov-sunset-usa-gov-successor",
@@ -170,7 +249,12 @@
       "relevance": "high",
       "agent_notes": "This is a source-network correction as well as user-facing intelligence; old Challenge.gov links should be treated as historical/archive paths rather than the active discovery endpoint.",
       "related_case": "",
-      "tags": ["government", "challenge", "source-health", "migration"]
+      "tags": [
+        "government",
+        "challenge",
+        "source-health",
+        "migration"
+      ]
     },
     {
       "id": "2026-08-16-ethonline-2026-upcoming",
@@ -187,7 +271,12 @@
       "relevance": "high",
       "agent_notes": "Official ETHGlobal event listing; verify application rules, deadlines, prizes, and eligibility on the event page before committing time.",
       "related_case": "",
-      "tags": ["ethereum", "web3", "hackathon", "coding"]
+      "tags": [
+        "ethereum",
+        "web3",
+        "hackathon",
+        "coding"
+      ]
     },
     {
       "id": "2026-08-16-active-online-ctfs",
@@ -204,7 +293,12 @@
       "relevance": "high",
       "agent_notes": "CTFtime is an event aggregator rather than the organizer. Open each event listing and verify registration, rules, accessibility, and any prize claims before treating it as an earning opportunity.",
       "related_case": "",
-      "tags": ["ctf", "security", "online", "competition"]
+      "tags": [
+        "ctf",
+        "security",
+        "online",
+        "competition"
+      ]
     },
     {
       "id": "2026-08-16-late-august-ctf-window",
@@ -221,7 +315,12 @@
       "relevance": "useful",
       "agent_notes": "Use the aggregator for discovery, then verify each organizer's official event/rules page before creating a case or planning participation.",
       "related_case": "",
-      "tags": ["ctf", "security", "calendar", "planning"]
+      "tags": [
+        "ctf",
+        "security",
+        "calendar",
+        "planning"
+      ]
     }
   ]
 }

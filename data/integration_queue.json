@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-29T19:39:31Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,25 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261029-codegeist-2026-forge-agent-hackathon",
+      "type": "research",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / 2026-10-29 afternoon",
+      "branch_or_pr": "research/2026-10-29-afternoon-codegeist-forge-source-health",
+      "path": "research/active-puzzles/20261029-codegeist-2026-forge-agent-hackathon/case.json",
+      "purpose": "Reconcile verified Atlassian Codegeist $120,000 cash opportunity with participant-specific Forge/Devpost feasibility, preserving source chronology and Pages pipeline.",
+      "summary": "Official rules independently verify $120,000 cash in 9 grand and 24 bonus awards, free entry, Dec 22 20:00 UTC deadline, Forge app/Atlassian integration and judge-installable submission. Canonical intelligence item staged on PR; structured triage case and six raw source observations preserved.",
+      "verification": "Official Devpost/Atlassian 2026 rules and event page reviewed Oct 29. Six source observations SHA-256 recomputed from normalized observed text; exact current-main predecessor hashes matched. No registration, developer account, build, payment or submission verified.",
+      "risks": [
+        "Participant eligibility and Devpost enrollment unverified.",
+        "Free Forge license and development environment/quotas untested; real costs unknown.",
+        "App must be installable by judges; Rovo/MCP bonus requires actual qualifying Forge modules.",
+        "PRs #223/#226/#227/#228 may modify integration queue or handoff; reconcile entries, never overwrite.",
+        "Source history must replay Aug 30 morning before later observations; this PR does not advance canonical freshness."
+      ],
+      "next_action": "Confirm eligible participant and Forge license; prototype/test a judge-installable app and optional Rovo/MCP module in a permitted tenant; if feasible activate case. Build agent must first dry-run Aug 30 morning five-record replay, verify hashes/predecessors/idempotence, then merge chronologically with other PR queue changes and run feed/queue/Core/maintenance/site-data validation."
     }
   ]
 }
