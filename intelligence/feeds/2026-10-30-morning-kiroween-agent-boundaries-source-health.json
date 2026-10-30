@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-30T07:41:23Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "summary": "Six real registered-source reviews and a failed Topcoder URL check. Newly visible Kiroween $100k prize breakdown remains provisional because 2026 binding rules are not yet posted. Three relevant agent-boundary research preprints independently opened; author claims not reproduced. No canonical history/registry, case, opportunity, integration queue, Pages or live target changed.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-10-30 morning | HI Cyber Con online Oct 30 14:00 UTC through Nov 1 14:00 UTC | Qiangwang online Oct 31 02:00 UTC through Nov 1 02:00 UTC | Russian CTF Cup X qualifier online Oct 31 09:00 UTC through Nov 1 09:00 UTC | no new prize inference",
+      "content_fingerprint": "7b428b8e4301c0b1d54f6c9f23cf5c90f8e64b54a050b2108fc5d5532fbf1405",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "note": "HI Cyber Con is already covered by PR #222. CTFtime is a calendar, not official prize/eligibility evidence.",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "change_state": "changed-versus-canonical"
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.CR recent 2026-10-30 morning | Fri Oct 30 2026 batch 83 entries | 300 recent entries | CARI 2610.38799 | TG-CI 2610.39532 | role spoofing 2610.40396 | author reported results not independently reproduced",
+      "content_fingerprint": "fa7c3de966bd4cbc95ef27f7a632b9978c3a3e64a4ff35a2cf3e9796d7767aa1",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "note": "New research batch and three agent-boundary papers reviewed. No reproducibility or implementation license verified.",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "change_state": "changed-versus-canonical"
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties 2026-10-30 morning | most recent Midas updated Oct 29 2026 maximum 500000 USDC | Inverse Finance updated Oct 28 2026 maximum 100000 DOLA | no complete scope verified and no security testing",
+      "content_fingerprint": "3e9390fb29c2158ba61ad7db370bd50be64e80f7abd85680ec3bd57f86edf43b",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Midas and Inverse Finance already covered by PR #228. Maximum rewards are not guaranteed payments or testing authorization.",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "change_state": "changed-versus-canonical"
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests 2026-10-30 morning | registered /contests redirects to /audits | K2 judging submissions closed | Rujira report in progress submissions closed | platform closure stated on homepage",
+      "content_fingerprint": "e320ddc891402794224791fb2314e4e18ff262ab1eea621aafefa599c9f76331",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "note": "Migration/closure already owned by PR #213; retain stable source ID until reviewed, do not silently delete.",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "change_state": "changed-versus-canonical"
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active challenges 2026-10-30 morning | DARPA Surgical Competition | Documentation and Decision Support Sprint | NASA Human Lander Challenge | NIH NASA QuSAFE | NOURISH | ACL Caregiver AI Prize Challenge | directory not proof of submission window",
+      "content_fingerprint": "21f931f49b7731604bfda295af1f77f42c1c6fd94d2d5cc211340d5a474fb560",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "note": "Directory shows additional challenge listings; each individual host must verify active application phase, eligibility, awards and deadline.",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "change_state": "changed-versus-canonical"
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events 2026-10-30 morning | Mumbai Nov 5 through Nov 7 2026 IRL hackathon apply to attend | Pragma Mumbai Nov 6 conference | ETHOnline Sep 4 through Sep 16 2026 historical | no remote participation or prize inferred",
+      "content_fingerprint": "cef6f995935d362b6c2579fdd4449606687297c35b4fb29c2a9a0942bb3ab67e",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "canonical_predecessor_checked_at": "2026-08-29T19:40:52Z",
+      "note": "Current official event calendar checked; Mumbai is in-person and application-dependent.",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "change_state": "changed-versus-canonical"
+    }
+  ],
+  "failed_retrievals": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "observed_status": "HTTP 404",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "note": "Failed retrieval is not a successful source check; review migrated destination rather than advancing freshness."
+    }
+  ],
+  "findings": [
+    {
+      "id": "20261030-kiroween-prize-breakdown-pending-rules",
+      "category": "hackathon",
+      "status": "needs-primary-rules-verification",
+      "title": "Kiroween 2026 displays $100,000 cash breakdown; binding rules still unavailable",
+      "official_urls": [
+        "https://kiroween.devpost.com/",
+        "https://kiroween.devpost.com/rules"
+      ],
+      "observed_at": "2026-10-30T07:41:23Z",
+      "advertised_cash_usd": 100000,
+      "prize_breakdown": "1st $30k; 2nd $20k; 3rd $10k; four category awards $5k each; startup $10k; Ghost of Kiroween Past $2k; Kiro Crew App $1k; four student-category awards $1.5k each; Best Demo $1k; sum $100k.",
+      "event_window": "2026-10-30 to 2026-12-04",
+      "submission_deadline": "2026-12-04 14:00 Pacific (22:00 UTC)",
+      "entry_cost": "not independently verified against binding 2026 rules",
+      "eligibility": "Devpost overview says adults in permitted jurisdictions; final rules not yet posted",
+      "requirements": "new Kiro-created project only; organizer explicitly says do not begin before submission period opens",
+      "confidence": "high for advertised cash breakdown, low for binding eligibility/payout",
+      "relevance": "high",
+      "next_action": "After the official rules publish on October 30, reconcile prize amounts, eligibility, submission/start time, cost and restrictions; only then consider canonical intelligence and a structured case. Do not begin work on entry early.",
+      "deduplication": "Kiroween already screened as rules-pending in Oct 27 research; this pass verifies prize breakdown without duplicate promotion."
+    },
+    {
+      "id": "20261030-cari-agent-runtime-feedback",
+      "category": "research",
+      "status": "research-lead",
+      "title": "CARI: Cross-Boundary Adversarial Runtime Injection in Coding-Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2610.38799",
+      "published_at": "2026-10-28T20:04:20Z",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "authors_claim": "2,845 of 3,000 trials (94.8%) in their controlled setting, with product-agent transfer rates 61.3% and 58.7%; results not independently reproduced",
+      "relevance": "high for multi-agent integration and CI/tool-output trust",
+      "next_action": "Assess overlap with tool-evidence-deference case from PR #223, and design isolated synthetic runtime-log/CI-output trust-boundary fixtures; do not run attacks on external targets; check license before importing artifacts."
+    },
+    {
+      "id": "20261030-task-graph-contextual-integrity",
+      "category": "research",
+      "status": "research-lead",
+      "title": "Judging Before Propagation: Task-Graph Contextual Integrity for Multi-Agent Privacy",
+      "source_url": "https://arxiv.org/abs/2610.39532",
+      "published_at": "2026-10-29T07:31:50Z",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "authors_claim": "MAPLE-Bench 144 cases; mean unauthorized disclosures reduced 85.8-94.1% in the authors' primary setup; not independently reproduced",
+      "relevance": "high for multi-agent provenance and integration queue privacy",
+      "next_action": "Compare propagation-scoped policies with existing agent integration boundaries on synthetic data; verify license and independent reproducibility before adopting."
+    },
+    {
+      "id": "20261030-role-spoofing-llm",
+      "category": "research",
+      "status": "research-lead",
+      "title": "Understanding and Mitigating Role Spoofing in LLMs",
+      "source_url": "https://arxiv.org/abs/2610.40396",
+      "published_at": "2026-10-29T16:33:08Z",
+      "checked_at": "2026-10-30T07:41:23Z",
+      "authors_claim": "Studies structural and content-based role confusion; proposes linear-probe detection; performance not independently reproduced",
+      "relevance": "useful for separating untrusted tool output from agent instructions",
+      "next_action": "Deduplicate against PR #223 tool-evidence work and PR #224 human-approval research; evaluate defensive synthetic fixtures only."
+    }
+  ],
+  "integration_boundary": {
+    "canonical_changes": "none",
+    "source_replay": "not performed: Aug 30 morning gate must precede later observations",
+    "other_prs": "PRs #223-229 contain overlapping case/inbox/research; preserve and deduplicate before promotion",
+    "pages": "no deployment; generated pipeline unchanged",
+    "next_build_action": "Dry-run python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-30-source-health.json --dry-run; verify five proposed additions, fingerprints, predecessors, idempotence and non-rewind; then native replay and validation before later chronology. Recheck Kiroween rules when published; promote only verified terms into canonical feed/case."
+  }
+}

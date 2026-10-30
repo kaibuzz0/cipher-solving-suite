@@ -362,3 +362,16 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Collision / conflict handling:** No canonical replay files are touched. Later Sep. research remains noncanonical; open research PRs must reconcile from current main rather than leapfrog Aug. 30.
 - **Known risks / blockers:** Aug. 30 morning is eligible for independent verification, not automatically trusted. Its contributed fingerprints/predecessors still need recomputation before any replay.
 - **Next action:** Validate and merge this coordination-only branch if green, then independently verify the Aug. 30 morning source-health snapshot and stage only the evidence-backed morning replay.
+
+
+---
+
+### 2026-10-30 07:41 UTC — Research Intelligence / Kiroween prize schedule and agent-boundary source health
+
+- **Branch / PR:** `research/2026-10-30-morning-kiroween-cari-source-health` / PR #230; base `e3406be6fe981feee5c2ec8c3c79cca924792e67`.
+- **Objective:** Independently check due canonical intelligence sources, preserve new time-sensitive competition and defensive research findings without leapfrogging the protected source-history replay.
+- **Changed:** Added `intelligence/feeds/2026-10-30-morning-kiroween-agent-boundaries-source-health.json`: six real source observations with normalized SHA-256 fingerprints and canonical predecessors; one failed Topcoder 404; four findings (Kiroween cash prize breakdown and CARI, TG-CI, role-spoofing research). No canonical history/registry/feed/case/inbox/site/Pages changes.
+- **Primary evidence:** `https://kiroween.devpost.com/` displays $100,000 cash award breakdown and Dec 4 deadline; `https://kiroween.devpost.com/rules` still says binding 2026 rules unavailable. The organizer says new projects only and not to begin before the submission period. Research: `https://arxiv.org/abs/2610.38799`, `https://arxiv.org/abs/2610.39532`, `https://arxiv.org/abs/2610.40396`. Paper performance figures are author claims, not independently reproduced. Source observations and checked time are preserved in the snapshot.
+- **Verification:** JSON parsed on GitHub read-back. Six normalized SHA-256 observations independently recomputed in Python (`6/6` match). Canonical predecessor hashes/timestamps match current source history. PR CI status must be checked on exact final head; no live-target security testing or developer registration occurred.
+- **Collision / chronology:** PRs #222/#223/#228 already cover HI Cyber Con, tool-evidence deference, and Midas; PR #213 owns Code4rena migration. PRs #223-229 may overlap handoff/inbox/cases; preserve compatible newer entries when integrating. Do not advance canonical source freshness until the Aug. 30 morning five-record gate has been replayed.
+- **Next action:** `python scripts/source_check_history.py replay-snapshot intelligence/feeds/2026-08-30-source-health.json --dry-run`, verify five hashes/predecessors/additions/registry advances/idempotence/non-rewind, then native replay and source/registry/feed/Core/maintenance/site-data validation. Reopen Kiroween binding rules after publication on Oct. 30, verify eligibility/entry cost/payout and start timing, then promote only if actionable. Deduplicate new agent-boundary research against PR #223 and evaluate synthetic fixtures before adoption.
