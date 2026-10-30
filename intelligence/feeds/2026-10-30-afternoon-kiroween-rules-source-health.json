@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-30T19:37:57.398Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "purpose": "Independent Oct 30 afternoon source-health check and new Kiroween binding-rules verification; contributed research only while Aug 30 chronological replay is pending.",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | 2026 qiangwang challenge on cyber mimic defense qualification oct 31 0200 utc to nov 1 0200 utc online | hkcert ctf 2026 qualifying round nov 6 1000 utc to nov 7 1000 utc online | pink+ ctf 2026 nov 6 to nov 9 online | organizer rules and prizes not established by aggregator",
+      "sha256": "320c621191f1c726ec2d317de3a9d47cb447f1eb5ec905fedb8abaf8c5824a3d",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Discovery calendar only; follow each organizer for entry, prize and challenge authorization."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | fri oct 30 2026 first batch 83 entries | 300 recent entries listed | seal sealed queries for local sanitization against indirect prompt injection arxiv 2610.39758 appears | preprint claims not independently reproduced",
+      "sha256": "dfedd9eccd97269fcd6cd2d132785fe92de8f607d616b17b06ec49fa7b797cf8",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "SEAL author-reported AgentDojo results are not independent replication; source index reports 83 Oct 30 entries."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent midas last updated oct 29 2026 500000 usdc payout | inverse finance last updated oct 28 2026 100000 dola payout | usual labs 16000000 usdc maximum listed | no target authorization inferred from listing",
+      "sha256": "327dbe7aa46981d039251dfe92b30f1136bb36d17527c59ebd0f8702474e14d2",
+      "previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "No newly verified program since prior Oct 29 PR #228; no testing or scope inference."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests | legacy https code4rena.com/contests redirects to https code4rena.com/audits | k2 judging audit submissions closed | rujira report in progress | no verified currently accepting audit submissions",
+      "sha256": "c46e08c02b2597c6438866fcaeca51ec4fd8222eb9e91b2fb2b58c66c6b23e0d",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Migration still requires registry review; PR #213 owns migration evidence; do not delete source."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | active challenge directory accessible | links include acl caregiver ai prize challenge | xtech kinetic reach | nasa human lander challenge | listing active is not proof a particular submission window is open",
+      "sha256": "095eb3ed2191edd83b2abfd8f03bd56f34dbeed3f47e540ee1209c07bdd1ea68",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "No new federal entry promoted without verifying the actual agency-hosted submission phase."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | upcoming ethglobal mumbai nov 5 to nov 7 2026 in person hackathon apply to attend | pragma mumbai nov 6 2026 conference | ethconf 2027 june 14 to june 16 new york city | no new remote hackathon in upcoming section",
+      "sha256": "cada6b7ece5bc78dd155b66d3ff1264a700c88e590d361b637a32ef7df58cbea",
+      "previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Mumbai is IRL; travel/application/eligibility/prize not verified for a remote user."
+    }
+  ],
+  "failed_retrievals": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404",
+      "checked_at": "2026-10-30T19:37:57.398Z",
+      "recorded_as_successful_check": false,
+      "action": "Review official replacement URL and utility; do not advance freshness or silently delete."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Kiroween 2026 binding rules now published; submissions open and free",
+      "status": "verified-organizer-primary-triage-case",
+      "source_urls": [
+        "https://kiroween.devpost.com/rules",
+        "https://kiroween.devpost.com/",
+        "https://kiroween.devpost.com/resources",
+        "https://kiro.dev/pricing/"
+      ],
+      "checked_at": "2026-10-30T19:37:57.398Z",
+      "confidence": "high",
+      "relevance": "high",
+      "facts": {
+        "submission_period": "2026-10-30 09:00 PT to 2026-12-04 14:00 PST (2026-10-30T16:00:00Z to 2026-12-04T22:00:00Z)",
+        "registration_period": "2026-10-13 08:30 PT to 2026-12-04 14:00 PST",
+        "entry_cost": "No purchase/payment necessary; Kiro free tier $0 with 50 credits, subject to usage limits",
+        "participant_eligibility": "Adults age of majority; teams max 3; explicit excluded jurisdictions include Quebec, Argentina, Australia, Brazil, Indonesia, Italy, Philippines, Russia, UAE and sanctioned regions; full rules govern",
+        "required_tool": "Working newly created application using Kiro IDE/CLI/Web/Crew; significant Kiro usage must be shown",
+        "required_submission": "Public open-source licensed GitHub repo containing root /.kiro directory; runnable app URL; public YouTube demo under 3 minutes; description and Kiro usage writeup",
+        "project_start_boundary": "Only projects newly created after Oct 30 09:00 PT; prior existing suite is not a qualifying project as-is",
+        "prize_evidence": "Overview advertises $100,000 cash; rules list $94,000 in explicitly straightforward cash categories plus four student awards each described as $1,500 USD and one-year Kiro Pro Max subscription; overview separately explicitly labels each student prize $1,500 cash plus subscription, reconciling total to $100,000 cash; conditional award, no guaranteed payout",
+        "credit_offer": "Organizer resources offer one-time 4,000 Kiro credits on request with Kiro account and ID by Dec 1 12:00 PT; redemption by Dec 4; expires Dec 31"
+      },
+      "missing_verification": [
+        "Verify participant-specific registration and Kiro account access; no account actions were taken.",
+        "Verify that free Kiro credit request is accepted and usable for the chosen build.",
+        "Confirm region/model access, licensing, and hosting/demo feasibility.",
+        "If prize breakdown remains ambiguous in the binding rules' student row, obtain organizer clarification; overview specifies $1,500 cash plus subscription.",
+        "Select a genuinely new build and category; do not submit existing cipher-solving-suite as pre-existing work."
+      ],
+      "deduplication": "Prior PR #230 already preserved the overview's $100k headline; this contribution adds binding rules, a structured case, credits, and explicit unresolved participant checks without creating a competing recurring source."
+    },
+    {
+      "title": "SEAL indirect-prompt-injection defense preprint",
+      "status": "research-watch-only",
+      "source_urls": [
+        "https://arxiv.org/abs/2610.39758"
+      ],
+      "checked_at": "2026-10-30T19:37:57.398Z",
+      "confidence": "medium",
+      "relevance": "useful",
+      "facts": "Submitted Oct 29, 2026; authors report AgentDojo attack success reduction 34.6% to 0.1% and higher task completion using a local sanitizer. These are author-reported results, not independently reproduced.",
+      "missing_verification": [
+        "Check code/license availability and existing agent-security case overlap.",
+        "Reproduce only with isolated synthetic fixtures; no production adoption from abstract alone."
+      ],
+      "deduplication": "Different from CARI, role-spoofing and task-graph papers already staged in PR #230."
+    }
+  ],
+  "chronology": "No canonical history/registry freshness changes. Preserve Oct 30 observations as raw evidence until protected Aug 30 morning five-record/five-registry replay and all intervening overlapping source snapshots are reconciled.",
+  "safety": "No external target testing, credentials, destructive actions, evasion, or security scanning. Bounty/CTF listings are not authorization."
+}
