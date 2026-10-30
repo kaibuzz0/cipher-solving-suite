@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-30T19:38:46.969Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,25 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261030-kiroween-binding-rules-triage",
+      "type": "case",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / 2026-10-30 afternoon",
+      "branch_or_pr": "research/2026-10-30-afternoon-kiroween-rules-source-health (PR pending)",
+      "path": "research/active-puzzles/20261030-kiroween-2026-hackathon/case.json",
+      "purpose": "Reconcile newly available Kiroween 2026 binding rules, entry feasibility and cash/noncash prize breakdown with earlier PR #230 research and canonical source/case/Pages pipeline.",
+      "summary": "Official Devpost rules now confirm free entry, adult/geographic exclusions, teams <=3, new-project-only start Oct 30 09:00 PT, submission Dec 4 14:00 PST, public GitHub licensed source including root /.kiro, working app, Kiro usage writeup and under-3-minute public YouTube demo. Overview advertises $100,000 cash; rule rows and overview student-prize descriptions reconcile to $100k cash plus separate student subscriptions. Official resources offer one-time 4,000-credit request by Dec 1 12:00 PT; account/approval not confirmed.",
+      "verification": "Organizer rules, overview, resource page and Kiro pricing opened directly on Oct 30 2026; 6 registered-source observations fingerprinted with SHA-256 and canonical predecessors in intelligence/feeds/2026-10-30-afternoon-kiroween-rules-source-health.json. No participant account or project was accessed.",
+      "risks": [
+        "Participant-specific eligibility, Devpost registration, Kiro account/model access, credit approval, hosting costs and build feasibility remain unverified.",
+        "Pre-existing cipher-solving-suite is not itself eligible as a new project; all qualifying new code must be created after opening, with disclosures/licensing for reused libraries.",
+        "Rules' combined student cash/subscription row should be clarified with organizer if payout specifics are material; organizer overview separately states $1,500 cash plus subscription.",
+        "PRs #212, #223, #226-#230 overlap handoff or integration inbox; reconcile all compatible newer queue entries before merge.",
+        "Protected Aug 30 morning chronological source replay is still pending; do not advance canonical source freshness from this snapshot."
+      ],
+      "next_action": "Build/integration agent: complete Aug 30 morning native replay dry-run and exact five-source verification; reconcile this branch with current main and other PRs; preserve all queue entries; validate case schema, queue, source history, registry, intelligence and site-data/Core/Maintenance; confirm participant registration/Kiro credits before promoting case from triage to active; do not submit an existing project."
     }
   ]
 }
