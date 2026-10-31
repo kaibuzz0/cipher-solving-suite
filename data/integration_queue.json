@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-10-31T07:39:10.501Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,26 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261031-ubc-aero-fault-oracle-research",
+      "type": "research",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / Oct 31, 2026",
+      "branch_or_pr": "research/2026-10-31-ubc-aero-fault-oracle-source-health / PR pending",
+      "path": "intelligence/feeds/2026-10-31-ubc-aero-source-health.json",
+      "purpose": "Preserve newly observed UBC 2026 Agentic Payments hackathon, LIVE Aero Sherlock bounty and deterministic isogeny fault-oracle paper without skipping the protected source-history replay chronology or accepting unverified participation/security scope.",
+      "summary": "Six official/registered source checks with recomputed SHA-256 over observed strings; UBC organizer advertises $23,000+ including $12,000 main tracks and $11,000 sponsor bounties/perks, online Nov 13–20 and Austin finals Nov 21. Aero Sherlock program #437 is LIVE since Oct 30 with 500,000 USDC maximum but scope text is unavailable. arXiv 2610.39910 describes author-reported deterministic-isogeny key-recovery fault simulation. UBC structured triage case: research/active-puzzles/20261031-ubc-2026-blockchain-hackathon.",
+      "verification": "Opened organizer primary UBC hackathon/travel-grant pages, Sherlock bounty listing and Aero program, arXiv primary abstract, CTFtime, arXiv index, Code4rena redirect, USA.gov and ETHGlobal; Topcoder 404 not counted as successful check. All six SHA-256 digests calculated from exact normalized observed text. No canonical registry/history advancement; no experimental reproduction or target testing.",
+      "related_case": "20261031-ubc-2026-blockchain-hackathon",
+      "risks": [
+        "UBC Devpost event page returned HTTP 403: binding rules, eligibility, entry cost, remote finalist travel and prize disbursement remain unresolved.",
+        "Aero program scope, exclusions, safe harbor, reward conditions and authorized testing methods not verified; no testing authorized by a public listing.",
+        "Isogeny fault-recovery figures are author-reported, not independently reproduced; use only isolated synthetic software fixtures.",
+        "Open PRs #223/#226/#227/#228/#229/#231 overlap integration queue; preserve all newer compatible entries during merge.",
+        "Canonical source history is still at Aug 29 afternoon; later observed source checks must be replayed chronologically, not directly written to registry."
+      ],
+      "next_action": "First complete the protected Aug 30 morning five-record replay and validators. For UBC, obtain binding Devpost rules and verify student/fee/remote-finalist/prize conditions before activating the case. For Aero, read complete official scope and policy before even considering authorized testing. For arXiv, inspect full paper/code/license and deduplicate against solver work. Reconcile this queue entry with concurrent PR additions, then build generated Pages data and verify the case appears."
     }
   ]
 }
