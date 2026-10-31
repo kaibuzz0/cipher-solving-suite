@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-31T07:39:10.501Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "purpose": "Oct 31 independent recurring-source review and primary-source research on UBC blockchain hackathon, newly LIVE Aero bounty and deterministic isogeny fault-oracle paper. Contributed evidence only pending protected chronological replay.",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | russian ctf cup x qualifier oct 31 0900 utc to nov 1 0900 utc online | hkcert ctf 2026 qualifiers nov 6 1000 utc to nov 7 1000 utc online | spookyctf 2026 nov 6 1700 utc to nov 7 1700 utc online | ctftime listing is discovery not prize or authorization proof",
+      "sha256": "62e138ca557af77762a7a0c6c4c112960424d66c380f7f6ae5da3338e72a83b9",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Upcoming events verified on the CTFtime calendar; no new organizer-verified cash award from this index. Use organizer challenge infrastructure only under event rules."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | fri oct 30 2026 shows 83 entries in batch and 300 recent entries | from if to oops turning a conditional into a key recovery oracle arxiv 2610.39910 appears in recent batch | deterministic csidh and osidh ld fault recovery is author reported not independently reproduced",
+      "sha256": "03e4b124d185dcb0a83b1de36717796d27830e11a69fbc3e86e3d39dc8e0a11c",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Paper verified against arXiv abstract; only isolated offline fixtures appropriate for future evaluation, not physical or third-party fault testing."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | newest aero listing updated oct 30 2026 500000 usdc maximum payout | aero program page id 437 says live since oct 30 2026 | midas oct 29 2026 500000 usdc and inverse finance oct 28 2026 100000 dola also listed | scope tab not retrievable in current text view and no target testing authorized by listing",
+      "sha256": "da195bad2e1fd48838d55ef0044ac0c286589f3cc1150446421b4287edd32b27",
+      "previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "Aero is a newly observed LIVE program; advertised maximum is not guaranteed payout or blanket testing authorization. Exact scope and rules must be independently read first."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests | legacy contests path redirects to https code4rena.com/audits | k2 judging audit submissions closed | rujira report in progress | no verified open submissions in displayed audits",
+      "sha256": "c15e9c7584eb08c81a3c9c42b5b89941aff38164151664d880877af3adabc6d9",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Legacy URL migration still needs registry review; PR #213 owns related research. Preserve source rather than silently deleting."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active federal challenges | official directory accessible | displayed entries include darpa surgical competition documentation and decision support sprint nasa human lander challenge nih nasa qusafe acl caregiver ai prize and xtech kinetic reach | directory active listing is not proof of a particular entry deadline",
+      "sha256": "061ffea56d6c598b5ec2057a5aff54e72cc55ba8fdf1ba2318f59820445292ec",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "Federal challenge discovery only. No new eligibility/prize/deadline claim promoted without agency-hosted rules."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | upcoming ethglobal mumbai nov 5 to nov 7 2026 in person hackathon apply to attend | pragma mumbai nov 6 2026 conference | ethconf 2027 june 14 to june 16 new york | ethonline 2026 listed under past events sep 4 to sep 16",
+      "sha256": "bc0fe2bdf35d3c90edd8b8e69db3612bd5a1c51c2f43a7d1227275b393f21506",
+      "previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "No new remote ETHGlobal hackathon verified; Mumbai requires in-person participation and application."
+    }
+  ],
+  "failed_retrievals": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404",
+      "checked_at": "2026-10-31T07:39:10.501Z",
+      "recorded_as_successful_check": false,
+      "action": "Find official migrated challenge directory, verify usefulness and preserve old URL as migration evidence; do not advance source freshness."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "UBC 2026 blockchain hackathon — $23,000 organizer-advertised awards with Agentic Payments & AI track",
+      "status": "verified-organizer-primary-triage-case",
+      "checked_at": "2026-10-31T07:39:10.501Z",
+      "confidence": "medium",
+      "relevance": "high",
+      "source_urls": [
+        "https://www.universityblockchain.org/programs/hackathon",
+        "https://www.universityblockchain.org/travel-grants",
+        "https://ubc-hackathon-2026.devpost.com/"
+      ],
+      "facts": {
+        "format": "Online development November 13–20, 2026; in-person finalist pitches November 21 at UT Austin",
+        "build_start": "November 13, 2026 at 12:00 CST (18:00 UTC) per organizer; binding rules for pre-existing work not yet verified",
+        "submission_deadline": "November 20, 2026 at 12:00 CST (18:00 UTC) per organizer",
+        "prize_evidence": "Organizer advertises $23,000+ including $12,000 across three main tracks ($2,000/$1,250/$750 each) and $11,000 sponsor bounties/perks; exact cash vs credits/token terms and award disbursement unverified",
+        "tracks": [
+          "Agentic Payments & AI",
+          "DeFi & Onchain Apps",
+          "Consumer Apps"
+        ],
+        "entry_cost": "Not established; do not infer free entry from online development",
+        "eligibility": "Student/attendee restrictions and geographic exclusions unresolved; conference travel grant is student-only and conditional",
+        "authorization": "Only official hackathon projects, no external security targets"
+      },
+      "missing_verification": [
+        "Read binding Devpost rules; event Devpost landing returned 403 in this pass.",
+        "Verify student eligibility, registration, ticket/fee requirement and any geographic restrictions.",
+        "Determine whether remote finalists can present/win without Austin travel, and whether a conference ticket is required.",
+        "Verify each sponsor award is cash vs token/credits, and payment conditions.",
+        "Verify whether pre-existing project work is eligible; confirm team limit, IP, public code, demo and judging requirements.",
+        "Do not begin or submit a competition entry until eligibility and terms are resolved."
+      ],
+      "deduplication": "No UBC 2026 case or canonical intelligence item found in current main; earlier open research PRs #222–#231 cover different competitions. Structured triage case created; no canonical feed promotion."
+    },
+    {
+      "title": "Aero newly LIVE Sherlock bug bounty with advertised 500,000 USDC maximum",
+      "status": "scope-unverified-watch-only",
+      "checked_at": "2026-10-31T07:39:10.501Z",
+      "confidence": "high",
+      "relevance": "high",
+      "source_urls": [
+        "https://audits.sherlock.xyz/bug-bounties",
+        "https://audits.sherlock.xyz/bug-bounties/437"
+      ],
+      "facts": "Sherlock list labels Aero the most recent program and displays 500,000 USDC maximum; Aero page says LIVE since Oct 30, 2026. Scope tab and complete rules were not retrievable from text view.",
+      "missing_verification": [
+        "Open program Scope and full policy in authenticated/interactive official UI if required; preserve in-scope assets and explicit safe-harbor language.",
+        "Verify exclusions, prohibited methods, rate limits, severity table, payout conditions and submission requirements.",
+        "Do not perform any scanning, transactions or target testing before documented authorization."
+      ],
+      "deduplication": "Midas and Inverse Finance were previously covered in PR #228; Aero is a separate newly observed program. No active security case created."
+    },
+    {
+      "title": "From if to Oops — deterministic isogeny fault-oracle research",
+      "status": "research-watch-only",
+      "checked_at": "2026-10-31T07:39:10.501Z",
+      "confidence": "medium",
+      "relevance": "useful",
+      "source_urls": [
+        "https://arxiv.org/abs/2610.39910"
+      ],
+      "facts": "Authors Banegas, Dimitrova and Trimoska submitted the paper October 29, 2026. They report full-key recovery in software fault simulation of deterministic OSIDH-LD, and upper bounds of 297 and 222 fault-oracle queries for two variants. Experimental claims are not independently reproduced.",
+      "missing_verification": [
+        "Review full paper, reference code and licenses; check overlap with current cryptographic solvers.",
+        "Reproduce only in isolated locally controlled software fixtures with synthetic keys; do not test public systems or devices."
+      ],
+      "deduplication": "Distinct from the agent-security papers in PRs #230/#231; not promoted as an implemented solver."
+    }
+  ],
+  "chronology": "Six real external source observations preserved with SHA-256 over the exact observed UTF-8 strings. No changes to canonical source-check history or registry timestamps because Aug 30 morning and subsequent source snapshots have not been replayed. The previous_fingerprint fields reference latest canonical per-source checks, not intervening contributed snapshots.",
+  "safety": "No security testing, credential activity, destructive actions, or out-of-scope interactions. Program listing and public research do not establish testing authorization."
+}

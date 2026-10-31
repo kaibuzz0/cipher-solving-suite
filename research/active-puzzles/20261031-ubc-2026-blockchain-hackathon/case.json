@@ -1,0 +1,36 @@
+{
+  "case_id": "20261031-ubc-2026-blockchain-hackathon",
+  "name": "University Blockchain Conference 2026 Hackathon — Agentic Payments & AI",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-31T07:39:10.501Z",
+  "updated_at": "2026-10-31T07:39:10.501Z",
+  "source": "University Blockchain Conference 2026 official organizer",
+  "source_url": "https://www.universityblockchain.org/programs/hackathon",
+  "authorization_url": "https://www.universityblockchain.org/programs/hackathon",
+  "authorization_required": false,
+  "owner": "research-intelligence-pass",
+  "tags": [
+    "hackathon",
+    "blockchain",
+    "agentic-payments",
+    "ai-agents",
+    "web3",
+    "in-person-finals",
+    "eligibility-unverified"
+  ],
+  "evidence": [
+    {
+      "path": "research/active-puzzles/20261031-ubc-2026-blockchain-hackathon/evidence/README.md",
+      "role": "organizer-source-provenance"
+    },
+    {
+      "path": "intelligence/feeds/2026-10-31-ubc-aero-source-health.json",
+      "role": "source-check-snapshot"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261031-ubc-2026-blockchain-hackathon/notes.md"
+  ],
+  "next_action": "Before promotion to active: independently obtain binding Devpost rules (event landing returned 403), confirm eligibility/student or conference ticket restrictions, fee, cash vs credit/token awards, remote finalist presentation eligibility, required submission assets and pre-existing-work policy. Only then assess a genuinely new Agentic Payments & AI project; organizer lists online development Nov 13–20, noon CST submission Nov 20, and in-person finals Nov 21 in Austin. No entry, registration, code submission, payment or security testing was performed."
+}
