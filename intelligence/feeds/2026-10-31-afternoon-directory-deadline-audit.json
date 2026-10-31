@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-31T19:43:22Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "purpose": "Afternoon primary-source deadline-quality audit and due source checks. Newly observed $10k hybrid-AI event remains rules-pending; avoid promoting misleading cash and directory-active labels. Contributed research only.",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa.gov active federal challenges directory 2026-10-31 | xtech kinetic reach still listed active with usa.gov end date nov 30 2026 but army primary page says submission window closed and phase 1 ended jun 30 2026 | acl caregiver ai prize directory lists 2.5m cash and 2029 end date but acl primary page says phase 1 applications due jul 31 2026 and later phases dates unannounced | directory end dates not open submission proof",
+      "sha256": "41c0e06c7211c17e1947a54ed638bd8ee1bc99fb150ee178ddd88a4a24e8b6fb",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "Material directory/agency discrepancy independently checked. Do not treat directory end dates as live submission deadlines."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-10-31 | hkcert ctf 2026 qualifying nov 6 1000 utc to nov 7 1000 utc online | pink+ ctf nov 6 1200 utc to nov 9 1200 utc online | csctf 2026 nov 6 1300 utc to nov 8 1300 utc online | spookyctf nov 6 1700 utc to nov 7 1700 utc online | organizer rules and prize evidence unverified",
+      "sha256": "b29637578cdbf8dbd6a218b230023a236087262cfdd0cc50f589d65b5f7c20ec",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Upcoming calendar checked; no prize, registration, or organizer authorization inferred."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests 2026-10-31 | /contests redirects to /audits | k2 judging audit submissions closed | rujira report in progress | no open submissions verified in visible listing",
+      "sha256": "060ad4450cbbcddc56ff35ff998c1d1b1c188185e89c18e690059f1320486afc",
+      "previous_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "note": "Legacy source migration already owned by PR #213; no duplicate source registry entry."
+    },
+    {
+      "source_id": "algora-bounties",
+      "source_url": "https://algora.io/",
+      "observed": "algora homepage 2026-10-31 | headline meet your new hire today | recruiting service for hiring top 1 percent open source engineers | no current public coding bounty directory visible on registered homepage | source relevance and migration review needed",
+      "sha256": "5fc9b9f32e1a332848f5369178e83e1107f64dea61158f080378026affd66df0",
+      "previous_fingerprint": "db528ee8efafffc3b5a3725fc0ff0c604fe6dc2566a74afee008a8005f984ccb",
+      "note": "Official landing now emphasizes recruitment; preserve source and mark for value/URL review, not deletion."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events 2026-10-31 | mumbai in person hackathon nov 5 to nov 7 2026 apply to attend | pragma mumbai nov 6 2026 conference | ethconf 2027 jun 14 to jun 16 new york | ethonline 2026 listed past sep 4 to sep 16",
+      "sha256": "2fd9dfd38e77296d52494520778217ce6154b1c38715e79264f99d1636ea3abb",
+      "previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Mumbai is in-person and application gated; no new remote opportunity promoted."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent 2026-10-31 | latest fri oct 30 2026 batch 83 entries and 300 recent entries | role spoofing arxiv 2610.40396 and isogeny fault oracle arxiv 2610.39910 already captured in earlier contributed research | no newly validated experimental reproduction",
+      "sha256": "74d0d1f7198ea5b7a090e00ce4f1f0d5d8b1486c3120ebd304ee38fa55a2300e",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Research batch checked; duplicate paper leads already preserved in PRs #230 and #232."
+    }
+  ],
+  "failed_retrievals": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "recorded_as_successful_check": false,
+      "action": "Review official migrated challenge directory; preserve original source ID and migration evidence."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "result": "Timed out in this pass",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "recorded_as_successful_check": false,
+      "action": "Retry official program listing; do not infer changes, mark checked or authorize testing."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "USA.gov active directory includes xTech|Kinetic Reach after Army submission closure",
+      "status": "verified-source-status-discrepancy",
+      "confidence": "high",
+      "relevance": "high",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "source_urls": [
+        "https://www.usa.gov/find-active-challenge",
+        "https://www.usa.gov/challenges/xtech-kinetic-reach",
+        "https://xtech.army.mil/competition/xtechkinetic-reach/"
+      ],
+      "facts": "USA.gov labels xTech|Kinetic Reach among active challenges and shows an overall November 30, 2026 end date and $1.5M cash pool. Army primary page explicitly states 'Submission window is closed' and Phase 1 submission June 5–30, 2026; November dates concern later finalist activities. Not a currently open new application.",
+      "entry_cost": "Not independently established; no new submission possible on official page.",
+      "eligibility": "Business applicants and specified readiness requirements; irrelevant until new application window opens.",
+      "next_action": "Keep directory source but add an agency-status cross-check requirement; do not promote the $1.5M as currently accessible."
+    },
+    {
+      "title": "ACL Caregiver AI Prize overall 2029 end date does not reopen Phase 1",
+      "status": "verified-phase-status-discrepancy",
+      "confidence": "high",
+      "relevance": "useful",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "source_urls": [
+        "https://www.usa.gov/challenges/acl-caregiver-ai-prize",
+        "https://acl.gov/caregiver-ai-competition"
+      ],
+      "facts": "USA.gov shows $2.5M total cash and overall February 6, 2029 end. ACL primary page says Phase 1 applications were due July 31, 2026 and Phase 2/3 dates will be announced later. No currently open phase verified.",
+      "next_action": "Watch ACL's official phase announcements, not the federal directory overall end date."
+    },
+    {
+      "title": "#BuildHybridAI 2026 — $10,000 advertised cash, official rules pending",
+      "status": "rules-pending-watch-only",
+      "confidence": "medium",
+      "relevance": "high",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "source_urls": [
+        "https://firebasehybridaihackathon.devpost.com/",
+        "https://firebasehybridaihackathon.devpost.com/rules",
+        "https://firebasehybridaihackathon.devpost.com/details/dates"
+      ],
+      "facts": "Organizer's Devpost overview advertises $10,000 in cash for online hybrid Firebase AI Logic builds. Submissions November 9–30, 2026, closing November 30 at 2:00 PM PST (22:00 UTC). Rules page explicitly says binding rules unavailable until submissions open November 9.",
+      "entry_cost": "Not verified from binding rules.",
+      "eligibility": "Overview indicates adult entrants subject to exceptions; binding country/team/AI-tool/IP/payout rules not yet published.",
+      "authorization": "Development competition only; no external security testing.",
+      "missing_verification": [
+        "Reopen binding rules on or after November 9, 2026.",
+        "Verify complete eligibility, registration, fee, prize breakdown and payout conditions.",
+        "Verify required Firebase features, cost/credits, originality and demo/submission requirements.",
+        "Check participant account/access before creating active submission case."
+      ],
+      "deduplication": "No canonical item or matching open research PR found by title search; do not promote before rules."
+    },
+    {
+      "title": "HackTheFashion Global'26 — advertised $45,000 but binding rules contain placeholders",
+      "status": "do-not-promote-template-rules",
+      "confidence": "high",
+      "relevance": "useful",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "source_urls": [
+        "https://hackthefashion-global26.devpost.com/",
+        "https://hackthefashion-global26.devpost.com/rules",
+        "https://hackthefashion-global26.devpost.com/details/dates"
+      ],
+      "facts": "Devpost overview advertises $45,000 cash (three $15,000 winners), student-only eligibility and November 6–25 online event; schedule closes November 25 at 5:00 PM IST (11:30 UTC). Rules contain literal placeholders for sponsor identity, registration/submission dates, API name and prize table; rules also state they require legal review before publication.",
+      "missing_verification": [
+        "Require completed organizer-issued binding rules, verified sponsor identity and actual API access.",
+        "Reconcile student-only eligibility with rule text and validate cash payout terms.",
+        "Do not treat template text as a valid award contract or create an active case."
+      ]
+    },
+    {
+      "title": "IceHacks 2026 — contradictory Devpost cash headline",
+      "status": "misleading-prize-metadata-watch-only",
+      "confidence": "high",
+      "relevance": "watch",
+      "checked_at": "2026-10-31T19:43:22Z",
+      "source_urls": [
+        "https://icehacks.devpost.com/"
+      ],
+      "facts": "Devpost structured header says $17,150 in cash while organizer body explicitly states no cash prizes, only sponsor credits/subscriptions/scholarships. Student-only event November 8–15. Do not report $17,150 as available cash.",
+      "next_action": "Require corrected organizer prize metadata and official prize schedule before cash-opportunity promotion."
+    }
+  ],
+  "deduplication": "Existing PRs #213 and #230–#232 cover Code4rena migration and recent research; this pass does not duplicate those cases. The two new hackathon watch leads are not present in canonical feed/catalog; no active case created.",
+  "chronology": "Six actually inspected registered sources with exact observed UTF-8 strings and SHA-256 fingerprints; predecessor fields reference latest canonical per-source checks, not intervening contributed snapshots. No canonical registry/history advances because Aug 30 morning replay remains first gate.",
+  "safety": "No external security testing, credential attacks, target interaction, or destructive actions. Public source and prize listing are not testing authorization."
+}
