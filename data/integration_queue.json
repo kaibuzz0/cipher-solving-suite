@@ -333,7 +333,7 @@
       "type": "case",
       "status": "needs-review",
       "contributor": "research-intelligence-pass / 2026-11-01",
-      "branch_or_pr": "research/2026-11-01-telegraph-bch-source-health (PR pending)",
+      "branch_or_pr": "PR #234 / research/2026-11-01-telegraph-bch-source-health",
       "path": "research/active-puzzles/20261101-telegraph-h2-agent-hackathon/case.json",
       "purpose": "Verify and integrate newly opened Telegraph H2 Apps & Agents cash competition without treating organizer-advertised prizes as participant eligibility.",
       "summary": "Official Season II rules show $7,000 main awards plus $3,000 separately ruled December awards; Apps & Agents has $3,000 main allocation. Free registration stated, Dec 1 23:59 UTC deadline, testnet autonomous intelligence purchase permitted. A separate /judging page conflicts on demo length/scoring; payout-country, identity/tax, payment terms, registration and testnet costs remain unverified.",
