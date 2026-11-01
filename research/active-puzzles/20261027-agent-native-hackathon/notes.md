@@ -5,3 +5,5 @@
 - No registration required according to rules. Actual participant eligibility, working framework install, public Clips demo and submission receipt are not verified.
 - Separate in-person Innodata NYC Nov 14 event ($8,750 cash) was screened out of general remote shortlist; see source snapshot.
 - Source-health fingerprints are independent, but this PR does not advance the canonical Aug 29 source-history cutoff.
+
+- 2026-11-01T20:38:53Z: Independently reopened https://www.builder.io/hackathon/rules and https://www.builder.io/hackathon/submit. Both now show **Nov 9, 2026, 11:59 PM PT** (Nov 10, 07:59 UTC per rules). The Oct 27 Nov 2 form observation remains historical and was not rewritten. No sponsor email confirmation, registration, demo or submission. Case remains triage pending participant and technical feasibility checks.
