@@ -1,11 +1,11 @@
-# Builder.io Agent-Native Hackathon — deadline conflict triage
+# Builder.io Agent-Native Hackathon — deadline reconciled on live pages
 
-**Status:** triage, not registered/submitted. **Checked:** 2026-10-27T19:44:44Z. **Format:** online software-building competition, free entry. **Cash awards:** USD 5,000 / 2,500 / 1,500 / 750 / 250 (total $10,000, gross, not guaranteed winnings).
+**Status:** triage, not registered/submitted. **Original check:** 2026-10-27T19:44:44Z. **Deadline recheck:** 2026-11-01T20:38:53Z. **Format:** online software-building competition, free entry. **Cash awards:** USD 5,000 / 2,500 / 1,500 / 750 / 250 (total $10,000, gross, not guaranteed winnings).
 
 ## Independently reviewed official sources
 
 - Sponsor [hackathon homepage](https://www.builder.io/hackathon) and [official rules](https://www.builder.io/hackathon/rules) give **November 9, 2026, 11:59 PM Pacific** as the final deadline.
-- Sponsor [live submission form](https://www.builder.io/hackathon/submit) still displays **November 2, 2026, 11:59 PM Pacific**. This is a material conflict; **do not assume Nov 9 is operationally safe**. Until corrected/confirmed, plan to submit by the earlier Nov 2 cutoff. Contact hackathon@builder.io to reconcile.
+- **November 1 update:** The [live submission form](https://www.builder.io/hackathon/submit) now also displays **November 9, 2026, 11:59 PM Pacific**, matching the [official rules](https://www.builder.io/hackathon/rules). The previously observed Nov 2 discrepancy is resolved in the published pages. Preserve the Oct 27 observation as historical evidence; no written sponsor reply was obtained.
 - Sponsor rules say the event begins Oct 27, 2026. Earlier search/cached text showed an Oct 19 start and Nov 2 deadline; prefer live official pages but retain the form contradiction as unresolved.
 - [Agent-Native framework](https://github.com/BuilderIO/agent-native) is public and MIT-licensed; [framework docs](https://www.agent-native.com/docs/) are accessible. No dependency install or runtime test was performed.
 
@@ -18,7 +18,7 @@
 
 ## Action gate
 
-1. Ask sponsor to reconcile the official rules/form deadline immediately. If no answer, use **Nov 2, 11:59 PM PT** as conservative cutoff.
+1. Use **Nov 9, 2026, 11:59 PM PT** (Nov 10, 07:59 UTC) as the currently published deadline, confirmed on both live sponsor pages on Nov 1; recheck the form before submitting. Do not treat the historical Nov 2 form text as a current cutoff.
 2. Verify local framework and Clips functionality, participant eligibility, and any model/hosting costs.
 3. Choose a narrow, genuinely new application with a useful user-controlled agent interface; avoid misrepresenting existing suite code as newly created.
 4. Build and test, record public Clips demo, submit the actual form and preserve receipt before the verified deadline.
