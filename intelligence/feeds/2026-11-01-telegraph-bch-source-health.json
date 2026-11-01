@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-01T08:44:55Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "purpose": "Newly opened Telegraph H2 competition and BCH BLAZE 2026 crypto development opportunities, with independently inspected due-source status. Contributed evidence only; canonical chronology protected.",
+  "canonical_replay": false,
+  "canonical_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_canonical_gate": "2026-08-30T07:38:20Z",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming 2026-11-01 | hkcert ctf 2026 qualifying nov 6 1000 utc to nov 7 1000 utc online | pink+ ctf nov 6 1200 utc to nov 9 1200 utc online | csctf 2026 nov 6 1300 utc to nov 8 1300 utc online | spookyctf nov 6 1700 utc to nov 7 1700 utc online | organizer eligibility and prize evidence not established",
+      "sha256": "2e88bc15fd70990437cc032b8764a1b2e43fdf5351682d1b109ee13aa11c9a91",
+      "previous_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "note": "Organizer rules, team eligibility, entry cost and prizes not inferred from aggregator calendar."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events 2026-11-01 | ethglobal mumbai in person nov 5 to nov 7 2026 apply to attend | pragma mumbai nov 6 conference | ethconf 2027 new york jun 14 to jun 16 | ethonline sep 4 to sep 16 2026 appears in past events",
+      "sha256": "122eb4d1e82c468a838736894c3b994714c2ddbaf5cb3c22f38c07ee967d5238",
+      "previous_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "note": "Mumbai is in-person and application-gated, not a new remote event; ETHOnline is historical."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent 2026-11-01 | latest fri oct 30 2026 batch 83 entries and total 300 recent entries | textseal2 2610.40613 appears | role spoofing 2610.40396 previously preserved in contributed research | no experimental results independently reproduced",
+      "sha256": "76c6c18860001ceb4a822dda31754733db7aaaf7dd4bd1c53d5ba2706e4be180",
+      "previous_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "note": "Research index checked; no paper promoted without novelty and independent reproduction review."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties 2026-11-01 | most recent aero updated oct 30 2026 500000 usdc max | midas updated oct 29 2026 500000 usdc max | aave v4 listed 2500000 usd max | listing is discovery only and does not establish authorized scope",
+      "sha256": "2b07e3522b257297be1b85deca11fef491fe11d4363c9a96f5a59fefa5679974",
+      "previous_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "note": "Aero and Midas already preserved in PRs #232 and #228. No new testing authorization."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active challenges directory 2026-11-01 | xtech kinetic reach and acl caregiver ai prize still listed in active federal challenge index | official agency application windows shown closed in oct 31 contributed primary-source audit | directory lifecycle does not prove submissions open",
+      "sha256": "78eb4d35ddbc22eaffc64a3e24b17243a7bc674b13cac4caa846a3fab9cbffd1",
+      "previous_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "note": "Primary agency submission closure independently preserved in PR #233; no active application claim from directory."
+    }
+  ],
+  "failed_retrievals": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 on registered URL",
+      "checked_at": "2026-11-01T08:44:55Z",
+      "recorded_as_successful_check": false,
+      "action": "Preserve source ID; investigate official challenge-directory migration and revalidate before registry URL update."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Telegraph Hackathon Season II — $7,000 main awards plus $3,000 reserved for separate December challenges",
+      "status": "triage-case-created-not-participant-verified",
+      "confidence": "high-on-published-rules-medium-on-prize-eligibility",
+      "relevance": "high",
+      "checked_at": "2026-11-01T08:44:55Z",
+      "source_urls": [
+        "https://hackathon.telegraphprotocol.com/",
+        "https://hackathon.telegraphprotocol.com/rules",
+        "https://hackathon.telegraphprotocol.com/tracks",
+        "https://hackathon.telegraphprotocol.com/judging"
+      ],
+      "facts": "Official H2 competition opens Nov 1 and closes Dec 1 2026 23:59 UTC. Organizer advertises $10,000 USD, but only $7,000 belongs to this main competition; $3,000 is reserved for later separately ruled December challenges. Apps & Agents track is $3,000 ($1,800 delivery and $1,200 excellence), with eight $225 delivery awards and $700/$350/$150 excellence awards. Solo or team allowed. Free registration stated on official tracks page. Reused own/open-source code permitted with disclosure, but H2 transaction evidence must be from event period. App needs a genuine autonomous Telegraph purchase/sale; supported testnet qualifies. Nov 14 is non-disqualifying progress milestone. 2-5 minute demo and reproducible receipts required. Current rules score Apps at 35/30/15/10/10; separate /judging page still displays a different older 35/30/20/10/5 scheme and 60-second demo; treat /rules as current binding rules until organizer resolves inconsistency.",
+      "entry_cost": "Free to register; any Telegraph testnet/mainnet transaction, hosting or infrastructure costs not verified.",
+      "eligibility": "Country exclusions, age, identity, tax, supported payout method and timing not independently verified; organizer refers to separate prize-payment terms not located in accessible rules.",
+      "authorization": "Development competition only; no public-system testing authorization.",
+      "deadline": "2026-12-01T23:59:00Z",
+      "next_action": "Locate binding prize-payment terms and reconcile /judging page with /rules; verify registration, country eligibility, free testnet access, spending limits, supported SDK and judge-accessible submission before activating.",
+      "related_case": "20261101-telegraph-h2-agent-hackathon"
+    },
+    {
+      "title": "BCH BLAZE 2026 — $8,000 token-denominated prize headline and sponsor bounties",
+      "status": "watch-legal-and-payment-gates",
+      "confidence": "high-on-organizer-displayed-schedule-medium-on-payout",
+      "relevance": "high",
+      "checked_at": "2026-11-01T08:44:55Z",
+      "source_urls": [
+        "https://bchblaze.com/",
+        "https://bchblaze.com/bounties/"
+      ],
+      "facts": "Organizer reports online BCH hackathon Nov 14-22, 2026, registration closes Nov 13, solo or teams up to four, showcase Nov 28. Advertised $8,000 prizes are payable in ParyonUSD CashToken, not verified fiat cash. Separate bounty board lists 8 BCH plus $1,250 PUSD across four sponsor bounties; do not add to $8,000 headline without confirming overlap. Bounty terms explicitly state submitting waives IP-related rights, and XO template/migration bounties reject AI-written feedback. Sponsor payout is discretionary after judging; exact token redemption/liquidity and legal effect require review.",
+      "entry_cost": "Not verified from binding rules; blockchain transaction/hosting costs may apply.",
+      "eligibility": "Geographic and age eligibility, wallet requirements, token redemption and tax terms not verified.",
+      "authorization": "Only competition-provided build tasks; bounty listing is not authorization for external security testing.",
+      "deadline": "2026-11-13 registration; 2026-11-22T14:00:00Z hack submission cutoff",
+      "next_action": "Review official DoraHacks rules and legal IP waiver; confirm entry costs, participant eligibility, prize denominated token redemption, overlap with sponsor bounties and project ownership before active case creation."
+    }
+  ],
+  "deduplication": "No matching Telegraph or BCH BLAZE entries found in current main code search or open PR/issue titles; related Aero/Midas and prior research leads were not duplicated.",
+  "chronology": "Five registered sources directly inspected and fingerprinted with exact ASCII observed strings. Each predecessor references latest canonical history, not later contributed snapshots. No canonical source-history/registry freshness advances before Aug 30 morning replay.",
+  "safety": "No credential attacks, scanning, destructive actions, unauthorized target testing, wallet transaction, or contest registration performed."
+}

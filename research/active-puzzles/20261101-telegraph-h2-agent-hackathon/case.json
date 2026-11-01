@@ -1,0 +1,35 @@
+{
+  "case_id": "20261101-telegraph-h2-agent-hackathon",
+  "name": "Telegraph Hackathon Season II — Apps & Agents",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-11-01T08:44:55Z",
+  "updated_at": "2026-11-01T08:44:55Z",
+  "source": "Telegraph Protocol official Season II rules",
+  "source_url": "https://hackathon.telegraphprotocol.com/rules",
+  "authorization_url": "https://hackathon.telegraphprotocol.com/rules",
+  "authorization_required": false,
+  "owner": "build-agent",
+  "tags": [
+    "ai-agents",
+    "hackathon",
+    "machine-payments",
+    "crypto",
+    "testnet",
+    "prize-triage"
+  ],
+  "evidence": [
+    {
+      "path": "research/active-puzzles/20261101-telegraph-h2-agent-hackathon/evidence/README.md",
+      "role": "organizer-primary-provenance"
+    },
+    {
+      "path": "intelligence/feeds/2026-11-01-telegraph-bch-source-health.json",
+      "role": "research-source-health"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261101-telegraph-h2-agent-hackathon/notes.md"
+  ],
+  "next_action": "Verify country/identity/tax/payment terms, reconcile official /rules and /judging inconsistencies, confirm free testnet purchase path and participant registration before moving from triage to active work. Only build authorized testnet/demo workflows; no external target testing."
+}
