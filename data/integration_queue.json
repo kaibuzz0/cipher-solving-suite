@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T08:13:00Z",
+  "updated_at": "2026-11-01T08:44:55Z",
   "items": [
     {
       "id": "20260822-pr44-source-health-replay",
@@ -327,6 +327,25 @@
         "External provenance/authenticity of 310_challenge.png remains unresolved."
       ],
       "next_action": "Preserve the experimental boundary and continue the 310 external-provenance gate or the next hash-preserving legacy/root-artifact item."
+    },
+    {
+      "id": "20261101-telegraph-h2-participation-verification",
+      "type": "case",
+      "status": "needs-review",
+      "contributor": "research-intelligence-pass / 2026-11-01",
+      "branch_or_pr": "PR #234 / research/2026-11-01-telegraph-bch-source-health",
+      "path": "research/active-puzzles/20261101-telegraph-h2-agent-hackathon/case.json",
+      "purpose": "Verify and integrate newly opened Telegraph H2 Apps & Agents cash competition without treating organizer-advertised prizes as participant eligibility.",
+      "summary": "Official Season II rules show $7,000 main awards plus $3,000 separately ruled December awards; Apps & Agents has $3,000 main allocation. Free registration stated, Dec 1 23:59 UTC deadline, testnet autonomous intelligence purchase permitted. A separate /judging page conflicts on demo length/scoring; payout-country, identity/tax, payment terms, registration and testnet costs remain unverified.",
+      "verification": "Primary organizer rules, tracks, judging and missions opened 2026-11-01T08:44:55Z; source-health evidence in intelligence/feeds/2026-11-01-telegraph-bch-source-health.json. No participant registration or network testing.",
+      "related_case": "20261101-telegraph-h2-agent-hackathon",
+      "risks": [
+        "Organizer prize-payment terms and country/ID/tax eligibility not independently located.",
+        "Official /rules and /judging pages conflict on judging and demo length.",
+        "Free registration does not establish zero testnet/hosting costs or participant account state.",
+        "Canonical source-history replay chronology is still blocked at Aug 30 morning; do not advance registry freshness from this contribution."
+      ],
+      "next_action": "Reopen official prize-payment terms and reconcile /rules vs /judging; verify registration, testnet SDK/faucet/spending and participant eligibility. Only then activate case and promote a concise canonical intelligence item, after chronological integration checks."
     }
   ]
 }
