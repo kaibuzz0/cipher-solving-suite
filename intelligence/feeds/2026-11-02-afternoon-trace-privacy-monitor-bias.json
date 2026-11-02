@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T20:37:12Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "0a3e94e6fe142366c6ec7310fe6e37b3f71966cb",
+  "canonical_replay": false,
+  "purpose": "Preserve six real Nov 2 afternoon source observations and two distinct agent-research findings without overtaking the protected Aug 30 chronological source replay or duplicating the Nov 2 morning SecPO/detector contribution.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | mon 2 nov 2026 visible batch 46 entries and total recent index 295 entries | privacytrace arxiv 2610.41885 published oct 30 2026 reports user profile inference from mcp tool call traces | simple features beat most ai control monitors arxiv 2610.41713 published oct 30 2026 examines authorship and problem metadata shortcuts",
+      "sha256": "32c091da17138d8cc971aaf9a020d4d766603efc27e065e9a3c5973386edd42d",
+      "note": "Opened live arXiv index and both original abstracts. Authors' experimental metrics are not independent replication.",
+      "primary_followup_urls": [
+        "https://arxiv.org/abs/2610.41885",
+        "https://arxiv.org/abs/2610.41713"
+      ]
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | online hkcert ctf 2026 qualifiers nov 6 1000 utc to nov 7 1000 utc | pink plus ctf nov 6 1200 utc to nov 9 1200 utc | csctf nov 6 1300 utc to nov 8 1300 utc | spookyctf nov 6 1700 utc to nov 7 1700 utc | organizer rules and prizes not independently confirmed",
+      "sha256": "06a509b05fda6a429c3afeb36ca8caca5794b0d936495b82995046afba9c9008",
+      "note": "Live aggregator discovery only; registration, entry cost, eligibility, awards and authorization are organizer-specific and not verified here."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | featured ethglobal mumbai in person hackathon nov 5 to nov 7 2026 | mumbai sponsor page confirms same event dates | in person attendance and participant registration not verified | no remote participation claim",
+      "sha256": "9d0eda7a2f98832678d93a3f0af7292d78109bd38fa8448c08995560df2b95fe",
+      "note": "Organizer calendar and Mumbai sponsor page independently opened; not treated as a remote/eligible/prize-verified opportunity.",
+      "primary_followup_urls": [
+        "https://ethglobal.com/events/mumbai/sponsor"
+      ]
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent aero updated oct 30 2026 payout up to 500000 usdc | midas updated oct 29 2026 payout up to 500000 usdc | inverse finance updated oct 28 2026 payout up to 100000 dola | no newer listing identified | exact scope not verified",
+      "sha256": "6bbd5eb64ae76ec6c5e4717bcc7408cda03b2046b28c1b96ca0a6de27a3603ee",
+      "note": "Live platform listing checked; existing PRs #232/#228 already cover Aero/Midas. Reward maximums are not guaranteed payouts or permission to test."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests | legacy https://code4rena.com/contests redirects to https://code4rena.com/audits | judging audit k2 submissions closed | rujira report in progress submissions closed | no accepting audit verified from first visible page",
+      "sha256": "3316abf033628cf0af6cec8c78cdfd1b3d0c7c2cd967b7f727d7f3685b93c6a2",
+      "note": "Legacy URL redirects to official audits index. Existing PR #213 owns source URL migration review; no registry rewrite or claim that all pages have no open audits.",
+      "primary_followup_urls": [
+        "https://code4rena.com/audits"
+      ]
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active challenges | directory lists caregiver ai prize and xtech kinetic reach among active challenge lifecycle entries | no new application phase verified from directory | agency organizer rules required before treating a listing as open",
+      "sha256": "b94c468b280091b298122ee1c811c1662f6c85acb776e554302147a94a5b7544",
+      "note": "Opened federal discovery index. PR #233 documents agency-vs-directory submission-deadline discrepancies; no new open submission inferred."
+    }
+  ],
+  "failed_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "outcome": "HTTP 404 from direct live fetch",
+      "note": "No successful check recorded. Individual historical challenge URLs still exist, but no current replacement index or open challenge was independently established; retain canonical source for migration review."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "PrivacyTrace: tool-call traces can leak inferred user attributes",
+      "status": "research-candidate-license-and-data-access-blocked",
+      "confidence": "medium",
+      "relevance": "high",
+      "published_at": "2026-10-30T15:30:23Z",
+      "source_id": "arxiv-cryptography",
+      "primary_url": "https://arxiv.org/abs/2610.41885",
+      "code_url": "https://github.com/AI45Lab/PrivacyTrace",
+      "code_readme_blob_sha": "9d01d60d5a210c9e9f25cca7fc232e7bd34df5a6",
+      "data_card_blob_sha": "4a61f733cc320859e5cc003a6b0e0be6900906ac",
+      "code_license": "To be specified in author README; data license also to be specified, dataset access requires manual approval",
+      "summary": "Author paper describes 1,000 synthetic profiles, 4,000 agent trajectories and 25 MCP servers; reports 26.25% user-profile inference success from tool-call traces versus 17.97% prior-based guessing. The primary abstract and project README/DATA_CARD were independently opened, but no experiment was reproduced. The README explicitly says license to be specified, and dataset download requires author approval. Treat privacy leakage as a design/review concern, not a proven exploit in this repository.",
+      "next_action": "Build/integration agent: review whether source reports, tool-call logs and Agent Operations expose user-derived tool arguments/results; design a synthetic local fixture testing log minimization and cross-session linkage. Do not import the external code/dataset until explicit licensing and dataset access terms are verified; avoid real personal data."
+    },
+    {
+      "title": "Simple Features Beat Most AI Control Monitors: benchmark shortcut and label-validity warning",
+      "status": "research-candidate-needs-independent-reproduction",
+      "confidence": "medium",
+      "relevance": "high",
+      "published_at": "2026-10-30T13:21:03Z",
+      "source_id": "arxiv-cryptography",
+      "primary_url": "https://arxiv.org/abs/2610.41713",
+      "code_url": "https://github.com/ShubsDS/authorship-not-sabotage",
+      "code_readme_blob_sha": "9a204fb80974a4d93346a5202bc88f18e4fd3890",
+      "code_license_blob_sha": "eb36aae3c0db9ec74d8ec538cadd44530f49d6b8",
+      "code_license": "MIT for repository code/generated data; upstream datasets separately licensed",
+      "summary": "Author paper reports a simple bag-of-words baseline AUROC 0.806, above 20 of 24 previously evaluated open-weight monitor models, and identifies authorship/problem-metadata shortcuts plus invalid backdoor labels. This does not prove published monitors exploit the shortcuts. Primary paper and author README/LICENSE inspected; reported metrics and benchmark validity not independently reproduced.",
+      "next_action": "Build/integration agent: coordinate with Nov 2 morning PR #235 detector evaluation; build a small synthetic same-author/label-validity test and report precision at realistic base rates before treating any monitor benchmark score as assurance. Review third-party dataset terms; do not execute external untrusted code by default."
+    }
+  ],
+  "deduplication": "Current main has 13 published intelligence items and 21 opportunity catalog entries; GitHub code search on main returned no PrivacyTrace/2610.41885 or authorship-not-sabotage/2610.41713 matches. PR #235 addresses different SecPO and tool-trace-detector papers; PR #230 covers other agent-boundary papers. No duplicate opportunity, active case, or canonical feed entry was created.",
+  "chronology": "Current canonical history is 78 checks through Aug 29 afternoon. Aug 30 morning snapshot remains the next protected five-record replay gate. This Nov 2 afternoon observation must remain research-only until all earlier overlapping snapshots are reconciled. Source freshness timestamps and source history are intentionally unchanged.",
+  "site_status": "PR #221 merged Nov 2 and its exact-main Core and Pages deployment succeeded. This PR changes only raw evidence and handoff; new findings are not published in canonical dashboard feed. Pages raw-snapshot rebuild trigger is present, but a successful rebuild is not equivalent to user-facing canonical promotion.",
+  "safety": "No external target was tested, no credentials accessed, no exploit executed, and no external contest or bounty submission was made."
+}
