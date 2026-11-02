@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T08:44:19Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "purpose": "Preserve independently opened Nov. 2 source health and two open-code agent-defense evaluation research leads without leapfrogging the protected Aug. 30 chronological replay or claiming independent reproduction.",
+  "observations": [
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "observed": "arxiv cs.cr recent | latest displayed batch fri 30 oct 2026 | 46 entries on the first visible batch | secpo arxiv 2610.41998 submitted oct 30 2026 releases code data and model | agent trace detector evaluation arxiv 2610.41803 submitted oct 30 2026 releases code data and monitor traces",
+      "sha256": "e0ee6381121a2dad52f29bcc942b3f68dbd3e8bb352866a286ecf3cc1afa55f8",
+      "note": "Opened arXiv cs.CR index and both primary abstracts; author-reported evaluation claims remain unreplicated. Follow-up code repositories inspected separately."
+    },
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "observed": "ctftime upcoming | online hkcert ctf 2026 qualifiers nov 6 1000 utc to nov 7 1000 utc | pink plus ctf nov 6 1200 utc to nov 9 1200 utc | csctf nov 6 1300 utc to nov 8 1300 utc | spookyctf nov 6 1700 utc to nov 7 1700 utc | organizer confirmation required for registration and prize terms",
+      "sha256": "783f85302ed4fd6c7f7dc20ea43302925b8d16ce0109dfc0c7b7c79936f8e242",
+      "note": "CTFtime is a discovery calendar. CSCTF organizer page confirms Nov 6-8, online, free, teams 1-5; organizer page also exposes multiple conflicting lifecycle banners, so no fresh case or prize claim was promoted."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "observed": "ethglobal events | featured ethglobal mumbai in person hackathon nov 5 to nov 7 2026 | upcoming pragma mumbai nov 6 2026 | ethconf 2027 jun 14 to jun 16 new york city | event-specific eligibility and application status not verified",
+      "sha256": "da306f17ac920f4e0c9e6988133a5a98013173f30faffd6fa7e05402c0459e09",
+      "note": "Opened organizer calendar. Mumbai is in person, not a general remote opportunity; no cash or participation claim promoted."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "observed": "sherlock bug bounties | most recent aero updated oct 30 2026 payout up to 500000 usdc | midas updated oct 29 2026 payout up to 500000 usdc | inverse finance updated oct 28 2026 payout up to 100000 dola | public listing does not authorize testing",
+      "sha256": "fa1bb86762ff036eb504018b5dd4bb98cf0ffa680bc7b20db2503ac98ff72640",
+      "note": "Opened live platform listing; no newer bounty than Aero detected. Complete program scope, exclusions, severity rules and safe-harbor terms not inspected, so no testing or active case."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "observed": "code4rena contests legacy url redirects to https://code4rena.com/audits | visible judging audit k2 submissions closed | visible rujira report in progress submissions closed | no currently accepting audit confirmed",
+      "sha256": "a24e8d0c6d1b6c201567add72b6607c4501b85725e0c988f8960708a3ef63cbb",
+      "note": "Migration persists. Existing PR #213 already owns the URL/source review; no duplicate registry change."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "observed": "usa gov active challenges | directory lists xtech kinetic reach and caregiver ai prize among active challenge lifecycle entries | official organizer phase deadlines previously found closed | directory listing alone does not verify an open application window",
+      "sha256": "ae2b8360784aa230e6b4384da1342256c9014aea654c74717e4d20bbb54c1672",
+      "note": "Opened federal discovery page. Existing PR #233 covers misleading lifecycle-vs-application deadlines; no duplicate opportunity promotion."
+    }
+  ],
+  "failed_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "source_url": "https://www.topcoder.com/challenges",
+      "outcome": "HTTP 404 from live fetch",
+      "note": "Not a successful source check; existing research already tracks this dead/migrated URL. Retain source for review rather than deleting."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "SecPO adversarial preference optimization and released implementation",
+      "status": "research-candidate-needs-local-reproduction",
+      "confidence": "medium",
+      "relevance": "high",
+      "published_at": "2026-10-30T16:43:17Z",
+      "source_id": "arxiv-cryptography",
+      "primary_url": "https://arxiv.org/abs/2610.41998",
+      "code_url": "https://github.com/Sizhe-Chen/SecPO",
+      "code_license": "Apache-2.0 for project code; model and dataset terms separate",
+      "code_readme_blob_sha": "4d1e131613aa29f4b2dbbd247e471dab4f765905",
+      "summary": "The authors propose SecPO and adversarial training for instruction/data separation and report AgentDojo adaptive attack success of 8.8% versus 78.8% for their comparison model. The primary arXiv paper and author GitHub README/LICENSE were opened; numerical findings have NOT been independently reproduced. The code release includes unit-tested components but depends on external model weights and runtime infrastructure.",
+      "next_action": "Build/integration agent: compare with already queued agent-security papers and existing agent trust-boundary tests; inspect release_manifest and dependency/license terms; reproduce a small local model-free evaluation fixture before proposing a tool, capability, or production defense. Do not import large weights or unreviewed training data."
+    },
+    {
+      "title": "Tool-trace detector evaluation exposes base-rate and unseen-tool failure modes",
+      "status": "research-candidate-needs-local-reproduction",
+      "confidence": "medium",
+      "relevance": "high",
+      "published_at": "2026-10-30T14:30:47Z",
+      "source_id": "arxiv-cryptography",
+      "primary_url": "https://arxiv.org/abs/2610.41803",
+      "code_url": "https://github.com/Mahmoud-Abbasi-svg/agent-trace-detector-eval",
+      "code_license": "MIT for repository code; third-party licenses under THIRD_PARTY",
+      "code_readme_blob_sha": "ea605a2f4c8dce9a300fc9193e4d8f0d6b8375f2",
+      "summary": "Authors report that a trace detector with AUROC 0.879 yields precision 0.076 at a 2% attack base rate and that cross-benchmark transfer can fall near chance. The paper and public code/readme/license were opened; experiments and reported metrics have NOT been independently reproduced.",
+      "next_action": "Build/integration agent: evaluate whether source-health and agent-monitoring tests need low-base-rate precision, unseen-tool coverage, and cross-dataset transfer fixtures. Start with the repository's model-free metrics scripts and validate third-party dataset licenses before importing."
+    }
+  ],
+  "deduplication": "Searched canonical default-branch GitHub code and open PR titles for SecPO, arXiv:2610.41998 and CSCTF 2026; no matches. Existing PRs #230/#231 cover different papers and Kiroween; #232 covers UBC/Aero; #233 covers federal deadlines; no duplicate opportunity case created.",
+  "chronology": "Canonical source history remains 78 records through Aug. 29 afternoon. Aug. 30 morning snapshot is the next protected replay. This Nov. 2 research snapshot must not be directly replayed until all intervening snapshots are reconciled in order.",
+  "safety": "No security target testing, exploit execution, credential access, destructive action, or external program submission was performed. Research repositories were read only."
+}

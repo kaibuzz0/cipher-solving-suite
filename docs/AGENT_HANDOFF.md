@@ -362,3 +362,14 @@ This is an append-only operational journal for AI and human contributors. Keep e
 - **Collision / conflict handling:** No canonical replay files are touched. Later Sep. research remains noncanonical; open research PRs must reconcile from current main rather than leapfrog Aug. 30.
 - **Known risks / blockers:** Aug. 30 morning is eligible for independent verification, not automatically trusted. Its contributed fingerprints/predecessors still need recomputation before any replay.
 - **Next action:** Validate and merge this coordination-only branch if green, then independently verify the Aug. 30 morning source-health snapshot and stage only the evidence-backed morning replay.
+
+---
+
+### 2026-11-02T08:44:19Z — Research Intelligence / Nov. 2 agent-defense evaluation and source health
+
+- **Branch:** `research/2026-11-02-secpo-detector-evaluation-source-health` from exact main `e3406be6fe981feee5c2ec8c3c79cca924792e67`.
+- **Objective:** Review six due registered sources, preserve real normalized SHA-256 source observations, identify high-value new reproducible agent-security research, and avoid duplicate/unsafe canonical promotion.
+- **Changed:** Added `intelligence/feeds/2026-11-02-agent-defense-source-health.json` with six source observations and two research leads: SecPO (arXiv:2610.41998, author code Apache-2.0) and tool-trace detector evaluation (arXiv:2610.41803, author code MIT). Neither paper's numerical results were reproduced; these are evaluation candidates, not installed defenses. Topcoder HTTP 404 recorded only as a failed retrieval, not a successful check.
+- **Verification:** Independently opened arXiv primary abstracts, both GitHub author README/LICENSE files, CTFtime, ETHGlobal, Sherlock, Code4rena and USA.gov. SHA-256 self-test passed and all six snapshot hashes were computed from normalized observed text. Existing main feed and PR titles searched for duplication. No local repository Python/Core/site-data tests run in this tool environment; require PR CI and build-agent verification.
+- **Collision handling:** Main still contains 78 source checks ending Aug. 29 afternoon. No canonical source registry/history/feed/opportunity/case/integration queue or site HTML changed. Existing PR #213 owns Code4rena migration, #233 owns federal deadline discrepancy, and #221 owns raw-snapshot Pages rebuild. No raw snapshot is to be replayed out of order.
+- **Next build/integration action:** Independently dry-run and verify the five-record Aug. 30 morning protected replay first, then native replay and validators. Reconcile newer research PRs chronologically. For these two papers, assess code/dependency/license boundaries and reproduce a small model-free low-base-rate/unseen-tool evaluation fixture before considering any canonical tool or research promotion. Do not treat author-reported benchmark scores as reproduced facts.
