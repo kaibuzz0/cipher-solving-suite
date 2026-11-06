@@ -35,3 +35,10 @@ As of 2026-11-06 19:36 UTC, **16 of 16 enabled sources** exceed their registry f
 | `bugcrowd-engagements` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://bugcrowd.com/engagements |
 
 Use `python scripts/source_registry.py list --due` for the authoritative live queue. Open each official page, capture an actual dated observation, then record it with the source-history tool before changing canonical freshness timestamps. Do not promote discovery listings as authorized testing scope.
+
+## 2026-11-06 official directory access probe (21:36 UTC)
+
+- Registered source: `hackerone-directory`, official URL `https://hackerone.com/directory/programs`.
+- A direct read of the official page returned only: “It looks like your JavaScript is disabled. To use HackerOne, enable JavaScript in your browser and refresh this page.” The address resolves, but this response exposes **no program list, authorization/scope, payouts or current eligibility**.
+- Classification: **JS-required / unverified content**, not a completed program check. Do **not** advance `last_checked_at`, publish live bounty claims, or infer an authorized testing target. A browser with JavaScript enabled or an official documented API is required before any registry verification.
+- Provenance: direct official-page retrieval on 2026-11-06; observation applies only to the returned access message, not to current program availability.
