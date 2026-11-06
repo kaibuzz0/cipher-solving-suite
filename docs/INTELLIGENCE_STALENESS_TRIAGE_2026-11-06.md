@@ -18,3 +18,20 @@ This is an **unverified queue snapshot**, not evidence of a successful external 
 5. Keep stale claims marked unverified. In particular, August 2026 challenge and ETHOnline information must not be presented as a live November 2026 opportunity without new official evidence.
 
 No external source fetches, eligibility checks, program authorizations, or test executions are claimed by this triage note.
+
+## Reproducible overdue-source triage (registry metadata only)
+
+As of 2026-11-06 19:36 UTC, **16 of 16 enabled sources** exceed their registry freshness SLA based solely on their saved `last_checked_at`. This calculation does not imply that any source was opened or checked today. The first eight by elapsed overdue hours are:
+
+| Source ID | Type | Last recorded check | SLA | Hours overdue | Registered URL |
+|---|---|---|---|---:|---|
+| `hackerone-directory` | platform | 2026-08-17T07:43:55Z | 24h | 1931h | https://hackerone.com/directory/programs |
+| `sherlock-contests` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://audits.sherlock.xyz/contests |
+| `algora-bounties` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://algora.io/ |
+| `topcoder-challenges` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://www.topcoder.com/challenges |
+| `upwork-software-development` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://www.upwork.com/freelance-jobs/software-development/ |
+| `freelancer-software-development` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://www.freelancer.com/jobs/software-development/ |
+| `intigriti-public-programs` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://www.intigriti.com/researchers/bug-bounty-programs |
+| `bugcrowd-engagements` | platform | 2026-08-18T07:38:11Z | 12h | 1919h | https://bugcrowd.com/engagements |
+
+Use `python scripts/source_registry.py list --due` for the authoritative live queue. Open each official page, capture an actual dated observation, then record it with the source-history tool before changing canonical freshness timestamps. Do not promote discovery listings as authorized testing scope.
