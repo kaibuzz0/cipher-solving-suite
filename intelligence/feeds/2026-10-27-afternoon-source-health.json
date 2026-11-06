@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "contributed-research-source-health",
+  "checked_at": "2026-10-27T19:44:44Z",
+  "agent": "research-intelligence-pass",
+  "repository_base": "e3406be6fe981feee5c2ec8c3c79cca924792e67",
+  "canonical_replay": false,
+  "canonical_source_history_cutoff": "2026-08-29T19:40:52Z",
+  "next_chronological_gate": "2026-08-30T07:38:20Z",
+  "summary": "Seven registered sources directly reviewed and independently SHA-256 fingerprinted. Verified Builder.io Agent-Native $10,000 cash pool, but official rules and live submission form disagree on Nov 9 versus Nov 2 deadline. Preserved two defensive AI research papers and screened NYC-only Innodata cash event. No canonical source-history advancement.",
+  "observations": [
+    {
+      "source_id": "ctftime-upcoming",
+      "source_url": "https://ctftime.org/event/list/upcoming",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "ctftime upcoming | 2026-10-27 current calendar | HI Cyber Con Oct 30 14:00 UTC to Nov 1 14:00 UTC online | Russian CTF Cup X qualifier Oct 31 09:00 UTC to Nov 1 09:00 UTC online | HKCERT CTF 2026 qualifying Nov 6 10:00 UTC to Nov 7 10:00 UTC online | no new organizer-confirmed cash prize from this index",
+      "content_fingerprint": "9729bf8907ca61a9e955743e36205bbccf819b562e82f703eddc5da28e00dcc5",
+      "previous_canonical_fingerprint": "33b5c83409f9f2704f19483a69440ce82525b23c05a7f5ef2d401ac816c0f2ce",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Aggregator only; organizer-specific entry, cash prizes and competition scope must be verified before participation."
+    },
+    {
+      "source_id": "arxiv-cryptography",
+      "source_url": "https://arxiv.org/list/cs.CR/recent",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "arxiv cs.CR recent | Tue Oct 27 2026 batch 81 entries of 263 recent | ProbeID arxiv 2610.33633 submitted Oct 24 2026 | NameTrap arxiv 2610.34253 submitted Oct 25 2026 | reported experimental results not reproduced",
+      "content_fingerprint": "73672172cdc6b805f4ae080009e778a7b549fc6d341e1ac806988c739a13b5e0",
+      "previous_canonical_fingerprint": "246032d40532baab6948400a0678b2421b6342024d13ae16258ac80583bb26c3",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "New agent-safety research leads; author claims not independently reproduced, license and benchmark overlap unresolved."
+    },
+    {
+      "source_id": "sherlock-bounties",
+      "source_url": "https://audits.sherlock.xyz/bug-bounties",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "sherlock bug bounties | most recent Monolith Stablecoin Factory last updated Oct 23 2026 payout 20000 DOLA | listing includes Usual Labs 16000000 USDC, Aave V4 2500000 USD, Cap 1000000 USDC | discovery only; no exact authorized program scope reviewed",
+      "content_fingerprint": "57c22bd101874358c253c44259d014a329bf74a0cf8a60d62ec7a74d31e68c9c",
+      "previous_canonical_fingerprint": "6aaa4c2de88200e0be6144cb024734167d513c9c79a1b11d6f283958bbd2b19f",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "DOLA-denominated maximum is not guaranteed USD cash; no authorization to test from a listing."
+    },
+    {
+      "source_id": "code4rena-contests",
+      "source_url": "https://code4rena.com/contests",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "code4rena legacy /contests redirects to /audits | visible submissions closed | K2 judging 135000 USDC | Rujira report in progress 40000 USDC | no currently open audit contest verified",
+      "content_fingerprint": "24cf2aabcb4ff7b68e17a719d731c81c17243eb3b1de54d12dce1d66c6c093cd",
+      "previous_canonical_fingerprint": "29f69c2bf611ecbcdf5740e3562c44ac82c334ae684c480a45c06f1ec28b84b2",
+      "canonical_predecessor_checked_at": "2026-08-22T07:42:16Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Source redirect/migration; preserve ID, do not duplicate PR #213 source migration work."
+    },
+    {
+      "source_id": "challenge-gov",
+      "source_url": "https://www.usa.gov/find-active-challenge",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "usa gov active federal challenges | directory includes DARPA Surgical Competition, Documentation and Decision Support Sprint, NASA Human Lander Challenge, NIH-NASA QuSAFE, NOURISH, ACL Caregiver AI Prize, xTech Kinetic Reach | directory inclusion is not an open submission guarantee",
+      "content_fingerprint": "90a128a11d80e493de5490aa01a4ff91377c2360f83e43ad30eb3b16a3ea00ba",
+      "previous_canonical_fingerprint": "9e063815d1081f098c97ab5981f71b4c2e94d00edba6ca61198d1d9b2e762045",
+      "canonical_predecessor_checked_at": "2026-08-29T07:38:35Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Discovery directory only; verify actual agency-hosted application window and eligibility."
+    },
+    {
+      "source_id": "ethglobal-events",
+      "source_url": "https://ethglobal.com/events",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "ethglobal events | upcoming ETHGlobal Mumbai Nov 5-7 2026 in-person | Pragma Mumbai Nov 6 2026 conference | ETHConf 2027 June 14-16 2027 | ETHOnline 2026 is past | no newly verified online ETHGlobal hackathon",
+      "content_fingerprint": "a423baf0a2b7b46de19f17da6eeec1786233311d7bd5f2ffa376169dca361166",
+      "previous_canonical_fingerprint": "361c6c0ce2988ea281442a7b6b6ac8ca94574cda8074242b2d7966fed9037179",
+      "canonical_predecessor_checked_at": "2026-08-29T19:40:52Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Mumbai is in-person; do not represent as remote opportunity."
+    },
+    {
+      "source_id": "algora-bounties",
+      "source_url": "https://algora.io/",
+      "checked_at": "2026-10-27T19:44:44Z",
+      "observed": "algora.io current homepage | recruiter/hiring service positioning, candidate matching and hiring workflow | no currently open issue-level cash coding bounty verified on homepage | source URL merits review for bounty discovery usefulness",
+      "content_fingerprint": "8513033597c047633ffba6254d02bfbdc71d4c11b92946734cbbfb704151b944",
+      "previous_canonical_fingerprint": "bfca5c502b5a10ddd7d47c5c76a0fa997486ab3720be022618249da103eb9fff",
+      "canonical_predecessor_checked_at": "2026-08-18T07:38:11Z",
+      "change_state": "changed-versus-canonical",
+      "note": "Review whether canonical Algora bounty URL needs migration or lower priority; do not delete source."
+    }
+  ],
+  "failed_or_unresolved_source_checks": [
+    {
+      "source_id": "topcoder-challenges",
+      "url": "https://www.topcoder.com/challenges",
+      "result": "HTTP 404 on direct retrieval on Oct 27; no successful check or registry timestamp advance.",
+      "next_action": "Find current official challenge directory, verify challenge-list functionality, and propose source URL migration only after validation."
+    }
+  ],
+  "material_findings": [
+    {
+      "title": "Builder.io Agent-Native Hackathon: $10,000 verified cash pool with conflicting official submission deadlines",
+      "category": "hackathon",
+      "status": "structured-triage-deadline-conflict",
+      "confidence": "high-for-prize-and-eligibility; low-for-operational-deadline",
+      "relevance": "urgent",
+      "official_urls": [
+        "https://www.builder.io/hackathon",
+        "https://www.builder.io/hackathon/rules",
+        "https://www.builder.io/hackathon/submit",
+        "https://github.com/BuilderIO/agent-native",
+        "https://www.agent-native.com/docs/"
+      ],
+      "summary": "Sponsor rules state free entry, adults worldwide subject to exclusions, Oct 27 start, Nov 9 2026 11:59 PM Pacific submission deadline, and USD 5000/2500/1500/750/250 cash awards. The live sponsor submission form contradicts the rules and displays Nov 2 2026 11:59 PM Pacific. Earlier cached/search result also gave Oct 19 start and Nov 2 deadline; current rules and homepage instead give Oct 27 start and Nov 9 deadline. Do not treat Nov 9 as operationally safe until sponsor confirms or fixes the form. No preregistration or live attendance required. New or meaningfully changed Agent-Native app and publicly accessible Clips demo required; public code repository optional. Framework GitHub repo is public and MIT-licensed; local installation, demo recording and any infrastructure cost untested.",
+      "prize_usd_total": 10000,
+      "prize_breakdown_usd": [
+        5000,
+        2500,
+        1500,
+        750,
+        250
+      ],
+      "entry_fee": "none",
+      "eligibility": "18+ or legal majority if higher; lawful jurisdictions; sponsor/judging conflicts excluded; participant eligibility not verified",
+      "deadline_conflict": {
+        "rules": "2026-11-09T23:59:00-08:00",
+        "submission_form": "2026-11-02T23:59:00-08:00",
+        "recommended_safe_planning": "Treat Nov 2 23:59 PT as conservative operational cutoff unless sponsor confirms Nov 9 and the submission form is corrected."
+      },
+      "next_action": "Ask sponsor at hackathon@builder.io to reconcile deadline immediately; inspect actual submission form acceptance window; verify Clips and framework setup; then build only genuinely in-window new work and preserve submission receipt.",
+      "related_case": "20261027-agent-native-hackathon"
+    },
+    {
+      "title": "Innodata Hackathon: $8,750 cash but NYC in-person and application-gated",
+      "category": "hackathon",
+      "status": "screened-location-restricted",
+      "confidence": "high-for-organizer-advertised-cash; medium-for-participation",
+      "relevance": "watch",
+      "official_urls": [
+        "https://innodata.com/events/innodata-hackathon-2026/"
+      ],
+      "summary": "Organizer advertises Saturday Nov 14 2026 9 AM-5 PM at St. John's University Manhattan campus, $5000/$2500/$1250 cash prizes for teams, and application/selection. Coding Task Factory is relevant, but travel and approval requirements prevent assuming a broadly accessible remote opportunity.",
+      "entry_fee": "not independently established",
+      "next_action": "Only pursue if travel to NYC, application approval, costs and complete terms are feasible; do not add to general remote shortlist."
+    },
+    {
+      "title": "ProbeID MCP tool identity under registry drift",
+      "category": "research",
+      "status": "research-candidate",
+      "confidence": "medium-author-claims-unreproduced",
+      "relevance": "high",
+      "official_urls": [
+        "https://arxiv.org/abs/2610.33633"
+      ],
+      "summary": "Oct 24 preprint reports schema-valid probe-based MCP tool identity checks; cached experiments claim hit@1 0.956, and 15 to 9 of 16 tainted tasks in one agent benchmark. Limits include unprobed changes and reference integrity. Do not treat these as independently reproduced performance.",
+      "next_action": "Check paper/code/data license, overlap with tool-provenance work and implement only synthetic fixture tests if justified."
+    },
+    {
+      "title": "NameTrap identifier-only poisoning of AI coding agent context",
+      "category": "research",
+      "status": "research-candidate",
+      "confidence": "medium-author-claims-unreproduced",
+      "relevance": "high",
+      "official_urls": [
+        "https://arxiv.org/abs/2610.34253"
+      ],
+      "summary": "Oct 25 preprint describes author-reported 22.5%-56% attack success across six coding agents by renaming identifiers in untrusted code; no instructions or vulnerable statements in bait. Defensive implications for repository ingestion; not an authorization to attack other agents or repos.",
+      "next_action": "Review dataset/implementation license and overlap with existing prompt-injection/agent-skill safety research; reproduce only in isolated synthetic fixtures."
+    }
+  ],
+  "source_health_notes": [
+    "Code4rena legacy /contests -> /audits redirect and closed submissions; coordinate migration with existing PR #213.",
+    "Topcoder registered challenge URL returned HTTP 404; do not mark checked; investigate official replacement.",
+    "Algora homepage now emphasizes recruiting rather than live coding bounties; retain registry source but flag low-value/migration review.",
+    "All successful source checks are contributed observations only. Canonical history remains 78 checks and registry timestamps remain unchanged pending protected Aug 30 replay."
+  ],
+  "integration_handoff": {
+    "priority": "Complete Aug 30 morning protected five-source native replay and exact-head validators before any October snapshot replay.",
+    "specific_research_followup": "Resolve Builder rules-vs-submit deadline conflict; verify local Agent-Native/Clips access and actual participant eligibility before promoting case from triage. PR #223 also changes integration_queue.json; avoid overwriting its newer queue state.",
+    "validation": "Seven SHA-256 hashes independently recalculated from exact observed strings. All seven canonical predecessor hashes/timestamps matched main. GitHub Core/Pages validation must run on PR head.",
+    "safety": "No credential attacks, target probing, destructive actions, persistence, evasion, or out-of-scope testing performed."
+  }
+}

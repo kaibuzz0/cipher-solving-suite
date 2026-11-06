@@ -1,0 +1,37 @@
+{
+  "case_id": "20261027-agent-native-hackathon",
+  "name": "Builder.io Agent-Native Hackathon — deadline reconciled on live pages",
+  "type": "hackathon",
+  "status": "triage",
+  "created_at": "2026-10-27T19:44:44Z",
+  "updated_at": "2026-11-01T20:38:53Z",
+  "source": "Builder.io official rules and submission form",
+  "source_url": "https://www.builder.io/hackathon/rules",
+  "authorization_url": "",
+  "authorization_required": false,
+  "owner": "unclaimed",
+  "tags": [
+    "ai-agents",
+    "hackathon",
+    "cash-prize",
+    "registration-not-required",
+    "no-security-testing",
+    "deadline-reconciled"
+  ],
+  "evidence": [
+    {
+      "path": "intelligence/feeds/2026-10-27-afternoon-source-health.json",
+      "role": "official-source-terms-and-conflict",
+      "canonical_replay": false
+    },
+    {
+      "path": "research/active-puzzles/20261027-agent-native-hackathon/evidence/README.md",
+      "role": "source-reconciliation-checklist"
+    }
+  ],
+  "notes": [
+    "research/active-puzzles/20261027-agent-native-hackathon/notes.md"
+  ],
+  "participant_status": "Unknown; no app created, Clips recording, participant verification, sponsor reply, or submission receipt. Nov 2 vs Nov 9 deadline discrepancy resolved on live sponsor pages Nov 1; historical Oct 27 evidence retained.",
+  "next_action": "Both official rules and submission form now show Nov 9, 2026, 11:59 PM PT (Nov 10, 07:59 UTC), independently rechecked Nov 1; recheck live form before submission. Verify participant eligibility, Agent-Native/Clips functionality, optional hosting costs and original in-window work; preserve submission receipt. No security testing."
+}
